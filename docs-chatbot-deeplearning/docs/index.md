@@ -120,6 +120,7 @@ Le tableau ci-dessous vous permet de visualiser la progression des compétences 
 ## Modalités d'évaluation
 
 L'évaluation globale du parcours se décompose ainsi :
+
 - **Participation active** (10%) : Engagement dans les activités, pertinence des contributions
 - **Mini-projets** (30%) : Qualité des livrables pour les mini-projets des séances 2 et 3
 - **Projet final - Produit** (30%) : Fonctionnalité et qualité technique du chatbot
@@ -142,7 +143,7 @@ Pour suivre cette formation, vous devez :
 
 En plus des contenus structurés par séance, vous trouverez dans cet atelier :
 
-- Des [notebooks Jupyter](ressources/notebooks/) pour l'expérimentation ( outil pour l'expérimentation et l'analyse de données)
+- Des [notebooks Jupyter](ressources/notebooks/) pour l'expérimentation (outil pour l'expérimentation et l'analyse de données)
 - Une [base de connaissances](ressources/base-connaissances.md) sur le Deep Learning
 - La [documentation de l'API Mistral](ressources/api-mistral.md)
 - Des [schémas JSON](ressources/json-schemas.md) pour la structuration des données

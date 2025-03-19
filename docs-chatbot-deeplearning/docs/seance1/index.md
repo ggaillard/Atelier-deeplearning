@@ -5,6 +5,7 @@
 ## Objectifs de la séance
 
 À l'issue de cette séance, vous serez capable de :
+
 - Manipuler concrètement un réseau de neurones simple
 - Comprendre les différences entre Machine Learning classique et Deep Learning
 - Expliquer le fonctionnement de base d'un réseau de neurones
@@ -22,8 +23,6 @@ Découvrez le Deep Learning à travers des exemples concrets, sans vous préoccu
 - Premier contact avec un réseau de neurones simple
 - Challenge d'expérimentation guidée sur un modèle MNIST
 
-**Notebook associé :** [Hello World du Deep Learning](notebooks/hello-world-dl.ipynb)  
-**Ressource à compléter :** [Fiche d'observations](ressources/fiche-observations.md)
 
 ### [Phase 2 : Découverte des concepts](partie2-decouverte-concepts.md) (1h30)
 
@@ -76,6 +75,7 @@ Cette séance vous permet d'acquérir plusieurs compétences du référentiel BT
 ## Prérequis
 
 Pour cette séance, vous aurez besoin de :
+
 - Un ordinateur avec connexion internet
 - Un compte Google pour accéder à Google Colab
 - Des connaissances de base en Python
@@ -83,6 +83,7 @@ Pour cette séance, vous aurez besoin de :
 ## Support technique
 
 Si vous rencontrez des difficultés :
+
 1. Consultez la FAQ disponible [ici](https://colab.research.google.com/notebooks/basic_features_overview.ipynb)
 2. Demandez de l'aide à vos camarades
 3. Sollicitez l'enseignant pour les problèmes persistants
@@ -90,6 +91,7 @@ Si vous rencontrez des difficultés :
 ## Préparation à la séance suivante
 
 La prochaine séance portera sur les applications professionnelles des différents types de réseaux neuronaux. Pour vous y préparer, nous vous recommandons de :
+
 - Réviser les concepts vus aujourd'hui
 - Consulter le [glossaire du Deep Learning](../ressources/glossaire-dl.md)
 

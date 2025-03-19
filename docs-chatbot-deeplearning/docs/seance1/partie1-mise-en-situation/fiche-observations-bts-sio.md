@@ -19,6 +19,7 @@
 - Nombre de classes : ________________
 
 **Quel prétraitement a été appliqué aux données ? (cochez les cases)**
+
 - ⬜ Redimensionnement
 - ⬜ Normalisation
 - ⬜ Encodage one-hot des labels
@@ -46,6 +47,7 @@ _______________________________________________________
 **Nombre total de paramètres :** ________________
 
 **Rôle de chaque type de couche :**
+
 - Conv2D : _________________________________________________
 - MaxPooling2D : ____________________________________________
 - Flatten : ________________________________________________
@@ -54,11 +56,13 @@ _______________________________________________________
 ## 4. Compilation et entraînement
 
 ### Paramètres de compilation
+
 - Fonction de perte : ________________
 - Optimiseur : ________________
 - Métrique(s) : ________________
 
 ### Paramètres d'entraînement
+
 - Nombre d'époques : ________________
 - Taille du batch : ________________
 - Proportion de validation : ________________

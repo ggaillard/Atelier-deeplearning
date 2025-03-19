@@ -54,13 +54,7 @@ nav:
   - Accueil: index.md
   - Présentation du projet: presentation.md
   - Carte de progression: carte-progression.md
-  - Séance 1:
-    - Vue d'ensemble: seance1/index.md
-    - Mise en situation: seance1/partie1-mise-en-situation.md
-    - Découverte des concepts: seance1/partie2-decouverte-concepts.md
-    - Mini-projet: seance1/partie3-mini-projet.md
-    - Débrief: seance1/partie4-debrief.md
-    - TP Conception: seance1/tp-conception.md
+  - Séance 1: seance1/index.md
   - Séance 2: seance2/index.md
   - Séance 3: seance3/index.md
   - Séance 4: seance4/index.md
@@ -70,7 +64,7 @@ nav:
     - Base de connaissances: ressources/base-connaissances.md
     - Schémas JSON: ressources/json-schemas.md
   - Évaluation:
-    - Critères: evaluation/index.md
+    - Critères: citeres-evaluation/index.md
     - Grille de répartition: evaluation/grille-repartition-taches.md
 
 extra:
