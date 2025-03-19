@@ -1,0 +1,79 @@
+site_name: Chatbot pédagogique pour le Deep Learning
+site_description: Cours BTS SIO SLAM sur le développement d'un chatbot pédagogique
+site_author: Votre Nom
+
+theme:
+  name: material
+  language: fr
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Passer au mode sombre
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Passer au mode clair
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - attr_list
+  - pymdownx.arithmatex
+  - pymdownx.superfences
+       custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.magiclink
+  - pymdownx.highlight
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  - mkdocs-jupyter
+
+nav:
+  - Accueil: index.md
+  - Présentation du projet: presentation.md
+  - Carte de progression: carte-progression.md
+  - Séance 1:
+    - Vue d'ensemble: seance1/index.md
+    - Mise en situation: seance1/partie1-mise-en-situation.md
+    - Découverte des concepts: seance1/partie2-decouverte-concepts.md
+    - Mini-projet: seance1/partie3-mini-projet.md
+    - Débrief: seance1/partie4-debrief.md
+    - TP Conception: seance1/tp-conception.md
+  - Séance 2: seance2/index.md
+  - Séance 3: seance3/index.md
+  - Séance 4: seance4/index.md 
+  - Ressources:
+    - Liste: ressources/index.md
+    - API Mistral: ressources/api-mistral.md
+    - Base de connaissances: ressources/base-connaissances.md
+    - Schémas JSON: ressources/json-schemas.md
+  - Évaluation:
+    - Critères: evaluation/index.md
+    - Grille de répartition: evaluation/grille-repartition-taches.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/votre-repo/chatbot-deeplearning
