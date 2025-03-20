@@ -136,8 +136,5 @@ Si vous souhaitez consolider certains concepts avant la prochaine séance :
 
 Cette auto-évaluation est à compléter individuellement. Vous pouvez la soumettre à votre formateur pour obtenir des retours personnalisés ou la conserver comme référence personnelle pour suivre votre progression.
 
-**Ressources additionnelles :**
-- [QCM d'évaluation](../ressources/qcm-evaluation.md)
-- [Schéma à compléter](../ressources/schema-a-completer.md)
 
 [Passer à la Séance 2](../seance2/index.md){ .md-button .md-button--primary }

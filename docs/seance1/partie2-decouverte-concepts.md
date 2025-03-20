@@ -215,4 +215,4 @@ Dans cette partie, vous allez observer comment un réseau apprend au fil du temp
 Cette phase vous a permis de passer de l'observation pure à une compréhension plus approfondie des mécanismes internes du Deep Learning, tout en conservant une approche très pratique et expérimentale. Les concepts découverts serviront de fondation pour la suite du parcours.
 
 [Retour à la Séance 1](index.md){ .md-button } 
-[Continuer vers la Phase 3](partie3-mini-projet.md){ .md-button .md-button--primary }
+[Continuer vers la Phase 3](partie3-debrief.md){ .md-button .md-button--primary }
