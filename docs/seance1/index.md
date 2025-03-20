@@ -39,7 +39,7 @@ Comparez les approches du Machine Learning classique et du Deep Learning pour co
 
 **Ressource à compléter :** [Tableau comparatif ML vs DL](ressources/comparaison-ml-dl.md)
 
-### [Phase 3 : Évaluation et synthèse](partie4-evaluation.md) (30min)
+### [Phase 3 : Auto-évaluation et synthèse](partie3-debrief.md) (30min)
 
 Consolidez vos connaissances et évaluez votre compréhension de manière autonome.
 
