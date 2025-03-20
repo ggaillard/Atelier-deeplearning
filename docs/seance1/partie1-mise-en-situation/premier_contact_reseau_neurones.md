@@ -171,15 +171,17 @@ plt.show()
 ```python
 # Interface interactive pour dessiner et prédire
 # Cette cellule permet de dessiner un chiffre directement dans Colab
+
 from google.colab import output
-import ipywidgets as widgets
-from IPython.display import display
+from IPython.display import display, HTML
 import io
 import base64
 from PIL import Image
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Fonction pour créer un canvas HTML
+
 def create_canvas():
     canvas_html = """
     <canvas id="canvas" width="280" height="280" style="border: 2px solid black; background-color: white;"></canvas>
@@ -194,13 +196,15 @@ def create_canvas():
       var ctx = canvas.getContext('2d');
       var isDrawing = false;
 
-      // Configurer le style de dessin
+      // Remplir le fond en blanc dès le départ
+      ctx.fillStyle = "white";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
       ctx.lineWidth = 15;
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
       ctx.strokeStyle = 'black';
 
-      // Gérer les événements de dessin
       canvas.addEventListener('mousedown', function(e) {
         isDrawing = true;
         ctx.beginPath();
@@ -222,13 +226,12 @@ def create_canvas():
         isDrawing = false;
       });
 
-      // Gérer le bouton Effacer
       document.getElementById('clear_button').addEventListener('click', function() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
         document.getElementById('result').innerHTML = '';
       });
 
-      // Gérer le bouton Prédire
       document.getElementById('predict_button').addEventListener('click', function() {
         var imageData = canvas.toDataURL('image/png');
         document.getElementById('result').innerHTML = 'Analyse en cours...';
@@ -240,41 +243,42 @@ def create_canvas():
 
 # Fonction pour prétraiter l'image dessinée
 def preprocess_image(image_data):
-    # Extraire les données d'image du format base64
     image_data = image_data.split(',')[1]
     image = Image.open(io.BytesIO(base64.b64decode(image_data)))
     
-    # Redimensionner et convertir en niveaux de gris
-    image = image.resize((28, 28)).convert('L')
+    # Convertir en niveaux de gris et redimensionner
+    image = image.convert('L').resize((28, 28))
     
-    # Convertir en tableau numpy et normaliser
+    # Convertir en tableau numpy
     image_array = np.array(image)
-    image_array = 255 - image_array  # Inverser les couleurs (chiffre blanc sur fond noir comme MNIST)
+    
+    # Vérification si inversion des couleurs est nécessaire
+    if np.mean(image_array) > 127:  # Fond clair, chiffre sombre
+        image_array = 255 - image_array
+    
+    # Normaliser les pixels
     image_array = image_array / 255.0
     
     return image_array
 
-# Fonction pour afficher la prédiction
+# Fonction de prédiction
 def predict_digit(image_data):
-    # Prétraiter l'image
     image_array = preprocess_image(image_data)
-    
-    # Préparer pour la prédiction
     image_array = image_array.reshape(1, 28, 28, 1)
     
-    # Prédire
-    prediction = model.predict(image_array)[0]
-    digit = np.argmax(prediction)
-    confidence = prediction[digit] * 100
-    
-    # Afficher l'image prétraitée et la prédiction
+    # Affichage de l'image prétraitée pour vérifier
     plt.figure(figsize=(6, 3))
-    
     plt.subplot(1, 2, 1)
     plt.imshow(image_array.reshape(28, 28), cmap='gray')
     plt.title("Image prétraitée")
     plt.axis('off')
     
+    # Prédiction
+    prediction = model.predict(image_array)[0]
+    digit = np.argmax(prediction)
+    confidence = prediction[digit] * 100
+    
+    # Affichage du graphique des probabilités
     plt.subplot(1, 2, 2)
     plt.bar(range(10), prediction)
     plt.title(f"Prédiction: {digit}")
@@ -283,18 +287,19 @@ def predict_digit(image_data):
     plt.xticks(range(10))
     plt.show()
     
-    # Mettre à jour le résultat sur le canvas
+    # Afficher le résultat dans le notebook
     output.eval_js(f"""
     document.getElementById('result').innerHTML = 'Prédiction: {digit} (Confiance: {confidence:.2f}%)';
     """)
 
-# Enregistrer la fonction pour l'appel JavaScript
+# Enregistrer la fonction pour être appelée depuis JavaScript
 output.register_callback('notebook.predict', predict_digit)
 
 # Afficher le canvas
-display(output.HTML(create_canvas()))
+display(HTML(create_canvas()))
 print("Dessinez un chiffre dans le canvas ci-dessus et cliquez sur 'Prédire'")
-```
+
+
 
 ### Cellule 9 (Expérimentation - Markdown)
 ```markdown

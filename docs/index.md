@@ -93,7 +93,7 @@ flowchart TB
 
 ## Compétences développées
 
-Ce cours développe des compétences essentielles du référentiel BTS SIO SLAM :
+Ce cours développe des compétences essentielles du référentiel BTS SIO  :
 
 | Compétence | Description | Activités associées |
 |------------|-------------|---------------------|

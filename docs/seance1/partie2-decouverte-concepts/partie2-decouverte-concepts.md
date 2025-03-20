@@ -10,7 +10,45 @@ Dans cette phase, vous allez :
 - Découvrir l'anatomie d'un réseau de neurones en manipulant directement ses composants
 - Comprendre par la pratique comment l'information circule dans un réseau de neurones
 
-## Atelier pratique "Boîte noire" : Machine Learning vs Deep Learning (45 min)
+## Comparaison pratique : Machine Learning vs Deep Learning (30 min)
+
+### Objectif
+Comprendre par l'observation directe les différences fondamentales entre le Machine Learning classique et le Deep Learning, en les appliquant au même jeu de données.
+
+### Instructions
+
+1. Ouvrez le notebook [ml-vs-dl-comparison.ipynb](../ressources/notebooks/ml-vs-dl-comparison.ipynb) dans Google Colab
+2. Exécutez les cellules dans l'ordre indiqué
+3. Observez comment chaque approche traite les données MNIST (chiffres manuscrits)
+4. Notez les différences en termes de :
+   - Préparation des données
+   - Complexité d'implémentation
+   - Temps d'entraînement
+   - Performance sur données normales et bruitées
+
+### Points clés à identifier
+
+À travers cette expérimentation, identifiez par vous-mêmes ces concepts fondamentaux :
+
+- Comment les caractéristiques (features) sont traitées dans chaque approche
+- Le rôle de la représentation des données
+- La capacité d'abstraction des différents modèles
+- Les compromis entre temps d'entraînement et performance
+
+### Tableau comparatif
+
+Utilisez ce tableau pour noter vos observations :
+
+| Aspect observé | Machine Learning (Random Forest) | Deep Learning (CNN) |
+| :------------- | :------------------------------- | :--------------------------------- |
+| Préparation des données |  |  |
+| Extraction de caractéristiques |  |  |
+| Temps d'entraînement |  |  |
+| Précision globale |  |  |
+| Précision sur données bruitées |  |  |
+| Facilité d'implémentation |  |  |
+
+## Atelier pratique "Boîte noire" : Machine Learning vs Deep Learning (30 min)
 
 ### Contexte et préparation (5 min)
 
@@ -28,9 +66,7 @@ Nous allons explorer les différences fondamentales entre le Machine Learning cl
 
 **Jeu de données :** MNIST (chiffres manuscrits)
 
-### Instructions
-
-#### Étape 1 : Exploration parallèle (25 min)
+### Étape 1 : Exploration parallèle (25 min)
 
 1. Ouvrez les deux notebooks (A et B) dans deux onglets séparés.
 2. Exécutez les cellules dans l'ordre indiqué (Ctrl+Enter ou bouton ▶️).
@@ -50,7 +86,7 @@ Nous allons explorer les différences fondamentales entre le Machine Learning cl
 | Précision globale |  |  |
 | Types d'erreurs fréquentes |  |  |
 
-#### Étape 2 : Défi de généralisation (10 min)
+### Étape 2 : Défi de généralisation (10 min)
 
 1. Dans chaque notebook, localisez la section "Défi de généralisation".
 2. Exécutez les cellules qui chargent le nouveau jeu de test.
@@ -58,13 +94,15 @@ Nous allons explorer les différences fondamentales entre le Machine Learning cl
 4. Notez les différences de performance entre les deux approches.
 
 **Questions à discuter :**
+
 * Lequel des modèles généralise le mieux aux nouvelles données ?
 * Pourquoi pensez-vous qu'il y a cette différence ?
 * Quels avantages et inconvénients voyez-vous pour chaque approche ?
 
-#### Étape 3 : Mise en commun (5 min)
+### Étape 3 : Mise en commun (5 min)
 
 Préparez-vous à partager vos observations avec le reste de la classe :
+
 * Principales différences constatées
 * Surprises ou découvertes intéressantes
 * Questions que cette expérimentation a soulevées
@@ -72,6 +110,7 @@ Préparez-vous à partager vos observations avec le reste de la classe :
 **Concepts clés à identifier**
 
 À travers cette expérimentation, essayez d'identifier par vous-mêmes ces concepts fondamentaux :
+
 * Comment les caractéristiques (features) sont traitées dans chaque approche
 * Le rôle de la représentation des données
 * La capacité d'abstraction des différents modèles
