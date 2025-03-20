@@ -62,8 +62,7 @@ nav:
     - Vue d'ensemble: seance1/index.md
     - Mise en situation: seance1/partie1-mise-en-situation.md
     - Découverte des concepts: seance1/partie2-decouverte-concepts.md
-    - Mini-projet: seance1/partie3-mini-projet.md
-    - Débrief: seance1/partie4-debrief.md
+    - Débrief: seance1/partie3-debrief.md
   - Séance 2:
     - Vue d'ensemble: seance2/index.md
     - Mini-projet CNN: seance2/partie1-cnn.md
