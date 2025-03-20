@@ -1,7 +1,5 @@
 ### Mini-projet CNN (partie1-cnn.md)
 
-```markdown
-# Copier dans docs/seance2/partie1-cnn.md
 # Phase 1 : Mini-projet CNN pour la vision par ordinateur
 
 ![CNN Architecture](https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?auto=format&fit=crop&q=80&w=1000&h=300)

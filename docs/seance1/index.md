@@ -39,17 +39,7 @@ Comparez les approches du Machine Learning classique et du Deep Learning pour co
 
 **Ressource à compléter :** [Tableau comparatif ML vs DL](ressources/comparaison-ml-dl.md)
 
-### [Phase 3 : Mini-projet collaboratif](partie3-mini-projet.md) (1h)
-
-Mettez en pratique vos connaissances en améliorant un modèle de Deep Learning en équipe.
-
-- Challenge d'amélioration d'un modèle CNN pour MNIST
-- Expérimentation avec différentes architectures et hyperparamètres
-- Partage des résultats et des découvertes
-
-**Notebook associé :** [Template du modèle à améliorer](notebooks/model-template.ipynb)
-
-### [Phase 4 : Évaluation et synthèse](partie4-evaluation.md) (30min)
+### [Phase 3 : Évaluation et synthèse](partie4-evaluation.md) (30min)
 
 Consolidez vos connaissances et évaluez votre compréhension de manière autonome.
 
@@ -61,7 +51,18 @@ Consolidez vos connaissances et évaluez votre compréhension de manière autono
 - [QCM d'évaluation](ressources/qcm-evaluation.md)
 - [Schéma à compléter](ressources/schema-a-completer.md)
 
-## Compétences BTS SIO SLAM développées
+
+**Livrables attendus**
+
+À l'issue de cette séance, vous devrez avoir produit :
+
+- La fiche d'observations complétée sur le "Hello World du Deep Learning"
+- Le tableau comparatif Machine Learning vs Deep Learning rempli
+- Le schéma annoté d'un réseau de neurones
+
+
+
+## Compétences BTS SIO développées
 
 Cette séance vous permet d'acquérir plusieurs compétences du référentiel BTS SIO SLAM :
 
@@ -72,13 +73,7 @@ Cette séance vous permet d'acquérir plusieurs compétences du référentiel BT
 | **B2.3** | Conception et développement d'IHM | Analyse des interfaces de notebooks interactifs |
 | **B3.2** | Vérification et validation | Évaluation de la performance des modèles |
 
-## Prérequis
 
-Pour cette séance, vous aurez besoin de :
-
-- Un ordinateur avec connexion internet
-- Un compte Google pour accéder à Google Colab
-- Des connaissances de base en Python
 
 ## Support technique
 
