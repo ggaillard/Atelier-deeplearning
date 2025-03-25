@@ -17,7 +17,7 @@ Comprendre par l'observation directe les différences fondamentales entre le Mac
 
 ### Instructions
 
-1. Ouvrez le notebook [ml-vs-dl-comparison.ipynb](../ressources/notebooks/ml-vs-dl-comparison.ipynb) dans Google Colab
+1. Suivre les [instructions](partie2-decouverte-concepts/ml-vs-dl-comparaison.md) pour ouvrez le notebook dans Google Colab 
 2. Exécutez les cellules dans l'ordre indiqué
 3. Observez comment chaque approche traite les données MNIST (chiffres manuscrits)
 4. Notez les différences en termes de :
@@ -59,6 +59,7 @@ Nous allons explorer les différences fondamentales entre le Machine Learning cl
 - Chaque binôme doit explorer en parallèle les deux notebooks fournis
 
 **Matériel nécessaire :**
+
 - Compte Google (pour accéder à Google Colab)
 - Liens vers deux notebooks complémentaires :
   - [Notebook A : Classification avec un algorithme classique (Random Forest)](../ressources/notebooks/machine-learning-classique.ipynb)
@@ -117,6 +118,7 @@ Préparez-vous à partager vos observations avec le reste de la classe :
 * Les compromis entre temps d'entraînement et performance
 
 **Ressources supplémentaires**
+
 * [Documentation scikit-learn (Random Forest)](https://scikit-learn.org/stable/modules/ensemble.html#forest)
 * [Documentation TensorFlow/Keras](https://www.tensorflow.org/guide/keras/sequential_model)
 * [Visualisations interactives TensorFlow Playground](https://playground.tensorflow.org/)
@@ -128,9 +130,9 @@ Dans cette seconde partie, vous allez plonger au cœur des réseaux de neurones 
 ### Matériel et ressources
 
 * [Notebook interactif "Anatomie d'un réseau de neurones"](../ressources/notebooks/anatomie-reseau.ipynb)
-* Schéma à compléter pour la synthèse
-* Fiche récapitulative des termes techniques
-
+* [Schéma à compléter pour la synthèse](ressources/schema-a-completer.md)
+* [Fiche récapitulative des termes techniques](ressources/glossaire-dl.md)
+  
 ### Instructions
 
 #### Partie 1 : Exploration d'un neurone unique (15 min)
@@ -146,6 +148,7 @@ Dans cette partie, vous allez manipuler un neurone artificiel unique pour compre
    * Observer l'effet sur la sortie du neurone
 
 **Questions à explorer :**
+
 * Que se passe-t-il si tous les poids sont à zéro ?
 * Comment pouvez-vous configurer le neurone pour qu'il s'active uniquement si les deux entrées sont élevées ?
 * Quel est l'effet du biais sur le "seuil" d'activation ?
@@ -166,7 +169,8 @@ Nous allons maintenant passer à un petit réseau de neurones pour comprendre co
    * Identifiez les "motifs d'activation" qui se forment pour différentes entrées
    * Testez différentes fonctions d'activation (ReLU, Sigmoid, Tanh)
 
-**Exercice pratique :** Essayez de configurer manuellement les poids pour que le réseau réalise la fonction logique XOR (entrées : [0,0]→0, [0,1]→1, [1,0]→1, [1,1]→0).
+**Exercice pratique :
+** Essayez de configurer manuellement les poids pour que le réseau réalise la fonction logique XOR (entrées : [0,0]→0, [0,1]→1, [1,0]→1, [1,1]→0).
 
 #### Partie 3 : Visualisation de l'entraînement (10 min)
 
@@ -208,7 +212,7 @@ Dans cette partie, vous allez observer comment un réseau apprend au fil du temp
 
 * [Visualisations interactives : Playground TensorFlow](https://playground.tensorflow.org/)
 * [Tutoriel : Comprendre les réseaux de neurones](https://www.tensorflow.org/tutorials)
-* [Document : Mathématiques des réseaux de neurones simplifiées](../ressources/fiches/math-simplified-nn.md)
+* [Document : Mathématiques des réseaux de neurones simplifiées](ressources/math-simplified-nn.md)
 
 ## Conclusion
 

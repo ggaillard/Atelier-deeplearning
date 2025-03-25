@@ -85,8 +85,6 @@ Pour préparer efficacement la séance 2 sur les types de réseaux de neurones e
 
 - [ ] Revoir les concepts fondamentaux des réseaux de neurones
 - [ ] Explorer les ressources supplémentaires sur les CNN et RNN
-- [ ] Pratiquer des exercices supplémentaires sur Google Colab
-- [ ] Préparer des questions spécifiques pour la prochaine séance
 
 ## 5. Carte mentale des concepts clés
 

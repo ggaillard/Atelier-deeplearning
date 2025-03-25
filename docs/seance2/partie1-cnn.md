@@ -1,5 +1,3 @@
-### Mini-projet CNN (partie1-cnn.md)
-
 # Phase 1 : Mini-projet CNN pour la vision par ordinateur
 
 ![CNN Architecture](https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?auto=format&fit=crop&q=80&w=1000&h=300)
@@ -7,6 +5,7 @@
 ## Objectifs de la phase
 
 Dans cette phase, vous allez :
+
 - Comprendre les principes fondamentaux des réseaux de neurones convolutifs (CNN)
 - Implémenter un CNN pour la classification d'images avec TensorFlow/Keras
 - Visualiser et interpréter les filtres et feature maps d'un CNN
@@ -23,6 +22,7 @@ Les réseaux de neurones convolutifs (CNN) sont spécialement conçus pour trait
 3. **Couches fully connected** : combinent les caractéristiques extraites pour la classification finale
 
 Avantages majeurs pour un développeur d'applications :
+
 - Réduction significative du nombre de paramètres (partage de poids)
 - Invariance à la translation (détection de motifs quelle que soit leur position)
 - Capacité d'extraire automatiquement des caractéristiques pertinentes
@@ -49,54 +49,128 @@ Avantages majeurs pour un développeur d'applications :
 
 ## Partie 3: Intégration dans une application web (30 min)
 
-### Instructions
+Dans cette partie, vous allez découvrir comment intégrer un modèle CNN pré-entraîné dans une application web interactive.
 
-1. Téléchargez et examinez le script Python [web-integration.py](../ressources/code/web-integration.py)
-2. Ce script implémente une application Flask qui :
-   - Charge un modèle CNN pré-entraîné
-   - Fournit une interface web pour uploader des images
-   - Prétraite les images pour les adapter au modèle
-   - Affiche les prédictions et visualisations
+### Étape 1: Préparation de l'environnement
 
-3. Pour exécuter l'application :
-   ```bash
-   # Installer les dépendances
-   pip install flask tensorflow pillow matplotlib numpy
+1.  **Sauvegarde du modèle CNN** :
+    * Assurez-vous que votre modèle CNN entraîné lors de la Partie 2 est correctement sauvegardé. Utilisez le code Python suivant pour le sauvegarder :
+
+    ```python
+    cnn_model.save('mnist_cnn_model.h5')
+    ```
+
+    * Ce code créera un fichier nommé `mnist_cnn_model.h5` contenant les poids et l'architecture de votre modèle.
+    * **Note importante :** Vérifiez que le fichier `mnist_cnn_model.h5` est bien créé dans le même répertoire que votre script Python.
+
+2.  **Téléchargement des fichiers de l'application web** :
+    * Téléchargez les fichiers suivants nécessaires à l'application web et placez-les dans les dossiers indiqués :
+        * [web-integration.py](code-app-web/web-integration.py) - Script principal de l'application Flask.
+        * [templates/index.html](code-app-web/index.html) - Template HTML pour l'interface utilisateur.
+        * [static/css/style.css](code-app-web/style.css) - Feuille de style CSS.
+        * [static/js/app.js](code-app-web/app.js) - Script JavaScript pour l'interactivité.
+
+3.  **Structure des dossiers** :
+
+   *Assurez-vous que votre structure de dossiers est la suivante:
    
-   # Exécuter l'application
+   ```
+   votre_dossier_de_travail/
+   ├── mnist_cnn_model.h5      # Votre modèle sauvegardé ou le modèle fourni
+   ├── web-integration.py      # Script principal Flask
+   ├── templates/              # Dossier pour les templates HTML
+   │   └── index.html
+   └── static/                 # Dossier pour CSS, JS, images
+       ├── css/
+       │   └── style.css
+       └── js/
+           └── app.js
+   ```
+
+### Étape 2: Installation des dépendances requises
+
+Ouvrez un terminal et exécutez:
+
+```bash
+pip install flask tensorflow pillow matplotlib numpy
+```
+
+### Étape 3: Exécution de l'application web
+
+1. Dans le terminal, naviguez vers votre dossier de travail
+2. Exécutez la commande:
+   ```bash
    python web-integration.py
+   ```
+3. Vous devriez voir un message indiquant que l'application est en cours d'exécution
+4. Ouvrez votre navigateur et accédez à: http://localhost:5001
 
-4. Explorez l'application à l'adresse http://localhost:5001
+### Étape 4: Test de l'application
 
-5. Analysez le code pour comprendre :
+1. L'interface vous permet de:
+   - Dessiner un chiffre manuellement ou uploader une image
+   - Soumettre l'image pour prédiction
+   - Voir la prédiction du modèle
+   - Explorer les visualisations des feature maps
 
-- Comment le modèle est chargé et utilisé pour l'inférence
-- Comment les images sont prétraitées
-- Comment l'API Flask expose le modèle
-- Comment le frontend interagit avec l'API
+2. Testez l'application en dessinant différents chiffres
 
+### Étape 5: Analyse du code source
 
-## Points clés à explorer
+Ouvrez le fichier [web-integration.py](../ressources/code/web-integration.py) et examinez:
 
-- Quels sont les défis d'intégration d'un modèle de Deep Learning dans une application web ?
-- Comment gérer le prétraitement des images côté serveur ?
-- Quelles améliorations pourriez-vous apporter à cette application ?
-- Comment pourriez-vous adapter cette approche pour d'autres types de modèles CNN ?
+1. **Chargement du modèle**: Identifiez la section où le modèle CNN est chargé
+   ```python
+   # Recherchez un code similaire à:
+   model = load_model('mnist_cnn_model.h5')
+   ```
 
-# Exercices supplémentaires
+2. **Prétraitement des images**: Examinez comment les images sont prétraitées
+   ```python
+   # Recherchez la fonction qui fait le prétraitement:
+   def preprocess_image(image_data):
+       # ...
+   ```
 
-Si vous terminez en avance, essayez ces défis :
+3. **API Flask**: Identifiez les routes Flask et leur fonction
+   ```python
+   # Routes comme:
+   @app.route('/predict', methods=['POST'])
+   def predict():
+       # ...
+   ```
 
-1. Modification de l'architecture : Ajoutez des couches supplémentaires au CNN et observez l'impact sur les performances
-2. Test avec vos propres images : Dessinez vos propres chiffres et testez-les avec l'application web
-3. Robustesse : Expérimentez avec différentes perturbations (bruit, rotation) et analysez la robustesse du modèle
-Optimisation du frontend : Améliorez l'interface utilisateur de l'application web
+4. **Interaction frontend-backend**: Ouvrez `static/js/app.js` et examinez comment les requêtes sont envoyées au serveur
+  
+### Étape 6 : Défis et questions à ajouter
+
+Pour approfondir l'apprentissage, ajoutez ces défis:
+
+### Défis à réaliser (pour les plus rapides)
+
+1. **Amélioration de l'interface**: Modifiez le fichier HTML/CSS pour améliorer l'expérience utilisateur
+   
+2. **Ajout de fonctionnalités**: Implémentez une de ces fonctionnalités supplémentaires:
+   - Historique des prédictions
+   - Visualisation de la matrice de confusion en temps réel
+   - Option pour appliquer des transformations à l'image (rotation, flou)
+   
+3. **Optimisation du modèle**: Modifiez le code pour charger un modèle plus léger (quantifié ou pruné)
+
+### Questions à répondre
+
+1. Quels avantages offre l'utilisation de Flask pour exposer un modèle de Deep Learning?
+2. Quels sont les défis liés au déploiement de modèles de Deep Learning dans des applications web?
+3. Comment pourriez-vous améliorer les performances de l'application pour gérer plus d'utilisateurs simultanément?
+4. Quelles mesures de sécurité devriez-vous implémenter avant de déployer cette application en production?
+
 
 # Ressources complémentaires
 
-- Tutoriel TensorFlow sur les CNN
-- Visualisation de CNN (Distill.pub)
-- Documentation Flask
+- [Tutoriel TensorFlow sur les CNN](https://www.tensorflow.org/tutorials/images/cnn) - Guide officiel de TensorFlow sur l'implémentation des réseaux de neurones convolutifs
+- [Visualisation de CNN (Distill.pub)](https://distill.pub/2017/feature-visualization/) - Article interactif sur la visualisation et l'interprétation des réseaux convolutifs
+- [Documentation Flask](https://flask.palletsprojects.com/en/2.3.x/) - Documentation officielle du framework Flask pour le développement web
+
 
 Retour à la Séance 2{ .md-button }
 Continuer vers la Phase 2: RNN{ .md-button .md-button--primary }

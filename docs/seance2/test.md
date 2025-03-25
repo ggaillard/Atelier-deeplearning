@@ -1,3 +1,5 @@
+Je vais compléter la partie 2 du mini-projet RNN pour le traitement du langage.
+
 # Phase 2 : Mini-projet RNN pour le traitement du langage
 
 ![RNN Architecture](https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1000&h=300)

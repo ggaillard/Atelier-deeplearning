@@ -172,6 +172,7 @@ Cette approche simplifiée vous donne les bases nécessaires pour comprendre les
 ## Pour aller plus loin
 
 Si ces concepts vous intéressent, vous pouvez explorer :
+
 - [TensorFlow Playground](https://playground.tensorflow.org/) - Visualiser et expérimenter avec des réseaux de neurones simples
 - [3Blue1Brown - Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) - Série de vidéos avec d'excellentes visualisations
 - [Machine Learning for Beginners](https://github.com/microsoft/ML-For-Beginners) - Cours de Microsoft avec approche pratique

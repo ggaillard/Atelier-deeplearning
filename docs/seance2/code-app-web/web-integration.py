@@ -1,5 +1,5 @@
 # Intégration d'un modèle CNN dans une application web
-# BTS SIO SLAM - Séance 2: Types de réseaux et applications
+# - Séance 2: Types de réseaux et applications
 
 from flask import Flask, request, jsonify, render_template, send_from_directory
 import tensorflow as tf
