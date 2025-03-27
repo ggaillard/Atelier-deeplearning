@@ -17,7 +17,7 @@ Comprendre par l'observation directe les différences fondamentales entre le Mac
 
 ### Instructions
 
-1. Suivre les [instructions](partie2-decouverte-concepts/ml-vs-dl-comparaison.md) pour ouvrez le notebook dans Google Colab 
+1. Suivre les [instructions](ressources/comparaison-ml-dl.md) pour ouvrez le notebook dans Google Colab 
 2. Exécutez les cellules dans l'ordre indiqué
 3. Observez comment chaque approche traite les données MNIST (chiffres manuscrits)
 4. Notez les différences en termes de :
@@ -129,7 +129,7 @@ Dans cette seconde partie, vous allez plonger au cœur des réseaux de neurones 
 
 ### Matériel et ressources
 
-* [Notebook interactif "Anatomie d'un réseau de neurones"](../ressources/notebooks/anatomie-reseau.ipynb)
+* [Notebook interactif "Anatomie d'un réseau de neurones"](ressources/anatomie-reseau.md)
 * [Schéma à compléter pour la synthèse](ressources/schema-a-completer.md)
 * [Fiche récapitulative des termes techniques](ressources/glossaire-dl.md)
   

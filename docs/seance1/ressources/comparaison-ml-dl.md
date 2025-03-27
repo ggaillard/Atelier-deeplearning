@@ -49,12 +49,14 @@
 ## Quand Utiliser Quoi ?
 
 ### Machine Learning Classique
+
 - Données structurées limitées
 - Problèmes simples de prédiction
 - Besoin d'interprétabilité
 - Ressources de calcul limitées
 
 ### Deep Learning
+
 - Grandes quantités de données
 - Problèmes complexes (image, son, texte)
 - Nécessité de features avancées
