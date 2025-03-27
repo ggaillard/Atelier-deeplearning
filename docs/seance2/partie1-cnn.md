@@ -62,6 +62,12 @@ Dans cette partie, vous allez découvrir comment intégrer un modèle CNN pré-e
 
     * Ce code créera un fichier nommé `mnist_cnn_model.h5` contenant les poids et l'architecture de votre modèle.
     * **Note importante :** Vérifiez que le fichier `mnist_cnn_model.h5` est bien créé dans le même répertoire que votre script Python.
+    * Si vous travaillez dans Google Colab : Après avoir sauvegardé le modèle, vous devez télécharger le fichier sur votre ordinateur local. Exécutez ce code supplémentaire :
+```
+from google.colab import files
+files.download('mnist_cnn_model.h5')
+```
+
 
 2.  **Téléchargement des fichiers de l'application web** :
     * Téléchargez les fichiers suivants nécessaires à l'application web et placez-les dans les dossiers indiqués :
@@ -94,7 +100,7 @@ Ouvrez un terminal et exécutez:
 ```bash
 pip install flask tensorflow pillow matplotlib numpy
 ```
-
+Note pour Windows: Si vous rencontrez des problèmes avec TensorFlow, essayez pip install tensorflow==2.9.0.
 ### Étape 3: Exécution de l'application web
 
 1. Dans le terminal, naviguez vers votre dossier de travail
