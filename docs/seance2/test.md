@@ -1,282 +1,52 @@
-# Mini-projet CNN pour la vision par ordinateur
+Je vais créer un SVG qui montre une image comparative pour illustrer le traitement des données dans un CNN.
 
-![CNN pour la vision par ordinateur](https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&q=80&w=1000&h=300)
+## Partie 1: Exploration des principes des CNN (20 min)
 
-## Introduction
+### Défi de réflexion initiale
 
-Dans ce mini-projet, vous allez découvrir et manipuler les réseaux de neurones convolutifs (CNN), qui sont particulièrement efficaces pour l'analyse d'images. Les CNN sont à la base de nombreuses applications modernes comme la reconnaissance faciale, la détection d'objets, ou encore les filtres de réseaux sociaux.
+Avant de plonger dans les CNN, prenez 2 minutes pour réfléchir à cette question :
+> **Question à méditer** : Comment reconnaissez-vous un visage dans une photo, quelle que soit sa position ou l'éclairage ? Qu'est-ce qui rend cette tâche si facile pour vous et si difficile pour un ordinateur ?
 
-## Objectifs d'apprentissage
+### Activité guidée : Découverte de l'architecture CNN
 
-- Comprendre l'architecture d'un réseau convolutif (CNN)
-- Implémenter un CNN avec TensorFlow/Keras
-- Visualiser et interpréter les filtres et les feature maps
-- Analyser les performances du modèle
+**Étape 1 : Observation (3 min)**
+Examinez ces deux visualisations en parallèle :
+- L'image originale d'un chiffre '7' manuscrit et son traitement par les différentes couches d'un CNN
 
-## Structure du mini-projet
+![Transformation progressive d'une image dans un CNN](../images/cnn-comparative-processing.svg)
 
-### Partie 1: Principes des CNN (20 min)
+- Les différentes caractéristiques extraites à chaque niveau d'un CNN déjà entraîné
 
-#### Architecture d'un CNN
+![Hiérarchie des caractéristiques dans un CNN](../images/cnn-hierarchical-features.svg)
 
-Les réseaux de neurones convolutifs (CNN) sont spécialement conçus pour traiter des données structurées en grille, comme les images. Leur architecture s'inspire du cortex visuel biologique et comprend plusieurs types de couches spécialisées :
+**Étape 2 : Mini-investigation (5 min)**
+Formez des binômes et discutez :
+- Que semble détecter la première couche du réseau ? (contours, textures...)
+- Comment évoluent les formes détectées en avançant dans le réseau ?
+- Pourquoi le réseau semble-t-il "simplifier" l'image à chaque étape ?
 
-1. **Couches de convolution** : appliquent des filtres qui glissent sur l'image pour détecter des motifs locaux (contours, textures, etc.)
-2. **Couches de pooling** : réduisent la dimension spatiale pour diminuer le nombre de paramètres
-3. **Couches fully connected** : combinent les caractéristiques extraites pour la classification finale
+**Étape 3 : Construction du modèle mental (5 min)**
+Sur votre feuille de travail, complétez le schéma simplifié d'un CNN :
 
-#### Avantages majeurs pour un développeur d'applications :
+![Schéma d'architecture CNN à compléter](../images/cnn-architecture-schema.svg)
 
-* Réduction significative du nombre de paramètres (partage de poids)
-* Invariance à la translation (détection de motifs quelle que soit leur position)
-* Capacité d'extraire automatiquement des caractéristiques pertinentes
+1. Identifiez et nommez les trois types principaux de couches
+2. Pour chaque type, précisez brièvement sa fonction
+3. Listez les trois avantages majeurs des CNN
 
-### Partie 2: Implémentation d'un CNN pour MNIST (40 min)
+**Étape 4 : Analogie concrète (3 min)**
+Imaginez que vous êtes un inspecteur cherchant à identifier un suspect :
+- La **couche de convolution** est comme votre attention aux détails spécifiques (cicatrice, forme du nez...)
+- La **couche de pooling** est comme votre capacité à ignorer les éléments non pertinents (éclairage, angle de vue...)
+- La **couche fully connected** est comme votre processus de décision finale ("C'est lui !")
 
-#### Instructions
+### Validation collective (4 min)
 
-1. Ouvrez le notebook Jupyter `cnn-classification` dans Google Colab
-2. Suivez les instructions étape par étape pour implémenter un CNN pour la classification des chiffres manuscrits (MNIST)
-3. Exécutez chaque cellule et observez les résultats
-4. Portez une attention particulière aux sections suivantes :
-   - Architecture du modèle CNN
-   - Processus d'entraînement
-   - Visualisation des filtres et feature maps
-   - Analyse des performances et des erreurs
+Comparez votre schéma avec celui de vos voisins et discutez des trois avantages majeurs des CNN pour un développeur d'applications :
+- Pourquoi est-ce important de réduire le nombre de paramètres ?
+- Comment l'invariance à la translation facilite-t-elle la reconnaissance d'objets ?
+- Pourquoi l'extraction automatique de caractéristiques est-elle révolutionnaire ?
 
-#### Points clés à explorer
+### Transition vers l'implémentation
 
-- Comment les couches de convolution extraient-elles des caractéristiques de plus en plus abstraites ?
-- Quel est l'impact du nombre de filtres et de couches sur les performances ?
-- Comment les feature maps révèlent-elles ce que "voit" le réseau ?
-- Quelles sont les limites du modèle face à des données bruitées ou déformées ?
-
-### Partie 3: Visualisation et interprétation (30 min)
-
-- Exploration des filtres appris par le réseau
-- Visualisation des feature maps à chaque niveau
-- Interprétation des résultats et des erreurs de classification
-
-### Partie 4: Challenge d'optimisation (30 min)
-
-- Modification de l'architecture pour améliorer les performances
-- Expérimentation avec différents hyperparamètres
-- Analyse comparative des résultats
-
-## Contenu du notebook CNN
-
-Le notebook que vous allez explorer contient les sections suivantes:
-
-1. Configuration de l'environnement
-2. Chargement et préparation du dataset MNIST
-3. Création d'un modèle CNN de base
-4. Entraînement du modèle
-5. Évaluation des performances
-6. Visualisation des filtres et feature maps
-7. Test de robustesse avec des images bruitées
-8. Challenge d'amélioration du modèle
-
-## Extrait du code pour la création du modèle CNN
-
-```python
-# Créer un modèle CNN
-model = Sequential([
-    # Première couche de convolution
-    Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1), name='conv1'),
-    MaxPooling2D((2, 2), name='pool1'),
-    
-    # Deuxième couche de convolution
-    Conv2D(64, (3, 3), activation='relu', name='conv2'),
-    MaxPooling2D((2, 2), name='pool2'),
-    
-    # Aplatissement pour passer aux couches denses
-    Flatten(name='flatten'),
-    
-    # Couches denses (fully connected)
-    Dense(128, activation='relu', name='dense1'),
-    Dropout(0.5, name='dropout1'),  # Évite le surapprentissage
-    Dense(10, activation='softmax', name='output')  # 10 classes (chiffres 0-9)
-])
-```
-
-## Architectures CNN modernes
-
-Au-delà de ce mini-projet, voici quelques architectures CNN populaires que vous pourriez explorer par la suite:
-
-| Architecture | Année | Particularités | Applications typiques |
-|--------------|-------|----------------|----------------------|
-| LeNet-5 | 1998 | Premier CNN populaire | Reconnaissance de chiffres |
-| AlexNet | 2012 | Vainqueur ImageNet, utilisation de ReLU | Classification d'images |
-| VGG | 2014 | Architecture simple et profonde | Extraction de caractéristiques |
-| GoogLeNet | 2014 | Modules "Inception" | Classification à grande échelle |
-| ResNet | 2015 | Connexions résiduelles | Applications diverses |
-
-## Visualisation des filtres et feature maps
-
-Les visualisations vous permettront de comprendre ce que "voit" réellement votre réseau:
-
-!!! example "Exemple de visualisation"
-    - Les filtres de première couche détectent généralement des motifs simples comme des bords et des contours
-    - Les couches intermédiaires combinent ces motifs pour détecter des formes plus complexes
-    - Les couches profondes identifient des caractéristiques abstraites spécifiques à chaque classe
-
-## Ressources complémentaires
-
-- [Visualizing and Understanding Convolutional Networks](https://cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf) - Article fondamental sur la visualisation des CNN
-- [CNN Explainer](https://poloclub.github.io/cnn-explainer/) - Outil interactif pour comprendre les CNN
-- [TensorFlow Playground](https://playground.tensorflow.org/) - Expérimentation interactive avec des réseaux de neurones
-
-## Livrables attendus
-
-À l'issue de ce mini-projet, vous devrez produire:
-
-1. Le notebook complété avec vos expérimentations
-2. Un rapport d'une page résumant:
-   - L'architecture de votre modèle final
-   - Les performances obtenues
-   - Votre analyse des points forts et des limites du modèle
-   - Vos observations sur les filtres et feature maps
-
-### Partie 3: Intégration dans une application web (30 min)
-
-Dans cette partie, vous allez découvrir comment intégrer un modèle CNN pré-entraîné dans une application web interactive.
-
-#### Étape 1: Préparation de l'environnement
-
-**Sauvegarde du modèle CNN :**
-
-Assurez-vous que votre modèle CNN entraîné lors de la Partie 2 est correctement sauvegardé. Utilisez le code Python suivant pour le sauvegarder :
-
-```python
-cnn_model.save('mnist_cnn_model.h5')
-```
-
-Ce code créera un fichier nommé `mnist_cnn_model.h5` contenant les poids et l'architecture de votre modèle.
-
-!!! note "Note importante"
-    Vérifiez que le fichier `mnist_cnn_model.h5` est bien créé dans le même répertoire que votre script Python.
-
-**Si vous travaillez dans Google Colab :** Après avoir sauvegardé le modèle, vous devez télécharger le fichier sur votre ordinateur local. Exécutez ce code supplémentaire :
-
-```python
-from google.colab import files
-files.download('mnist_cnn_model.h5')
-```
-
-**Téléchargement des fichiers de l'application web :**
-
-Téléchargez les fichiers suivants nécessaires à l'application web et placez-les dans les dossiers indiqués :
-- `web-integration.py` - Script principal de l'application Flask.
-- `templates/index.html` - Template HTML pour l'interface utilisateur.
-- `static/css/style.css` - Feuille de style CSS.
-- `static/js/app.js` - Script JavaScript pour l'interactivité.
-
-**Structure des dossiers :**
-
-Assurez-vous que votre structure de dossiers est la suivante:
-
-```
-votre_dossier_de_travail/
-├── mnist_cnn_model.h5      # Votre modèle sauvegardé ou le modèle fourni
-├── web-integration.py      # Script principal Flask
-├── templates/              # Dossier pour les templates HTML
-│   └── index.html
-└── static/                 # Dossier pour CSS, JS, images
-    ├── css/
-    │   └── style.css
-    └── js/
-        └── app.js
-```
-
-#### Étape 2: Installation des dépendances requises
-
-Ouvrez un terminal et exécutez:
-
-```bash
-pip install flask tensorflow pillow matplotlib numpy
-```
-
-!!! tip "Note pour Windows"
-    Si vous rencontrez des problèmes avec TensorFlow, essayez `pip install tensorflow==2.9.0`.
-
-#### Étape 3: Exécution de l'application web
-
-1. Dans le terminal, naviguez vers votre dossier de travail
-2. Exécutez la commande:
-
-```bash
-python web-integration.py
-```
-
-3. Vous devriez voir un message indiquant que l'application est en cours d'exécution
-4. Ouvrez votre navigateur et accédez à: http://localhost:5001
-
-#### Étape 4: Test de l'application
-
-L'interface vous permet de:
-- Dessiner un chiffre manuellement ou uploader une image
-- Soumettre l'image pour prédiction
-- Voir la prédiction du modèle
-- Explorer les visualisations des feature maps
-
-Testez l'application en dessinant différents chiffres.
-
-#### Étape 5: Analyse du code source
-
-Ouvrez le fichier `web-integration.py` et examinez:
-
-**Chargement du modèle:** Identifiez la section où le modèle CNN est chargé
-
-```python
-# Recherchez un code similaire à:
-model = load_model('mnist_cnn_model.h5')
-```
-
-**Prétraitement des images:** Examinez comment les images sont prétraitées
-
-```python
-# Recherchez la fonction qui fait le prétraitement:
-def preprocess_image(image_data):
-    # ...
-```
-
-**API Flask:** Identifiez les routes Flask et leur fonction
-
-```python
-# Routes comme:
-@app.route('/predict', methods=['POST'])
-def predict():
-    # ...
-```
-
-**Interaction frontend-backend:** Ouvrez `static/js/app.js` et examinez comment les requêtes sont envoyées au serveur
-
-#### Étape 6 : Défis et questions à ajouter
-
-Pour approfondir l'apprentissage, ajoutez ces défis:
-
-**Défis à réaliser (pour les plus rapides)**
-
-1. **Amélioration de l'interface:** Modifiez le fichier HTML/CSS pour améliorer l'expérience utilisateur
-
-2. **Ajout de fonctionnalités:** Implémentez une de ces fonctionnalités supplémentaires:
-   - Historique des prédictions
-   - Visualisation de la matrice de confusion en temps réel
-   - Option pour appliquer des transformations à l'image (rotation, flou)
-
-3. **Optimisation du modèle:** Modifiez le code pour charger un modèle plus léger (quantifié ou pruné)
-
-**Questions à répondre**
-
-1. Quels avantages offre l'utilisation de Flask pour exposer un modèle de Deep Learning?
-2. Quels sont les défis liés au déploiement de modèles de Deep Learning dans des applications web?
-3. Comment pourriez-vous améliorer les performances de l'application pour gérer plus d'utilisateurs simultanément?
-4. Quelles mesures de sécurité devriez-vous implémenter avant de déployer cette application en production?
-
-## Prêt à commencer?
-
-[Ouvrir le notebook dans Google Colab](https://colab.research.google.com/github/votre-repo/cnn-classification.ipynb){ .md-button .md-button--primary }
-
-## Option: Parcours d'apprentissage individuel
-
-Si vous préférez suivre ce mini-projet à votre propre rythme, nous avons également préparé un [parcours d'apprentissage individuel](parcours-individuel-cnn.md) structuré qui vous guidera étape par étape à travers ces concepts.
+Maintenant que vous avez conceptualisé l'architecture d'un CNN, passons à l'implémentation pratique pour voir ces concepts en action. Gardez votre schéma à portée de main - vous pourrez le compléter avec des observations pratiques.

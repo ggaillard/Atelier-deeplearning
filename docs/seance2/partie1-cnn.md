@@ -13,19 +13,54 @@ Dans cette phase, vous allez :
 
 ## Partie 1: Principes des CNN (20 min)
 
-### Architecture d'un CNN
+### Défi de réflexion initiale
 
-Les réseaux de neurones convolutifs (CNN) sont spécialement conçus pour traiter des données structurées en grille, comme les images. Leur architecture s'inspire du cortex visuel biologique et comprend plusieurs types de couches spécialisées :
+Avant de plonger dans les CNN, prenez 2 minutes pour réfléchir à cette question :
+> **Question à méditer** : Comment reconnaissez-vous un visage dans une photo, quelle que soit sa position ou l'éclairage ? Qu'est-ce qui rend cette tâche si facile pour vous et si difficile pour un ordinateur ?
 
-1. **Couches de convolution** : appliquent des filtres qui glissent sur l'image pour détecter des motifs locaux (contours, textures, etc.)
-2. **Couches de pooling** : réduisent la dimension spatiale pour diminuer le nombre de paramètres
-3. **Couches fully connected** : combinent les caractéristiques extraites pour la classification finale
+### Activité guidée : Découverte de l'architecture CNN
 
-Avantages majeurs pour un développeur d'applications :
+**Étape 1 : Observation (3 min)**
+Examinez ces deux visualisations en parallèle :
+- L'image originale d'un chiffre '7' manuscrit et son traitement par les différentes couches d'un CNN
 
-- Réduction significative du nombre de paramètres (partage de poids)
-- Invariance à la translation (détection de motifs quelle que soit leur position)
-- Capacité d'extraire automatiquement des caractéristiques pertinentes
+![Transformation progressive d'une image dans un CNN](../images/cnn-comparative-processing.svg)
+
+- Les différentes caractéristiques extraites à chaque niveau d'un CNN déjà entraîné
+
+![Hiérarchie des caractéristiques dans un CNN](../images/cnn-hierarchical-features.svg)
+
+**Étape 2 : Mini-investigation (5 min)**
+Formez des binômes et discutez :
+- Que semble détecter la première couche du réseau ? (contours, textures...)
+- Comment évoluent les formes détectées en avançant dans le réseau ?
+- Pourquoi le réseau semble-t-il "simplifier" l'image à chaque étape ?
+
+**Étape 3 : Construction du modèle mental (5 min)**
+Sur votre feuille de travail, complétez le schéma simplifié d'un CNN :
+
+![Schéma d'architecture CNN à compléter](../images/cnn-architecture-schema.svg)
+
+1. Identifiez et nommez les trois types principaux de couches
+2. Pour chaque type, précisez brièvement sa fonction
+3. Listez les trois avantages majeurs des CNN
+
+**Étape 4 : Analogie concrète (3 min)**
+Imaginez que vous êtes un inspecteur cherchant à identifier un suspect :
+- La **couche de convolution** est comme votre attention aux détails spécifiques (cicatrice, forme du nez...)
+- La **couche de pooling** est comme votre capacité à ignorer les éléments non pertinents (éclairage, angle de vue...)
+- La **couche fully connected** est comme votre processus de décision finale ("C'est lui !")
+
+### Validation collective (4 min)
+
+Comparez votre schéma avec celui de vos voisins et discutez des trois avantages majeurs des CNN pour un développeur d'applications :
+- Pourquoi est-ce important de réduire le nombre de paramètres ?
+- Comment l'invariance à la translation facilite-t-elle la reconnaissance d'objets ?
+- Pourquoi l'extraction automatique de caractéristiques est-elle révolutionnaire ?
+
+### Transition vers l'implémentation
+
+Maintenant que vous avez conceptualisé l'architecture d'un CNN, passons à l'implémentation pratique pour voir ces concepts en action. Gardez votre schéma à portée de main - vous pourrez le compléter avec des observations pratiques.
 
 ## Partie 2: Implémentation d'un CNN pour MNIST (40 min)
 
@@ -52,29 +87,51 @@ Avantages majeurs pour un développeur d'applications :
 
 Dans cette partie, vous allez découvrir comment intégrer un modèle CNN pré-entraîné dans une application web interactive.
 
-### Étape 1: Préparation de l'environnement
+# Mini-projet : Reconnaissance de chiffres manuscrits 
 
-1.  **Sauvegarde du modèle CNN** :
-    * Assurez-vous que votre modèle CNN entraîné lors de la Partie 2 est correctement sauvegardé. Utilisez le code Python suivant pour le sauvegarder :
+## Contexte professionnel
 
-    ```python
-    cnn_model.save('mnist_cnn_model.h5')
-    ```
+Vous êtes stagiaire dans une PME où les employés doivent régulièrement saisir manuellement des codes à partir de documents papier (bons de commande, formulaires clients, etc.). Votre responsable informatique souhaite explorer des solutions d'automatisation et vous demande de tester une application de reconnaissance de chiffres manuscrits.
 
-    * Ce code créera un fichier nommé `mnist_cnn_model.h5` contenant les poids et l'architecture de votre modèle.
-    * **Note importante :** Vérifiez que le fichier `mnist_cnn_model.h5` est bien créé dans le même répertoire que votre script Python.
-    * 
-    **Si vous travaillez dans Google Colab :** Après avoir sauvegardé le modèle, vous devez télécharger le fichier sur votre ordinateur local. Exécutez ce code supplémentaire :
-    
-```python
-from google.colab import files
-files.download('mnist_cnn_model.h5')
-```.download('mnist_cnn_model.h5')
-```
+
+### Étape 1: Préparation de l'environnement (8 minutes)
+
+Pour la partie web, vous aurez besoin d'un fichier `mnist_cnn_model.h5` contenant votre modèle CNN entraîné. Ce fichier doit être généré sur Google Colab en suivant ces étapes:
+
+### Génération du modèle sur Google Colab
+
+1. Coller dans un nouveau notebook Google Colab le code du fichier suivant :[`create_model.py`](ressources/create_model.py).
+
+3. Exécutez la cellule en cliquant sur le bouton de lecture ▶️ à gauche de la cellule, ou en appuyant sur Shift+Enter
+
+## Attendre l'entraînement et télécharger le modèle
+
+1. L'exécution durera environ 3-5 minutes sur Google Colab (qui utilise des GPU/TPU)
+2. Vous verrez la progression de l'entraînement pour chaque époque
+3. À la fin, votre navigateur démarrera automatiquement le téléchargement du fichier `mnist_cnn_model.h5`
+4. Enregistrez ce fichier dans le dossier de votre projet web
+
+## Avantages de cette approche:
+- Aucune installation locale requise
+- Utilisation gratuite des ressources GPU de Google
+- Exécution plus rapide que sur un ordinateur standard
+- Interface familière et intuitive
+- Pas de problème d'installation ou de performance de TensorFlow sur sa machine locale.
+
+### Étape 2 : Configuration (5 minutes)
+
+1. **Préparation de l'environnement VS Code**
+   - Ouvrez Visual Studio Code
+   - Créez un nouveau dossier pour le projet: `File > Open Folder` et créez un dossier nommé `reconnaissance-chiffres`
+   - Dans VS Code, créez la structure de dossiers suivante via l'explorateur:
+     - Créez un dossier `templates`
+     - Créez un dossier `static`
+     - Dans `static`, créez les sous-dossiers `css` et `js`
 
 
 2.  **Téléchargement des fichiers de l'application web** :
-    * Téléchargez les fichiers suivants nécessaires à l'application web et placez-les dans les dossiers indiqués :
+        * Téléchargez les fichiers suivants nécessaires à l'application web et placez-les dans les dossiers indiqués :
+  
         * [web-integration.py](code-app-web/web-integration.py) - Script principal de l'application Flask.
         * [templates/index.html](code-app-web/index.html) - Template HTML pour l'interface utilisateur.
         * [static/css/style.css](code-app-web/style.css) - Feuille de style CSS.
@@ -88,91 +145,103 @@ files.download('mnist_cnn_model.h5')
    votre_dossier_de_travail/
    ├── mnist_cnn_model.h5      # Votre modèle sauvegardé ou le modèle fourni
    ├── web-integration.py      # Script principal Flask
-   ├── templates/              # Dossier pour les templates HTML
+   ├── templates/              
    │   └── index.html
    └── static/                 # Dossier pour CSS, JS, images
        ├── css/
        │   └── style.css
        └── js/
            └── app.js
+
+### Étape 3 : Installation et lancement (5 minutes)
+
+1. **Création du modèle via Google Colab**
+   - Suivez les instructions pour créer le modèle avec Google Colab (voir sections précédentes)
+   - Une fois le fichier `mnist_cnn_model.h5` téléchargé, déplacez-le dans le dossier racine de votre projet
+
+2. **Ouverture du Terminal intégré à VS Code**
+   - Dans VS Code, ouvrez un terminal en allant dans `Terminal > New Terminal`
+   - Vous verrez un terminal s'ouvrir en bas de la fenêtre
+
+3. **Installation des dépendances**
+   - Dans le terminal VS Code, tapez la commande suivante:
    ```
+   pip install flask tensorflow pillow numpy
+   ```
+   - Attendez que l'installation se termine
 
-### Étape 2: Installation des dépendances requises
-
-Ouvrez un terminal et exécutez:
-
-```bash
-pip install flask tensorflow pillow matplotlib numpy
-```
-Note pour Windows: Si vous rencontrez des problèmes avec TensorFlow, essayez pip install tensorflow==2.9.0.
-### Étape 3: Exécution de l'application web
-
-1. Dans le terminal, naviguez vers votre dossier de travail
-2. Exécutez la commande:
-   ```bash
+4. **Lancement de l'application**
+   - Dans le même terminal, tapez:
+   ```
    python web-integration.py
    ```
-3. Vous devriez voir un message indiquant que l'application est en cours d'exécution
-4. Ouvrez votre navigateur et accédez à: http://localhost:5001
+   - Vous devriez voir un message indiquant que l'application est en cours d'exécution
+   - VS Code peut vous proposer d'ouvrir le lien - cliquez dessus, ou
+   - Ouvrez votre navigateur et accédez à http://localhost:5001
 
-### Étape 4: Test de l'application
+### Étape 4 : Tests pratiques (10 minutes)
 
-1. L'interface vous permet de:
-   - Dessiner un chiffre manuellement ou uploader une image
-   - Soumettre l'image pour prédiction
-   - Voir la prédiction du modèle
-   - Explorer les visualisations des feature maps
+1. **Test avec dessins à la souris**
+   - Dans l'interface web, dessinez clairement un chiffre (de 0 à 9) dans la zone prévue
+   - Cliquez sur le bouton "Prédire"
+   - Notez la prédiction et le niveau de confiance
+   - Répétez ce processus avec 5 chiffres différents
+   - Gardez une trace de vos résultats (tableau simple : chiffre réel / prédiction / confiance)
 
-2. Testez l'application en dessinant différents chiffres
+2. **Test avec image importée**
+   - Sur une feuille de papier, écrivez clairement un chiffre
+   - Prenez une photo de ce chiffre avec votre smartphone ou appareil photo
+   - Transférez l'image sur votre ordinateur (par email, cloud, câble USB, etc.)
+   - Dans l'application, cliquez sur "Charger une image"
+   - Sélectionnez l'image que vous venez de prendre
+   - Observez la prédiction et le niveau de confiance
 
-### Étape 5: Analyse du code source
+3. **Test avec feature maps (optionnel)**
+   - Cochez la case "Visualiser les feature maps"
+   - Dessinez un nouveau chiffre et cliquez sur "Prédire"
+   - Observez les feature maps qui s'affichent (représentations visuelles de ce que "voit" le réseau)
 
-Ouvrez le fichier [web-integration.py](../ressources/code/web-integration.py) et examinez:
+### Étape 5 : Évaluation et rapport (10 minutes)
 
-1. **Chargement du modèle**: Identifiez la section où le modèle CNN est chargé
-   ```python
-   # Recherchez un code similaire à:
-   model = load_model('mnist_cnn_model.h5')
-   ```
+1. **Remplissage du formulaire d'évaluation**
+   - Ouvrez le document [evaluation](ressources/evaluation.md) fourni par votre formateur
+   - Remplissez les sections suivantes :
+     - Nombre de prédictions correctes/incorrectes
+     - Chiffres les mieux reconnus
+     - Chiffres les plus difficiles à reconnaître
+     - Niveau de confiance moyen observé
 
-2. **Prétraitement des images**: Examinez comment les images sont prétraitées
-   ```python
-   # Recherchez la fonction qui fait le prétraitement:
-   def preprocess_image(image_data):
-       # ...
-   ```
+2. **Analyse critique**
+   - Dans le formulaire, notez au moins 3 points forts de l'application
+   - Notez également au moins 3 limitations ou problèmes rencontrés
 
-3. **API Flask**: Identifiez les routes Flask et leur fonction
-   ```python
-   # Routes comme:
-   @app.route('/predict', methods=['POST'])
-   def predict():
-       # ...
-   ```
+3. **Propositions d'amélioration**
+   - Proposez 2-3 idées concrètes pour améliorer l'outil dans un contexte professionnel
+   - Exemple : "Ajouter une fonction pour traiter plusieurs chiffres à la fois"
 
-4. **Interaction frontend-backend**: Ouvrez `static/js/app.js` et examinez comment les requêtes sont envoyées au serveur
-  
-### Étape 6 : Défis et questions à ajouter
+4. **Conclusion professionnelle**
+   - Rédigez une brève conclusion (2-3 phrases) sur l'utilité potentielle de cet outil dans l'entreprise
 
-Pour approfondir l'apprentissage, ajoutez ces défis:
+## Livrable à rendre
 
-### Défis à réaliser (pour les plus rapides)
+## Instructions de remise
 
-1. **Amélioration de l'interface**: Modifiez le fichier HTML/CSS pour améliorer l'expérience utilisateur
+À la fin de la session (30 minutes), veuillez :
+
+1. **Copier et Compléter** entièrement ce [formulaire d'évaluation](ressources/evaluationCNN.md)
+2. **Enregistrer**  le document  sous le nom "Eval_CNN_NOM_Prenom.doc"
+3. **Partager** votre évaluation avec l'enseignant sur l'espace de cours:
    
-2. **Ajout de fonctionnalités**: Implémentez une de ces fonctionnalités supplémentaires:
-   - Historique des prédictions
-   - Visualisation de la matrice de confusion en temps réel
-   - Option pour appliquer des transformations à l'image (rotation, flou)
-   
-3. **Optimisation du modèle**: Modifiez le code pour charger un modèle plus léger (quantifié ou pruné)
+**IMPORTANT :** La remise de ce document complété est obligatoire et fait partie de l'évaluation du mini-projet.
 
-### Questions à répondre
+Date limite de remise : À la fin de la séance
 
-1. Quels avantages offre l'utilisation de Flask pour exposer un modèle de Deep Learning?
-2. Quels sont les défis liés au déploiement de modèles de Deep Learning dans des applications web?
-3. Comment pourriez-vous améliorer les performances de l'application pour gérer plus d'utilisateurs simultanément?
-4. Quelles mesures de sécurité devriez-vous implémenter avant de déployer cette application en production?
+## Pour aller plus loin (si vous terminez en avance)
+
+Si vous avez terminé avant la fin du temps imparti, vous pouvez explorer ces pistes :
+- Testez les limites du modèle en dessinant des chiffres de différentes tailles/styles
+- Observez comment le bruit ou les distorsions affectent la précision
+- Essayez de comprendre le code source dans `web-integration.py` pour voir comment l'application fonctionne
 
 
 # Ressources complémentaires
