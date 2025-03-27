@@ -22,6 +22,7 @@ Avant de plonger dans les CNN, prenez 2 minutes pour réfléchir à cette questi
 
 **Étape 1 : Observation (3 min)**
 Examinez ces deux visualisations en parallèle :
+
 - L'image originale d'un chiffre '7' manuscrit et son traitement par les différentes couches d'un CNN
 
 ![Transformation progressive d'une image dans un CNN](../images/cnn-comparative-processing.svg)
@@ -32,6 +33,7 @@ Examinez ces deux visualisations en parallèle :
 
 **Étape 2 : Mini-investigation (5 min)**
 Formez des binômes et discutez :
+
 - Quels types de détails la première couche semble-t-elle repérer dans l'image?
 - Comment ce que "voit" le réseau change-t-il entre la première et la dernière couche?
 - Pourquoi est-il utile pour le réseau de transformer l'image à chaque étape?
