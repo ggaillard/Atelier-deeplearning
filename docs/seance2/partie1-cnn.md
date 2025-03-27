@@ -16,6 +16,7 @@ Dans cette phase, vous allez :
 ### Défi de réflexion initiale
 
 Avant de plonger dans les CNN, prenez 2 minutes pour réfléchir à cette question :
+
 > **Question à méditer** : Comment reconnaissez-vous un visage dans une photo, quelle que soit sa position ou l'éclairage ? Qu'est-ce qui rend cette tâche si facile pour vous et si difficile pour un ordinateur ?
 
 ### Activité guidée : Découverte de l'architecture CNN
