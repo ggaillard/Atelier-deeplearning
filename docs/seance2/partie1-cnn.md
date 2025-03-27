@@ -31,7 +31,7 @@ Avantages majeurs pour un développeur d'applications :
 
 ### Instructions
 
-1. Ouvrez le notebook Jupyter [cnn-classification.ipynb](../ressources/notebooks/cnn-classification.ipynb) dans Google Colab
+1. Ouvrez le notebook Jupyter [cnn-classification](ressources/cnn-classification.md) dans Google Colab
 2. Suivez les instructions étape par étape pour implémenter un CNN pour la classification des chiffres manuscrits (MNIST)
 3. Exécutez chaque cellule et observez les résultats
 4. Portez une attention particulière aux sections suivantes :
