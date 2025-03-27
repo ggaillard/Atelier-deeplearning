@@ -150,10 +150,10 @@ Pour la partie web, vous aurez besoin d'un fichier `mnist_cnn_model.h5` contenan
    
    Téléchargez les fichiers suivants nécessaires à l'application web et placez-les dans les dossiers indiqués :
   
-        * [web-integration.py](code-app-web/web-integration.py) - Script principal de l'application Flask.
-        * [templates/index.html](code-app-web/index.html) - Template HTML pour l'interface utilisateur.
-        * [static/css/style.css](code-app-web/style.css) - Feuille de style CSS.
-        * [static/js/app.js](code-app-web/app.js) - Script JavaScript pour l'interactivité.
+   - [web-integration.py](code-app-web/web-integration.py) - Script principal de l'application Flask.
+   - [templates/index.html](code-app-web/index.html) - Template HTML pour l'interface utilisateur.
+   - [static/css/style.css](code-app-web/style.css) - Feuille de style CSS.
+   - [static/js/app.js](code-app-web/app.js) - Script JavaScript pour l'interactivité.
 
 3.  **Structure des dossiers** :
 
@@ -175,17 +175,17 @@ Pour la partie web, vous aurez besoin d'un fichier `mnist_cnn_model.h5` contenan
 
 ### Étape 3 : Installation et lancement (5 minutes)
 
-1. **Création du modèle via Google Colab**
-2. 
+1. **Création du modèle via Google Colab**:
+   
    - Suivez les instructions pour créer le modèle avec Google Colab (voir sections précédentes)
    - Une fois le fichier `mnist_cnn_model.h5` téléchargé, déplacez-le dans le dossier racine de votre projet
 
-3. **Ouverture du Terminal intégré à VS Code**
+2. **Ouverture du Terminal intégré à VS Code**:
    
    - Dans VS Code, ouvrez un terminal en allant dans `Terminal > New Terminal`
    - Vous verrez un terminal s'ouvrir en bas de la fenêtre
 
-4. **Installation des dépendances**
+3. **Installation des dépendances**:
    
    - Dans le terminal VS Code, tapez la commande suivante:
    ```
@@ -193,7 +193,7 @@ Pour la partie web, vous aurez besoin d'un fichier `mnist_cnn_model.h5` contenan
    ```
    - Attendez que l'installation se termine
 
-5. **Lancement de l'application**
+4. **Lancement de l'application**:
    
    - Dans le même terminal, tapez:
    ```
@@ -205,7 +205,7 @@ Pour la partie web, vous aurez besoin d'un fichier `mnist_cnn_model.h5` contenan
 
 ### Étape 4 : Tests pratiques (10 minutes)
 
-1. **Test avec dessins à la souris**
+1. **Test avec dessins à la souris**:
    
    - Dans l'interface web, dessinez clairement un chiffre (de 0 à 9) dans la zone prévue
    - Cliquez sur le bouton "Prédire"
@@ -213,7 +213,7 @@ Pour la partie web, vous aurez besoin d'un fichier `mnist_cnn_model.h5` contenan
    - Répétez ce processus avec 5 chiffres différents
    - Gardez une trace de vos résultats (tableau simple : chiffre réel / prédiction / confiance)
 
-2. **Test avec image importée**
+2. **Test avec image importée**:
    
    - Sur une feuille de papier, écrivez clairement un chiffre
    - Prenez une photo de ce chiffre avec votre smartphone ou appareil photo
@@ -222,7 +222,7 @@ Pour la partie web, vous aurez besoin d'un fichier `mnist_cnn_model.h5` contenan
    - Sélectionnez l'image que vous venez de prendre
    - Observez la prédiction et le niveau de confiance
 
-3. **Test avec feature maps (optionnel)**
+3. **Test avec feature maps (optionnel)**:
    
    - Cochez la case "Visualiser les feature maps"
    - Dessinez un nouveau chiffre et cliquez sur "Prédire"
@@ -230,7 +230,7 @@ Pour la partie web, vous aurez besoin d'un fichier `mnist_cnn_model.h5` contenan
 
 ### Étape 5 : Évaluation et rapport (10 minutes)
 
-1. **Remplissage du formulaire d'évaluation**
+1. **Remplissage du formulaire d'évaluation**:
    
    - Ouvrez le document [evaluation](ressources/evaluation.md) fourni par votre formateur
    - Remplissez les sections suivantes :
@@ -239,23 +239,21 @@ Pour la partie web, vous aurez besoin d'un fichier `mnist_cnn_model.h5` contenan
      - Chiffres les plus difficiles à reconnaître
      - Niveau de confiance moyen observé
 
-2. **Analyse critique**
+2. **Analyse critique**:
    
    - Dans le formulaire, notez au moins 3 points forts de l'application
    - Notez également au moins 3 limitations ou problèmes rencontrés
 
-3. **Propositions d'amélioration**
+3. **Propositions d'amélioration**:
    
    - Proposez 2-3 idées concrètes pour améliorer l'outil dans un contexte professionnel
    - Exemple : "Ajouter une fonction pour traiter plusieurs chiffres à la fois"
 
-4. **Conclusion professionnelle**
+4. **Conclusion professionnelle**:
    
    - Rédigez une brève conclusion (2-3 phrases) sur l'utilité potentielle de cet outil dans l'entreprise
 
 ## Livrable à rendre
-
-## Instructions de remise
 
 À la fin de la session (30 minutes), veuillez :
 
