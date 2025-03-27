@@ -148,12 +148,12 @@ Pour la partie web, vous aurez besoin d'un fichier `mnist_cnn_model.h5` contenan
 
 2.  **Téléchargement des fichiers de l'application web** :
    
-   Téléchargez les fichiers suivants nécessaires à l'application web et placez-les dans les dossiers indiqués :
-  
-   - [web-integration.py](code-app-web/web-integration.py) - Script principal de l'application Flask.
-   - [templates/index.html](code-app-web/index.html) - Template HTML pour l'interface utilisateur.
-   - [static/css/style.css](code-app-web/style.css) - Feuille de style CSS.
-   - [static/js/app.js](code-app-web/app.js) - Script JavaScript pour l'interactivité.
+Téléchargez les fichiers suivants nécessaires à l'application web et placez-les dans les dossiers indiqués :
+
+- [web-integration.py](./code-app-web/web-integration.py) - Script principal de l'application Flask.
+- [index.html](./code-app-web/templates/index.html) - Template HTML pour l'interface utilisateur.
+- [style.css](./code-app-web/static/css/style.css) - Feuille de style CSS.
+- [app.js](./code-app-web/static/js/app.js) - Script JavaScript pour l'interactivité.
 
 3.  **Structure des dossiers** :
 
