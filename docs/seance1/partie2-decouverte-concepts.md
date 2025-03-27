@@ -62,8 +62,8 @@ Nous allons explorer les différences fondamentales entre le Machine Learning cl
 
 - Compte Google (pour accéder à Google Colab)
 - Liens vers deux notebooks complémentaires :
-  - [Notebook A : Classification avec un algorithme classique (Random Forest)](../ressources/notebooks/machine-learning-classique.ipynb)
-  - [Notebook B : Classification avec un réseau de neurones simple](../ressources/notebooks/deep-learning.ipynb)
+  - [Notebook A : Classification avec un algorithme classique (Random Forest)](ressources/machine-learning-classique.md)
+  - [Notebook B : Classification avec un réseau de neurones simple](ressources/deep-learning.md)
 
 **Jeu de données :** MNIST (chiffres manuscrits)
 
