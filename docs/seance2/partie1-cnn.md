@@ -32,9 +32,9 @@ Examinez ces deux visualisations en parallèle :
 
 **Étape 2 : Mini-investigation (5 min)**
 Formez des binômes et discutez :
-- Que semble détecter la première couche du réseau ? (contours, textures...)
-- Comment évoluent les formes détectées en avançant dans le réseau ?
-- Pourquoi le réseau semble-t-il "simplifier" l'image à chaque étape ?
+- Quels types de détails la première couche semble-t-elle repérer dans l'image?
+- Comment ce que "voit" le réseau change-t-il entre la première et la dernière couche?
+- Pourquoi est-il utile pour le réseau de transformer l'image à chaque étape?
 
 **Étape 3 : Construction du modèle mental (5 min)**
 Sur votre feuille de travail, complétez le schéma simplifié d'un CNN :
@@ -46,17 +46,31 @@ Sur votre feuille de travail, complétez le schéma simplifié d'un CNN :
 3. Listez les trois avantages majeurs des CNN
 
 **Étape 4 : Analogie concrète (3 min)**
-Imaginez que vous êtes un inspecteur cherchant à identifier un suspect :
-- La **couche de convolution** est comme votre attention aux détails spécifiques (cicatrice, forme du nez...)
-- La **couche de pooling** est comme votre capacité à ignorer les éléments non pertinents (éclairage, angle de vue...)
-- La **couche fully connected** est comme votre processus de décision finale ("C'est lui !")
+Pour comprendre le fonctionnement d'un CNN, voyons comment il pourrait identifier un personnage célèbre comme Dark Vador :
 
-### Validation collective (4 min)
+![Analogie Star Wars pour comprendre les CNN](../images/cnn-star-wars-analogy.svg)
 
-Comparez votre schéma avec celui de vos voisins et discutez des trois avantages majeurs des CNN pour un développeur d'applications :
-- Pourquoi est-ce important de réduire le nombre de paramètres ?
-- Comment l'invariance à la translation facilite-t-elle la reconnaissance d'objets ?
-- Pourquoi l'extraction automatique de caractéristiques est-elle révolutionnaire ?
+- **La couche de convolution** repère les caractéristiques distinctives : "Je détecte un casque noir, un respirateur, une cape..."
+- **La couche de pooling** ignore les détails non pertinents : "Peu importe l'angle de vue, l'éclairage, s'il est de face ou de profil..."
+- **La couche fully connected** prend la décision finale : "D'après toutes ces caractéristiques combinées, c'est Dark Vador à 99.8%!"
+
+Cette analogie montre comment un CNN analyse une image de manière hiérarchique, comme notre cerveau le fait naturellement.
+
+### Points importants à retenir
+
+> **À savoir avant de passer à la pratique :**
+> 
+> 1. Les CNN sont conçus spécifiquement pour traiter les données en grille comme les images.
+>
+> 2. Les filtres de convolution agissent comme des détecteurs de motifs qui s'appliquent à toute l'image.
+>
+> 3. Le pooling permet de réduire les dimensions tout en conservant l'information importante.
+>
+> 4. Les poids du réseau sont ajustés automatiquement pendant l'entraînement.
+>
+> 5. Un CNN profond permet de détecter des motifs de plus en plus complexes et abstraits.
+>
+> 6. Le grand avantage des CNN est qu'ils apprennent automatiquement les caractéristiques pertinentes, sans qu'on ait à les programmer manuellement.
 
 ### Transition vers l'implémentation
 
