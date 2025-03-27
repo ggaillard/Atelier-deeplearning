@@ -1,316 +1,282 @@
-Je vais compléter la partie 2 du mini-projet RNN pour le traitement du langage.
+# Mini-projet CNN pour la vision par ordinateur
 
-# Phase 2 : Mini-projet RNN pour le traitement du langage
+![CNN pour la vision par ordinateur](https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&q=80&w=1000&h=300)
 
-![RNN Architecture](https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1000&h=300)
+## Introduction
 
-## Objectifs de la phase
+Dans ce mini-projet, vous allez découvrir et manipuler les réseaux de neurones convolutifs (CNN), qui sont particulièrement efficaces pour l'analyse d'images. Les CNN sont à la base de nombreuses applications modernes comme la reconnaissance faciale, la détection d'objets, ou encore les filtres de réseaux sociaux.
 
-Dans cette phase, vous allez :
+## Objectifs d'apprentissage
 
-- Comprendre les principes des réseaux récurrents (RNN) et de leurs variantes (LSTM, GRU)
-- Implémenter un modèle LSTM pour l'analyse de sentiment
-- Visualiser et interpréter le fonctionnement interne d'un RNN
-- Expérimenter avec l'API Mistral AI pour la génération de texte
-- Établir les bases pour le projet de chatbot pédagogique
+- Comprendre l'architecture d'un réseau convolutif (CNN)
+- Implémenter un CNN avec TensorFlow/Keras
+- Visualiser et interpréter les filtres et les feature maps
+- Analyser les performances du modèle
 
-## Partie 1: Principes des RNN (20 min)
+## Structure du mini-projet
 
-### Architecture et fonctionnement des RNN
+### Partie 1: Principes des CNN (20 min)
 
-Les réseaux de neurones récurrents (RNN) sont spécialement conçus pour traiter des données séquentielles, comme du texte, des séries temporelles ou des signaux audio. Leur architecture inclut des connections récurrentes qui leur permettent de "mémoriser" les informations précédentes :
+#### Architecture d'un CNN
 
-1. **Principe de base** : contrairement aux réseaux feed-forward, les RNN possèdent des boucles de rétroaction
-2. **Mémoire à court terme** : chaque état caché dépend de l'état précédent et de l'entrée actuelle
-3. **Problème de la disparition du gradient** : difficulté à capturer les dépendances à long terme
-4. **Architectures avancées** : LSTM (Long Short-Term Memory) et GRU (Gated Recurrent Unit) qui résolvent ce problème
+Les réseaux de neurones convolutifs (CNN) sont spécialement conçus pour traiter des données structurées en grille, comme les images. Leur architecture s'inspire du cortex visuel biologique et comprend plusieurs types de couches spécialisées :
 
-Avantages pour un développeur d'applications :
+1. **Couches de convolution** : appliquent des filtres qui glissent sur l'image pour détecter des motifs locaux (contours, textures, etc.)
+2. **Couches de pooling** : réduisent la dimension spatiale pour diminuer le nombre de paramètres
+3. **Couches fully connected** : combinent les caractéristiques extraites pour la classification finale
 
-- Traitement de séquences de longueur variable
-- Capacité à "mémoriser" des informations importantes
-- Applications diverses : analyse de texte, traduction, génération de contenu
+#### Avantages majeurs pour un développeur d'applications :
 
-## Partie 2: Implémentation d'un LSTM pour l'analyse de sentiment (40 min)
+* Réduction significative du nombre de paramètres (partage de poids)
+* Invariance à la translation (détection de motifs quelle que soit leur position)
+* Capacité d'extraire automatiquement des caractéristiques pertinentes
 
-### Instructions
+### Partie 2: Implémentation d'un CNN pour MNIST (40 min)
 
-1. Ouvrez le notebook Jupyter [rnn-sequence.ipynb](../ressources/notebooks/rnn-sequence.ipynb) dans Google Colab
-2. Suivez les instructions étape par étape pour implémenter un modèle LSTM pour l'analyse de sentiment
+#### Instructions
+
+1. Ouvrez le notebook Jupyter `cnn-classification` dans Google Colab
+2. Suivez les instructions étape par étape pour implémenter un CNN pour la classification des chiffres manuscrits (MNIST)
 3. Exécutez chaque cellule et observez les résultats
 4. Portez une attention particulière aux sections suivantes :
-   - Prétraitement du texte (tokenisation)
-   - Architecture du modèle LSTM
-   - Visualisation des embeddings de mots
+   - Architecture du modèle CNN
+   - Processus d'entraînement
+   - Visualisation des filtres et feature maps
    - Analyse des performances et des erreurs
 
-### Points clés à explorer
+#### Points clés à explorer
 
-- Comment le texte est-il transformé en entrées numériques pour le réseau ?
-- Comment les cellules LSTM gèrent-elles l'information à long terme ?
-- Quelle est la différence entre les embeddings de mots positifs et négatifs ?
-- Comment le modèle LSTM peut-il comprendre le contexte d'une phrase ?
-- Quelles sont les limitations de cette approche pour l'analyse de sentiment ?
-- Comment pourriez-vous améliorer ce modèle pour des tâches plus complexes ?
+- Comment les couches de convolution extraient-elles des caractéristiques de plus en plus abstraites ?
+- Quel est l'impact du nombre de filtres et de couches sur les performances ?
+- Comment les feature maps révèlent-elles ce que "voit" le réseau ?
+- Quelles sont les limites du modèle face à des données bruitées ou déformées ?
 
-## Partie 3: Intégration avec l'API Mistral AI (30 min)
+### Partie 3: Visualisation et interprétation (30 min)
 
-### Introduction à Mistral AI
+- Exploration des filtres appris par le réseau
+- Visualisation des feature maps à chaque niveau
+- Interprétation des résultats et des erreurs de classification
 
-Mistral AI est une plateforme avancée d'intelligence artificielle spécialisée dans le traitement du langage naturel (NLP). Contrairement à nos modèles LSTM simples, Mistral utilise des architectures de type transformer, beaucoup plus puissantes pour comprendre et générer du texte.
+### Partie 4: Challenge d'optimisation (30 min)
 
-Avantages de l'API Mistral AI:
-- Modèles pré-entraînés sur d'immenses corpus de texte
-- Compréhension contextuelle profonde
-- Capacités multilingues
-- Flexibilité pour différents cas d'usage NLP
+- Modification de l'architecture pour améliorer les performances
+- Expérimentation avec différents hyperparamètres
+- Analyse comparative des résultats
 
-### Instructions
+## Contenu du notebook CNN
 
-1. Ouvrez le script [mistral-integration.py](../ressources/code/mistral-integration.py)
-2. Examinez comment l'API Mistral AI est intégrée pour améliorer les capacités de traitement du langage
-3. Vous aurez besoin d'une clé API (une clé de démonstration sera fournie pendant la séance)
-4. Pour exécuter le script:
+Le notebook que vous allez explorer contient les sections suivantes:
 
-```bash
-# Installer les dépendances
-pip install requests pandas matplotlib 
+1. Configuration de l'environnement
+2. Chargement et préparation du dataset MNIST
+3. Création d'un modèle CNN de base
+4. Entraînement du modèle
+5. Évaluation des performances
+6. Visualisation des filtres et feature maps
+7. Test de robustesse avec des images bruitées
+8. Challenge d'amélioration du modèle
 
-# Configurer votre clé API (sur Windows)
-set MISTRAL_API_KEY=votre_clé_api_ici
-
-# Exécuter le script
-python mistral-integration.py
-```
-
-### Structure du script Mistral AI
-
-Le script est organisé en plusieurs sections:
+## Extrait du code pour la création du modèle CNN
 
 ```python
-# Structure du script mistral-integration.py
-
-# 1. Configuration et imports
-import requests
-import json
-import os
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# 2. Configuration de l'API
-API_KEY = os.environ.get("MISTRAL_API_KEY")
-API_URL = "https://api.mistral.ai/v1/chat/completions"
-
-# 3. Fonction pour envoyer des requêtes à l'API
-def query_mistral(prompt, system_message=None, temperature=0.7, max_tokens=256):
-    """
-    Envoie une requête à l'API Mistral et retourne la réponse.
+# Créer un modèle CNN
+model = Sequential([
+    # Première couche de convolution
+    Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1), name='conv1'),
+    MaxPooling2D((2, 2), name='pool1'),
     
-    Args:
-        prompt (str): Le message utilisateur
-        system_message (str): Instructions système pour guider le modèle
-        temperature (float): Contrôle la créativité (0.0-1.0)
-        max_tokens (int): Limite de tokens pour la réponse
-        
-    Returns:
-        str: Réponse du modèle
-    """
-    # Construction des messages
-    messages = []
-    if system_message:
-        messages.append({"role": "system", "content": system_message})
-    messages.append({"role": "user", "content": prompt})
+    # Deuxième couche de convolution
+    Conv2D(64, (3, 3), activation='relu', name='conv2'),
+    MaxPooling2D((2, 2), name='pool2'),
     
-    # Configuration de la requête
-    headers = {
-        "Authorization": f"Bearer {API_KEY}",
-        "Content-Type": "application/json"
-    }
+    # Aplatissement pour passer aux couches denses
+    Flatten(name='flatten'),
     
-    payload = {
-        "model": "mistral-small",
-        "messages": messages,
-        "temperature": temperature,
-        "max_tokens": max_tokens
-    }
-    
-    # Envoi de la requête
-    try:
-        response = requests.post(API_URL, headers=headers, json=payload)
-        response.raise_for_status()
-        return response.json()["choices"][0]["message"]["content"]
-    except Exception as e:
-        print(f"Erreur lors de la requête à l'API: {e}")
-        return None
-
-# 4. Démonstrations d'applications
-# 4.1 Analyse de sentiment avancée
-def analyze_sentiment_mistral(text):
-    """Analyse le sentiment d'un texte avec Mistral AI"""
-    system_message = """
-    Vous êtes un expert en analyse de sentiment.
-    Analysez le sentiment du texte fourni et répondez uniquement par:
-    POSITIF, NÉGATIF ou NEUTRE, suivi d'un score de -1.0 à 1.0 entre parenthèses.
-    Exemple: POSITIF (0.8) ou NÉGATIF (-0.5)
-    """
-    prompt = f"Analysez le sentiment du texte suivant: '{text}'"
-    return query_mistral(prompt, system_message, temperature=0.3)
-
-# 4.2 Génération de texte contrôlée
-def generate_continuation(text, style="informatif"):
-    """Génère une continuation de texte dans un style spécifié"""
-    style_instructions = {
-        "informatif": "Continuez ce texte dans un style informatif et factuel.",
-        "persuasif": "Continuez ce texte dans un style persuasif et convaincant.",
-        "narratif": "Continuez ce texte dans un style narratif engageant."
-    }
-    
-    system_message = f"""
-    Vous êtes un expert en rédaction et génération de texte.
-    {style_instructions.get(style, style_instructions['informatif'])}
-    """
-    
-    prompt = f"Voici le début d'un texte. Continuez-le de manière cohérente:\n\n{text}"
-    return query_mistral(prompt, system_message, temperature=0.7, max_tokens=150)
-
-# 4.3 Question-réponse contextuelle
-def answer_question(context, question):
-    """Répond à une question basée sur un contexte donné"""
-    system_message = """
-    Vous êtes un assistant spécialisé en compréhension de texte et question-réponse.
-    Répondez à la question uniquement à partir des informations fournies dans le contexte.
-    Si la réponse n'est pas dans le contexte, répondez "Je ne peux pas répondre à cette question d'après le contexte fourni."
-    """
-    
-    prompt = f"""
-    Contexte: {context}
-    
-    Question: {question}
-    """
-    
-    return query_mistral(prompt, system_message, temperature=0.3)
-
-# 5. Démonstration interactive
-def run_demos():
-    print("=== Démonstration d'intégration de Mistral AI ===\n")
-    
-    # Test d'analyse de sentiment
-    print("1. Analyse de sentiment avancée")
-    sample_texts = [
-        "J'ai adoré ce film, c'était vraiment captivant !",
-        "Le service était médiocre et la nourriture froide.",
-        "Cette application semble intéressante mais manque de fonctionnalités."
-    ]
-    
-    results = []
-    for text in sample_texts:
-        sentiment = analyze_sentiment_mistral(text)
-        print(f"Texte: '{text}'")
-        print(f"Sentiment: {sentiment}\n")
-        
-        # Extraction du score pour visualisation
-        if sentiment:
-            score_str = sentiment.split('(')[1].split(')')[0]
-            try:
-                score = float(score_str)
-                results.append({"text": text, "score": score})
-            except:
-                pass
-    
-    # Visualisation des scores de sentiment
-    if results:
-        df = pd.DataFrame(results)
-        plt.figure(figsize=(10, 6))
-        bars = plt.barh(df['text'], df['score'], color=['green' if x > 0 else 'red' for x in df['score']])
-        plt.axvline(x=0, color='black', linestyle='-', alpha=0.3)
-        plt.xlim(-1, 1)
-        plt.xlabel('Score de sentiment')
-        plt.title('Analyse de sentiment avec Mistral AI')
-        plt.tight_layout()
-        plt.savefig('sentiment_analysis.png')
-        print("Visualisation sauvegardée dans 'sentiment_analysis.png'\n")
-    
-    # Test de génération de texte
-    print("2. Génération de texte contrôlée")
-    sample_text = "L'intelligence artificielle transforme notre manière de travailler."
-    for style in ["informatif", "persuasif", "narratif"]:
-        continuation = generate_continuation(sample_text, style)
-        print(f"Style: {style}")
-        print(f"Texte initial: {sample_text}")
-        print(f"Continuation: {continuation}\n")
-    
-    # Test de Q&A contextuel
-    print("3. Question-réponse contextuelle")
-    context = """
-    Les réseaux de neurones récurrents (RNN) sont une classe de réseaux de neurones artificiels
-    où les connexions entre les nœuds forment un graphe orienté le long d'une séquence temporelle.
-    Contrairement aux réseaux de neurones à propagation avant, les RNN peuvent utiliser leur état interne
-    (mémoire) pour traiter des séquences d'entrées, ce qui les rend applicables à des tâches
-    comme la reconnaissance vocale ou la traduction automatique.
-    
-    Les LSTM (Long Short-Term Memory) sont une architecture spéciale de RNN capable d'apprendre
-    les dépendances à long terme. Les LSTM ont été conçus pour résoudre le problème de la disparition
-    du gradient qui peut être rencontré lors de l'entraînement des RNN traditionnels.
-    """
-    
-    questions = [
-        "Quelle est la principale différence entre les RNN et les réseaux à propagation avant?",
-        "Pourquoi les LSTM ont-ils été développés?",
-        "Qui a inventé les réseaux de neurones récurrents?"
-    ]
-    
-    for question in questions:
-        answer = answer_question(context, question)
-        print(f"Question: {question}")
-        print(f"Réponse: {answer}\n")
-
-# 6. Point d'entrée principal
-if __name__ == "__main__":
-    if not API_KEY:
-        print("Erreur: Clé API Mistral non configurée. Utilisez 'set MISTRAL_API_KEY=votre_clé' (Windows) ou 'export MISTRAL_API_KEY=votre_clé' (Linux/Mac)")
-    else:
-        run_demos()
+    # Couches denses (fully connected)
+    Dense(128, activation='relu', name='dense1'),
+    Dropout(0.5, name='dropout1'),  # Évite le surapprentissage
+    Dense(10, activation='softmax', name='output')  # 10 classes (chiffres 0-9)
+])
 ```
 
-### Exercices pratiques avec Mistral AI
+## Architectures CNN modernes
 
-1. Modifiez le script pour ajouter une fonction qui génère des explications pédagogiques sur les concepts du Deep Learning
+Au-delà de ce mini-projet, voici quelques architectures CNN populaires que vous pourriez explorer par la suite:
 
-2. Implémentez une fonction simple de dialogue qui permettrait à un utilisateur de poser des questions sur un sujet spécifique
+| Architecture | Année | Particularités | Applications typiques |
+|--------------|-------|----------------|----------------------|
+| LeNet-5 | 1998 | Premier CNN populaire | Reconnaissance de chiffres |
+| AlexNet | 2012 | Vainqueur ImageNet, utilisation de ReLU | Classification d'images |
+| VGG | 2014 | Architecture simple et profonde | Extraction de caractéristiques |
+| GoogLeNet | 2014 | Modules "Inception" | Classification à grande échelle |
+| ResNet | 2015 | Connexions résiduelles | Applications diverses |
 
-3. Comparez les résultats d'analyse de sentiment entre votre modèle LSTM et Mistral AI:
-   - Quelles sont les différences principales?
-   - Dans quels cas Mistral AI semble-t-il plus performant?
-   - Pourquoi les grands modèles de langage comme Mistral surpassent-ils les architectures LSTM simples?
+## Visualisation des filtres et feature maps
 
-## Partie 4: Comparaison et synthèse (20 min)
+Les visualisations vous permettront de comprendre ce que "voit" réellement votre réseau:
 
-### Tableau comparatif CNN vs RNN
-
-| Caractéristique | CNN | RNN/LSTM |
-|-----------------|-----|----------|
-| Type de données | Structurées spatialement (images) | Séquentielles (texte, séries temporelles) |
-| Avantage principal | Extraction automatique de caractéristiques | Mémoire contextuelle |
-| Architecture clé | Convolution + Pooling | Cellules récurrentes + portes |
-| Applications | Vision par ordinateur, classification d'images | NLP, traduction, génération de texte |
-| Défi principal | Invariance à la rotation/échelle | Dépendances à long terme |
-| Interprétabilité | Visualisation des feature maps | États cachés et portes d'oubli |
-
-### Discussion collective
-
-En groupes de 3-4, discutez des questions suivantes et préparez une synthèse à partager:
-
-1. Quelles sont les forces et faiblesses respectives des CNN et RNN?
-2. Comment les deux types d'architectures pourraient-ils être combinés?
-3. Quels défis spécifiques posent les données textuelles par rapport aux images?
-4. Comment l'architecture Transformer (utilisée par Mistral) a-t-elle révolutionné le NLP?
-5. Comment ces technologies pourraient-elles être intégrées dans notre projet de chatbot pédagogique?
+!!! example "Exemple de visualisation"
+    - Les filtres de première couche détectent généralement des motifs simples comme des bords et des contours
+    - Les couches intermédiaires combinent ces motifs pour détecter des formes plus complexes
+    - Les couches profondes identifient des caractéristiques abstraites spécifiques à chaque classe
 
 ## Ressources complémentaires
 
-- [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
-- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
-- [Documentation de l'API Mistral AI](https://docs.mistral.ai/)
+- [Visualizing and Understanding Convolutional Networks](https://cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf) - Article fondamental sur la visualisation des CNN
+- [CNN Explainer](https://poloclub.github.io/cnn-explainer/) - Outil interactif pour comprendre les CNN
+- [TensorFlow Playground](https://playground.tensorflow.org/) - Expérimentation interactive avec des réseaux de neurones
 
-[Retour à la Séance 2](index.md){ .md-button }
-[Continuer vers la Phase 3: Amélioration des modèles](partie3-amelioration.md){ .md-button .md-button--primary }
+## Livrables attendus
+
+À l'issue de ce mini-projet, vous devrez produire:
+
+1. Le notebook complété avec vos expérimentations
+2. Un rapport d'une page résumant:
+   - L'architecture de votre modèle final
+   - Les performances obtenues
+   - Votre analyse des points forts et des limites du modèle
+   - Vos observations sur les filtres et feature maps
+
+### Partie 3: Intégration dans une application web (30 min)
+
+Dans cette partie, vous allez découvrir comment intégrer un modèle CNN pré-entraîné dans une application web interactive.
+
+#### Étape 1: Préparation de l'environnement
+
+**Sauvegarde du modèle CNN :**
+
+Assurez-vous que votre modèle CNN entraîné lors de la Partie 2 est correctement sauvegardé. Utilisez le code Python suivant pour le sauvegarder :
+
+```python
+cnn_model.save('mnist_cnn_model.h5')
+```
+
+Ce code créera un fichier nommé `mnist_cnn_model.h5` contenant les poids et l'architecture de votre modèle.
+
+!!! note "Note importante"
+    Vérifiez que le fichier `mnist_cnn_model.h5` est bien créé dans le même répertoire que votre script Python.
+
+**Si vous travaillez dans Google Colab :** Après avoir sauvegardé le modèle, vous devez télécharger le fichier sur votre ordinateur local. Exécutez ce code supplémentaire :
+
+```python
+from google.colab import files
+files.download('mnist_cnn_model.h5')
+```
+
+**Téléchargement des fichiers de l'application web :**
+
+Téléchargez les fichiers suivants nécessaires à l'application web et placez-les dans les dossiers indiqués :
+- `web-integration.py` - Script principal de l'application Flask.
+- `templates/index.html` - Template HTML pour l'interface utilisateur.
+- `static/css/style.css` - Feuille de style CSS.
+- `static/js/app.js` - Script JavaScript pour l'interactivité.
+
+**Structure des dossiers :**
+
+Assurez-vous que votre structure de dossiers est la suivante:
+
+```
+votre_dossier_de_travail/
+├── mnist_cnn_model.h5      # Votre modèle sauvegardé ou le modèle fourni
+├── web-integration.py      # Script principal Flask
+├── templates/              # Dossier pour les templates HTML
+│   └── index.html
+└── static/                 # Dossier pour CSS, JS, images
+    ├── css/
+    │   └── style.css
+    └── js/
+        └── app.js
+```
+
+#### Étape 2: Installation des dépendances requises
+
+Ouvrez un terminal et exécutez:
+
+```bash
+pip install flask tensorflow pillow matplotlib numpy
+```
+
+!!! tip "Note pour Windows"
+    Si vous rencontrez des problèmes avec TensorFlow, essayez `pip install tensorflow==2.9.0`.
+
+#### Étape 3: Exécution de l'application web
+
+1. Dans le terminal, naviguez vers votre dossier de travail
+2. Exécutez la commande:
+
+```bash
+python web-integration.py
+```
+
+3. Vous devriez voir un message indiquant que l'application est en cours d'exécution
+4. Ouvrez votre navigateur et accédez à: http://localhost:5001
+
+#### Étape 4: Test de l'application
+
+L'interface vous permet de:
+- Dessiner un chiffre manuellement ou uploader une image
+- Soumettre l'image pour prédiction
+- Voir la prédiction du modèle
+- Explorer les visualisations des feature maps
+
+Testez l'application en dessinant différents chiffres.
+
+#### Étape 5: Analyse du code source
+
+Ouvrez le fichier `web-integration.py` et examinez:
+
+**Chargement du modèle:** Identifiez la section où le modèle CNN est chargé
+
+```python
+# Recherchez un code similaire à:
+model = load_model('mnist_cnn_model.h5')
+```
+
+**Prétraitement des images:** Examinez comment les images sont prétraitées
+
+```python
+# Recherchez la fonction qui fait le prétraitement:
+def preprocess_image(image_data):
+    # ...
+```
+
+**API Flask:** Identifiez les routes Flask et leur fonction
+
+```python
+# Routes comme:
+@app.route('/predict', methods=['POST'])
+def predict():
+    # ...
+```
+
+**Interaction frontend-backend:** Ouvrez `static/js/app.js` et examinez comment les requêtes sont envoyées au serveur
+
+#### Étape 6 : Défis et questions à ajouter
+
+Pour approfondir l'apprentissage, ajoutez ces défis:
+
+**Défis à réaliser (pour les plus rapides)**
+
+1. **Amélioration de l'interface:** Modifiez le fichier HTML/CSS pour améliorer l'expérience utilisateur
+
+2. **Ajout de fonctionnalités:** Implémentez une de ces fonctionnalités supplémentaires:
+   - Historique des prédictions
+   - Visualisation de la matrice de confusion en temps réel
+   - Option pour appliquer des transformations à l'image (rotation, flou)
+
+3. **Optimisation du modèle:** Modifiez le code pour charger un modèle plus léger (quantifié ou pruné)
+
+**Questions à répondre**
+
+1. Quels avantages offre l'utilisation de Flask pour exposer un modèle de Deep Learning?
+2. Quels sont les défis liés au déploiement de modèles de Deep Learning dans des applications web?
+3. Comment pourriez-vous améliorer les performances de l'application pour gérer plus d'utilisateurs simultanément?
+4. Quelles mesures de sécurité devriez-vous implémenter avant de déployer cette application en production?
+
+## Prêt à commencer?
+
+[Ouvrir le notebook dans Google Colab](https://colab.research.google.com/github/votre-repo/cnn-classification.ipynb){ .md-button .md-button--primary }
+
+## Option: Parcours d'apprentissage individuel
+
+Si vous préférez suivre ce mini-projet à votre propre rythme, nous avons également préparé un [parcours d'apprentissage individuel](parcours-individuel-cnn.md) structuré qui vous guidera étape par étape à travers ces concepts.

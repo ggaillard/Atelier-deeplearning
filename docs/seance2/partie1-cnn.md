@@ -35,6 +35,7 @@ Avantages majeurs pour un développeur d'applications :
 2. Suivez les instructions étape par étape pour implémenter un CNN pour la classification des chiffres manuscrits (MNIST)
 3. Exécutez chaque cellule et observez les résultats
 4. Portez une attention particulière aux sections suivantes :
+   
    - Architecture du modèle CNN
    - Processus d'entraînement
    - Visualisation des filtres et feature maps
@@ -62,10 +63,13 @@ Dans cette partie, vous allez découvrir comment intégrer un modèle CNN pré-e
 
     * Ce code créera un fichier nommé `mnist_cnn_model.h5` contenant les poids et l'architecture de votre modèle.
     * **Note importante :** Vérifiez que le fichier `mnist_cnn_model.h5` est bien créé dans le même répertoire que votre script Python.
-    * Si vous travaillez dans Google Colab : Après avoir sauvegardé le modèle, vous devez télécharger le fichier sur votre ordinateur local. Exécutez ce code supplémentaire :
-```
+    * 
+    **Si vous travaillez dans Google Colab :** Après avoir sauvegardé le modèle, vous devez télécharger le fichier sur votre ordinateur local. Exécutez ce code supplémentaire :
+    
+```python
 from google.colab import files
 files.download('mnist_cnn_model.h5')
+```.download('mnist_cnn_model.h5')
 ```
 
 
