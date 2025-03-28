@@ -167,10 +167,10 @@ Pour la partie web, vous aurez besoin d'un fichier `mnist_cnn_model.h5` contenan
 
 Téléchargez les fichiers suivants et placez-les dans les dossiers indiqués :
 
-- **[web-integration.py]([./code-app-web/web-integration.py](https://github.com/ggaillard/Atelier-deeplearning/blob/main/docs/seance2/code-app-web/app.js))** → Script Flask (racine du projet).
-- **[index.html](./code-app-web/templates/index.html)** → Template HTML (`templates/`).
-- **[style.css](./code-app-web/static/css/style.css)** → Feuille de style (`static/css/`).
-- **[app.js](./code-app-web/static/js/app.js)** → Script JS (`static/js/`).
+- **[web-integration.py]([./code-app-web/web-integration.py][(https://github.com/ggaillard/Atelier-deeplearning/blob/main/docs/seance2/code-app-web/app.js](https://github.com/ggaillard/Atelier-deeplearning/blob/main/docs/seance2/code-app-web/web-integration.py)))** → Script Flask (racine du projet).
+- **[index.html]([./code-app-web/templates/index.html](https://github.com/ggaillard/Atelier-deeplearning/blob/main/docs/seance2/code-app-web/index.html))** → Template HTML (`templates/`).
+- **[style.css]([./code-app-web/static/css/style.css](https://github.com/ggaillard/Atelier-deeplearning/blob/main/docs/seance2/code-app-web/style.css))** → Feuille de style (`static/css/`).
+- **[app.js]([./code-app-web/static/js/app.js](https://github.com/ggaillard/Atelier-deeplearning/blob/main/docs/seance2/code-app-web/app.js))** → Script JS (`static/js/`).
 
 📌 *Clic droit sur le lien → "Enregistrer le lien sous..."* pour télécharger chaque fichier.
 
