@@ -1,0 +1,80 @@
+# .github/workflows/link-checker.yml
+name: Check Markdown Links
+
+on:
+  # Exécution manuelle depuis l'interface GitHub
+  workflow_dispatch:
+  # Exécution automatique à chaque push sur main
+  push:
+    branches: [ main ]
+  # Exécution programmée (une fois par semaine)
+  schedule:
+    - cron: '0 0 * * 1'  # Tous les lundis à minuit
+  # Exécution sur les pull requests ciblant main
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  check-links:
+    name: Check Markdown Links
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      
+      - name: Install markdown-link-check
+        run: npm install -g markdown-link-check
+      
+      - name: Create output directory
+        run: mkdir -p reports
+      
+      - name: Check links in all Markdown files
+        run: |
+          echo "# Rapport de vérification des liens" > reports/link_report.md
+          echo "\nDate: $(date)" >> reports/link_report.md
+          echo "\nStatut global : " >> reports/link_report.md
+          
+          all_ok=true
+          
+          for file in $(find docs -name "*.md"); do
+            echo "\n## Fichier: $file" >> reports/link_report.md
+            if ! markdown-link-check "$file" --config .github/workflows/mlc_config.json >> reports/link_report.md 2>&1; then
+              all_ok=false
+              echo "::warning file=$file::Liens cassés détectés dans $file"
+            fi
+          done
+          
+          if [ "$all_ok" = true ]; then
+            echo "✅ SUCCÈS" >> reports/link_report.md
+          else
+            echo "❌ ÉCHEC" >> reports/link_report.md
+            exit 1
+          fi
+      
+      - name: Upload link check report
+        uses: actions/upload-artifact@v3
+        with:
+          name: link-check-report
+          path: reports/link_report.md
+      
+      - name: Comment PR with link check results
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('reports/link_report.md', 'utf8');
+            const summary = report.split('\n').slice(0, 10).join('\n');
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## Vérification des liens\n\n${summary}\n\n[Voir le rapport complet](${process.env.GITHUB_SERVER_URL}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`
+            });
