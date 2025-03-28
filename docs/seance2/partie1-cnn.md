@@ -163,7 +163,7 @@ Pour la partie web, vous aurez besoin d'un fichier `mnist_cnn_model.h5` contenan
      - Dans `static`, créez les sous-dossiers `css` et `js`Problpro
 
 
-2.## 📥 Téléchargement des fichiers de l'application web
+2.📥**Téléchargement des fichiers de l'application web**
 
 Téléchargez les fichiers suivants et placez-les dans les dossiers indiqués :
 
