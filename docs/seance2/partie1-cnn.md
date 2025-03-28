@@ -196,17 +196,17 @@ Téléchargez les fichiers suivants et placez-les dans les dossiers indiqués :
 
 1.**Création du modèle via Google Colab**
 
-    - Suivez les instructions pour créer le modèle avec Google Colab (voir sections précédentes)
-    - Une fois le fichier `mnist_cnn_model.h5` téléchargé, déplacez-le dans le dossier racine de votre projet
+   - Suivez les instructions pour créer le modèle avec Google Colab (voir sections précédentes)
+   - Une fois le fichier `mnist_cnn_model.h5` téléchargé, déplacez-le dans le dossier racine de votre projet
 
 2.**Ouverture du Terminal intégré à VS Code**
 
-    - Dans VS Code, ouvrez un terminal en allant dans `Terminal > New Terminal`
+   - Dans VS Code, ouvrez un terminal en allant dans `Terminal > New Terminal`
    - Vous verrez un terminal s'ouvrir en bas de la fenêtre
 
 3.**Installation des dépendances**
 
-    - Dans le terminal VS Code, tapez la commande suivante:
+   - Dans le terminal VS Code, tapez la commande suivante:
    ```
    pip install flask tensorflow pillow numpy
    ```
@@ -214,7 +214,7 @@ Téléchargez les fichiers suivants et placez-les dans les dossiers indiqués :
 
 4.**Lancement de l'application**
 
-     - Dans le même terminal, tapez:
+   - Dans le même terminal, tapez:
      ```
      python web-integration.py
      ```
