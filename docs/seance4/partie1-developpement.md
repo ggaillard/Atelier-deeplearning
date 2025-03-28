@@ -106,7 +106,7 @@ class ConversationManager:
 # Exemple d'utilisation
 system_prompt = """
 Tu es un assistant pédagogique spécialisé dans le Deep Learning, conçu pour aider 
-les étudiants de BTS SIO SLAM. Tu expliques les concepts de manière claire et progressive, 
+les étudiants de BTS SIO. Tu expliques les concepts de manière claire et progressive, 
 en adaptant ton niveau de technicité au niveau de l'étudiant. Utilise des analogies 
 et des exemples concrets quand c'est pertinent.
 """
@@ -115,10 +115,11 @@ conversation = ConversationManager(system_prompt)
 ```
 
 **Aspects avancés à implémenter :**
-- **Prompt engineering** : Amélioration des instructions système pour obtenir des réponses optimales
-- **Gestion de contexte** : Préservation de l'historique pour maintenir la cohérence des conversations
-- **Paramètres ajustables** : Contrôle de la température pour moduler la créativité des réponses
-- **Contrôle de longueur** : Limiter la longueur des réponses pour des explications concises
+
+ - **Prompt engineering** : Amélioration des instructions système pour obtenir des réponses optimales
+ - **Gestion de contexte** : Préservation de l'historique pour maintenir la cohérence des conversations
+ - **Paramètres ajustables** : Contrôle de la température pour moduler la créativité des réponses
+ - **Contrôle de longueur** : Limiter la longueur des réponses pour des explications concises
 
 ### 3. Structuration de la base de connaissances (45 min)
 
@@ -152,12 +153,12 @@ La base de connaissances est le cœur de votre chatbot. Elle doit être structur
 ```
 
 **Éléments à inclure :**
-- Concepts fondamentaux du Deep Learning
-- Types de réseaux (CNN, RNN, etc.)
-- Techniques d'entraînement et d'optimisation
-- Applications pratiques
-- Exemples de code simplifiés
-- Analogies pour faciliter la compréhension
+ - Concepts fondamentaux du Deep Learning
+ - Types de réseaux (CNN, RNN, etc.)
+ - Techniques d'entraînement et d'optimisation
+ - Applications pratiques
+ - Exemples de code simplifiés
+ - Analogies pour faciliter la compréhension
 
 La base de connaissances peut être utilisée pour enrichir les prompts envoyés à l'API ou pour offrir des réponses prédéfinies à certaines questions.
 
@@ -242,19 +243,19 @@ Pour rendre votre chatbot véritablement pédagogique, implémentez au moins deu
 Si vous travaillez en binôme, répartissez-vous les tâches efficacement :
 
 **Suggestion de répartition :**
-- **Membre 1 :** Interface + Intégration API
-- **Membre 2 :** Base de connaissances + Fonctionnalités pédagogiques
+ - **Membre 1 :** Interface + Intégration API
+ - **Membre 2 :** Base de connaissances + Fonctionnalités pédagogiques
 
 Ou alternativement :
-- **Membre 1 :** Backend (API, logique, base de connaissances)
-- **Membre 2 :** Frontend (interface, interactions, expérience utilisateur)
+ - **Membre 1 :** Backend (API, logique, base de connaissances)
+ - **Membre 2 :** Frontend (interface, interactions, expérience utilisateur)
 
 ## Points de vigilance
 
-- **Sécurité :** Ne stockez jamais votre clé API directement dans le code
-- **Réactivité :** Optimisez les temps de réponse, ajoutez des indicateurs de chargement
-- **Robustesse :** Gérez les erreurs (API indisponible, limite de requêtes atteinte, etc.)
-- **Qualité des réponses :** Testez régulièrement avec des questions variées pour vérifier la pertinence
+ - **Sécurité :** Ne stockez jamais votre clé API directement dans le code
+ - **Réactivité :** Optimisez les temps de réponse, ajoutez des indicateurs de chargement
+ - **Robustesse :** Gérez les erreurs (API indisponible, limite de requêtes atteinte, etc.)
+ - **Qualité des réponses :** Testez régulièrement avec des questions variées pour vérifier la pertinence
 
 ## Livrables intermédiaires
 
