@@ -176,54 +176,50 @@ Téléchargez les fichiers suivants nécessaires à l'application web et placez-
 
 ### Étape 3 : Installation et lancement (5 minutes)
 
-1.**Création du modèle via Google Colab**:
-   
-   - Suivez les instructions pour créer le modèle avec Google Colab (voir sections précédentes)
-   - Une fois le fichier `mnist_cnn_model.h5` téléchargé, déplacez-le dans le dossier racine de votre projet
+1.**Création du modèle via Google Colab**
+  - Suivez les instructions pour créer le modèle avec Google Colab (voir sections précédentes)
+  - Une fois le fichier `mnist_cnn_model.h5` téléchargé, déplacez-le dans le dossier racine de votre projet
 
-2.**Ouverture du Terminal intégré à VS Code**:
-   
-   - Dans VS Code, ouvrez un terminal en allant dans `Terminal > New Terminal`
-   - Vous verrez un terminal s'ouvrir en bas de la fenêtre
+2.**Ouverture du Terminal intégré à VS Code**
+  - Dans VS Code, ouvrez un terminal en allant dans `Terminal > New Terminal`
+  - Vous verrez un terminal s'ouvrir en bas de la fenêtre
 
-3.**Installation des dépendances**:
-   
-   - Dans le terminal VS Code, tapez la commande suivante:
+3.**Installation des dépendances**
+ - Dans le terminal VS Code, tapez la commande suivante:
    ```
    pip install flask tensorflow pillow numpy
    ```
-   - Attendez que l'installation se termine
+ - Attendez que l'installation se termine
 
-4.**Lancement de l'application**:
-   
+4.**Lancement de l'application**
    - Dans le même terminal, tapez:
    ```
    python web-integration.py
    ```
-   - Vous devriez voir un message indiquant que l'application est en cours d'exécution
-   - VS Code peut vous proposer d'ouvrir le lien - cliquez dessus, ou
-   - Ouvrez votre navigateur et accédez à http://localhost:5001
+ - Vous devriez voir un message indiquant que l'application est en cours d'exécution
+- VS Code peut vous proposer d'ouvrir le lien - cliquez dessus, ou
+- Ouvrez votre navigateur et accédez à http://localhost:5001
 
 ### Étape 4 : Tests pratiques (10 minutes)
 
-1. **Test avec dessins à la souris**:
+1. **Test avec dessins à la souris**
    
-  - Dans l'interface web, dessinez clairement un chiffre (de 0 à 9) dans la zone prévue
-  - Cliquez sur le bouton "Prédire"
-  - Notez la prédiction et le niveau de confiance
-  - Répétez ce processus avec 5 chiffres différents
-  - Gardez une trace de vos résultats (tableau simple : chiffre réel / prédiction / confiance)
+- Dans l'interface web, dessinez clairement un chiffre (de 0 à 9) dans la zone prévue
+- Cliquez sur le bouton "Prédire"
+ - Notez la prédiction et le niveau de confiance
+ - Répétez ce processus avec 5 chiffres différents
+- Gardez une trace de vos résultats (tableau simple : chiffre réel / prédiction / confiance)
 
-2.**Test avec image importée**:
+2.**Test avec image importée**
    
-  - Sur une feuille de papier, écrivez clairement un chiffre
-  - Prenez une photo de ce chiffre avec votre smartphone ou appareil photo
-  - Transférez l'image sur votre ordinateur (par email, cloud, câble USB, etc.)
-  - Dans l'application, cliquez sur "Charger une image"
-  - Sélectionnez l'image que vous venez de prendre
-  - Observez la prédiction et le niveau de confiance
+- Sur une feuille de papier, écrivez clairement un chiffre
+- Prenez une photo de ce chiffre avec votre smartphone ou appareil photo
+- Transférez l'image sur votre ordinateur (par email, cloud, câble USB, etc.)
+- Dans l'application, cliquez sur "Charger une image"
+- Sélectionnez l'image que vous venez de prendre
+- Observez la prédiction et le niveau de confiance
 
-3. **Test avec feature maps (optionnel)**:
+1. **Test avec feature maps (optionnel)**
    
   - Cochez la case "Visualiser les feature maps"
   - Dessinez un nouveau chiffre et cliquez sur "Prédire"
@@ -231,7 +227,7 @@ Téléchargez les fichiers suivants nécessaires à l'application web et placez-
 
 ### Étape 5 : Évaluation et rapport (10 minutes)
 
-1.**Remplissage du formulaire d'évaluation**:
+1.**Remplissage du formulaire d'évaluation**
    
   - Ouvrez le document [evaluation](ressources/evaluation.md) fourni par votre formateur
   - Remplissez les sections suivantes :
@@ -240,17 +236,17 @@ Téléchargez les fichiers suivants nécessaires à l'application web et placez-
      - Chiffres les plus difficiles à reconnaître
      - Niveau de confiance moyen observé
 
-2.**Analyse critique**:
+2.**Analyse critique**
    
   - Dans le formulaire, notez au moins 3 points forts de l'application
   - Notez également au moins 3 limitations ou problèmes rencontrés
 
-3.**Propositions d'amélioration**:
+3.**Propositions d'amélioration**
    
   - Proposez 2-3 idées concrètes pour améliorer l'outil dans un contexte professionnel
   - Exemple : "Ajouter une fonction pour traiter plusieurs chiffres à la fois"
 
-4.**Conclusion professionnelle**:
+4.**Conclusion professionnelle**
    
    - Rédigez une brève conclusion (2-3 phrases) sur l'utilité potentielle de cet outil dans l'entreprise
 
