@@ -22,8 +22,8 @@ Dans le monde professionnel actuel, plusieurs frameworks de Deep Learning sont c
 | Hugging Face | NLP, chatbots, traitement de texte |
 | Scikit-learn | Prétraitement, ML classique, pipeline de données |
 
-> "Pour un stage, nous recherchons davantage la capacité à utiliser des frameworks existants de manière efficace plutôt qu'une expertise théorique profonde en Deep Learning." 
-> — Témoignage d'un professionnel du secteur
+> "Pour un stage, la capacité à utiliser efficacement des frameworks existants est recherchée davantage que l'expertise théorique approfondie en Deep Learning." 
+> 
 
 ### TensorFlow/Keras: la solution pragmatique
 
