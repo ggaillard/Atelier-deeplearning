@@ -50,9 +50,9 @@ Pour chaque test qui échoue, notez le problème et priorisez les corrections.
 ### Profils d'utilisateurs pour les tests
 
 Testez votre chatbot avec différents profils d'utilisateurs :
- - **Débutant complet** : aucune connaissance préalable
- - **Niveau intermédiaire** : connaissances de base en programmation
- - **Niveau avancé** : familiarité avec l'IA et questions techniques détaillées
+    - **Débutant complet** : aucune connaissance préalable
+    - **Niveau intermédiaire** : connaissances de base en programmation
+    - **Niveau avancé** : familiarité avec l'IA et questions techniques détaillées
 
 ## 2. Optimisation des performances (20 min)
 
@@ -260,12 +260,12 @@ Préparez une démonstration efficace pour présenter votre travail :
     - Planifiez les transitions entre les démonstrations
 
 **Exemple de scénario de démonstration :**
-1. Introduction du projet et objectifs (1 min)
-2. Présentation de l'architecture (1 min)
-3. Démonstration d'une conversation basique (1 min)
-4. Démonstration d'une fonctionnalité pédagogique spéciale (1 min)
-5. Explication d'un défi technique rencontré et sa solution (1 min)
-6. Questions-réponses (1 min)
+ 1. Introduction du projet et objectifs (1 min)
+ 2. Présentation de l'architecture (1 min)
+ 3. Démonstration d'une conversation basique (1 min)
+ 4. Démonstration d'une fonctionnalité pédagogique spéciale (1 min)
+ 5. Explication d'un défi technique rencontré et sa solution (1 min)
+ 6. Questions-réponses (1 min)
 
 ## Check-list finale
 
