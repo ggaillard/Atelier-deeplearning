@@ -83,9 +83,9 @@ Nous allons suivre une approche méthodique pour améliorer nos modèles :
 **Objectif** : Appliquer les techniques d'amélioration à un modèle existant pour une application web réelle.
 
 **Matériel et ressources** :
-* Notebook "Amélioration pour application web"
-* Application web simple de reconnaissance d'objets
-* Modèle de base fonctionnel mais limité
+ * Notebook "Amélioration pour application web"
+ * Application web simple de reconnaissance d'objets
+ * Modèle de base fonctionnel mais limité
 
 ### Instructions
 
@@ -94,10 +94,10 @@ Nous allons suivre une approche méthodique pour améliorer nos modèles :
 1. Ouvrez le notebook "Amélioration pour application web".
 2. Exécutez les cellules qui chargent et évaluent le modèle existant.
 3. Analysez ses performances et limitations :
-   * Précision globale et par classe
-   * Matrice de confusion
-   * Temps d'inférence
-   * Robustesse aux variations (rotation, luminosité, etc.)
+     * Précision globale et par classe
+     * Matrice de confusion
+     * Temps d'inférence
+     * Robustesse aux variations (rotation, luminosité, etc.)
 
 4. Documentez au moins trois problèmes spécifiques à résoudre.
 
@@ -106,33 +106,33 @@ Nous allons suivre une approche méthodique pour améliorer nos modèles :
 Choisissez et implémentez au moins trois techniques d'amélioration parmi :
 
 1. **Prétraitement amélioré** :
-   * Normalisation adaptée au dataset
-   * Détection et recadrage automatique des objets
-   * Correction de luminosité et de contraste
+    * Normalisation adaptée au dataset
+    * Détection et recadrage automatique des objets
+    * Correction de luminosité et de contraste
 
 2. **Augmentation de données** :
-   * Rotations et translations
-   * Modifications de luminosité et contraste
-   * Zoom et recadrage aléatoire
-V
+    * Rotations et translations
+    * Modifications de luminosité et contraste
+    * Zoom et recadrage aléatoire
+
 3. **Optimisation du modèle** :
-   * Ajustement de l'architecture (nombre de couches, neurones)
-   * Techniques de régularisation (dropout, batch normalization)
-   * Transfer learning avec un modèle pré-entraîné
+    * Ajustement de l'architecture (nombre de couches, neurones)
+    * Techniques de régularisation (dropout, batch normalization)
+    * Transfer learning avec un modèle pré-entraîné
 
 4. **Optimisation du temps d'inférence** :
-   * Quantification du modèle (réduction de précision)
-   * Élagage (pruning) des connexions peu importantes
-   * Optimisation pour CPU ou mobile
+    * Quantification du modèle (réduction de précision)
+    * Élagage (pruning) des connexions peu importantes
+    * Optimisation pour CPU ou mobile
 
 **Partie 3 : Tests et documentation (15 min)**
 
 1. Évaluez le modèle amélioré sur le jeu de test.
 2. Comparez les performances avec le modèle original :
-   * Précision globale (avant vs après)
-   * Temps d'inférence (avant vs après)
-   * Taille du modèle (avant vs après)
-   * Robustesse aux variations
+     * Précision globale (avant vs après)
+     * Temps d'inférence (avant vs après)
+     * Taille du modèle (avant vs après)
+     * Robustesse aux variations
 
 3. Créez un rapport concis au format suivant :
 
@@ -167,36 +167,36 @@ V
 ### Checklist d'optimisation pour vos futurs projets
 
 ✅ **Données** :
-- Normalisation adaptée au problème
-- Augmentation pertinente (pas excessive)
-- Division train/validation/test stratifiée
-- Vérification de la qualité des données (valeurs manquantes, erreurs)
+ - Normalisation adaptée au problème
+ - Augmentation pertinente (pas excessive)
+ - Division train/validation/test stratifiée
+ - Vérification de la qualité des données (valeurs manquantes, erreurs)
 
 ✅ **Modèle** :
-- Architecture adaptée à la complexité du problème
-- Régularisation appropriée (dropout, L1/L2)
-- Batch normalization pour stabiliser l'entraînement
-- Learning rate adaptatif (Adam, RMSprop)
+ - Architecture adaptée à la complexité du problème
+ - Régularisation appropriée (dropout, L1/L2)
+ - Batch normalization pour stabiliser l'entraînement
+ - Learning rate adaptatif (Adam, RMSprop)
 
 ✅ **Entraînement** :
-- Early stopping avec patience appropriée
-- Réduction du learning rate sur plateau
-- Validation croisée pour les petits datasets
-- Sauvegarde du meilleur modèle, pas forcément le dernier
+ - Early stopping avec patience appropriée
+ - Réduction du learning rate sur plateau
+ - Validation croisée pour les petits datasets
+ - Sauvegarde du meilleur modèle, pas forcément le dernier
 
 ✅ **Déploiement** :
-- Quantification pour réduire la taille (TFLite, ONNX)
-- Tests sur les plateformes cibles
-- Monitoring des performances
-- Re-entraînement périodique avec de nouvelles données
+ - Quantification pour réduire la taille (TFLite, ONNX)
+ - Tests sur les plateformes cibles
+ - Monitoring des performances
+ - Re-entraînement périodique avec de nouvelles données
 
 ### Conclusion et transition vers la phase finale (5 min)
 
 **Ce que vous avez appris** :
-- Identifier les problèmes limitant les performances d'un modèle
-- Appliquer des techniques ciblées pour résoudre ces problèmes
-- Évaluer objectivement l'impact des améliorations
-- Optimiser un modèle pour un déploiement en production
+    - Identifier les problèmes limitant les performances d'un modèle
+    - Appliquer des techniques ciblées pour résoudre ces problèmes
+    - Évaluer objectivement l'impact des améliorations
+    - Optimiser un modèle pour un déploiement en production
 
 **Prochaine étape** : Préparer le développement de votre chatbot pédagogique en appliquant ces techniques d'optimisation.
 
