@@ -226,21 +226,21 @@ Téléchargez les fichiers suivants et placez-les dans les dossiers indiqués :
 
 1. **Test avec dessins à la souris**
    
-- Dans l'interface web, dessinez clairement un chiffre (de 0 à 9) dans la zone prévue
-- Cliquez sur le bouton "Prédire"
+    - Dans l'interface web, dessinez clairement un chiffre (de 0 à 9) dans la zone prévue
+       - Cliquez sur le bouton "Prédire"
   
-   - Notez la prédiction et le niveau de confiance
-   - Répétez ce processus avec 5 chiffres différents
-- Gardez une trace de vos résultats (tableau simple : chiffre réel / prédiction / confiance)
+    - Notez la prédiction et le niveau de confiance
+    - Répétez ce processus avec 5 chiffres différents
+    - Gardez une trace de vos résultats (tableau simple : chiffre réel / prédiction / confiance)
 
 2.**Test avec image importée**
    
-  - Sur une feuille de papier, écrivez clairement un chiffre
-  - Prenez une photo de ce chiffre avec votre smartphone ou appareil photo
-  - Transférez l'image sur votre ordinateur (par email, cloud, câble USB, etc.)
-  - Dans l'application, cliquez sur "Charger une image"
-  - Sélectionnez l'image que vous venez de prendre
-  - Observez la prédiction et le niveau de confiance
+    - Sur une feuille de papier, écrivez clairement un chiffre
+    - Prenez une photo de ce chiffre avec votre smartphone ou appareil photo
+    - Transférez l'image sur votre ordinateur (par email, cloud, câble USB, etc.)
+    - Dans l'application, cliquez sur "Charger une image"
+    - Sélectionnez l'image que vous venez de prendre
+    - Observez la prédiction et le niveau de confiance
 
 1. **Test avec feature maps (optionnel)**
    
