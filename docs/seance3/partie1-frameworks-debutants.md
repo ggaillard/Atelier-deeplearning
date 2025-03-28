@@ -141,26 +141,26 @@ Explorons ensemble la structure typique d'un projet avec TensorFlow/Keras:
 Suivez les instructions dans le notebook Colab pour:
 
 1. **Explorer le jeu de données Fashion MNIST**
-   - 10 catégories de vêtements (t-shirts, pantalons, etc.)
-   - Images 28x28 en niveaux de gris
-   - Parfait pour commencer avec la classification d'images
+    - 10 catégories de vêtements (t-shirts, pantalons, etc.)
+    - Images 28x28 en niveaux de gris
+    - Parfait pour commencer avec la classification d'images
 
 2. **Construire un modèle simple**
-   - Modèle séquentiel avec 2-3 couches
-   - Visualiser l'architecture avec `model.summary()`
+    - Modèle séquentiel avec 2-3 couches
+    - Visualiser l'architecture avec `model.summary()`
 
 3. **Entraîner et évaluer le modèle**
-   - Observer les courbes d'apprentissage (accuracy, loss)
-   - Comprendre le phénomène de surapprentissage
+    - Observer les courbes d'apprentissage (accuracy, loss)
+    - Comprendre le phénomène de surapprentissage
 
 4. **Faire des prédictions**
-   - Tester le modèle sur de nouvelles images
-   - Visualiser les résultats avec des graphiques
+    - Tester le modèle sur de nouvelles images
+    - Visualiser les résultats avec des graphiques
 
 5. **Modifier le modèle pour l'améliorer**
-   - Ajouter/supprimer des couches
-   - Changer le nombre de neurones
-   - Observer l'impact sur les performances
+    - Ajouter/supprimer des couches
+    - Changer le nombre de neurones
+    - Observer l'impact sur les performances
 
 ## Mini-projet: Créer une API de reconnaissance d'images (35 min)
 
@@ -171,10 +171,10 @@ Suivez les instructions dans le notebook Colab pour:
 - Une **API** (Application Programming Interface) permet à différents logiciels de communiquer entre eux
 - Dans le monde professionnel, les modèles ML sont rarement utilisés directement - ils sont exposés via des API
 - Avantages:
-  - Séparation du frontend et du backend
-  - Réutilisation du modèle par plusieurs applications
-  - Mise à jour du modèle sans toucher aux applications clientes
-  - Scalabilité indépendante
+    - Séparation du frontend et du backend
+    - Réutilisation du modèle par plusieurs applications
+    - Mise à jour du modèle sans toucher aux applications clientes
+    - Scalabilité indépendante
 
 ### Structure d'une API Flask pour l'IA (10 min)
 
@@ -239,38 +239,38 @@ if __name__ == '__main__':
 Suivez les instructions dans le notebook "API de reconnaissance d'images":
 
 1. **Entraîner ou charger un modèle pré-entraîné**
-   - Utilisez soit le modèle que vous venez de créer
-   - Soit chargez un modèle pré-entraîné (plus rapide)
+    - Utilisez soit le modèle que vous venez de créer
+    - Soit chargez un modèle pré-entraîné (plus rapide)
 
 2. **Créer l'API Flask**
-   - Compléter les sections manquantes dans le template fourni
-   - Ajouter la logique de prétraitement des images
-   - Implémenter la fonction de prédiction
+    - Compléter les sections manquantes dans le template fourni
+    - Ajouter la logique de prétraitement des images
+    - Implémenter la fonction de prédiction
 
 3. **Tester l'API**
-   - Utiliser l'outil de test intégré dans Colab
-   - Envoyer des images et vérifier les réponses
+    - Utiliser l'outil de test intégré dans Colab
+    - Envoyer des images et vérifier les réponses
 
 4. **Ajouter des fonctionnalités (si le temps le permet)**
-   - Endpoint `/info` pour obtenir des informations sur le modèle
-   - Gestion de plusieurs formats d'image
-   - Limitation du nombre de requêtes
+     - Endpoint `/info` pour obtenir des informations sur le modèle
+     - Gestion de plusieurs formats d'image
+     - Limitation du nombre de requêtes
 
 ## Conclusion et transition (5 min)
 
 ### Ce que nous avons appris
 
-- Les frameworks de Deep Learning les plus utilisés en entreprise
-- Comment créer rapidement un modèle avec TensorFlow/Keras
-- Comment exposer un modèle via une API REST
-- Les bonnes pratiques pour un projet d'IA en production
+ - Les frameworks de Deep Learning les plus utilisés en entreprise
+ - Comment créer rapidement un modèle avec TensorFlow/Keras
+ - Comment exposer un modèle via une API REST
+ - Les bonnes pratiques pour un projet d'IA en production
 
 ### Pourquoi c'est important pour votre stage
 
 Ces compétences sont directement applicables dans un contexte professionnel:
-- Vous pouvez désormais créer une application IA simple mais complète
-- Vous avez une API fonctionnelle à montrer lors d'entretiens
-- Vous comprenez le workflow complet d'un projet d'IA
+ - Vous pouvez désormais créer une application IA simple mais complète
+ - Vous avez une API fonctionnelle à montrer lors d'entretiens
+ - Vous comprenez le workflow complet d'un projet d'IA
 
 ### Pour aller plus loin
 
