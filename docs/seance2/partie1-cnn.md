@@ -39,6 +39,22 @@ Formez des binômes et discutez :
 - Comment ce que "voit" le réseau change-t-il entre la première et la dernière couche?
 - Pourquoi est-il utile pour le réseau de transformer l'image à chaque étape?
 
+Les réseaux de neurones convolutifs (CNN) offrent plusieurs avantages, notamment :
+
+- Extraction automatique des caractéristiques
+
+Contrairement aux méthodes traditionnelles de vision par ordinateur qui nécessitent une extraction manuelle des caractéristiques, les CNN apprennent automatiquement les motifs pertinents (bords, textures, formes) à partir des données.
+
+- Partage des poids et réduction du nombre de paramètres 
+
+Grâce aux filtres de convolution partagés sur toute l’image, les CNN réduisent considérablement le nombre de paramètres à entraîner, ce qui diminue les besoins en mémoire et en calcul par rapport aux réseaux de neurones entièrement connectés.
+
+- Invariance aux translations et robustesse aux variations
+
+Les couches de convolution et de pooling permettent aux CNN d’être robustes aux décalages, rotations et déformations dans les images, ce qui améliore leur capacité à reconnaître des objets dans différentes conditions.
+
+
+
 **Étape 3 : Construction du modèle mental (5 min)**
 Sur votre feuille de travail, complétez le schéma simplifié d'un CNN :
 
@@ -177,28 +193,32 @@ Téléchargez les fichiers suivants nécessaires à l'application web et placez-
 ### Étape 3 : Installation et lancement (5 minutes)
 
 1.**Création du modèle via Google Colab**
-  - Suivez les instructions pour créer le modèle avec Google Colab (voir sections précédentes)
-  - Une fois le fichier `mnist_cnn_model.h5` téléchargé, déplacez-le dans le dossier racine de votre projet
+
+    - Suivez les instructions pour créer le modèle avec Google Colab (voir sections précédentes)
+    - Une fois le fichier `mnist_cnn_model.h5` téléchargé, déplacez-le dans le dossier racine de votre projet
 
 2.**Ouverture du Terminal intégré à VS Code**
-  - Dans VS Code, ouvrez un terminal en allant dans `Terminal > New Terminal`
-  - Vous verrez un terminal s'ouvrir en bas de la fenêtre
+
+    - Dans VS Code, ouvrez un terminal en allant dans `Terminal > New Terminal`
+   - Vous verrez un terminal s'ouvrir en bas de la fenêtre
 
 3.**Installation des dépendances**
- - Dans le terminal VS Code, tapez la commande suivante:
+
+    - Dans le terminal VS Code, tapez la commande suivante:
    ```
    pip install flask tensorflow pillow numpy
    ```
- - Attendez que l'installation se termine
+    - Attendez que l'installation se termine
 
 4.**Lancement de l'application**
-   - Dans le même terminal, tapez:
-   ```
-   python web-integration.py
-   ```
- - Vous devriez voir un message indiquant que l'application est en cours d'exécution
-- VS Code peut vous proposer d'ouvrir le lien - cliquez dessus, ou
-- Ouvrez votre navigateur et accédez à http://localhost:5001
+
+     - Dans le même terminal, tapez:
+     ```
+     python web-integration.py
+     ```
+    - Vous devriez voir un message indiquant que l'application est en cours d'exécution
+    - VS Code peut vous proposer d'ouvrir le lien - cliquez dessus, ou
+    - Ouvrez votre navigateur et accédez à http://localhost:5001
 
 ### Étape 4 : Tests pratiques (10 minutes)
 
