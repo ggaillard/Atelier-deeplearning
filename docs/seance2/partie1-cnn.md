@@ -168,7 +168,7 @@ Pour la partie web, vous aurez besoin d'un fichier `mnist_cnn_model.h5` contenan
 Téléchargez les fichiers suivants et placez-les dans les dossiers indiqués :
 
 
-- **[code-app-web.zip](../seance2/code-app-web.zip)** → 
+- **[code-app-web.zip](../seance2/code-app-web.zip)** 
 
 
 📌 *Clic droit sur le lien → "Enregistrer le lien sous..."* pour télécharger chaque fichier.
