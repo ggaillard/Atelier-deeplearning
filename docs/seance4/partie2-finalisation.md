@@ -50,9 +50,9 @@ Pour chaque test qui échoue, notez le problème et priorisez les corrections.
 ### Profils d'utilisateurs pour les tests
 
 Testez votre chatbot avec différents profils d'utilisateurs :
- - **Débutant complet** : aucune connaissance préalable
- - **Niveau intermédiaire** : connaissances de base en programmation
- - **Niveau avancé** : familiarité avec l'IA et questions techniques détaillées
+     - **Débutant complet** : aucune connaissance préalable
+     - **Niveau intermédiaire** : connaissances de base en programmation
+     - **Niveau avancé** : familiarité avec l'IA et questions techniques détaillées
 
 ## 2. Optimisation des performances (20 min)
 
