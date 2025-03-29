@@ -9,10 +9,9 @@ Cette dernière phase de la séance 4 est consacrée à la présentation de votr
 ## Déroulement des présentations
 
 Chaque équipe dispose de **6 minutes** au total :
-- **5 minutes** de présentation
-- **1 minute** de questions-réponses
+ - **5 minutes** de présentation
+ - **1 minute** de questions-réponses
 
-Les présentations se dérouleront dans l'ordre indiqué au tableau. Préparez-vous à l'avance pour éviter les temps morts entre les démonstrations.
 
 ## Structure recommandée pour votre présentation
 
@@ -79,10 +78,10 @@ Exemple :
 ### Support visuel
 
 Si vous utilisez des diapositives, limitez-les à 3-4 maximum :
-1. Titre et présentation de l'équipe
-2. Architecture du chatbot (schéma)
-3. Défis et solutions
-4. Perspectives futures
+ 1. Titre et présentation de l'équipe
+ 2. Architecture du chatbot (schéma)
+ 3. Défis et solutions
+ 4. Perspectives futures
 
 ## Grille d'évaluation
 
@@ -100,36 +99,36 @@ Votre présentation sera évaluée selon les critères suivants :
 ## Feedback et évaluation par les pairs
 
 Pendant que vos camarades présentent, vous êtes encouragés à :
-- Prendre des notes sur les idées intéressantes
-- Réfléchir à une question pertinente à poser
-- Compléter la grille d'évaluation par les pairs qui vous sera distribuée
+ - Prendre des notes sur les idées intéressantes
+ - Réfléchir à une question pertinente à poser
+ - Compléter la grille d'évaluation par les pairs qui vous sera distribuée
 
 Cette évaluation par les pairs sera prise en compte dans l'évaluation finale, mais de manière anonyme.
 
 ## Après les présentations
 
 Une fois toutes les présentations terminées :
-- Un temps de débriefing collectif sera organisé
-- Les points forts de chaque projet seront mis en avant
-- Des conseils d'amélioration généraux seront partagés
+ - Un temps de débriefing collectif sera organisé
+ - Les points forts de chaque projet seront mis en avant
+ - Des conseils d'amélioration généraux seront partagés
 
 ## Conclusion et prochaines étapes
 
 Cette présentation marque la fin du projet et du parcours de 4 séances sur le Deep Learning. Vous avez acquis des compétences précieuses en :
-- Compréhension des concepts du Deep Learning
-- Développement d'applications d'IA pratiques
-- Intégration d'API de modèles de langage
-- Conception d'interfaces interactives
+ - Compréhension des concepts du Deep Learning
+ - Développement d'applications d'IA pratiques
+ - Intégration d'API de modèles de langage
+ - Conception d'interfaces interactives
 
 Ces compétences sont directement transférables dans votre future vie professionnelle, que ce soit en stage ou en emploi.
 
 ## Remise des livrables finaux
 
 N'oubliez pas de déposer tous vos livrables finaux sur la plateforme avant la date limite :
-- Code source complet avec un lien GitHub
-- Documentation technique sur Github en Markdown
-- Guide utilisateur
-- Support de présentation
+ - Code source complet avec un lien GitHub
+ - Documentation technique sur Github en Markdown
+ - Guide utilisateur
+ - Support de présentation
 
 **Date limite de remise : [DATE_LIMITE]**
 

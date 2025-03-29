@@ -73,9 +73,9 @@ Pour cette séance, vous aurez besoin de :
 2. **Base de connaissances structurée** sur le Deep Learning
 3. **Documentation technique** expliquant l'architecture et les choix d'implémentation
 4. **Guide utilisateur** pour la prise en main
-5. **Présentation** au format PDF ou PowerPoint
+5. **Présentation** avec support à fournir
 
-Ces livrables constituent l'aboutissement de votre parcours et seront évalués selon les critères détaillés dans la [grille d'évaluation](../evaluation/criteres-evaluation.md).
+Ces livrables constituent l'aboutissement de votre parcours et seront évalués selon les critères détaillés dans la [grille d'évaluation](../evaluation/criteres-evaluation-seance4.md).
 
 ## Prêt à relever le défi ?
 

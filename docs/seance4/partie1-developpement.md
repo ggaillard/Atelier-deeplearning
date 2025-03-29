@@ -53,9 +53,9 @@ L'interface du chatbot doit être simple mais fonctionnelle. Elle comprendra :
 ```
 
 **Points clés à respecter :**
-- Design responsive s'adaptant aux différentes tailles d'écran
-- Indication claire des messages utilisateur vs assistant
-- Gestion des erreurs (réseau, API, etc.)
+ - Design responsive s'adaptant aux différentes tailles d'écran
+ - Indication claire des messages utilisateur vs assistant
+ - Gestion des erreurs (réseau, API, etc.)
 
 ### 2. Intégration avancée avec l'API Mistral AI (45 min)
 
@@ -153,12 +153,12 @@ La base de connaissances est le cœur de votre chatbot. Elle doit être structur
 ```
 
 **Éléments à inclure :**
- - Concepts fondamentaux du Deep Learning
- - Types de réseaux (CNN, RNN, etc.)
- - Techniques d'entraînement et d'optimisation
- - Applications pratiques
- - Exemples de code simplifiés
- - Analogies pour faciliter la compréhension
+     - Concepts fondamentaux du Deep Learning
+     - Types de réseaux (CNN, RNN, etc.)
+     - Techniques d'entraînement et d'optimisation
+     - Applications pratiques
+     - Exemples de code simplifiés
+     - Analogies pour faciliter la compréhension
 
 La base de connaissances peut être utilisée pour enrichir les prompts envoyés à l'API ou pour offrir des réponses prédéfinies à certaines questions.
 
@@ -243,12 +243,12 @@ Pour rendre votre chatbot véritablement pédagogique, implémentez au moins deu
 Si vous travaillez en binôme, répartissez-vous les tâches efficacement :
 
 **Suggestion de répartition :**
- - **Membre 1 :** Interface + Intégration API
- - **Membre 2 :** Base de connaissances + Fonctionnalités pédagogiques
+       - **Membre 1 :** Interface + Intégration API
+       - **Membre 2 :** Base de connaissances + Fonctionnalités pédagogiques
 
 Ou alternativement :
- - **Membre 1 :** Backend (API, logique, base de connaissances)
- - **Membre 2 :** Frontend (interface, interactions, expérience utilisateur)
+       - **Membre 1 :** Backend (API, logique, base de connaissances)
+       - **Membre 2 :** Frontend (interface, interactions, expérience utilisateur)
 
 ## Points de vigilance
 
