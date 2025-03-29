@@ -1,8 +1,6 @@
-#### 1. Fiche récapitulative des concepts du Deep Learning
-
 # Concepts fondamentaux du Deep Learning
 
-## Terminologie de base
+## 1. Terminologie de base
 
 | Terme | Définition | Ce que vous avez expérimenté |
 |-------|------------|------------------------------|
@@ -59,8 +57,6 @@
 
 ## Illustration concrète
 
-![Comparaison ML vs DL](../images/ml-vs-dl-comparison.svg)
-
 *Le Machine Learning classique nécessite une extraction manuelle des caractéristiques, tandis que le Deep Learning les apprend automatiquement.*
 
 # 3. Fonctions d'activation courantes
@@ -71,13 +67,13 @@ Les fonctions d'activation introduisent des non-linéarités dans le réseau, pe
 
 ## Types principaux
 
-| Fonction | Formule | Graphique | Utilisation typique |
-|----------|---------|-----------|---------------------|
-| **ReLU** | f(x) = max(0, x) | ![ReLU](../images/relu-function.svg) | Couches cachées (standard) |
-| **Sigmoid** | f(x) = 1/(1+e^(-x)) | ![Sigmoid](../images/sigmoid-function.svg) | Sortie pour classification binaire |
-| **Tanh** | f(x) = (e^x - e^(-x))/(e^x + e^(-x)) | ![Tanh](../images/tanh-function.svg) | Alternative à ReLU pour certains réseaux |
-| **Softmax** | f(x_i) = e^(x_i)/Σe^(x_j) | ![Softmax](../images/softmax-function.svg) | Sortie pour classification multi-classes |
-| **Leaky ReLU** | f(x) = max(αx, x), où α est petit | ![Leaky ReLU](../images/leaky-relu-function.svg) | Alternative à ReLU pour éviter les "neurones morts" |
+| Fonction | Description simple | Utilisation typique |
+|----------|---------------------|---------------------|
+| **ReLU** | Si valeur négative, sortie = 0; sinon, sortie = valeur d'entrée | Couches cachées (standard) |
+| **Sigmoid** | Transforme n'importe quel nombre en valeur entre 0 et 1 | Sortie pour classification binaire |
+| **Tanh** | Similaire à Sigmoid mais avec des valeurs entre -1 et 1 | Alternative à ReLU pour certains réseaux |
+| **Softmax** | Transforme un groupe de nombres en probabilités qui somment à 1 | Sortie pour classification multi-classes |
+| **Leaky ReLU** | Version améliorée de ReLU qui permet un petit gradient pour les valeurs négatives | Alternative à ReLU pour éviter les "neurones morts" |
 
 ## Choix de la fonction d'activation
 
@@ -100,25 +96,23 @@ Les fonctions d'activation introduisent des non-linéarités dans le réseau, pe
 
 ## Visualisation du processus
 
-![Processus d'entraînement](../images/training-process.svg)
+*Une visualisation montrerait le flux des données à travers le réseau, le calcul de l'erreur, et la mise à jour des poids.*
 
 ## Fonction de perte
 
-La fonction de perte quantifie l'erreur de prédiction. Les plus communes sont :
+La fonction de perte quantifie l'écart entre les prédictions et les valeurs réelles. Les plus communes sont :
 
-| Fonction de perte | Usage | Formule |
-|-------------------|-------|---------|
-| **Erreur quadratique moyenne (MSE)** | Régression | Σ(y_pred - y_true)²/n |
-| **Entropie croisée binaire** | Classification binaire | -Σ[y_true·log(y_pred) + (1-y_true)·log(1-y_pred)] |
-| **Entropie croisée catégorielle** | Classification multi-classes | -Σ[y_true·log(y_pred)] |
+| Fonction de perte | Usage | Description simple |
+|-------------------|-------|-------------------|
+| **Erreur quadratique moyenne (MSE)** | Régression | Moyenne des carrés des différences entre prédictions et valeurs réelles |
+| **Entropie croisée binaire** | Classification binaire | Mesure à quel point les prédictions de probabilité divergent des valeurs réelles (0 ou 1) |
+| **Entropie croisée catégorielle** | Classification multi-classes | Version multi-classes de l'entropie croisée binaire |
 
 # 5. Architectures CNN expliquées
 
 ## Structure d'un CNN
 
 Les CNN (Convolutional Neural Networks) sont spécialement conçus pour traiter des données structurées en grille, comme les images. Leur architecture typique comprend :
-
-![Structure CNN](../images/cnn-architecture.svg)
 
 1. **Couche d'entrée** : Prend l'image brute (pixels)
 2. **Couches de convolution** : Appliquent des filtres pour détecter des caractéristiques
@@ -127,9 +121,7 @@ Les CNN (Convolutional Neural Networks) sont spécialement conçus pour traiter 
 
 ## Fonctionnement des convolutions
 
-![Convolution](../images/convolution-operation.svg)
-
-La convolution consiste à faire glisser un filtre (noyau) sur l'image et à calculer le produit scalaire à chaque position. Cela permet de détecter des motifs spécifiques comme des contours, textures, etc.
+La convolution consiste à faire glisser un filtre (noyau) sur l'image pour détecter des motifs spécifiques. Imaginez une petite fenêtre qui se déplace sur l'image et cherche des motifs comme des contours, des textures, etc.
 
 ## Hiérarchie des caractéristiques
 
@@ -139,26 +131,22 @@ Les CNN apprennent une hiérarchie de caractéristiques :
 - **Couches intermédiaires** : Motifs, textures et formes
 - **Couches profondes** : Objets et concepts de haut niveau
 
-![Hiérarchie CNN](../images/cnn-feature-hierarchy.svg)
-
 # 6. Architectures RNN expliquées
 
 ## Structure d'un RNN
 
 Les RNN (Recurrent Neural Networks) sont conçus pour traiter des données séquentielles comme le texte, la parole ou les séries temporelles.
 
-![Structure RNN](../images/rnn-architecture.svg)
-
 La caractéristique clé des RNN est leur **mémoire interne** qui permet de conserver l'information des étapes précédentes.
 
 ## Types de RNN
 
-| Type | Structure | Avantages | Applications |
-|------|-----------|-----------|-------------|
-| **RNN simple** | ![RNN Simple](../images/rnn-simple.svg) | Simple à implémenter | Séquences courtes |
-| **LSTM** (Long Short-Term Memory) | ![LSTM](../images/lstm-cell.svg) | Meilleure mémoire à long terme | Traduction, génération de texte |
-| **GRU** (Gated Recurrent Unit) | ![GRU](../images/gru-cell.svg) | Plus léger que LSTM, performances similaires | Applications avec contraintes de ressources |
-| **Bidirectionnel** | ![Bidirectional RNN](../images/bidirectional-rnn.svg) | Utilise le contexte futur et passé | Compréhension du langage |
+| Type | Caractéristiques | Avantages | Applications |
+|------|------------------|-----------|-------------|
+| **RNN simple** | Structure de base avec boucle de rétroaction | Simple à implémenter | Séquences courtes |
+| **LSTM** (Long Short-Term Memory) | Cellules spéciales avec "portes" pour contrôler la mémoire | Meilleure mémoire à long terme | Traduction, génération de texte |
+| **GRU** (Gated Recurrent Unit) | Version simplifiée du LSTM | Plus léger que LSTM, performances similaires | Applications avec contraintes de ressources |
+| **Bidirectionnel** | Traite la séquence dans les deux sens (avant et arrière) | Utilise le contexte futur et passé | Compréhension du langage |
 
 ## Problème du gradient qui s'évanouit/explose
 
@@ -177,12 +165,12 @@ Les RNN classiques souffrent du problème de la disparition du gradient, ce qui 
 
 ## Techniques de régularisation
 
-| Technique | Description | Visualisation |
-|-----------|-------------|---------------|
-| **Dropout** | Désactive aléatoirement des neurones pendant l'entraînement | ![Dropout](../images/dropout-illustration.svg) |
-| **L1/L2 Régularisation** | Ajoute une pénalité à la fonction de perte basée sur la magnitude des poids | ![L1L2](../images/l1-l2-regularization.svg) |
-| **Batch Normalization** | Normalise les activations de chaque mini-batch | ![BatchNorm](../images/batch-normalization.svg) |
-| **Early Stopping** | Arrête l'entraînement quand la performance sur les données de validation cesse de s'améliorer | ![EarlyStopping](../images/early-stopping.svg) |
+| Technique | Description | Effet |
+|-----------|-------------|-------|
+| **Dropout** | Désactive aléatoirement des neurones pendant l'entraînement | Empêche les neurones de trop se spécialiser |
+| **L1/L2 Régularisation** | Ajoute une pénalité basée sur la magnitude des poids | Encourage les poids à rester petits |
+| **Batch Normalization** | Normalise les activations de chaque mini-batch | Stabilise et accélère l'apprentissage |
+| **Early Stopping** | Arrête l'entraînement quand la performance sur la validation cesse de s'améliorer | Évite le surapprentissage |
 
 # 8. Applications pratiques du Deep Learning
 
