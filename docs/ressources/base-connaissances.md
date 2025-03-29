@@ -155,7 +155,7 @@ La caractéristique clé des RNN est leur **mémoire interne** qui permet de con
 
 | Type | Structure | Avantages | Applications |
 |------|-----------|-----------|-------------|
-| **RNN simple** | ![RNN Simple](../images/simple-rnn.svg) | Simple à implémenter | Séquences courtes |
+| **RNN simple** | ![RNN Simple](../images/rnn-simple.svg) | Simple à implémenter | Séquences courtes |
 | **LSTM** (Long Short-Term Memory) | ![LSTM](../images/lstm-cell.svg) | Meilleure mémoire à long terme | Traduction, génération de texte |
 | **GRU** (Gated Recurrent Unit) | ![GRU](../images/gru-cell.svg) | Plus léger que LSTM, performances similaires | Applications avec contraintes de ressources |
 | **Bidirectionnel** | ![Bidirectional RNN](../images/bidirectional-rnn.svg) | Utilise le contexte futur et passé | Compréhension du langage |
