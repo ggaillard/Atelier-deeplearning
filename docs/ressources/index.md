@@ -11,6 +11,7 @@ Cette section regroupe l'ensemble des ressources disponibles pour vous accompagn
 ### [API Mistral](api-mistral.md)
 
 L'API Mistral AI est au cœur du projet de chatbot pédagogique. Cette documentation vous explique :
+
  - Comment créer et configurer votre compte Mistral AI
  - Comment envoyer des requêtes et traiter les réponses
  - Les bonnes pratiques pour le prompt engineering
@@ -19,6 +20,7 @@ L'API Mistral AI est au cœur du projet de chatbot pédagogique. Cette documenta
 ### [Instructions d'intégration](instructions-integration.md)
 
 Ce guide détaille les étapes à suivre pour intégrer les différents composants du chatbot :
+
  - Configuration de l'environnement de développement
  - Installation des dépendances requises
  - Procédures de déploiement pour les environnements de test et de production
@@ -29,6 +31,7 @@ Ce guide détaille les étapes à suivre pour intégrer les différents composan
 ### [Base de connaissances](base-connaissances.md)
 
 La base de connaissances est le fondement de votre chatbot pédagogique. Cette documentation couvre :
+
  - Les concepts fondamentaux du Deep Learning à intégrer
  - L'organisation hiérarchique des connaissances
  - Les différents niveaux d'explication (débutant, intermédiaire, avancé)
@@ -37,6 +40,7 @@ La base de connaissances est le fondement de votre chatbot pédagogique. Cette d
 ### [Schémas JSON](json-schemas.md)
 
 Les schémas JSON définissent la structure des données utilisées par le chatbot :
+
  - Format de la base de connaissances
  - Structure des échanges avec l'API
  - Organisation des conversations et de l'historique
@@ -47,6 +51,7 @@ Les schémas JSON définissent la structure des données utilisées par le chatb
 ### Guide d'utilisation de Google Colab
 
 Un guide complet pour tirer le meilleur parti de Google Colab dans vos projets de Deep Learning :
+
  - Configuration de l'environnement
  - Utilisation des GPUs gratuits
  - Sauvegarde et partage de notebooks
@@ -55,6 +60,7 @@ Un guide complet pour tirer le meilleur parti de Google Colab dans vos projets d
 ### Guide du développeur pour le chatbot
 
 Un ensemble de bonnes pratiques pour le développement du chatbot :
+
  - Architecture recommandée
  - Gestion des erreurs et des cas limites
  - Optimisation des performances
@@ -65,6 +71,7 @@ Un ensemble de bonnes pratiques pour le développement du chatbot :
 ### Bibliothèques et frameworks recommandés
 
 Une sélection de bibliothèques et frameworks utiles pour le projet :
+
  - TensorFlow/Keras pour le développement de modèles
  - Flask pour le développement d'API
  - React pour l'interface utilisateur
@@ -73,6 +80,7 @@ Une sélection de bibliothèques et frameworks utiles pour le projet :
 ### Lectures recommandées
 
 Une bibliographie sélective pour approfondir vos connaissances :
+
  - Livres de référence sur le Deep Learning
  - Articles scientifiques pertinents
  - Blogs et newsletters à suivre
@@ -83,6 +91,7 @@ Une bibliographie sélective pour approfondir vos connaissances :
 ### Code source des exemples
 
 Accédez au code source des exemples présentés lors des séances :
+
   - Notebooks des mini-projets CNN et RNN
   - Scripts d'intégration avec l'API Mistral
   - Templates pour la base de connaissances
@@ -91,6 +100,7 @@ Accédez au code source des exemples présentés lors des séances :
 ### Templates et modèles
 
 Des templates prêts à l'emploi pour accélérer votre développement :
+
  - Structure de base du chatbot
  - Template de documentation technique
  - Modèles pour la base de connaissances
@@ -99,6 +109,7 @@ Des templates prêts à l'emploi pour accélérer votre développement :
 ## Support et assistance
 
 Si vous rencontrez des difficultés ou avez des questions, plusieurs options s'offrent à vous :
+
 - Consultez la FAQ ci-dessous
 - Posez vos questions sur le forum dédié
 - Contactez votre formateur pendant les heures de permanence

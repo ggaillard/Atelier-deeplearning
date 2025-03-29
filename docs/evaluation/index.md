@@ -121,6 +121,7 @@ Le projet final de chatbot pédagogique constitue la partie la plus importante d
 ## Auto-évaluation
 
 Avant chaque remise, nous vous encourageons à réaliser une auto-évaluation à l'aide des grilles fournies. Cette pratique vous permettra de :
+
  - Identifier les points forts et axes d'amélioration de votre travail
  - Vérifier que tous les critères sont bien pris en compte
  - Prioriser les aspects à finaliser ou améliorer
