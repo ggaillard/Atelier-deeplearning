@@ -1,6 +1,6 @@
 # Séance 4 : Projet intégrateur - Chatbot pédagogique
 
-![Projet intégrateur](https://images.unsplash.com/photo-1518364538800-6bfb218125d1?auto=format&fit=crop&q=80&w=1000&h=300)
+![Projet intégrateur](../images/banner-chatbot-pedagogique.svg)
 
 ## Objectifs de la séance
 

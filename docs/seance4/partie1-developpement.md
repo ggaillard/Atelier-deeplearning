@@ -1,6 +1,6 @@
 # Phase 1 : Développement du chatbot (2h30)
 
-![Développement du chatbot](https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?auto=format&fit=crop&q=80&w=1000&h=300)
+![Développement du chatbot](https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=1000&h=300)
 
 ## Objectif
 

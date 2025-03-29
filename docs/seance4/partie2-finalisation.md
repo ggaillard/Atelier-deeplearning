@@ -15,24 +15,24 @@ Mettez en place un protocole systématique pour tester votre chatbot avec des sc
 **Catégories de tests à effectuer :**
 
 1. **Tests de base**
-    - Dialogue simple (question-réponse)
-    - Gestion de l'historique de conversation
-    - Comportement face à des requêtes vides ou incomplètes
+   - Dialogue simple (question-réponse)
+   - Gestion de l'historique de conversation
+   - Comportement face à des requêtes vides ou incomplètes
 
 2. **Tests de connaissances**
-    - Questions sur chaque concept majeur du Deep Learning
-    - Vérification de l'exactitude des informations fournies
-    - Cohérence dans les explications
+   - Questions sur chaque concept majeur du Deep Learning
+   - Vérification de l'exactitude des informations fournies
+   - Cohérence dans les explications
 
 3. **Tests d'usage pédagogique**
-    - Adaptation au niveau de l'utilisateur
-    - Clarté des explications techniques
-    - Utilité des exemples et analogies
+   - Adaptation au niveau de l'utilisateur
+   - Clarté des explications techniques
+   - Utilité des exemples et analogies
 
 4. **Tests de robustesse**
-    - Gestion des erreurs API
-    - Questions hors sujet
-    - Questions mal formulées ou avec des fautes
+   - Gestion des erreurs API
+   - Questions hors sujet
+   - Questions mal formulées ou avec des fautes
 
 **Grille d'évaluation des tests :**
 
@@ -50,9 +50,9 @@ Pour chaque test qui échoue, notez le problème et priorisez les corrections.
 ### Profils d'utilisateurs pour les tests
 
 Testez votre chatbot avec différents profils d'utilisateurs :
-    - **Débutant complet** : aucune connaissance préalable
-    - **Niveau intermédiaire** : connaissances de base en programmation
-    - **Niveau avancé** : familiarité avec l'IA et questions techniques détaillées
+- **Débutant complet** : aucune connaissance préalable
+- **Niveau intermédiaire** : connaissances de base en programmation
+- **Niveau avancé** : familiarité avec l'IA et questions techniques détaillées
 
 ## 2. Optimisation des performances (20 min)
 
@@ -61,8 +61,8 @@ Testez votre chatbot avec différents profils d'utilisateurs :
 Améliorez les performances techniques de votre chatbot :
 
 1. **Temps de réponse**
-    - Réduisez la taille des prompts envoyés à l'API
-    - Ajoutez un système de cache pour les questions fréquentes
+   - Réduisez la taille des prompts envoyés à l'API
+   - Ajoutez un système de cache pour les questions fréquentes
    ```python
    # Exemple d'implémentation d'un cache simple
    response_cache = {}
@@ -77,8 +77,8 @@ Améliorez les performances techniques de votre chatbot :
    ```
 
 2. **Efficacité de l'API**
-    - Utilisez des paramètres adaptés pour chaque type de requête
-    - Optimisez la longueur des contextes transmis
+   - Utilisez des paramètres adaptés pour chaque type de requête
+   - Optimisez la longueur des contextes transmis
    ```python
    # Exemple de configuration par type de requête
    api_configs = {
@@ -89,8 +89,8 @@ Améliorez les performances techniques de votre chatbot :
    ```
 
 3. **Gestion de la mémoire**
-    - Limitez la taille de l'historique de conversation
-    - Ajoutez un mécanisme de résumé pour les longues conversations
+   - Limitez la taille de l'historique de conversation
+   - Ajoutez un mécanisme de résumé pour les longues conversations
    ```python
    class OptimizedConversationManager:
        def __init__(self, max_history=10):
@@ -114,16 +114,16 @@ Améliorez les performances techniques de votre chatbot :
 Améliorez la qualité pédagogique des réponses :
 
 1. **Amélioration des prompts**
-    - Refinez les instructions système pour des réponses plus pédagogiques
-    - Ajoutez des directives spécifiques pour les explications techniques
+   - Refinez les instructions système pour des réponses plus pédagogiques
+   - Ajoutez des directives spécifiques pour les explications techniques
 
 2. **Enrichissement des réponses**
-    - Ajoutez automatiquement des liens vers des ressources complémentaires
-    - Incluez des suggestions de questions de suivi pertinentes
+   - Ajoutez automatiquement des liens vers des ressources complémentaires
+   - Incluez des suggestions de questions de suivi pertinentes
 
 3. **Adaptation au niveau**
-    - Affinez la détection du niveau de l'utilisateur
-    - Personnalisez la complexité des réponses en fonction du niveau détecté
+   - Affinez la détection du niveau de l'utilisateur
+   - Personnalisez la complexité des réponses en fonction du niveau détecté
 
 ## 3. Documentation (20 min)
 
@@ -132,19 +132,19 @@ Améliorez la qualité pédagogique des réponses :
 Créez une documentation technique claire et complète :
 
 1. **Architecture du système**
-    - Diagramme des composants principaux
-    - Description des interactions entre les composants
-    - Technologies et bibliothèques utilisées
+   - Diagramme des composants principaux
+   - Description des interactions entre les composants
+   - Technologies et bibliothèques utilisées
 
 2. **Structure du code**
-    - Organisation des fichiers et dossiers
-    - Description des classes et fonctions principales
-    - Points d'extension pour de futures améliorations
+   - Organisation des fichiers et dossiers
+   - Description des classes et fonctions principales
+   - Points d'extension pour de futures améliorations
 
 3. **API et intégrations**
-    - Configuration requise pour l'API Mistral
-    - Paramètres d'API et leur impact
-    - Limites et quotas à considérer
+   - Configuration requise pour l'API Mistral
+   - Paramètres d'API et leur impact
+   - Limites et quotas à considérer
 
 **Modèle de documentation technique :**
 
@@ -155,32 +155,32 @@ Créez une documentation technique claire et complète :
 [Diagramme d'architecture]
 
 Notre chatbot est composé de trois composants principaux :
- - Interface utilisateur (HTML/CSS/JS)
- - Serveur backend (Python/Flask)
- - Intégration API Mistral AI
+- Interface utilisateur (HTML/CSS/JS)
+- Serveur backend (Python/Flask)
+- Intégration API Mistral AI
 
 ## 2. Composants principaux
 
 ### 2.1 Interface utilisateur
 L'interface est développée en HTML/CSS/JS et permet :
- - L'affichage des messages dans un format conversationnel
- - La saisie et l'envoi de questions
- - L'affichage d'indicateurs de chargement
- - [...]
+- L'affichage des messages dans un format conversationnel
+- La saisie et l'envoi de questions
+- L'affichage d'indicateurs de chargement
+- [...]
 
 ### 2.2 Serveur backend
 Le serveur est développé en Python avec Flask et gère :
- - Les requêtes de l'interface utilisateur
- - L'enrichissement des prompts avec la base de connaissances
- - Les appels à l'API Mistral AI
- - [...]
+- Les requêtes de l'interface utilisateur
+- L'enrichissement des prompts avec la base de connaissances
+- Les appels à l'API Mistral AI
+- [...]
 
 ### 2.3 Base de connaissances
 La base de connaissances est structurée en JSON et comprend :
- - X concepts principaux
- - Y sous-concepts
- - Z exemples pratiques
- - [...]
+- X concepts principaux
+- Y sous-concepts
+- Z exemples pratiques
+- [...]
 
 ## 3. Flux d'exécution
 1. L'utilisateur envoie une question via l'interface
@@ -196,19 +196,19 @@ La base de connaissances est structurée en JSON et comprend :
 Rédigez un guide utilisateur clair pour faciliter la prise en main :
 
 1. **Présentation générale**
-    - Objectif du chatbot
-    - Public cible
-    - Fonctionnalités principales
+   - Objectif du chatbot
+   - Public cible
+   - Fonctionnalités principales
 
 2. **Guide d'utilisation**
-    - Comment poser des questions efficacement
-    - Exemples de questions pertinentes
-    - Commandes spéciales (si existantes)
+   - Comment poser des questions efficacement
+   - Exemples de questions pertinentes
+   - Commandes spéciales (si existantes)
 
 3. **Conseils d'apprentissage**
-    - Progression recommandée dans les concepts
-    - Comment tester ses connaissances
-    - Ressources complémentaires
+   - Progression recommandée dans les concepts
+   - Comment tester ses connaissances
+   - Ressources complémentaires
 
 **Modèle de guide utilisateur :**
 
@@ -225,15 +225,15 @@ de manière progressive et adaptée à votre niveau.
 3. **Poursuivez la conversation** en posant des questions complémentaires
 
 ## Types de questions efficaces
- - "Qu'est-ce qu'un réseau de neurones convolutif ?"
- - "Explique-moi la descente de gradient comme si j'avais 12 ans"
- - "Quelles sont les différences entre CNN et RNN ?"
- - "Montre-moi un exemple simple de code TensorFlow"
+- "Qu'est-ce qu'un réseau de neurones convolutif ?"
+- "Explique-moi la descente de gradient comme si j'avais 12 ans"
+- "Quelles sont les différences entre CNN et RNN ?"
+- "Montre-moi un exemple simple de code TensorFlow"
 
 ## Fonctionnalités spéciales
- - Tapez "quiz" pour générer un petit quiz sur le sujet de votre choix
- - Tapez "progression" pour voir votre avancement dans les concepts
- - [...]
+- Tapez "quiz" pour générer un petit quiz sur le sujet de votre choix
+- Tapez "progression" pour voir votre avancement dans les concepts
+- [...]
 
 ## Parcours d'apprentissage recommandé
 Pour une progression optimale, nous vous suggérons d'explorer les concepts dans cet ordre :
@@ -247,26 +247,25 @@ Pour une progression optimale, nous vous suggérons d'explorer les concepts dans
 Préparez une démonstration efficace pour présenter votre travail :
 
 1. **Scénario de démonstration**
-    - Identifiez un parcours utilisateur représentatif
-    - Préparez 3-5 questions qui mettent en valeur différentes fonctionnalités
-    - Anticipez les points qui pourraient impressionner l'audience
+   - Identifiez un parcours utilisateur représentatif
+   - Préparez 3-5 questions qui mettent en valeur différentes fonctionnalités
+   - Anticipez les points qui pourraient impressionner l'audience
 
 2. **Support visuel**
-    - Créez 2-3 diapositives présentant l'architecture et les fonctionnalités
-    - Préparez un tableau récapitulatif des défis rencontrés et solutions trouvées
+   - Créez 2-3 diapositives présentant l'architecture et les fonctionnalités
+   - Préparez un tableau récapitulatif des défis rencontrés et solutions trouvées
 
 3. **Répartition des rôles**
-    - Décidez qui présentera quelle partie (si en binôme)
-    - Planifiez les transitions entre les démonstrations
+   - Décidez qui présentera quelle partie (si en binôme)
+   - Planifiez les transitions entre les démonstrations
 
 **Exemple de scénario de démonstration :**
-
-     1. Introduction du projet et objectifs (1 min)
-     2. Présentation de l'architecture (1 min)
-     3. Démonstration d'une conversation basique (1 min)
-     4. Démonstration d'une fonctionnalité pédagogique spéciale (1 min)
-     5. Explication d'un défi technique rencontré et sa solution (1 min)
-     6. Questions-réponses (1 min)
+1. Introduction du projet et objectifs (1 min)
+2. Présentation de l'architecture (1 min)
+3. Démonstration d'une conversation basique (1 min)
+4. Démonstration d'une fonctionnalité pédagogique spéciale (1 min)
+5. Explication d'un défi technique rencontré et sa solution (1 min)
+6. Questions-réponses (1 min)
 
 ## Check-list finale
 
@@ -280,4 +279,4 @@ Avant de terminer cette phase, vérifiez les points suivants :
 - [ ] Les livrables sont organisés et accessibles
 
 [Retour à la vue d'ensemble](index.md){ .md-button }
-[Continuer vers la Phase
+[Continuer vers la Phase 3: Présentation des projets](partie3-presentation.md){ .md-button .md-button--primary }
