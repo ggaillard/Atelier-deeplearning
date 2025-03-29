@@ -4,7 +4,7 @@
 
 ## Bienvenue dans ce parcours sur le Deep Learning !
 
-Ce cours vous permettra de découvrir et d'appliquer les technologies de Deep Learning, avec une approche pratique et progressive adaptée aux étudiants de BTS SIO SLAM. Plutôt que de commencer par la théorie abstraite, vous explorerez les concepts à travers des démonstrations concrètes et des manipulations directes.
+Ce cours vous permettra de découvrir et d'appliquer les technologies de Deep Learning, avec une approche pratique et progressive adaptée aux étudiants de BTS SIO . Plutôt que de commencer par la théorie abstraite, vous explorerez les concepts à travers des démonstrations concrètes et des manipulations directes.
 
 ## Projet fil rouge : Chatbot pédagogique
 

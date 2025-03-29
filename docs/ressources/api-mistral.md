@@ -1,5 +1,5 @@
 # Intégration de l'API Mistral - Premier test
-# BTS SIO SLAM - Séance 2: Types de réseaux et applications
+# BTS SIO  - Séance 2: Types de réseaux et applications
 
 import requests
 import json
@@ -94,7 +94,7 @@ def explain_deep_learning_concept(concept, difficulty="débutant"):
     # Construire un prompt éducatif structuré
     prompt = f"""
     En tant que tuteur pédagogique spécialisé en Deep Learning, explique le concept de '{concept}' 
-    à un étudiant de BTS SIO SLAM (niveau {difficulty}).
+    à un étudiant de BTS SIO  (niveau {difficulty}).
     
     Ton explication doit inclure:
     1. Une définition simple et claire

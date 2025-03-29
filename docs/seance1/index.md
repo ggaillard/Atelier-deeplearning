@@ -64,7 +64,7 @@ Consolidez vos connaissances et évaluez votre compréhension de manière autono
 
 ## Compétences BTS SIO développées
 
-Cette séance vous permet d'acquérir plusieurs compétences du référentiel BTS SIO SLAM :
+Cette séance vous permet d'acquérir plusieurs compétences du référentiel BTS SIO  :
 
 | Compétence | Description | Activités associées |
 |------------|-------------|---------------------|

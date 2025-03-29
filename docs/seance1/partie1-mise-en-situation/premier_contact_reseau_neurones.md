@@ -14,7 +14,7 @@
 - Visualiser les résultats
 - Tester le modèle avec vos propres dessins
 
-### BTS SIO SLAM - Découverte du Deep Learning
+### BTS SIO  - Découverte du Deep Learning
 ```
 
 ### Cellule 2 (Configuration - Code)

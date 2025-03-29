@@ -58,7 +58,7 @@ Pour des instructions détaillées sur l'installation et l'utilisation des scrip
 
 ## Compétences développées
 
-Cette séance vous permettra de développer plusieurs compétences du référentiel BTS SIO SLAM :
+Cette séance vous permettra de développer plusieurs compétences du référentiel BTS SIO  :
 
 - **B2.2** : Conception de solutions applicatives (architecture CNN/RNN)
 - **B2.3** : Développement (implémentation des modèles et intégration)

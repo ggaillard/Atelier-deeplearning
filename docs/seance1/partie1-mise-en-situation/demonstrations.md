@@ -192,7 +192,7 @@ Pour développer une application web en React, suivez ces étapes :
 
 ---
 
-## Application en développement SLAM
+## Application en développement
 
 En tant que développeurs, vous pourriez intégrer cette technologie pour :
 - Générer automatiquement des descriptions de produits

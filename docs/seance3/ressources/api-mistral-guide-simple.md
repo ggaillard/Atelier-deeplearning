@@ -306,7 +306,7 @@ if __name__ == '__main__':
 7. **Interface réactive** : Prévoyez des indicateurs de chargement pendant les appels API
 8. **Testez avec des utilisateurs réels** : Recueillez des feedbacks sur la qualité des réponses
 
-## 10. FAQ spécial BTS SIO SLAM
+## 10. FAQ spécial BTS SIO 
 
 ### Q: Ai-je besoin d'une carte de crédit pour l'API Mistral AI ?
 R: Non, vous pouvez créer un compte gratuit avec un quota limité suffisant pour le projet.

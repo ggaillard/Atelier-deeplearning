@@ -8,7 +8,7 @@
 
 Imaginez un assistant virtuel capable d'expliquer les concepts complexes du Deep Learning, de répondre aux questions, de proposer des exercices adaptés et d'accompagner l'apprenant dans sa progression. C'est exactement ce que nous allons créer ensemble au cours de ce parcours !
 
-> 🎯 **Objectif** : Concevoir un chatbot interactif qui aide les étudiants de BTS SIO SLAM à comprendre les concepts du Deep Learning à travers des explications, exemples et exercices.
+> 🎯 **Objectif** : Concevoir un chatbot interactif qui aide les étudiants de BTS SIO  à comprendre les concepts du Deep Learning à travers des explications, exemples et exercices.
 
 ## Pourquoi ce projet ?
 

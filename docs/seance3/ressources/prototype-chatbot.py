@@ -1,6 +1,6 @@
 """
 Prototype de chatbot pédagogique sur le Deep Learning utilisant l'API Mistral AI
-Pour les étudiants BTS SIO SLAM
+Pour les étudiants BTS SIO 
 
 Ce script crée un chatbot simple avec interface web via Flask
 qui répond aux questions sur le Deep Learning.
