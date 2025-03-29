@@ -22,28 +22,28 @@ Pour équilibrer le travail entre les deux membres de l'équipe, nous recommando
 #### Étudiant 1
 
 **Responsabilités techniques** :
- - Conception de l'architecture globale du chatbot
- - Développement de la logique de traitement des requêtes
- - Intégration technique avec l'API Mistral AI
- - Tests d'intégration
+  - Conception de l'architecture globale du chatbot
+  - Développement de la logique de traitement des requêtes
+  - Intégration technique avec l'API Mistral AI
+  - Tests d'intégration
 
 **Responsabilités de contenu** :
- - Structuration de la base de connaissances sur le Deep Learning
- - Organisation des concepts en niveaux de difficulté
- - Validation de l'exactitude des informations techniques
+  - Structuration de la base de connaissances sur le Deep Learning
+  - Organisation des concepts en niveaux de difficulté
+  - Validation de l'exactitude des informations techniques
 
 #### Étudiant 2
 
 **Responsabilités techniques** :
- - Conception de l'interface conversationnelle
- - Développement de l'interface utilisateur
- - Gestion des flux de conversation
- - Tests utilisateurs
+  - Conception de l'interface conversationnelle
+  - Développement de l'interface utilisateur
+  - Gestion des flux de conversation
+  - Tests utilisateurs
 
 **Responsabilités de contenu** :
- - Recherche et rédaction des contenus pédagogiques
- - Création des exemples et illustrations
- - Préparation de la documentation technique et du guide utilisateur
+  - Recherche et rédaction des contenus pédagogiques
+  - Création des exemples et illustrations
+  - Préparation de la documentation technique et du guide utilisateur
 
 ## Planification des tâches par séance
 
@@ -108,11 +108,11 @@ Listez les outils que vous utiliserez pour la collaboration d'équipe :
 ## Engagement de l'équipe
 
 En tant que membres de l'équipe, nous nous engageons à :
- - Respecter les délais et les responsabilités assignées
- - Communiquer régulièrement sur l'avancement de nos tâches
- - Demander de l'aide si nous rencontrons des difficultés
- - Contribuer activement à la réussite collective du projet
- - Documenter notre travail pour faciliter l'intégration
+  - Respecter les délais et les responsabilités assignées
+  - Communiquer régulièrement sur l'avancement de nos tâches
+  - Demander de l'aide si nous rencontrons des difficultés
+  - Contribuer activement à la réussite collective du projet
+  - Documenter notre travail pour faciliter l'intégration
 
 
 
@@ -122,10 +122,10 @@ _______________   _______________
 
 Cette grille sera utilisée dans l'évaluation finale du projet, dans la composante "Projet final - Processus" (15% de la note finale). Les critères suivants seront considérés :
 
- - Équilibre dans la répartition des responsabilités
- - Adéquation entre les compétences et les rôles assignés
- - Respect des engagements pris
- - Qualité de la collaboration et de la communication
- - Capacité d'adaptation face aux difficultés rencontrées
+  - Équilibre dans la répartition des responsabilités
+  - Adéquation entre les compétences et les rôles assignés
+  - Respect des engagements pris
+  - Qualité de la collaboration et de la communication
+  - Capacité d'adaptation face aux difficultés rencontrées
 
 Consultez la [grille détaillée d'évaluation](criteres-evaluation.md) pour plus d'informations sur les autres critères d'évaluation du projet.
