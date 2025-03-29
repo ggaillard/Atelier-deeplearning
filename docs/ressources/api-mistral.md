@@ -1,6 +1,7 @@
 # Intégration de l'API Mistral avec FastAPI - Premier test
 # BTS SIO  - Séance 2: Types de réseaux et applications
 
+```python
 import requests
 import json
 import os
@@ -332,3 +333,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+```
