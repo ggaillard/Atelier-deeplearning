@@ -75,9 +75,10 @@ nav:
     - Préparation du projet: seance3/partie3-preparation-projet.md
   - Séance 4:
     - Vue d'ensemble: seance4/index.md
+    - Présentation: seance4/partie3-presentation.md
     - Développement: seance4/partie1-developpement.md
     - Finalisation: seance4/partie2-finalisation.md
-    - Présentation: seance4/partie3-presentation.md
+   
   - Ressources:
     - Vue d'ensemble: ressources/index.md
     - API Mistral: ressources/api-mistral.md
