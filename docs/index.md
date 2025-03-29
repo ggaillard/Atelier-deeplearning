@@ -68,24 +68,28 @@ flowchart TB
 ```
 
 ### [Séance 1 : Introduction au Deep Learning par l'expérimentation](seance1/index.md)
+
 - Découverte du Deep Learning par des démonstrations et manipulations concrètes
 - Comparaison entre Machine Learning classique et Deep Learning
 - Exploration du fonctionnement interne d'un réseau de neurones
 - Mini-projet collaboratif et débrief assisté par IA
 
 ### [Séance 2 : Types de réseaux et leurs applications](seance2/index.md)
+
 - Réseaux de neurones convolutifs (CNN) pour la vision par ordinateur
 - Réseaux récurrents (RNN) pour le traitement des séquences
 - Mini-projets pratiques sur les architectures spécifiques
 - Challenge d'amélioration d'un modèle en groupe
 
 ### [Séance 3 : Optimisation et frameworks](seance3/index.md)
+
 - Techniques d'optimisation des réseaux de neurones
 - Rétropropagation et descente de gradient
 - Découverte de TensorFlow/Keras et PyTorch
 - Préparation du projet final (chatbot pédagogique)
 
 ### [Séance 4 : Projet intégrateur](seance4/index.md)
+
 - Application de l'ensemble des connaissances acquises
 - Développement du chatbot pédagogique
 - Intégration de l'API Mistral AI

@@ -1,11 +1,16 @@
-# Intégration de l'API Mistral - Premier test
+# Intégration de l'API Mistral avec FastAPI - Premier test
 # BTS SIO  - Séance 2: Types de réseaux et applications
 
 import requests
 import json
 import os
 from dotenv import load_dotenv
-from flask import Flask, request, jsonify, render_template
+from fastapi import FastAPI, Request, Form, HTTPException
+from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import HTMLResponse, JSONResponse
+import uvicorn
+from pydantic import BaseModel
 
 # Charger les variables d'environnement
 load_dotenv()
@@ -13,6 +18,13 @@ load_dotenv()
 # Configuration de l'API Mistral
 MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY", "votre_clé_api")  # À remplacer par votre clé API
 MISTRAL_API_URL = "https://api.mistral.ai/v1/chat/completions"
+
+# Initialisation de l'application FastAPI
+app = FastAPI(title="Explorateur de concepts Deep Learning", 
+              description="Une API pour explorer les concepts du Deep Learning avec Mistral AI")
+
+# Configuration des templates
+templates = Jinja2Templates(directory="templates")
 
 # 1. Fonction simple pour appeler l'API Mistral
 def mistral_chat_completion(prompt, model="mistral-tiny", max_tokens=1000):
@@ -114,28 +126,28 @@ def explain_deep_learning_concept(concept, difficulty="débutant"):
     except (KeyError, IndexError):
         return "Erreur lors de la récupération de la réponse."
 
-# 4. Création d'une petite application Flask pour interagir avec l'API
-app = Flask(__name__)
+# 4. Modèles Pydantic pour les requêtes
+class ConceptRequest(BaseModel):
+    concept: str
+    difficulty: str = "débutant"
 
-@app.route('/')
-def home():
-    return render_template('index.html')
+# 5. Routes FastAPI
+@app.get("/", response_class=HTMLResponse)
+async def home(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
 
-@app.route('/api/explain', methods=['POST'])
-def api_explain():
-    data = request.json
-    concept = data.get('concept', '')
-    difficulty = data.get('difficulty', 'débutant')
+@app.post("/api/explain")
+async def api_explain(request: ConceptRequest):
+    if not request.concept:
+        raise HTTPException(status_code=400, detail="Concept manquant")
     
-    if not concept:
-        return jsonify({"error": "Concept manquant"}), 400
-    
-    explanation = explain_deep_learning_concept(concept, difficulty)
-    return jsonify({"explanation": explanation})
+    explanation = explain_deep_learning_concept(request.concept, request.difficulty)
+    return {"explanation": explanation}
 
-# 5. Template HTML simple pour l'interface
+# 6. Template HTML simple pour l'interface
 def create_template_directory():
     """Crée un répertoire templates et un fichier index.html"""
+    import os
     os.makedirs('templates', exist_ok=True)
     
     with open('templates/index.html', 'w') as f:
@@ -286,8 +298,10 @@ def create_template_directory():
 </body>
 </html>
         """)
+    
+    print("Template index.html créé avec succès!")
 
-# 6. Fonction principale pour exécuter l'application
+# 7. Fonction principale pour exécuter l'application
 def main():
     """Fonction principale"""
     print("=== EXPLORATION DE L'API MISTRAL POUR LE CHATBOT PÉDAGOGIQUE ===")
@@ -309,11 +323,12 @@ def main():
     create_template_directory()
     print("   Template créé dans le répertoire 'templates/'")
     
-    # Lancement de l'application Flask
+    # Lancement de l'application FastAPI
     print("\n3. Démarrage de l'application web")
-    print("   URL: http://localhost:5000")
+    print("   URL: http://localhost:8000")
+    print("   Documentation de l'API: http://localhost:8000/docs")
     print("   Appuyez sur Ctrl+C pour quitter")
-    app.run(debug=True)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 
 if __name__ == "__main__":
     main()

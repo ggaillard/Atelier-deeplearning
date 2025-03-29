@@ -7,20 +7,47 @@ qui répond aux questions sur le Deep Learning.
 """
 
 import os
-from flask import Flask, request, jsonify, render_template, session
+from fastapi import FastAPI, Request, HTTPException, Depends
+from fastapi.responses import JSONResponse, HTMLResponse
+from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+from typing import List, Dict, Optional, Any
 import uuid
 from mistralai.client import MistralClient
 from mistralai.models.chat_completion import ChatMessage
 from dotenv import load_dotenv
 import json
 import time
+import uvicorn
+from starlette.middleware.sessions import SessionMiddleware
 
 # Chargement des variables d'environnement
 load_dotenv()
 
 # Configuration de l'application
-app = Flask(__name__)
-app.secret_key = os.getenv("SECRET_KEY", "deep_learning_chatbot_secret")
+
+app = FastAPI(
+    title="Chatbot Deep Learning",
+    description="Un chatbot pédagogique sur le Deep Learning utilisant l'API Mistral AI",
+    version="1.0.0"
+)
+
+# Ajout du middleware pour les sessions
+app.add_middleware(SessionMiddleware, secret_key=os.getenv("SECRET_KEY", "deep_learning_chatbot_secret"))
+
+# Ajout du middleware CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Configuration des templates
+templates = Jinja2Templates(directory="templates")
 
 # Configuration de l'API Mistral
 mistral_api_key = os.getenv("MISTRAL_API_KEY")
@@ -523,5 +550,13 @@ if __name__ == '__main__':
 </body>
 </html>""")
     
-    print("ChatBot démarré ! Accédez à http://127.0.0.1:5000 pour commencer.")
-    app.run(debug=True)
+print("Template index.html créé avec succès!")
+
+# Point d'entrée principal
+if __name__ == "__main__":
+    # Créer les templates
+    create_templates()
+    
+    print("ChatBot démarré ! Accédez à http://127.0.0.1:8000 pour commencer.")
+    print("Documentation API disponible à http://127.0.0.1:8000/docs")
+    uvicorn.run(app, host="127.0.0.1", port=8000)
