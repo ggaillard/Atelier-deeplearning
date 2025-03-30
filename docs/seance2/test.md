@@ -1,63 +1,238 @@
-# Approche alternative complète pour la visualisation
-print("Initialisation et visualisation avec une approche alternative...")
+# Carte de progression
 
-# 1. Réinitialiser le modèle pour s'assurer qu'il est correctement défini
-model = Sequential([
-    Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1), name='conv1'),
-    MaxPooling2D((2, 2), name='pool1'),
-    Conv2D(64, (3, 3), activation='relu', name='conv2'),
-    MaxPooling2D((2, 2), name='pool2'),
-    Flatten(name='flatten'),
-    Dense(128, activation='relu', name='dense1'),
-    Dropout(0.5, name='dropout1'),
-    Dense(10, activation='softmax', name='output')
-])
+## GPS pédagogique : votre itinéraire d'apprentissage du Deep Learning
 
-# 2. Compiler le modèle
-model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+![Carte de progression](https://images.unsplash.com/photo-1501366062246-723b4d3e4eb6?auto=format&fit=crop&q=80&w=1000&h=300)
 
-# 3. Forcer l'initialisation avec build ET un forward pass
-model.build(input_shape=(None, 28, 28, 1))
-dummy_input = np.zeros((1, 28, 28, 1))
-_ = model(dummy_input)
+Cette carte de progression vous permettra de visualiser clairement les objectifs, les activités et les compétences développées à chaque étape de votre formation en Deep Learning.
 
-# 4. Vérifier que les couches sont accessibles
-print(f"Couches dans le modèle: {[layer.name for layer in model.layers]}")
+## Parcours global
 
-# 5. Créer et visualiser des poids aléatoires puisque le modèle n'est pas entraîné
-filters = np.random.normal(size=(3, 3, 1, 8))  # Simuler 8 filtres 3x3
-f_min, f_max = filters.min(), filters.max()
-filters = (filters - f_min) / (f_max - f_min)
+```mermaid
+gantt
+    title Parcours d'apprentissage du Deep Learning
+    dateFormat  D
+    axisFormat %d
+    tickInterval 1day
+    
+    section Fondamentaux
+    Séance 1: Introduction au Deep Learning    :s1, 0, 1d
+    
+    section Architectures
+    Séance 2: Types de réseaux et applications    :s2, after s1, 1d
+    
+    section Outils & Techniques
+    Séance 3: Frameworks et préparation du projet    :s3, after s2, 1d
+    
+    section Projet Final
+    Séance 4: Développement et présentation du chatbot    :s4, after s3, 1d
+    
+    section Compétences
+    Concepts fondamentaux    :crit, active, c1, 0, 4d
+    Programmation TensorFlow/Keras    :active, c2, 0, 4d
+    Intégration API    :active, c3, after s2, 2d
+    Développement web    :active, c4, after s1, 3d
+```
 
-plt.figure(figsize=(10, 4))
-for i in range(8):
-    plt.subplot(2, 4, i+1)
-    plt.imshow(filters[:, :, 0, i], cmap='viridis')
-    plt.title(f'Filtre {i+1}')
-    plt.axis('off')
-plt.tight_layout()
-plt.show()
+## Progression détaillée des compétences
 
-# 6. Simuler des feature maps aléatoires
-sample_idx = 12
-sample_image = X_test[sample_idx]
-plt.figure(figsize=(3, 3))
-plt.imshow(sample_image.reshape(28, 28), cmap='gray')
-plt.title(f"Chiffre: {y_test[sample_idx]}")
-plt.axis('off')
-plt.show()
+Le tableau ci-dessous détaille l'évolution des compétences techniques et conceptuelles que vous développerez au cours de cette formation :
 
-# 7. Générer des feature maps simulées
-feature_maps = np.random.rand(1, 26, 26, 8)  # Taille typique après convolution 3x3
+| Compétence | Séance 1 | Séance 2 | Séance 3 | Séance 4 |
+|------------|----------|----------|----------|----------|
+| **Compréhension des réseaux de neurones** | ![Niveau 1](https://img.shields.io/badge/Niveau-Fondamentaux-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Architectures-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Applications-orange) | ![Niveau 4](https://img.shields.io/badge/Niveau-Intégration-red) |
+| **Programmation avec TensorFlow/Keras** | ![Niveau 1](https://img.shields.io/badge/Niveau-Premiers_pas-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Mini_projets-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Optimisation-orange) | ![Niveau 4](https://img.shields.io/badge/Niveau-Application_avancée-red) |
+| **Visualisation et analyse de données** | ![Niveau 1](https://img.shields.io/badge/Niveau-Métriques_de_base-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Feature_maps-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Évaluation-orange) | ![Niveau 4](https://img.shields.io/badge/Niveau-Dashboard-red) |
+| **Traitement d'images** | ![Niveau 1](https://img.shields.io/badge/Niveau-Classification_simple-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-CNN_complets-green) | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) |
+| **Traitement du texte** | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 1](https://img.shields.io/badge/Niveau-RNN_basiques-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-API_Mistral-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Système_conversationnel-orange) |
+| **Développement web** | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 1](https://img.shields.io/badge/Niveau-Interface_simple-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-API_REST-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Application_complète-orange) |
+| **Conception et architecture** | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 1](https://img.shields.io/badge/Niveau-Préparation-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Implémentation-green) |
+| **Développement collaboratif** | ![Niveau 1](https://img.shields.io/badge/Niveau-Activités_guidées-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Challenge_amélioration-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Planification-orange) | ![Niveau 4](https://img.shields.io/badge/Niveau-Réalisation_équipe-red) |
 
-plt.figure(figsize=(10, 4))
-for i in range(8):
-    plt.subplot(2, 4, i+1)
-    plt.imshow(feature_maps[0, :, :, i], cmap='viridis')
-    plt.axis('off')
-plt.suptitle('Feature Maps - Couche 1 (Simulées)')
-plt.tight_layout()
-plt.show()
+## Parcours d'apprentissage visuel
 
-print("Visualisation terminée avec des données simulées.")
-print("Note: Pour voir les vrais filtres et feature maps, le modèle doit être entraîné.")
+```mermaid
+flowchart LR
+    subgraph S1["Séance 1: Introduction"]
+        F["Fondamentaux\nRéseaux de neurones"]
+        DL["ML classique vs\nDeep Learning"]
+        E["Expérimentation\nnotebook MNIST"]
+    end
+    
+    subgraph S2["Séance 2: Architectures"]
+        CNN["Réseaux convolutifs\nVision par ordinateur"]
+        RNN["Réseaux récurrents\nTraitement du texte"]
+        AM["Challenge\nd'amélioration"]
+    end
+    
+    subgraph S3["Séance 3: Outils"]
+        FW["Frameworks\nTensorFlow/Keras"]
+        OP["Optimisation\ndes performances"]
+        API["API Mistral\nPrompt engineering"]
+    end
+    
+    subgraph S4["Séance 4: Projet"]
+        DEV["Développement\ndu chatbot"]
+        TEST["Finalisation\net tests"]
+        PRES["Présentation\nfinale"]
+    end
+    
+    S1 --> S2
+    S2 --> S3
+    S3 --> S4
+    
+    style S1 fill:#e1f5fe,stroke:#0288d1
+    style S2 fill:#e8f5e9,stroke:#388e3c
+    style S3 fill:#fff8e1,stroke:#ffa000
+    style S4 fill:#ffebee,stroke:#d32f2f
+```
+
+## Détail des séances et objectifs pédagogiques
+
+### Séance 1 : Introduction au Deep Learning par l'expérimentation
+
+**Objectifs pédagogiques :**
+
+ - Découvrir le Deep Learning par des manipulations concrètes
+ - Comprendre les différences fondamentales entre ML classique et DL
+ - Explorer le fonctionnement interne d'un réseau de neurones simple
+ - Acquérir le vocabulaire technique de base
+
+**Activités :**
+
+ - Mise en situation pratique : démonstrations et notebook "Hello World"
+ - Découverte comparative : ML classique vs Deep Learning
+ - Exploration guidée : anatomie d'un réseau de neurones
+ - Synthèse et auto-évaluation
+
+**Compétences BTS SIO développées :**
+
+ - B1.3 : Gestion des données d'images pour les modèles
+ - B2.2 : Conception de modèles simples
+ - B3.2 : Évaluation de la performance des modèles
+
+**Livrables :**
+
+ - Fiche d'observations complétée
+ - Tableau comparatif ML vs DL
+ - Schéma annoté d'un réseau de neurones
+
+### Séance 2 : Types de réseaux et leurs applications
+
+**Objectifs pédagogiques :**
+
+ - Maîtriser les principes des réseaux convolutifs (CNN)
+ - Comprendre le fonctionnement des réseaux récurrents (RNN)
+ - Implémenter des modèles pour différents types de données
+ - Visualiser et interpréter le fonctionnement des modèles
+
+**Activités :**
+
+ - Mini-projet CNN : classification d'images et visualisation
+ - Mini-projet RNN : traitement de texte et prédiction de séquences
+ - Challenge d'amélioration : optimisation collaborative d'un modèle
+
+**Compétences BTS SIO développées :**
+
+ - B1.3 : Traitement de données complexes (images, textes)
+ - B2.2 : Développement de modèles spécialisés
+ - B2.3 : Création d'interfaces simples pour les modèles
+ - B3.2 : Analyse comparative des performances
+
+**Livrables :**
+
+ - Modèle CNN fonctionnel avec visualisations
+ - Modèle RNN pour analyse de texte
+ - Rapport d'amélioration documenté
+
+### Séance 3 : Frameworks pratiques et préparation du projet
+
+**Objectifs pédagogiques :**
+
+ - Maîtriser les frameworks de Deep Learning courants
+ - Optimiser les performances des modèles
+ - Découvrir l'API Mistral AI pour les applications conversationnelles
+ - Préparer le projet de chatbot pédagogique
+
+**Activités :**
+
+ - Frameworks en pratique : utilisation efficace de TensorFlow/Keras
+ - Optimisation de modèles : techniques d'amélioration des performances
+ - Introduction à Mistral AI : premiers pas avec l'API
+ - Conception du chatbot : préparation de l'architecture et des fonctionnalités
+
+**Compétences BTS SIO développées :**
+
+ - B1.4 : Exploitation des API et interfaces de programmation
+ - B2.2 : Optimisation de solutions applicatives
+ - B3.2 : Vérification et amélioration des performances
+
+**Livrables :**
+
+ - Applications fonctionnelles avec TensorFlow/Keras
+ - Premier test d'intégration avec l'API Mistral
+ - Document de conception du chatbot
+
+### Séance 4 : Projet intégrateur - Chatbot pédagogique
+
+**Objectifs pédagogiques :**
+
+ - Mettre en œuvre l'ensemble des connaissances acquises
+ - Développer une application conversationnelle complète
+ - Structurer une base de connaissances pédagogique
+ - Présenter et défendre un projet technique
+
+**Activités :**
+
+ - Développement du chatbot : interface et backend
+ - Intégration de l'API Mistral et de la base de connaissances
+ - Tests et optimisation de l'expérience utilisateur
+ - Préparation et réalisation de la présentation finale
+
+**Compétences BTS SIO développées :**
+
+ - B1.4 : Exploitation avancée des API
+ - B2.2/B2.3 : Développement d'une solution applicative complète
+ - B3.2/B3.3 : Tests, documentation et présentation technique
+
+**Livrables :**
+
+ - Code source complet du chatbot
+ - Documentation technique et guide utilisateur
+ - Présentation et démonstration du projet
+
+## Points de contrôle de votre progression
+
+### Après la Séance 1
+- [ ] Je comprends ce qu'est un réseau de neurones
+- [ ] Je sais expliquer la différence entre ML classique et Deep Learning
+- [ ] J'ai réussi à manipuler un modèle simple sur MNIST
+
+### Après la Séance 2
+- [ ] Je comprends ce qu'est un CNN et son application en vision par ordinateur
+- [ ] Je comprends ce qu'est un RNN et son application en traitement de texte
+- [ ] J'ai réussi à améliorer un modèle existant
+
+### Après la Séance 3
+- [ ] Je sais utiliser TensorFlow/Keras pour créer un modèle simple
+- [ ] Je connais les techniques d'optimisation des performances
+- [ ] J'ai réussi à faire un premier test avec l'API Mistral
+
+### Après la Séance 4
+- [ ] J'ai développé un chatbot pédagogique fonctionnel
+- [ ] J'ai intégré une base de connaissances structurée
+- [ ] J'ai présenté mon projet de manière claire et convaincante
+
+## Conseil pour optimiser votre apprentissage
+
+1. **Expérimentez régulièrement** avec les exemples de code fournis
+2. **Posez des questions** dès qu'un concept n'est pas clair
+3. **Collaborez** avec vos pairs pour résoudre les problèmes complexes
+4. **Documentez** votre progression et vos découvertes
+5. **Établissez des liens** entre les différents concepts et technologies
+
+Cette formation est conçue comme un parcours progressif où chaque séance s'appuie sur les acquis des précédentes. Suivez le chemin balisé tout en explorant les possibilités qui vous intéressent particulièrement.
+
+[Retour à l'accueil](index.md){ .md-button }
+[Voir la présentation du projet](presentation.md){ .md-button }
+[Commencer la Séance 1](seance1/index.md){ .md-button .md-button--primary }

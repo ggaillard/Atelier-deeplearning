@@ -1,5 +1,7 @@
 # Phase 3 : Préparation au projet final (45min)
 
+![Préparation au projet final](https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=1000&h=300)
+
 ## Présentation du projet chatbot pédagogique (15 min)
 
 **Objectif** : Comprendre les attentes concrètes pour le projet final et voir comment les technologies vues jusqu'à présent s'intègrent dans ce contexte.

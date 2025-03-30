@@ -1,5 +1,7 @@
 # Phase 2 : Amélioration des performances (1h30)
 
+![Amélioration des performances](https://images.unsplash.com/photo-1617791160536-598cf32026fb?auto=format&fit=crop&q=80&w=1000&h=300)
+
 ## Introduction à l'optimisation pratique des modèles (15 min)
 
 **Objectif** : Comprendre les approches simples et efficaces pour améliorer les performances d'un modèle de Deep Learning sans expertise mathématique approfondie.

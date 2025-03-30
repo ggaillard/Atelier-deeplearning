@@ -1,8 +1,8 @@
 # Carte de progression
 
-## GPS pédagogique : votre itinéraire d'apprentissage
+## GPS pédagogique : votre itinéraire d'apprentissage du Deep Learning
 
-![Carte de progression](https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?auto=format&fit=crop&q=80&w=1000&h=300)
+![Carte de progression](https://images.unsplash.com/photo-1484910292437-025e5d13ce87?auto=format&fit=crop&q=80&w=1000&h=300)
 
 Cette carte de progression vous permettra de visualiser clairement les objectifs, les activités et les compétences développées à chaque étape de votre formation en Deep Learning.
 
@@ -10,21 +10,28 @@ Cette carte de progression vous permettra de visualiser clairement les objectifs
 
 ```mermaid
 gantt
-    title Progression pédagogique du parcours Deep Learning
-    dateFormat HH:mm
-    axisFormat %Hh%M
+    title Parcours d'apprentissage du Deep Learning
+    dateFormat  D
+    axisFormat %d
+    tickInterval 1day
     
-    section Séance 1
-    Introduction expérimentale au Deep Learning    :s1, 00:00, 4h
+    section Fondamentaux
+    Séance 1: Introduction au Deep Learning    :s1, 0, 1d
     
-    section Séance 2
-    Types de réseaux et applications      :s2, after s1, 4h
+    section Architectures
+    Séance 2: Types de réseaux et applications    :s2, after s1, 1d
     
-    section Séance 3
-    Frameworks et préparation du projet   :s3, after s2, 4h
+    section Outils & Techniques
+    Séance 3: Frameworks et préparation du projet    :s3, after s2, 1d
     
-    section Séance 4
-    Développement et présentation du chatbot   :s4, after s3, 4h
+    section Projet Final
+    Séance 4: Développement et présentation du chatbot    :s4, after s3, 1d
+    
+    section Compétences
+    Concepts fondamentaux    :crit, active, c1, 0, 4d
+    Programmation TensorFlow/Keras    :active, c2, 0, 4d
+    Intégration API    :active, c3, after s2, 2d
+    Développement web    :active, c4, after s1, 3d
 ```
 
 ## Progression détaillée des compétences
@@ -33,14 +40,52 @@ Le tableau ci-dessous détaille l'évolution des compétences techniques et conc
 
 | Compétence | Séance 1 | Séance 2 | Séance 3 | Séance 4 |
 |------------|----------|----------|----------|----------|
-| **Compréhension des réseaux de neurones** | Fondamentaux, structure de base | Architectures spécialisées (CNN, RNN) | Applications pratiques | Intégration complète |
-| **Programmation avec TensorFlow/Keras** | Premiers pas guidés | Mini-projets spécifiques | Optimisation de modèles | Application avancée |
-| **Visualisation et analyse de données** | Métriques de base | Feature maps et visualisations avancées | Évaluation des performances | Dashboard intégré |
-| **Traitement d'images** | Classification simple | CNN complets et transfer learning | - | - |
-| **Traitement du texte** | - | RNN pour séquences | Intégration API Mistral | Système conversationnel complet |
-| **Développement web** | - | Interface web simple | API REST | Application complète |
-| **Conception et architecture** | - | - | Préparation du projet | Implémentation avancée |
-| **Développement collaboratif** | Activités guidées | Challenge d'amélioration | Planification | Réalisation en équipe |
+| **Compréhension des réseaux de neurones** | ![Niveau 1](https://img.shields.io/badge/Niveau-Fondamentaux-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Architectures-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Applications-orange) | ![Niveau 4](https://img.shields.io/badge/Niveau-Intégration-red) |
+| **Programmation avec TensorFlow/Keras** | ![Niveau 1](https://img.shields.io/badge/Niveau-Premiers_pas-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Mini_projets-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Optimisation-orange) | ![Niveau 4](https://img.shields.io/badge/Niveau-Application_avancée-red) |
+| **Visualisation et analyse de données** | ![Niveau 1](https://img.shields.io/badge/Niveau-Métriques_de_base-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Feature_maps-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Évaluation-orange) | ![Niveau 4](https://img.shields.io/badge/Niveau-Dashboard-red) |
+| **Traitement d'images** | ![Niveau 1](https://img.shields.io/badge/Niveau-Classification_simple-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-CNN_complets-green) | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) |
+| **Traitement du texte** | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 1](https://img.shields.io/badge/Niveau-RNN_basiques-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-API_Mistral-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Système_conversationnel-orange) |
+| **Développement web** | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 1](https://img.shields.io/badge/Niveau-Interface_simple-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-API_REST-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Application_complète-orange) |
+| **Conception et architecture** | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 1](https://img.shields.io/badge/Niveau-Préparation-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Implémentation-green) |
+| **Développement collaboratif** | ![Niveau 1](https://img.shields.io/badge/Niveau-Activités_guidées-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Challenge_amélioration-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Planification-orange) | ![Niveau 4](https://img.shields.io/badge/Niveau-Réalisation_équipe-red) |
+
+## Parcours d'apprentissage visuel
+
+```mermaid
+flowchart LR
+    subgraph S1["Séance 1: Introduction"]
+        F["Fondamentaux\nRéseaux de neurones"]
+        DL["ML classique vs\nDeep Learning"]
+        E["Expérimentation\nnotebook MNIST"]
+    end
+    
+    subgraph S2["Séance 2: Architectures"]
+        CNN["Réseaux convolutifs\nVision par ordinateur"]
+        RNN["Réseaux récurrents\nTraitement du texte"]
+        AM["Challenge\nd'amélioration"]
+    end
+    
+    subgraph S3["Séance 3: Outils"]
+        FW["Frameworks\nTensorFlow/Keras"]
+        OP["Optimisation\ndes performances"]
+        API["API Mistral\nPrompt engineering"]
+    end
+    
+    subgraph S4["Séance 4: Projet"]
+        DEV["Développement\ndu chatbot"]
+        TEST["Finalisation\net tests"]
+        PRES["Présentation\nfinale"]
+    end
+    
+    S1 --> S2
+    S2 --> S3
+    S3 --> S4
+    
+    style S1 fill:#e1f5fe,stroke:#0288d1
+    style S2 fill:#e8f5e9,stroke:#388e3c
+    style S3 fill:#fff8e1,stroke:#ffa000
+    style S4 fill:#ffebee,stroke:#d32f2f
+```
 
 ## Détail des séances et objectifs pédagogiques
 
@@ -139,7 +184,7 @@ Le tableau ci-dessous détaille l'évolution des compétences techniques et conc
 
 **Activités :**
 
- -  Développement du chatbot : interface et backend
+ - Développement du chatbot : interface et backend
  - Intégration de l'API Mistral et de la base de connaissances
  - Tests et optimisation de l'expérience utilisateur
  - Préparation et réalisation de la présentation finale
@@ -156,47 +201,27 @@ Le tableau ci-dessous détaille l'évolution des compétences techniques et conc
  - Documentation technique et guide utilisateur
  - Présentation et démonstration du projet
 
-## Système d'évaluation
+## Points de contrôle de votre progression
 
-L'évaluation de cette formation est conçue pour refléter à la fois les compétences techniques acquises et la capacité à les appliquer dans un projet concret.
+### Après la Séance 1
+- [ ] Je comprends ce qu'est un réseau de neurones
+- [ ] Je sais expliquer la différence entre ML classique et Deep Learning
+- [ ] J'ai réussi à manipuler un modèle simple sur MNIST
 
-### Répartition de la note finale
+### Après la Séance 2
+- [ ] Je comprends ce qu'est un CNN et son application en vision par ordinateur
+- [ ] Je comprends ce qu'est un RNN et son application en traitement de texte
+- [ ] J'ai réussi à améliorer un modèle existant
 
-| Composante | Pondération | Description |
-|------------|-------------|-------------|
-| Participation active | 10% | Engagement dans les activités, pertinence des contributions |
-| Mini-projets | 30% | Qualité des livrables des séances 2 et 3 |
-| Projet final - Produit | 30% | Fonctionnalité et qualité technique du chatbot |
-| Projet final - Processus | 15% | Organisation, méthodologie, répartition des tâches |
-| Projet final - Présentation | 15% | Qualité de la présentation et de la documentation |
+### Après la Séance 3
+- [ ] Je sais utiliser TensorFlow/Keras pour créer un modèle simple
+- [ ] Je connais les techniques d'optimisation des performances
+- [ ] J'ai réussi à faire un premier test avec l'API Mistral
 
-### Critères d'évaluation détaillés
-
-Chaque composante est évaluée selon des critères spécifiques :
-
-**Mini-projets (30%) :**
- - Respect des consignes techniques
- - Fonctionnalité et performances des modèles
- - Qualité du code et de la documentation
- - Analyse critique des résultats
-
-**Projet final (60% au total) :**
- - **Produit (30%)** : Fonctionnalités implémentées, qualité technique, expérience utilisateur
- - **Processus (15%)** : Organisation de l'équipe, gestion du temps, adaptation aux difficultés
- - **Présentation (15%)** : Clarté de l'exposé, démonstration, réponses aux questions
-
-Pour plus de détails sur les critères d'évaluation, consultez la [grille d'évaluation complète](evaluation/criteres-evaluation.md).
-
-## Ressources d'apprentissage
-
-Pour faciliter votre progression, diverses ressources sont mises à votre disposition :
-
- - **Notebooks Jupyter** : Exercices guidés et exemples de code
- - **Documentation technique** : API Mistral, TensorFlow/Keras, Flask/FastAPI
- - **Base de connaissances** : Glossaires, schémas explicatifs, ressources pédagogiques
- - **Templates de code** : Structures de base pour les différents projets
-
-Accédez à toutes ces ressources dans la [section dédiée](ressources/index.md).
+### Après la Séance 4
+- [ ] J'ai développé un chatbot pédagogique fonctionnel
+- [ ] J'ai intégré une base de connaissances structurée
+- [ ] J'ai présenté mon projet de manière claire et convaincante
 
 ## Conseil pour optimiser votre apprentissage
 

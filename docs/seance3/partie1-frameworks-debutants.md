@@ -1,5 +1,7 @@
 # Phase 1 : Frameworks pour débutants (1h30)
 
+![Frameworks pour débutants](https://images.unsplash.com/photo-1545987796-200677ee1011?auto=format&fit=crop&q=80&w=1000&h=300)
+
 ## Introduction aux frameworks dans un contexte professionnel (15 min)
 
 **Objectif**: Comprendre l'utilité des frameworks de Deep Learning pour un développeur en entreprise et identifier ceux qui sont réellement utilisés sur le terrain.
