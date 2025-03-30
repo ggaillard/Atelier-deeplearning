@@ -20,17 +20,19 @@ Les composants principaux du projet sont :
 ### Objectifs pédagogiques du projet
 
 Ce projet vous permettra de :
-- Appliquer vos connaissances en frameworks IA dans un contexte concret
-- Développer des compétences pratiques en intégration d'API
-- Créer une application web avec fonctionnalités d'IA
-- Structurer des connaissances pour un usage pédagogique
+
+ - Appliquer vos connaissances en frameworks IA dans un contexte concret
+ - Développer des compétences pratiques en intégration d'API
+ - Créer une application web avec fonctionnalités d'IA
+ - Structurer des connaissances pour un usage pédagogique
 
 ### Exemple de chatbot fonctionnel
 
 Démonstration d'un exemple de chatbot similaire à celui que vous développerez, montrant :
-- La qualité des réponses attendues
-- La structure de l'interface
-- Les fonctionnalités de base
+
+ - La qualité des réponses attendues
+ - La structure de l'interface
+ - Les fonctionnalités de base
 
 ### Niveau de complexité attendu
 
@@ -246,12 +248,13 @@ Votre chatbot doit implémenter au minimum :
 
 ### Planning et jalons
 
-| Date | Jalon | Livrable intermédiaire |
-|------|-------|------------------------|
-| Fin séance 3 | Document de conception | Structure du projet et maquette |
-| +1 semaine | Prototype fonctionnel | Interface basique + API connectée |
-| +2 semaines | Version alpha | Toutes fonctionnalités implémentées |
-| +3 semaines | Version finale | Solution complète et documentation |
+| Horaire | Jalon | Livrable intermédiaire |
+|---------|-------|------------------------|
+| Début séance 4 | Document de conception | Structure du projet et maquette |
+| +1h | Prototype initial | Interface basique + API connectée |
+| +2h | Version fonctionnelle | Principales fonctionnalités implémentées |
+| +3h | Version finale | Solution complète et documentation |
+| +3h30 | Préparation présentation | Support visuel et démonstration |
 
 ### Conseils pour réussir votre projet
 
@@ -266,26 +269,29 @@ Votre chatbot doit implémenter au minimum :
 ### Récapitulatif des apprentissages
 
 Au cours de cette séance, vous avez :
-- Découvert les frameworks de Deep Learning utilisés en entreprise
-- Appris à améliorer les performances des modèles
-- Exploré des cas d'utilisation réels de chatbots
-- Fait vos premiers pas avec l'API Mistral AI
-- Pris connaissance du cahier des charges du projet final
+
+ - Découvert les frameworks de Deep Learning utilisés en entreprise
+ - Appris à améliorer les performances des modèles
+ - Exploré des cas d'utilisation réels de chatbots
+ - Fait vos premiers pas avec l'API Mistral AI
+ - Pris connaissance du cahier des charges du projet final
 
 ### Prochaines étapes
 
 Pour la prochaine séance, vous devrez :
-1. Former votre équipe projet (1-2 personnes)
-2. Rédiger un document de conception initial
-3. Créer un dépôt Git pour votre projet
-4. Préparer une maquette simple de l'interface
+
+ 1. Former votre équipe projet (1-2 personnes)
+ 2. Rédiger un document de conception initial
+ 3. Créer un dépôt Git pour votre projet
+ 4. Préparer une maquette simple de l'interface
 
 ### Questions et clarifications
 
 Profitez de ces dernières minutes pour poser vos questions sur :
-- Le format du projet
-- Les attentes techniques
-- Les ressources disponibles
-- Les prochaines étapes
+
+ - Le format du projet
+ - Les attentes techniques
+ - Les ressources disponibles
+ - Les prochaines étapes
 
 [Retour à l'index de la séance 3](index.md){ .md-button .md-button--primary }
