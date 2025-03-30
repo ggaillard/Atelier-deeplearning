@@ -41,6 +41,7 @@ Ce document présente en détail tous les critères utilisés pour l'évaluation
 ### [Grille de répartition des tâches](grille-repartition-taches.md)
 
 Cette grille vous aide à organiser efficacement le travail au sein de votre équipe :
+
      - Identification des rôles et responsabilités
      - Planning des jalons intermédiaires
      - Suivi de l'avancement des tâches
@@ -49,6 +50,7 @@ Cette grille vous aide à organiser efficacement le travail au sein de votre éq
 ### [Fiche d'évaluation finale](criteres-evaluation-seance4.md)
 
 La fiche utilisée lors de l'évaluation finale du projet de chatbot pédagogique :
+
      - Critères spécifiques pour chaque aspect du projet
      - Barème de notation détaillé
      - Espace pour les commentaires et feedback
@@ -57,28 +59,32 @@ La fiche utilisée lors de l'évaluation finale du projet de chatbot pédagogiqu
 ### [Checklist d'auto-évaluation](checklist-auto-evaluation.md)
 
 Cette checklist vous permet de vérifier que votre projet répond à tous les critères avant la soumission finale:
-- Liste complète des fonctionnalités à implémenter
-- Points techniques à vérifier
-- Aspects de documentation à ne pas oublier
-- Conseils pour la présentation finale
+
+ - Liste complète des fonctionnalités à implémenter
+ - Points techniques à vérifier
+ - Aspects de documentation à ne pas oublier
+ - Conseils pour la présentation finale
   
 ## Mini-projets évalués
 
 Les mini-projets des séances 2 et 3 font partie intégrante de l'évaluation continue :
 
 ### Mini-projet CNN (10%)
+
      - Implémentation d'un réseau convolutif pour la classification d'images
      - Visualisation et interprétation des filtres et feature maps
      - Intégration dans une application web simple
      - Évaluation des performances sur différents jeux de données
 
 ### Mini-projet RNN (10%)
+
      - Implémentation d'un modèle LSTM pour l'analyse de sentiment
      - Expérimentation avec l'API Mistral AI pour le traitement du langage
      - Comparaison entre approche par réseau de neurones et API de modèle de langage
      - Documentation des résultats et limitations
 
 ### Projet d'amélioration (10%)
+
      - Diagnostic des problèmes d'un modèle de prévision des ventes sous-optimal
      - Application de techniques d'amélioration ciblées
      - Mesure et analyse comparative des performances
@@ -89,6 +95,7 @@ Les mini-projets des séances 2 et 3 font partie intégrante de l'évaluation co
 Le projet final de chatbot pédagogique constitue la partie la plus importante de l'évaluation (60% au total) :
 
 ### Produit final (30%)
+
      - Interface conversationnelle fonctionnelle et intuitive
      - Intégration avancée avec l'API Mistral AI
      - Base de connaissances complète et structurée sur le Deep Learning
@@ -96,12 +103,14 @@ Le projet final de chatbot pédagogique constitue la partie la plus importante d
      - Performances techniques (temps de réponse, gestion des erreurs)
 
 ### Processus de développement (15%)
+
      - Organisation de l'équipe et répartition des tâches
      - Respect des jalons intermédiaires
      - Tests fonctionnels et validation des performances
      - Adaptation aux difficultés techniques rencontrées
 
 ### Présentation et documentation (15%)
+
      - Présentation claire et démonstration convaincante
      - Documentation technique détaillée
      - Guide utilisateur complet
