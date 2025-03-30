@@ -9,31 +9,14 @@ Cette carte de progression vous permettra de visualiser clairement les objectifs
 ## Parcours global
 
 ```mermaid
-gantt
-    title Parcours d'apprentissage du Deep Learning
-    dateFormat  D
-    axisFormat %d
-    tickInterval 1day
+flowchart LR
+    S1["Séance 1\nIntroduction"] --> S2["Séance 2\nTypes de réseaux"]
+    S2 --> S3["Séance 3\nFrameworks"] 
+    S3 --> S4["Séance 4\nProjet Chatbot"]
     
-    section Fondamentaux
-    Séance 1: Introduction au Deep Learning    :s1, 0, 1d
-    
-    section Architectures
-    Séance 2: Types de réseaux et applications    :s2, after s1, 1d
-    
-    section Outils & Techniques
-    Séance 3: Frameworks et préparation du projet    :s3, after s2, 1d
-    
-    section Projet Final
-    Séance 4: Développement et présentation du chatbot    :s4, after s3, 1d
-    
-    section Compétences
-    Concepts fondamentaux    :crit, active, c1, 0, 4d
-    Programmation TensorFlow/Keras    :active, c2, 0, 4d
-    Intégration API    :active, c3, after s2, 2d
-    Développement web    :active, c4, after s1, 3d
+    classDef default fill:#f4f4f4,stroke:#666,color:#333;
+    class S1,S2,S3,S4 default;
 ```
-
 ## Progression détaillée des compétences
 
 Le tableau ci-dessous détaille l'évolution des compétences techniques et conceptuelles que vous développerez au cours de cette formation :
@@ -49,43 +32,6 @@ Le tableau ci-dessous détaille l'évolution des compétences techniques et conc
 | **Conception et architecture** | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 1](https://img.shields.io/badge/Niveau-Préparation-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Implémentation-green) |
 | **Développement collaboratif** | ![Niveau 1](https://img.shields.io/badge/Niveau-Activités_guidées-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Challenge_amélioration-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Planification-orange) | ![Niveau 4](https://img.shields.io/badge/Niveau-Réalisation_équipe-red) |
 
-## Parcours d'apprentissage visuel
-
-```mermaid
-flowchart LR
-    subgraph S1["Séance 1: Introduction"]
-        F["Fondamentaux\nRéseaux de neurones"]
-        DL["ML classique vs\nDeep Learning"]
-        E["Expérimentation\nnotebook MNIST"]
-    end
-    
-    subgraph S2["Séance 2: Architectures"]
-        CNN["Réseaux convolutifs\nVision par ordinateur"]
-        RNN["Réseaux récurrents\nTraitement du texte"]
-        AM["Challenge\nd'amélioration"]
-    end
-    
-    subgraph S3["Séance 3: Outils"]
-        FW["Frameworks\nTensorFlow/Keras"]
-        OP["Optimisation\ndes performances"]
-        API["API Mistral\nPrompt engineering"]
-    end
-    
-    subgraph S4["Séance 4: Projet"]
-        DEV["Développement\ndu chatbot"]
-        TEST["Finalisation\net tests"]
-        PRES["Présentation\nfinale"]
-    end
-    
-    S1 --> S2
-    S2 --> S3
-    S3 --> S4
-    
-    style S1 fill:#e1f5fe,stroke:#0288d1
-    style S2 fill:#e8f5e9,stroke:#388e3c
-    style S3 fill:#fff8e1,stroke:#ffa000
-    style S4 fill:#ffebee,stroke:#d32f2f
-```
 
 ## Détail des séances et objectifs pédagogiques
 
@@ -243,5 +189,4 @@ flowchart LR
 Cette formation est conçue comme un parcours progressif où chaque séance s'appuie sur les acquis des précédentes. Suivez le chemin balisé tout en explorant les possibilités qui vous intéressent particulièrement.
 
 [Retour à l'accueil](index.md){ .md-button }
-[Voir la présentation du projet](presentation.md){ .md-button }
 [Commencer la Séance 1](seance1/index.md){ .md-button .md-button--primary }
