@@ -17,16 +17,11 @@ Cette séance est entièrement basée sur la réalisation d'un projet concret en
 
 ## Structure de la séance (4h)
 
-```mermaid
-gantt
-    dateFormat  HH:mm
-    axisFormat %H:%M
-    section Planning
-    Développement du chatbot       :milestone, 00:00, 2h30m
-    Finalisation et tests          :milestone, 02:30, 1h
-    Présentation des projets       :milestone, 03:30, 30m
 ```
-
+Développement du chatbot       : 2h30m 
+Finalisation et tests          : 1h    
+Présentation des projets       : 30m   
+```
 ## Trois phases de réalisation
 
 ### [Phase 1 : Développement du chatbot](partie1-developpement.md) (2h30)

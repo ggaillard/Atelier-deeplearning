@@ -12,8 +12,8 @@ Notre formation se compose de 4 séances de 4 heures chacune :
 
 | Séance | Titre | Aperçu |
 |--------|-------|---------|
-| [Séance 1](seance1/index.md) | **Introduction au Deep Learning** | Expérimentation pratique, comparaison ML vs DL, fonctionnement des réseaux |
-| [Séance 2](seance2/index.md) | **Types de réseaux et applications** | CNN pour la vision, RNN pour le texte, mini-projets pratiques |
+| [Séance 1](seance1/index.md) | **Introduction au Deep Learning** | Expérimentation pratique, Machine Learning , Deep Learning, fonctionnement des réseaux de neurones |
+| [Séance 2](seance2/index.md) | **Types de réseaux et applications** |réseaux de neurones convolutifs (CNN) pour la vision, récurrents (RNN) pour le texte, mini-projets pratiques |
 | [Séance 3](seance3/index.md) | **Frameworks et préparation** | TensorFlow/Keras, optimisation, API Mistral AI, préparation du projet |
 | [Séance 4](seance4/index.md) | **Projet intégrateur** | Développement du chatbot pédagogique, présentation finale |
 

@@ -41,8 +41,6 @@ flowchart LR
 
 ### 4. Base de connaissances
  - Structure JSON organisée par concepts
-  Différents niveaux d'explication (débutant à avancé)
- - Exemples et analogies adaptés
  - Exercices et quiz par thématique
 
 ## Fonctionnalités clés
@@ -82,13 +80,6 @@ Le développement du chatbot est principalement concentré sur la séance 4, mai
 
 Le développement suivra une approche itérative durant la séance 4 :
 
-| Horaire | Jalon | Livrable intermédiaire |
-|---------|-------|------------------------|
-| Début séance 4 | Document de conception | Structure du projet et maquette |
-| +1h | Prototype initial | Interface basique + API connectée |
-| +2h | Version fonctionnelle | Principales fonctionnalités implémentées |
-| +3h | Version finale | Solution complète et documentation |
-| +3h30 | Préparation présentation | Support visuel et démonstration |
 
 ## Défis techniques
 
@@ -108,34 +99,6 @@ Les principaux défis à relever seront :
    - Structure cohérente de la base de connaissances
    - Adaptation au niveau de l'utilisateur
    - Progression logique entre les concepts
-
-## Livrables attendus
-
-À l'issue du projet, vous devrez présenter :
-
-1. **Le code source complet**
-   - Interface conversationnelle
-   - Backend avec logique de traitement
-   - Base de connaissances structurée
-
-2. **La documentation technique**
-   - Architecture du système
-   - Guide d'installation et configuration
-   - Description des API et interfaces
-
-3. **Une démonstration fonctionnelle**
-   - Exécution en direct
-   - Présentation des fonctionnalités
-   - Explication des choix techniques
-
-## Valeur pédagogique
-
-Ce projet constitue une application concrète et pertinente des connaissances en Deep Learning :
-
-- **Application pratique** des concepts théoriques
-- **Intégration d'une API** d'IA avancée
-- **Développement full-stack** d'une solution complète
-- **Structuration pédagogique** des connaissances techniques
 
 ## Ressources fournies
 

@@ -1,10 +1,10 @@
 # Guide d'intégration FastAPI pour le chatbot pédagogique
 
-Ce guide explique comment intégrer FastAPI dans votre projet de chatbot pédagogique sur le Deep Learning, en remplacement de Flask pour bénéficier de meilleures performances et de fonctionnalités plus avancées.
+Ce guide explique comment intégrer FastAPI dans votre projet de chatbot pédagogique sur le Deep Learning pour bénéficier de meilleures performances et de fonctionnalités plus avancées.
 
 ## Pourquoi passer à FastAPI ?
 
-FastAPI offre plusieurs avantages par rapport à Flask pour notre projet :
+FastAPI offre plusieurs avantages pour notre projet :
 
 1. **Performance** : FastAPI est l'un des frameworks Python les plus rapides, basé sur Starlette et Pydantic
 2. **Documentation automatique** : Génération automatique de documentation interactive (OpenAPI/Swagger)
