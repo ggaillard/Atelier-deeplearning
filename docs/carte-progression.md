@@ -2,7 +2,7 @@
 
 ## GPS pédagogique : votre itinéraire d'apprentissage du Deep Learning
 
-![Carte de progression](https://images.unsplash.com/photo-1484910292437-025e5d13ce87?auto=format&fit=crop&q=80&w=1000&h=300)
+![Carte de progression](https://images.unsplash.com/photo-1501366062246-723b4d3e4eb6?auto=format&fit=crop&q=80&w=1000&h=300)
 
 Cette carte de progression vous permettra de visualiser clairement les objectifs, les activités et les compétences développées à chaque étape de votre formation en Deep Learning.
 
@@ -89,6 +89,15 @@ flowchart LR
 
 ## Détail des séances et objectifs pédagogiques
 
+### Mode de travail par séance
+
+| Séance | Mode de travail | Commentaires |
+|--------|-----------------|--------------|
+| Séance 1 | Individuel | Exploration personnelle, avec partage possible en groupe |
+| Séance 2 | Individuel, puis binôme pour le challenge | Mini-projets individuels, challenge d'amélioration en binôme |  
+| Séance 3 | Binôme | Formation des équipes projet (1-2 personnes) et préparation |
+| Séance 4 | Binôme | Développement, finalisation et présentation en équipe |
+
 ### Séance 1 : Introduction au Deep Learning par l'expérimentation
 
 **Objectifs pédagogiques :**
@@ -100,10 +109,10 @@ flowchart LR
 
 **Activités :**
 
- - Mise en situation pratique : démonstrations et notebook "Hello World"
- - Découverte comparative : ML classique vs Deep Learning
- - Exploration guidée : anatomie d'un réseau de neurones
- - Synthèse et auto-évaluation
+ - Mise en situation pratique : démonstrations et notebook "Hello World" *(travail individuel)*
+ - Découverte comparative : ML classique vs Deep Learning *(travail individuel)*
+ - Exploration guidée : anatomie d'un réseau de neurones *(travail individuel)*
+ - Synthèse et auto-évaluation *(travail individuel)*
 
 **Compétences BTS SIO développées :**
 
@@ -128,9 +137,9 @@ flowchart LR
 
 **Activités :**
 
- - Mini-projet CNN : classification d'images et visualisation
- - Mini-projet RNN : traitement de texte et prédiction de séquences
- - Challenge d'amélioration : optimisation collaborative d'un modèle
+ - Mini-projet CNN : classification d'images et visualisation *(travail individuel)*
+ - Mini-projet RNN : traitement de texte et prédiction de séquences *(travail individuel)*
+ - Challenge d'amélioration : optimisation collaborative d'un modèle *(travail en binôme)*
 
 **Compétences BTS SIO développées :**
 
@@ -156,10 +165,10 @@ flowchart LR
 
 **Activités :**
 
- - Frameworks en pratique : utilisation efficace de TensorFlow/Keras
- - Optimisation de modèles : techniques d'amélioration des performances
- - Introduction à Mistral AI : premiers pas avec l'API
- - Conception du chatbot : préparation de l'architecture et des fonctionnalités
+ - Frameworks en pratique : utilisation efficace de TensorFlow/Keras *(travail en binôme)*
+ - Optimisation de modèles : techniques d'amélioration des performances *(travail en binôme)*
+ - Introduction à Mistral AI : premiers pas avec l'API *(travail en binôme)*
+ - Conception du chatbot : préparation de l'architecture et des fonctionnalités *(travail en binôme)*
 
 **Compétences BTS SIO développées :**
 
@@ -184,10 +193,10 @@ flowchart LR
 
 **Activités :**
 
- - Développement du chatbot : interface et backend
- - Intégration de l'API Mistral et de la base de connaissances
- - Tests et optimisation de l'expérience utilisateur
- - Préparation et réalisation de la présentation finale
+ - Développement du chatbot : interface et backend *(travail en binôme)*
+ - Intégration de l'API Mistral et de la base de connaissances *(travail en binôme)*
+ - Tests et optimisation de l'expérience utilisateur *(travail en binôme)*
+ - Préparation et réalisation de la présentation finale *(travail en binôme)*
 
 **Compétences BTS SIO développées :**
 
