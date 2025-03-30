@@ -29,7 +29,6 @@ Pour suivre efficacement cette formation, vous devez :
 
 Ce site contient toutes les ressources nécessaires pour votre parcours :
 
-- **[Présentation du projet](presentation.md)** - Détails du chatbot pédagogique
 - **[Carte de progression](carte-progression.md)** - Parcours d'apprentissage et compétences développées
 - **[Ressources](ressources/index.md)** - Documentation technique et matériel complémentaire
 - **[Évaluation](evaluation/index.md)** - Critères et modalités d'évaluation

@@ -47,23 +47,27 @@ Le tableau ci-dessous détaille l'évolution des compétences techniques et conc
 ### Séance 1 : Introduction au Deep Learning par l'expérimentation
 
 **Objectifs pédagogiques :**
+
  - Découvrir le Deep Learning par des manipulations concrètes
  - Comprendre les différences fondamentales entre ML classique et DL
  - Explorer le fonctionnement interne d'un réseau de neurones simple
  - Acquérir le vocabulaire technique de base
 
 **Activités :**
+
  - Mise en situation pratique : démonstrations et notebook "Hello World"
  - Découverte comparative : ML classique vs Deep Learning
  - Exploration guidée : anatomie d'un réseau de neurones
  - Synthèse et auto-évaluation
 
 **Compétences BTS SIO développées :**
+
  - B1.3 : Gestion des données d'images pour les modèles
  - B2.2 : Conception de modèles simples
  - B3.2 : Évaluation de la performance des modèles
 
 **Livrables :**
+
  - Fiche d'observations complétée
  - Tableau comparatif ML vs DL
  - Schéma annoté d'un réseau de neurones
@@ -71,23 +75,27 @@ Le tableau ci-dessous détaille l'évolution des compétences techniques et conc
 ### Séance 2 : Types de réseaux et leurs applications
 
 **Objectifs pédagogiques :**
+
  - Maîtriser les principes des réseaux convolutifs (CNN)
  - Comprendre le fonctionnement des réseaux récurrents (RNN)
  - Implémenter des modèles pour différents types de données
  - Visualiser et interpréter le fonctionnement des modèles
 
 **Activités :**
+
  - Mini-projet CNN : classification d'images et visualisation
  - Mini-projet RNN : traitement de texte et prédiction de séquences
  - Challenge d'amélioration : optimisation collaborative d'un modèle
 
 **Compétences BTS SIO développées :**
+
  - B1.3 : Traitement de données complexes (images, textes)
  - B2.2 : Développement de modèles spécialisés
  - B2.3 : Création d'interfaces simples pour les modèles
  - B3.2 : Analyse comparative des performances
 
 **Livrables :**
+
  - Modèle CNN fonctionnel avec visualisations
  - Modèle RNN pour analyse de texte
  - Rapport d'amélioration documenté
@@ -95,23 +103,27 @@ Le tableau ci-dessous détaille l'évolution des compétences techniques et conc
 ### Séance 3 : Frameworks pratiques et préparation du projet
 
 **Objectifs pédagogiques :**
+
  - Maîtriser les frameworks de Deep Learning courants
  - Optimiser les performances des modèles
  - Découvrir l'API Mistral AI pour les applications conversationnelles
  - Préparer le projet de chatbot pédagogique
 
 **Activités :**
+
  - Frameworks en pratique : utilisation efficace de TensorFlow/Keras
  - Optimisation de modèles : techniques d'amélioration des performances
  - Introduction à Mistral AI : premiers pas avec l'API
  - Conception du chatbot : préparation de l'architecture et des fonctionnalités
 
 **Compétences BTS SIO développées :**
+
  - B1.4 : Exploitation des API et interfaces de programmation
  - B2.2 : Optimisation de solutions applicatives
  - B3.2 : Vérification et amélioration des performances
 
 **Livrables :**
+
  - Applications fonctionnelles avec TensorFlow/Keras
  - Premier test d'intégration avec l'API Mistral
  - Document de conception du chatbot
@@ -119,23 +131,27 @@ Le tableau ci-dessous détaille l'évolution des compétences techniques et conc
 ### Séance 4 : Projet intégrateur - Chatbot pédagogique
 
 **Objectifs pédagogiques :**
+
  - Mettre en œuvre l'ensemble des connaissances acquises
  - Développer une application conversationnelle complète
  - Structurer une base de connaissances pédagogique
  - Présenter et défendre un projet technique
 
 **Activités :**
+
  -  Développement du chatbot : interface et backend
  - Intégration de l'API Mistral et de la base de connaissances
  - Tests et optimisation de l'expérience utilisateur
  - Préparation et réalisation de la présentation finale
 
 **Compétences BTS SIO développées :**
+
  - B1.4 : Exploitation avancée des API
  - B2.2/B2.3 : Développement d'une solution applicative complète
  - B3.2/B3.3 : Tests, documentation et présentation technique
 
 **Livrables :**
+
  - Code source complet du chatbot
  - Documentation technique et guide utilisateur
  - Présentation et démonstration du projet
