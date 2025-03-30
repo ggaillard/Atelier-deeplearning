@@ -6,133 +6,145 @@
 
 ## Vision du projet
 
-Imaginez un assistant virtuel capable d'expliquer les concepts complexes du Deep Learning, de répondre aux questions, de proposer des exercices adaptés et d'accompagner l'apprenant dans sa progression. C'est exactement ce que nous allons créer ensemble au cours de ce parcours !
+Notre projet fil rouge consiste à développer un assistant virtuel conversationnel capable d'expliquer les concepts du Deep Learning, de répondre aux questions techniques et d'accompagner les apprenants dans leur découverte de ce domaine passionnant.
 
-> 🎯 **Objectif** : Concevoir un chatbot interactif qui aide les étudiants de BTS SIO  à comprendre les concepts du Deep Learning à travers des explications, exemples et exercices.
+> 🎯 **Objectif** : Concevoir un chatbot interactif qui aide les étudiants de BTS SIO à comprendre les concepts du Deep Learning à travers des explications personnalisées, des exemples concrets et des exercices adaptés.
 
-## Pourquoi ce projet ?
+## Architecture technique
 
-Ce projet fil rouge a été choisi pour plusieurs raisons stratégiques :
-
-1. **Application concrète** : Il permet d'appliquer directement les concepts du Deep Learning à un cas d'usage réel
-2. **Dimension méta** : Le chatbot enseigne le Deep Learning en utilisant lui-même des techniques de Deep Learning
-3. **Utilité pédagogique** : Le produit final pourra être utilisé comme support d'apprentissage pour d'autres étudiants
-4. **Technologies actuelles** : Il intègre l'utilisation d'API modernes comme Mistral AI
-5. **Compétences transversales** : Il mobilise des connaissances en développement, IA, pédagogie et conception d'interfaces
-
-## Concepts abordés par le chatbot
-
-Le chatbot que vous développerez devra être capable d'expliquer progressivement les notions suivantes :
-
-1. **Introduction au Deep Learning**
-    * Différence entre Machine Learning & Deep Learning
-    * Exemples d'applications dans les entreprises
-
-2. **Les réseaux de neurones artificiels (ANN)**
-    * Fonctionnement des neurones et couches
-    * Rôle des poids et biais
-
-3. **Les types de réseaux de neurones**
-    * Réseaux de neurones profonds (DNN)
-    * Réseaux convolutifs (CNN – vision par ordinateur)
-    * Réseaux récurrents (RNN – traitement de texte)
-
-4. **L'apprentissage et l'entraînement d'un modèle**
-    * Propagation avant & rétropropagation
-    * Fonction de perte et optimisation
-
-5. **Les outils et bibliothèques**
-    * TensorFlow, Keras, PyTorch
-
-6. **Exercices interactifs**
-    * QCM, mini-codes à compléter, quiz
-
-## Architecture du projet
-
-Le chatbot s'appuiera sur une architecture modulaire comprenant :
+Le chatbot s'appuiera sur une architecture moderne composée de trois éléments principaux :
 
 ```mermaid
-flowchart TB
-    A[Introduction au Deep Learning] --> B[Réseaux de neurones ANN]
-    B --> C[Types de réseaux de neurones]
-    C --> D[Apprentissage et entraînement]
-    D --> E[Outils et bibliothèques]
-    E --> F[Exercices pratiques]
-    
-    A1[Évaluation niveau 1] -.-> B
-    B1[Évaluation niveau 2] -.-> C
-    C1[Évaluation niveau 3] -.-> D
-    D1[Évaluation niveau 4] -.-> E
-    E1[Évaluation niveau 5] -.-> F
-    
-    G[Base de données Q&A]
-    H[Générateur d'exercices]
-    I[Ressources supplémentaires]
-    
-    A & B & C & D & E & F --- G
-    F --- H
-    A & B & C & D & E & F --- I
+flowchart LR
+    A[Interface Web] <--> B[Backend Python]
+    B <--> C[API Mistral AI]
+    D[Base de connaissances] <--> B
 ```
 
-## Intégration de Mistral AI
+### 1. Interface conversationnelle
+- Interface web simple et intuitive
+- Affichage des messages en format discussion
+- Indicateur de chargement pendant le traitement
+- Historique de conversation
 
-Une dimension innovante du projet est l'intégration de l'API Mistral AI, un modèle de langage avancé qui permettra d'améliorer significativement les capacités conversationnelles et pédagogiques du chatbot.
+### 2. Backend Flask/FastAPI
+ - Gestion des requêtes et des sessions
+ - Enrichissement des prompts avec la base de connaissances
+ - Communication avec l'API Mistral
+ - Logique de traitement des réponses
 
-Voici comment cette intégration sera développée progressivement :
+### 3. Intégration API Mistral AI
+ - Configuration et paramètrage des requêtes
+ - Gestion du contexte de conversation
+ - Optimisation des prompts
+ - Gestion des erreurs et limitations
 
-1. **Séances 1-2**: Fondamentaux et structure, introduction à l'API Mistral AI, test de connexion
-2. **Séances 3-4**: Implémentation avancée, prompt engineering, finalisation et optimisation
+### 4. Base de connaissances
+ - Structure JSON organisée par concepts
+  Différents niveaux d'explication (débutant à avancé)
+ - Exemples et analogies adaptés
+ - Exercices et quiz par thématique
 
-## Organisation sur 4 séances
+## Fonctionnalités clés
 
-Le projet sera développé sur 4 séances de 4 heures chacune :
+Le chatbot pédagogique offrira les fonctionnalités suivantes :
 
-1. **Introduction au Deep Learning par l'expérimentation** : Fondamentaux, mise en situation pratique, découverte des concepts, exploration des réseaux de neurones
-2. **Types de réseaux et leurs applications** : Réseaux convolutifs (CNN) pour la vision, réseaux récurrents (RNN) pour le texte, amélioration itérative des modèles
-3. **Optimisation et frameworks** : Techniques d'optimisation, découverte des frameworks (TensorFlow, PyTorch), préparation du projet final
-4. **Projet intégrateur** : Développement du chatbot, finalisation, tests, présentation
+1. **Explication des concepts**
+    - Définition adaptée au niveau de l'utilisateur
+    - Exemples concrets pour illustrer chaque notion
+    - Analogies et comparaisons pour faciliter la compréhension
+
+2. **Réponse aux questions**
+    - Compréhension des questions techniques
+    - Réponses précises basées sur la base de connaissances
+    - Capacité à demander des clarifications si nécessaire
+
+3. **Progression adaptative**
+    - Détection du niveau de l'utilisateur
+    - Suggestions de concepts à explorer ensuite
+    - Augmentation progressive de la complexité
+
+4. **Exercices interactifs**
+    - Génération de quiz sur les concepts vus
+    - Problèmes simples à résoudre
+    - Feedback sur les réponses
+
+## Intégration dans le parcours d'apprentissage
+
+Le développement du chatbot est principalement concentré sur la séance 4, mais les concepts nécessaires sont présentés progressivement :
+
+- **Séance 1** : Compréhension des réseaux de neurones nécessaire pour le contenu pédagogique
+- **Séance 2** : Exploration des CNN et RNN qui constitueront le cœur de la base de connaissances
+- **Séance 3** : Introduction à l'API Mistral et préparation du projet
+- **Séance 4** : Développement complet, tests et présentation du chatbot
+
+## Processus de développement
+
+Le développement suivra une approche itérative durant la séance 4 :
+
+| Horaire | Jalon | Livrable intermédiaire |
+|---------|-------|------------------------|
+| Début séance 4 | Document de conception | Structure du projet et maquette |
+| +1h | Prototype initial | Interface basique + API connectée |
+| +2h | Version fonctionnelle | Principales fonctionnalités implémentées |
+| +3h | Version finale | Solution complète et documentation |
+| +3h30 | Préparation présentation | Support visuel et démonstration |
+
+## Défis techniques
+
+Les principaux défis à relever seront :
+
+1. **Prompt engineering efficace**
+   - Formuler des instructions claires pour l'API Mistral
+   - Maintenir la cohérence pédagogique dans les réponses
+   - Éviter les hallucinations du modèle
+
+2. **Intégration technique**
+   - Communication fluide entre frontend et backend
+   - Gestion asynchrone des requêtes API
+   - Optimisation des temps de réponse
+
+3. **Qualité pédagogique**
+   - Structure cohérente de la base de connaissances
+   - Adaptation au niveau de l'utilisateur
+   - Progression logique entre les concepts
 
 ## Livrables attendus
 
-À la fin du parcours, votre équipe devra remettre :
+À l'issue du projet, vous devrez présenter :
 
-- **Le code source complet** du chatbot pédagogique
-- **La base de connaissances** structurée
-- **La documentation technique** expliquant l'architecture
-- **Le guide utilisateur** pour une prise en main facile
-- **Une présentation** de votre solution
+1. **Le code source complet**
+   - Interface conversationnelle
+   - Backend avec logique de traitement
+   - Base de connaissances structurée
 
-## Compétences développées
+2. **La documentation technique**
+   - Architecture du système
+   - Guide d'installation et configuration
+   - Description des API et interfaces
 
-Ce projet vous permettra de développer plusieurs compétences essentielles :
+3. **Une démonstration fonctionnelle**
+   - Exécution en direct
+   - Présentation des fonctionnalités
+   - Explication des choix techniques
 
-| Domaine | Compétences développées |
-|---------|-------------------------|
-| **Deep Learning** | Compréhension des architectures de réseaux, entraînement de modèles, optimisation |
-| **Programmation** | Développement Python, utilisation d'API, gestion de données structurées |
-| **Ingénierie NLP** | Traitement du langage naturel, gestion de conversations, prompt engineering |
-| **Conception** | Architecture logicielle, modélisation de bases de connaissances |
-| **Gestion de projet** | Travail en équipe, planification, documentation |
+## Valeur pédagogique
 
-## Modalités d'évaluation
+Ce projet constitue une application concrète et pertinente des connaissances en Deep Learning :
 
-L'évaluation du projet se fera selon plusieurs dimensions :
+- **Application pratique** des concepts théoriques
+- **Intégration d'une API** d'IA avancée
+- **Développement full-stack** d'une solution complète
+- **Structuration pédagogique** des connaissances techniques
 
-- **Qualité du produit final** (fonctionnalités, expérience utilisateur)
-- **Exactitude du contenu pédagogique** (précision des explications)
-- **Qualité technique** (architecture, optimisation, robustesse)
-- **Processus de développement** (organisation, méthodologie)
-- **Présentation et documentation** (clarté, exhaustivité)
+## Ressources fournies
 
-Consultez la [grille détaillée d'évaluation](evaluation/criteres-evaluation.md) pour plus d'informations.
+Pour vous aider dans ce projet, vous disposerez de :
 
-## Organisation du travail en équipe
+ - [Documentation complète de l'API Mistral](ressources/api-mistral.md)
+ - [Structure JSON pour la base de connaissances](ressources/json-schemas.md)
+ - [Templates de code pour l'interface et le backend](ressources/code/)
+ - [Exemples de prompts efficaces](ressources/prompt-examples.md)
 
-Vous travaillerez en équipes de 1-2 étudiants. Pour garantir une répartition équilibrée des tâches, vous utiliserez la [grille de répartition des tâches](evaluation/grille-repartition-taches.md) fournie.
-
-## Prêt à commencer l'aventure ?
-
-Maintenant que vous avez une vision claire du projet fil rouge, découvrez la progression pédagogique qui vous guidera tout au long de ce parcours.
-
-[Voir la carte de progression](carte-progression.md){ .md-button .md-button--primary }
-[Commencer la Séance 1](seance1/index.md){ .md-button }
+[Retour à l'accueil](index.md){ .md-button }
+[Explorer la carte de progression](carte-progression.md){ .md-button .md-button--primary }
