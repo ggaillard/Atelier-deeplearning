@@ -88,7 +88,7 @@ nav:
     - Vue d'ensemble: evaluation/index.md
     - Répartition des tâches: evaluation/grille-repartition-taches.md
     - Critères d'évaluation: evaluation/criteres-evaluation.md
-    - Checklist: evaluation/checklist.md
+    - Checklist: evaluation/checklist-auto-evaluation.md
     
 extra:
   social:
