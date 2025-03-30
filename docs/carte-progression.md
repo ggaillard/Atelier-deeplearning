@@ -2,7 +2,7 @@
 
 ## GPS pédagogique : votre itinéraire d'apprentissage du Deep Learning
 
-![Carte de progression](https://images.unsplash.com/photo-1501366062246-723b4d3e4eb6?auto=format&fit=crop&q=80&w=1000&h=300)
+![Carte de progression](https://images.unsplash.com/photo-1484910292437-025e5d13ce87?auto=format&fit=crop&q=80&w=1000&h=300)
 
 Cette carte de progression vous permettra de visualiser clairement les objectifs, les activités et les compétences développées à chaque étape de votre formation en Deep Learning.
 
