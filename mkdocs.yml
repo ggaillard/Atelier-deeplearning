@@ -56,7 +56,6 @@ plugins:
 
 nav:
   - Accueil: index.md
-  - Présentation: presentation.md
   - Carte de progression: carte-progression.md
   - Séance 1:
     - Vue d'ensemble: seance1/index.md
