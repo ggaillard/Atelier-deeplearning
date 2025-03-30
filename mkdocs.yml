@@ -69,8 +69,8 @@ nav:
     - Challenge d'amélioration: seance2/partie3-amelioration.md
   - Séance 3:
     - Vue d'ensemble: seance3/index.md
-    - Optimisation: seance3/partie1-optimisation.md
-    - Frameworks: seance3/partie2-frameworks.md
+    - Frameworks pour débutants: seance3/partie1-frameworks-debutants.md
+    - Amélioration des performances: seance3/partie2-amelioration.md
     - Préparation du projet: seance3/partie3-preparation-projet.md
   - Séance 4:
     - Vue d'ensemble: seance4/index.md
@@ -88,8 +88,8 @@ nav:
     - Vue d'ensemble: evaluation/index.md
     - Répartition des tâches: evaluation/grille-repartition-taches.md
     - Critères d'évaluation: evaluation/criteres-evaluation.md
-    - Checklist d'auto-évaluation: evaluation/checklist-auto-evaluation.md
-
+    - Checklist: evaluation/checklist.md
+    
 extra:
   social:
     - icon: fontawesome/brands/github
