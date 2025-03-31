@@ -58,10 +58,13 @@ nav:
   - Accueil: index.md
   - Carte de progression: carte-progression.md
   - Séance 1:
-    - Vue d'ensemble: seance1/index.md
-    - Mise en situation: seance1/partie1-mise-en-situation/partie1-mise-en-situation.md
-    - Découverte des concepts: seance1/partie2-decouverte-concepts.md
-    - Débrief: seance1/partie3-debrief.md
+      - Vue d'ensemble: seance1/index.md
+      - Mise en situation: 
+        - Introduction: seance1/partie1-mise-en-situation/partie1-mise-en-situation.md
+        - Démonstrations: seance1/partie1-mise-en-situation/demonstrations.md
+        - Guide Colab: seance1/partie1-mise-en-situation/guide_utilisation_colab.md
+      - Découverte des concepts: seance1/partie2-decouverte-concepts.md
+      - Débrief: seance1/partie3-debrief.md
   - Séance 2:
     - Vue d'ensemble: seance2/index.md
     - Mini-projet CNN: seance2/partie1-cnn.md

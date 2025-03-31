@@ -85,4 +85,3 @@ Pour soumettre vos travaux complétés :
 - [Documentation Keras](https://keras.io/examples/)
 - [Tutoriels Google Colab](https://colab.research.google.com/notebooks/welcome.ipynb)
 
-Pour toute question, n'hésitez pas à contacter votre formateur !
