@@ -10,7 +10,7 @@
 
 Le projet consiste à développer un chatbot pédagogique capable d'expliquer les concepts du Deep Learning à des étudiants de BTS SIO.
 
-![Schéma du chatbot](../ressources/images/schema-chatbot.png)
+![Schéma du chatbot](../ressources/images/schema-chatbot.svg)
 
 Les composants principaux du projet sont :
 

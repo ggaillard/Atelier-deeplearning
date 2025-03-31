@@ -9,28 +9,24 @@ Cette carte de progression vous permettra de visualiser clairement les objectifs
 ## Parcours global
 
 ```mermaid
-flowchart LR
-    S1["Séance 1\nIntroduction"] --> S2["Séance 2\nTypes de réseaux"]
-    S2 --> S3["Séance 3\nFrameworks"] 
-    S3 --> S4["Séance 4\nProjet Chatbot"]
-    
-    classDef default fill:#f4f4f4,stroke:#666,color:#333;
-    class S1,S2,S3,S4 default;
+Séance 1                                  Séance 2              Séance 3           Séance 4
+ Deep Learning par l'expérimentation  →  Types de réseaux  →  Frameworks  →  Projet Chatbot
 ```
+
 ## Progression détaillée des compétences
 
 Le tableau ci-dessous détaille l'évolution des compétences techniques et conceptuelles que vous développerez au cours de cette formation :
 
-| Compétence | Séance 1 | Séance 2 | Séance 3 | Séance 4 |
+| Compétences | Séance 1 | Séance 2 | Séance 3 | Séance 4 |
 |------------|----------|----------|----------|----------|
-| **Compréhension des réseaux de neurones** | ![Niveau 1](https://img.shields.io/badge/Niveau-Fondamentaux-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Architectures-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Applications-orange) | ![Niveau 4](https://img.shields.io/badge/Niveau-Intégration-red) |
-| **Programmation avec TensorFlow/Keras** | ![Niveau 1](https://img.shields.io/badge/Niveau-Premiers_pas-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Mini_projets-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Optimisation-orange) | ![Niveau 4](https://img.shields.io/badge/Niveau-Application_avancée-red) |
-| **Visualisation et analyse de données** | ![Niveau 1](https://img.shields.io/badge/Niveau-Métriques_de_base-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Feature_maps-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Évaluation-orange) | ![Niveau 4](https://img.shields.io/badge/Niveau-Dashboard-red) |
-| **Traitement d'images** | ![Niveau 1](https://img.shields.io/badge/Niveau-Classification_simple-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-CNN_complets-green) | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) |
-| **Traitement du texte** | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 1](https://img.shields.io/badge/Niveau-RNN_basiques-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-API_Mistral-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Système_conversationnel-orange) |
-| **Développement web** | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 1](https://img.shields.io/badge/Niveau-Interface_simple-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-API_REST-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Application_complète-orange) |
-| **Conception et architecture** | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 0](https://img.shields.io/badge/Niveau-Non_abordé-lightgrey) | ![Niveau 1](https://img.shields.io/badge/Niveau-Préparation-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Implémentation-green) |
-| **Développement collaboratif** | ![Niveau 1](https://img.shields.io/badge/Niveau-Activités_guidées-blue) | ![Niveau 2](https://img.shields.io/badge/Niveau-Challenge_amélioration-green) | ![Niveau 3](https://img.shields.io/badge/Niveau-Planification-orange) | ![Niveau 4](https://img.shields.io/badge/Niveau-Réalisation_équipe-red) |
+| **Compréhension des réseaux de neurones** | Niveau 1 : Fondamentaux | Niveau 2 : Architectures | Niveau 3 : Applications | Niveau 4 : Intégration |
+| **Programmation avec TensorFlow/Keras** | Niveau 1 : Premiers pas | Niveau 2 : Mini-projets | Niveau 3 : Optimisation | Niveau 4 : Application avancée |
+| **Visualisation et analyse de données** | Niveau 1 : Métriques de base | Niveau 2 : Feature maps | Niveau 3 : Évaluation | Niveau 4 : Dashboard |
+| **Traitement d'images** | Niveau 1 : Classification simple | Niveau 2 : CNN complets | Non abordé | Non abordé |
+| **Traitement du texte** | Non abordé | Niveau 1 : RNN basiques | Niveau 2 : API Mistral | Niveau 3 : Système conversationnel |
+| **Développement web** | Non abordé | Niveau 1 : Interface simple | Niveau 2 : API REST | Niveau 3 : Application complète |
+| **Conception et architecture** | Non abordé | Non abordé | Niveau 1 : Préparation | Niveau 2 : Implémentation |
+| **Développement collaboratif** | Niveau 1 : Activités guidées | Niveau 2 : Challenge amélioration | Niveau 3 : Planification | Niveau 4 : Réalisation équipe |
 
 
 ## Détail des séances et objectifs pédagogiques
