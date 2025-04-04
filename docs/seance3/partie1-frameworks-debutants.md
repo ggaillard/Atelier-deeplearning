@@ -54,7 +54,7 @@ Voici quelques exemples concrets développés par des entreprises locales employ
 Bonne nouvelle: nous allons utiliser Google Colab, donc aucune installation nécessaire!
 
 1. Ouvrez le notebook "TensorFlow/Keras pour débutants" dans Google Colab
-2. Le lien est disponible ici: [ressources/tensorflow-keras-debutants.ipynb(https://colab.research.google.com/drive/...)
+2. Le lien est disponible ici: [ressources/tensorflow-keras-debutants.ipynb](https://colab.research.google.com/drive/...)
 3. Tout est préconfiguré, il suffit d'exécuter les cellules
 
 Si vous souhaitez installer localement plus tard:
