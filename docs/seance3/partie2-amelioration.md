@@ -48,7 +48,7 @@ Nous allons suivre une approche méthodique pour améliorer nos modèles :
 
 **Partie 1 : Reconnaître les signes de surapprentissage (15 min)**
 
-1. Ouvrez le notebook "Diagnostic des modèles" dans Google Colab.
+1. Ouvrez le doc [Diagnostic des modèles](ressources/diagnostic_problemes_performance.md) dans Google Colab.
 2. Accédez à la section "Cas 1 : Surapprentissage".
 3. Exécutez les cellules pour entraîner le modèle et afficher les courbes d'apprentissage.
 4. Observez les signes caractéristiques du surapprentissage :
