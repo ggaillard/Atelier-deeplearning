@@ -178,18 +178,25 @@ Suivez les instructions dans le notebook Colab pour:
     - Mise à jour du modèle sans toucher aux applications clientes
     - Scalabilité indépendante
 
-### Structure d'une API Flask pour l'IA (10 min)
+### Structure d'une API FastAPI pour l'IA (10 min)
 
-Voici la structure de base d'une API Flask qui expose un modèle TensorFlow:
+Voici la structure de base d'une API FastAPI qui expose un modèle TensorFlow:
 
 ```python
-from flask import Flask, request, jsonify
+from fastapi import FastAPI, File, UploadFile
+from fastapi.responses import JSONResponse
 import tensorflow as tf
 import numpy as np
 from PIL import Image
 import io
+import uvicorn
 
-app = Flask(__name__)
+# Initialisation de l'application FastAPI
+app = FastAPI(
+    title="API de reconnaissance d'images",
+    description="API pour la classification d'images de vêtements avec un modèle Fashion MNIST",
+    version="1.0.0"
+)
 
 # Charger le modèle pré-entraîné
 model = tf.keras.models.load_model('mon_modele.h5')
@@ -198,15 +205,13 @@ model = tf.keras.models.load_model('mon_modele.h5')
 class_names = ['T-shirt/top', 'Pantalon', 'Pull', 'Robe', 'Manteau',
                'Sandale', 'Chemise', 'Basket', 'Sac', 'Bottine']
 
-@app.route('/predict', methods=['POST'])
-def predict():
-    # Vérifier si la requête contient un fichier
-    if 'image' not in request.files:
-        return jsonify({'error': 'Aucune image trouvée'}), 400
-    
-    # Récupérer l'image
-    file = request.files['image']
-    img_bytes = file.read()
+@app.post('/predict', response_class=JSONResponse)
+async def predict(file: UploadFile = File(...)):
+    """
+    Endpoint pour prédire la classe d'un vêtement à partir d'une image
+    """
+    # Lire l'image
+    img_bytes = await file.read()
     
     try:
         # Prétraitement de l'image
@@ -227,13 +232,28 @@ def predict():
             'confidence': confidence
         }
         
-        return jsonify(result)
+        return result
     
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        return JSONResponse(
+            status_code=500,
+            content={"error": str(e)}
+        )
 
-if __name__ == '__main__':
-    app.run(debug=True)
+@app.get('/info')
+async def model_info():
+    """
+    Endpoint pour obtenir des informations sur le modèle
+    """
+    return {
+        "model_name": "Fashion MNIST Classifier",
+        "classes": class_names,
+        "input_shape": "28x28 grayscale image"
+    }
+
+# Point d'entrée pour exécuter l'application
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 ```
 
 ### Travail pratique: Développer votre API (20 min)
