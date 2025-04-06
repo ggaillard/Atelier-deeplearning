@@ -57,6 +57,7 @@ plugins:
 nav:
   - Accueil: index.md
   - Carte de progression: carte-progression.md
+  - Suivi de progression: suivi-progression.md
   - Module 1 - Fondamentaux:
       - Vue d'ensemble: module1/index.md
       - Introduction pratique: module1/introduction-pratique.md
@@ -113,3 +114,7 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/votre-repo/chatbot-deeplearning
+extra_javascript:
+  - javascripts/progress.js
+extra_css:
+  - stylesheets/progress.css

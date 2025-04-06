@@ -163,3 +163,4 @@ Dans la prochaine section, nous approfondirons les [concepts fondamentaux](conce
 
 [Retour au Module 1](index.md){ .md-button }
 [Continuer vers les Concepts fondamentaux](concepts-fondamentaux.md){ .md-button .md-button--primary }
+<button onclick="saveProgress('module1-intro-pratique')">Enregistrer</button>
