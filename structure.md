@@ -10,8 +10,8 @@ docs/
 │   ├── concepts-fondamentaux.md            # Concepts fondamentaux
 │   ├── mini-projet.md                      # Mini-projet individuel
 │   └── ressources/                         # Ressources spécifiques au module 1
-│       ├── hello-world-dl.ipynb            # Notebook "Hello World" du Deep Learning
-│       ├── ml-vs-dl-comparison.ipynb       # Notebook comparaison ML/DL
+│       ├── hello-world-dl.md            # Notebook "Hello World" du Deep Learning
+│       ├── ml-vs-dl-comparison.md       # Notebook comparaison ML/DL
 │       ├── fiche-observations.md           # Fiche d'observations à compléter
 │       ├── guide-colab.md                  # Guide d'utilisation de Google Colab
 │       └── glossaire-dl.md                 # Glossaire des termes du Deep Learning
@@ -21,8 +21,8 @@ docs/
 │   ├── reseaux-convolutifs.md              # Réseaux convolutifs (CNN)
 │   ├── reseaux-recurrents.md               # Réseaux récurrents (RNN)
 │   └── ressources/                         # Ressources spécifiques au module 2
-│       ├── cnn-classification.ipynb        # Notebook CNN pour classification
-│       ├── rnn-sequence.ipynb              # Notebook RNN pour séquences
+│       ├── cnn-classification.md        # Notebook CNN pour classification
+│       ├── rnn-sequence.md             # Notebook RNN pour séquences
 │       ├── api-mistral-test.py             # Script de test API Mistral simple
 │       ├── code-app-web/                   # Code pour application web CNN
 │       └── evaluationCNN.md                # Grille d'évaluation pour mini-projet CNN
@@ -33,7 +33,7 @@ docs/
 │   ├── integration.md                      # Intégration de modèles pré-entraînés
 │   ├── preparation-projet.md               # Préparation au projet final
 │   └── ressources/                         # Ressources spécifiques au module 3
-│       ├── tensorflow-keras-debutants.ipynb # Notebook introduction TensorFlow/Keras
+│       ├── tensorflow-keras-debutants.md # Notebook introduction TensorFlow/Keras
 │       ├── diagnostic_problemes_performance.md # Guide de diagnostic des problèmes
 │       ├── prototype-chatbot.py            # Prototype simple de chatbot
 │       ├── cas-utilisation-entreprise.md   # Exemples réels d'utilisation de chatbots

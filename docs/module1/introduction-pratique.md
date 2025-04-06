@@ -79,7 +79,7 @@ Le "Hello World" du Deep Learning est la reconnaissance de chiffres manuscrits a
 
 Suivez ces étapes :
 
-  - 1. Copier-coller les cellules depuis le [notebook de référence](ressources/hello-world-dl.ipynb)
+  - 1. Copier-coller les cellules depuis le [notebook de référence](ressources/hello-world-dl.md)
   - 2. Exécuter chaque cellule en cliquant sur le bouton ▶️ ou avec Ctrl+Entrée
   - 3. Observer et analyser les résultats à chaque étape
   - 4. Compléter la [fiche d'observations](ressources/fiche-observations.md)
