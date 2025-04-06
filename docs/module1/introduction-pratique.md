@@ -1,5 +1,3 @@
-Pour mettre à jour le fichier introduction-pratique.md, je vais créer un contenu cohérent qui s'insère parfaitement dans la structure de votre site web sur le Deep Learning. Ce contenu sera en lien avec le Module 1, qui est dédié aux fondamentaux du Deep Learning.
-
 # Introduction pratique au Deep Learning
 
 ![Introduction pratique](../images/banner-intro-dl.svg)
