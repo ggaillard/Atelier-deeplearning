@@ -7,10 +7,10 @@ Voici la mise en forme corrigée avec les retours à la ligne appropriés :
 
 Dans cette première approche du Deep Learning, vous allez :
 
-- Découvrir des applications concrètes et impressionnantes du Deep Learning
-- Manipuler votre premier réseau de neurones sans prérequis théoriques
-- Expérimenter l'impact des modifications sur les performances d'un modèle
-- Développer une intuition sur le fonctionnement des réseaux de neurones
+ - Découvrir des applications concrètes et impressionnantes du Deep Learning
+ - Manipuler votre premier réseau de neurones sans prérequis théoriques
+ - Expérimenter l'impact des modifications sur les performances d'un modèle
+ - Développer une intuition sur le fonctionnement des réseaux de neurones
 
 ## Approche pédagogique : d'abord la pratique, ensuite la théorie
 
@@ -24,16 +24,16 @@ GitHub Copilot est un assistant de programmation basé sur un modèle de Deep Le
 
 **Comment ça fonctionne :**
 
-- Entraîné sur des millions de dépôts GitHub publics
-- Utilise un modèle de langage basé sur des architectures avancées
-- Analyse le contexte (code existant, commentaires, noms de fonctions)
-- Génère des suggestions pertinentes en temps réel
+ - Entraîné sur des millions de dépôts GitHub publics
+ - Utilise un modèle de langage basé sur des architectures avancées
+ - Analyse le contexte (code existant, commentaires, noms de fonctions)
+ - Génère des suggestions pertinentes en temps réel
 
 **Exemple pratique :**
 
-- Écriture d'une fonction à partir d'un simple commentaire
-- Complétion de code automatique
-- Génération de tests unitaires
+ - Écriture d'une fonction à partir d'un simple commentaire
+ - Complétion de code automatique
+ - Génération de tests unitaires
 
 ### Démonstration 2 : Reconnaissance d'objets en temps réel
 
@@ -41,15 +41,15 @@ La reconnaissance d'objets est l'une des applications les plus visibles du Deep 
 
 **Points à observer :**
 
-- Détection en temps réel d'objets présents dans la salle
-- Niveau de confiance (pourcentage) pour chaque prédiction
-- Robustesse face aux variations (angle, éclairage)
+ - Détection en temps réel d'objets présents dans la salle
+ - Niveau de confiance (pourcentage) pour chaque prédiction
+ - Robustesse face aux variations (angle, éclairage)
 
 **Comment ça fonctionne :**
 
-- Utilise des réseaux de neurones convolutifs (CNN)
-- Détecte des caractéristiques visuelles à différents niveaux d'abstraction
-- Identifie et localise les objets dans l'image
+ - Utilise des réseaux de neurones convolutifs (CNN)
+ - Détecte des caractéristiques visuelles à différents niveaux d'abstraction
+ - Identifie et localise les objets dans l'image
 
 ### Démonstration 3 : Génération de texte
 
@@ -57,16 +57,16 @@ Les modèles de langage comme GPT ou Mistral peuvent générer du texte cohéren
 
 **Expérimentation :**
 
-- Essai de différentes amorces (technique, créative, formelle)
-- Observation de l'adaptation au style et au contexte
-- Analyse de la cohérence des textes générés
+ - Essai de différentes amorces (technique, créative, formelle)
+ - Observation de l'adaptation au style et au contexte
+ - Analyse de la cohérence des textes générés
 
 **Applications professionnelles :**
 
-- Génération automatique de descriptions de produits
-- Création d'assistants virtuels pour guider les utilisateurs
-- Production de résumés de documents techniques
-- Suggestions de réponses dans une application de service client
+ - Génération automatique de descriptions de produits
+ - Création d'assistants virtuels pour guider les utilisateurs
+ - Production de résumés de documents techniques
+ - Suggestions de réponses dans une application de service client
 
 ## Phase 2 : Premier contact avec un réseau de neurones (30 min)
 
@@ -86,10 +86,10 @@ Le "Hello World" du Deep Learning est la reconnaissance de chiffres manuscrits a
 
 Suivez ces étapes :
 
-- Copier-coller les cellules depuis le [notebook de référence](ressources/hello-world-dl.md)
-- Exécuter chaque cellule en cliquant sur le bouton ▶️ ou avec Ctrl+Entrée
-- Observer et analyser les résultats à chaque étape
-- Compléter la [fiche d'observations](ressources/fiche-observations.md)
+ - Copier-coller les cellules depuis le [notebook de référence](ressources/hello-world-dl.md)
+ - Exécuter chaque cellule en cliquant sur le bouton ▶️ ou avec Ctrl+Entrée
+ - Observer et analyser les résultats à chaque étape
+ - Compléter la [fiche d'observations](ressources/fiche-observations.md)
 
 #### 3. Structure du notebook
 
@@ -157,9 +157,9 @@ Dans la prochaine section, nous approfondirons les [concepts fondamentaux](conce
 
 ## Ressources complémentaires
 
-- [Guide d'utilisation de Google Colab](ressources/guide-colab.md) - Pour vous aider à utiliser cet environnement
-- [Glossaire du Deep Learning](ressources/glossaire-dl.md) - Définitions des termes techniques rencontrés
-- [TensorFlow Playground](https://playground.tensorflow.org/) - Interface interactive pour expérimenter avec des réseaux de neurones simples
+ - [Guide d'utilisation de Google Colab](ressources/guide-colab.md) - Pour vous aider à utiliser cet environnement
+ - [Glossaire du Deep Learning](ressources/glossaire-dl.md) - Définitions des termes techniques rencontrés
+ - [TensorFlow Playground](https://playground.tensorflow.org/) - Interface interactive pour expérimenter avec des réseaux de neurones simples
 
 [Retour au Module 1](index.md){ .md-button }
 [Continuer vers les Concepts fondamentaux](concepts-fondamentaux.md){ .md-button .md-button--primary }
