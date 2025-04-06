@@ -398,4 +398,4 @@ Votre mini-projet sera évalué selon les critères suivants :
 - [Conseils pour améliorer les performances des modèles](https://machinelearningmastery.com/improve-deep-learning-performance/)
 
 [Retour au Module 1](index.md){ .md-button }
-[Continuer vers l'Auto-évaluation](concepts-fondamentaux.md#bilan){ .md-button .md-button--primary }
+[Continuer vers l'Auto-évaluation](qcm-evaluation.md){ .md-button .md-button--primary }
