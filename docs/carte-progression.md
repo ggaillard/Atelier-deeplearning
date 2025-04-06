@@ -6,183 +6,125 @@
 
 Cette carte de progression vous permettra de visualiser clairement les objectifs, les activités et les compétences développées à chaque étape de votre formation en Deep Learning.
 
-## Parcours global
+## Les 4 modules du parcours
 
 ```mermaid
-Séance 1                                  Séance 2              Séance 3           Séance 4
- Deep Learning par l'expérimentation  →  Types de réseaux  →  Frameworks  →  Projet Chatbot
+flowchart LR
+    M1[Module 1\nFondamentaux du DL] --> M2[Module 2\nArchitectures spécialisées]
+    M2 --> M3[Module 3\nDéveloppement d'applications]
+    M3 --> M4[Module 4\nProjet chatbot pédagogique]
 ```
 
-## Progression détaillée des compétences
+## Module 1 : Fondamentaux du Deep Learning
 
-Le tableau ci-dessous détaille l'évolution des compétences techniques et conceptuelles que vous développerez au cours de cette formation :
+**Concepts clés :**
+- Structure et fonctionnement d'un neurone artificiel
+- Réseaux de neurones multicouches
+- Forward et backpropagation
+- Fonctions d'activation (ReLU, Sigmoid, Softmax)
+- Différences fondamentales entre Machine Learning classique et Deep Learning
 
-| Compétences | Séance 1 | Séance 2 | Séance 3 | Séance 4 |
-|------------|----------|----------|----------|----------|
-| **Compréhension des réseaux de neurones** | Niveau 1 : Fondamentaux | Niveau 2 : Architectures | Niveau 3 : Applications | Niveau 4 : Intégration |
-| **Programmation avec TensorFlow/Keras** | Niveau 1 : Premiers pas | Niveau 2 : Mini-projets | Niveau 3 : Optimisation | Niveau 4 : Application avancée |
-| **Visualisation et analyse de données** | Niveau 1 : Métriques de base | Niveau 2 : Feature maps | Niveau 3 : Évaluation | Niveau 4 : Dashboard |
-| **Traitement d'images** | Niveau 1 : Classification simple | Niveau 2 : CNN complets | Non abordé | Non abordé |
-| **Traitement du texte** | Non abordé | Niveau 1 : RNN basiques | Niveau 2 : API Mistral | Niveau 3 : Système conversationnel |
-| **Développement web** | Non abordé | Niveau 1 : Interface simple | Niveau 2 : API REST | Niveau 3 : Application complète |
-| **Conception et architecture** | Non abordé | Non abordé | Niveau 1 : Préparation | Niveau 2 : Implémentation |
-| **Développement collaboratif** | Niveau 1 : Activités guidées | Niveau 2 : Challenge amélioration | Niveau 3 : Planification | Niveau 4 : Réalisation équipe |
-
-
-## Détail des séances et objectifs pédagogiques
-
-### Mode de travail par séance
-
-| Séance | Mode de travail | Commentaires |
-|--------|-----------------|--------------|
-| Séance 1 | Individuel | Exploration personnelle, avec partage possible en groupe |
-| Séance 2 | Individuel, puis binôme pour le challenge | Mini-projets individuels, challenge d'amélioration en binôme |  
-| Séance 3 | Binôme | Formation des équipes projet (1-2 personnes) et préparation |
-| Séance 4 | Binôme | Développement, finalisation et présentation en équipe |
-
-### Séance 1 : Introduction au Deep Learning par l'expérimentation
-
-**Objectifs pédagogiques :**
-
- - Découvrir le Deep Learning par des manipulations concrètes
- - Comprendre les différences fondamentales entre ML classique et DL
- - Explorer le fonctionnement interne d'un réseau de neurones simple
- - Acquérir le vocabulaire technique de base
-
-**Activités :**
-
- - Mise en situation pratique : démonstrations et notebook "Hello World" *(travail individuel)*
- - Découverte comparative : ML classique vs Deep Learning *(travail individuel)*
- - Exploration guidée : anatomie d'un réseau de neurones *(travail individuel)*
- - Synthèse et auto-évaluation *(travail individuel)*
-
-**Compétences BTS SIO développées :**
-
- - B1.3 : Gestion des données d'images pour les modèles
- - B2.2 : Conception de modèles simples
- - B3.2 : Évaluation de la performance des modèles
+**Activités pratiques :**
+- Manipulation d'un réseau de neurones sur données MNIST
+- Comparaison directe ML vs DL sur le même jeu de données
+- Visualisation des couches internes d'un réseau
 
 **Livrables :**
+- Notebook "Hello World du Deep Learning" complété
+- Schéma annoté d'un réseau de neurones
 
- - Fiche d'observations complétée
- - Tableau comparatif ML vs DL
- - Schéma annoté d'un réseau de neurones
+## Module 2 : Architectures spécialisées
 
-### Séance 2 : Types de réseaux et leurs applications
+**Concepts clés pour les CNN :**
+- Convolution et filtres
+- Pooling et réduction de dimension
+- Feature maps et leur interprétation
+- Transfer learning avec modèles pré-entraînés
 
-**Objectifs pédagogiques :**
+**Concepts clés pour les RNN :**
+- Traitement de séquences et données temporelles
+- Problème de la disparition du gradient
+- Cellules LSTM et GRU
+- Applications au traitement du langage naturel
 
- - Maîtriser les principes des réseaux convolutifs (CNN)
- - Comprendre le fonctionnement des réseaux récurrents (RNN)
- - Implémenter des modèles pour différents types de données
- - Visualiser et interpréter le fonctionnement des modèles
+**Activités pratiques :**
+- Implémentation d'un CNN pour la classification d'images
+- Développement d'un RNN pour l'analyse de sentiment
+- Optimisation d'un modèle de prévision des ventes
 
-**Activités :**
+## Module 3 : Développement d'applications pratiques
 
- - Mini-projet CNN : classification d'images et visualisation *(travail individuel)*
- - Mini-projet RNN : traitement de texte et prédiction de séquences *(travail individuel)*
- - Challenge d'amélioration : optimisation collaborative d'un modèle *(travail en binôme)*
+**Concepts clés :**
+- TensorFlow/Keras : modèles fonctionnels et séquentiels
+- Optimisation des hyperparamètres
+- Techniques de régularisation (dropout, batch normalization)
+- API REST pour servir des modèles
+- Intégration de modèles de langage (API Mistral)
 
-**Compétences BTS SIO développées :**
+**Activités pratiques :**
+- Utilisation de modèles pré-entraînés
+- Optimisation des performances d'inférence
+- Premier test d'intégration avec l'API Mistral
+- Conception du prototype de chatbot
 
- - B1.3 : Traitement de données complexes (images, textes)
- - B2.2 : Développement de modèles spécialisés
- - B2.3 : Création d'interfaces simples pour les modèles
- - B3.2 : Analyse comparative des performances
+## Module 4 : Projet intégrateur - Chatbot pédagogique
 
-**Livrables :**
+**Concepts clés :**
+- Prompt engineering pour modèles de langage
+- Gestion du contexte conversationnel
+- Structures de données pour bases de connaissances
+- Optimisation de l'expérience utilisateur
+- Techniques de déploiement
 
- - Modèle CNN fonctionnel avec visualisations
- - Modèle RNN pour analyse de texte
- - Rapport d'amélioration documenté
+**Activités pratiques :**
+- Développement d'une interface conversationnelle
+- Intégration avancée avec l'API Mistral
+- Structuration d'une base de connaissances
+- Tests et optimisation de l'expérience utilisateur
 
-### Séance 3 : Frameworks pratiques et préparation du projet
+## Ce que vous saurez faire après chaque module
 
-**Objectifs pédagogiques :**
+### Après le Module 1
+- Expliquer le fonctionnement d'un réseau de neurones de base
+- Distinguer ML classique et Deep Learning dans des cas concrets
+- Implémenter un réseau simple pour la classification d'images
+- Interpréter les métriques d'entraînement (précision, perte)
 
- - Maîtriser les frameworks de Deep Learning courants
- - Optimiser les performances des modèles
- - Découvrir l'API Mistral AI pour les applications conversationnelles
- - Préparer le projet de chatbot pédagogique
+### Après le Module 2
+- Implémenter et adapter un CNN pour la vision par ordinateur
+- Développer un RNN pour des tâches de traitement de texte
+- Visualiser et interpréter les feature maps d'un CNN
+- Améliorer un modèle existant avec différentes techniques
 
-**Activités :**
+### Après le Module 3
+- Utiliser efficacement TensorFlow/Keras pour créer des modèles
+- Appliquer des techniques d'optimisation des performances
+- Intégrer l'API Mistral dans une application simple
+- Concevoir l'architecture d'un chatbot pédagogique
 
- - Frameworks en pratique : utilisation efficace de TensorFlow/Keras *(travail en binôme)*
- - Optimisation de modèles : techniques d'amélioration des performances *(travail en binôme)*
- - Introduction à Mistral AI : premiers pas avec l'API *(travail en binôme)*
- - Conception du chatbot : préparation de l'architecture et des fonctionnalités *(travail en binôme)*
+### Après le Module 4
+- Développer un chatbot pédagogique complet et fonctionnel
+- Créer et gérer une base de connaissances structurée
+- Optimiser l'expérience utilisateur d'un système conversationnel
+- Présenter et défendre un projet technique
 
-**Compétences BTS SIO développées :**
+## Concepts clés du Deep Learning à travers le parcours
 
- - B1.4 : Exploitation des API et interfaces de programmation
- - B2.2 : Optimisation de solutions applicatives
- - B3.2 : Vérification et amélioration des performances
+- **Neurones artificiels et réseaux** → Module 1
+- **Descente de gradient et rétropropagation** → Module 1
+- **Convolution et vision par ordinateur** → Module 2
+- **Mémoire récurrente et séquences** → Module 2
+- **Optimisation et hyperparamètres** → Module 3
+- **Modèles de langage et génération de texte** → Module 3, 4
+- **Systèmes conversationnels** → Module 4
+- **Architectures d'applications IA** → Module 4
 
-**Livrables :**
+## Ressources essentielles
 
- - Applications fonctionnelles avec TensorFlow/Keras
- - Premier test d'intégration avec l'API Mistral
- - Document de conception du chatbot
-
-### Séance 4 : Projet intégrateur - Chatbot pédagogique
-
-**Objectifs pédagogiques :**
-
- - Mettre en œuvre l'ensemble des connaissances acquises
- - Développer une application conversationnelle complète
- - Structurer une base de connaissances pédagogique
- - Présenter et défendre un projet technique
-
-**Activités :**
-
- - Développement du chatbot : interface et backend *(travail en binôme)*
- - Intégration de l'API Mistral et de la base de connaissances *(travail en binôme)*
- - Tests et optimisation de l'expérience utilisateur *(travail en binôme)*
- - Préparation et réalisation de la présentation finale *(travail en binôme)*
-
-**Compétences BTS SIO développées :**
-
- - B1.4 : Exploitation avancée des API
- - B2.2/B2.3 : Développement d'une solution applicative complète
- - B3.2/B3.3 : Tests, documentation et présentation technique
-
-**Livrables :**
-
- - Code source complet du chatbot
- - Documentation technique et guide utilisateur
- - Présentation et démonstration du projet
-
-## Points de contrôle de votre progression
-
-### Après la Séance 1
-- [ ] Je comprends ce qu'est un réseau de neurones
-- [ ] Je sais expliquer la différence entre ML classique et Deep Learning
-- [ ] J'ai réussi à manipuler un modèle simple sur MNIST
-
-### Après la Séance 2
-- [ ] Je comprends ce qu'est un CNN et son application en vision par ordinateur
-- [ ] Je comprends ce qu'est un RNN et son application en traitement de texte
-- [ ] J'ai réussi à améliorer un modèle existant
-
-### Après la Séance 3
-- [ ] Je sais utiliser TensorFlow/Keras pour créer un modèle simple
-- [ ] Je connais les techniques d'optimisation des performances
-- [ ] J'ai réussi à faire un premier test avec l'API Mistral
-
-### Après la Séance 4
-- [ ] J'ai développé un chatbot pédagogique fonctionnel
-- [ ] J'ai intégré une base de connaissances structurée
-- [ ] J'ai présenté mon projet de manière claire et convaincante
-
-## Conseil pour optimiser votre apprentissage
-
-1. **Expérimentez régulièrement** avec les exemples de code fournis
-2. **Posez des questions** dès qu'un concept n'est pas clair
-3. **Collaborez** avec vos pairs pour résoudre les problèmes complexes
-4. **Documentez** votre progression et vos découvertes
-5. **Établissez des liens** entre les différents concepts et technologies
-
-Cette formation est conçue comme un parcours progressif où chaque séance s'appuie sur les acquis des précédentes. Suivez le chemin balisé tout en explorant les possibilités qui vous intéressent particulièrement.
+- **Documentation TensorFlow/Keras** - [tensorflow.org/tutorials](https://www.tensorflow.org/tutorials)
+- **API Mistral** - [docs.mistral.ai](https://docs.mistral.ai/)
+- **Hugging Face** - [huggingface.co/docs](https://huggingface.co/docs)
+- **FastAPI** - [fastapi.tiangolo.com](https://fastapi.tiangolo.com/)
 
 [Retour à l'accueil](index.md){ .md-button }
-[Commencer la Séance 1](seance1/index.md){ .md-button .md-button--primary }
+[Commencer le Module 1](module1/index.md){ .md-button .md-button--primary }
