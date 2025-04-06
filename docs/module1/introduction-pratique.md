@@ -111,21 +111,21 @@ Après avoir exécuté le notebook de base, essayez ces modifications pour obser
 
 1. **Modification de l'architecture :**
 
-   - Augmenter/diminuer le nombre de neurones dans chaque couche
-   - Ajouter ou supprimer des couches dans le réseau
-   - Essayer d'ajouter une couche Dropout (qui désactive aléatoirement certains neurones pendant l'entraînement)
+     - Augmenter/diminuer le nombre de neurones dans chaque couche
+     - Ajouter ou supprimer des couches dans le réseau
+     - Essayer d'ajouter une couche Dropout (qui désactive aléatoirement certains neurones pendant l'entraînement)
 
 2. **Ajustement des paramètres d'entraînement :**
 
-   - Changer le nombre de cycles d'entraînement (époques)
-   - Modifier le nombre d'exemples traités à la fois (taille du batch)
-   - Tester différentes méthodes d'apprentissage (optimiseurs)
+     - Changer le nombre de cycles d'entraînement (époques)
+     - Modifier le nombre d'exemples traités à la fois (taille du batch)
+     - Tester différentes méthodes d'apprentissage (optimiseurs)
 
 3. **Test avec vos propres dessins :**
 
-   - Utiliser l'interface de dessin pour tester des chiffres manuscrits
-   - Observer comment le modèle réagit à différents styles d'écriture
-   - Analyser les prédictions erronées et tenter de comprendre pourquoi
+     - Utiliser l'interface de dessin pour tester des chiffres manuscrits
+     - Observer comment le modèle réagit à différents styles d'écriture
+     - Analyser les prédictions erronées et tenter de comprendre pourquoi
 
 ## Phase 3 : Réflexion et documentation (15 min)
 
