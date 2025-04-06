@@ -1,5 +1,3 @@
-Vous avez raison, le document que j'ai rédigé traite le contenu comme une "séance" alors qu'il s'agit d'un "module", et les liens vers les ressources doivent être adaptés à la structure indiquée. Voici une version corrigée:
-
 # Module 1 : Fondamentaux du Deep Learning
 
 ![Introduction au Deep Learning](../images/banner-intro-dl.svg)
