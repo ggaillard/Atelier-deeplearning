@@ -8,14 +8,14 @@ Cette formation intensive vous initie au Deep Learning à travers une approche p
 
 ## Organisation du parcours
 
-Notre formation se compose de 4 séances de 4 heures chacune :
+Notre formation se compose de 4 modules de 4 heures chacun :
 
-| Séance | Titre | Aperçu |
-|--------|-------|---------|
-| [Séance 1](seance1/index.md) | **Introduction au Deep Learning** | Expérimentation pratique, Machine Learning , Deep Learning, fonctionnement des réseaux de neurones |
-| [Séance 2](seance2/index.md) | **Types de réseaux et applications** |réseaux de neurones convolutifs (CNN) pour la vision, récurrents (RNN) pour le texte, mini-projets pratiques |
-| [Séance 3](seance3/index.md) | **Frameworks et préparation** | TensorFlow/Keras, optimisation, API Mistral AI, préparation du projet |
-| [Séance 4](seance4/index.md) | **Projet intégrateur** | Développement du chatbot pédagogique, présentation finale |
+| Module | Titre | Aperçu |
+|--------|-------|--------|
+| [Module 1](module1/index.md) | **Fondamentaux du Deep Learning** | Introduction pratique, concepts fondamentaux, anatomie des réseaux de neurones |
+| [Module 2](module2/index.md) | **Architectures spécialisées** | Réseaux convolutifs (CNN) pour la vision, réseaux récurrents (RNN) pour le texte |
+| [Module 3](module3/index.md) | **Développement d'applications pratiques** | Frameworks, optimisation, intégration API, préparation au projet |
+| [Module 4](module4/index.md) | **Projet intégrateur - Chatbot pédagogique** | Développement du chatbot, finalisation, présentation |
 
 ## Prérequis techniques
 
@@ -38,4 +38,4 @@ Ce site contient toutes les ressources nécessaires pour votre parcours :
 Prêt à vous lancer dans l'univers du Deep Learning ? Deux options s'offrent à vous :
 
 [Découvrir le projet chatbot](presentation.md){ .md-button }
-[Commencer la première séance](seance1/index.md){ .md-button .md-button--primary }
+[Commencer le Module 1](module1/index.md){ .md-button .md-button--primary }

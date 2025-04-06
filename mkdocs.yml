@@ -57,41 +57,57 @@ plugins:
 nav:
   - Accueil: index.md
   - Carte de progression: carte-progression.md
-  - Séance 1:
-      - Vue d'ensemble: seance1/index.md
-      - Mise en situation: 
-        - Introduction: seance1/partie1-mise-en-situation/partie1-mise-en-situation.md
-        - Démonstrations: seance1/partie1-mise-en-situation/demonstrations.md
-        - Guide Colab: seance1/partie1-mise-en-situation/guide_utilisation_colab.md
-      - Découverte des concepts: seance1/partie2-decouverte-concepts.md
-      - Débrief: seance1/partie3-debrief.md
-  - Séance 2:
-    - Vue d'ensemble: seance2/index.md
-    - Mini-projet CNN: seance2/partie1-cnn.md
-    - Mini-projet RNN: seance2/partie2-rnn.md
-    - Challenge d'amélioration: seance2/partie3-amelioration.md
-  - Séance 3:
-    - Vue d'ensemble: seance3/index.md
-    - Frameworks pour débutants: seance3/partie1-frameworks-debutants.md
-    - Amélioration des performances: seance3/partie2-amelioration.md
-    - Préparation du projet: seance3/partie3-preparation-projet.md
-  - Séance 4:
-    - Vue d'ensemble: seance4/index.md
-    - Présentation: seance4/partie3-presentation.md
-    - Développement: seance4/partie1-developpement.md
-    - Finalisation: seance4/partie2-finalisation.md
-   
-  - Ressources:
-    - Vue d'ensemble: ressources/index.md
-    - API Mistral: ressources/api-mistral.md
-    - Base de connaissances: ressources/base-connaissances.md
-    - Instructions d'intégration: ressources/instructions-integration.md
-    - Schémas JSON: ressources/json-schemas.md
+  - Module 1 - Fondamentaux:
+      - Vue d'ensemble: module1/index.md
+      - Introduction pratique: module1/introduction-pratique.md
+      - Concepts fondamentaux: module1/concepts-fondamentaux.md
+      - Mini-projet individuel: module1/mini-projet.md
+      - Ressources: 
+        - Notebook Hello World: module1/ressources/hello-world-dl.ipynb
+        - Comparaison ML vs DL: module1/ressources/ml-vs-dl-comparison.ipynb
+        - Fiche d'observations: module1/ressources/fiche-observations.md
+        - Guide Colab: module1/ressources/guide-colab.md
+        - Glossaire: module1/ressources/glossaire-dl.md
+  - Module 2 - Architectures:
+      - Vue d'ensemble: module2/index.md
+      - Réseaux convolutifs (CNN): module2/reseaux-convolutifs.md
+      - Réseaux récurrents (RNN): module2/reseaux-recurrents.md
+      - Ressources:
+        - Notebook CNN: module2/ressources/cnn-classification.ipynb
+        - Notebook RNN: module2/ressources/rnn-sequence.ipynb
+        - Test API Mistral: module2/ressources/api-mistral-test.py
+        - Évaluation CNN: module2/ressources/evaluationCNN.md
+  - Module 3 - Applications:
+      - Vue d'ensemble: module3/index.md
+      - Frameworks et bonnes pratiques: module3/frameworks.md
+      - Intégration de modèles: module3/integration.md
+      - Préparation au projet: module3/preparation-projet.md
+      - Ressources:
+        - TensorFlow/Keras: module3/ressources/tensorflow-keras-debutants.ipynb
+        - Diagnostic de performance: module3/ressources/diagnostic_problemes_performance.md
+        - Prototype chatbot: module3/ressources/prototype-chatbot.py
+        - Cas d'utilisation: module3/ressources/cas-utilisation-entreprise.md
+        - Guide API Mistral: module3/ressources/api-mistral-guide-simple.md
+  - Module 4 - Projet:
+      - Vue d'ensemble: module4/index.md
+      - Développement: module4/developpement.md
+      - Finalisation: module4/finalisation.md
+      - Présentation: module4/presentation.md
+      - Ressources:
+        - Template documentation: module4/ressources/modele-documentation-technique.md
+        - Exemple base de connaissances: module4/ressources/exemple-base-connaissances.json
+        - Grille d'évaluation: module4/ressources/grille-evaluation-projet.md
+  - Ressources communes:
+      - Vue d'ensemble: ressources/index.md
+      - API Mistral: ressources/api-mistral.md
+      - Base de connaissances: ressources/base-connaissances.md
+      - Schémas JSON: ressources/json-schemas.md
+      - Guide étudiant: ressources/guide-etudiant.md
   - Évaluation:
-    - Vue d'ensemble: evaluation/index.md
-    - Répartition des tâches: evaluation/grille-repartition-taches.md
-    - Critères d'évaluation: evaluation/criteres-evaluation.md
-    - Checklist: evaluation/checklist-auto-evaluation.md
+      - Vue d'ensemble: evaluation/index.md
+      - Critères d'évaluation: evaluation/criteres-evaluation.md
+      - Répartition des tâches: evaluation/grille-repartition-taches.md
+      - Checklist d'auto-évaluation: evaluation/checklist-auto-evaluation.md
     
 extra:
   social:
