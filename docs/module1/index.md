@@ -31,13 +31,6 @@ Comparez les approches du Machine Learning classique et du Deep Learning pour co
 - Défi de généralisation sur des données modifiées
 - Exploration interactive d'un neurone et d'un réseau simple
 
-**Notebooks associés :**
-- [Machine Learning classique](ressources/ml-vs-dl-comparison.ipynb)
-- [Deep Learning](ressources/hello-world-dl.ipynb)
-- [Anatomie d'un réseau](ressources/ml-vs-dl-comparison.ipynb)
-
-**Ressource à compléter :** [Tableau comparatif ML vs DL](ressources/ml-vs-dl-comparison.ipynb)
-
 ### [Phase 3 : Mini-projet individuel](mini-projet.md) (1h)
 
 Mettez en pratique vos connaissances en modifiant et améliorant un réseau de neurones.
