@@ -133,21 +133,21 @@ Après vos expérimentations, prenez le temps de réfléchir à ce que vous avez
 
 1. **Complétez la fiche d'observations :**
 
-   - Notez les performances initiales du modèle
-   - Documentez l'impact de vos modifications
-   - Analysez les cas où le modèle échoue
+      - Notez les performances initiales du modèle
+      - Documentez l'impact de vos modifications
+      - Analysez les cas où le modèle échoue
 
 2. **Questions de réflexion :**
 
-   - Qu'est-ce qui semble avoir le plus d'impact sur les performances ?
-   - Quelles sont les limites du modèle que vous avez observées ?
-   - Quelles applications pratiques pourriez-vous envisager avec cette technologie ?
+      - Qu'est-ce qui semble avoir le plus d'impact sur les performances ?
+      - Quelles sont les limites du modèle que vous avez observées ?
+      - Quelles applications pratiques pourriez-vous envisager avec cette technologie ?
 
 3. **Partage d'expérience :**
 
-   - Échangez avec vos camarades sur vos observations
-   - Comparez les résultats de vos différentes modifications
-   - Discutez des surprises ou des difficultés rencontrées
+      - Échangez avec vos camarades sur vos observations
+      - Comparez les résultats de vos différentes modifications
+      - Discutez des surprises ou des difficultés rencontrées
 
 ## Conclusion et transition
 
