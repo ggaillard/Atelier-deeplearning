@@ -78,10 +78,11 @@ Google Colab est un environnement Jupyter Notebook hébergé qui permet d'exécu
 Le "Hello World" du Deep Learning est la reconnaissance de chiffres manuscrits avec le dataset MNIST. Vous allez implémenter un réseau de neurones simple capable de reconnaître des chiffres écrits à la main.
 
 Suivez ces étapes :
-   1. Copier-coller les cellules depuis le [notebook de référence](ressources/hello-world-dl.ipynb)
-   2. Exécuter chaque cellule en cliquant sur le bouton ▶️ ou avec Ctrl+Entrée
-   3. Observer et analyser les résultats à chaque étape
-   4. Compléter la [fiche d'observations](ressources/fiche-observations.md)
+
+  - 1. Copier-coller les cellules depuis le [notebook de référence](ressources/hello-world-dl.ipynb)
+  - 2. Exécuter chaque cellule en cliquant sur le bouton ▶️ ou avec Ctrl+Entrée
+  - 3. Observer et analyser les résultats à chaque étape
+  - 4. Compléter la [fiche d'observations](ressources/fiche-observations.md)
 
 #### 3. Structure du notebook
 
@@ -102,6 +103,7 @@ Le notebook est organisé en plusieurs sections pour vous guider :
 Après avoir exécuté le notebook de base, essayez ces modifications pour observer leur impact :
 
 1. **Modification de l'architecture :**
+   
    * Augmenter/diminuer le nombre de neurones dans chaque couche
    * Ajouter ou supprimer des couches dans le réseau
    * Essayer d'ajouter une couche Dropout (qui désactive aléatoirement certains neurones pendant l'entraînement)
@@ -121,16 +123,19 @@ Après avoir exécuté le notebook de base, essayez ces modifications pour obser
 Après vos expérimentations, prenez le temps de réfléchir à ce que vous avez observé :
 
 1. **Complétez la fiche d'observations :**
+   
    - Notez les performances initiales du modèle
    - Documentez l'impact de vos modifications
    - Analysez les cas où le modèle échoue
 
 2. **Questions de réflexion :**
+   
    - Qu'est-ce qui semble avoir le plus d'impact sur les performances ?
    - Quelles sont les limites du modèle que vous avez observées ?
    - Quelles applications pratiques pourriez-vous envisager avec cette technologie ?
 
 3. **Partage d'expérience :**
+   
    - Échangez avec vos camarades sur vos observations
    - Comparez les résultats de vos différentes modifications
    - Discutez des surprises ou des difficultés rencontrées
