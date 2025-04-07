@@ -64,8 +64,6 @@ nav:
       - Concepts fondamentaux: module1/concepts-fondamentaux.md
       - Mini-projet individuel: module1/mini-projet.md
       - Ressources: 
-        - Notebook Hello World: module1/ressources/hello-world-dl.ipynb
-        - Comparaison ML vs DL: module1/ressources/ml-vs-dl-comparison.ipynb
         - Fiche d'observations: module1/ressources/fiche-observations.md
         - Guide Colab: module1/ressources/guide-colab.md
         - Glossaire: module1/ressources/glossaire-dl.md
@@ -74,8 +72,6 @@ nav:
       - Réseaux convolutifs (CNN): module2/reseaux-convolutifs.md
       - Réseaux récurrents (RNN): module2/reseaux-recurrents.md
       - Ressources:
-        - Notebook CNN: module2/ressources/cnn-classification.ipynb
-        - Notebook RNN: module2/ressources/rnn-sequence.ipynb
         - Test API Mistral: module2/ressources/api-mistral-test.py
         - Évaluation CNN: module2/ressources/evaluationCNN.md
   - Module 3 - Applications:

@@ -175,3 +175,123 @@ Téléchargez les fichiers suivants et placez-les dans les dossiers indiqués :
 1.  **Structure des dossiers** :
 
    *Assurez-vous que votre structure de dossiers est la suivante:
+
+   votre_dossier_de_travail/
+├── mnist_cnn_model.h5      # Votre modèle sauvegardé ou le modèle fourni
+├── web-integration.py      # Script principal Flask
+├── templates/
+│   └── index.html
+└── static/                 # Dossier pour CSS, JS, images
+├── css/
+│   └── style.css
+└── js/
+└── app.js
+
+### Étape 3 : Installation et lancement (5 minutes)
+
+1.**Création du modèle via Google Colab**
+
+- Suivez les instructions pour créer le modèle avec Google Colab (voir sections précédentes)
+- Une fois le fichier `mnist_cnn_model.h5` téléchargé, déplacez-le dans le dossier racine de votre projet
+
+2.**Ouverture du Terminal intégré à VS Code**
+
+- Dans VS Code, ouvrez un terminal en allant dans `Terminal > New Terminal`
+- Vous verrez un terminal s'ouvrir en bas de la fenêtre
+
+3.**Installation des dépendances**
+
+- Dans le terminal VS Code, tapez la commande suivante: pip install flask tensorflow pillow numpy
+
+- Attendez que l'installation se termine
+
+4.**Lancement de l'application**
+
+- Dans le même terminal, tapez:
+  ```
+  python web-integration.py
+  ```
+ - Vous devriez voir un message indiquant que l'application est en cours d'exécution
+ - VS Code peut vous proposer d'ouvrir le lien - cliquez dessus, ou
+ - Ouvrez votre navigateur et accédez à http://localhost:5001
+
+### Étape 4 : Tests pratiques (10 minutes)
+
+1. **Test avec dessins à la souris**
+
+ - Dans l'interface web, dessinez clairement un chiffre (de 0 à 9) dans la zone prévue
+    - Cliquez sur le bouton "Prédire"
+
+ - Notez la prédiction et le niveau de confiance
+ - Répétez ce processus avec 5 chiffres différents
+ - Gardez une trace de vos résultats (tableau simple : chiffre réel / prédiction / confiance)
+
+2.**Test avec image importée**
+
+ - Sur une feuille de papier, écrivez clairement un chiffre
+ - Prenez une photo de ce chiffre avec votre smartphone ou appareil photo
+ - Transférez l'image sur votre ordinateur (par email, cloud, câble USB, etc.)
+ - Dans l'application, cliquez sur "Charger une image"
+ - Sélectionnez l'image que vous venez de prendre
+ - Observez la prédiction et le niveau de confiance
+
+1. **Test avec feature maps (optionnel)**
+
+- Cochez la case "Visualiser les feature maps"
+- Dessinez un nouveau chiffre et cliquez sur "Prédire"
+- Observez les feature maps qui s'affichent (représentations visuelles de ce que "voit" le réseau)
+
+### Étape 5 : Évaluation et rapport (10 minutes)
+
+1.**Remplissage du formulaire d'évaluation**
+
+- Ouvrez le document [evaluation](ressources/evaluation.md) fourni par votre formateur
+- Remplissez les sections suivantes :
+  - Nombre de prédictions correctes/incorrectes
+  - Chiffres les mieux reconnus
+  - Chiffres les plus difficiles à reconnaître
+  - Niveau de confiance moyen observé
+
+2.**Analyse critique**
+
+- Dans le formulaire, notez au moins 3 points forts de l'application
+- Notez également au moins 3 limitations ou problèmes rencontrés
+
+3.**Propositions d'amélioration**
+
+- Proposez 2-3 idées concrètes pour améliorer l'outil dans un contexte professionnel
+- Exemple : "Ajouter une fonction pour traiter plusieurs chiffres à la fois"
+
+4.**Conclusion professionnelle**
+
+- Rédigez une brève conclusion (2-3 phrases) sur l'utilité potentielle de cet outil dans l'entreprise
+
+## Livrable à rendre
+
+À la fin de la session (30 minutes), veuillez :
+
+1. **Copier et Compléter** entièrement ce [formulaire d'évaluation](ressources/evaluationCNN.md)
+2. **Enregistrer**  le document  sous le nom "Eval_CNN_NOM_Prenom.doc"
+3. **Partager** votre évaluation avec l'enseignant sur l'espace de cours:
+
+**IMPORTANT :** La remise de ce document complété est obligatoire et fait partie de l'évaluation du mini-projet.
+
+Date limite de remise : À la fin de la séance
+
+## Pour aller plus loin (si vous terminez en avance)
+
+Si vous avez terminé avant la fin du temps imparti, vous pouvez explorer ces pistes :
+- Testez les limites du modèle en dessinant des chiffres de différentes tailles/styles
+- Observez comment le bruit ou les distorsions affectent la précision
+- Essayez de comprendre le code source dans `web-integration.py` pour voir comment l'application fonctionne
+
+
+# Ressources complémentaires
+
+- [Tutoriel TensorFlow sur les CNN](https://www.tensorflow.org/tutorials/images/cnn) - Guide officiel de TensorFlow sur l'implémentation des réseaux de neurones convolutifs
+- [Visualisation de CNN (Distill.pub)](https://distill.pub/2017/feature-visualization/) - Article interactif sur la visualisation et l'interprétation des réseaux convolutifs
+- [Documentation Flask](https://flask.palletsprojects.com/en/2.3.x/) - Documentation officielle du framework Flask pour le développement web
+
+
+[Retour à la vue d'ensemble du Module 2](index.md){ .md-button }
+[Continuer vers la Phase 2: RNN](reseaux-recurrents.md){ .md-button .md-button--primary }
