@@ -82,6 +82,7 @@ Ce module vous permet d'acquérir plusieurs compétences du référentiel BTS SI
 Plongez dans le monde fascinant du Deep Learning en commençant par la première phase d'introduction pratique !
 
 [Commencer par l'introduction pratique](introduction-pratique.md){ .md-button .md-button--primary }
+[Évaluer vos connaissances](qcm-evaluation-module1.md){ .md-button .md-button--secondary }
 
 ---
 

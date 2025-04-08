@@ -166,4 +166,5 @@ Ces livrables constituent l'aboutissement de votre parcours et seront évalués 
 C'est l'heure de mettre en pratique tout ce que vous avez appris pour créer un outil réellement utile. Bonne chance !
 
 [Commencer la Phase 1](partie1-developpement.md){ .md-button .md-button--primary }
-```
+[Évaluer vos connaissances](qcm-evaluation-module4.md){ .md-button .md-button--secondary }
+

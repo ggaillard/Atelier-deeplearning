@@ -6,13 +6,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Cours BTS SIO SLAM sur le développement d'un chatbot pédagogique">
+        <meta name="description" content="Cours BTS SIO sur le développement d'un chatbot pédagogique">
       
       
         <meta name="author" content="Votre Nom">
       
-      
-        <link rel="canonical" href="https://ggaillard.github.io/Atelier-deeplearning/seance1/partie1-mise-en-situation/premier_contact_reseau_neurones/">
       
       
       
@@ -47,6 +45,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../stylesheets/progress.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -184,18 +184,6 @@
 </div>
     
     
-      <div class="md-header__source">
-        <a href="https://github.com/ggaillard/Atelier-deeplearning" title="Aller au dépôt" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
-  </div>
-  <div class="md-source__repository">
-    ggaillard/Atelier-deeplearning
-  </div>
-</a>
-      </div>
-    
   </nav>
   
 </header>
@@ -232,23 +220,6 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../presentation/" class="md-tabs__link">
-        
-  
-    
-  
-  Présentation du projet
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
       <a href="../../../carte-progression/" class="md-tabs__link">
         
   
@@ -266,63 +237,12 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link">
+      <a href="../../../suivi-progression/" class="md-tabs__link">
         
   
     
   
-  Séance 1
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../seance2/" class="md-tabs__link">
-        
-  
-    
-  
-  Séance 2
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../seance3/" class="md-tabs__link">
-        
-  
-    
-  
-  Séance 3
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../seance4/" class="md-tabs__link">
-        
-  
-    
-  
-  Séance 4
+  Suivi de progression
 
       </a>
     </li>
@@ -336,10 +256,82 @@
     
     
       <li class="md-tabs__item">
+        <a href="../../../module1/" class="md-tabs__link">
+          
+  
+  Module 1 - Fondamentaux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../module2/" class="md-tabs__link">
+          
+  
+  Module 2 - Architectures
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../module3/" class="md-tabs__link">
+          
+  
+  Module 3 - Applications
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../module4/" class="md-tabs__link">
+          
+  
+  Module 4 - Projet
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../../ressources/" class="md-tabs__link">
           
   
-  Ressources
+  Ressources communes
 
         </a>
       </li>
@@ -396,18 +388,6 @@
     Chatbot pédagogique pour le Deep Learning
   </label>
   
-    <div class="md-nav__source">
-      <a href="https://github.com/ggaillard/Atelier-deeplearning" title="Aller au dépôt" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
-  </div>
-  <div class="md-source__repository">
-    ggaillard/Atelier-deeplearning
-  </div>
-</a>
-    </div>
-  
   <ul class="md-nav__list" data-md-scrollfix>
     
       
@@ -422,27 +402,6 @@
   
   <span class="md-ellipsis">
     Accueil
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../presentation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Présentation du projet
     
   </span>
   
@@ -480,11 +439,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../../suivi-progression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Séance 1
+    Suivi de progression
     
   </span>
   
@@ -500,17 +459,269 @@
   
   
   
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Module 1 - Fondamentaux
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module 1 - Fondamentaux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../seance2/" class="md-nav__link">
+      <a href="../../../module1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Séance 2
+    Vue d'ensemble
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module1/introduction-pratique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction pratique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module1/concepts-fondamentaux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concepts fondamentaux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module1/mini-projet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mini-projet individuel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module1/qcm-evaluation-module1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module1/ressources/fiche-observations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fiche d'observations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module1/ressources/guide-colab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guide Colab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module1/ressources/glossaire-dl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossaire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -521,17 +732,225 @@
   
   
   
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Module 2 - Architectures
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module 2 - Architectures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../seance3/" class="md-nav__link">
+      <a href="../../../module2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Séance 3
+    Vue d'ensemble
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module2/reseaux-convolutifs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Réseaux convolutifs (CNN)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module2/reseaux-recurrents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Réseaux récurrents (RNN)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module2/qcm-evaluation-module2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module2/ressources/api-mistral-test.py" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test API Mistral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module2/ressources/evaluationCNN.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Évaluation CNN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -542,17 +961,630 @@
   
   
   
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Module 3 - Applications
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Module 3 - Applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../seance4/" class="md-nav__link">
+      <a href="../../../module3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Séance 4
+    Vue d'ensemble
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/frameworks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frameworks et bonnes pratiques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intégration de modèles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/preparation-projet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Préparation au projet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/qcm-evaluation-module3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/ressources/tensorflow-keras-debutants.ipynb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TensorFlow/Keras
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/ressources/diagnostic_problemes_performance.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagnostic de performance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/ressources/prototype-chatbot.py" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prototype chatbot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/ressources/cas-utilisation-entreprise.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cas d'utilisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/ressources/api-mistral-guide-simple.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guide API Mistral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Module 4 - Projet
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Module 4 - Projet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/projet-chatbot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projet Chatbot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/preparation-projet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Préparation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/partie1-developpement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Développement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/partie2-finalisation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Finalisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/partie3-presentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Présentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/qcm-evaluation-module4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_8" id="__nav_7_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/ressources/modele-documentation-technique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Template documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/ressources/exemple-base-connaissances.json" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exemple base de connaissances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/ressources/grille-evaluation-projet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grille d'évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -583,7 +1615,7 @@
             
   
   <span class="md-ellipsis">
-    Ressources
+    Ressources communes
     
   </span>
   
@@ -594,7 +1626,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Ressources
+            Ressources communes
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -609,7 +1641,7 @@
         
   
   <span class="md-ellipsis">
-    Liste
+    Vue d'ensemble
     
   </span>
   
@@ -686,6 +1718,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ressources/guide-etudiant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guide étudiant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -745,7 +1799,29 @@
         
   
   <span class="md-ellipsis">
-    Critères
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evaluation/criteres-evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Critères d'évaluation
     
   </span>
   
@@ -767,7 +1843,29 @@
         
   
   <span class="md-ellipsis">
-    Grille de répartition
+    Répartition des tâches
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evaluation/checklist-auto-evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Checklist d'auto-évaluation
     
   </span>
   
@@ -891,15 +1989,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#cellule-9-experimentation-markdown" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cellule 9 (Expérimentation - Markdown)
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -920,9 +2009,6 @@
                   
 
 
-  
-  
-
 
   <h1>Premier contact reseau neurones</h1>
 
@@ -940,7 +2026,7 @@
 <span class="k">-</span><span class="w"> </span>Visualiser les résultats
 <span class="k">-</span><span class="w"> </span>Tester le modèle avec vos propres dessins
 
-<span class="gu">### BTS SIO SLAM - Découverte du Deep Learning</span>
+<span class="gu">### BTS SIO  - Découverte du Deep Learning</span>
 </code></pre></div>
 <h3 id="cellule-2-configuration-code">Cellule 2 (Configuration - Code)</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Importation des bibliothèques nécessaires</span>
@@ -1083,15 +2169,17 @@
 <h3 id="cellule-8-dessin-interactif-code">Cellule 8 (Dessin interactif - Code)</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Interface interactive pour dessiner et prédire</span>
 <span class="c1"># Cette cellule permet de dessiner un chiffre directement dans Colab</span>
+
 <span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">output</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">ipywidgets</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">widgets</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">base64</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="c1"># Fonction pour créer un canvas HTML</span>
+
 <span class="k">def</span><span class="w"> </span><span class="nf">create_canvas</span><span class="p">():</span>
     <span class="n">canvas_html</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">    &lt;canvas id=&quot;canvas&quot; width=&quot;280&quot; height=&quot;280&quot; style=&quot;border: 2px solid black; background-color: white;&quot;&gt;&lt;/canvas&gt;</span>
@@ -1106,13 +2194,15 @@
 <span class="s2">      var ctx = canvas.getContext(&#39;2d&#39;);</span>
 <span class="s2">      var isDrawing = false;</span>
 
-<span class="s2">      // Configurer le style de dessin</span>
+<span class="s2">      // Remplir le fond en blanc dès le départ</span>
+<span class="s2">      ctx.fillStyle = &quot;white&quot;;</span>
+<span class="s2">      ctx.fillRect(0, 0, canvas.width, canvas.height);</span>
+
 <span class="s2">      ctx.lineWidth = 15;</span>
 <span class="s2">      ctx.lineCap = &#39;round&#39;;</span>
 <span class="s2">      ctx.lineJoin = &#39;round&#39;;</span>
 <span class="s2">      ctx.strokeStyle = &#39;black&#39;;</span>
 
-<span class="s2">      // Gérer les événements de dessin</span>
 <span class="s2">      canvas.addEventListener(&#39;mousedown&#39;, function(e) {</span>
 <span class="s2">        isDrawing = true;</span>
 <span class="s2">        ctx.beginPath();</span>
@@ -1134,13 +2224,12 @@
 <span class="s2">        isDrawing = false;</span>
 <span class="s2">      });</span>
 
-<span class="s2">      // Gérer le bouton Effacer</span>
 <span class="s2">      document.getElementById(&#39;clear_button&#39;).addEventListener(&#39;click&#39;, function() {</span>
-<span class="s2">        ctx.clearRect(0, 0, canvas.width, canvas.height);</span>
+<span class="s2">        ctx.fillStyle = &quot;white&quot;;</span>
+<span class="s2">        ctx.fillRect(0, 0, canvas.width, canvas.height);</span>
 <span class="s2">        document.getElementById(&#39;result&#39;).innerHTML = &#39;&#39;;</span>
 <span class="s2">      });</span>
 
-<span class="s2">      // Gérer le bouton Prédire</span>
 <span class="s2">      document.getElementById(&#39;predict_button&#39;).addEventListener(&#39;click&#39;, function() {</span>
 <span class="s2">        var imageData = canvas.toDataURL(&#39;image/png&#39;);</span>
 <span class="s2">        document.getElementById(&#39;result&#39;).innerHTML = &#39;Analyse en cours...&#39;;</span>
@@ -1152,41 +2241,42 @@
 
 <span class="c1"># Fonction pour prétraiter l&#39;image dessinée</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">preprocess_image</span><span class="p">(</span><span class="n">image_data</span><span class="p">):</span>
-    <span class="c1"># Extraire les données d&#39;image du format base64</span>
     <span class="n">image_data</span> <span class="o">=</span> <span class="n">image_data</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">image_data</span><span class="p">)))</span>
 
-    <span class="c1"># Redimensionner et convertir en niveaux de gris</span>
-    <span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">))</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">)</span>
+    <span class="c1"># Convertir en niveaux de gris et redimensionner</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">))</span>
 
-    <span class="c1"># Convertir en tableau numpy et normaliser</span>
+    <span class="c1"># Convertir en tableau numpy</span>
     <span class="n">image_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
-    <span class="n">image_array</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">image_array</span>  <span class="c1"># Inverser les couleurs (chiffre blanc sur fond noir comme MNIST)</span>
+
+    <span class="c1"># Vérification si inversion des couleurs est nécessaire</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">image_array</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">127</span><span class="p">:</span>  <span class="c1"># Fond clair, chiffre sombre</span>
+        <span class="n">image_array</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">image_array</span>
+
+    <span class="c1"># Normaliser les pixels</span>
     <span class="n">image_array</span> <span class="o">=</span> <span class="n">image_array</span> <span class="o">/</span> <span class="mf">255.0</span>
 
     <span class="k">return</span> <span class="n">image_array</span>
 
-<span class="c1"># Fonction pour afficher la prédiction</span>
+<span class="c1"># Fonction de prédiction</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">predict_digit</span><span class="p">(</span><span class="n">image_data</span><span class="p">):</span>
-    <span class="c1"># Prétraiter l&#39;image</span>
     <span class="n">image_array</span> <span class="o">=</span> <span class="n">preprocess_image</span><span class="p">(</span><span class="n">image_data</span><span class="p">)</span>
-
-    <span class="c1"># Préparer pour la prédiction</span>
     <span class="n">image_array</span> <span class="o">=</span> <span class="n">image_array</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
-    <span class="c1"># Prédire</span>
-    <span class="n">prediction</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">image_array</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">digit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">prediction</span><span class="p">)</span>
-    <span class="n">confidence</span> <span class="o">=</span> <span class="n">prediction</span><span class="p">[</span><span class="n">digit</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
-
-    <span class="c1"># Afficher l&#39;image prétraitée et la prédiction</span>
+    <span class="c1"># Affichage de l&#39;image prétraitée pour vérifier</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-
     <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image_array</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Image prétraitée&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
 
+    <span class="c1"># Prédiction</span>
+    <span class="n">prediction</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">image_array</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">digit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">prediction</span><span class="p">)</span>
+    <span class="n">confidence</span> <span class="o">=</span> <span class="n">prediction</span><span class="p">[</span><span class="n">digit</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
+
+    <span class="c1"># Affichage du graphique des probabilités</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">prediction</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Prédiction: </span><span class="si">{</span><span class="n">digit</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1195,43 +2285,46 @@
     <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-    <span class="c1"># Mettre à jour le résultat sur le canvas</span>
+    <span class="c1"># Afficher le résultat dans le notebook</span>
     <span class="n">output</span><span class="o">.</span><span class="n">eval_js</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">    document.getElementById(&#39;result&#39;).innerHTML = &#39;Prédiction: </span><span class="si">{</span><span class="n">digit</span><span class="si">}</span><span class="s2"> (Confiance: </span><span class="si">{</span><span class="n">confidence</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%)&#39;;</span>
 <span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
 
-<span class="c1"># Enregistrer la fonction pour l&#39;appel JavaScript</span>
+<span class="c1"># Enregistrer la fonction pour être appelée depuis JavaScript</span>
 <span class="n">output</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s1">&#39;notebook.predict&#39;</span><span class="p">,</span> <span class="n">predict_digit</span><span class="p">)</span>
 
 <span class="c1"># Afficher le canvas</span>
-<span class="n">display</span><span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">create_canvas</span><span class="p">()))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">create_canvas</span><span class="p">()))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dessinez un chiffre dans le canvas ci-dessus et cliquez sur &#39;Prédire&#39;&quot;</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="cellule-9-experimentation-markdown">Cellule 9 (Expérimentation - Markdown)</h3>
-<div class="highlight"><pre><span></span><code><span class="gu">## 🧪 Expérimentations</span>
 
-Voici quelques modifications que vous pouvez essayer pour améliorer ou observer les effets sur le modèle :
 
-<span class="k">1.</span> <span class="gs">**Modifier l&#39;architecture du réseau :**</span>
-<span class="w">   </span><span class="k">-</span><span class="w"> </span>Augmenter/diminuer le nombre de filtres dans les couches Conv2D
-<span class="w">   </span><span class="k">-</span><span class="w"> </span>Ajouter/retirer des couches convolutives ou denses
-<span class="w">   </span><span class="k">-</span><span class="w"> </span>Ajouter une couche Dropout pour réduire le surapprentissage
 
-<span class="k">2.</span> <span class="gs">**Changer les hyperparamètres d&#39;entraînement :**</span>
-<span class="w">   </span><span class="k">-</span><span class="w"> </span>Augmenter le nombre d&#39;époques
-<span class="w">   </span><span class="k">-</span><span class="w"> </span>Modifier la taille du batch
-<span class="w">   </span><span class="k">-</span><span class="w"> </span>Essayer différents optimiseurs (SGD, RMSprop, etc.)
+<span class="c1">### Cellule 9 (Expérimentation - Markdown)</span>
+<span class="err">```</span><span class="n">markdown</span>
+<span class="c1">## 🧪 Expérimentations</span>
 
-<span class="k">3.</span> <span class="gs">**Augmenter les données :**</span>
-<span class="w">   </span><span class="k">-</span><span class="w"> </span>Appliquer des rotations ou décalages aux images d&#39;entraînement
+<span class="n">Voici</span> <span class="n">quelques</span> <span class="n">modifications</span> <span class="n">que</span> <span class="n">vous</span> <span class="n">pouvez</span> <span class="n">essayer</span> <span class="n">pour</span> <span class="n">améliorer</span> <span class="n">ou</span> <span class="n">observer</span> <span class="n">les</span> <span class="n">effets</span> <span class="n">sur</span> <span class="n">le</span> <span class="n">modèle</span> <span class="p">:</span>
 
-Pour chaque modification, observez l&#39;impact sur :
-<span class="k">-</span><span class="w"> </span>La précision finale
-<span class="k">-</span><span class="w"> </span>La vitesse d&#39;entraînement
-<span class="k">-</span><span class="w"> </span>Les courbes d&#39;apprentissage
-<span class="k">-</span><span class="w"> </span>Le comportement face à vos propres dessins
+<span class="mf">1.</span> <span class="o">**</span><span class="n">Modifier</span> <span class="n">l</span><span class="s1">&#39;architecture du réseau :**</span>
+   <span class="o">-</span> <span class="n">Augmenter</span><span class="o">/</span><span class="n">diminuer</span> <span class="n">le</span> <span class="n">nombre</span> <span class="n">de</span> <span class="n">filtres</span> <span class="n">dans</span> <span class="n">les</span> <span class="n">couches</span> <span class="n">Conv2D</span>
+   <span class="o">-</span> <span class="n">Ajouter</span><span class="o">/</span><span class="n">retirer</span> <span class="n">des</span> <span class="n">couches</span> <span class="n">convolutives</span> <span class="n">ou</span> <span class="n">denses</span>
+   <span class="o">-</span> <span class="n">Ajouter</span> <span class="n">une</span> <span class="n">couche</span> <span class="n">Dropout</span> <span class="n">pour</span> <span class="n">réduire</span> <span class="n">le</span> <span class="n">surapprentissage</span>
 
-N&#39;hésitez pas à documenter vos observations dans la fiche fournie.
+<span class="mf">2.</span> <span class="o">**</span><span class="n">Changer</span> <span class="n">les</span> <span class="n">hyperparamètres</span> <span class="n">d</span><span class="s1">&#39;entraînement :**</span>
+   <span class="o">-</span> <span class="n">Augmenter</span> <span class="n">le</span> <span class="n">nombre</span> <span class="n">d</span><span class="s1">&#39;époques</span>
+   <span class="o">-</span> <span class="n">Modifier</span> <span class="n">la</span> <span class="n">taille</span> <span class="n">du</span> <span class="n">batch</span>
+   <span class="o">-</span> <span class="n">Essayer</span> <span class="n">différents</span> <span class="n">optimiseurs</span> <span class="p">(</span><span class="n">SGD</span><span class="p">,</span> <span class="n">RMSprop</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span><span class="p">)</span>
+
+<span class="mf">3.</span> <span class="o">**</span><span class="n">Augmenter</span> <span class="n">les</span> <span class="n">données</span> <span class="p">:</span><span class="o">**</span>
+   <span class="o">-</span> <span class="n">Appliquer</span> <span class="n">des</span> <span class="n">rotations</span> <span class="n">ou</span> <span class="n">décalages</span> <span class="n">aux</span> <span class="n">images</span> <span class="n">d</span><span class="s1">&#39;entraînement</span>
+
+<span class="n">Pour</span> <span class="n">chaque</span> <span class="n">modification</span><span class="p">,</span> <span class="n">observez</span> <span class="n">l</span><span class="s1">&#39;impact sur :</span>
+<span class="o">-</span> <span class="n">La</span> <span class="n">précision</span> <span class="n">finale</span>
+<span class="o">-</span> <span class="n">La</span> <span class="n">vitesse</span> <span class="n">d</span><span class="s1">&#39;entraînement</span>
+<span class="o">-</span> <span class="n">Les</span> <span class="n">courbes</span> <span class="n">d</span><span class="s1">&#39;apprentissage</span>
+<span class="o">-</span> <span class="n">Le</span> <span class="n">comportement</span> <span class="n">face</span> <span class="n">à</span> <span class="n">vos</span> <span class="n">propres</span> <span class="n">dessins</span>
+
+<span class="n">N</span><span class="s1">&#39;hésitez pas à documenter vos observations dans la fiche fournie.</span>
 </code></pre></div>
 
 
@@ -1306,6 +2399,8 @@ N&#39;hésitez pas à documenter vos observations dans la fiche fournie.
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../javascripts/progress.js"></script>
       
     
   </body>

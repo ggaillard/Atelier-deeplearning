@@ -82,3 +82,4 @@ Préparez-vous au développement du chatbot pédagogique qui constituera le proj
 Découvrez comment les frameworks modernes facilitent le développement d'applications de Deep Learning.
 
 [Commencer par les Frameworks](frameworks.md){ .md-button .md-button--primary }
+[Évaluer vos connaissances](qcm-evaluation-module3.md){ .md-button .md-button--secondary }

@@ -1,0 +1,2849 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cours BTS SIO sur le développement d'un chatbot pédagogique">
+      
+      
+        <meta name="author" content="Votre Nom">
+      
+      
+      
+        <link rel="prev" href="../preparation-projet/">
+      
+      
+        <link rel="next" href="../../module4/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Auto-évaluation - Chatbot pédagogique pour le Deep Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/progress.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#auto-evaluation-du-module-3-developpement-dapplications-pratiques" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Chatbot pédagogique pour le Deep Learning" class="md-header__button md-logo" aria-label="Chatbot pédagogique pour le Deep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Chatbot pédagogique pour le Deep Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Auto-évaluation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../carte-progression/" class="md-tabs__link">
+        
+  
+    
+  
+  Carte de progression
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../suivi-progression/" class="md-tabs__link">
+        
+  
+    
+  
+  Suivi de progression
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module1/" class="md-tabs__link">
+          
+  
+  Module 1 - Fondamentaux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module2/" class="md-tabs__link">
+          
+  
+  Module 2 - Architectures
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Module 3 - Applications
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module4/" class="md-tabs__link">
+          
+  
+  Module 4 - Projet
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ressources/" class="md-tabs__link">
+          
+  
+  Ressources communes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../evaluation/" class="md-tabs__link">
+          
+  
+  Évaluation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Chatbot pédagogique pour le Deep Learning" class="md-nav__button md-logo" aria-label="Chatbot pédagogique pour le Deep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Chatbot pédagogique pour le Deep Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../carte-progression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Carte de progression
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../suivi-progression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Suivi de progression
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Module 1 - Fondamentaux
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module 1 - Fondamentaux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/introduction-pratique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction pratique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/concepts-fondamentaux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concepts fondamentaux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/mini-projet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mini-projet individuel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/qcm-evaluation-module1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/ressources/fiche-observations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fiche d'observations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/ressources/guide-colab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guide Colab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/ressources/glossaire-dl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossaire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Module 2 - Architectures
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module 2 - Architectures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/reseaux-convolutifs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Réseaux convolutifs (CNN)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/reseaux-recurrents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Réseaux récurrents (RNN)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/qcm-evaluation-module2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/ressources/api-mistral-test.py" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test API Mistral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/ressources/evaluationCNN.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Évaluation CNN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Module 3 - Applications
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Module 3 - Applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frameworks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frameworks et bonnes pratiques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intégration de modèles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preparation-projet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Préparation au projet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-a-qcm-frameworks-et-optimisation-15-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partie A: QCM : Frameworks et optimisation (15 points)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Partie A: QCM : Frameworks et optimisation (15 points)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-parmi-ces-frameworks-de-deep-learning-lequel-est-le-plus-adapte-pour-le-deploiement-en-production-sur-des-appareils-mobiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Parmi ces frameworks de Deep Learning, lequel est le plus adapté pour le déploiement en production sur des appareils mobiles ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-quels-sont-les-avantages-des-modeles-pre-entraines-plusieurs-reponses-possibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Quels sont les avantages des modèles pré-entraînés ? (plusieurs réponses possibles)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-la-quantification-dun-modele-consiste-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. La quantification d'un modèle consiste à :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-quelle-technique-doptimisation-consiste-a-supprimer-les-connexions-les-moins-importantes-dans-un-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Quelle technique d'optimisation consiste à supprimer les connexions les moins importantes dans un réseau ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-quel-format-est-generalement-utilise-pour-deployer-des-modeles-sur-des-appareils-mobiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Quel format est généralement utilisé pour déployer des modèles sur des appareils mobiles ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-dans-une-api-de-deep-learning-quelle-technique-est-recommandee-pour-ameliorer-les-performances" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Dans une API de Deep Learning, quelle technique est recommandée pour améliorer les performances ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-quelle-architecture-de-modele-est-specifiquement-concue-pour-etre-legere-et-efficace" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Quelle architecture de modèle est spécifiquement conçue pour être légère et efficace ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-la-distillation-de-connaissances-consiste-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. La distillation de connaissances consiste à :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-lors-de-lintegration-dun-modele-dans-une-application-web-quelle-affirmation-est-correcte" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Lors de l'intégration d'un modèle dans une application web, quelle affirmation est correcte ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-parmi-ces-parametres-lequel-peut-etre-ajuste-pour-rendre-les-reponses-dun-modele-de-langage-plus-deterministes-moins-creatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Parmi ces paramètres, lequel peut être ajusté pour rendre les réponses d'un modèle de langage plus déterministes (moins créatives) ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-b-questions-a-reponse-courte-10-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partie B: Questions à réponse courte (10 points)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Partie B: Questions à réponse courte (10 points)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-expliquez-pourquoi-loptimisation-des-modeles-de-deep-learning-est-importante-dans-un-contexte-professionnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Expliquez pourquoi l'optimisation des modèles de Deep Learning est importante dans un contexte professionnel.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-decrivez-deux-differences-principales-entre-tensorflow-et-pytorch" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Décrivez deux différences principales entre TensorFlow et PyTorch.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-quels-sont-les-avantages-et-inconvenients-de-la-quantification-post-entrainement" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Quels sont les avantages et inconvénients de la quantification post-entraînement ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-comment-lapi-mistral-ai-peut-elle-etre-utilisee-pour-creer-un-chatbot-pedagogique" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Comment l'API Mistral AI peut-elle être utilisée pour créer un chatbot pédagogique ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-quelles-sont-les-deux-bonnes-pratiques-essentielles-pour-securiser-une-api-de-reconnaissance-dimages" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. Quelles sont les deux bonnes pratiques essentielles pour sécuriser une API de reconnaissance d'images ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-c-exercice-pratique-optimisation-dun-modele-15-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partie C: Exercice pratique : Optimisation d'un modèle (15 points)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-d-exercice-de-reflexion-cas-pratique-dintegration-10-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partie D: Exercice de réflexion : Cas pratique d'intégration (10 points)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#corrige" class="md-nav__link">
+    <span class="md-ellipsis">
+      Corrigé
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Corrigé">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcm" class="md-nav__link">
+    <span class="md-ellipsis">
+      QCM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions-a-reponse-courte-elements-attendus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions à réponse courte (éléments attendus)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-pratique-elements-de-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice pratique (éléments de correction)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-de-reflexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice de réflexion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bareme-et-auto-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Barème et auto-évaluation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ressources/tensorflow-keras-debutants.ipynb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TensorFlow/Keras
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ressources/diagnostic_problemes_performance.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagnostic de performance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ressources/prototype-chatbot.py" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prototype chatbot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ressources/cas-utilisation-entreprise.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cas d'utilisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ressources/api-mistral-guide-simple.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guide API Mistral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Module 4 - Projet
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Module 4 - Projet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/projet-chatbot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projet Chatbot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/preparation-projet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Préparation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/partie1-developpement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Développement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/partie2-finalisation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Finalisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/partie3-presentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Présentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/qcm-evaluation-module4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_8" id="__nav_7_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/ressources/modele-documentation-technique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Template documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/ressources/exemple-base-connaissances.json" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exemple base de connaissances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/ressources/grille-evaluation-projet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grille d'évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ressources communes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources communes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/api-mistral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Mistral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/base-connaissances/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Base de connaissances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/json-schemas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schémas JSON
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/guide-etudiant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guide étudiant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Évaluation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Évaluation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evaluation/criteres-evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Critères d'évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evaluation/grille-repartition-taches/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Répartition des tâches
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evaluation/checklist-auto-evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Checklist d'auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-a-qcm-frameworks-et-optimisation-15-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partie A: QCM : Frameworks et optimisation (15 points)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Partie A: QCM : Frameworks et optimisation (15 points)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-parmi-ces-frameworks-de-deep-learning-lequel-est-le-plus-adapte-pour-le-deploiement-en-production-sur-des-appareils-mobiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Parmi ces frameworks de Deep Learning, lequel est le plus adapté pour le déploiement en production sur des appareils mobiles ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-quels-sont-les-avantages-des-modeles-pre-entraines-plusieurs-reponses-possibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Quels sont les avantages des modèles pré-entraînés ? (plusieurs réponses possibles)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-la-quantification-dun-modele-consiste-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. La quantification d'un modèle consiste à :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-quelle-technique-doptimisation-consiste-a-supprimer-les-connexions-les-moins-importantes-dans-un-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Quelle technique d'optimisation consiste à supprimer les connexions les moins importantes dans un réseau ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-quel-format-est-generalement-utilise-pour-deployer-des-modeles-sur-des-appareils-mobiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Quel format est généralement utilisé pour déployer des modèles sur des appareils mobiles ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-dans-une-api-de-deep-learning-quelle-technique-est-recommandee-pour-ameliorer-les-performances" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Dans une API de Deep Learning, quelle technique est recommandée pour améliorer les performances ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-quelle-architecture-de-modele-est-specifiquement-concue-pour-etre-legere-et-efficace" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Quelle architecture de modèle est spécifiquement conçue pour être légère et efficace ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-la-distillation-de-connaissances-consiste-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. La distillation de connaissances consiste à :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-lors-de-lintegration-dun-modele-dans-une-application-web-quelle-affirmation-est-correcte" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Lors de l'intégration d'un modèle dans une application web, quelle affirmation est correcte ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-parmi-ces-parametres-lequel-peut-etre-ajuste-pour-rendre-les-reponses-dun-modele-de-langage-plus-deterministes-moins-creatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Parmi ces paramètres, lequel peut être ajusté pour rendre les réponses d'un modèle de langage plus déterministes (moins créatives) ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-b-questions-a-reponse-courte-10-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partie B: Questions à réponse courte (10 points)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Partie B: Questions à réponse courte (10 points)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-expliquez-pourquoi-loptimisation-des-modeles-de-deep-learning-est-importante-dans-un-contexte-professionnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Expliquez pourquoi l'optimisation des modèles de Deep Learning est importante dans un contexte professionnel.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-decrivez-deux-differences-principales-entre-tensorflow-et-pytorch" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Décrivez deux différences principales entre TensorFlow et PyTorch.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-quels-sont-les-avantages-et-inconvenients-de-la-quantification-post-entrainement" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Quels sont les avantages et inconvénients de la quantification post-entraînement ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-comment-lapi-mistral-ai-peut-elle-etre-utilisee-pour-creer-un-chatbot-pedagogique" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Comment l'API Mistral AI peut-elle être utilisée pour créer un chatbot pédagogique ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-quelles-sont-les-deux-bonnes-pratiques-essentielles-pour-securiser-une-api-de-reconnaissance-dimages" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. Quelles sont les deux bonnes pratiques essentielles pour sécuriser une API de reconnaissance d'images ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-c-exercice-pratique-optimisation-dun-modele-15-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partie C: Exercice pratique : Optimisation d'un modèle (15 points)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-d-exercice-de-reflexion-cas-pratique-dintegration-10-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partie D: Exercice de réflexion : Cas pratique d'intégration (10 points)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#corrige" class="md-nav__link">
+    <span class="md-ellipsis">
+      Corrigé
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Corrigé">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcm" class="md-nav__link">
+    <span class="md-ellipsis">
+      QCM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions-a-reponse-courte-elements-attendus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions à réponse courte (éléments attendus)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-pratique-elements-de-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice pratique (éléments de correction)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-de-reflexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice de réflexion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bareme-et-auto-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Barème et auto-évaluation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="auto-evaluation-du-module-3-developpement-dapplications-pratiques">Auto-évaluation du Module 3:  Développement d'applications pratiques</h1>
+<p><img alt="Auto-évaluation" src="../images/banner-evaluation.svg" /></p>
+<p>Ce QCM vous permettra d'évaluer votre compréhension des frameworks, de l'optimisation et de l'intégration des modèles de Deep Learning dans des applications concrètes.</p>
+<h2 id="instructions">Instructions</h2>
+<ul>
+<li>Cochez la ou les réponses correctes pour chaque question</li>
+<li>Certaines questions peuvent avoir plusieurs réponses correctes</li>
+<li>À la fin du questionnaire, répondez aux questions à réponse courte et complétez l'exercice pratique</li>
+<li>Calculez votre score grâce au corrigé fourni</li>
+<li>Durée recommandée : 20 minutes</li>
+</ul>
+<h2 id="partie-a-qcm-frameworks-et-optimisation-15-points">Partie A: QCM : Frameworks et optimisation (15 points)</h2>
+<p>Pour chaque question, cochez la ou les réponses correctes.</p>
+<h3 id="1-parmi-ces-frameworks-de-deep-learning-lequel-est-le-plus-adapte-pour-le-deploiement-en-production-sur-des-appareils-mobiles">1. Parmi ces frameworks de Deep Learning, lequel est le plus adapté pour le déploiement en production sur des appareils mobiles ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> a) PyTorch</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> b) TensorFlow/Keras</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> c) Scikit-learn</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> d) Theano</li>
+</ul>
+<h3 id="2-quels-sont-les-avantages-des-modeles-pre-entraines-plusieurs-reponses-possibles">2. Quels sont les avantages des modèles pré-entraînés ? (plusieurs réponses possibles)</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> a) Réduction du temps de développement</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> b) Besoin de moins de données d'entraînement</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> c) Poids plus petits que les modèles entraînés from scratch</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> d) Meilleures performances sur des datasets limités</li>
+</ul>
+<h3 id="3-la-quantification-dun-modele-consiste-a">3. La quantification d'un modèle consiste à :</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> a) Réduire le nombre de couches du modèle</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> b) Réduire la précision des poids (ex: float32 → int8)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> c) Supprimer les poids proches de zéro</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> d) Combiner plusieurs modèles ensemble</li>
+</ul>
+<h3 id="4-quelle-technique-doptimisation-consiste-a-supprimer-les-connexions-les-moins-importantes-dans-un-reseau">4. Quelle technique d'optimisation consiste à supprimer les connexions les moins importantes dans un réseau ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> a) Quantification</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> b) Élagage (pruning)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> c) Distillation</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> d) Factorisation matricielle</li>
+</ul>
+<h3 id="5-quel-format-est-generalement-utilise-pour-deployer-des-modeles-sur-des-appareils-mobiles">5. Quel format est généralement utilisé pour déployer des modèles sur des appareils mobiles ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> a) HDF5</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> b) SavedModel</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> c) TensorFlow Lite</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> d) ONNX</li>
+</ul>
+<h3 id="6-dans-une-api-de-deep-learning-quelle-technique-est-recommandee-pour-ameliorer-les-performances">6. Dans une API de Deep Learning, quelle technique est recommandée pour améliorer les performances ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> a) Recharger le modèle à chaque requête</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> b) Convertir les images en CSV avant traitement</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> c) Mettre en cache le modèle en mémoire</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> d) Désactiver la gestion d'erreurs</li>
+</ul>
+<h3 id="7-quelle-architecture-de-modele-est-specifiquement-concue-pour-etre-legere-et-efficace">7. Quelle architecture de modèle est spécifiquement conçue pour être légère et efficace ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> a) VGG16</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> b) MobileNetV2</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> c) ResNet152</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> d) InceptionV4</li>
+</ul>
+<h3 id="8-la-distillation-de-connaissances-consiste-a">8. La distillation de connaissances consiste à :</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> a) Extraire les poids d'un modèle pour les analyser</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> b) Entraîner un plus petit modèle (élève) à imiter un plus grand modèle (enseignant)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> c) Décomposer un gros modèle en plusieurs petits</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> d) Fusionner plusieurs modèles spécialisés</li>
+</ul>
+<h3 id="9-lors-de-lintegration-dun-modele-dans-une-application-web-quelle-affirmation-est-correcte">9. Lors de l'intégration d'un modèle dans une application web, quelle affirmation est correcte ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> a) Le modèle doit toujours être exécuté côté client (JavaScript)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> b) Les prédictions doivent être traitées de manière synchrone</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> c) Il est recommandé de prétraiter les images côté client avant envoi</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> d) L'API du modèle ne nécessite pas de documentation si elle est utilisée en interne</li>
+</ul>
+<h3 id="10-parmi-ces-parametres-lequel-peut-etre-ajuste-pour-rendre-les-reponses-dun-modele-de-langage-plus-deterministes-moins-creatives">10. Parmi ces paramètres, lequel peut être ajusté pour rendre les réponses d'un modèle de langage plus déterministes (moins créatives) ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> a) Augmenter la température</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> b) Diminuer la température</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> c) Augmenter le nombre maximum de tokens</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> d) Activer le mode streaming</li>
+</ul>
+<h2 id="partie-b-questions-a-reponse-courte-10-points">Partie B: Questions à réponse courte (10 points)</h2>
+<p>Répondez brièvement aux questions suivantes (2-3 phrases par question).</p>
+<h3 id="11-expliquez-pourquoi-loptimisation-des-modeles-de-deep-learning-est-importante-dans-un-contexte-professionnel">11. Expliquez pourquoi l'optimisation des modèles de Deep Learning est importante dans un contexte professionnel.</h3>
+<p>...................................................................</p>
+<p>...................................................................</p>
+<h3 id="12-decrivez-deux-differences-principales-entre-tensorflow-et-pytorch">12. Décrivez deux différences principales entre TensorFlow et PyTorch.</h3>
+<p>...................................................................</p>
+<p>...................................................................</p>
+<h3 id="13-quels-sont-les-avantages-et-inconvenients-de-la-quantification-post-entrainement">13. Quels sont les avantages et inconvénients de la quantification post-entraînement ?</h3>
+<p>...................................................................</p>
+<p>...................................................................</p>
+<h3 id="14-comment-lapi-mistral-ai-peut-elle-etre-utilisee-pour-creer-un-chatbot-pedagogique">14. Comment l'API Mistral AI peut-elle être utilisée pour créer un chatbot pédagogique ?</h3>
+<p>...................................................................</p>
+<p>...................................................................</p>
+<h3 id="15-quelles-sont-les-deux-bonnes-pratiques-essentielles-pour-securiser-une-api-de-reconnaissance-dimages">15. Quelles sont les deux bonnes pratiques essentielles pour sécuriser une API de reconnaissance d'images ?</h3>
+<p>...................................................................</p>
+<p>...................................................................</p>
+<h2 id="partie-c-exercice-pratique-optimisation-dun-modele-15-points">Partie C: Exercice pratique : Optimisation d'un modèle (15 points)</h2>
+<p>Complétez le code suivant pour optimiser un modèle MobileNetV2 avec la quantification TensorFlow Lite.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tf</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow.keras.applications</span><span class="w"> </span><span class="kn">import</span> <span class="n">MobileNetV2</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Chargement du modèle pré-entraîné</span>
+<span class="n">base_model</span> <span class="o">=</span> <span class="n">MobileNetV2</span><span class="p">(</span><span class="n">weights</span><span class="o">=</span><span class="s1">&#39;imagenet&#39;</span><span class="p">,</span> <span class="n">include_top</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># 1. Convertir le modèle en TensorFlow Lite</span>
+<span class="n">converter</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">lite</span><span class="o">.</span><span class="n">TFLiteConverter</span><span class="o">.</span><span class="n">from_keras_model</span><span class="p">(</span><span class="n">base_model</span><span class="p">)</span>
+<span class="n">tflite_model</span> <span class="o">=</span> <span class="o">.................................</span> <span class="c1"># À compléter</span>
+
+<span class="c1"># 2. Appliquer la quantification post-entraînement</span>
+<span class="n">converter</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">lite</span><span class="o">.</span><span class="n">TFLiteConverter</span><span class="o">.</span><span class="n">from_keras_model</span><span class="p">(</span><span class="n">base_model</span><span class="p">)</span>
+<span class="n">converter</span><span class="o">.</span><span class="n">optimizations</span> <span class="o">=</span> <span class="o">...........................</span> <span class="c1"># À compléter</span>
+<span class="n">quantized_model</span> <span class="o">=</span> <span class="n">converter</span><span class="o">.</span><span class="n">convert</span><span class="p">()</span>
+
+<span class="c1"># 3. Comparer les tailles des modèles</span>
+<span class="n">original_size</span> <span class="o">=</span> <span class="o">..................</span> <span class="c1"># À compléter : calculer la taille du modèle original</span>
+<span class="n">tflite_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tflite_model</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">)</span>  <span class="c1"># Taille en Mo</span>
+<span class="n">quantized_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">quantized_model</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">)</span>  <span class="c1"># Taille en Mo</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Taille du modèle original: </span><span class="si">{</span><span class="n">original_size</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> Mo&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Taille du modèle TFLite: </span><span class="si">{</span><span class="n">tflite_size</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> Mo&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Taille du modèle quantifié: </span><span class="si">{</span><span class="n">quantized_size</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> Mo&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Réduction de taille: </span><span class="si">{</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">quantized_size</span><span class="o">/</span><span class="n">original_size</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+
+<span class="c1"># 4. Fonction pour prétraiter une image pour l&#39;inférence</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">preprocess_image</span><span class="p">(</span><span class="n">image_path</span><span class="p">):</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load_img</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">))</span>
+    <span class="n">img_array</span> <span class="o">=</span> <span class="o">..................</span> <span class="c1"># À compléter : convertir l&#39;image en tableau</span>
+    <span class="n">img_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">img_array</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">applications</span><span class="o">.</span><span class="n">mobilenet_v2</span><span class="o">.</span><span class="n">preprocess_input</span><span class="p">(</span><span class="n">img_array</span><span class="p">)</span>
+
+<span class="c1"># 5. Création d&#39;un interpréteur TFLite</span>
+<span class="n">interpreter</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">lite</span><span class="o">.</span><span class="n">Interpreter</span><span class="p">(</span><span class="n">model_content</span><span class="o">=</span><span class="n">quantized_model</span><span class="p">)</span>
+<span class="o">.......................</span> <span class="c1"># À compléter : allouer les tenseurs</span>
+
+<span class="n">input_details</span> <span class="o">=</span> <span class="n">interpreter</span><span class="o">.</span><span class="n">get_input_details</span><span class="p">()</span>
+<span class="n">output_details</span> <span class="o">=</span> <span class="n">interpreter</span><span class="o">.</span><span class="n">get_output_details</span><span class="p">()</span>
+
+<span class="c1"># 6. Fonction d&#39;inférence avec le modèle quantifié</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">predict_with_tflite</span><span class="p">(</span><span class="n">image_path</span><span class="p">):</span>
+    <span class="c1"># Prétraitement de l&#39;image</span>
+    <span class="n">input_data</span> <span class="o">=</span> <span class="n">preprocess_image</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+
+    <span class="c1"># Définir les données d&#39;entrée</span>
+    <span class="n">interpreter</span><span class="o">.</span><span class="n">set_tensor</span><span class="p">(</span><span class="n">input_details</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;index&#39;</span><span class="p">],</span> <span class="n">input_data</span><span class="p">)</span>
+
+    <span class="c1"># Exécuter l&#39;inférence</span>
+    <span class="o">......................</span> <span class="c1"># À compléter : invoquer l&#39;interpréteur</span>
+
+    <span class="c1"># Obtenir les résultats</span>
+    <span class="n">output_data</span> <span class="o">=</span> <span class="n">interpreter</span><span class="o">.</span><span class="n">get_tensor</span><span class="p">(</span><span class="n">output_details</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;index&#39;</span><span class="p">])</span>
+
+    <span class="c1"># Traiter les résultats</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">applications</span><span class="o">.</span><span class="n">mobilenet_v2</span><span class="o">.</span><span class="n">decode_predictions</span><span class="p">(</span><span class="n">output_data</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
+<h2 id="partie-d-exercice-de-reflexion-cas-pratique-dintegration-10-points">Partie D: Exercice de réflexion : Cas pratique d'intégration (10 points)</h2>
+<p>Vous êtes développeur dans une petite entreprise qui propose des solutions de reconnaissance d'objets pour le commerce de détail. On vous demande de créer une API qui permettra d'identifier les produits à partir de photos prises par les employés sur leurs smartphones.</p>
+<ol>
+<li>Quelle architecture de modèle choisiriez-vous et pourquoi ? (2 points)</li>
+</ol>
+<p>...................................................................</p>
+<p>...................................................................</p>
+<ol>
+<li>Quelles techniques d'optimisation mettriez-vous en place ? (2 points)</li>
+</ol>
+<p>...................................................................</p>
+<p>...................................................................</p>
+<ol>
+<li>Comment structureriez-vous votre API REST ? Décrivez les endpoints et leurs paramètres. (3 points)</li>
+</ol>
+<p>...................................................................</p>
+<p>...................................................................</p>
+<p>...................................................................</p>
+<ol>
+<li>Quelles mesures de sécurité implémenteriez-vous ? (3 points)</li>
+</ol>
+<p>...................................................................</p>
+<p>...................................................................</p>
+<p>...................................................................</p>
+<h2 id="corrige">Corrigé</h2>
+<h3 id="qcm">QCM</h3>
+<ol>
+<li>b) TensorFlow/Keras</li>
+<li>a) b) d)</li>
+<li>b) Réduire la précision des poids (ex: float32 → int8)</li>
+<li>b) Élagage (pruning)</li>
+<li>c) TensorFlow Lite</li>
+<li>c) Mettre en cache le modèle en mémoire</li>
+<li>b) MobileNetV2</li>
+<li>b) Entraîner un plus petit modèle (élève) à imiter un plus grand modèle (enseignant)</li>
+<li>c) Il est recommandé de prétraiter les images côté client avant envoi</li>
+<li>b) Diminuer la température</li>
+</ol>
+<h3 id="questions-a-reponse-courte-elements-attendus">Questions à réponse courte (éléments attendus)</h3>
+<ol>
+<li>
+<p>L'optimisation permet de réduire les coûts d'infrastructure, diminuer la latence pour une meilleure expérience utilisateur, économiser l'énergie (crucial pour les appareils mobiles) et rendre les modèles accessibles sur des appareils à ressources limitées.</p>
+</li>
+<li>
+<p>TensorFlow utilise des graphes statiques (plus efficaces en production) tandis que PyTorch utilise des graphes dynamiques (plus flexibles pour la recherche). TensorFlow a un écosystème plus complet pour le déploiement (TFLite, TF Serving) alors que PyTorch est généralement considéré comme plus intuitif pour le développement.</p>
+</li>
+<li>
+<p>Avantages : Réduction significative de la taille du modèle (jusqu'à 4x), accélération de l'inférence, pas besoin de réentraînement. Inconvénients : Perte potentielle de précision, surtout pour les tâches complexes, incompatibilité avec certaines opérations avancées.</p>
+</li>
+<li>
+<p>L'API Mistral AI peut être utilisée pour créer un chatbot pédagogique en envoyant des requêtes avec un prompt système adapté à l'enseignement, en enrichissant les prompts avec une base de connaissances spécifique au domaine enseigné, et en maintenant un contexte conversationnel pour assurer la cohérence des échanges.</p>
+</li>
+<li>
+<p>Validation des entrées (vérification du format et de la taille des images), limitation du taux de requêtes (rate limiting), authentification par clé API, sanitization des chemins de fichiers, restriction des types MIME acceptés.</p>
+</li>
+</ol>
+<h3 id="exercice-pratique-elements-de-correction">Exercice pratique (éléments de correction)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Convertir le modèle en TensorFlow Lite</span>
+<span class="n">tflite_model</span> <span class="o">=</span> <span class="n">converter</span><span class="o">.</span><span class="n">convert</span><span class="p">()</span>
+
+<span class="c1"># 2. Appliquer la quantification post-entraînement</span>
+<span class="n">converter</span><span class="o">.</span><span class="n">optimizations</span> <span class="o">=</span> <span class="p">[</span><span class="n">tf</span><span class="o">.</span><span class="n">lite</span><span class="o">.</span><span class="n">Optimize</span><span class="o">.</span><span class="n">DEFAULT</span><span class="p">]</span>
+
+<span class="c1"># 3. Comparer les tailles des modèles</span>
+<span class="n">original_size</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">*</span> <span class="n">w</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">size</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">base_model</span><span class="o">.</span><span class="n">weights</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">)</span>
+
+<span class="c1"># 4. Fonction pour prétraiter une image pour l&#39;inférence</span>
+<span class="n">img_array</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">img_to_array</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+<span class="c1"># 5. Création d&#39;un interpréteur TFLite</span>
+<span class="n">interpreter</span><span class="o">.</span><span class="n">allocate_tensors</span><span class="p">()</span>
+
+<span class="c1"># 6. Fonction d&#39;inférence avec le modèle quantifié</span>
+<span class="n">interpreter</span><span class="o">.</span><span class="n">invoke</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="exercice-de-reflexion">Exercice de réflexion</h3>
+<p>Les réponses peuvent varier, mais devraient inclure des points comme:</p>
+<ol>
+<li>
+<p>Architecture: MobileNetV2 ou EfficientNet serait un bon choix car ils offrent un bon équilibre entre précision et performance, sont optimisés pour les appareils mobiles, et peuvent être facilement affinés pour des tâches spécifiques.</p>
+</li>
+<li>
+<p>Techniques d'optimisation: Quantification post-entraînement pour réduire la taille du modèle, transfer learning sur un petit dataset de produits spécifiques, et éventuellement pruning pour réduire davantage la taille.</p>
+</li>
+<li>
+<p>Structure API REST:</p>
+</li>
+<li>POST /predict - Pour envoyer une image et recevoir des prédictions</li>
+<li>GET /categories - Pour récupérer la liste des catégories de produits</li>
+<li>
+<p>POST /feedback - Pour recueillir les retours sur les prédictions incorrectes
+   Paramètres pour /predict: image (fichier ou base64), top_k (nombre de prédictions), confidence_threshold.</p>
+</li>
+<li>
+<p>Sécurité:</p>
+</li>
+<li>Authentification par clé API</li>
+<li>Rate limiting pour prévenir les abus</li>
+<li>Validation des entrées (taille et format d'image)</li>
+<li>HTTPS pour le chiffrement des données</li>
+<li>Logging sécurisé pour l'audit</li>
+</ol>
+<h2 id="bareme-et-auto-evaluation">Barème et auto-évaluation</h2>
+<h1 id="calcul-de-votre-score">Calcul de votre score</h1>
+<p>Partie A : 1 point par réponse correcte = 10 points max
+Partie B : 2 points par réponse correcte = 10 points max
+Partie C : 15 points pour l'exercice complété correctement
+Partie D : 10 points pour les réponses pertinentes</p>
+<h1 id="total-des-points-possibles-45">Total des points possibles : 45</h1>
+<p>Interprétation</p>
+<p>35-45 points : Excellente maîtrise des concepts d'intégration et d'optimisation des modèles
+24-35 points : Bonne compréhension, certains aspects à approfondir
+16-23 points : Compréhension de base, nécessite une révision approfondie
+0-15 points : Révision complète recommandée avant de poursuivre</p>
+<h2 id="questions-pour-approfondir">Questions pour approfondir</h2>
+<p>Si vous avez obtenu un bon score, vous pouvez explorer ces questions pour aller plus loin :</p>
+<ol>
+<li>Comment implémenteriez-vous un système de mise à jour progressive des modèles en production ?</li>
+<li>Quelles stratégies pourriez-vous utiliser pour gérer les biais potentiels dans un modèle de vision par ordinateur ?</li>
+<li>Comment adapter l'architecture d'une API de Deep Learning pour gérer des millions de requêtes par jour ?</li>
+<li>Quelles techniques permettraient d'optimiser les prompts pour un modèle de langage au-delà des exemples vus dans ce module ?</li>
+</ol>
+<p><a class="md-button" href="../">Retour au Module 3</a>
+<a class="md-button md-button--primary" href="../../module4/">Continuer vers le Module 4</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/votre-repo/chatbot-deeplearning" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../javascripts/progress.js"></script>
+      
+    
+  </body>
+</html>

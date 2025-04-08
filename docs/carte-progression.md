@@ -10,9 +10,14 @@ Cette carte de progression vous permettra de visualiser clairement les objectifs
 
 ```mermaid
 flowchart LR
-    M1[Module 1\nFondamentaux du DL] --> M2[Module 2\nArchitectures spécialisées]
-    M2 --> M3[Module 3\nDéveloppement d'applications]
-    M3 --> M4[Module 4\nProjet chatbot pédagogique]
+    M1[Module 1\nFondamentaux du DL] --> M1Q[QCM\nModule 1]
+    M1Q --> M2[Module 2\nArchitectures spécialisées]
+    M2 --> M2Q[QCM\nModule 2]
+    M2Q --> M3[Module 3\nDéveloppement d'applications]
+    M3 --> M3Q[QCM\nModule 3]
+    M3Q --> M4[Module 4\nProjet chatbot pédagogique]
+    M4 --> M4Q[QCM\nModule 4]
+    M4Q --> FIN[Projet\nFinal]
 ```
 
 ## Module 1 : Fondamentaux du Deep Learning
@@ -28,6 +33,11 @@ flowchart LR
 - Manipulation d'un réseau de neurones sur données MNIST
 - Comparaison directe ML vs DL sur le même jeu de données
 - Visualisation des couches internes d'un réseau
+
+**Auto-évaluation :**
+- QCM sur les concepts fondamentaux
+- Schéma conceptuel à compléter
+- Analyse critique des résultats obtenus
 
 **Livrables :**
 - Notebook "Hello World du Deep Learning" complété
@@ -47,6 +57,11 @@ flowchart LR
 - Cellules LSTM et GRU
 - Applications au traitement du langage naturel
 
+**Auto-évaluation :**
+- QCM sur les architectures CNN et RNN
+- Analyse de performance des modèles
+- Questions à réponse courte sur l'intégration pratique
+
 **Activités pratiques :**
 - Implémentation d'un CNN pour la classification d'images
 - Développement d'un RNN pour l'analyse de sentiment
@@ -60,6 +75,11 @@ flowchart LR
 - Techniques de régularisation (dropout, batch normalization)
 - API REST pour servir des modèles
 - Intégration de modèles de langage (API Mistral)
+
+**Auto-évaluation :**
+- QCM sur les frameworks et l'optimisation
+- Exercice pratique de développement d'API
+- Cas concret d'intégration de modèles
 
 **Activités pratiques :**
 - Utilisation de modèles pré-entraînés
@@ -75,6 +95,11 @@ flowchart LR
 - Structures de données pour bases de connaissances
 - Optimisation de l'expérience utilisateur
 - Techniques de déploiement
+
+**Auto-évaluation :**
+- QCM sur la conception et l'architecture du chatbot
+- Exercice pratique sur la gestion du contexte
+- Analyse de performance des optimisations
 
 **Activités pratiques :**
 - Développement d'une interface conversationnelle
@@ -125,6 +150,14 @@ flowchart LR
 - **API Mistral** - [docs.mistral.ai](https://docs.mistral.ai/)
 - **Hugging Face** - [huggingface.co/docs](https://huggingface.co/docs)
 - **FastAPI** - [fastapi.tiangolo.com](https://fastapi.tiangolo.com/)
+
+## Auto-évaluation et progression
+
+Pour suivre efficacement votre progression :
+- Complétez chaque QCM à la fin du module correspondant
+- Analysez vos résultats pour identifier vos points forts et points à améliorer
+- Révisez les concepts pour lesquels vous avez obtenu un score inférieur à 70%
+- N'hésitez pas à refaire les QCM après avoir approfondi les sujets concerné
 
 [Retour à l'accueil](index.md){ .md-button }
 [Commencer le Module 1](module1/index.md){ .md-button .md-button--primary }

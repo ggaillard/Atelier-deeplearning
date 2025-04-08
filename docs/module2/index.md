@@ -72,3 +72,4 @@ Travaillez en équipe pour diagnostiquer et améliorer un modèle sous-optimal.
 Commencez par découvrir les réseaux convolutifs (CNN) et leur application à la vision par ordinateur.
 
 [Commencer la Phase 1: CNN](reseaux-convolutifs.md){ .md-button .md-button--primary }
+[Évaluer vos connaissances](qcm-evaluation-module2.md){ .md-button .md-button--secondary }

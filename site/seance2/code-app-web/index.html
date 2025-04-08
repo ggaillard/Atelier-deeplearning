@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNN Visualisation - Reconnaissance de chiffres MNIST</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Classification de chiffres manuscrits</h1>
+            <p>Dessinez un chiffre (0-9) ou téléchargez une image</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="drawing-section">
+                <h2>Zone de dessin</h2>
+                <div class="canvas-container">
+                    <canvas id="drawingCanvas" width="280" height="280"></canvas>
+                </div>
+                <div class="buttons">
+                    <button id="predictBtn">Prédire</button>
+                    <button id="clearBtn">Effacer</button>
+                </div>
+                
+                <div class="upload-section">
+                    <h3>Ou téléchargez une image</h3>
+                    <input type="file" id="imageUpload" accept="image/*">
+                </div>
+            </div>
+            
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h2>Résultats</h2>
+                
+                <div class="prediction-box">
+                    <h3>Prédiction</h3>
+                    <div class="prediction-result">
+                        <span id="predictedDigit">-</span>
+                    </div>
+                    <p>Confiance: <span id="confidence">-</span>%</p>
+                </div>
+                
+                <div class="processed-image">
+                    <h3>Image prétraitée</h3>
+                    <img id="processedImage" src="" alt="Image prétraitée">
+                </div>
+                
+                <div class="probabilities">
+                    <h3>Probabilités par classe</h3>
+                    <div id="probabilitiesChart" class="chart-container"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="visualization-section" id="visualizationSection" style="display: none;">
+            <h2>Visualisation des feature maps</h2>
+            <p>Voici comment le modèle CNN "voit" votre image à travers différentes couches de convolution:</p>
+            
+            <div id="featureMapsContainer" class="feature-maps-container">
+                <!-- Les feature maps seront insérées ici dynamiquement -->
+            </div>
+        </div>
+        
+        <div class="explanation-section">
+            <h2>Comment ça marche?</h2>
+            <p>Cette application utilise un réseau de neurones convolutif (CNN) préentraîné sur le jeu de données MNIST. Quand vous dessinez ou téléchargez un chiffre:</p>
+            <ol>
+                <li>L'image est prétraitée (redimensionnée à 28x28 pixels et normalisée)</li>
+                <li>Le modèle CNN analyse l'image à travers plusieurs couches de convolution</li>
+                <li>Chaque couche de convolution détecte des caractéristiques spécifiques (bords, formes, etc.)</li>
+                <li>La couche de sortie produit les probabilités pour chaque chiffre de 0 à 9</li>
+                <li>Le chiffre avec la plus haute probabilité est sélectionné comme prédiction</li>
+            </ol>
+            <p>Les feature maps montrent les activations internes du réseau pour chaque couche de convolution, révélant ce que le réseau "voit".</p>
+        </div>
+    </div>
+
+    <!-- Inclusion de Chart.js pour les graphiques -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 site_name: Chatbot pédagogique pour le Deep Learning
 site_description: Cours BTS SIO sur le développement d'un chatbot pédagogique
 site_author: Votre Nom
+copyright: "© 2025 Atelier-deeplearning"
 # site_url: https://ggaillard.github.io/Atelier-deeplearning/  
 # repo_url: https://github.com/ggaillard/Atelier-deeplearning  
 repo_name: ggaillard/Atelier-deeplearning
@@ -111,6 +112,9 @@ nav:
       - Critères d'évaluation: evaluation/criteres-evaluation.md
       - Répartition des tâches: evaluation/grille-repartition-taches.md
       - Checklist d'auto-évaluation: evaluation/checklist-auto-evaluation.md
+  - Licences:
+      - Licence MIT (Code): https://github.com/ggaillard/Atelier-deeplearning/blob/main/LICENSE
+      - Licence CC BY-NC-SA (Contenu): https://github.com/ggaillard/Atelier-deeplearning/blob/main/CONTENT_LICENSE.md
     
 extra:
   social:
