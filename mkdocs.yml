@@ -66,29 +66,18 @@ nav:
       - Mini-projet individuel: module1/mini-projet.md
       - Auto-évaluation: module1/qcm-evaluation-module1.md
       - Ressources: 
-        - Fiche d'observations: module1/ressources/fiche-observations.md
-        - Guide Colab: module1/ressources/guide-colab.md
-        - Glossaire: module1/ressources/glossaire-dl.md
+        - Guide Colab: module1/ressources/guide-colab.md     
   - Module 2 - Architectures:
       - Vue d'ensemble: module2/index.md
       - Réseaux convolutifs (CNN): module2/reseaux-convolutifs.md
       - Réseaux récurrents (RNN): module2/reseaux-recurrents.md
       - Auto-évaluation: module2/qcm-evaluation-module2.md
-      - Ressources:
-        - Test API Mistral: module2/ressources/api-mistral-test.py
-        - Évaluation CNN: module2/ressources/evaluationCNN.md
   - Module 3 - Applications:
       - Vue d'ensemble: module3/index.md
       - Frameworks et bonnes pratiques: module3/frameworks.md
       - Intégration de modèles: module3/integration.md
       - Préparation au projet: module3/preparation-projet.md
       - Auto-évaluation: module3/qcm-evaluation-module3.md
-      - Ressources:
-        - TensorFlow/Keras: module3/ressources/tensorflow-keras-debutants.ipynb
-        - Diagnostic de performance: module3/ressources/diagnostic_problemes_performance.md
-        - Prototype chatbot: module3/ressources/prototype-chatbot.py
-        - Cas d'utilisation: module3/ressources/cas-utilisation-entreprise.md
-        - Guide API Mistral: module3/ressources/api-mistral-guide-simple.md
   - Module 4 - Projet:
       - Vue d'ensemble: module4/index.md
       - Projet Chatbot: module4/projet-chatbot.md
@@ -97,12 +86,8 @@ nav:
       - Finalisation: module4/partie2-finalisation.md
       - Présentation: module4/partie3-presentation.md
       - Auto-évaluation: module4/qcm-evaluation-module4.md
-      - Ressources:
-        - Template documentation: module4/ressources/modele-documentation-technique.md
-        - Exemple base de connaissances: module4/ressources/exemple-base-connaissances.json
-        - Grille d'évaluation: module4/ressources/grille-evaluation-projet.md
-  - Ressources communes:
-      - Base de connaissances: ressources/base-connaissances.md
+  - Glossaire:
+      - Glossaire: module1/ressources/glossaire-dl.md
            
   - Évaluation:
       - Vue d'ensemble: evaluation/index.md
