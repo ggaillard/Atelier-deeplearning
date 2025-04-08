@@ -1,6 +1,6 @@
 # Module 2 : Architectures spécialisées de réseaux de neurones
 
-![Architectures spécialisées](../images/banner-architectures-dl.svg)
+![Architectures spécialisées](https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1000&h=300)
 
 ## Objectifs du module
 
