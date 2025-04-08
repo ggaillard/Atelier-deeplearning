@@ -1,134 +1,102 @@
-# Checklist d'auto-évaluation du projet chatbot
+# Checklist d'auto-évaluation simplifiée
 
-Utilisez cette checklist pour vous assurer que votre projet chatbot pédagogique répond à tous les critères d'évaluation avant la soumission finale. Cette liste vous permettra d'identifier rapidement les points à améliorer.
+Cette checklist vous aidera à évaluer votre travail sur le projet de chatbot pédagogique. Elle est organisée par fonctionnalités essentielles pour vous permettre de vérifier votre progression.
 
-## Fonctionnalités du produit
+## Interface utilisateur 
 
 ### Interface conversationnelle
-- [ ] Zone de saisie des messages fonctionnelle
-- [ ] Affichage clair des messages utilisateur et assistant
-- [ ] Indicateur de chargement pendant le traitement
-- [ ] Historique de conversation visible et navigable
-- [ ] Remise à zéro de la conversation possible
-- [ ] Interface responsive (mobile/desktop)
+- [ ] Zone de saisie et d'affichage des messages
+- [ ] Indication visuelle lors du chargement des réponses
+- [ ] Affichage clair des échanges (messages utilisateur vs assistant)
+- [ ] Interface responsive (s'adapte aux différentes tailles d'écran)
 
-### Gestion du contexte
-- [ ] Conservation du contexte entre les messages
-- [ ] Références cohérentes aux questions/réponses précédentes
-- [ ] Limitation de la taille du contexte pour optimiser l'API
-- [ ] Priorité aux informations récentes en cas de contexte trop long
+## Fonctionnalités du chatbot
+
+### Intégration avec l'API Mistral
+- [ ] Configuration correcte de l'API Mistral
+- [ ] Gestion du contexte de conversation
+- [ ] Traitement correct des réponses de l'API
+- [ ] Gestion des erreurs (perte de connexion, limites de l'API)
 
 ### Base de connaissances
-- [ ] Structure hiérarchique des concepts de Deep Learning
-- [ ] Couverture complète du programme des 4 séances
-- [ ] Contenu adapté aux différents niveaux (débutant/intermédiaire/avancé)
-- [ ] Exemples concrets pour chaque concept principal
-- [ ] Sources et références techniques vérifiées
+- [ ] Structure pour stocker les concepts de Deep Learning
+- [ ] Définitions des concepts principaux du cours
+- [ ] Exemples pour illustrer les concepts
+- [ ] Références aux modules du cours
 
-### Intégration API Mistral
-- [ ] Connexion fonctionnelle avec gestion des erreurs
-- [ ] Optimisation des prompts pour obtenir des réponses pédagogiques
-- [ ] Gestion des limites de l'API (quotas, délais de réponse)
-- [ ] Paramètres adaptés selon le type de question (temperature, max_tokens)
-- [ ] Mécanisme de fallback en cas d'échec de l'API
-
-### Fonctionnalités pédagogiques
-- [ ] Adaptation du niveau d'explication au profil de l'utilisateur
-- [ ] Génération d'exemples pertinents
-- [ ] Quiz ou exercices interactifs
-- [ ] Suggestions de concepts à explorer
-- [ ] Visualisations ou schémas explicatifs (si applicable)
-
-## Aspects techniques
-
-### Code et architecture
-- [ ] Structure modulaire et bien organisée
-- [ ] Séparation claire frontend/backend
-- [ ] Nommage explicite des variables et fonctions
-- [ ] Commentaires sur le code complexe
-- [ ] Gestion des exceptions et des cas d'erreur
-
-### Performance
-- [ ] Temps de réponse raisonnable (<5s)
-- [ ] Optimisation des appels à l'API
-- [ ] Système de cache pour les questions fréquentes
-- [ ] Chargement optimisé des ressources
-- [ ] Fonctionnement fluide même avec un historique long
-
-### Sécurité et bonnes pratiques
-- [ ] Gestion sécurisée de la clé API (variables d'environnement)
-- [ ] Validation des entrées utilisateur
-- [ ] Protection contre les injections
-- [ ] Absence de secrets dans le code source
-- [ ] Respect des bonnes pratiques de développement web
+### Qualité pédagogique
+- [ ] Les explications sont claires et adaptées
+- [ ] Le chatbot propose des exemples pertinents
+- [ ] Les réponses sont structurées logiquement
+- [ ] Le chatbot peut adapter son niveau d'explication
 
 ## Documentation
 
-### Documentation technique
-- [ ] Architecture du système expliquée
-- [ ] Diagrammes et schémas d'explication
-- [ ] Instructions d'installation claires
-- [ ] Description des dépendances
-- [ ] Explication des choix techniques
-- [ ] Structure des fichiers détaillée
-- [ ] API et interfaces documentées
-
 ### Guide utilisateur
-- [ ] Instructions de démarrage
-- [ ] Description des fonctionnalités
-- [ ] Exemples d'utilisation
-- [ ] FAQ avec questions courantes
-- [ ] Troubleshooting des problèmes communs
-- [ ] Captures d'écran illustratives
+- [ ] Instructions d'installation
+- [ ] Guide d'utilisation du chatbot
+- [ ] Exemples de questions à poser
+- [ ] Limites connues du système
 
-### Base de code
-- [ ] README.md complet
-- [ ] Commentaires pertinents dans le code
-- [ ] Fichier requirements.txt ou package.json
-- [ ] Fichier .env.example (sans la vraie clé API)
-- [ ] Organisation claire des dossiers
+### Documentation technique
+- [ ] Structure du code et de l'application
+- [ ] Description de l'architecture
+- [ ] Explication des choix techniques
+- [ ] Instructions pour les développeurs
 
-## Présentation
+## Tests
 
-### Support visuel
-- [ ] Diapositives claires et professionnelles
-- [ ] Structure logique de la présentation
-- [ ] Équilibre entre texte et visuels
-- [ ] Mise en évidence des points forts
-- [ ] Aperçu de l'architecture et des fonctionnalités
+### Vérification des fonctionnalités
+- [ ] Le chatbot répond correctement aux questions sur le Deep Learning
+- [ ] Les messages s'affichent sans erreur
+- [ ] L'application fonctionne sur différents navigateurs
+- [ ] Les longues conversations sont gérées correctement
 
-### Démonstration
-- [ ] Scénario de démonstration préparé
-- [ ] Test des fonctionnalités clés en direct
-- [ ] Plan B en cas de problème technique
-- [ ] Exemples variés montrant différentes capacités
-- [ ] Timing respecté
+### Scénarios de test
+- [ ] Questions sur les concepts fondamentaux
+- [ ] Questions sur les CNN et RNN
+- [ ] Questions de suivi dans une conversation
+- [ ] Requêtes non liées au Deep Learning
 
-## Processus de développement
+## Conseils pour utiliser cette checklist
 
-### Organisation de l'équipe
-- [ ] Répartition équilibrée des tâches
-- [ ] Communication régulière documentée
-- [ ] Utilisation d'outils de gestion de projet
-- [ ] Revues de code entre membres
-- [ ] Journal des décisions importantes
+1. **Avant le développement** : Consultez cette liste pour comprendre les attentes
+2. **Pendant le développement** : Vérifiez régulièrement votre progression
+3. **Avant la soumission finale** : Assurez-vous que tous les points essentiels sont cochés
 
-### Gestion du temps
-- [ ] Respect des jalons intermédiaires
-- [ ] Planification des tâches documentée
-- [ ] Priorisation des fonctionnalités essentielles
-- [ ] Finalisation dans les délais
-- [ ] Adaptation aux imprévus
+## Priorisation des tâches
 
-## Comment utiliser cette checklist
+Si vous manquez de temps, concentrez-vous sur ces éléments prioritaires :
 
-1. Parcourez cette liste au moins une semaine avant la date de rendu finale
-2. Cochez les éléments déjà implémentés ou complétés
-3. Priorisez les éléments non cochés selon leur importance et difficulté
-4. Attribuez des responsables pour chaque élément restant
-5. Planifiez des points de contrôle réguliers pour suivre l'avancement
-6. Vérifiez à nouveau tous les points avant la soumission finale
+### Fonctionnalités essentielles (priorité haute)
+- Interface conversationnelle fonctionnelle
+- Intégration basique avec l'API Mistral
+- Base de connaissances avec concepts fondamentaux
+- Documentation utilisateur minimale
 
-Cette checklist vous aidera à vous assurer que vous n'avez rien oublié et que votre projet est aussi complet que possible.
+### Améliorations (priorité moyenne)
+- Gestion avancée du contexte conversationnel
+- Adaptation au niveau de l'utilisateur
+- Documentation technique complète
+- Tests approfondis
 
-[Retour à l'index d'évaluation](index.md){ .md-button }
+### Fonctionnalités bonus (priorité basse)
+- Fonctionnalités pédagogiques avancées (quiz, exercices)
+- Personnalisation de l'interface
+- Analyse des réponses de l'utilisateur
+- Multilingue ou fonctionnalités supplémentaires
+
+## Évaluation finale
+
+Avant de soumettre votre projet, comptez le nombre d'éléments que vous avez pu implémenter :
+
+- **Interface utilisateur** : ___ / 4
+- **Fonctionnalités API** : ___ / 4
+- **Base de connaissances** : ___ / 4
+- **Qualité pédagogique** : ___ / 4
+- **Documentation** : ___ / 4
+- **Tests** : ___ / 4
+
+**Total** : ___ / 24
+
+Ce score vous donne une idée de la complétude de votre projet, mais rappelez-vous que la qualité de l'implémentation est aussi importante que la quantité de fonctionnalités.

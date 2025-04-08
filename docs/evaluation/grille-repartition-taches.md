@@ -1,157 +1,94 @@
-# Grille de répartition des tâches
+# Grille de répartition des tâches 
 
 ## Organisation du travail d'équipe pour le projet chatbot pédagogique
 
-Cette grille vous aidera à organiser efficacement le travail au sein de votre équipe pour le développement du chatbot pédagogique sur le Deep Learning. Une bonne répartition des tâches est essentielle pour la réussite du projet et fait partie des critères d'évaluation.
+Cette grille  vous aidera à organiser efficacement le travail au sein de votre équipe pour le développement du chatbot pédagogique.
 
 ## Composition de l'équipe
 
-| Nom et prénom | Rôle principal | Compétences clés | Contact |
-|---------------|----------------|------------------|---------|
-| | | | |
-| | | | |
+| Nom et prénom | Rôle principal | Contact |
+|---------------|----------------|---------|
+| | | |
+| | | |
 
 *À compléter avec les informations de votre équipe (2 personnes maximum par équipe)*
 
 ## Domaines de responsabilité
 
-Pour équilibrer le travail entre les membres de l'équipe, nous recommandons de répartir les responsabilités selon les domaines suivants. Chaque étudiant doit prendre en charge une partie technique et une partie contenu/documentation.
+Pour une répartition équilibrée du travail, voici une suggestion de répartition :
 
-### Répartition suggérée des responsabilités
+### Répartition par composant
 
-#### Membre 1
+| Composant | Membre 1 | Membre 2 |
+|-----------|----------|----------|
+| Interface utilisateur | □ | □ |
+| Backend et API | □ | □ |
+| Base de connaissances | □ | □ |
+| Documentation | □ | □ |
 
-**Responsabilités techniques** :
-  - Conception de l'architecture globale du chatbot
-  - Développement de la logique de traitement des requêtes
-  - Intégration technique avec l'API Mistral AI
-  - Tests d'intégration
+*Cochez pour indiquer qui est responsable de chaque composant*
 
-**Responsabilités de contenu** :
-  - Structuration de la base de connaissances sur le Deep Learning
-  - Organisation des concepts en niveaux de difficulté
-  - Validation de l'exactitude des informations techniques
+### Répartition par tâches
 
-#### Membre 2
-
-**Responsabilités techniques** :
-  - Conception de l'interface conversationnelle
-  - Développement de l'interface utilisateur
-  - Gestion des flux de conversation
-  - Tests utilisateurs
-
-**Responsabilités de contenu** :
-  - Recherche et rédaction des contenus pédagogiques
-  - Création des exemples et illustrations
-  - Préparation de la documentation technique et du guide utilisateur
-
-## Planification des tâches par séance
-
-### À l'issue de la séance 2
-
-| Tâche | Responsable | Deadline | Statut |
+| Tâche | Responsable | Échéance | Statut |
 |-------|-------------|----------|--------|
-| Maîtriser les principes des CNN et RNN | | | |
-| Comprendre l'intégration des modèles dans une application web | | | |
-| Compléter les mini-projets CNN et RNN | | | |
-| Réfléchir aux applications potentielles pour le chatbot | | | |
-
-### À l'issue de la séance 3
-
-| Tâche | Responsable | Deadline | Statut |
-|-------|-------------|----------|--------|
-| Document d'architecture du chatbot | | | |
-| Première version de la structure de la base de connaissances | | | |
-| Prototype d'interface minimaliste | | | |
-| Premier test d'intégration avec API Mistral | | | |
-| Plan de projet détaillé | | | |
-
-### Pour la séance 4 (finalisation)
-
-| Tâche | Responsable | Deadline | Statut |
-|-------|-------------|----------|--------|
-| Interface conversationnelle complète | | | |
-| Intégration avancée avec l'API Mistral AI | | | |
-| Base de connaissances complète | | | |
-| Fonctionnalités pédagogiques | | | |
+| Configuration initiale du projet | | | |
+| Intégration de l'API Mistral | | | |
+| Création de l'interface web | | | |
+| Structuration de la base de connaissances | | | |
+| Développement des fonctionnalités pédagogiques | | | |
 | Tests fonctionnels | | | |
-| Documentation technique | | | |
-| Guide utilisateur | | | |
-| Préparation de la démonstration | | | |
+| Documentation | | | |
+| Préparation de la présentation | | | |
 
-## Suivi des réunions d'équipe
+## Planning simplifié
 
-| Date | Durée | Participants | Sujets abordés | Décisions prises | Prochaines actions |
-|------|-------|--------------|----------------|------------------|-------------------|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| Temps | Activité | Objectif |
+|-------|----------|----------|
+| Semaine 1 | Conception et planification | Définir l'architecture et les responsabilités |
+| Semaine 2 | Développement des composants de base | Interface et intégration API fonctionnelles |
+| Semaine 3 | Enrichissement de la base de connaissances | Améliorer la qualité des réponses |
+| Semaine 4 | Finalisation et tests | Préparer la présentation finale |
 
-*Planifiez au moins une réunion d'équipe entre chaque séance*
+## Suivi des progrès
 
-## Gestion des risques
+### Points d'étape
 
-Identifiez les principaux risques pour votre projet et prévoyez des stratégies d'atténuation :
+| Date | Objectifs atteints | Difficultés rencontrées | Prochaines étapes |
+|------|-------------------|------------------------|-------------------|
+| | | | |
+| | | | |
+| | | | |
 
-| Risque | Probabilité (1-5) | Impact (1-5) | Stratégie d'atténuation | Responsable |
-|--------|-------------------|--------------|-------------------------|-------------|
-| Difficultés d'intégration avec l'API Mistral | | | | |
-| Problèmes de cohérence dans la base de connaissances | | | | |
-| Dépassement des délais | | | | |
-| Conflits techniques ou de conception | | | | |
-| Limites de l'API gratuite (quotas) | | | | |
+*Prévoyez un point d'étape hebdomadaire minimum*
 
-## Outils de collaboration
+### Défis anticipés et solutions
 
-Listez les outils que vous utiliserez pour la collaboration d'équipe :
+| Défi potentiel | Solution envisagée |
+|----------------|-------------------|
+| Difficultés avec l'API Mistral | |
+| Problèmes d'intégration frontend/backend | |
+| Qualité insuffisante des réponses | |
+| Manque de temps pour certaines fonctionnalités | |
 
- - **Gestion de code** : _______________ (ex: GitHub, GitLab)
- - **Communication** : _______________ (ex: Discord, Slack)
- - **Partage de documents** : _______________ (ex: Google Drive, OneDrive)
- - **Suivi de projet** : _______________ (ex: Trello, GitHub Projects)
+## Ressources partagées
 
-## Processus de développement
+Listez ici les ressources partagées entre les membres de l'équipe :
 
-Décrivez brièvement votre approche pour le développement du chatbot :
-
-1. **Phase d'exploration** : 
-   - Tester l'API Mistral avec différents types de prompts
-   - Explorer des exemples de chatbots pédagogiques existants
-   - Définir les limites et possibilités techniques
-
-2. **Phase de conception** :
-   - Définir l'architecture technique
-   - Structurer la base de connaissances
-   - Concevoir les flux de conversation
-
-3. **Phase de développement** :
-   - Implémentation par composants
-   - Revues de code régulières
-   - Tests continus
-
-4. **Phase de finalisation** :
-   - Tests fonctionnels complets
-   - Documentation
-   - Préparation de la présentation
+- Dépôt GitHub : _________________________
+- Documentation de référence : _________________________
+- Outils de communication : _________________________
+- Autres ressources : _________________________
 
 ## Engagement de l'équipe
 
-En tant que membres de l'équipe, nous nous engageons à :
-   - Respecter les délais et les responsabilités assignées
-   - Communiquer régulièrement sur l'avancement de nos tâches
-   - Demander de l'aide si nous rencontrons des difficultés
-   - Contribuer activement à la réussite collective du projet
-   - Documenter notre travail pour faciliter l'intégration
+Nous nous engageons à :
+- Communiquer régulièrement sur notre progression
+- Respecter les échéances fixées
+- Demander de l'aide en cas de difficultés
+- Contribuer équitablement au projet
 
 
-## Évaluation de la répartition des tâches
+---
 
-Cette grille sera utilisée dans l'évaluation finale du projet, dans la composante "Projet final - Processus" (15% de la note finale). Les critères suivants seront considérés :
-
-   - Équilibre dans la répartition des responsabilités
-   - Adéquation entre les compétences et les rôles assignés
-   - Respect des engagements pris
-   - Qualité de la collaboration et de la communication
-   - Capacité d'adaptation face aux difficultés rencontrées
-
-Consultez la [grille détaillée d'évaluation](criteres-evaluation.md) pour plus d'informations sur les autres critères d'évaluation du projet.
+*Cette grille est un outil de travail qui peut évoluer selon vos besoins. L'important est qu'elle vous aide à structurer votre collaboration de manière efficace.*
