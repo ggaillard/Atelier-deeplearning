@@ -41,9 +41,11 @@ docs/
 │
 ├── module4/                                # Module 4: Projet intégrateur - Chatbot pédagogique
 │   ├── index.md                            # Vue d'ensemble du module 4
-│   ├── developpement.md                    # Développement du chatbot
-│   ├── finalisation.md                     # Finalisation et documentation
-│   ├── presentation.md                     # Présentation des projets
+│   ├── projet-chatbot.md                  # Présentation du chatbot pédagogique
+│   ├── preparation-projet.md
+│   ├── partie1-developpement.md            # Développement du chatbot 
+│   ├── partie2-finalisation.md             # Finalisation et tests 
+│   ├── partie3-presentation.md             # Présentation des projets 
 │   └── ressources/                         # Ressources spécifiques au module 4
 │       ├── template-chatbot/               # Template de base pour le chatbot
 │       │   ├── app.py                      # Application Flask/FastAPI

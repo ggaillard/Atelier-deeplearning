@@ -1,6 +1,6 @@
 # Module 3 : Développement d'applications pratiques
 
-![Applications pratiques](https://images.unsplash.com/photo-1639322537504-6427a16b0a28?auto=format&fit=crop&q=80&w=1000&h=300))
+![Applications pratiques](https://images.unsplash.com/photo-1639322537504-6427a16b0a28?auto=format&fit=crop&q=80&w=1000&h=300)
 
 ## Objectifs du module
 
