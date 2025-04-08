@@ -102,11 +102,8 @@ nav:
         - Exemple base de connaissances: module4/ressources/exemple-base-connaissances.json
         - Grille d'évaluation: module4/ressources/grille-evaluation-projet.md
   - Ressources communes:
-      - Vue d'ensemble: ressources/index.md
-      - API Mistral: ressources/api-mistral.md
       - Base de connaissances: ressources/base-connaissances.md
-      - Schémas JSON: ressources/json-schemas.md
-      - Guide étudiant: ressources/guide-etudiant.md
+           
   - Évaluation:
       - Vue d'ensemble: evaluation/index.md
       - Critères d'évaluation: evaluation/criteres-evaluation.md
