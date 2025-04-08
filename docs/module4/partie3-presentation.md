@@ -1,6 +1,3 @@
-## partie3-presentation.md
-
-```markdown
 # Phase 3 : Présentation des projets (30 min)
 
 ![Présentation des projets](../images/banner-chatbot-pedagogique-projet.svg)
