@@ -1,10 +1,18 @@
-# Auto-évaluation du Module 3
+# Auto-évaluation du Module 3:  Développement d'applications pratiques
 
 ![Auto-évaluation](../images/banner-evaluation.svg)
 
-Cette auto-évaluation vous permet de vérifier votre compréhension des concepts clés abordés dans le Module 3. Prenez le temps de répondre à chaque question, puis consultez les réponses en fin de document pour évaluer votre progression.
+Ce QCM vous permettra d'évaluer votre compréhension des frameworks, de l'optimisation et de l'intégration des modèles de Deep Learning dans des applications concrètes.
 
-## QCM : Frameworks et optimisation (15 points)
+## Instructions
+
+- Cochez la ou les réponses correctes pour chaque question
+- Certaines questions peuvent avoir plusieurs réponses correctes
+- À la fin du questionnaire, répondez aux questions à réponse courte et complétez l'exercice pratique
+- Calculez votre score grâce au corrigé fourni
+- Durée recommandée : 20 minutes
+
+## Partie A: QCM : Frameworks et optimisation (15 points)
 
 Pour chaque question, cochez la ou les réponses correctes.
 
@@ -68,7 +76,7 @@ Pour chaque question, cochez la ou les réponses correctes.
 - [ ] c) Augmenter le nombre maximum de tokens
 - [ ] d) Activer le mode streaming
 
-## Questions à réponse courte (10 points)
+## Partie B: Questions à réponse courte (10 points)
 
 Répondez brièvement aux questions suivantes (2-3 phrases par question).
 
@@ -102,7 +110,7 @@ Répondez brièvement aux questions suivantes (2-3 phrases par question).
 
 ...................................................................
 
-## Exercice pratique : Optimisation d'un modèle (15 points)
+## Partie C: Exercice pratique : Optimisation d'un modèle (15 points)
 
 Complétez le code suivant pour optimiser un modèle MobileNetV2 avec la quantification TensorFlow Lite.
 
@@ -166,7 +174,7 @@ def predict_with_tflite(image_path):
     return results[0]
 ```
 
-## Exercice de réflexion : Cas pratique d'intégration (10 points)
+## Partie D: Exercice de réflexion : Cas pratique d'intégration (10 points)
 
 Vous êtes développeur dans une petite entreprise qui propose des solutions de reconnaissance d'objets pour le commerce de détail. On vous demande de créer une API qui permettra d'identifier les produits à partir de photos prises par les employés sur leurs smartphones.
 
@@ -266,22 +274,20 @@ Les réponses peuvent varier, mais devraient inclure des points comme:
 
 ## Barème et auto-évaluation
 
-| Section | Points maximum | Mes points |
-|---------|----------------|------------|
-| QCM | 15 | |
-| Questions à réponse courte | 10 | |
-| Exercice pratique | 15 | |
-| Exercice de réflexion | 10 | |
-| **Total** | **50** | |
+# Calcul de votre score
 
-### Évaluation des compétences
+Partie A : 1 point par réponse correcte = 10 points max
+Partie B : 2 points par réponse correcte = 10 points max
+Partie C : 15 points pour l'exercice complété correctement
+Partie D : 10 points pour les réponses pertinentes
 
-| Note | Niveau | Commentaire |
-|------|--------|-------------|
-| 40-50 | Expert | Vous maîtrisez les concepts avancés et êtes prêt pour le projet final |
-| 30-39 | Confirmé | Bonne compréhension globale, quelques points à approfondir |
-| 20-29 | Intermédiaire | Compréhension des bases, mais besoin de renforcement |
-| 0-19 | Débutant | Nécessite une révision approfondie avant le projet final |
+# Total des points possibles : 45
+Interprétation
+
+35-45 points : Excellente maîtrise des concepts d'intégration et d'optimisation des modèles
+24-35 points : Bonne compréhension, certains aspects à approfondir
+16-23 points : Compréhension de base, nécessite une révision approfondie
+0-15 points : Révision complète recommandée avant de poursuivre
 
 ## Questions pour approfondir
 

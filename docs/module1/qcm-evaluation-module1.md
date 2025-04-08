@@ -1,11 +1,12 @@
-# QCM d'évaluation - Introduction au Deep Learning
+# QCM d'auto-évaluation - Module 1 : Fondamentaux du Deep Learning
 
 Ce QCM vous permettra d'évaluer votre compréhension des concepts fondamentaux du Deep Learning vus durant cette première séance.
 
 ## Instructions
 - Cochez la ou les réponses correctes pour chaque question
 - Certaines questions peuvent avoir plusieurs réponses correctes
-- Durée recommandée : 10 minutes
+- À la fin du questionnaire, calculez votre score grâce au corrigé fourni
+- Durée recommandée : 15 minutes
 
 ## Questions
 
@@ -102,5 +103,40 @@ Ce QCM vous permettra d'évaluer votre compréhension des concepts fondamentaux 
 - [ ] Il peut apprendre des représentations hiérarchiques des caractéristiques
 - [ ] Il nécessite moins de données d'entraînement
 
-## Soumission
-Une fois le QCM complété, soumettez vos réponses sur la plateforme du cours pour obtenir votre score et les explications des réponses correctes.
+## Auto-évaluation
+
+Une fois le QCM complété, vérifiez vos réponses avec le corrigé ci-dessous.
+
+### Corrigé
+1. c
+2. a, b, c, e
+3. c
+4. b
+5. d
+6. b
+7. b
+8. c
+9. a, b, c, e
+10. b, c
+11. b
+12. b
+13. c
+14. b
+15. a, c
+
+### Calcul de votre score
+Comptez 1 point par réponse correcte. Pour les questions à choix multiples, comptez 1 point uniquement si toutes vos sélections sont correctes.
+
+**Total des points possibles : 15**
+
+### Interprétation
+- **12-15 points** : Excellente maîtrise des concepts fondamentaux du Deep Learning
+- **9-11 points** : Bonne compréhension, quelques points à clarifier
+- **6-8 points** : Compréhension de base, révision nécessaire de certains concepts
+- **0-5 points** : Révision approfondie recommandée avant de poursuivre
+
+## Pour approfondir
+Si vous avez obtenu moins de 12 points, nous vous recommandons de revoir les concepts sur lesquels vous avez fait des erreurs. Consultez les ressources suivantes :
+- Le notebook "Hello World du Deep Learning"
+- La section "Concepts fondamentaux" du cours
+- Le glossaire des termes du Deep Learning
