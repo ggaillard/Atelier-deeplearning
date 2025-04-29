@@ -16,7 +16,7 @@
 
 Ce module explore les architectures spécialisées de réseaux de neurones à travers trois phases complémentaires.
 
-### [Phase 1 : Mini-projet CNN pour la vision par ordinateur](partie1-cnn.md) (1h30)
+### [Phase 1 : Mini-projet CNN pour la vision par ordinateur](reseaux-convolutifs.md) (2h)
 
 Plongez dans l'univers des réseaux convolutifs et apprenez à les utiliser pour la classification d'images.
 
@@ -25,7 +25,7 @@ Plongez dans l'univers des réseaux convolutifs et apprenez à les utiliser pour
 - Visualisation des filtres et feature maps
 - Intégration dans une application web simple
 
-### [Phase 2 : Mini-projet RNN pour le traitement du langage](partie2-rnn.md) (1h30)
+### [Phase 2 : Mini-projet RNN pour le traitement du langage](reseaux-recurrents.md) (2h)
 
 Découvrez comment les réseaux récurrents permettent de traiter des données séquentielles comme le texte.
 
@@ -33,15 +33,6 @@ Découvrez comment les réseaux récurrents permettent de traiter des données s
 - Cellules LSTM pour la mémoire à long terme
 - Implémentation d'un modèle d'analyse de sentiment
 - Expérimentation avec l'API Mistral AI pour le NLP
-
-### [Phase 3 : Challenge d'amélioration de modèle](partie3-amelioration.md) (45min)
-
-Travaillez en équipe pour diagnostiquer et améliorer un modèle sous-optimal.
-
-- Diagnostic des faiblesses d'un modèle existant
-- Expérimentation avec différentes architectures
-- Techniques d'optimisation des hyperparamètres
-- Mesure et analyse comparative des améliorations
 
 ## Prérequis
 
