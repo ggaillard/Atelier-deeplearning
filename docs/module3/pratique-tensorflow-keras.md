@@ -110,7 +110,7 @@ Ce module est entièrement axé sur la pratique et conçu spécifiquement pour d
    ```
 
 2. **Téléchargement des fichiers**
-   - Téléchargez [image_classifier.zip](lien_vers_archive)
+   - Téléchargez [image_classifier.zip](api-vetements-ia.zip)
    - Décompressez l'archive dans votre dossier de travail
 
 3. **Structure du projet**
