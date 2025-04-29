@@ -138,27 +138,32 @@ api-vetements-ia/
 #### Principaux mécanismes à comprendre
 
 1. **Chargement optimisé du modèle**
+   
    - Dans `models/classifier.py`, le modèle est chargé une seule fois au démarrage de l'application
    - Un pattern singleton est utilisé pour éviter les rechargements multiples
    - Le mécanisme de "lazy loading" permet de ne charger le modèle que lorsqu'il est nécessaire
 
 2. **Pipeline de prétraitement des images**
+   
    - Dans `utils/image_utils.py`, on trouve les fonctions de prétraitement des images
    - Le redimensionnement, la normalisation et la standardisation sont appliqués avant l'inférence
    - La détection et gestion de différents formats d'entrée (fichier, base64) simplifie l'intégration
 
 3. **Optimisations de performance**
+   
    - Dans `utils/model_utils.py`, plusieurs techniques d'optimisation sont appliquées :
      - Quantification des poids pour réduire la taille du modèle
      - Fusion des opérations de batch normalization avec les couches convolutives
      - Optimisations spécifiques à TensorFlow pour l'inférence
 
 4. **Architecture API REST**
+   
    - L'application expose une API REST pour permettre l'intégration avec différents clients
    - Le endpoint principal `/api/predict` accepte des images en entrée et retourne les prédictions
    - Le endpoint de santé `/api/health` permet de vérifier que l'API est opérationnelle
 
 5. **Interface utilisateur progressive**
+   
    - L'interface web utilise JavaScript pour offrir une expérience fluide sans rechargement
    - La caméra peut être utilisée sur les appareils mobiles pour capturer directement des images
    - Des indicateurs visuels (spinner, barres de progression) informent l'utilisateur sur l'état du traitement
@@ -200,16 +205,19 @@ L'interface utilisateur est conçue pour être réactive et informative. Examine
 ### Exercices pratiques
 
 1. **Exploration du code**
+   
    - Parcourez les différents fichiers du projet pour comprendre leur rôle
    - Identifiez où les techniques d'optimisation vues précédemment sont appliquées
    - Repérez les mécanismes de gestion d'erreurs et de fallback
 
 2. **Comprendre le flux de données**
+   
    - Tracez le parcours d'une image depuis son upload jusqu'à l'affichage des prédictions
    - Identifiez les transformations appliquées à l'image
    - Repérez comment les prédictions du modèle sont converties en résultats exploitables
 
 3. **Optimisations potentielles**
+   
    - Réfléchissez à d'autres optimisations qui pourraient être appliquées
    - Comment améliorer encore le temps de réponse de l'API ?
    - Quelles fonctionnalités supplémentaires pourraient enrichir cette application ?
