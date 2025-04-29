@@ -367,12 +367,14 @@ Pour préparer efficacement votre projet de chatbot pédagogique, voici les prem
    ```
 
 2. **Technologies recommandées**
+   
    - Backend: Python avec Flask ou FastAPI
    - Frontend: HTML/CSS/JavaScript (ou framework simple comme Vue.js)
    - API: Mistral AI
    - Base de connaissances: JSON structuré ou base NoSQL
 
 3. **Planification**
+   
    - **Séance 4, Phase 1** (2h30): Développement du chatbot
    - **Séance 4, Phase 2** (1h): Finalisation et tests
    - **Séance 4, Phase 3** (30min): Présentation des projets
