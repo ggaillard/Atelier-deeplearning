@@ -11,7 +11,7 @@ Dans cette phase, vous allez :
 - Visualiser et interpréter les filtres et feature maps d'un CNN
 - Intégrer un modèle CNN dans une application web simple
 
-## Partie 1: Principes des CNN (20 min)
+## Partie 1: Principes des CNN (30 min)
 
 ### Défi de réflexion initiale
 
@@ -93,7 +93,7 @@ Cette analogie montre comment un CNN analyse une image de manière hiérarchique
 
 Maintenant que vous avez conceptualisé l'architecture d'un CNN, passons à l'implémentation pratique pour voir ces concepts en action. Gardez votre schéma à portée de main - vous pourrez le compléter avec des observations pratiques.
 
-## Partie 2: Implémentation d'un CNN pour MNIST (40 min)
+## Partie 2: Implémentation d'un CNN pour MNIST (50 min)
 
 ### Instructions
 
@@ -102,10 +102,10 @@ Maintenant que vous avez conceptualisé l'architecture d'un CNN, passons à l'im
 3. Exécutez chaque cellule et observez les résultats
 4. Portez une attention particulière aux sections suivantes :
    
-   - Architecture du modèle CNN
-   - Processus d'entraînement
-   - Visualisation des filtres et feature maps
-   - Analyse des performances et des erreurs
+     - Architecture du modèle CNN
+     - Processus d'entraînement
+     - Visualisation des filtres et feature maps
+     - Analyse des performances et des erreurs
 
 ### Points clés à explorer
 
@@ -114,7 +114,7 @@ Maintenant que vous avez conceptualisé l'architecture d'un CNN, passons à l'im
 - Comment les feature maps révèlent-elles ce que "voit" le réseau ?
 - Quelles sont les limites du modèle face à des données bruitées ou déformées ?
 
-## Partie 3: Intégration dans une application web (30 min)
+## Partie 3: Intégration dans une application web (40 min)
 
 Dans cette partie, vous allez découvrir comment intégrer un modèle CNN pré-entraîné dans une application web interactive.
 
@@ -149,7 +149,7 @@ Pour la partie web, vous aurez besoin d'un fichier `mnist_cnn_model.h5` contenan
 - Interface familière et intuitive
 - Pas de problème d'installation ou de performance de TensorFlow sur sa machine locale.
 
-### Étape 2 : Configuration (5 minutes)
+### Étape 2 : Configuration (10 minutes)
 
 1.**Préparation de l'environnement VS Code**
    
@@ -176,7 +176,8 @@ Téléchargez les fichiers suivants et placez-les dans les dossiers indiqués :
 
    *Assurez-vous que votre structure de dossiers est la suivante:
 
-   votre_dossier_de_travail/
+ ```   votre_dossier_de_travail/
+
 ├── mnist_cnn_model.h5      # Votre modèle sauvegardé ou le modèle fourni
 ├── web-integration.py      # Script principal Flask
 ├── templates/
@@ -186,8 +187,11 @@ Téléchargez les fichiers suivants et placez-les dans les dossiers indiqués :
 │   └── style.css
 └── js/
 └── app.js
+ ```
 
-### Étape 3 : Installation et lancement (5 minutes)
+
+ 
+### Étape 3 : Installation et lancement (10 minutes)
 
 1.**Création du modèle via Google Colab**
 
@@ -219,27 +223,27 @@ Téléchargez les fichiers suivants et placez-les dans les dossiers indiqués :
 
 1. **Test avec dessins à la souris**
 
- - Dans l'interface web, dessinez clairement un chiffre (de 0 à 9) dans la zone prévue
-    - Cliquez sur le bouton "Prédire"
+    - Dans l'interface web, dessinez clairement un chiffre (de 0 à 9) dans la zone prévue
+        - Cliquez sur le bouton "Prédire"
 
- - Notez la prédiction et le niveau de confiance
- - Répétez ce processus avec 5 chiffres différents
- - Gardez une trace de vos résultats (tableau simple : chiffre réel / prédiction / confiance)
+    - Notez la prédiction et le niveau de confiance
+    - Répétez ce processus avec 5 chiffres différents
+    - Gardez une trace de vos résultats (tableau simple : chiffre réel / prédiction / confiance)
 
 2.**Test avec image importée**
 
- - Sur une feuille de papier, écrivez clairement un chiffre
- - Prenez une photo de ce chiffre avec votre smartphone ou appareil photo
- - Transférez l'image sur votre ordinateur (par email, cloud, câble USB, etc.)
- - Dans l'application, cliquez sur "Charger une image"
- - Sélectionnez l'image que vous venez de prendre
- - Observez la prédiction et le niveau de confiance
+    - Sur une feuille de papier, écrivez clairement un chiffre
+    - Prenez une photo de ce chiffre avec votre smartphone ou appareil photo
+    - Transférez l'image sur votre ordinateur (par email, cloud, câble USB, etc.)
+    - Dans l'application, cliquez sur "Charger une image"
+    - Sélectionnez l'image que vous venez de prendre
+    - Observez la prédiction et le niveau de confiance
 
-1. **Test avec feature maps (optionnel)**
+3. **Test avec feature maps (optionnel)**
 
-- Cochez la case "Visualiser les feature maps"
-- Dessinez un nouveau chiffre et cliquez sur "Prédire"
-- Observez les feature maps qui s'affichent (représentations visuelles de ce que "voit" le réseau)
+    - Cochez la case "Visualiser les feature maps"
+    - Dessinez un nouveau chiffre et cliquez sur "Prédire"
+   - Observez les feature maps qui s'affichent (représentations visuelles de ce que "voit" le réseau)
 
 ### Étape 5 : Évaluation et rapport (10 minutes)
 

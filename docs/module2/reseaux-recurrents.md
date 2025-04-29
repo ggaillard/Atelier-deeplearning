@@ -25,21 +25,21 @@ Imaginons que vous surveillez des logs de sécurité :
 ### Le RNN expliqué avec l'analogie du carnet de notes
 
 **Analogie du carnet de notes** :
-1. Vous analysez un rapport d'incident et prenez des notes importantes
-2. À chaque nouvelle section du rapport, vous :
-   - Lisez le nouveau contenu (nouvelle entrée)
-   - Consultez vos notes précédentes (état caché / mémoire)
-   - Mettez à jour vos notes avec les informations les plus pertinentes
-   - Utilisez la combinaison de la nouvelle section et de vos notes pour comprendre l'incident
+ 1. Vous analysez un rapport d'incident et prenez des notes importantes
+ 2. À chaque nouvelle section du rapport, vous :
+     - Lisez le nouveau contenu (nouvelle entrée)
+     - Consultez vos notes précédentes (état caché / mémoire)
+     - Mettez à jour vos notes avec les informations les plus pertinentes
+     - Utilisez la combinaison de la nouvelle section et de vos notes pour comprendre l'incident
 
 **Dans un RNN** :
-1. Le réseau traite les données séquentiellement (log par log, événement par événement)
-2. À chaque étape, il combine :
-   - L'entrée actuelle (ex : le log actuel)
-   - Son "état de mémoire" (ce qu'il a retenu des logs précédents)
-3. Il produit :
-   - Une sortie pour l'étape actuelle (ex: alerte ou non)
-   - Un nouvel état de mémoire pour l'étape suivante
+ 1. Le réseau traite les données séquentiellement (log par log, événement par événement)
+ 2. À chaque étape, il combine :
+     - L'entrée actuelle (ex : le log actuel)
+     - Son "état de mémoire" (ce qu'il a retenu des logs précédents)
+ 3. Il produit :
+     - Une sortie pour l'étape actuelle (ex: alerte ou non)
+     - Un nouvel état de mémoire pour l'étape suivante
  - 
 Avantages pour un développeur d'applications :
 
