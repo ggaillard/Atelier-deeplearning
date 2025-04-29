@@ -136,7 +136,7 @@ Pendant que vous travaillez sur ce notebook, réfléchissez aux questions suivan
 
 À la fin de cette activité, vous devrez produire une documentation synthétique (1-2 pages) répondant aux questions ci-dessus. Ce document servira de référence pour votre compréhension des RNN/LSTM et pourra être intégré dans la base de connaissances de votre chatbot pédagogique.
 
-Un document de référence complet sur ces concepts est disponible [ici](link-to-lstm-sentiment-analysis-doc) pour vous aider à approfondir votre compréhension.
+Un document de référence complet sur ces concepts est disponible [ici](ressources/lstm-sentiment-analyse.md) pour vous aider à approfondir votre compréhension.
 
 ## Conclusion et transition
 
