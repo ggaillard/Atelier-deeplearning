@@ -97,19 +97,6 @@ Ce QCM vous permettra d'évaluer votre compréhension des réseaux convolutifs (
 - [ ] Les GRU sont spécifiquement conçus pour les données non séquentielles
 - [ ] Les GRU ne peuvent pas être entraînés par rétropropagation
 
-## Partie C : Intégration pratique
-
-### 15. Lors de l'intégration d'un modèle CNN dans une application web, quelles considérations sont importantes ? (plusieurs réponses possibles)
-- [ ] Prétraitement des images côté client avant envoi au serveur
-- [ ] Optimisation de la taille du modèle pour réduire les temps de chargement
-- [ ] Gestion des erreurs en cas de prédictions incertaines
-- [ ] Compatibilité avec différents navigateurs web
-
-### 16. Dans notre expérience avec l'API Mistral AI, quels avantages avons-nous observés par rapport aux modèles RNN que nous avons implémentés ? (plusieurs réponses possibles)
-- [ ] Meilleure compréhension du contexte à long terme
-- [ ] Capacité à générer des réponses plus cohérentes et naturelles
-- [ ] Temps d'entraînement réduit
-- [ ] Facilité d'utilisation sans besoin d'expertise en Deep Learning
 
 ## Auto-évaluation
 
@@ -130,22 +117,21 @@ Une fois le QCM complété, vérifiez vos réponses avec le corrigé ci-dessous.
 12. a
 13. b, c, d
 14. b
-15. a, b, c, d
-16. a, b, d
+
 
 ### Calcul de votre score
 Comptez 1 point par réponse correcte. Pour les questions à choix multiples, comptez 1 point uniquement si toutes vos sélections sont correctes.
 
-**Total des points possibles : 16**
+**Total des points possibles : 14**
 
 ### Interprétation
-- **13-16 points** : Excellente maîtrise des architectures spécialisées de Deep Learning
-- **10-12 points** : Bonne compréhension, quelques points à clarifier
-- **7-9 points** : Compréhension de base, révision nécessaire de certains concepts
-- **0-6 points** : Révision approfondie recommandée avant de poursuivre
+- **11-14 points** : Excellente maîtrise des architectures spécialisées de Deep Learning
+- **8-10 points** : Bonne compréhension, quelques points à clarifier
+- **6-7 points** : Compréhension de base, révision nécessaire de certains concepts
+- **0-5 points** : Révision approfondie recommandée avant de poursuivre
 
 ## Pour approfondir
-Si vous avez obtenu moins de 13 points, nous vous recommandons de revoir les concepts sur lesquels vous avez fait des erreurs. Consultez les ressources suivantes :
+Si vous avez obtenu moins de 11 points, nous vous recommandons de revoir les concepts sur lesquels vous avez fait des erreurs. Consultez les ressources suivantes :
 - Les notebooks CNN et RNN du module
 - Les visualisations des architectures CNN et RNN
 - La documentation des mini-projets pratiques réalisés

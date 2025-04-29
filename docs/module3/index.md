@@ -43,12 +43,6 @@ Préparez-vous au développement du chatbot pédagogique qui constituera le proj
 - Exploration de l'API Mistral AI pour le traitement du langage naturel
 - Premiers pas vers un prototype fonctionnel
 
-## Prérequis
-
-- Avoir suivi les Modules 1 et 2
-- Comprendre les architectures CNN et RNN
-- Maîtriser les bases de Python
-- Un compte Google pour l'accès à Colab
 
 ## Livrables attendus
 

@@ -143,10 +143,11 @@ Un document de référence complet sur ces concepts est disponible [ici](ressour
 Cette section sur les réseaux récurrents vous a permis de comprendre une autre architecture fondamentale du Deep Learning, particulièrement adaptée aux données séquentielles comme le texte ou les séries temporelles. 
 
 Vous avez appris à:
-- Reconnaître les situations où les RNN/LSTM sont particulièrement adaptés
-- Comprendre les mécanismes de mémoire qui font la force de ces architectures
-- Implémenter un modèle LSTM pour l'analyse de sentiment de texte
-- Visualiser et interpréter les représentations internes du modèle
+
+ - Reconnaître les situations où les RNN/LSTM sont particulièrement adaptés
+ - Comprendre les mécanismes de mémoire qui font la force de ces architectures
+ - Implémenter un modèle LSTM pour l'analyse de sentiment de texte
+ - Visualiser et interpréter les représentations internes du modèle
 
 Ces connaissances constitueront une base essentielle pour le développement de votre projet de chatbot pédagogique dans les prochains modules.
 
