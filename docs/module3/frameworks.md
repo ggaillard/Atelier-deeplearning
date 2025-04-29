@@ -1,5 +1,3 @@
-Bien sûr, voici le fichier frameworks.md complet avec la partie sur le mini-projet simplifiée :
-
 # Phase 1 : Frameworks de Deep Learning (1h30)
 
 ![Frameworks pour débutants](https://images.unsplash.com/photo-1545987796-200677ee1011?auto=format&fit=crop&q=80&w=1000&h=300)
@@ -53,392 +51,345 @@ Voici quelques exemples concrets développés par des entreprises locales employ
 
 Développer une première application de reconnaissance d'images simple en utilisant TensorFlow/Keras et en suivant les bonnes pratiques de l'industrie.
 
-### Instructions
+### Instructions pas à pas
 
-1. **Configuration de l'environnement (5 min)**
+#### Étape 1: Configuration de l'environnement (5 min)
 
-   Ouvrez Google Colab et créez un nouveau notebook. Commencez par installer et importer les bibliothèques nécessaires:
+1. Ouvrez Google Colab dans votre navigateur en allant sur [colab.research.google.com](https://colab.research.google.com)
+2. Créez un nouveau notebook en cliquant sur "Nouveau notebook"
+3. Renommez le notebook en "Reconnaissance d'images TensorFlow" en cliquant sur "Untitled" en haut
+4. Copiez-collez le code suivant dans la première cellule et exécutez-la en cliquant sur le bouton Play ou en appuyant sur Shift+Enter:
 
-   ```python
-   # Vérification de la version de TensorFlow
-   import tensorflow as tf
-   print("TensorFlow version:", tf.__version__)
-   
-   # Importation des bibliothèques essentielles
-   from tensorflow.keras import layers, models
-   from tensorflow.keras.applications import MobileNetV2
-   from tensorflow.keras.preprocessing import image
-   import numpy as np
-   import matplotlib.pyplot as plt
-   ```
+```python
+# Vérification de la version de TensorFlow
+import tensorflow as tf
+print("TensorFlow version:", tf.__version__)
 
-2. **Utilisation d'un modèle pré-entraîné (10 min)**
+# Importation des bibliothèques essentielles
+from tensorflow.keras import layers, models
+from tensorflow.keras.applications import MobileNetV2
+from tensorflow.keras.preprocessing import image
+import numpy as np
+import matplotlib.pyplot as plt
+```
 
-   Au lieu de créer un modèle à partir de zéro, nous allons utiliser un modèle pré-entraîné, comme le font la plupart des professionnels:
+#### Étape 2: Utilisation d'un modèle pré-entraîné (10 min)
 
-   ```python
-   # Chargement d'un modèle pré-entraîné (sans les couches de classification)
-   base_model = MobileNetV2(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
-   
-   # Gel des couches pré-entraînées pour éviter leur modification
-   base_model.trainable = False
-   
-   # Création de notre propre modèle en ajoutant des couches de classification
-   model = models.Sequential([
-       base_model,
-       layers.GlobalAveragePooling2D(),
-       layers.Dense(1024, activation='relu'),
-       layers.Dense(1000, activation='softmax')  # 1000 classes ImageNet
-   ])
-   
-   # Résumé du modèle pour comprendre son architecture
-   model.summary()
-   ```
+1. Créez une nouvelle cellule en cliquant sur le bouton "+ Code" ou en appuyant sur Alt+Enter
+2. Copiez-collez le code suivant et exécutez-le:
 
-3. **Préparation d'une image de test (5 min)**
+```python
+# Chargement d'un modèle pré-entraîné complet
+model = MobileNetV2(weights='imagenet')
 
-   ```python
-   # Téléchargement d'une image d'exemple
-   !wget -q -O test_image.jpg https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Pug_600.jpg/280px-Pug_600.jpg
-   
-   # Fonction simple pour prétraiter une image
-   def preprocess_image(img_path):
-       # Chargement et redimensionnement
-       img = image.load_img(img_path, target_size=(224, 224))
-       
-       # Conversion en tableau numpy
-       img_array = image.img_to_array(img)
-       
-       # Ajout de la dimension de batch
-       img_array = np.expand_dims(img_array, axis=0)
-       
-       # Prétraitement pour le modèle
-       img_array = tf.keras.applications.mobilenet_v2.preprocess_input(img_array)
-       
-       return img_array
-   
-   # Affichage de l'image
-   plt.figure(figsize=(4, 4))
-   plt.imshow(image.load_img('test_image.jpg'))
-   plt.axis('off')
-   plt.show()
-   
-   # Prétraitement
-   processed_image = preprocess_image('test_image.jpg')
-   ```
+# Affichage du résumé du modèle pour comprendre son architecture
+print("Structure du modèle:")
+model.summary()
+```
 
-4. **Prédiction et interprétation des résultats (10 min)**
+3. Observez la structure du modèle dans la sortie: notez le nombre de paramètres, les différentes couches, etc.
 
-   Utilisez le modèle pour faire une prédiction et visualisez les résultats:
+#### Étape 3: Préparation d'une image de test (5 min)
 
-   ```python
-   # Prédiction
-   predictions = model.predict(processed_image)
-   
-   # Interprétation des résultats (top 5)
-   from tensorflow.keras.applications.mobilenet_v2 import decode_predictions
-   
-   # Décodage des prédictions (conversion des indices en labels)
-   decoded_predictions = decode_predictions(predictions, top=5)[0]
-   
-   # Affichage des résultats
-   plt.figure(figsize=(10, 3))
-   labels = [pred[1] for pred in decoded_predictions]
-   scores = [pred[2] for pred in decoded_predictions]
-   
-   plt.barh(labels, scores)
-   plt.xlabel('Probabilité')
-   plt.title('Top 5 des prédictions')
-   plt.xlim(0, 1.0)
-   plt.gca().invert_yaxis()  # Pour que le plus probable soit en haut
-   plt.show()
-   
-   print("Prédictions:")
-   for i, (imagenet_id, label, score) in enumerate(decoded_predictions):
-       print(f"{i+1}. {label} ({score:.2f})")
-   ```
+1. Créez une nouvelle cellule et exécutez le code suivant:
 
-## Mini-projet : Développement d'une API de reconnaissance d'images (45 min)
+```python
+# Téléchargement d'une image d'exemple
+!wget -q -O test_image.jpg https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Pug_600.jpg/280px-Pug_600.jpg
+
+# Affichage de l'image téléchargée
+plt.figure(figsize=(4, 4))
+plt.imshow(image.load_img('test_image.jpg'))
+plt.axis('off')
+plt.title("Image à classifier")
+plt.show()
+
+# Fonction pour prétraiter l'image
+def preprocess_image(img_path):
+    # Chargement et redimensionnement à la taille attendue par le modèle
+    img = image.load_img(img_path, target_size=(224, 224))
+    
+    # Conversion en tableau numpy
+    img_array = image.img_to_array(img)
+    
+    # Ajout de la dimension de batch (pour un seul échantillon)
+    img_array = np.expand_dims(img_array, axis=0)
+    
+    # Prétraitement spécifique à MobileNetV2
+    img_array = tf.keras.applications.mobilenet_v2.preprocess_input(img_array)
+    
+    return img_array
+
+# Application du prétraitement à notre image
+processed_image = preprocess_image('test_image.jpg')
+print("Forme de l'image prétraitée:", processed_image.shape)
+```
+
+#### Étape 4: Prédiction et interprétation des résultats (10 min)
+
+1. Créez une nouvelle cellule et exécutez le code suivant:
+
+```python
+# Utilisation du modèle pour faire une prédiction
+predictions = model.predict(processed_image)
+
+# Décodage des prédictions (conversion des indices en labels)
+from tensorflow.keras.applications.mobilenet_v2 import decode_predictions
+decoded_predictions = decode_predictions(predictions, top=5)[0]
+
+# Affichage des résultats sous forme de graphique
+plt.figure(figsize=(10, 3))
+labels = [pred[1].replace('_', ' ') for pred in decoded_predictions]
+scores = [pred[2] for pred in decoded_predictions]
+
+plt.barh(labels, scores)
+plt.xlabel('Probabilité')
+plt.title('Top 5 des prédictions')
+plt.xlim(0, 1.0)
+plt.gca().invert_yaxis()  # Pour que le plus probable soit en haut
+plt.tight_layout()
+plt.show()
+
+# Affichage des résultats détaillés
+print("Prédictions:")
+for i, (imagenet_id, label, score) in enumerate(decoded_predictions):
+    print(f"{i+1}. {label} ({score:.2f})")
+```
+
+2. Analysez les résultats:
+   - Les prédictions indiquent-elles correctement qu'il s'agit d'un chien de race carlin (pug)?
+   - Observez les probabilités associées à chaque classe
+   - Quelles autres races de chiens sont détectées?
+
+## Mini-projet : Application interactive de reconnaissance d'images (45 min)
 
 ### Objectif
 
-Créer une API REST simple qui permette à d'autres applications d'utiliser votre modèle de reconnaissance d'images.
+Créer une application interactive simple qui permet de tester la reconnaissance d'images sur différentes photos.
 
-### Instructions
+### Instructions pas à pas
 
-#### 1. Préparation de l'environnement pour l'API (5 min)
+#### Étape 1: Création d'une interface interactive dans Colab (10 min)
+
+1. Créez une nouvelle cellule et exécutez le code suivant:
 
 ```python
-# Installation de Flask pour l'API
-!pip install flask flask-cors
+# Installation des widgets interactifs
+!pip install -q ipywidgets
+import ipywidgets as widgets
+from IPython.display import display, HTML, clear_output
 ```
 
-#### 2. Création de l'application Flask (20 min)
-
-Créez un fichier `app.py` avec le code suivant:
+2. Dans une nouvelle cellule, créez l'interface utilisateur:
 
 ```python
-from flask import Flask, request, jsonify
-import numpy as np
-import tensorflow as tf
-from tensorflow.keras.applications import MobileNetV2
-from tensorflow.keras.applications.mobilenet_v2 import decode_predictions, preprocess_input
-from tensorflow.keras.preprocessing import image
-from flask_cors import CORS
-import base64
-from io import BytesIO
-from PIL import Image
-
-# Initialisation de l'application Flask
-app = Flask(__name__)
-CORS(app)  # Permet les requêtes cross-origin
-
-# Chargement du modèle pré-entraîné
-print("Chargement du modèle...")
-model = MobileNetV2(weights='imagenet')
-print("Modèle chargé!")
-
-# Fonction de prétraitement des images
-def preprocess_image(img):
-    img = img.resize((224, 224))
+# Fonction pour classifier une image téléchargée
+def classify_uploaded_image(change):
+    # Effacer les sorties précédentes
+    clear_output(wait=True)
+    
+    # Afficher l'interface
+    display(file_upload)
+    display(output)
+    
+    # Récupérer le fichier téléchargé
+    uploaded_file = list(change['new'].values())[0]
+    content = uploaded_file['content']
+    
+    # Sauvegarder l'image localement
+    with open('uploaded_image.jpg', 'wb') as f:
+        f.write(content)
+    
+    # Prétraiter l'image
+    img = image.load_img('uploaded_image.jpg', target_size=(224, 224))
     img_array = image.img_to_array(img)
     img_array = np.expand_dims(img_array, axis=0)
-    return preprocess_input(img_array)
+    img_array = tf.keras.applications.mobilenet_v2.preprocess_input(img_array)
+    
+    # Afficher l'image originale
+    plt.figure(figsize=(10, 6))
+    plt.subplot(1, 2, 1)
+    plt.imshow(image.load_img('uploaded_image.jpg'))
+    plt.title("Image téléchargée")
+    plt.axis('off')
+    
+    # Faire la prédiction
+    predictions = model.predict(img_array)
+    decoded_preds = decode_predictions(predictions, top=5)[0]
+    
+    # Afficher les résultats sous forme de graphique
+    plt.subplot(1, 2, 2)
+    labels = [pred[1].replace('_', ' ') for pred in decoded_preds]
+    scores = [pred[2] for pred in decoded_preds]
+    
+    plt.barh(labels, scores)
+    plt.xlabel('Probabilité')
+    plt.title('Top 5 des prédictions')
+    plt.xlim(0, 1.0)
+    plt.gca().invert_yaxis()
+    plt.tight_layout()
+    plt.show()
+    
+    # Afficher les résultats textuels
+    print("Prédictions:")
+    for i, (imagenet_id, label, score) in enumerate(decoded_preds):
+        print(f"{i+1}. {label.replace('_', ' ')} ({score:.2f})")
 
-# Endpoint principal pour les prédictions
-@app.route('/predict', methods=['POST'])
-def predict():
-    # Vérification qu'une image a été envoyée
-    if 'image' not in request.files:
-        # Vérifier si l'image est envoyée en base64
-        if request.json and 'image' in request.json:
-            # Décodage de l'image base64
-            image_data = base64.b64decode(request.json['image'].split(',')[1])
-            img = Image.open(BytesIO(image_data))
-        else:
-            return jsonify({'error': 'Aucune image fournie'}), 400
-    else:
-        # Lecture de l'image depuis les fichiers
-        file = request.files['image']
-        img = Image.open(file.stream)
-    
-    # Prétraitement
-    processed_img = preprocess_image(img)
-    
-    # Prédiction
-    predictions = model.predict(processed_img)
-    
-    # Décodage des prédictions (top 5)
-    decoded = decode_predictions(predictions, top=5)[0]
-    
-    # Formatage de la réponse
-    results = []
-    for _, label, score in decoded:
-        results.append({
-            'label': label,
-            'probability': float(score)
-        })
-    
-    return jsonify({
-        'predictions': results
-    })
+# Créer les widgets
+file_upload = widgets.FileUpload(
+    accept='.jpg, .jpeg, .png',
+    multiple=False,
+    description='Télécharger une image:'
+)
+output = widgets.Output()
 
-if __name__ == '__main__':
-    # Démarrer le serveur sur le port 5000
-    app.run(host='0.0.0.0', port=5000)
+# Lier la fonction au widget
+file_upload.observe(classify_uploaded_image, names='value')
+
+# Afficher l'interface
+display(HTML("<h3>Application de reconnaissance d'images</h3>"))
+display(HTML("<p>Téléchargez une image pour voir ce que le modèle peut reconnaître:</p>"))
+display(file_upload)
+display(output)
 ```
 
-#### 3. Interface utilisateur simple (15 min)
+#### Étape 2: Démonstration avec des exemples variés (15 min)
 
-Créez un fichier `index.html` avec ce code:
-
-```html
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reconnaissance d'images</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-        }
-        .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .upload-section {
-            margin: 20px 0;
-            text-align: center;
-        }
-        #preview {
-            max-width: 100%;
-            max-height: 300px;
-            margin: 20px auto;
-            display: none;
-            border-radius: 8px;
-        }
-        #results {
-            margin-top: 20px;
-            display: none;
-        }
-        .result-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        #loading {
-            text-align: center;
-            display: none;
-            margin: 20px 0;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Reconnaissance d'Images</h1>
-        <p>Téléchargez une image pour voir ce que l'IA peut reconnaître.</p>
-        
-        <div class="upload-section">
-            <input type="file" id="image-upload" accept="image/*">
-            <button id="predict-button">Analyser l'image</button>
-        </div>
-        
-        <img id="preview" src="#" alt="Aperçu de l'image">
-        
-        <div id="loading">
-            Analyse en cours...
-        </div>
-        
-        <div id="results">
-            <h2>Résultats</h2>
-            <div id="predictions-container"></div>
-        </div>
-    </div>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const imageUpload = document.getElementById('image-upload');
-            const previewImage = document.getElementById('preview');
-            const predictButton = document.getElementById('predict-button');
-            const resultsDiv = document.getElementById('results');
-            const loadingDiv = document.getElementById('loading');
-            const predictionsContainer = document.getElementById('predictions-container');
-            
-            // Aperçu de l'image
-            imageUpload.addEventListener('change', function() {
-                if (this.files && this.files[0]) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        previewImage.src = e.target.result;
-                        previewImage.style.display = 'block';
-                        resultsDiv.style.display = 'none';
-                    }
-                    reader.readAsDataURL(this.files[0]);
-                }
-            });
-            
-            // Envoi de l'image pour analyse
-            predictButton.addEventListener('click', function() {
-                if (!imageUpload.files || !imageUpload.files[0]) {
-                    alert('Veuillez sélectionner une image.');
-                    return;
-                }
-                
-                loadingDiv.style.display = 'block';
-                resultsDiv.style.display = 'none';
-                
-                const formData = new FormData();
-                formData.append('image', imageUpload.files[0]);
-                
-                fetch('http://localhost:5000/predict', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    loadingDiv.style.display = 'none';
-                    predictionsContainer.innerHTML = '';
-                    
-                    if (data.error) {
-                        predictionsContainer.innerHTML = `<p class="error">${data.error}</p>`;
-                    } else {
-                        data.predictions.forEach(pred => {
-                            const resultItem = document.createElement('div');
-                            resultItem.className = 'result-item';
-                            
-                            const label = document.createElement('div');
-                            label.textContent = pred.label.replace('_', ' ');
-                            
-                            const probability = document.createElement('div');
-                            probability.textContent = `${(pred.probability * 100).toFixed(2)}%`;
-                            
-                            resultItem.appendChild(label);
-                            resultItem.appendChild(probability);
-                            predictionsContainer.appendChild(resultItem);
-                        });
-                    }
-                    
-                    resultsDiv.style.display = 'block';
-                })
-                .catch(error => {
-                    loadingDiv.style.display = 'none';
-                    alert('Erreur lors de la communication avec l\'API: ' + error);
-                });
-            });
-        });
-    </script>
-</body>
-</html>
-```
-
-#### 4. Lancement et test de l'API (5 min)
+1. Créez une nouvelle cellule pour télécharger différentes images de test:
 
 ```python
-# Lancer le serveur Flask
-!python app.py
+# Téléchargement d'images variées pour nos tests
+!wget -q -O cat.jpg https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg
+!wget -q -O car.jpg https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/2022_Tesla_Model_Y.jpg/1200px-2022_Tesla_Model_Y.jpg
+!wget -q -O laptop.jpg https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/15-inch_MacBook_Pro_with_Touch_Bar_July_2018.jpg/1200px-15-inch_MacBook_Pro_with_Touch_Bar_July_2018.jpg
+
+# Fonction pour classifier les images d'exemple
+def classify_example_images():
+    example_images = ['cat.jpg', 'car.jpg', 'laptop.jpg']
+    
+    for img_path in example_images:
+        # Prétraiter l'image
+        img = image.load_img(img_path, target_size=(224, 224))
+        img_array = image.img_to_array(img)
+        img_array = np.expand_dims(img_array, axis=0)
+        img_array = tf.keras.applications.mobilenet_v2.preprocess_input(img_array)
+        
+        # Afficher l'image originale
+        plt.figure(figsize=(10, 4))
+        plt.subplot(1, 2, 1)
+        plt.imshow(image.load_img(img_path))
+        plt.title(f"Image: {img_path}")
+        plt.axis('off')
+        
+        # Faire la prédiction
+        predictions = model.predict(img_array)
+        decoded_preds = decode_predictions(predictions, top=5)[0]
+        
+        # Afficher les résultats sous forme de graphique
+        plt.subplot(1, 2, 2)
+        labels = [pred[1].replace('_', ' ') for pred in decoded_preds]
+        scores = [pred[2] for pred in decoded_preds]
+        
+        plt.barh(labels, scores)
+        plt.xlabel('Probabilité')
+        plt.title('Top 5 des prédictions')
+        plt.xlim(0, 1.0)
+        plt.gca().invert_yaxis()
+        plt.tight_layout()
+        plt.show()
+        
+        # Afficher les résultats textuels
+        print(f"Prédictions pour {img_path}:")
+        for i, (imagenet_id, label, score) in enumerate(decoded_preds):
+            print(f"{i+1}. {label.replace('_', ' ')} ({score:.2f})")
+        print("\n" + "-"*50 + "\n")
+
+# Exécuter la fonction
+classify_example_images()
 ```
 
-Dans votre navigateur, ouvrez le fichier `index.html` pour accéder à l'interface utilisateur.
+#### Étape 3: Création d'un outil d'analyse approfondie (20 min)
 
-### Comment tester votre API
+1. Créez une nouvelle cellule pour implémenter un outil qui montre les activations internes du réseau:
 
-1. **Via l'interface web**:
-   - Téléchargez une image en cliquant sur le bouton de sélection de fichier
-   - Cliquez sur "Analyser l'image"
-   - Observez les résultats qui s'affichent
+```python
+def visualize_activations(img_path):
+    """Visualise les activations intermédiaires du modèle pour mieux comprendre la reconnaissance"""
+    # Charger et prétraiter l'image
+    img = image.load_img(img_path, target_size=(224, 224))
+    img_array = image.img_to_array(img)
+    img_array = np.expand_dims(img_array, axis=0)
+    img_array = tf.keras.applications.mobilenet_v2.preprocess_input(img_array)
+    
+    # Créer un modèle pour extraire les activations intermédiaires
+    layer_outputs = [layer.output for layer in model.layers if 'block' in layer.name][:3]  # Seulement les 3 premières couches de bloc
+    activation_model = tf.keras.Model(inputs=model.input, outputs=layer_outputs)
+    
+    # Obtenir les activations
+    activations = activation_model.predict(img_array)
+    
+    # Afficher l'image originale
+    plt.figure(figsize=(15, 10))
+    plt.subplot(1, 4, 1)
+    plt.title("Image originale")
+    plt.imshow(image.load_img(img_path))
+    plt.axis('off')
+    
+    # Afficher quelques activations pour chaque couche
+    for i, layer_activation in enumerate(activations):
+        # Seulement 9 filtres par couche
+        n_features = min(9, layer_activation.shape[-1])
+        layer_name = f"Couche {i+1}"
+        
+        plt.subplot(1, 4, i+2)
+        plt.title(layer_name)
+        
+        # Créer une grille pour les visualisations
+        n_cols = 3
+        n_rows = n_features // n_cols + (1 if n_features % n_cols > 0 else 0)
+        display_grid = np.zeros((n_rows * 64, n_cols * 64))
+        
+        # Remplir la grille avec des images
+        for row in range(n_rows):
+            for col in range(n_cols):
+                channel_idx = row * n_cols + col
+                if channel_idx < n_features:
+                    # Prendre une activité moyenne sur la dimension du batch
+                    channel_image = layer_activation[0, :, :, channel_idx]
+                    
+                    # Normaliser pour une meilleure visualisation
+                    channel_image -= channel_image.mean()
+                    if channel_image.std() > 0:
+                        channel_image /= channel_image.std()
+                    channel_image *= 64
+                    channel_image += 128
+                    channel_image = np.clip(channel_image, 0, 255).astype('uint8')
+                    
+                    # Ajouter à la grille
+                    display_grid[row*64:(row+1)*64, col*64:(col+1)*64] = channel_image
+        
+        plt.imshow(display_grid, aspect='auto', cmap='viridis')
+        plt.axis('off')
+    
+    plt.tight_layout()
+    plt.show()
+    
+    # Faire et afficher la prédiction
+    predictions = model.predict(img_array)
+    decoded_preds = decode_predictions(predictions, top=5)[0]
+    
+    print(f"Prédictions pour {img_path}:")
+    for i, (imagenet_id, label, score) in enumerate(decoded_preds):
+        print(f"{i+1}. {label.replace('_', ' ')} ({score:.2f})")
 
-2. **Via des requêtes HTTP directes**:
-   ```python
-   import requests
-
-   # Avec un fichier
-   with open('test_image.jpg', 'rb') as img:
-       response = requests.post('http://localhost:5000/predict', 
-                               files={'image': img})
-   
-   # Afficher les résultats
-   print(response.json())
-   ```
+# Tester l'outil sur plusieurs images
+for img_path in ['cat.jpg', 'car.jpg', 'laptop.jpg']:
+    print("-"*50)
+    print(f"Analyse de {img_path}")
+    print("-"*50)
+    visualize_activations(img_path)
+    print("\n")
+```
 
 ## Bonnes pratiques pour les projets professionnels (15 min)
 
@@ -474,7 +425,13 @@ Pour conclure cette phase, passons en revue les bonnes pratiques essentielles po
 
 ## Conclusion et transition
 
-Cette phase vous a permis de découvrir comment utiliser efficacement TensorFlow/Keras dans un contexte professionnel, en développant une API simple mais fonctionnelle de reconnaissance d'images. Dans la prochaine partie, nous allons nous concentrer sur l'amélioration des performances de nos modèles pour les rendre plus adaptés à des environnements de production.
+Cette phase vous a permis de découvrir comment utiliser efficacement TensorFlow/Keras dans un contexte professionnel. Vous avez appris à:
+- Utiliser un modèle pré-entraîné pour la reconnaissance d'images
+- Prétraiter des images pour l'inférence
+- Créer une interface interactive pour tester votre modèle
+- Visualiser et comprendre les activations internes du réseau
+
+Ces compétences sont directement applicables dans des projets professionnels. Dans la prochaine partie, nous allons nous concentrer sur l'amélioration des performances de nos modèles pour les rendre plus adaptés à des environnements de production.
 
 [Retour au Module 3](index.md){ .md-button }
 [Continuer vers l'amélioration des performances](integration.md){ .md-button .md-button--primary }
