@@ -426,10 +426,11 @@ Pour conclure cette phase, passons en revue les bonnes pratiques essentielles po
 ## Conclusion et transition
 
 Cette phase vous a permis de découvrir comment utiliser efficacement TensorFlow/Keras dans un contexte professionnel. Vous avez appris à:
-- Utiliser un modèle pré-entraîné pour la reconnaissance d'images
-- Prétraiter des images pour l'inférence
-- Créer une interface interactive pour tester votre modèle
-- Visualiser et comprendre les activations internes du réseau
+
+ - Utiliser un modèle pré-entraîné pour la reconnaissance d'images
+ - Prétraiter des images pour l'inférence
+ - Créer une interface interactive pour tester votre modèle
+ - Visualiser et comprendre les activations internes du réseau
 
 Ces compétences sont directement applicables dans des projets professionnels. Dans la prochaine partie, nous allons nous concentrer sur l'amélioration des performances de nos modèles pour les rendre plus adaptés à des environnements de production.
 

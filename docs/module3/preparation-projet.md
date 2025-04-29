@@ -24,24 +24,28 @@ flowchart LR
 ```
 
 #### 1. Interface conversationnelle
+
 - Interface web simple et intuitive
 - Affichage des messages en format discussion
 - Indicateur de chargement pendant le traitement
 - Historique de conversation
 
 #### 2. Backend Flask/FastAPI
+
 - Gestion des requêtes et des sessions
 - Enrichissement des prompts avec la base de connaissances
 - Communication avec l'API Mistral
 - Logique de traitement des réponses
 
 #### 3. Intégration API Mistral AI
+
 - Configuration et paramètrage des requêtes
 - Gestion du contexte de conversation
 - Optimisation des prompts
 - Gestion des erreurs et limitations
 
 #### 4. Base de connaissances
+
 - Structure JSON organisée par concepts
 - Exercices et quiz par thématique
 
@@ -50,21 +54,25 @@ flowchart LR
 Le chatbot pédagogique offrira les fonctionnalités suivantes :
 
 1. **Explication des concepts**
+   
     - Définition adaptée au niveau de l'utilisateur
     - Exemples concrets pour illustrer chaque notion
     - Analogies et comparaisons pour faciliter la compréhension
 
 2. **Réponse aux questions**
+   
     - Compréhension des questions techniques
     - Réponses précises basées sur la base de connaissances
     - Capacité à demander des clarifications si nécessaire
 
 3. **Progression adaptative**
+   
     - Détection du niveau de l'utilisateur
     - Suggestions de concepts à explorer ensuite
     - Augmentation progressive de la complexité
 
 4. **Exercices interactifs**
+   
     - Génération de quiz sur les concepts vus
     - Problèmes simples à résoudre
     - Feedback sur les réponses
@@ -97,23 +105,28 @@ Avant de commencer le développement, examinons quelques exemples concrets d'ent
 
 **Entreprise**: CodeSchool (30 formateurs, 500+ étudiants)
 
-**Problématique**: Les formateurs recevaient de nombreuses questions basiques identiques, ce qui limitait leur disponibilité pour des problèmes plus complexes.
+**Problématique**: 
+Les formateurs recevaient de nombreuses questions basiques identiques, ce qui limitait leur disponibilité pour des problèmes plus complexes.
 
-**Solution**: Développement d'un chatbot assistant basé sur une API de LLM, avec une base de connaissances construite à partir du matériel de cours.
+**Solution**: 
+Développement d'un chatbot assistant basé sur une API de LLM, avec une base de connaissances construite à partir du matériel de cours.
 
 **Architecture**:
+
 - Frontend: Interface web intégrée à la plateforme d'apprentissage
 - Backend: API Flask avec mise en cache Redis
 - LLM: OpenAI API avec fine-tuning spécifique aux cours
 - Base de connaissances: Structurée en JSON par modules de cours
 
 **Résultats**:
+
 - Réduction de 40% des questions basiques aux formateurs
 - Satisfaction des étudiants à 85% concernant les réponses du chatbot
 - ROI positif après 4 mois d'utilisation
 - Création de 15 nouveaux modules de cours grâce au temps libéré
 
 **Leçons apprises**:
+
 - Importance d'un système de feedback immédiat sur les réponses
 - Nécessité de maintenir la base de connaissances à jour
 - Valeur des réponses comportant des exemples de code fonctionnels
@@ -122,23 +135,28 @@ Avant de commencer le développement, examinons quelques exemples concrets d'ent
 
 **Entreprise**: TechConsult (cabinet de conseil IT, 120 employés)
 
-**Problématique**: Difficulté à former rapidement les nouveaux consultants sur les technologies spécifiques utilisées par l'entreprise.
+**Problématique**: 
+Difficulté à former rapidement les nouveaux consultants sur les technologies spécifiques utilisées par l'entreprise.
 
-**Solution**: Chatbot de formation accessible 24/7, intégré à l'intranet, avec connaissance des processus et technologies internes.
+**Solution**:
+Chatbot de formation accessible 24/7, intégré à l'intranet, avec connaissance des processus et technologies internes.
 
 **Architecture**:
+
 - Interface: Application web responsive
 - Backend: NodeJS avec FastAPI
 - LLM: Combinaison d'API locale et Mistral AI
 - Base de connaissances: Documents techniques convertis en embeddings vectoriels
 
 **Résultats**:
+
 - Réduction du temps d'onboarding de 3 semaines à 10 jours
 - Augmentation de 25% du taux de réussite aux certifications internes
 - Économie estimée de 180 heures de formation par an
 - Adoption à 92% parmi les nouveaux employés
 
 **Leçons apprises**:
+
 - L'importance d'utiliser le vocabulaire spécifique de l'entreprise
 - La valeur d'un historique de conversation persistant
 - L'utilité des prompts techniques bien formulés
