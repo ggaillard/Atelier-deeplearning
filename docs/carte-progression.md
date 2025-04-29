@@ -10,14 +10,10 @@ Cette carte de progression vous permettra de visualiser clairement les objectifs
 
 ```mermaid
 flowchart LR
-    M1[Module 1\nFondamentaux du DL] --> M1Q[QCM\nModule 1]
-    M1Q --> M2[Module 2\nArchitectures spécialisées]
-    M2 --> M2Q[QCM\nModule 2]
-    M2Q --> M3[Module 3\nDéveloppement d'applications]
-    M3 --> M3Q[QCM\nModule 3]
-    M3Q --> M4[Module 4\nProjet chatbot pédagogique]
-    M4 --> M4Q[QCM\nModule 4]
-    M4Q --> FIN[Projet\nFinal]
+    M1[Module 1  Fondamentaux du DL] -->  M2[Module 2 Architectures spécialisées]
+    M2[Module 2  Architectures spécialisées] --> M3[Module 3 Développement d'applications]
+    M3[Module 3  Développement d'applications] --> M4[Module 4 Projet chatbot pédagogique]
+    
 ```
 
 ## Module 1 : Fondamentaux du Deep Learning
