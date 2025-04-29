@@ -1,5 +1,3 @@
-Je vais réviser le fichier integration.md du module 3 selon vos instructions, en mettant l'accent sur l'explication des techniques d'optimisation sans code, en supprimant l'atelier pratique, et en recontextualisant le TP dans un cadre de stage BTS SIO.
-
 # Phase 2 : Amélioration des performances et intégration (1h30)
 
 ![Amélioration des performances](https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000&h=300)
@@ -21,14 +19,14 @@ Dans un contexte d'entreprise, l'optimisation des modèles est essentielle pour 
 
 #### 1. Quantification
 
+<img src="quantification-weights-optimization.svg" alt="Schéma de quantification" width="800" height="400">
+
 La quantification consiste à réduire la précision des poids du modèle (par exemple, passer de float32 à int8). Cette technique peut réduire la taille du modèle par 4 et accélérer l'inférence, avec une perte de précision souvent négligeable.
 
-![Schéma de quantification](https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&q=80&w=800&h=400)
-
 **Comment ça marche :**
-- Les poids du modèle sont convertis d'une représentation haute précision (32 bits) à une représentation basse précision (8 bits)
-- Les calculs s'effectuent alors sur des entiers plutôt que sur des nombres à virgule flottante
-- Cette conversion nécessite une calibration sur des données représentatives
+- Les poids du modèle, initialement stockés en nombres à virgule flottante 32 bits (float32), sont convertis en entiers 8 bits (int8)
+- Une table de correspondance est créée pour convertir les valeurs lors de l'inférence
+- Les opérations mathématiques sont effectuées sur des entiers plutôt que sur des flottants, ce qui est beaucoup plus rapide sur la plupart des processeurs
 
 **Avantages :**
 - Modèles 3-4 fois plus petits
@@ -41,15 +39,15 @@ La quantification consiste à réduire la précision des poids du modèle (par e
 
 #### 2. Élagage (Pruning)
 
+<img src="pruning-network-optimization.svg" alt="Schéma d'élagage" width="800" height="400">
+
 L'élagage consiste à supprimer les connexions (poids) les moins importantes du réseau. Cette technique peut réduire la taille du modèle et accélérer l'inférence sans impact significatif sur les performances.
 
-![Schéma d'élagage](https://images.unsplash.com/photo-1598901847119-897b3d4e9ef4?auto=format&fit=crop&q=80&w=800&h=400)
-
 **Comment ça marche :**
-- Identifier les poids proches de zéro ou ayant peu d'impact
-- Créer un "masque" qui force ces poids à zéro
-- Compresser la représentation en n'enregistrant que les poids non nuls
-- Deux approches : élagage structuré (éliminer des neurones entiers) ou non structuré (éliminer des connexions individuelles)
+- Pendant ou après l'entraînement, on identifie les poids qui contribuent le moins aux prédictions
+- Ces poids sont mis à zéro ou complètement supprimés de la structure du réseau
+- Le modèle peut être réentraîné après élagage pour récupérer une partie de la précision perdue
+- Deux approches principales : élagage structuré (éliminer des neurones entiers) ou non structuré (éliminer des connexions individuelles)
 
 **Avantages :**
 - Peut réduire la taille du modèle de 75-90%
@@ -62,19 +60,20 @@ L'élagage consiste à supprimer les connexions (poids) les moins importantes du
 
 #### 3. Distillation de connaissances
 
+<img src="knowledge-distillation-process.svg" alt="Schéma de distillation" width="800" height="400">
+
 La distillation consiste à entraîner un modèle plus petit (élève) à imiter un modèle plus grand et plus performant (enseignant).
 
-![Schéma de distillation](https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800&h=400)
-
 **Comment ça marche :**
-- Un grand modèle pré-entraîné (l'enseignant) génère des prédictions
+- Un grand modèle pré-entraîné (l'enseignant) génère des prédictions sur un ensemble de données
 - Un modèle plus petit (l'élève) est entraîné à reproduire ces prédictions
-- L'élève apprend non seulement les bonnes réponses, mais aussi les "probabilités douces" du modèle enseignant
+- L'élève apprend non seulement les bonnes réponses finales, mais aussi les "probabilités douces" du modèle enseignant
+- La fonction de perte combine généralement l'erreur de classification traditionnelle et l'erreur entre les distributions de probabilité de l'enseignant et de l'élève
 
 **Avantages :**
 - Modèles plus petits avec des performances proches du grand modèle
 - Flexibilité dans le choix de l'architecture de l'élève
-- Transfert des "incertitudes" du modèle enseignant
+- Transfert des "incertitudes" du modèle enseignant qui contiennent une information précieuse
 
 **Inconvénients :**
 - Nécessite deux phases : entraînement de l'enseignant puis distillation vers l'élève
@@ -82,15 +81,15 @@ La distillation consiste à entraîner un modèle plus petit (élève) à imiter
 
 #### 4. Architectures efficientes
 
+<img src="efficient-architectures-comparison.svg" alt="Comparaison d'architectures" width="800" height="400">
+
 Utiliser des architectures spécialement conçues pour l'efficience comme MobileNet, EfficientNet ou SqueezeNet.
 
-![Comparaison d'architectures](https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=800&h=400)
-
 **Comment ça marche :**
-- Conçues dès le départ pour être efficientes
-- Utilisent des blocs spéciaux comme les convolutions séparables en profondeur (MobileNet)
-- Équilibrent largeur, profondeur et résolution (EfficientNet)
-- Remplacent les gros filtres 3x3 par plusieurs filtres 1x1 (SqueezeNet)
+- Les architectures efficientes utilisent des blocs de construction optimisés :
+  - **Convolutions séparables en profondeur** (MobileNet) : séparent une convolution standard en deux opérations plus légères
+  - **Scaling composé** (EfficientNet) : équilibre optimal entre largeur, profondeur et résolution du réseau
+  - **Stratégie Fire** (SqueezeNet) : remplace les gros filtres par des couches squeeze (1x1) suivies de couches expand (1x1 et 3x3)
 
 **Avantages :**
 - Optimisées pour des dispositifs spécifiques (mobile, embarqué)
@@ -114,85 +113,106 @@ Ce projet répond à plusieurs compétences du référentiel BTS SIO :
 - **B2.3** - Développer des composants logiciels
 - **B3.1** - Tester et déployer une solution applicative
 
-### Objectif
-Créer un prototype fonctionnel d'API de recherche par image qui pourrait être intégré au site e-commerce de l'entreprise.
+### Objectif du TP
+Explorer et comprendre une application qui intègre un modèle de deep learning optimisé pour la classification de vêtements.
 
-### Architecture de la solution
+### Téléchargement et exploration du projet
 
-Nous allons développer une API REST avec Flask qui :
-1. Reçoit une image de vêtement
-2. Utilise un modèle pré-entraîné pour classifier le type de vêtement
-3. Retourne une prédiction avec le type de vêtement et un niveau de confiance
+1. [Téléchargez le projet API de recherche visuelle (ZIP)](https://example.com/download/api-vetements-ia.zip)
+2. Extrayez le contenu et examinez l'arborescence du projet
 
-Ce prototype servira de base pour la recherche par similitude qui sera développée plus tard.
+### Architecture de l'application
 
-### Fichiers principaux
+L'application est structurée selon une architecture en couches, avec une séparation claire des responsabilités :
 
-#### 1. `app.py` : Application principale
+```
+api-vetements-ia/
+├── app.py                  # Point d'entrée de l'application
+├── config.py               # Configuration centralisée
+├── models/                 # Couche modèle et logique métier
+├── utils/                  # Utilitaires et fonctions d'aide
+├── static/                 # Ressources statiques (CSS, JS, images)
+└── templates/              # Templates HTML pour l'interface
+```
 
-Ce fichier est le cœur de notre application. Il contient :
-- La configuration de l'API Flask
-- Le chargement du modèle pré-entraîné
-- Les routes pour recevoir et traiter les images
-- La logique de prédiction
+#### Principaux mécanismes à comprendre
 
-**Bibliothèques utilisées :**
-- **Flask** : Framework web léger pour créer l'API
-- **TensorFlow/Keras** : Pour charger et utiliser le modèle pré-entraîné
-- **Pillow (PIL)** : Pour le traitement d'images
-- **NumPy** : Pour les opérations sur les tableaux
+1. **Chargement optimisé du modèle**
+   - Dans `models/classifier.py`, le modèle est chargé une seule fois au démarrage de l'application
+   - Un pattern singleton est utilisé pour éviter les rechargements multiples
+   - Le mécanisme de "lazy loading" permet de ne charger le modèle que lorsqu'il est nécessaire
 
-#### 2. `templates/index.html` : Interface utilisateur
+2. **Pipeline de prétraitement des images**
+   - Dans `utils/image_utils.py`, on trouve les fonctions de prétraitement des images
+   - Le redimensionnement, la normalisation et la standardisation sont appliqués avant l'inférence
+   - La détection et gestion de différents formats d'entrée (fichier, base64) simplifie l'intégration
 
-Ce fichier contient une interface web simple permettant de tester l'API :
-- Un formulaire d'upload d'image
-- Une zone d'affichage des résultats
-- Un design responsive adapté aux mobiles
+3. **Optimisations de performance**
+   - Dans `utils/model_utils.py`, plusieurs techniques d'optimisation sont appliquées :
+     - Quantification des poids pour réduire la taille du modèle
+     - Fusion des opérations de batch normalization avec les couches convolutives
+     - Optimisations spécifiques à TensorFlow pour l'inférence
 
-**Technologies utilisées :**
-- **HTML/CSS** : Structure et style de l'interface
-- **JavaScript** : Gestion des interactions utilisateur et appels AJAX
+4. **Architecture API REST**
+   - L'application expose une API REST pour permettre l'intégration avec différents clients
+   - Le endpoint principal `/api/predict` accepte des images en entrée et retourne les prédictions
+   - Le endpoint de santé `/api/health` permet de vérifier que l'API est opérationnelle
 
-#### 3. `static/js/app.js` : Logique côté client
+5. **Interface utilisateur progressive**
+   - L'interface web utilise JavaScript pour offrir une expérience fluide sans rechargement
+   - La caméra peut être utilisée sur les appareils mobiles pour capturer directement des images
+   - Des indicateurs visuels (spinner, barres de progression) informent l'utilisateur sur l'état du traitement
 
-Ce script JavaScript gère :
-- L'envoi des images au serveur via API REST
-- L'affichage des résultats de prédiction
-- L'interface de chargement pendant le traitement
+### Points clés à explorer dans le code
 
-### Fonctionnement de l'application
+#### 1. Chargement et optimisation du modèle (`models/classifier.py`)
 
-1. **Prétraitement des images :**
-   - Redimensionnement aux dimensions attendues par le modèle (224×224 pixels)
-   - Normalisation des valeurs de pixels (0-1)
-   - Adaptation du format pour l'entrée du modèle
+Le chargement du modèle est une opération coûteuse qui ne devrait être effectuée qu'une seule fois. Examinez comment :
 
-2. **Prédiction avec modèle pré-entraîné :**
-   - Utilisation d'un MobileNetV2 pré-entraîné sur ImageNet
-   - Transfer learning avec une couche finale personnalisée pour les catégories de vêtements
-   - Récupération des probabilités pour chaque classe
+- La classe `ClothingClassifier` implémente un pattern singleton pour partager une instance du modèle
+- Le système gère un modèle de repli en cas d'échec du chargement du modèle principal
+- La méthode `optimize_model_for_inference` améliore les performances d'inférence
 
-3. **Optimisation des performances :**
-   - Mise en cache du modèle pour éviter de le recharger à chaque requête
-   - Traitement par lots lorsque possible
-   - Limitation du temps de réponse à moins de 200ms
+#### 2. Prétraitement des images (`utils/image_utils.py`)
 
-### Aspects techniques importants
+Le prétraitement correct des images est crucial pour obtenir de bonnes prédictions. Analysez comment :
 
-**Pourquoi MobileNetV2 ?**
-- Architecture légère adaptée aux applications web
-- Bonne précision malgré sa petite taille (~14MB)
-- Excellente performance sur CPU standard
+- Les images sont normalisées et redimensionnées aux dimensions attendues par le modèle
+- Différents formats d'entrée (fichiers, URLs, base64) sont gérés de manière transparente
+- Le recadrage centré permet d'améliorer la qualité des prédictions
 
-**Avantages du format TensorFlow Lite :**
-- Taille réduite (~3.5MB après quantification)
-- Optimisé pour l'inférence rapide
-- Compatible avec le déploiement mobile futur
+#### 3. API REST Flask (`app.py`)
 
-**Sécurité et validation :**
-- Validation des types de fichiers acceptés
-- Limitation de la taille des images
-- Protection contre les injections
+L'API REST est le point d'entrée principal pour l'intégration. Observez comment :
+
+- Les requêtes avec différents formats de données sont traitées
+- Les erreurs sont gérées et communiquées au client de manière claire
+- Les informations de performance (temps de traitement) sont mesurées et incluses dans la réponse
+
+#### 4. Interface progressive (`static/js/app.js` et `templates/index.html`)
+
+L'interface utilisateur est conçue pour être réactive et informative. Examinez comment :
+
+- La capture d'image via la caméra est gérée
+- L'interface affiche clairement la progression et les résultats
+- Les exemples prédéfinis permettent de tester rapidement le système
+
+### Exercices pratiques
+
+1. **Exploration du code**
+   - Parcourez les différents fichiers du projet pour comprendre leur rôle
+   - Identifiez où les techniques d'optimisation vues précédemment sont appliquées
+   - Repérez les mécanismes de gestion d'erreurs et de fallback
+
+2. **Comprendre le flux de données**
+   - Tracez le parcours d'une image depuis son upload jusqu'à l'affichage des prédictions
+   - Identifiez les transformations appliquées à l'image
+   - Repérez comment les prédictions du modèle sont converties en résultats exploitables
+
+3. **Optimisations potentielles**
+   - Réfléchissez à d'autres optimisations qui pourraient être appliquées
+   - Comment améliorer encore le temps de réponse de l'API ?
+   - Quelles fonctionnalités supplémentaires pourraient enrichir cette application ?
 
 ## Bonnes pratiques pour l'intégration de modèles dans des applications web (15 min)
 
@@ -236,7 +256,7 @@ Ce script JavaScript gère :
 
 Dans cette phase, nous avons exploré des techniques d'optimisation essentielles pour rendre les modèles de Deep Learning utilisables dans des applications réelles. Nous avons vu comment réduire la taille des modèles, accélérer leur inférence et les intégrer dans des applications web.
 
-Ces compétences sont cruciales pour le développement de votre projet final de chatbot pédagogique, où les performances et l'intégration joueront un rôle important dans l'expérience utilisateur.
+Nous avons également examiné un projet concret qui met en œuvre ces concepts dans un contexte professionnel de stage BTS SIO. En comprenant comment structurer une application qui intègre un modèle de deep learning optimisé, vous êtes maintenant mieux préparés pour développer votre propre chatbot pédagogique.
 
 Dans la prochaine phase, nous allons nous concentrer sur la préparation spécifique du projet de chatbot, en explorant l'API Mistral AI et en définissant le cahier des charges complet.
 
