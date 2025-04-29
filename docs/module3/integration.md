@@ -19,7 +19,7 @@ Dans un contexte d'entreprise, l'optimisation des modèles est essentielle pour 
 
 #### 1. Quantification
 
-<img src="quantification-weights-optimization.svg" alt="Schéma de quantification" width="800" height="400">
+<img src="../images/quantification-weights-optimization.svg" alt="Schéma de quantification" width="800" height="400">
 
 La quantification consiste à réduire la précision des poids du modèle (par exemple, passer de float32 à int8). Cette technique peut réduire la taille du modèle par 4 et accélérer l'inférence, avec une perte de précision souvent négligeable.
 
@@ -39,7 +39,7 @@ La quantification consiste à réduire la précision des poids du modèle (par e
 
 #### 2. Élagage (Pruning)
 
-<img src="pruning-network-optimization.svg" alt="Schéma d'élagage" width="800" height="400">
+<img src="../images/pruning-network-optimization.svg" alt="Schéma d'élagage" width="800" height="400">
 
 L'élagage consiste à supprimer les connexions (poids) les moins importantes du réseau. Cette technique peut réduire la taille du modèle et accélérer l'inférence sans impact significatif sur les performances.
 
@@ -60,7 +60,7 @@ L'élagage consiste à supprimer les connexions (poids) les moins importantes du
 
 #### 3. Distillation de connaissances
 
-<img src="knowledge-distillation-process.svg" alt="Schéma de distillation" width="800" height="400">
+<img src=../images/knowledge-distillation-process.svg" alt="Schéma de distillation" width="800" height="400">
 
 La distillation consiste à entraîner un modèle plus petit (élève) à imiter un modèle plus grand et plus performant (enseignant).
 
@@ -81,7 +81,7 @@ La distillation consiste à entraîner un modèle plus petit (élève) à imiter
 
 #### 4. Architectures efficientes
 
-<img src="efficient-architectures-comparison.svg" alt="Comparaison d'architectures" width="800" height="400">
+<img src="../images/efficient-architectures-comparison.svg" alt="Comparaison d'architectures" width="800" height="400">
 
 Utiliser des architectures spécialement conçues pour l'efficience comme MobileNet, EfficientNet ou SqueezeNet.
 
