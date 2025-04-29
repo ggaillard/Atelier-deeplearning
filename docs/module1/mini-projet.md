@@ -91,24 +91,24 @@ print(f"Modèle de référence - Précision: {baseline_score[1]*100:.2f}%")
 Votre tâche consiste à améliorer ce modèle de référence. Expérimentez avec au moins trois des modifications suivantes :
 
 1. **Modification de l'architecture**
-   - Ajouter/enlever des couches de convolution
-   - Modifier le nombre de filtres
-   - Changer la taille des noyaux de convolution
+     - Ajouter/enlever des couches de convolution
+     - Modifier le nombre de filtres
+     - Changer la taille des noyaux de convolution
 
 2. **Techniques de régularisation**
-   - Ajouter des couches de Dropout
-   - Utiliser de la régularisation L1/L2
-   - Implémenter du Batch Normalization
+     - Ajouter des couches de Dropout
+     - Utiliser de la régularisation L1/L2
+     - Implémenter du Batch Normalization
 
 3. **Optimisation des hyperparamètres**
-   - Tester différents optimiseurs (SGD, RMSprop, Adam)
-   - Modifier le taux d'apprentissage
-   - Varier la taille du batch
+     - Tester différents optimiseurs (SGD, RMSprop, Adam)
+     - Modifier le taux d'apprentissage
+     - Varier la taille du batch
 
 4. **Augmentation de données**
-   - Rotation des images
-   - Zoom
-   - Décalage
+     - Rotation des images
+     - Zoom
+     - Décalage
 
 5. **Stratégies d'entraînement**
    - Modifier le nombre d'époques
@@ -398,4 +398,4 @@ Votre mini-projet sera évalué selon les critères suivants :
 - [Conseils pour améliorer les performances des modèles](https://machinelearningmastery.com/improve-deep-learning-performance/)
 
 [Retour au Module 1](index.md){ .md-button }
-[Continuer vers l'Auto-évaluation](qcm-evaluation.md){ .md-button .md-button--primary }
+[Continuer vers l'Auto-évaluation](qcm-evaluation-module1.md){ .md-button .md-button--primary }
