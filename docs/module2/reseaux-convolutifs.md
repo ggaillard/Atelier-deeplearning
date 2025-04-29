@@ -175,7 +175,7 @@ Téléchargez les fichiers suivants et placez-les dans les dossiers indiqués :
 1.  **Structure des dossiers** :
 
    *Assurez-vous que votre structure de dossiers est la suivante:
-
+```markdown
  ```   votre_dossier_de_travail/
 
 ├── mnist_cnn_model.h5      # Votre modèle sauvegardé ou le modèle fourni
@@ -188,7 +188,14 @@ Téléchargez les fichiers suivants et placez-les dans les dossiers indiqués :
 └── js/
 └── app.js
  ```
+```
 
+Dans ce format :
+- Les blocs de code sont entourés de triples backticks (\`\`\`) pour une meilleure lisibilité.
+- Les commentaires sont précédés par un `#`.
+- Les niveaux d'indentation sont représentés par des caractères spéciaux (`├──` et `└──`) pour indiquer les sous-dossiers.
+
+Si vous avez besoin d'autres ajustements ou d'informations supplémentaires, n'hésitez pas à demander !
 
  
 ### Étape 3 : Installation et lancement (10 minutes)
@@ -249,7 +256,7 @@ Téléchargez les fichiers suivants et placez-les dans les dossiers indiqués :
 
 1.**Remplissage du formulaire d'évaluation**
 
-- Ouvrez le document [evaluation](ressources/evaluation.md) fourni par votre formateur
+- Ouvrez le document [evaluation](ressources/evaluationCNN.md) fourni par votre formateur
 - Remplissez les sections suivantes :
   - Nombre de prédictions correctes/incorrectes
   - Chiffres les mieux reconnus
