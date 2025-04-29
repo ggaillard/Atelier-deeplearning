@@ -20,17 +20,17 @@ Comprendre par l'observation directe les différences fondamentales entre le Mac
 ### Instructions pour une pratique individuelle
 
 1. Ouvrez deux notebooks Google Colab dans des onglets séparés :
-   - [Machine Learning classique (Random Forest)](ressources/machine-learning-classique.md)
-   - [Deep Learning (CNN)](ressources/deep-learning.md)
+    - [Machine Learning classique (Random Forest)](ressources/machine-learning-classique.md)
+    - [Deep Learning (CNN)](ressources/deep-learning.md)
 
 2. Suivez les instructions dans chaque notebook et exécutez les cellules dans l'ordre indiqué.
 
 3. Pendant que vous explorez les deux approches, prenez des notes sur :
-   - Comment chaque approche traite les données MNIST (chiffres manuscrits)
-   - Les différences dans la préparation des données
-   - La complexité d'implémentation de chaque approche
-   - Le temps d'entraînement respectif
-   - Les performances sur données normales et bruitées
+    - Comment chaque approche traite les données MNIST (chiffres manuscrits)
+    - Les différences dans la préparation des données
+    - La complexité d'implémentation de chaque approche
+    - Le temps d'entraînement respectif
+    - Les performances sur données normales et bruitées
 
 ### Points clés à identifier par vous-même
 

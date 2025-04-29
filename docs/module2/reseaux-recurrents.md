@@ -16,18 +16,39 @@ Dans cette phase, vous allez :
 
 ### Architecture et fonctionnement des RNN
 
-Les réseaux de neurones récurrents (RNN) sont spécialement conçus pour traiter des données séquentielles, comme du texte, des séries temporelles ou des signaux audio. Leur architecture inclut des connections récurrentes qui leur permettent de "mémoriser" les informations précédentes :
+### Problématique : Pourquoi les RNN ?
 
-1. **Principe de base** : contrairement aux réseaux feed-forward, les RNN possèdent des boucles de rétroaction
-2. **Mémoire à court terme** : chaque état caché dépend de l'état précédent et de l'entrée actuelle
-3. **Problème de la disparition du gradient** : difficulté à capturer les dépendances à long terme
-4. **Architectures avancées** : LSTM (Long Short-Term Memory) et GRU (Gated Recurrent Unit) qui résolvent ce problème
+Imaginons que vous surveillez des logs de sécurité :
+- Un réseau classique ne verrait que des entrées isolées, sans comprendre leur séquence
+- Un RNN, lui, se souvient des événements précédents pour détecter des patterns suspects
 
+### Le RNN expliqué avec l'analogie du carnet de notes
+
+**Analogie du carnet de notes** :
+1. Vous analysez un rapport d'incident et prenez des notes importantes
+2. À chaque nouvelle section du rapport, vous :
+   - Lisez le nouveau contenu (nouvelle entrée)
+   - Consultez vos notes précédentes (état caché / mémoire)
+   - Mettez à jour vos notes avec les informations les plus pertinentes
+   - Utilisez la combinaison de la nouvelle section et de vos notes pour comprendre l'incident
+
+**Dans un RNN** :
+1. Le réseau traite les données séquentiellement (log par log, événement par événement)
+2. À chaque étape, il combine :
+   - L'entrée actuelle (ex : le log actuel)
+   - Son "état de mémoire" (ce qu'il a retenu des logs précédents)
+3. Il produit :
+   - Une sortie pour l'étape actuelle (ex: alerte ou non)
+   - Un nouvel état de mémoire pour l'étape suivante
+ - 
 Avantages pour un développeur d'applications :
 
 - Traitement de séquences de longueur variable
 - Capacité à "mémoriser" des informations importantes
 - Applications diverses : analyse de texte, traduction, génération de contenu
+
+
+
 
 ## Partie 2: Implémentation d'un LSTM pour l'analyse de sentiment (40 min)
 
@@ -57,11 +78,52 @@ Avantages pour un développeur d'applications :
 
 Mistral AI est une plateforme avancée d'intelligence artificielle spécialisée dans le traitement du langage naturel (NLP). Contrairement à nos modèles LSTM simples, Mistral utilise des architectures de type transformer, beaucoup plus puissantes pour comprendre et générer du texte.
 
-Avantages de l'API Mistral AI:
-- Modèles pré-entraînés sur d'immenses corpus de texte
-- Compréhension contextuelle profonde
-- Capacités multilingues
-- Flexibilité pour différents cas d'usage NLP
+## Les LSTM (Long Short-Term Memory) en langage simple
+
+### Solution au problème de mémoire
+
+**Analogie du rapport de sécurité avec système de marquage** :
+- Vous avez maintenant un système pour marquer les informations importantes dans votre rapport
+- Vous pouvez décider explicitement quelles informations :
+  * Méritent d'être conservées pour l'analyse finale
+  * Doivent être mises à jour avec de nouvelles données
+  * Sont pertinentes pour l'incident en cours
+
+### Les portes (gates) expliquées simplement
+
+Au lieu d'une explication mathématique complexe, voici le fonctionnement en langage simple :
+
+1. **Porte d'oubli** (Forget gate) : 
+   - Comme un tri dans votre rapport : "Quelles informations passées ne sont plus utiles ?"
+   - Exemple SIO : Si un nouvel utilisateur se connecte, vous pouvez "oublier" certains détails des sessions précédentes
+
+2. **Porte d'entrée** (Input gate) :
+   - Filtre les nouvelles informations : "Quelles nouvelles informations sont importantes ?"
+   - Exemple SIO : Dans un log "Tentative d'accès admin échouée 5 fois", le nombre de tentatives est plus important que l'heure exacte
+
+3. **Porte de sortie** (Output gate) :
+   - Décide quelles informations partager : "Quelles parties de ma mémoire sont pertinentes maintenant ?"
+   - Exemple SIO : Si vous analysez une faille de sécurité, vous vous concentrez sur les logs d'authentification, pas sur les mises à jour système
+
+### Applications pour les étudiants BTS SIO
+
+Voici des applications concrètes des RNN/LSTM dans votre domaine :
+
+1. **Détection d'intrusion réseau** :
+   - Les RNN/LSTM analysent les séquences de logs pour détecter des comportements anormaux
+   - L'ordre chronologique des événements est crucial (d'où l'intérêt des RNN)
+
+2. **Prédiction de pannes systèmes** :
+   - Les LSTM peuvent analyser les historiques de performance serveur
+   - Ils détectent les signes précurseurs de problèmes potentiels
+
+3. **Chatbots d'assistance technique** :
+   - Les RNN/LSTM permettent de comprendre le contexte d'une conversation de support
+   - Ils maintiennent la cohérence dans les réponses du chatbot d'aide
+
+4. **Analyse de logs de sécurité** :
+   - Les LSTM peuvent identifier des patterns d'attaque complexes s'étendant sur de longues périodes
+   - Ils peuvent corréler des événements apparemment sans lien
 
 ### Instructions
 

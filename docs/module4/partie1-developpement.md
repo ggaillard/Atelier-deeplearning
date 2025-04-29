@@ -4,7 +4,173 @@
 
 ## Objectif
 
-Implémenter les fonctionnalités principales de votre chatbot pédagogique en vous basant sur votre document de conception et en intégrant les connaissances acquises lors des séances précédentes.
+Développer un chatbot pédagogique fonctionnel en une séance de 4 heures en utilisant l'API Mistral AI et les connaissances acquises lors des modules précédents.
+
+## Organisation de la séance
+
+Pour maximiser l'efficacité sur cette courte durée, la séance est organisée en 4 phases distinctes avec des objectifs clairs pour chacune.
+
+### Phase 1: Cadrage et conception rapide (30 min)
+
+**Objectif**: Définir clairement le projet et effectuer une conception minimaliste.
+
+1. **Présentation du projet et des objectifs** (10 min)
+   - Rappel des concepts clés vus dans les modules précédents
+   - Démonstration d'un exemple de chatbot fonctionnel
+   - Clarification des livrables attendus
+
+2. **Choix de la variante** (5 min)
+   - Option SISR: Chatbot d'aide au diagnostic réseau/système
+   - Option SLAM: Chatbot avec authentification simple
+
+3. **Mini-atelier de wireframing** (15 min)
+   - Sketch rapide sur papier de l'interface
+   - Identification des composants essentiels
+   - Définition du flux de conversation principal
+
+**Utilisation du kit de démarrage**:
+- Récupérez le kit de démarrage correspondant à votre option (SISR/SLAM)
+- Examinez rapidement la structure des fichiers fournis
+- Identifiez les parties à modifier/compléter
+
+### Phase 2: Développement en parallèle (2h)
+
+Pour optimiser le temps, divisez votre équipe en deux groupes travaillant en parallèle:
+
+#### Groupe A: Interface et intégration API (1h + 30min)
+
+**Objectif**: Créer l'interface conversationnelle et intégrer l'API Mistral.
+
+1. **Préparation de l'interface** (30 min)
+   - Partez du template HTML/CSS/JS fourni
+   - Personnalisez l'apparence selon votre wireframe
+   - Assurez-vous que la zone de messages et le champ de saisie fonctionnent
+
+2. **Intégration de l'API Mistral** (30 min)
+   - Utilisez le code de base fourni dans `api-integration-template.py`
+   - Configurez votre clé API (déjà créée avant la séance)
+   - Testez une requête simple pour vérifier la connexion
+
+3. **Connexion frontend/backend** (30 min)
+   - Implémentez la communication entre l'interface et le backend
+   - Assurez-vous que les messages s'affichent correctement
+   - Ajoutez l'indicateur de chargement pendant les requêtes
+
+#### Groupe B: Base de connaissances et fonctionnalités pédagogiques (1h + 30min)
+
+**Objectif**: Créer une base de connaissances minimale et implémenter les fonctionnalités pédagogiques essentielles.
+
+1. **Structuration de la base de connaissances** (30 min)
+   - Utilisez le modèle JSON fourni dans le kit
+   - Complétez 2 concepts clés:
+     * 1 concept général sur le Deep Learning
+     * 1 concept spécifique à votre option (SISR/SLAM)
+   
+2. **Enrichissement des prompts** (30 min)
+   - Implémentez la fonction d'enrichissement des prompts
+   - Testez avec des requêtes pour vérifier l'intégration de la base de connaissances
+   - Ajustez le prompt système pour améliorer les réponses
+
+3. **Fonctionnalité pédagogique simple** (30 min)
+   - SISR: Implémentez un arbre de décision simple pour le diagnostic
+   - SLAM: Implémentez l'authentification basique et la persistance locale
+
+### Phase 3: Intégration et tests (45 min)
+
+**Objectif**: Assembler les composants et tester l'ensemble.
+
+1. **Intégration des composants** (20 min)
+   - Fusionnez le travail des deux groupes
+   - Résolvez les conflits éventuels
+   - Assurez-vous que tous les éléments fonctionnent ensemble
+
+2. **Tests fonctionnels** (15 min)
+   - Testez avec les scénarios prédéfinis fournis
+   - Identifiez et notez les problèmes rencontrés
+   - Priorisez les corrections selon la criticité
+
+3. **Corrections rapides** (10 min)
+   - Corrigez les problèmes critiques
+   - Si nécessaire, simplifiez certaines fonctionnalités pour assurer un produit minimal fonctionnel
+   - Documentez les problèmes connus que vous n'avez pas eu le temps de résoudre
+
+### Phase 4: Finalisation et présentation (45 min)
+
+**Objectif**: Finaliser le projet et préparer la présentation.
+
+1. **Documentation minimaliste** (15 min)
+   - Complétez le README avec les informations essentielles
+   - Documentez les fonctionnalités implémentées
+   - Ajoutez des commentaires dans le code pour les sections complexes
+
+2. **Préparation de la démonstration** (15 min)
+   - Définissez un scénario de démonstration court mais percutant
+   - Répartissez les rôles pour la présentation
+   - Préparez-vous à expliquer vos choix techniques
+
+3. **Présentations croisées** (15 min)
+   - Chaque équipe présente son chatbot (2-3 minutes par équipe)
+   - Feedback constructif des autres équipes
+   - Auto-évaluation avec la grille fournie
+
+## Variantes du projet adaptées aux profils SISR/SLAM
+
+### Option SISR: Chatbot d'aide au diagnostic réseau/système
+
+**Base de connaissances spécifique**:
+- Focus sur un problème réseau courant (connexion WiFi)
+- Structure d'arbre de décision pour le dépannage
+- Scénario typique: "Je n'arrive pas à me connecter au réseau WiFi"
+
+**Fonctionnalités minimales**:
+- Interface avec zone de chat et boutons d'assistance rapide
+- Capacité à poser des questions de diagnostic
+- Suggestion de solutions basées sur les réponses utilisateur
+
+**Kit de démarrage SISR**:
+- Template d'interface avec boutons d'assistance rapide
+- Structure JSON pour problèmes réseau
+- Exemples de prompts orientés diagnostic
+- Script de base pour l'arbre de décision
+
+### Option SLAM: Chatbot intégré à une application web simple
+
+**Base de connaissances spécifique**:
+- Focus sur un langage/framework de programmation 
+- Explications de concepts de développement
+- Scénario typique: "Comment implémenter l'authentification en PHP?"
+
+**Fonctionnalités minimales**:
+- Interface avec système de login basique
+- Sauvegarde locale des conversations (localStorage)
+- Historique des questions par utilisateur
+
+**Kit de démarrage SLAM**:
+- Template d'interface avec zone de login
+- Structure JSON pour concepts de programmation
+- Exemples de prompts orientés développement
+- Script de base pour l'authentification simple
+
+## Conseils pour optimiser le temps
+
+1. **Timeboxing strict**: Respectez scrupuleusement les temps alloués à chaque phase
+2. **Minimum Viable Product**: Concentrez-vous sur les fonctionnalités essentielles
+3. **Utilisation du kit**: Ne réinventez pas la roue, partez des templates fournis
+4. **Communication claire**: Coordonnez-vous efficacement entre les groupes A et B
+5. **Plan B**: Si une fonctionnalité bloque trop longtemps, passez à une solution plus simple
+
+## Livrables attendus
+
+À la fin de la séance de 4 heures, vous devrez remettre :
+
+1. **Code source** du chatbot (fichiers HTML, CSS, JS et Python)
+2. **Base de connaissances** JSON avec au moins 2 concepts complets
+3. **Documentation minimale** expliquant les fonctionnalités implémentées
+4. **Grille d'auto-évaluation** complétée
+
+
+
+
 
 ## Fonctionnalités à implémenter
 

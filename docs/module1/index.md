@@ -40,7 +40,7 @@ Mettez en pratique vos connaissances en modifiant et améliorant un réseau de n
 - Analyse de l'impact des changements sur les performances
 - Documentation des résultats dans un rapport synthétique
 
-### [Phase 4 : Auto-évaluation et synthèse](concepts-fondamentaux.md#bilan) (30min)
+### [Phase 4 : Auto-évaluation et synthèse](qcm-evaluation-module1.md) (30min)
 
 Consolidez vos connaissances et évaluez votre compréhension de manière autonome.
 
@@ -49,7 +49,7 @@ Consolidez vos connaissances et évaluez votre compréhension de manière autono
 - Schéma conceptuel à compléter
 
 **Ressources :**
-- [QCM d'évaluation](ressources/fiche-observations.md)
+- [QCM d'évaluation](qcm-evaluation-module1.md)
 - [Schéma à compléter](ressources/fiche-observations.md)
 
 ## Livrables attendus
