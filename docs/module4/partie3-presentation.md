@@ -133,17 +133,7 @@ N'oubliez pas de déposer tous vos livrables finaux sur la plateforme avant la d
 **Date limite de remise : [DATE_LIMITE]**
 
 [Retour à la vue d'ensemble](index.md){ .md-button }
+[Retour à la Phase 2: Finalisation](partie2-finalisation.md){ .md-button .md-button--primary }
+
 ```
 
-## Fichier ressources/modele-documentation-technique.md
-
-```markdown
-# Modèle de documentation technique - Chatbot pédagogique Deep Learning
-
-> Ce document est un template que vous pouvez utiliser pour documenter votre projet de chatbot pédagogique. Remplacez chaque section par vos propres informations.
-
-## 1. Vue d'ensemble du système
-
-### 1.1 Introduction
-
-[Décrivez brièvement votre chatbot, son objectif et son public
