@@ -31,7 +31,7 @@ Comparez les approches du Machine Learning classique et du Deep Learning pour co
 - 🔄 Défi de généralisation sur des données modifiées
 - 🔍 Exploration interactive d'un neurone et d'un réseau simple
 
-### [🛠️ Phase 3 : Mini-projet individuel](mini-projet.md) (1h)
+### [🛠️ Phase 3 : Mini-projet individuel](mini-projet.md) (1h10)
 
 Mettez en pratique vos connaissances en modifiant et améliorant un réseau de neurones.
 
@@ -40,7 +40,7 @@ Mettez en pratique vos connaissances en modifiant et améliorant un réseau de n
 - 📊 Analyse de l'impact des changements sur les performances
 - 📝 Documentation des résultats dans un rapport synthétique
 
-### [📝 Auto-évaluation et synthèse](qcm-evaluation-module1.md) (30min)
+### [📝 Auto-évaluation et synthèse](qcm-evaluation-module1.md) (20 min)
 
 Consolidez vos connaissances et évaluez votre compréhension de manière autonome.
 

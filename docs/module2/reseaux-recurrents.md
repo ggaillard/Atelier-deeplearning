@@ -64,36 +64,43 @@ Les RNN classiques ont du mal à retenir les informations sur de longues séquen
 Au lieu d'une explication mathématique complexe, voici le fonctionnement en langage simple :
 
 1. **Porte d'oubli** (Forget gate) : 
-   - Comme un tri dans votre rapport : "Quelles informations passées ne sont plus utiles ?"
-   - Exemple SIO : Si un nouvel utilisateur se connecte, vous pouvez "oublier" certains détails des sessions précédentes
+   
+    - Comme un tri dans votre rapport : "Quelles informations passées ne sont plus utiles ?"
+    - Exemple SIO : Si un nouvel utilisateur se connecte, vous pouvez "oublier" certains détails des sessions précédentes
 
 2. **Porte d'entrée** (Input gate) :
-   - Filtre les nouvelles informations : "Quelles nouvelles informations sont importantes ?"
-   - Exemple SIO : Dans un log "Tentative d'accès admin échouée 5 fois", le nombre de tentatives est plus important que l'heure exacte
+   
+    - Filtre les nouvelles informations : "Quelles nouvelles informations sont importantes ?"
+    - Exemple SIO : Dans un log "Tentative d'accès admin échouée 5 fois", le nombre de tentatives est plus important que l'heure exacte
 
 3. **Porte de sortie** (Output gate) :
-   - Décide quelles informations partager : "Quelles parties de ma mémoire sont pertinentes maintenant ?"
-   - Exemple SIO : Si vous analysez une faille de sécurité, vous vous concentrez sur les logs d'authentification, pas sur les mises à jour système
+   
+    - Décide quelles informations partager : "Quelles parties de ma mémoire sont pertinentes maintenant ?"
+    - Exemple SIO : Si vous analysez une faille de sécurité, vous vous concentrez sur les logs d'authentification, pas sur les mises à jour système
 
 ### Applications pour les étudiants BTS SIO
 
 Voici des applications concrètes des RNN/LSTM dans votre domaine :
 
 1. **Détection d'intrusion réseau** :
-   - Les RNN/LSTM analysent les séquences de logs pour détecter des comportements anormaux
-   - L'ordre chronologique des événements est crucial (d'où l'intérêt des RNN)
+   
+    - Les RNN/LSTM analysent les séquences de logs pour détecter des comportements anormaux
+    - L'ordre chronologique des événements est crucial (d'où l'intérêt des RNN)
 
 2. **Prédiction de pannes systèmes** :
-   - Les LSTM peuvent analyser les historiques de performance serveur
-   - Ils détectent les signes précurseurs de problèmes potentiels
+   
+    - Les LSTM peuvent analyser les historiques de performance serveur
+    - Ils détectent les signes précurseurs de problèmes potentiels
 
 3. **Chatbots d'assistance technique** :
-   - Les RNN/LSTM permettent de comprendre le contexte d'une conversation de support
-   - Ils maintiennent la cohérence dans les réponses du chatbot d'aide
+   
+    - Les RNN/LSTM permettent de comprendre le contexte d'une conversation de support
+    - Ils maintiennent la cohérence dans les réponses du chatbot d'aide
 
 4. **Analyse de logs de sécurité** :
-   - Les LSTM peuvent identifier des patterns d'attaque complexes s'étendant sur de longues périodes
-   - Ils peuvent corréler des événements apparemment sans lien
+   
+    - Les LSTM peuvent identifier des patterns d'attaque complexes s'étendant sur de longues périodes
+    - Ils peuvent corréler des événements apparemment sans lien
 
 ## Partie 2: Implémentation d'un LSTM pour l'analyse de sentiment (40 min)
 
@@ -105,10 +112,11 @@ Pour cette partie pratique, vous allez explorer l'analyse de sentiment avec un m
 2. Suivez les instructions étape par étape pour implémenter un modèle LSTM pour l'analyse de sentiment
 3. Exécutez chaque cellule et observez les résultats
 4. Portez une attention particulière aux sections suivantes :
-   - Prétraitement du texte (tokenisation)
-   - Architecture du modèle LSTM
-   - Visualisation des embeddings de mots
-   - Analyse des performances et des erreurs
+   
+    - Prétraitement du texte (tokenisation)
+    - Architecture du modèle LSTM
+    - Visualisation des embeddings de mots
+    - Analyse des performances et des erreurs
 
 ### Points clés à explorer
 
