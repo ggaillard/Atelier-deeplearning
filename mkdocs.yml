@@ -57,7 +57,6 @@ plugins:
 
 nav:
   - Accueil: index.md
-  - Carte de progression: carte-progression.md
   - Suivi de progression: suivi-progression.md
   - Module 1 - Fondamentaux:
       - Vue d'ensemble: module1/index.md
