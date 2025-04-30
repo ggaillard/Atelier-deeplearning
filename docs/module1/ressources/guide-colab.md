@@ -1,4 +1,4 @@
-# Guide d'utilisation de Google Colab
+# 📚 Guide d'utilisation de Google Colab
 
 ## Introduction à Google Colab
 

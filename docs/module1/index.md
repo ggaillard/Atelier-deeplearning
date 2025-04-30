@@ -1,4 +1,4 @@
-# Module 1 : Fondamentaux du Deep Learning
+# 🧠 Module 1 : Fondamentaux du Deep Learning
 
 ![Introduction au Deep Learning](../images/banner-intro-dl.svg)
 
@@ -15,52 +15,52 @@
 
 Ce module se déroule en quatre phases distinctes, chacune conçue pour vous faire découvrir le Deep Learning par la pratique plutôt que par la théorie.
 
-### [Phase 1 : Introduction pratique](introduction-pratique.md) (1h)
+### [🔍 Phase 1 : Introduction pratique](introduction-pratique.md) (1h)
 
 Découvrez le Deep Learning à travers des exemples concrets, sans vous préoccuper de la théorie pour le moment.
 
-- Démonstrations d'applications concrètes (GitHub Copilot, reconnaissance d'objets...)
-- Premier contact avec un réseau de neurones simple
-- Challenge d'expérimentation guidée sur un modèle MNIST
+- 🎮 Démonstrations d'applications concrètes (GitHub Copilot, reconnaissance d'objets...)
+- 🔄 Premier contact avec un réseau de neurones simple
+- 🏆 Challenge d'expérimentation guidée sur un modèle MNIST
 
-### [Phase 2 : Concepts fondamentaux](concepts-fondamentaux.md) (1h30)
+### [🧩 Phase 2 : Concepts fondamentaux](concepts-fondamentaux.md) (1h30)
 
 Comparez les approches du Machine Learning classique et du Deep Learning pour comprendre leurs différences fondamentales.
 
-- Atelier "Boîte noire" : exploration parallèle des deux approches
-- Défi de généralisation sur des données modifiées
-- Exploration interactive d'un neurone et d'un réseau simple
+- 🔬 Atelier "Boîte noire" : exploration parallèle des deux approches
+- 🔄 Défi de généralisation sur des données modifiées
+- 🔍 Exploration interactive d'un neurone et d'un réseau simple
 
-### [Phase 3 : Mini-projet individuel](mini-projet.md) (1h)
+### [🛠️ Phase 3 : Mini-projet individuel](mini-projet.md) (1h)
 
 Mettez en pratique vos connaissances en modifiant et améliorant un réseau de neurones.
 
-- Modification des hyperparamètres
-- Test avec différentes architectures
-- Analyse de l'impact des changements sur les performances
-- Documentation des résultats dans un rapport synthétique
+- ⚙️ Modification des hyperparamètres
+- 🧪 Test avec différentes architectures
+- 📊 Analyse de l'impact des changements sur les performances
+- 📝 Documentation des résultats dans un rapport synthétique
 
-### [Auto-évaluation et synthèse](qcm-evaluation-module1.md) (30min)
+### [📝 Auto-évaluation et synthèse](qcm-evaluation-module1.md) (30min)
 
 Consolidez vos connaissances et évaluez votre compréhension de manière autonome.
 
-- QCM sur les concepts fondamentaux
-- Synthèse personnelle à rédiger
-- Schéma conceptuel à compléter
+- ✅ QCM sur les concepts fondamentaux
+- 📋 Synthèse personnelle à rédiger
+- 🔄 Schéma conceptuel à compléter
 
 
 ## Livrables attendus
 
 À l'issue de ce module, vous devrez avoir produit :
 
-- Phase 1 : La [fiche d'observations](ressources/fiche-observations.md) complétée sur le "Hello World du Deep Learning"
-- Phase 2 : Fiche d'observations - Concepts fondamentaux du Deep Learning
-- Phase 3 : Fiche d'analyse - Mini-projet d'amélioration
+- 📋 Phase 1 : La [fiche d'observations](ressources/fiche-observations.md) complétée sur le "Hello World du Deep Learning"
+- 📋 Phase 2 : Fiche d'observations - Concepts fondamentaux du Deep Learning
+- 📋 Phase 3 : Fiche d'analyse - Mini-projet d'amélioration
 
 ## Ressources complémentaires
 
-- [Glossaire du Deep Learning](ressources/glossaire-dl.md) - Les termes essentiels expliqués simplement
-- [Guide d'utilisation de Google Colab](ressources/guide-colab.md) - Pour vous aider à utiliser cet outil
+- 📕 [Glossaire du Deep Learning](ressources/glossaire-dl.md) - Les termes essentiels expliqués simplement
+- 📚 [Guide d'utilisation de Google Colab](ressources/guide-colab.md) - Pour vous aider à utiliser cet outil
 
 ## Compétences BTS SIO développées
 
@@ -75,10 +75,12 @@ Ce module vous permet d'acquérir plusieurs compétences du référentiel BTS SI
 
 ## Prêt à commencer ?
 
+!!! tip "Conseil"
+    Avant de commencer, assurez-vous d'avoir un compte Google pour utiliser Colab et d'avoir parcouru le guide d'utilisation.
+
 Plongez dans le monde fascinant du Deep Learning en commençant par la première phase d'introduction pratique !
 
 [Commencer par l'introduction pratique](introduction-pratique.md){ .md-button .md-button--primary }
 [Évaluer vos connaissances](qcm-evaluation-module1.md){ .md-button .md-button--secondary }
 
 ---
-

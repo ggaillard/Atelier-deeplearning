@@ -1,4 +1,4 @@
-# QCM d'auto-évaluation - Module 1 : Fondamentaux du Deep Learning
+# 📝 QCM d'auto-évaluation - Module 1 : Fondamentaux du Deep Learning
 
 Ce QCM vous permettra d'évaluer votre compréhension des concepts fondamentaux du Deep Learning vus durant cette première séance.
 

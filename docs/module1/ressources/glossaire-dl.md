@@ -1,5 +1,5 @@
 Voici le glossaire du Deep Learning avec des liens vers les définitions des termes techniques mentionnés :
-## Glossaire du Deep Learning
+## 📕 Glossaire du Deep Learning
 
 ### Termes fondamentaux
 
