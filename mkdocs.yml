@@ -81,6 +81,7 @@ nav:
       - 3 - Préparation au projet: module3/preparation-projet.md
       - Auto-évaluation: module3/qcm-evaluation-module3.md
       - Ressources: 
+        - Base de connaissances: ressources/base-connaissances.md
         - TensorFlow pour débutants: module3/pratique-tensorflow-keras.md
         - API Mistral: ressources/api-mistral.md
   - Module 4 - Projet:
