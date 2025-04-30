@@ -31,9 +31,7 @@ Pour suivre efficacement cette formation, vous devez :
 Ce site contient toutes les ressources nécessaires pour votre parcours :
 
 - **[Carte de progression](carte-progression.md)** - Parcours d'apprentissage et compétences développées
-- **[Ressources](ressources/index.md)** - Documentation technique et matériel complémentaire
-- **[Évaluation](evaluation/index.md)** - Critères et modalités d'évaluation
-- [Guide de bonnes pratiques pour la documentation technique]ressources/guide-etudiant.md)
+- [Guide de bonnes pratiques pour la documentation technique](ressources/guide-etudiant.md)
 - [Compétences recherchées en stage BTS SIO](ressources/competences-stage-sio.md)
 
 ## Ressources supplémentaires
