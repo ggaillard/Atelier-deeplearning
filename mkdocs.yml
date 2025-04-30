@@ -61,35 +61,35 @@ nav:
   - Suivi de progression: suivi-progression.md
   - Module 1 - Fondamentaux:
       - Vue d'ensemble: module1/index.md
-      - Phase 1 - Introduction pratique: module1/introduction-pratique.md
-      - Phase 2 - Concepts fondamentaux: module1/concepts-fondamentaux.md
-      - Phase 3 - Mini-projet individuel: module1/mini-projet.md
+      - 1 - Introduction pratique: module1/introduction-pratique.md
+      - 2 - Concepts fondamentaux: module1/concepts-fondamentaux.md
+      - 3 - Mini-projet individuel: module1/mini-projet.md
       - Auto-évaluation: module1/qcm-evaluation-module1.md
       - Ressources: 
         - Glossaire: module1/ressources/glossaire-dl.md  
         - Guide Colab: module1/ressources/guide-colab.md     
   - Module 2 - Architectures:
       - Vue d'ensemble: module2/index.md
-      - Phase 1 - Réseaux convolutifs (CNN): module2/reseaux-convolutifs.md
-      - Phase 2 - Réseaux récurrents (RNN): module2/reseaux-recurrents.md
+      - 1 - Réseaux convolutifs (CNN): module2/reseaux-convolutifs.md
+      - 2 - Réseaux récurrents (RNN): module2/reseaux-recurrents.md
       - Auto-évaluation: module2/qcm-evaluation-module2.md
       - Ressources: 
         - Glossaire: module1/ressources/glossaire-dl.md  
   - Module 3 - Applications:
       - Vue d'ensemble: module3/index.md
-      - Phase 1 - Frameworks et bonnes pratiques: module3/frameworks.md
-      - Phase 2 - Intégration de modèles: module3/integration.md
-      - Phase 3 - Préparation au projet: module3/preparation-projet.md
+      - 1 - Frameworks et bonnes pratiques: module3/frameworks.md
+      - 2 - Intégration de modèles: module3/integration.md
+      - 3 - Préparation au projet: module3/preparation-projet.md
       - Auto-évaluation: module3/qcm-evaluation-module3.md
       - Ressources: 
         - Glossaire: module1/ressources/glossaire-dl.md  
   - Module 4 - Projet:
       - Vue d'ensemble: module4/index.md
       - Projet Chatbot: module4/projet-chatbot.md
-      - Préparation: module4/preparation-projet.md 
-      - Développement: module4/partie1-developpement.md
-      - Finalisation: module4/partie2-finalisation.md
-      - Présentation: module4/partie3-presentation.md
+        - 1 - Préparation: module4/preparation-projet.md 
+        - 2 - Développement: module4/partie1-developpement.md
+        - 3 - Finalisation: module4/partie2-finalisation.md
+        - 4 - Présentation: module4/partie3-presentation.md
       - Auto-évaluation: module4/qcm-evaluation-module4.md
       - Ressources: 
         - Glossaire: module1/ressources/glossaire-dl.md  
