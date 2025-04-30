@@ -86,10 +86,10 @@ nav:
   - Module 4 - Projet:
       - Vue d'ensemble: module4/index.md
       - Projet Chatbot: module4/projet-chatbot.md
-        - 1 - Préparation: module4/preparation-projet.md 
-        - 2 - Développement: module4/partie1-developpement.md
-        - 3 - Finalisation: module4/partie2-finalisation.md
-        - 4 - Présentation: module4/partie3-presentation.md
+      - 1 - Préparation: module4/preparation-projet.md 
+      - 2 - Développement: module4/partie1-developpement.md
+      - 3 - Finalisation: module4/partie2-finalisation.md
+      - 4 - Présentation: module4/partie3-presentation.md
       - Auto-évaluation: module4/qcm-evaluation-module4.md
       - Ressources: 
         - Glossaire: module1/ressources/glossaire-dl.md  
