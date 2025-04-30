@@ -40,7 +40,7 @@ Mettez en pratique vos connaissances en modifiant et améliorant un réseau de n
 - Analyse de l'impact des changements sur les performances
 - Documentation des résultats dans un rapport synthétique
 
-### [Phase 4 : Auto-évaluation et synthèse](qcm-evaluation-module1.md) (30min)
+### [Auto-évaluation et synthèse](qcm-evaluation-module1.md) (30min)
 
 Consolidez vos connaissances et évaluez votre compréhension de manière autonome.
 
@@ -48,9 +48,6 @@ Consolidez vos connaissances et évaluez votre compréhension de manière autono
 - Synthèse personnelle à rédiger
 - Schéma conceptuel à compléter
 
-**Ressources :**
-- [QCM d'évaluation](qcm-evaluation-module1.md)
-- [Schéma à compléter](ressources/fiche-observations.md)
 
 ## Livrables attendus
 
@@ -58,9 +55,7 @@ Consolidez vos connaissances et évaluez votre compréhension de manière autono
 
 - Phase 1 : La [fiche d'observations](ressources/fiche-observations.md) complétée sur le "Hello World du Deep Learning"
 - Phase 2 : Fiche d'observations - Concepts fondamentaux du Deep Learning
-- Le tableau comparatif Machine Learning vs Deep Learning rempli
-- Le schéma annoté d'un réseau de neurones
-- Le rapport du mini-projet avec analyse des modifications effectuées
+- Phase 3 : Fiche d'analyse - Mini-projet d'amélioration
 
 ## Ressources complémentaires
 
