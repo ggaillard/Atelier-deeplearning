@@ -89,10 +89,7 @@ nav:
   - Glossaire:
       - Glossaire: module1/ressources/glossaire-dl.md         
   
-  - Licences:
-      - Licence MIT (Code): https://github.com/ggaillard/Atelier-deeplearning/blob/main/LICENSE
-      - Licence CC BY-NC-SA (Contenu): https://github.com/ggaillard/Atelier-deeplearning/blob/main/CONTENT_LICENSE.md
-    
+     
 extra:
   social:
     - icon: fontawesome/brands/github
