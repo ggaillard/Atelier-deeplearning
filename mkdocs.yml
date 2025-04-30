@@ -61,9 +61,9 @@ nav:
   - Suivi de progression: suivi-progression.md
   - Module 1 - Fondamentaux:
       - Vue d'ensemble: module1/index.md
-      - Phase 1: Introduction pratique: module1/introduction-pratique.md
-      - Phase 2: Concepts fondamentaux: module1/concepts-fondamentaux.md
-      - Phase 3: Mini-projet individuel: module1/mini-projet.md
+      - Phase 1 - Introduction pratique: module1/introduction-pratique.md
+      - Phase 2 - Concepts fondamentaux: module1/concepts-fondamentaux.md
+      - Phase 3 - Mini-projet individuel: module1/mini-projet.md
       - Auto-évaluation: module1/qcm-evaluation-module1.md
       - Ressources: 
         - Glossaire: module1/ressources/glossaire-dl.md  
