@@ -43,28 +43,21 @@ Le chatbot s'adresse principalement aux :
 
 ## Spécifications fonctionnelles
 
-### 1. Interface conversationnelle
+Pour la séance de 4h, nous allons nous concentrer sur le développement d'un **prototype fonctionnel** du chatbot avec les fonctionnalités essentielles :
 
-- Interface web responsive (desktop et mobile)
-- Zone de discussion avec historique des échanges
-- Possibilité de réinitialiser la conversation
-- Indication visuelle lors du chargement des réponses
+### Fonctionnalités minimales (MVP)
+- Interface conversationnelle basique
+- Intégration fonctionnelle de l'API Mistral
+- Base de connaissances avec 3-5 concepts clés
+- Ajustement du niveau des réponses (débutant/avancé)
 
-### 2. Base de connaissances
+### Fonctionnalités optionnelles (si le temps le permet)
+- Générateur de quiz simple
+- Système d'authentification (option SLAM)
+- Arbre de diagnostic (option SISR)
+- Visualisations ou exemples interactifs
 
-- Structure hiérarchique des concepts du Deep Learning
-- Au moins 15 concepts fondamentaux couverts en profondeur
-- 3 niveaux d'explication pour chaque concept (débutant, intermédiaire, avancé)
-- Exemples concrets pour chaque concept
-- Analogies explicatives pour faciliter la compréhension
-
-### 3. Capacités pédagogiques
-
-- Détection du niveau de l'utilisateur à partir de ses questions et interactions
-- Adaptation du niveau technique des réponses
-- Génération de quiz pour tester les connaissances
-- Suggestion de concepts à explorer en fonction des intérêts démontrés
-- Capacité à demander des clarifications si la question est ambiguë
+À la fin de la séance, vous aurez un prototype fonctionnel que vous pourrez continuer à améliorer ultérieurement. L'évaluation tiendra compte du temps limité et se concentrera sur la qualité de l'implémentation des fonctionnalités de base.
 
 ### 4. Intégration technique
 

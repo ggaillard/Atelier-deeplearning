@@ -1,5 +1,5 @@
 
-# Formation Deep Learning et IA conversationnelle
+# Formation Deep Learning
 
 ![Banner Deep Learning](images/banner-dl.svg)
 

@@ -1,4 +1,4 @@
-# QCM d'auto-évaluation - Module 2 : Architectures spécialisées
+# 📝 QCM d'auto-évaluation - Module 2 : Architectures spécialisées
 
 Ce QCM vous permettra d'évaluer votre compréhension des réseaux convolutifs (CNN) et récurrents (RNN) étudiés dans ce module.
 

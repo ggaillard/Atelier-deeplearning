@@ -1,4 +1,4 @@
-# QCM d'évaluation - Module 4 : Projet intégrateur Chatbot pédagogique
+# 📝 QCM d'évaluation - Module 4 : Projet intégrateur Chatbot pédagogique
 
 Ce QCM vous permettra d'évaluer votre compréhension des concepts et techniques mis en œuvre dans le projet intégrateur de chatbot pédagogique.
 

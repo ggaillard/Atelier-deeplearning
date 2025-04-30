@@ -167,9 +167,9 @@ Ces études de cas montrent que les chatbots pédagogiques peuvent apporter une 
 
 Maintenant, explorons l'API Mistral AI que vous utiliserez pour développer votre chatbot pédagogique.
 
-### Introduction à Mistral AI
+### Préparation avant la séance
 
-Mistral AI est une entreprise française qui développe des modèles de langage de pointe, particulièrement adaptés pour des usages en français et dans un contexte éducatif. Son API permet d'accéder à ces modèles pour générer du texte, répondre à des questions, et plus encore.
+Pour optimiser le temps de développement lors de la séance du Module 4, veuillez effectuer les étapes suivantes **avant la séance** :
 
 ### Création d'un compte et clé API
 
@@ -179,7 +179,7 @@ Mistral AI est une entreprise française qui développe des modèles de langage 
 4. Cliquez sur "Create API Key", donnez-lui un nom (ex: "Projet Chatbot BTS")
 5. **Important**: Copiez et sauvegardez la clé générée, elle ne sera plus affichée ensuite
 
-### Premier test avec l'API
+### Tester avec l'API
 
 Commençons par un exemple simple pour tester l'API:
 

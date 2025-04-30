@@ -80,10 +80,20 @@ Cette séance est entièrement basée sur la réalisation d'un projet concret en
 
 ## Structure de la séance (4h)
 
-```
-Développement du chatbot       : 2h30m 
-Finalisation et tests          : 1h    
-Présentation des projets       : 30m   
+```mermaid
+gantt
+    title Planning de la séance
+    dateFormat  HH:mm
+    axisFormat %H:%M
+    
+    section Phase 1
+    Développement du chatbot           :2h30, 00:00, 02:30
+    
+    section Phase 2
+    Finalisation et tests              :1h, 02:30, 03:30
+    
+    section Phase 3
+    Présentation des projets           :30min, 03:30, 04:00  
 ```
 
 ## Trois phases de réalisation

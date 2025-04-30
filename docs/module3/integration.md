@@ -24,18 +24,21 @@ Dans un contexte d'entreprise, l'optimisation des modèles est essentielle pour 
 La quantification consiste à réduire la précision des poids du modèle (par exemple, passer de float32 à int8). Cette technique peut réduire la taille du modèle par 4 et accélérer l'inférence, avec une perte de précision souvent négligeable.
 
 **Comment ça marche :**
-- Les poids du modèle, initialement stockés en nombres à virgule flottante 32 bits (float32), sont convertis en entiers 8 bits (int8)
-- Une table de correspondance est créée pour convertir les valeurs lors de l'inférence
-- Les opérations mathématiques sont effectuées sur des entiers plutôt que sur des flottants, ce qui est beaucoup plus rapide sur la plupart des processeurs
+
+  - Les poids du modèle, initialement stockés en nombres à virgule flottante 32 bits (float32), sont convertis en entiers 8 bits (int8)
+  - Une table de correspondance est créée pour convertir les valeurs lors de l'inférence
+  - Les opérations mathématiques sont effectuées sur des entiers plutôt que sur des flottants, ce qui est beaucoup plus rapide sur la plupart des processeurs
 
 **Avantages :**
-- Modèles 3-4 fois plus petits
-- Inférence 2-4 fois plus rapide sur CPU
-- Consommation d'énergie réduite
+
+  - Modèles 3-4 fois plus petits
+  - Inférence 2-4 fois plus rapide sur CPU
+  - Consommation d'énergie réduite
 
 **Inconvénients :**
-- Légère baisse de précision possible (1-2%)
-- Plus sensible aux valeurs extrêmes
+
+  - Légère baisse de précision possible (1-2%)
+  - Plus sensible aux valeurs extrêmes
 
 #### 2. Élagage (Pruning)
 
@@ -44,19 +47,22 @@ La quantification consiste à réduire la précision des poids du modèle (par e
 L'élagage consiste à supprimer les connexions (poids) les moins importantes du réseau. Cette technique peut réduire la taille du modèle et accélérer l'inférence sans impact significatif sur les performances.
 
 **Comment ça marche :**
-- Pendant ou après l'entraînement, on identifie les poids qui contribuent le moins aux prédictions
-- Ces poids sont mis à zéro ou complètement supprimés de la structure du réseau
-- Le modèle peut être réentraîné après élagage pour récupérer une partie de la précision perdue
-- Deux approches principales : élagage structuré (éliminer des neurones entiers) ou non structuré (éliminer des connexions individuelles)
+
+  - Pendant ou après l'entraînement, on identifie les poids qui contribuent le moins aux prédictions
+  - Ces poids sont mis à zéro ou complètement supprimés de la structure du réseau
+  - Le modèle peut être réentraîné après élagage pour récupérer une partie de la précision perdue
+  - Deux approches principales : élagage structuré (éliminer des neurones entiers) ou non structuré (éliminer des connexions individuelles)
 
 **Avantages :**
-- Peut réduire la taille du modèle de 75-90%
-- Améliore les performances sur des appareils à mémoire limitée
-- Maintient la précision si fait correctement
+
+  - Peut réduire la taille du modèle de 75-90%
+  - Améliore les performances sur des appareils à mémoire limitée
+  - Maintient la précision si fait correctement
 
 **Inconvénients :**
-- Nécessite souvent un réentraînement après élagage
-- L'accélération réelle dépend du matériel et des bibliothèques
+
+  - Nécessite souvent un réentraînement après élagage
+  - L'accélération réelle dépend du matériel et des bibliothèques
 
 #### 3. Distillation de connaissances
 
@@ -65,19 +71,22 @@ L'élagage consiste à supprimer les connexions (poids) les moins importantes du
 La distillation consiste à entraîner un modèle plus petit (élève) à imiter un modèle plus grand et plus performant (enseignant).
 
 **Comment ça marche :**
-- Un grand modèle pré-entraîné (l'enseignant) génère des prédictions sur un ensemble de données
-- Un modèle plus petit (l'élève) est entraîné à reproduire ces prédictions
-- L'élève apprend non seulement les bonnes réponses finales, mais aussi les "probabilités douces" du modèle enseignant
-- La fonction de perte combine généralement l'erreur de classification traditionnelle et l'erreur entre les distributions de probabilité de l'enseignant et de l'élève
+
+  - Un grand modèle pré-entraîné (l'enseignant) génère des prédictions sur un ensemble de données
+  - Un modèle plus petit (l'élève) est entraîné à reproduire ces prédictions
+  - L'élève apprend non seulement les bonnes réponses finales, mais aussi les "probabilités douces" du modèle enseignant
+  - La fonction de perte combine généralement l'erreur de classification traditionnelle et l'erreur entre les distributions de probabilité de l'enseignant et de l'élève
 
 **Avantages :**
-- Modèles plus petits avec des performances proches du grand modèle
-- Flexibilité dans le choix de l'architecture de l'élève
-- Transfert des "incertitudes" du modèle enseignant qui contiennent une information précieuse
+
+  - Modèles plus petits avec des performances proches du grand modèle
+  - Flexibilité dans le choix de l'architecture de l'élève
+  - Transfert des "incertitudes" du modèle enseignant qui contiennent une information précieuse
 
 **Inconvénients :**
-- Nécessite deux phases : entraînement de l'enseignant puis distillation vers l'élève
-- Le choix de la fonction de perte de distillation est délicat
+
+  - Nécessite deux phases : entraînement de l'enseignant puis distillation vers l'élève
+  - Le choix de la fonction de perte de distillation est délicat
 
 #### 4. Architectures efficientes
 
@@ -92,13 +101,15 @@ Utiliser des architectures spécialement conçues pour l'efficience comme Mobile
   - **Stratégie Fire** (SqueezeNet) : remplace les gros filtres par des couches squeeze (1x1) suivies de couches expand (1x1 et 3x3)
 
 **Avantages :**
-- Optimisées pour des dispositifs spécifiques (mobile, embarqué)
-- Bon équilibre performance/taille
-- Souvent disponibles comme modèles pré-entraînés
+
+  - Optimisées pour des dispositifs spécifiques (mobile, embarqué)
+  - Bon équilibre performance/taille
+  - Souvent disponibles comme modèles pré-entraînés
 
 **Inconvénients :**
-- Performance légèrement inférieure aux grandes architectures
-- Peut nécessiter plus d'époques d'entraînement
+
+  - Performance légèrement inférieure aux grandes architectures
+  - Peut nécessiter plus d'époques d'entraînement
 
 ## TP : Intégration de modèles pré-entraînés dans des applications (45 min)
 
@@ -118,7 +129,7 @@ Explorer et comprendre une application qui intègre un modèle de deep learning 
 
 ### Téléchargement et exploration du projet
 
-1. [Téléchargez le projet API de recherche visuelle (ZIP)](https://example.com/download/api-vetements-ia.zip)
+1. [Téléchargez le projet API de recherche visuelle (ZIP)](api-vetements-ia.zip)
 2. Extrayez le contenu et examinez l'arborescence du projet
 
 ### Architecture de l'application

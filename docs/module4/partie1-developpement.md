@@ -431,7 +431,7 @@ Ou alternativement :
 - Au moins deux fonctionnalités pédagogiques implémentées
 
 [Retour à la vue d'ensemble](index.md){ .md-button }
-[Continuer vers la Phase 2: Finalisation et tests](partie2-finalisation.md){ .md-button .md-button--primary }
+[Continuer vers : Finalisation](partie2-finalisation.md){ .md-button .md-button--primary }
 ```
 
 

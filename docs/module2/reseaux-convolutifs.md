@@ -304,5 +304,5 @@ Si vous avez terminé avant la fin du temps imparti, vous pouvez explorer ces pi
 - [Documentation Flask](https://flask.palletsprojects.com/en/2.3.x/) - Documentation officielle du framework Flask pour le développement web
 
 
-[Retour à la vue d'ensemble du Module 2](index.md){ .md-button }
-[Continuer vers la Phase 2: RNN](reseaux-recurrents.md){ .md-button .md-button--primary }
+[Retour au Module 2](index.md){ .md-button }
+[Continuer vers les Réseaux récurrents](reseaux-recurrents.md){ .md-button .md-button--primary }

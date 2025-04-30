@@ -1,4 +1,4 @@
-# Auto-évaluation du Module 3:  Développement d'applications pratiques
+# 📝 Auto-évaluation du Module 3:  Développement d'applications pratiques
 
 ![Auto-évaluation](../images/banner-evaluation.svg)
 

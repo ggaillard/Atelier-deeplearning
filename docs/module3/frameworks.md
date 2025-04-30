@@ -435,4 +435,4 @@ Cette phase vous a permis de découvrir comment utiliser efficacement TensorFlow
 Ces compétences sont directement applicables dans des projets professionnels. Dans la prochaine partie, nous allons nous concentrer sur l'amélioration des performances de nos modèles pour les rendre plus adaptés à des environnements de production.
 
 [Retour au Module 3](index.md){ .md-button }
-[Continuer vers l'amélioration des performances](integration.md){ .md-button .md-button--primary }
+[Continuer vers l'Intégration et optimisation](integration.md){ .md-button .md-button--primary }
