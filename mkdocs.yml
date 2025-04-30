@@ -61,23 +61,28 @@ nav:
   - Suivi de progression: suivi-progression.md
   - Module 1 - Fondamentaux:
       - Vue d'ensemble: module1/index.md
-      - Introduction pratique: module1/introduction-pratique.md
-      - Concepts fondamentaux: module1/concepts-fondamentaux.md
-      - Mini-projet individuel: module1/mini-projet.md
+      - Phase 1: Introduction pratique: module1/introduction-pratique.md
+      - Phase 2: Concepts fondamentaux: module1/concepts-fondamentaux.md
+      - Phase 3: Mini-projet individuel: module1/mini-projet.md
       - Auto-évaluation: module1/qcm-evaluation-module1.md
       - Ressources: 
+        - Glossaire: module1/ressources/glossaire-dl.md  
         - Guide Colab: module1/ressources/guide-colab.md     
   - Module 2 - Architectures:
       - Vue d'ensemble: module2/index.md
       - Réseaux convolutifs (CNN): module2/reseaux-convolutifs.md
       - Réseaux récurrents (RNN): module2/reseaux-recurrents.md
       - Auto-évaluation: module2/qcm-evaluation-module2.md
+      - Ressources: 
+        - Glossaire: module1/ressources/glossaire-dl.md  
   - Module 3 - Applications:
       - Vue d'ensemble: module3/index.md
       - Frameworks et bonnes pratiques: module3/frameworks.md
       - Intégration de modèles: module3/integration.md
       - Préparation au projet: module3/preparation-projet.md
       - Auto-évaluation: module3/qcm-evaluation-module3.md
+      - Ressources: 
+        - Glossaire: module1/ressources/glossaire-dl.md  
   - Module 4 - Projet:
       - Vue d'ensemble: module4/index.md
       - Projet Chatbot: module4/projet-chatbot.md
@@ -86,9 +91,9 @@ nav:
       - Finalisation: module4/partie2-finalisation.md
       - Présentation: module4/partie3-presentation.md
       - Auto-évaluation: module4/qcm-evaluation-module4.md
-  - Glossaire:
-      - Glossaire: module1/ressources/glossaire-dl.md         
-  
+      - Ressources: 
+        - Glossaire: module1/ressources/glossaire-dl.md  
+
      
 extra:
   social:
