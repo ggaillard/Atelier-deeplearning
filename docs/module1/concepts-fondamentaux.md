@@ -1,5 +1,3 @@
-Voici une version du contenu adapté pour une pratique individuelle sans l'aide de l'enseignant :
-
 # Phase 2 : Découverte des concepts par l'expérimentation
 
 ![Comparaison Machine Learning vs Deep Learning](https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000&h=300)
@@ -7,10 +5,11 @@ Voici une version du contenu adapté pour une pratique individuelle sans l'aide 
 ## Objectifs de la phase
 
 Dans cette phase, vous allez :
-- Comparer expérimentalement le Machine Learning classique et le Deep Learning
-- Observer les différences fondamentales en termes de préparation des données et de performances
-- Découvrir l'anatomie d'un réseau de neurones en manipulant directement ses composants
-- Comprendre par la pratique comment l'information circule dans un réseau de neurones
+
+  - Comparer expérimentalement le Machine Learning classique et le Deep Learning
+  - Observer les différences fondamentales en termes de préparation des données et de performances
+  - Découvrir l'anatomie d'un réseau de neurones en manipulant directement ses composants
+  - Comprendre par la pratique comment l'information circule dans un réseau de neurones
 
 ## Comparaison pratique : Machine Learning vs Deep Learning (30 min)
 
@@ -20,12 +19,14 @@ Comprendre par l'observation directe les différences fondamentales entre le Mac
 ### Instructions pour une pratique individuelle
 
 1. Ouvrez deux notebooks Google Colab dans des onglets séparés :
+   
     - [Machine Learning classique (Random Forest)](ressources/machine-learning-classique.md)
     - [Deep Learning (CNN)](ressources/deep-learning.md)
 
 2. Suivez les instructions dans chaque notebook et exécutez les cellules dans l'ordre indiqué.
 
 3. Pendant que vous explorez les deux approches, prenez des notes sur :
+   
     - Comment chaque approche traite les données MNIST (chiffres manuscrits)
     - Les différences dans la préparation des données
     - La complexité d'implémentation de chaque approche
@@ -40,19 +41,6 @@ Comprendre par l'observation directe les différences fondamentales entre le Mac
 - Le rôle de la représentation des données
 - La capacité d'abstraction des différents modèles
 - Les compromis entre temps d'entraînement et performance
-
-### Tableau comparatif à remplir
-
-Utilisez ce tableau pour noter vos observations :
-
-| Aspect observé | Machine Learning (Random Forest) | Deep Learning (CNN) |
-| :------------- | :------------------------------- | :--------------------------------- |
-| Préparation des données |  |  |
-| Extraction de caractéristiques |  |  |
-| Temps d'entraînement |  |  |
-| Précision globale |  |  |
-| Précision sur données bruitées |  |  |
-| Facilité d'implémentation |  |  |
 
 ## Exploration pratique : Anatomie d'un réseau de neurones (45 min)
 
@@ -131,15 +119,6 @@ Dans cette partie, vous allez observer comment un réseau apprend au fil du temp
    * Comment un réseau de neurones traite l'information
    * Comment il peut apprendre à partir d'exemples
 
-### Points clés à retenir
-
-À travers cette exploration, vous devriez avoir découvert :
-
-* Le rôle fondamental des poids et biais
-* L'importance des fonctions d'activation pour introduire la non-linéarité
-* Comment l'information se propage à travers un réseau (forward propagation)
-* Les bases du processus d'apprentissage (ajustement des poids)
-
 ## Défi de généralisation (10 min)
 
 Pour approfondir votre compréhension, réalisez ce défi supplémentaire :
@@ -155,24 +134,170 @@ Pour approfondir votre compréhension, réalisez ce défi supplémentaire :
    - Pourquoi existe-t-il cette différence ?
    - Quels avantages et inconvénients présentent chaque approche ?
 
-## Auto-évaluation
+# 📋 Fiche d'observations - Concepts fondamentaux du Deep Learning
 
-Pour vérifier votre compréhension, posez-vous ces questions :
+## Partie 1 : Comparaison Machine Learning vs Deep Learning
 
-1. Pourriez-vous expliquer à un camarade la différence principale entre ML classique et Deep Learning ?
-2. Sauriez-vous décrire le fonctionnement d'un neurone artificiel et son rôle dans un réseau ?
-3. Comprenez-vous comment un réseau de neurones "apprend" à partir de données ?
-4. Pouvez-vous identifier les situations où le Deep Learning serait préférable au ML classique, et vice versa ?
+*Remplissez ce tableau comparatif après avoir expérimenté avec les deux approches.*
 
-## Ressources supplémentaires pour approfondir par vous-même
+| Aspect observé | Machine Learning (Random Forest) | Deep Learning (CNN) |
+|----------------|----------------------------------|---------------------|
+| Préparation des données | | |
+| Extraction de caractéristiques | | |
+| Temps d'entraînement | | |
+| Précision globale | | |
+| Précision sur données bruitées | | |
+| Précision sur données avec rotation | | |
+| Facilité d'implémentation | | |
+| Interprétabilité | | |
+| Capacité de généralisation | | |
 
-* [Visualisations interactives : Playground TensorFlow](https://playground.tensorflow.org/)
-* [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/) - Un livre en ligne gratuit (en anglais)
-* [3Blue1Brown: Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) - Une excellente série de vidéos explicatives
+## Partie 2 : Schéma conceptuel du réseau de neurones
+
+*Complétez le schéma ci-dessous en identifiant les éléments numérotés.*
+
+```
+                    ┌─────────────┐
+                    │             │
+                    │      1      │
+                    │             │
+                    └─────────────┘
+                          │
+                          ▼
+            ┌───────────────────────────┐
+            │                           │
+            │             2             │
+            │                           │
+            └───────────────────────────┘
+                          │
+                          ▼
+      ┌───────────────────────────────────┐
+      │                                   │
+      │               3                   │
+      │                                   │
+      └───────────────────────────────────┘
+                          │
+                          ▼
+            ┌───────────────────────────┐
+            │                           │
+            │             4             │
+            │                           │
+            └───────────────────────────┘
+                          │
+                          ▼
+                    ┌─────────────┐
+                    │             │
+                    │      5      │
+                    │             │
+                    └─────────────┘
+                          │
+                          ▼
+                    ┌─────────────┐
+                    │             │
+                    │      6      │
+                    │             │
+                    └─────────────┘
+                          ▲
+                          │
+                    ┌─────────────┐
+                    │             │
+                    │      7      │
+                    │             │
+                    └─────────────┘
+```
+
+### Identification des éléments
+
+1. ________________________________
+2. ________________________________
+3. ________________________________
+4. ________________________________
+5. ________________________________
+6. ________________________________
+7. ________________________________
+
+## Partie 3 : Structure du réseau de neurones
+
+*Pour un réseau de neurones dédié à la reconnaissance de chiffres manuscrits (MNIST), précisez :*
+
+| Couche | Nombre de neurones |
+|--------|-------------------|
+| Couche d'entrée | _______ |
+| Première couche cachée | _______ |
+| Deuxième couche cachée | _______ |
+| Couche de sortie | _______ |
+
+### Fonctions d'activation
+
+*Indiquez quelle fonction d'activation serait la plus appropriée pour :*
+
+- Les couches cachées : _______________________
+- La couche de sortie : _______________________
+
+## Partie 4 : Processus d'apprentissage
+
+*Décrivez brièvement les étapes du processus d'apprentissage d'un réseau de neurones :*
+
+1. _________________________________________________________________
+
+2. _________________________________________________________________
+
+3. _________________________________________________________________
+
+4. _________________________________________________________________
+
+## Partie 5 : Réflexion et synthèse personnelle
+
+*Pour vérifier votre compréhension, répondez à ces questions :*
+
+### Comparaison ML classique et Deep Learning
+
+Comment expliqueriez-vous la différence principale entre ML classique et Deep Learning à un camarade ?
+
+_________________________________________________________________
+
+_________________________________________________________________
+
+### Fonctionnement d'un neurone artificiel
+
+Décrivez le fonctionnement d'un neurone artificiel et son rôle dans un réseau :
+
+_________________________________________________________________
+
+_________________________________________________________________
+
+### Processus d'apprentissage
+
+Comment un réseau de neurones "apprend"-il à partir de données ?
+
+_________________________________________________________________
+
+_________________________________________________________________
+
+### Applications pratiques
+
+Dans quelles situations le Deep Learning serait-il préférable au ML classique, et vice versa ?
+
+_________________________________________________________________
+
+_________________________________________________________________
 
 ## Conclusion
 
-Cette phase vous a permis de passer de l'observation pure à une compréhension plus approfondie des mécanismes internes du Deep Learning, tout en conservant une approche très pratique et expérimentale. Les concepts découverts serviront de fondation pour la suite du parcours.
+Cette fiche d'observations vous a permis de documenter votre apprentissage des concepts fondamentaux du Deep Learning à travers une approche expérimentale et comparative. Les observations que vous avez notées serviront de base solide pour la suite de votre parcours et pour votre projet final de chatbot pédagogique.
 
-[Retour à la Séance 1](index.md){ .md-button } 
-[Continuer vers le mini-projet(mini-projet.md)]{ .md-button .md-button--primary }
+## Ressources complémentaires
+
+- [Guide d'utilisation de Google Colab](ressources/guide-colab.md) - Pour vous aider à utiliser cet environnement
+- [Glossaire du Deep Learning](ressources/glossaire-dl.md) - Définitions des termes techniques rencontrés
+- [TensorFlow Playground](https://playground.tensorflow.org/) - Interface interactive pour expérimenter avec des réseaux de neurones simples
+
+## Informations sur le rendu
+
+**Nom et prénom :** ____________________________
+
+**Date :** ____________________________
+
+
+[Retour au Module 1](index.md){ .md-button }
+[Continuer vers le mini-projet](mini-projet.md){ .md-button .md-button--primary }

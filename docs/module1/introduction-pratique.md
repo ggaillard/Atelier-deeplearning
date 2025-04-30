@@ -1,5 +1,4 @@
-Voici la mise en forme corrigée avec les retours à la ligne appropriés :
-# Introduction pratique au Deep Learning
+# Phase 1: Introduction pratique au Deep Learning
 
 ![Introduction pratique](../images/banner-intro-dl.svg)
 
@@ -16,7 +15,7 @@ Dans cette première approche du Deep Learning, vous allez :
 
 Contrairement à l'approche traditionnelle qui commence par la théorie, nous allons d'abord vous faire manipuler des modèles de Deep Learning pour éveiller votre curiosité et vous donner une intuition pratique. Les concepts théoriques seront introduits progressivement, en s'appuyant sur votre expérience directe.
 
-## Phase 1 : Applications du Deep Learning (15 min)
+## Partie 1 : Applications du Deep Learning (15 min)
 
 ### Démonstration 1 : GitHub Copilot
 
@@ -68,7 +67,7 @@ Les modèles de langage comme GPT ou Mistral peuvent générer du texte cohéren
  - Production de résumés de documents techniques
  - Suggestions de réponses dans une application de service client
 
-## Phase 2 : Premier contact avec un réseau de neurones (30 min)
+## Partie 2 : Premier contact avec un réseau de neurones (30 min)
 
 ### Instructions détaillées
 
@@ -93,17 +92,37 @@ Suivez ces étapes :
 
 #### 3. Structure du notebook
 
-Le notebook est organisé en plusieurs sections pour vous guider :
+# Structure du Notebook "Hello World du Deep Learning"
 
-1. **Introduction** - Présentation du problème de reconnaissance de chiffres
-2. **Configuration** - Importation des bibliothèques nécessaires
-3. **Chargement des données** - Préparation du dataset MNIST
-4. **Création du modèle** - Architecture du réseau de neurones
-5. **Entraînement** - Processus d'apprentissage du modèle
-6. **Visualisation** - Graphiques d'évolution de l'apprentissage
-7. **Prédictions** - Test du modèle sur de nouvelles données
-8. **Dessin interactif** - Interface pour tester avec vos propres dessins
-9. **Expérimentation** - Suggestions de modifications à essayer
+Le notebook de reconnaissance de chiffres manuscrits est organisé en 9 sections progressives guidant votre apprentissage du Deep Learning :
+
+## 1. Introduction 
+Présentation du problème de reconnaissance de chiffres manuscrits et des objectifs d'apprentissage.
+
+## 2. Configuration
+Installation et importation des bibliothèques essentielles (TensorFlow, Keras, NumPy, Matplotlib).
+
+## 3. Chargement des données
+Préparation du dataset MNIST contenant 70 000 images de chiffres manuscrits de 0 à 9.
+
+## 4. Création du modèle
+Construction de l'architecture du réseau de neurones avec ses différentes couches.
+
+## 5. Entraînement
+Configuration et lancement du processus d'apprentissage pour ajuster les poids du réseau.
+
+## 6. Visualisation
+Graphiques montrant l'évolution de la précision et de la perte pendant l'entraînement.
+
+## 7. Prédictions
+Test du modèle entraîné sur des exemples pour évaluer ses performances.
+
+## 8. Dessin interactif
+Interface permettant de dessiner vos propres chiffres et de les faire reconnaître par le modèle.
+
+## 9. Expérimentation
+Suggestions pour modifier le modèle et observer les effets sur les performances.
+
 
 #### 4. Expérimentations guidées
 
@@ -127,7 +146,7 @@ Après avoir exécuté le notebook de base, essayez ces modifications pour obser
      - Observer comment le modèle réagit à différents styles d'écriture
      - Analyser les prédictions erronées et tenter de comprendre pourquoi
 
-## Phase 3 : Réflexion et documentation (15 min)
+## Partie 3 : Réflexion et documentation (15 min)
 
 Après vos expérimentations, prenez le temps de réfléchir à ce que vous avez observé :
 
