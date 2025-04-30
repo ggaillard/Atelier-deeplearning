@@ -1,4 +1,4 @@
-# 📋 Phase 3 : Préparation au projet final (45min)
+# 📋 Phase 3 : Préparation au projet final (60 min)
 
 ![Préparation au projet](https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000&h=300)
 
@@ -163,7 +163,7 @@ Chatbot de formation accessible 24/7, intégré à l'intranet, avec connaissance
 
 Ces études de cas montrent que les chatbots pédagogiques peuvent apporter une valeur significative lorsqu'ils sont bien conçus et adaptés à leur contexte d'utilisation. Votre projet s'inspirera de ces bonnes pratiques tout en se focalisant sur l'enseignement du Deep Learning.
 
-## Exploration guidée de l'API Mistral AI (20 min)
+## Exploration guidée de l'API Mistral AI (30 min)
 
 Maintenant, explorons l'API Mistral AI que vous utiliserez pour développer votre chatbot pédagogique.
 
