@@ -33,6 +33,16 @@ Ce site contient toutes les ressources nécessaires pour votre parcours :
 - **[Carte de progression](carte-progression.md)** - Parcours d'apprentissage et compétences développées
 - **[Ressources](ressources/index.md)** - Documentation technique et matériel complémentaire
 - **[Évaluation](evaluation/index.md)** - Critères et modalités d'évaluation
+- [Guide de bonnes pratiques pour la documentation technique]ressources/guide-etudiant.md)
+- [Compétences recherchées en stage BTS SIO](ressources/competences-stage-sio.md)
+
+## Ressources supplémentaires
+
+- **Documentation TensorFlow/Keras** - [tensorflow.org/tutorials](https://www.tensorflow.org/tutorials)
+- **API Mistral** - [docs.mistral.ai](https://docs.mistral.ai/)
+- **Hugging Face** - [huggingface.co/docs](https://huggingface.co/docs)
+- **FastAPI** - [fastapi.tiangolo.com](https://fastapi.tiangolo.com/)
+
 
 ## Commencer votre parcours
 

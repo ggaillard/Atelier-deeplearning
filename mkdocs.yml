@@ -87,14 +87,8 @@ nav:
       - Présentation: module4/partie3-presentation.md
       - Auto-évaluation: module4/qcm-evaluation-module4.md
   - Glossaire:
-      - Glossaire: module1/ressources/glossaire-dl.md
-           
-  - Évaluation:
-      - Vue d'ensemble: evaluation/index.md
-      - Critères d'évaluation: evaluation/criteres-evaluation.md
-      - Répartition des tâches: evaluation/grille-repartition-taches.md
-      - Checklist d'auto-évaluation: evaluation/checklist-auto-evaluation.md
-  - Licences:
+      - Glossaire: module1/ressources/glossaire-dl.md           
+    - Licences:
       - Licence MIT (Code): https://github.com/ggaillard/Atelier-deeplearning/blob/main/LICENSE
       - Licence CC BY-NC-SA (Contenu): https://github.com/ggaillard/Atelier-deeplearning/blob/main/CONTENT_LICENSE.md
     

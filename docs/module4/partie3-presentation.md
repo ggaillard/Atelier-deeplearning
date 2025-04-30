@@ -8,9 +8,9 @@ Cette dernière phase de la séance 4 est consacrée à la présentation de votr
 
 ## Déroulement des présentations
 
-Chaque équipe dispose de **6 minutes** au total :
+Chaque équipe dispose de **8 minutes** au total :
  - **5 minutes** de présentation
- - **1 minute** de questions-réponses
+ - **3 minutes** de questions-réponses
 
 
 ## Structure recommandée pour votre présentation
