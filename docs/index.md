@@ -7,7 +7,7 @@
 
 Cette formation intensive vous initie au Deep Learning à travers une approche pratique et progressive, spécialement conçue pour les étudiants de BTS SIO. Vous découvrirez les fondamentaux des réseaux de neurones, explorerez différentes architectures, et développerez un chatbot pédagogique intégrant l'API Mistral AI.
 
-## Organisation du parcours
+## 1. Organisation du parcours
 
 Notre formation se compose de 4 modules de 4 heures chacun :
 
@@ -18,7 +18,7 @@ Notre formation se compose de 4 modules de 4 heures chacun :
 | [Module 3](module3/index.md) | **Développement d'applications pratiques** | Frameworks, optimisation, intégration API, préparation au projet |
 | [Module 4](module4/index.md) | **Projet intégrateur - Chatbot pédagogique** | Développement du chatbot, finalisation, présentation |
 
-## Prérequis techniques
+## 2. Prérequis techniques
 
 Pour suivre efficacement cette formation, vous devez :
 
@@ -26,7 +26,7 @@ Pour suivre efficacement cette formation, vous devez :
  - Disposer d'un compte Google pour accéder à Colab
  - Avoir une curiosité pour l'intelligence artificielle
 
-## Navigation dans ce site
+## 3. Navigation dans ce site
 
 Ce site contient toutes les ressources nécessaires pour votre parcours :
 
@@ -34,7 +34,7 @@ Ce site contient toutes les ressources nécessaires pour votre parcours :
 - [Guide de bonnes pratiques pour la documentation technique](ressources/guide-etudiant.md)
 - [Compétences recherchées en stage BTS SIO](ressources/competences-stage-sio.md)
 
-## Ressources supplémentaires
+## 4. Ressources supplémentaires
 
 - **Documentation TensorFlow/Keras** - [tensorflow.org/tutorials](https://www.tensorflow.org/tutorials)
 - **API Mistral** - [docs.mistral.ai](https://docs.mistral.ai/)
@@ -42,7 +42,7 @@ Ce site contient toutes les ressources nécessaires pour votre parcours :
 - **FastAPI** - [fastapi.tiangolo.com](https://fastapi.tiangolo.com/)
 
 
-## Commencer votre parcours
+## 5. Commencer votre parcours
 
 Prêt à vous lancer dans l'univers du Deep Learning ? Deux options s'offrent à vous :
 
