@@ -1,12 +1,12 @@
-# Phase 3 : Préparation au projet final (45min)
+# 📋 Phase 3 : Préparation au projet final (45min)
 
 ![Préparation au projet](https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000&h=300)
 
-## Présentation du cahier des charges du chatbot pédagogique (15 min)
+## 📝 Présentation du cahier des charges du chatbot pédagogique (15 min)
 
-**Objectif**: Comprendre les spécifications détaillées du projet final et les critères d'évaluation.
+ 🎯 **Objectif**: Comprendre les spécifications détaillées du projet final et les critères d'évaluation.
 
-### Vision du projet
+### 🔍 Vision du projet
 
 Le projet final consiste à développer un chatbot pédagogique capable d'expliquer les concepts du Deep Learning, de répondre aux questions techniques et d'accompagner les apprenants dans leur découverte de ce domaine.
 

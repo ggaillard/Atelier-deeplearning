@@ -1,8 +1,8 @@
-# Phase 2 : Découverte des concepts par l'expérimentation
+# 🧩 Phase 2 : Découverte des concepts par l'expérimentation
 
 ![Comparaison Machine Learning vs Deep Learning](https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000&h=300)
 
-## Objectifs de la phase
+## 🎯 Objectifs de la phase
 
 Dans cette phase, vous allez :
 

@@ -1,20 +1,20 @@
-# Phase 1 : Développement du chatbot (2h30)
+# 💻 Phase 1 : Développement du chatbot (2h30)
 
 ![Développement du chatbot](https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=1000&h=300)
 
-## Objectif
+## 🎯 Objectif
 
 Développer un chatbot pédagogique fonctionnel en une séance de 4 heures en utilisant l'API Mistral AI et les connaissances acquises lors des modules précédents.
 
-## Organisation de la séance
+## 📊 Organisation de la séance
 
 Pour maximiser l'efficacité sur cette courte durée, la séance est organisée en 4 phases distinctes avec des objectifs clairs pour chacune.
 
-### Phase 1: Cadrage et conception rapide (30 min)
+### 📝 Phase 1: Cadrage et conception rapide (30 min)
 
-**Objectif**: Définir clairement le projet et effectuer une conception minimaliste.
+🎯 **Objectif**: Définir clairement le projet et effectuer une conception minimaliste.
 
-1. **Présentation du projet et des objectifs** (10 min)
+1. 📢**Présentation du projet et des objectifs** (10 min)
      - Rappel des concepts clés vus dans les modules précédents
      - Démonstration d'un exemple de chatbot fonctionnel
      - Clarification des livrables attendus

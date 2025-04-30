@@ -2,7 +2,7 @@
 
 ![Introduction au Deep Learning](../images/banner-intro-dl.svg)
 
-## Objectifs du module
+## ✅ Objectifs du module
 
 À l'issue de ce module, vous serez capable de :
 
@@ -11,7 +11,7 @@
 - Expliquer le fonctionnement de base d'un réseau de neurones
 - Appliquer des techniques d'amélioration d'un modèle de Deep Learning
 
-## Programme (4h)
+## 📊 Programme (4h)
 
 Ce module se déroule en quatre phases distinctes, chacune conçue pour vous faire découvrir le Deep Learning par la pratique plutôt que par la théorie.
 

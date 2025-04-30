@@ -1,8 +1,8 @@
-# Mini-projet individuel : Amélioration d'un modèle de Deep Learning
+# 🛠️ Mini-projet individuel : Amélioration d'un modèle de Deep Learning
 
 ![Mini-projet](../images/banner-mini-projet.svg)
 
-## Objectifs
+## 🎯 Objectifs
 
 Ce mini-projet individuel vous permettra de :
 

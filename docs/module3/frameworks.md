@@ -1,19 +1,19 @@
-# Phase 1 : Frameworks de Deep Learning (1h30)
+# 🧰 Phase 1 : Frameworks de Deep Learning (1h30)
 
 ![Frameworks pour débutants](https://images.unsplash.com/photo-1545987796-200677ee1011?auto=format&fit=crop&q=80&w=1000&h=300)
 
-## Introduction aux frameworks dans un contexte professionnel (15 min)
+## 🔍 Introduction aux frameworks dans un contexte professionnel (15 min)
 
-**Objectif**: Comprendre l'utilité des frameworks de Deep Learning pour un développeur en entreprise et identifier ceux qui sont réellement utilisés sur le terrain.
+** 🎯 Objectif**: Comprendre l'utilité des frameworks de Deep Learning pour un développeur en entreprise et identifier ceux qui sont réellement utilisés sur le terrain.
 
-### Les frameworks en entreprise
+### 💼 Les frameworks en entreprise
 
 Avant de plonger dans le code, prenons un moment pour comprendre pourquoi les frameworks de Deep Learning sont si importants en contexte professionnel:
 
-- **Productivité**: Ils permettent de développer des applications d'IA sans repartir de zéro
-- **Maintenabilité**: Code plus standard, plus facile à comprendre par d'autres développeurs
-- **Performances**: Optimisations intégrées qui seraient complexes à développer soi-même
-- **Déploiement**: Outils intégrés pour mettre en production les modèles
+- **🚀 Productivité**: Ils permettent de développer des applications d'IA sans repartir de zéro
+- **🔧 Maintenabilité**: Code plus standard, plus facile à comprendre par d'autres développeurs
+- **⚡ Performances**: Optimisations intégrées qui seraient complexes à développer soi-même
+- **🚢 Déploiement**: Outils intégrés pour mettre en production les modèles
 
 Dans le monde professionnel actuel, plusieurs frameworks de Deep Learning sont couramment utilisés:
 

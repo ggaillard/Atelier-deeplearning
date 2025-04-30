@@ -1,4 +1,4 @@
-# Phase 1 : Mini-projet CNN pour la vision par ordinateur
+# 🔍 Phase 1 : Mini-projet CNN pour la vision par ordinateur
 
 ![CNN Architecture](https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?auto=format&fit=crop&q=80&w=1000&h=300)
 
@@ -11,13 +11,13 @@ Dans cette phase, vous allez :
 - Visualiser et interpréter les filtres et feature maps d'un CNN
 - Intégrer un modèle CNN dans une application web simple
 
-## Partie 1: Principes des CNN (30 min)
+## 🧩 Partie 1: Principes des CNN (30 min)
 
-### Défi de réflexion initiale
+### 🧠Défi de réflexion initiale
 
 Avant de plonger dans les CNN, prenez 2 minutes pour réfléchir à cette question :
 
-> **Question à méditer** : Comment reconnaissez-vous un visage dans une photo, quelle que soit sa position ou l'éclairage ? Qu'est-ce qui rend cette tâche si facile pour vous et si difficile pour un ordinateur ?
+> **❓Question à méditer** : Comment reconnaissez-vous un visage dans une photo, quelle que soit sa position ou l'éclairage ? Qu'est-ce qui rend cette tâche si facile pour vous et si difficile pour un ordinateur ?
 
 ### Activité guidée : Découverte de l'architecture CNN
 

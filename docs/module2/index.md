@@ -1,8 +1,8 @@
-# Module 2 : Architectures spécialisées de réseaux de neurones
+# 🧠 Module 2 : Architectures spécialisées de réseaux de neurones
 
 ![Architectures spécialisées](https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1000&h=300)
 
-## Objectifs du module
+## 🎯 Objectifs du module
 
 À l'issue de ce module, vous serez capable de :
 
@@ -12,7 +12,7 @@
 - Intégrer ces modèles spécialisés dans des applications concrètes
 - Comparer et choisir l'architecture adaptée à différents problèmes
 
-## Programme (4h)
+## 📊 Programme (4h)
 
 Ce module explore les architectures spécialisées de réseaux de neurones à travers trois phases complémentaires.
 

@@ -1,35 +1,35 @@
-# Phase 2 : Finalisation et tests (1h)
+# 🛠️ Phase 2 : Finalisation et tests (1h)
 
 ![Finalisation et tests](https://images.unsplash.com/photo-1518349619113-03114f06ac3a?auto=format&fit=crop&q=80&w=1000&h=300)
 
-## Objectif
+## 🎯 Objectif
 
 Cette phase est dédiée à la finalisation, aux tests et à la préparation de la documentation de votre chatbot pédagogique. C'est ici que vous vous assurez que votre solution est fiable, performante et bien documentée.
 
-## 1. Tests fonctionnels (20 min)
+## 🧪 1. Tests fonctionnels (20 min)
 
-### Protocole de test
+### 📋Protocole de test
 
 Mettez en place un protocole systématique pour tester votre chatbot avec des scénarios réels d'utilisation.
 
-**Catégories de tests à effectuer :**
+📊 **Catégories de tests à effectuer :**
 
-1. **Tests de base**
+1. ✅**Tests de base**
        - Dialogue simple (question-réponse)
        - Gestion de l'historique de conversation
        - Comportement face à des requêtes vides ou incomplètes
 
-2. **Tests de connaissances**
+2. ✅**Tests de connaissances**
     - Questions sur chaque concept majeur du Deep Learning
     - Vérification de l'exactitude des informations fournies
     - Cohérence dans les explications
 
-3. **Tests d'usage pédagogique**
+3. ✅**Tests d'usage pédagogique**
     - Adaptation au niveau de l'utilisateur
     - Clarté des explications techniques
     - Utilité des exemples et analogies
 
-4. **Tests de robustesse**
+4. ✅**Tests de robustesse**
     - Gestion des erreurs API
     - Questions hors sujet
     - Questions mal formulées ou avec des fautes

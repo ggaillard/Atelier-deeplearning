@@ -1,12 +1,12 @@
-# Phase 3 : Présentation des projets (30 min)
+# 📢 Phase 3 : Présentation des projets (30 min)
 
 ![Présentation des projets](../images/banner-chatbot-pedagogique-projet.svg)
 
-## Objectif
+## 🎯 Objectif
 
 Cette dernière phase de la séance 4 est consacrée à la présentation de votre chatbot pédagogique. C'est l'aboutissement de votre travail et l'occasion de mettre en valeur votre solution devant la classe.
 
-## Déroulement des présentations
+## 🎯 Déroulement des présentations
 
 Chaque équipe dispose de **8 minutes** au total :
  - **5 minutes** de présentation

@@ -2,7 +2,7 @@
 
 Ce QCM vous permettra d'évaluer votre compréhension des concepts fondamentaux du Deep Learning vus durant cette première séance.
 
-## Instructions
+## ✅ Instructions
 - Cochez la ou les réponses correctes pour chaque question
 - Certaines questions peuvent avoir plusieurs réponses correctes
 - À la fin du questionnaire, calculez votre score grâce au corrigé fourni

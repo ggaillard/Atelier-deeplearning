@@ -1,8 +1,8 @@
-# Phase 2 : Mini-projet RNN pour le traitement du langage
+# 🔍 Phase 2 : Mini-projet RNN pour le traitement du langage
 
 ![RNN Architecture](https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1000&h=300)
 
-## Objectifs de la phase
+## 🎯Objectifs de la phase
 
 Dans cette phase, vous allez :
 
@@ -10,9 +10,9 @@ Dans cette phase, vous allez :
 - Implémenter un modèle LSTM pour l'analyse de sentiment
 - Visualiser et interpréter le fonctionnement interne d'un RNN
 
-## Partie 1: Principes des RNN (20 min)
+## 🧩 Partie 1: Principes des RNN (20 min)
 
-### Architecture et fonctionnement des RNN
+### 📊 Architecture et fonctionnement des RNN
 
 Les réseaux de neurones récurrents (RNN) sont conçus spécifiquement pour traiter des données séquentielles comme le texte, les séries temporelles ou les données audio. Contrairement aux réseaux classiques qui traitent chaque entrée indépendamment, les RNN maintiennent un "état interne" qui leur permet de se souvenir des informations précédentes.
 

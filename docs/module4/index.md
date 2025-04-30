@@ -1,8 +1,8 @@
-# Module 4 : Projet intégrateur - Chatbot pédagogique
+# 🧠 Module 4 : Projet intégrateur - Chatbot pédagogique
 
 ![Projet intégrateur](../images/banner-chatbot-pedagogique.svg)
 
-## Objectifs du module
+## 🎯 Objectifs du module
 
 Cette dernière séance vous permettra de :
 
@@ -11,7 +11,7 @@ Cette dernière séance vous permettra de :
 - Intégrer l'API Mistral AI dans une solution complète
 - Présenter et défendre votre solution technique
 
-## Vision du projet
+## 🔍 Vision du projet
 
 Le projet consiste à développer un assistant virtuel conversationnel capable d'expliquer les concepts du Deep Learning, de répondre aux questions techniques et d'accompagner les apprenants dans leur découverte de ce domaine.
 

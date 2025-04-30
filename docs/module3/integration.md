@@ -1,19 +1,19 @@
-# Phase 2 : Amélioration des performances et intégration (1h30)
+# ⚙️ Phase 2 : Amélioration des performances et intégration (1h30)
 
 ![Amélioration des performances](https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000&h=300)
 
-## Introduction aux techniques d'optimisation (30 min)
+## 🔍 Introduction aux techniques d'optimisation (30 min)
 
-**Objectif**: Comprendre les différentes techniques d'optimisation des modèles de Deep Learning pour les environnements à ressources limitées et les applications en production.
+** 🎯 Objectif**: Comprendre les différentes techniques d'optimisation des modèles de Deep Learning pour les environnements à ressources limitées et les applications en production.
 
-### Pourquoi optimiser les modèles ?
+### 🤔 Pourquoi optimiser les modèles ?
 
 Dans un contexte d'entreprise, l'optimisation des modèles est essentielle pour plusieurs raisons :
 
-- **Coûts d'infrastructure** : Réduire les besoins en ressources matérielles
-- **Latence** : Améliorer le temps de réponse pour une meilleure expérience utilisateur
-- **Énergie** : Diminuer la consommation énergétique (crucial pour les appareils mobiles)
-- **Accessibilité** : Permettre l'exécution sur des appareils à ressources limitées
+- **💰 Coûts d'infrastructure** : Réduire les besoins en ressources matérielles
+- **⏱️ Latence** : Améliorer le temps de réponse pour une meilleure expérience utilisateur
+- **🔋 Énergie** : Diminuer la consommation énergétique (crucial pour les appareils mobiles)
+- **🌐 Accessibilité** : Permettre l'exécution sur des appareils à ressources limitées
 
 ### Panorama des techniques d'optimisation
 

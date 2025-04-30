@@ -1,8 +1,8 @@
-# Phase 1: Introduction pratique au Deep Learning
+# 🔍 Phase 1: Introduction pratique au Deep Learning
 
 ![Introduction pratique](../images/banner-intro-dl.svg)
 
-## Objectifs de cette section
+## 🎯 Objectifs de cette section
 
 Dans cette première approche du Deep Learning, vous allez :
 
@@ -11,7 +11,7 @@ Dans cette première approche du Deep Learning, vous allez :
  - Expérimenter l'impact des modifications sur les performances d'un modèle
  - Développer une intuition sur le fonctionnement des réseaux de neurones
 
-## Approche pédagogique : d'abord la pratique, ensuite la théorie
+## 💡 Approche pédagogique : d'abord la pratique, ensuite la théorie
 
 Contrairement à l'approche traditionnelle qui commence par la théorie, nous allons d'abord vous faire manipuler des modèles de Deep Learning pour éveiller votre curiosité et vous donner une intuition pratique. Les concepts théoriques seront introduits progressivement, en s'appuyant sur votre expérience directe.
 
