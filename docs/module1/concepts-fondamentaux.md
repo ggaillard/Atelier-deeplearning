@@ -49,8 +49,6 @@ Dans cette partie, vous allez explorer individuellement le fonctionnement intern
 ### Matériel pour la pratique individuelle
 
 * [Notebook interactif "Anatomie d'un réseau de neurones"](ressources/anatomie-reseau.md)
-* [Schéma à compléter pour la synthèse](ressources/schema-a-completer.md)
-* [Fiche récapitulative des termes techniques](ressources/glossaire-dl.md)
   
 ### Instructions étape par étape
 

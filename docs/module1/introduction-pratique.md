@@ -1,7 +1,3 @@
-J'ai analysé le document "paste.txt" et je remarque qu'il s'agit d'un contenu pour le module 1, phase 1 (Introduction pratique au Deep Learning) qui nécessite une remise en forme au format Markdown.
-
-Voici le document correctement formaté avec les icônes appropriés et une structure Markdown cohérente:
-
 # 🔍 Phase 1: Introduction pratique au Deep Learning
 
 ![Introduction pratique](../images/banner-intro-dl.svg)
@@ -19,7 +15,7 @@ Dans cette première approche du Deep Learning, vous allez :
 
 Contrairement à l'approche traditionnelle qui commence par la théorie, nous allons d'abord vous faire manipuler des modèles de Deep Learning pour éveiller votre curiosité et vous donner une intuition pratique. Les concepts théoriques seront introduits progressivement, en s'appuyant sur votre expérience directe.
 
-## Partie 1 : Applications du Deep Learning (15 min)
+## 🎮 Partie 1 : Applications du Deep Learning (15 min)
 
 ### Démonstration 1 : GitHub Copilot
 
@@ -71,7 +67,7 @@ Les modèles de langage comme GPT ou Mistral peuvent générer du texte cohéren
 - Production de résumés de documents techniques
 - Suggestions de réponses dans une application de service client
 
-## Partie 2 : Premier contact avec un réseau de neurones (30 min)
+## 🔄 Partie 2 : Premier contact avec un réseau de neurones (30 min)
 
 ### Instructions détaillées
 
@@ -144,7 +140,7 @@ Après avoir exécuté le notebook de base, essayez ces modifications pour obser
    - Observer comment le modèle réagit à différents styles d'écriture
    - Analyser les prédictions erronées et tenter de comprendre pourquoi
 
-## Partie 3 : Réflexion et documentation (15 min)
+## 📋 Partie 3 : Réflexion et documentation (15 min)
 
 Après vos expérimentations, prenez le temps de réfléchir à ce que vous avez observé :
 
@@ -163,13 +159,13 @@ Après vos expérimentations, prenez le temps de réfléchir à ce que vous avez
    - Comparez les résultats de vos différentes modifications
    - Discutez des surprises ou des difficultés rencontrées
 
-## Conclusion et transition
+## ✅ Conclusion et transition
 
 Cette introduction pratique vous a permis de manipuler directement un réseau de neurones sans vous préoccuper immédiatement des concepts théoriques sous-jacents. Vous avez pu observer comment un modèle apprend à reconnaître des chiffres manuscrits et comment diverses modifications peuvent affecter ses performances.
 
 Dans la prochaine section, nous approfondirons les [concepts fondamentaux](concepts-fondamentaux.md) du Deep Learning en nous appuyant sur votre expérience pratique. Nous comparerons également le Deep Learning avec les approches classiques du Machine Learning pour mieux comprendre ses particularités et ses avantages.
 
-## Ressources complémentaires
+## 📚 Ressources complémentaires
 
 - [Guide d'utilisation de Google Colab](ressources/guide-colab.md) - Pour vous aider à utiliser cet environnement
 - [Glossaire du Deep Learning](ressources/glossaire-dl.md) - Définitions des termes techniques rencontrés
