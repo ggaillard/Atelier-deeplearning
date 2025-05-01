@@ -1,9 +1,8 @@
-# Évaluation du Mini-Projet CNN - Reconnaissance de chiffres manuscrits
+# Fiche d'oberservation du Mini-Projet CNN - Reconnaissance de chiffres manuscrits
 
 ## Informations générales
 **Nom et prénom:** ______________________________
 **Date:** ______________________________________
-**Groupe:** ___________________________________
 
 ## Partie 1 : Résultats de test de l'application
 
@@ -118,11 +117,6 @@ _________________________________________________________________
 ```
 
 ### Auto-évaluation
-**Sur une échelle de 1 à 5, évaluez votre compréhension actuelle des CNN:** ____
-
----
-
-## Réservé à l'évaluateur
 
 | Critère | Points possibles | Points obtenus | Commentaires |
 |---------|------------------|----------------|--------------|

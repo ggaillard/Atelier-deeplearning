@@ -158,7 +158,7 @@ Pour la partie web, vous aurez besoin d'un fichier `mnist_cnn_model.h5` contenan
    - Dans VS Code, créez la structure de dossiers suivante via l'explorateur:
      - Créez un dossier `templates`
      - Créez un dossier `static`
-     - Dans `static`, créez les sous-dossiers `css` et `js`Problpro
+     - Dans `static`, créez les sous-dossiers `css` et `js`
 
 
 2.📥**Téléchargement des fichiers de l'application web**
@@ -189,14 +189,6 @@ Téléchargez les fichiers suivants et placez-les dans les dossiers indiqués :
 └── app.js
  ```
 ```
-
-Dans ce format :
-- Les blocs de code sont entourés de triples backticks (\`\`\`) pour une meilleure lisibilité.
-- Les commentaires sont précédés par un `#`.
-- Les niveaux d'indentation sont représentés par des caractères spéciaux (`├──` et `└──`) pour indiquer les sous-dossiers.
-
-Si vous avez besoin d'autres ajustements ou d'informations supplémentaires, n'hésitez pas à demander !
-
  
 ### Étape 3 : Installation et lancement (10 minutes)
 
@@ -281,9 +273,9 @@ Si vous avez besoin d'autres ajustements ou d'informations supplémentaires, n'h
 
 À la fin de la session (30 minutes), veuillez :
 
-1. **Copier et Compléter** entièrement ce [formulaire d'évaluation](ressources/evaluationCNN.md)
-2. **Enregistrer**  le document  sous le nom "Eval_CNN_NOM_Prenom.doc"
-3. **Partager** votre évaluation avec l'enseignant sur l'espace de cours:
+1. **Copier et Compléter** entièrement ce [formulaire d'évaluation](ressources/Partie2-Phase1-fiche-observationsCNN.md)
+2. **Enregistrer**  le document  sous le nom "FichieOberservation_CNN_NOM_Prenom.doc"
+3. **Partager** vos observations avec l'enseignant sur l'espace de cours:
 
 **IMPORTANT :** La remise de ce document complété est obligatoire et fait partie de l'évaluation du mini-projet.
 
