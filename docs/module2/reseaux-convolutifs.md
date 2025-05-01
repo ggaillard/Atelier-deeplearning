@@ -116,8 +116,36 @@ Maintenant que vous avez conceptualisé l'architecture d'un CNN, passons à l'im
 
 ## Partie 3: Intégration dans une application web via Google Colab (40 min)
 
-[Le projet](ressources/mini-projet-cnn-web-colab.md)
+## 🎯 Objectif du mini-projet
 
+Dans cette partie pratique, vous allez créer une application web interactive qui intègre votre modèle CNN pour la reconnaissance de chiffres manuscrits. Ce mini-projet reprend les concepts théoriques vus précédemment et les applique dans un contexte professionnel concret.
+
+## 🚀 Mise en contexte professionnelle 
+
+En tant que stagiaire dans une PME, vous développez un prototype d'application qui permettra d'automatiser la saisie de codes à partir de documents papier, économisant du temps aux employés et réduisant les erreurs de transcription.
+
+## 📋 Structure du projet
+
+Le mini-projet, détaillé dans le document de référence, comprend:
+
+- ⚙️ **Configuration de l'environnement** dans Google Colab
+- 🧠 **Entraînement d'un modèle CNN** sur le dataset MNIST 
+- 🌐 **Création d'une interface web interactive** avec Flask et ngrok
+- 🧪 **Tests et évaluation** de votre application
+
+## 🔍 Éléments à observer et documenter
+
+Pendant vos tests, portez une attention particulière à:
+
+- 📊 Le taux de réussite sur différents types d'entrées (dessin vs image importée)
+- 🔍 La visualisation des feature maps et ce qu'elles révèlent du fonctionnement du modèle
+- 💡 Les forces et limitations observées dans des conditions réelles d'utilisation
+
+## 📝 Livrable attendu
+
+Vous compléterez la fiche d'observations sur les CNN en documentant les résultats de votre expérimentation. Cette fiche servira de base pour évaluer votre compréhension des réseaux convolutifs et leur application pratique.
+
+Pour les instructions détaillées étape par étape, consultez le document complet [mini-projet-cnn-web-colab.md](ressources/mini-projet-cnn-web-colab.md).
 
 # Ressources complémentaires
 

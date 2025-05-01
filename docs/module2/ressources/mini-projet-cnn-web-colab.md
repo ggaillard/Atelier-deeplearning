@@ -1,11 +1,11 @@
 
-### Mini-projet : Reconnaissance de chiffres manuscrits avec interface web dans Colab
+###🚀Mini-projet : Reconnaissance de chiffres manuscrits avec interface web dans Colab
 
-#### Contexte professionnel
+#### 📋Contexte professionnel
 
 Vous êtes stagiaire dans une PME où les employés doivent régulièrement saisir manuellement des codes à partir de documents papier (bons de commande, formulaires clients, etc.). Votre responsable informatique souhaite explorer des solutions d'automatisation et vous demande de tester une application de reconnaissance de chiffres manuscrits.
 
-### Étape 1: Configuration de l'environnement Colab (5 minutes)
+### ⚙️Étape 1: Configuration de l'environnement Colab (5 minutes)
 
 Créez un nouveau notebook Google Colab et exécutez les cellules suivantes:
 
@@ -32,7 +32,7 @@ from pyngrok import ngrok
 print("Configuration terminée!")
 ```
 
-### Étape 2: Création et entraînement du modèle CNN (8 minutes)
+### 🧠Étape 2: Création et entraînement du modèle CNN (8 minutes)
 
 ```python
 # Chargement du dataset MNIST
@@ -83,7 +83,7 @@ model.save('mnist_cnn_model.h5')
 print("Modèle entraîné et sauvegardé!")
 ```
 
-### Étape 3: Création de l'application web Flask (7 minutes)
+### 🌐Étape 3: Création de l'application web Flask (7 minutes)
 
 ```python
 # Définition du template HTML pour l'application web
@@ -550,7 +550,7 @@ def run_app():
 print("Configuration de l'application terminée!")
 ```
 
-### Étape 4: Lancement de l'application web (2 minutes)
+### 🚀Étape 4: Lancement de l'application web (2 minutes)
 
 ```python
 # Configurer et lancer ngrok avec Colab
@@ -566,29 +566,29 @@ print("Cela peut prendre quelques secondes...")
 app.run()
 ```
 
-### Étape 5: Tests pratiques (15 minutes)
+### 🧪Étape 5: Tests pratiques (15 minutes)
 
 Une fois l'application lancée, vous obtiendrez un lien ngrok (https://xxxx.ngrok.io) que vous pourrez ouvrir dans un nouvel onglet de votre navigateur.
 
 1. **Test avec dessins à la souris**
-   - Dans l'interface web, dessinez clairement un chiffre (de 0 à 9) dans la zone prévue
-   - Cliquez sur le bouton "Prédire"
-   - Notez la prédiction et le niveau de confiance
-   - Répétez ce processus avec 5 chiffres différents
-   - Remplissez le tableau des résultats dans la section d'évaluation
+   . Dans l'interface web, dessinez clairement un chiffre (de 0 à 9) dans la zone prévue
+   . Cliquez sur le bouton "Prédire"
+   . Notez la prédiction et le niveau de confiance
+   . Répétez ce processus avec 5 chiffres différents
+   . Remplissez le tableau des résultats dans la section d'évaluation
 
 2. **Test avec image importée**
-   - Préparez une image de chiffre manuscrit (vous pouvez l'écrire sur papier et prendre une photo)
-   - Cliquez sur l'onglet "Importer une image"
-   - Sélectionnez votre image
-   - Cliquez sur "Prédire" et notez les résultats
+   . Préparez une image de chiffre manuscrit (vous pouvez l'écrire sur papier et prendre une photo)
+   . Cliquez sur l'onglet "Importer une image"
+   . Sélectionnez votre image
+   . Cliquez sur "Prédire" et notez les résultats
 
 3. **Test avec feature maps**
-   - Cochez la case "Visualiser les feature maps"
-   - Dessinez un nouveau chiffre et cliquez sur "Prédire"
-   - Observez les feature maps qui s'affichent
+   . Cochez la case "Visualiser les feature maps"
+   . Dessinez un nouveau chiffre et cliquez sur "Prédire"
+   . Observez les feature maps qui s'affichent
 
-### Étape 6: Évaluation et documentation (10 minutes)
+### 📊Étape 6: Évaluation et documentation (10 minutes)
 
 À l'aide de cette cellule, créez un tableau pour consigner vos résultats:
 
@@ -661,20 +661,15 @@ display(Markdown("""
 """))
 ```
 
-## Livrable à rendre
+## 📝Livrable à rendre
 
 À la fin de la session, créez une copie de votre notebook Colab et partagez-le avec votre formateur. Assurez-vous d'avoir rempli toutes les sections d'évaluation avec vos observations.
-
-1. Dans Google Colab, cliquez sur "Fichier" > "Enregistrer une copie dans Drive"
-2. Une fois sauvegardé dans Google Drive, cliquez sur "Partager" en haut à droite
-3. Ajoutez l'adresse email de votre formateur et définissez les permissions sur "Lecteur"
-4. Cliquez sur "Envoyer"
 
 ## Pour aller plus loin (si vous terminez en avance)
 
 Si vous avez terminé avant la fin du temps imparti, explorez ces pistes :
-- Comment utiliser d'autres architectures CNN (VGG16, MobileNet) via TensorFlow Hub
-- Comment améliorer la robustesse du modèle avec l'augmentation de données
-- Comment optimiser le modèle pour des performances plus rapides
+. Comment utiliser d'autres architectures CNN (VGG16, MobileNet) via TensorFlow Hub
+. Comment améliorer la robustesse du modèle avec l'augmentation de données
+. Comment optimiser le modèle pour des performances plus rapides
 ```
 
