@@ -88,7 +88,7 @@ Suivez ces étapes :
 - Copier-coller les cellules depuis le [notebook de référence](ressources/hello-world-dl.md)
 - Exécuter chaque cellule en cliquant sur le bouton ▶️ ou avec Ctrl+Entrée
 - Observer et analyser les résultats à chaque étape
-- Compléter la [fiche d'observations](ressources/fiche-observations.md)
+- Compléter la [fiche d'observations](ressources/Partie1-Phase1-fiche-observations.md)
 
 #### 3. Structure du notebook
 
