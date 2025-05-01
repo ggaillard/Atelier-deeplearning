@@ -126,38 +126,38 @@ Le notebook de reconnaissance de chiffres manuscrits est organisé en 9 sections
 Après avoir exécuté le notebook de base, essayez ces modifications pour observer leur impact :
 
 1. **Modification de l'architecture :**
-   - Augmenter/diminuer le nombre de neurones dans chaque couche
-   - Ajouter ou supprimer des couches dans le réseau
-   - Essayer d'ajouter une couche Dropout (qui désactive aléatoirement certains neurones pendant l'entraînement)
+    - Augmenter/diminuer le nombre de neurones dans chaque couche
+    - Ajouter ou supprimer des couches dans le réseau
+    - Essayer d'ajouter une couche Dropout (qui désactive aléatoirement certains neurones pendant l'entraînement)
 
 2. **Ajustement des paramètres d'entraînement :**
-   - Changer le nombre de cycles d'entraînement (époques)
-   - Modifier le nombre d'exemples traités à la fois (taille du batch)
-   - Tester différentes méthodes d'apprentissage (optimiseurs)
+    - Changer le nombre de cycles d'entraînement (époques)
+    - Modifier le nombre d'exemples traités à la fois (taille du batch)
+    - Tester différentes méthodes d'apprentissage (optimiseurs)
 
 3. **Test avec vos propres dessins :**
-   - Utiliser l'interface de dessin pour tester des chiffres manuscrits
-   - Observer comment le modèle réagit à différents styles d'écriture
-   - Analyser les prédictions erronées et tenter de comprendre pourquoi
+    - Utiliser l'interface de dessin pour tester des chiffres manuscrits
+    - Observer comment le modèle réagit à différents styles d'écriture
+    - Analyser les prédictions erronées et tenter de comprendre pourquoi
 
 ## 📋 Partie 3 : Réflexion et documentation (15 min)
 
 Après vos expérimentations, prenez le temps de réfléchir à ce que vous avez observé :
 
 1. **Complétez la fiche d'observations :**
-   - Notez les performances initiales du modèle
-   - Documentez l'impact de vos modifications
-   - Analysez les cas où le modèle échoue
+    - Notez les performances initiales du modèle
+    - Documentez l'impact de vos modifications
+    - Analysez les cas où le modèle échoue
 
 2. **Questions de réflexion :**
-   - Qu'est-ce qui semble avoir le plus d'impact sur les performances ?
-   - Quelles sont les limites du modèle que vous avez observées ?
-   - Quelles applications pratiques pourriez-vous envisager avec cette technologie ?
+    - Qu'est-ce qui semble avoir le plus d'impact sur les performances ?
+    - Quelles sont les limites du modèle que vous avez observées ?
+    - Quelles applications pratiques pourriez-vous envisager avec cette technologie ?
 
 3. **Partage d'expérience :**
-   - Échangez avec vos camarades sur vos observations
-   - Comparez les résultats de vos différentes modifications
-   - Discutez des surprises ou des difficultés rencontrées
+    - Échangez avec vos camarades sur vos observations
+    - Comparez les résultats de vos différentes modifications
+    - Discutez des surprises ou des difficultés rencontrées
 
 ## ✅ Conclusion et transition
 
