@@ -17,6 +17,40 @@ Vous êtes stagiaire dans une entreprise qui souhaite implémenter un système d
 
 Votre mission est d'améliorer ce modèle existant en explorant différentes configurations et en justifiant vos choix techniques.
 
+## Livrable attendu
+
+Vous devez soumettre un notebook complet incluant :
+
+1. **Introduction** : Présentation du contexte et des objectifs
+2. **Modèle de référence** : Implémentation et résultats du modèle initial
+3. **Améliorations proposées** : Description détaillée de chaque modification avec justification
+4. **Résultats comparatifs** : Tableau et graphiques comparant tous les modèles testés
+5. **Analyse des erreurs** : Étude des cas où votre meilleur modèle échoue encore
+6. **Test de robustesse** : Évaluation de la performance sur des données altérées
+7. **Conclusion** : Synthèse des résultats et recommandations pour l'entreprise
+
+## Critères d'évaluation
+
+Votre mini-projet sera évalué selon les critères suivants :
+
+| Critère | Points | Description |
+|---------|--------|-------------|
+| Qualité du code | 4 | Code bien structuré, commenté et fonctionnel |
+| Pertinence des modifications | 6 | Choix judicieux et justifié des modifications apportées |
+| Amélioration effective | 4 | Gain de performances par rapport au modèle de référence |
+| Analyse critique | 3 | Capacité à analyser les forces et faiblesses des modèles |
+| Documentation | 3 | Clarté et complétude du rapport |
+
+## Conseils pour réussir
+
+- **Commencez simple** : N'essayez pas d'implémenter toutes les modifications à la fois
+- **Expérimentez méthodiquement** : Changez un paramètre à la fois pour bien comprendre son impact
+- **Documentez vos observations** : Notez les effets de chaque modification sur les performances
+- **Analysez les erreurs** : Comprendre pourquoi le modèle se trompe est aussi important que d'améliorer son score
+- **Justifiez vos choix** : Expliquez pourquoi vous avez opté pour certaines modifications plutôt que d'autres
+  
+
+
 ## Instructions détaillées
 
 ### Étape 1 : Préparation de l'environnement (5 min)
@@ -359,37 +393,6 @@ all_results = {
 compare_models(all_results)
 ```
 
-## Livrable attendu
-
-Vous devez soumettre un notebook complet incluant :
-
-1. **Introduction** : Présentation du contexte et des objectifs
-2. **Modèle de référence** : Implémentation et résultats du modèle initial
-3. **Améliorations proposées** : Description détaillée de chaque modification avec justification
-4. **Résultats comparatifs** : Tableau et graphiques comparant tous les modèles testés
-5. **Analyse des erreurs** : Étude des cas où votre meilleur modèle échoue encore
-6. **Test de robustesse** : Évaluation de la performance sur des données altérées
-7. **Conclusion** : Synthèse des résultats et recommandations pour l'entreprise
-
-## Critères d'évaluation
-
-Votre mini-projet sera évalué selon les critères suivants :
-
-| Critère | Points | Description |
-|---------|--------|-------------|
-| Qualité du code | 4 | Code bien structuré, commenté et fonctionnel |
-| Pertinence des modifications | 6 | Choix judicieux et justifié des modifications apportées |
-| Amélioration effective | 4 | Gain de performances par rapport au modèle de référence |
-| Analyse critique | 3 | Capacité à analyser les forces et faiblesses des modèles |
-| Documentation | 3 | Clarté et complétude du rapport |
-
-## Conseils pour réussir
-
-- **Commencez simple** : N'essayez pas d'implémenter toutes les modifications à la fois
-- **Expérimentez méthodiquement** : Changez un paramètre à la fois pour bien comprendre son impact
-- **Documentez vos observations** : Notez les effets de chaque modification sur les performances
-- **Analysez les erreurs** : Comprendre pourquoi le modèle se trompe est aussi important que d'améliorer son score
-- **Justifiez vos choix** : Expliquez pourquoi vous avez opté pour certaines modifications plutôt que d'autres
 
 ## Ressources complémentaires
 
