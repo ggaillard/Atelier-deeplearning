@@ -98,25 +98,25 @@ Dans cette partie, vous allez observer comment un réseau apprend au fil du temp
 1. Localisez la section "Entraînement" et exécutez la cellule d'initialisation
 2. Lancez la visualisation de l'entraînement en temps réel
 3. Observez :
-   * L'évolution des poids à chaque itération
-   * Comment la "frontière de décision" se modifie
-   * La diminution de l'erreur au fil des époques
+   . L'évolution des poids à chaque itération
+   . Comment la "frontière de décision" se modifie
+   . La diminution de l'erreur au fil des époques
 4. Essayez de modifier par vous-même :
-   * Le taux d'apprentissage (learning rate)
-   * La complexité du problème (type de données)
-   * L'architecture du réseau (nombre de neurones)
+   . Le taux d'apprentissage (learning rate)
+   . La complexité du problème (type de données)
+   . L'architecture du réseau (nombre de neurones)
 
 #### Partie 4 : Synthèse et verbalisation (5 min)
 
 1. Complétez le schéma du réseau de neurones fourni en fin de notebook
 2. Identifiez et nommez correctement :
-   * Les entrées et sorties
-   * Les poids et biais
-   * Les fonctions d'activation
-   * Les couches cachées
+   . Les entrées et sorties
+   . Les poids et biais
+   . Les fonctions d'activation
+   . Les couches cachées
 3. Rédigez un court paragraphe (5-7 lignes) expliquant avec vos propres mots :
-   * Comment un réseau de neurones traite l'information
-   * Comment il peut apprendre à partir d'exemples
+   . Comment un réseau de neurones traite l'information
+   . Comment il peut apprendre à partir d'exemples
 
 ## Défi de généralisation (10 min)
 
