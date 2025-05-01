@@ -8,9 +8,10 @@ Cette dernière phase de la séance 4 est consacrée à la présentation de votr
 
 ## 🎯 Déroulement des présentations
 
-Chaque équipe dispose de **8 minutes** au total :
- - **5 minutes** de présentation
- - **3 minutes** de questions-réponses
+ - Chaque équipe dispose de **8 minutes** au total :
+
+   - **5 minutes** de présentation
+   - **3 minutes** de questions-réponses
 
 
 ## Structure recommandée pour votre présentation
@@ -40,6 +41,7 @@ Exemple :
 - Commentez les interactions pendant la démonstration
 
 Conseils pour une démonstration efficace :
+
 - Préparez un script précis avec des questions pertinentes
 - Testez votre démo à l'avance pour éviter les surprises
 - Ayez un "plan B" en cas de problème technique (captures d'écran)
@@ -78,6 +80,7 @@ Exemple :
 ### Support visuel
 
 Si vous utilisez des diapositives, limitez-les à 3-4 maximum :
+
  1. Titre et présentation de l'équipe
  2. Architecture du chatbot (schéma)
  3. Défis et solutions
@@ -99,6 +102,7 @@ Votre présentation sera évaluée selon les critères suivants :
 ## Feedback et évaluation par les pairs
 
 Pendant que vos camarades présentent, vous êtes encouragés à :
+
  - Prendre des notes sur les idées intéressantes
  - Réfléchir à une question pertinente à poser
  - Compléter la grille d'évaluation par les pairs qui vous sera distribuée
@@ -108,6 +112,7 @@ Cette évaluation par les pairs sera prise en compte dans l'évaluation finale, 
 ## Après les présentations
 
 Une fois toutes les présentations terminées :
+
  - Un temps de débriefing collectif sera organisé
  - Les points forts de chaque projet seront mis en avant
  - Des conseils d'amélioration généraux seront partagés
@@ -115,6 +120,7 @@ Une fois toutes les présentations terminées :
 ## Conclusion et prochaines étapes
 
 Cette présentation marque la fin du projet et du parcours de 4 séances sur le Deep Learning. Vous avez acquis des compétences précieuses en :
+
  - Compréhension des concepts du Deep Learning
  - Développement d'applications d'IA pratiques
  - Intégration d'API de modèles de langage
@@ -125,6 +131,7 @@ Ces compétences sont directement transférables dans votre future vie professio
 ## Remise des livrables finaux
 
 N'oubliez pas de déposer tous vos livrables finaux sur la plateforme avant la date limite :
+
  - Code source complet avec un lien GitHub
  - Documentation technique sur Github en Markdown
  - Guide utilisateur
