@@ -117,11 +117,13 @@ Dans cette partie, vous allez observer comment un réseau apprend au fil du temp
 
 1. Complétez le schéma du réseau de neurones fourni en fin de notebook
 2. Identifiez et nommez correctement :
+   
    . Les entrées et sorties
    . Les poids et biais
    . Les fonctions d'activation
    . Les couches cachées
 3. Rédigez un court paragraphe (5-7 lignes) expliquant avec vos propres mots :
+   
    . Comment un réseau de neurones traite l'information
    . Comment il peut apprendre à partir d'exemples
 
@@ -132,13 +134,15 @@ Pour approfondir votre compréhension, réalisez ce défi supplémentaire :
 1. Retournez aux notebooks de la première partie (ML classique et Deep Learning)
 2. Localisez la section "Défi de généralisation" dans chaque notebook
 3. Exécutez les cellules qui permettent de tester les modèles sur :
-   - Des images avec du bruit ajouté
-   - Des images avec rotation légère
+   
+   . Des images avec du bruit ajouté
+   . Des images avec rotation légère
 4. Notez les performances des deux approches sur ces données modifiées
 5. Analysez par vous-même :
-   - Lequel des modèles généralise le mieux aux nouvelles données ?
-   - Pourquoi existe-t-il cette différence ?
-   - Quels avantages et inconvénients présentent chaque approche ?
+   
+   . Lequel des modèles généralise le mieux aux nouvelles données ?
+   . Pourquoi existe-t-il cette différence ?
+   . Quels avantages et inconvénients présentent chaque approche ?
 
 
 ## Ressources complémentaires
@@ -146,13 +150,6 @@ Pour approfondir votre compréhension, réalisez ce défi supplémentaire :
 - [Guide d'utilisation de Google Colab](ressources/guide-colab.md) - Pour vous aider à utiliser cet environnement
 - [Glossaire du Deep Learning](ressources/glossaire-dl.md) - Définitions des termes techniques rencontrés
 - [TensorFlow Playground](https://playground.tensorflow.org/) - Interface interactive pour expérimenter avec des réseaux de neurones simples
-
-## Informations sur le rendu
-
-**Nom et prénom :** ____________________________
-
-**Date :** ____________________________
-
 
 [Retour au Module 1](index.md){ .md-button }
 [Continuer vers le mini-projet](mini-projet.md){ .md-button .md-button--primary }
