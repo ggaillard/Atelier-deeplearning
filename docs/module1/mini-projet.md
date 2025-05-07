@@ -80,7 +80,6 @@ Votre mini-projet sera évalué selon les critères suivants :
    y_train_cat = to_categorical(y_train, 10)
    y_test_cat = to_categorical(y_test, 10)
    ```
-
 ### Étape 2 : Implémentation du modèle de référence (10 min)
 
 Le modèle de référence fourni par l'entreprise est un CNN simple :
