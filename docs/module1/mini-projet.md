@@ -1,5 +1,3 @@
-Je comprends, voici la version corrigée en tenant compte de vos instructions :
-
 # 🛠️ Phase 3 : Mini-projet individuel (1h)
 
 ![Mini-projet](../images/banner-mini-projet.svg)
