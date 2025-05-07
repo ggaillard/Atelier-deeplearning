@@ -57,7 +57,7 @@ plugins:
 
 nav:
   - Accueil: index.md
-  - Suivi de progression: suivi-progression.md
+  
   - Module 1 - Fondamentaux:
       - Vue d'ensemble: module1/index.md
       - 1 - Introduction pratique: module1/introduction-pratique.md
