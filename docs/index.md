@@ -1,102 +1,64 @@
-```markdown
-# Formation Deep Learning
+# Formation Deep Learning pour BTS SIO
 
 ![Banner Deep Learning](images/banner-dl.svg)
 
-## Bienvenue dans ce parcours d'apprentissage
+## 🚀 Bienvenue dans ce parcours d'apprentissage
 
-Cette formation intensive vous initie au Deep Learning à travers une approche pratique et progressive, spécialement conçue pour les étudiants de BTS SIO.
+Cette formation intensive vous initie au Deep Learning à travers une approche pratique et progressive, spécialement conçue pour les étudiants de BTS SIO. Vous découvrirez les fondamentaux des réseaux de neurones, explorerez différentes architectures, et développerez un chatbot pédagogique intégrant l'API Mistral AI.
 
-## Le Deep Learning dans l'écosystème de l'IA
+## 🧠 Qu'est-ce que le Deep Learning ?
 
-Pour bien comprendre la place du Deep Learning dans le paysage plus large de l'intelligence artificielle, examinons cette hiérarchie conceptuelle :
+Le Deep Learning est une branche du Machine Learning qui utilise des réseaux de neurones à multiples couches pour extraire automatiquement des caractéristiques hiérarchiques à partir des données. Contrairement au Machine Learning classique qui nécessite une extraction manuelle des caractéristiques, le Deep Learning automatise ce processus, le rendant particulièrement efficace pour des tâches complexes comme la vision par ordinateur et le traitement du langage naturel.
 
-![Hiérarchie du Deep Learning avec modules de formation](images/ia-hierarchy-modules.svg)
+![Intelligence Artificielle - Écosystème](images/ai-ecosystem.svg)
 
-### Intelligence Artificielle
+-
 
-L'Intelligence Artificielle englobe toutes les techniques visant à créer des machines capables de simuler l'intelligence humaine.
 
-**Exemple simple :** Comme un robot qui joue aux échecs ou un assistant virtuel qui répond à tes questions.
 
-Dans cet écosystème, on distingue deux grandes approches :
 
-#### IA Symbolique/Classique
+![Types d'apprentissage et impact du Deep Learning](images/learning-types.svg)
 
-Approche basée sur des règles explicites et la manipulation de symboles logiques définis par des experts.
+## 📚 Organisation du parcours
 
-**Exemple simple :** Comme les règles d'un jeu vidéo : "SI le joueur touche un monstre, ALORS il perd une vie". C'est simple, mais ça ne s'adapte pas aux situations nouvelles.
+Notre formation se structure en 4 modules progressifs totalisant 16 heures de formation :
 
-#### Machine Learning
+![Les 4 modules de la formation](images/modules.svg)
 
-Systèmes capables d'apprendre à partir des données sans être explicitement programmés.
+| Module | Titre | Durée | Contenu |
+|--------|-------|-------|---------|
+| [Module 1](module1/index.md) | **Fondamentaux du Deep Learning** | 4h | Introduction pratique, concepts de base, anatomie d'un réseau, fonction d'activation |
+| [Module 2](module2/index.md) | **Architectures spécialisées** | 4h | Réseaux convolutifs (CNN) pour la vision, réseaux récurrents (RNN) pour le texte |
+| [Module 3](module3/index.md) | **Développement d'applications pratiques** | 4h | Frameworks, optimisation, intégration API, préparation au projet |
+| [Module 4](module4/index.md) | **Projet intégrateur - Chatbot pédagogique** | 4h | Développement du chatbot, finalisation, présentation |
 
-**Exemple simple :** Comme apprendre à reconnaître les chats en regardant des milliers de photos de chats, au lieu d'essayer de programmer "un chat a des oreilles pointues, des moustaches, etc."
+## 🔍 Différence fondamentale entre Machine Learning et Deep Learning
 
-Le Machine Learning comprend trois types d'apprentissage principaux :
-- **Apprentissage supervisé** : À partir d'exemples étiquetés, comme un professeur qui corrige
-- **Apprentissage non supervisé** : Découverte autonome de structures, comme trier des vêtements par couleur
-- **Apprentissage par renforcement** : Apprendre par essais-erreurs, comme quand on apprend à faire du vélo
+Le Machine Learning traditionnel nécessite une intervention humaine pour l'extraction des caractéristiques importantes des données, tandis que le Deep Learning automatise complètement ce processus grâce à ses multiples couches de neurones.
 
-##### Deep Learning
+![Différence entre Machine Learning et Deep Learning](images/ml-vs-dl-comparison.svg)
 
-Le Deep Learning est une branche puissante du Machine Learning qui utilise des réseaux de neurones à multiples couches. Contrairement à ce qu'on pourrait penser, il ne se limite pas à l'apprentissage supervisé mais peut s'appliquer aux trois types d'apprentissage.
-
-**Exemple simple :** Comme si ton cerveau apprenait à reconnaître un visage en identifiant d'abord les contours, puis les formes des yeux, du nez, puis l'ensemble du visage, et enfin qui est cette personne - tout ça automatiquement!
-
-Durant cette formation, vous découvrirez progressivement les différentes architectures de Deep Learning :
-- **Module 1** : Réseaux feedforward (réseaux de base)
-- **Module 2** : CNN (vision par ordinateur) et RNN/LSTM (texte et séquences)
-- **Modules 3-4** : Transformers (via l'API Mistral) pour le chatbot pédagogique
-
-## 1. Organisation du parcours
-
-Notre formation se compose de 4 modules de 4 heures chacun :
-
-| Module | Titre | Aperçu |
-|--------|-------|--------|
-| [Module 1](module1/index.md) | **Fondamentaux du Deep Learning** | Introduction pratique, concepts fondamentaux, anatomie des réseaux de neurones |
-| [Module 2](module2/index.md) | **Architectures spécialisées** | Réseaux convolutifs (CNN) pour la vision, réseaux récurrents (RNN) pour le texte |
-| [Module 3](module3/index.md) | **Développement d'applications pratiques** | Frameworks, optimisation, intégration API, préparation au projet |
-| [Module 4](module4/index.md) | **Projet intégrateur - Chatbot pédagogique** | Développement du chatbot, finalisation, présentation |
-
-## 2. Prérequis techniques
+## 🛠️ Prérequis techniques
 
 Pour suivre efficacement cette formation, vous devez :
 
- - Posséder des bases en programmation Python
- - Disposer d'un compte Google pour accéder à Colab
- - Avoir une curiosité pour l'intelligence artificielle
+- Posséder des bases en programmation Python
+- Disposer d'un compte Google pour accéder à Google Colab
+- Avoir une curiosité pour l'intelligence artificielle
 
-## 3. Navigation dans ce site
+## 🧭 Navigation dans ce site
 
 Ce site contient toutes les ressources nécessaires pour votre parcours :
 
-- **[Carte de progression](carte-progression.md)** - Parcours d'apprentissage et compétences développées
-- [Guide de bonnes pratiques pour la documentation technique](ressources/guide-etudiant.md)
-- [Compétences recherchées en stage BTS SIO](ressources/competences-stage-sio.md)
-
-## 4. Ressources supplémentaires
-
-- **Documentation TensorFlow/Keras** - [tensorflow.org/tutorials](https://www.tensorflow.org/tutorials)
-- **API Mistral** - [docs.mistral.ai](https://docs.mistral.ai/)
-- **Hugging Face** - [huggingface.co/docs](https://huggingface.co/docs)
-- **FastAPI** - [fastapi.tiangolo.com](https://fastapi.tiangolo.com/)
+- **[Carte de progression](carte-progression.md)** - Visualisez votre parcours d'apprentissage et les compétences développées
+- **[Présentation du projet fil rouge](presentation.md)** - Découvrez le chatbot pédagogique que vous allez développer
+- **[Guide d'utilisation des ressources](ressources/guide-etudiant.md)** - Apprenez à utiliser efficacement les ressources fournies
+- **[Compétences BTS SIO développées](ressources/competences-stage-sio.md)** - Consultez les compétences professionnelles visées
 
 
-## 5. Commencer votre parcours
+## 🚀 Commencer votre parcours
 
 Prêt à vous lancer dans l'univers du Deep Learning ? Deux options s'offrent à vous :
 
-[Découvrir le projet chatbot](presentation.md){ .md-button }
-[Commencer le Module 1](module1/index.md){ .md-button .md-button--primary }
-```
-
-Cette nouvelle version de la page d'accueil :
-
-1. Intègre le nouveau diagramme SVG qui montre la hiérarchie du Deep Learning dans l'écosystème de l'IA
-2. Ajoute des explications simples mais précises pour chaque composant majeur
-3. Utilise les exemples concrets adaptés pour des jeunes de 15-16 ans
-4. Montre clairement comment chaque module de la formation s'intègre dans cette hiérarchie
-5. Conserve la structure originale de la page avec les sections sur les prérequis, la navigation, etc.
-
+[🤖 Découvrir le projet chatbot](presentation.md){ .md-button }
+[🏁 Commencer le Module 1](module1/index.md){ .md-button .md-button--primary }
