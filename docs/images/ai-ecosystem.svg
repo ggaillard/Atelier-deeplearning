@@ -1,4 +1,4 @@
-<svg width="950" height="550" xmlns="http://www.w3.org/2000/svg">
+<svg width="950" height="570" xmlns="http://www.w3.org/2000/svg">
   <!-- Palette plus transparente avec dégradés subtils -->
   <defs>
     <!-- IA principale - bleu clair -->
@@ -19,10 +19,16 @@
       <stop offset="100%" stop-color="#C8E6C9" stop-opacity="0.7" />
     </linearGradient>
     
-    <!-- Algo classiques - vert plus clair -->
+    <!-- Algo classiques -  vert bleu -->
     <linearGradient id="algoclass-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E8F5E9" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#C8E6C9" stop-opacity="0.8" />
+      <stop offset="0%" stop-color="#E0F2F1" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#B2DFDB" stop-opacity="0.8" />
+    </linearGradient>
+    
+    <!-- Autres algos ML - jaune-vert -->
+    <linearGradient id="othermls-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0F4C3" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#DCE775" stop-opacity="0.8" />
     </linearGradient>
     
     <!-- DL - violet -->
@@ -65,10 +71,10 @@
   <ellipse cx="550" cy="300" rx="330" ry="240" fill="url(#ml-gradient)" stroke="#81C784" stroke-width="1.5" filter="url(#shadow)" />
   
   <!-- Algorithmes classiques en haut dans ML -->
-  <ellipse cx="420" cy="140" rx="110" ry="70" fill="url(#algoclass-gradient)" stroke="#81C784" stroke-width="1.5" filter="url(#shadow)" />
+  <ellipse cx="420" cy="140" rx="110" ry="70" fill="url(#algoclass-gradient)" stroke="#4DB6AC" stroke-width="1.5" filter="url(#shadow)" />
   
   <!-- Autre algorithmes de ML au centre -->
-  <ellipse cx="600" cy="160" rx="130" ry="70" fill="url(#algoclass-gradient)" stroke="#81C784" stroke-width="1.5" filter="url(#shadow)" />
+  <ellipse cx="600" cy="160" rx="130" ry="70" fill="url(#othermls-gradient)" stroke="#CDDC39" stroke-width="1.5" filter="url(#shadow)" />
   
   <!-- Deep Learning (en violet) -->
   <ellipse cx="550" cy="390" rx="240" ry="120" fill="url(#dl-gradient)" stroke="#9575CD" stroke-width="1.5" filter="url(#shadow)" />
@@ -93,13 +99,13 @@
   <text x="550" y="240" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#2E7D32">MACHINE LEARNING</text>
   <text x="550" y="270" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#2E7D32">(Apprentissage automatique)</text>
   
-  <text x="420" y="130" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2E7D32">ALGORITHMES</text>
-  <text x="420" y="155" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2E7D32">CLASSIQUES</text>
-  <text x="420" y="180" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2E7D32">(Forêts aléatoires)</text>
+  <text x="420" y="130" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#00897B">ALGORITHMES</text>
+  <text x="420" y="155" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#00897B">CLASSIQUES</text>
+  <text x="420" y="180" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#00897B">(Forêts aléatoires)</text>
   
-  <text x="600" y="145" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2E7D32">AUTRES</text>
-  <text x="600" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2E7D32">ALGORITHMES ML</text>
-  <text x="600" y="195" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2E7D32">(Régression, Clustering...)</text>
+  <text x="600" y="145" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#827717">AUTRES</text>
+  <text x="600" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#827717">ALGORITHMES ML</text>
+  <text x="600" y="195" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#827717">(Régression, Clustering...)</text>
   
   <text x="550" y="300" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#512DA8">DEEP LEARNING</text>
   <text x="550" y="330" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#512DA8">(Réseaux de neurones multicouches)</text>
