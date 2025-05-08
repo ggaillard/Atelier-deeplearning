@@ -1,5 +1,4 @@
-Voici une proposition de structure pour la page d'accueil du cours, avec une organisation plus claire des différentes sections :
-
+```markdown
 # Formation Deep Learning
 
 ![Banner Deep Learning](images/banner-dl.svg)
@@ -8,51 +7,49 @@ Voici une proposition de structure pour la page d'accueil du cours, avec une org
 
 Cette formation intensive vous initie au Deep Learning à travers une approche pratique et progressive, spécialement conçue pour les étudiants de BTS SIO.
 
-## 1. Le Deep Learning dans l'écosystème de l'IA
+## Le Deep Learning dans l'écosystème de l'IA
 
-### 1.1 Hiérarchie conceptuelle
+Pour bien comprendre la place du Deep Learning dans le paysage plus large de l'intelligence artificielle, examinons cette hiérarchie conceptuelle :
 
-```mermaid
-flowchart TD
-    A[Intelligence Artificielle] --> B[IA Symbolique/Classique]
-    A --> C[Machine Learning]
-    C --> D[Apprentissage supervisé]
-    C --> E[Apprentissage non supervisé]
-    C --> F[Apprentissage par renforcement]
-    D --> G[Algorithmes classiques]
-    D --> H[Deep Learning]
-    H --> I[Réseaux de neurones feedforward]
-    H --> J[Réseaux convolutifs - CNN]
-    H --> K[Réseaux récurrents - RNN/LSTM]
-    H --> L[Transformers]
-```
+![Hiérarchie du Deep Learning avec modules de formation](images/ia-hierarchy-modules.svg)
 
-- **L'Intelligence Artificielle** englobe toutes les techniques permettant aux machines de simuler l'intelligence humaine
-- Le **Machine Learning** est un sous-ensemble de l'IA où les systèmes apprennent à partir des données sans être explicitement programmés
-- Le **Deep Learning** constitue une branche spécialisée du Machine Learning, s'appuyant sur des réseaux de neurones à multiples couches (d'où le terme "deep")
+### Intelligence Artificielle
 
-### 1.2 Impact sur les métiers de l'informatique
+L'Intelligence Artificielle englobe toutes les techniques visant à créer des machines capables de simuler l'intelligence humaine.
 
-Pour les futurs professionnels du BTS SIO, comprendre le Deep Learning est particulièrement pertinent car cette technologie transforme de nombreux aspects des métiers de l'informatique :
+**Exemple simple :** Comme un robot qui joue aux échecs ou un assistant virtuel qui répond à tes questions.
 
-* **Développement d'applications** : Intégration de fonctionnalités intelligentes (reconnaissance d'images, traitement du langage naturel, etc.)
-  
-* **Sécurité informatique** : Détection d'anomalies et d'intrusions, analyse de comportements suspects
-  
-* **Maintenance prédictive** : Anticiper les défaillances des systèmes informatiques
-  
-* **Support utilisateur** : Chatbots et assistants virtuels pour automatiser le support de niveau 1
-  
-* **Analyse de données** : Extraction automatique d'insights à partir de grands volumes de données
+Dans cet écosystème, on distingue deux grandes approches :
 
-### 1.3 Spécificité et avantages du Deep Learning
+#### IA Symbolique/Classique
 
-Ce qui rend le Deep Learning particulièrement puissant pour un professionnel SIO, c'est qu'il automatise l'extraction des caractéristiques pertinentes, là où les méthodes traditionnelles nécessitent un travail manuel d'ingénierie des caractéristiques (feature engineering). Cette capacité ouvre des possibilités d'application dans de nombreux domaines que vous rencontrerez dans votre parcours professionnel :
+Approche basée sur des règles explicites et la manipulation de symboles logiques définis par des experts.
 
-- **Pour l'option SISR** : détection d'intrusions réseau, prévision de charge serveur, analyse automatisée des logs système
-- **Pour l'option SLAM** : intégration d'API de vision par ordinateur, création d'assistants virtuels, analyse prédictive dans les applications métier
+**Exemple simple :** Comme les règles d'un jeu vidéo : "SI le joueur touche un monstre, ALORS il perd une vie". C'est simple, mais ça ne s'adapte pas aux situations nouvelles.
 
-## 2. Organisation du parcours
+#### Machine Learning
+
+Systèmes capables d'apprendre à partir des données sans être explicitement programmés.
+
+**Exemple simple :** Comme apprendre à reconnaître les chats en regardant des milliers de photos de chats, au lieu d'essayer de programmer "un chat a des oreilles pointues, des moustaches, etc."
+
+Le Machine Learning comprend trois types d'apprentissage principaux :
+- **Apprentissage supervisé** : À partir d'exemples étiquetés, comme un professeur qui corrige
+- **Apprentissage non supervisé** : Découverte autonome de structures, comme trier des vêtements par couleur
+- **Apprentissage par renforcement** : Apprendre par essais-erreurs, comme quand on apprend à faire du vélo
+
+##### Deep Learning
+
+Le Deep Learning est une branche puissante du Machine Learning qui utilise des réseaux de neurones à multiples couches. Contrairement à ce qu'on pourrait penser, il ne se limite pas à l'apprentissage supervisé mais peut s'appliquer aux trois types d'apprentissage.
+
+**Exemple simple :** Comme si ton cerveau apprenait à reconnaître un visage en identifiant d'abord les contours, puis les formes des yeux, du nez, puis l'ensemble du visage, et enfin qui est cette personne - tout ça automatiquement!
+
+Durant cette formation, vous découvrirez progressivement les différentes architectures de Deep Learning :
+- **Module 1** : Réseaux feedforward (réseaux de base)
+- **Module 2** : CNN (vision par ordinateur) et RNN/LSTM (texte et séquences)
+- **Modules 3-4** : Transformers (via l'API Mistral) pour le chatbot pédagogique
+
+## 1. Organisation du parcours
 
 Notre formation se compose de 4 modules de 4 heures chacun :
 
@@ -63,7 +60,7 @@ Notre formation se compose de 4 modules de 4 heures chacun :
 | [Module 3](module3/index.md) | **Développement d'applications pratiques** | Frameworks, optimisation, intégration API, préparation au projet |
 | [Module 4](module4/index.md) | **Projet intégrateur - Chatbot pédagogique** | Développement du chatbot, finalisation, présentation |
 
-## 3. Prérequis techniques
+## 2. Prérequis techniques
 
 Pour suivre efficacement cette formation, vous devez :
 
@@ -71,7 +68,7 @@ Pour suivre efficacement cette formation, vous devez :
  - Disposer d'un compte Google pour accéder à Colab
  - Avoir une curiosité pour l'intelligence artificielle
 
-## 4. Navigation dans ce site
+## 3. Navigation dans ce site
 
 Ce site contient toutes les ressources nécessaires pour votre parcours :
 
@@ -79,28 +76,27 @@ Ce site contient toutes les ressources nécessaires pour votre parcours :
 - [Guide de bonnes pratiques pour la documentation technique](ressources/guide-etudiant.md)
 - [Compétences recherchées en stage BTS SIO](ressources/competences-stage-sio.md)
 
-## 5. Ressources supplémentaires
+## 4. Ressources supplémentaires
 
 - **Documentation TensorFlow/Keras** - [tensorflow.org/tutorials](https://www.tensorflow.org/tutorials)
 - **API Mistral** - [docs.mistral.ai](https://docs.mistral.ai/)
 - **Hugging Face** - [huggingface.co/docs](https://huggingface.co/docs)
 - **FastAPI** - [fastapi.tiangolo.com](https://fastapi.tiangolo.com/)
 
-## 6. Commencer votre parcours
+
+## 5. Commencer votre parcours
 
 Prêt à vous lancer dans l'univers du Deep Learning ? Deux options s'offrent à vous :
 
 [Découvrir le projet chatbot](presentation.md){ .md-button }
 [Commencer le Module 1](module1/index.md){ .md-button .md-button--primary }
+```
 
-Cette structure réorganisée présente plusieurs avantages :
+Cette nouvelle version de la page d'accueil :
 
-1. **Hiérarchie claire** : La numérotation des sections principales (1, 2, 3...) et sous-sections (1.1, 1.2, 1.3...) permet une navigation plus intuitive et une meilleure compréhension de l'organisation du contenu.
+1. Intègre le nouveau diagramme SVG qui montre la hiérarchie du Deep Learning dans l'écosystème de l'IA
+2. Ajoute des explications simples mais précises pour chaque composant majeur
+3. Utilise les exemples concrets adaptés pour des jeunes de 15-16 ans
+4. Montre clairement comment chaque module de la formation s'intègre dans cette hiérarchie
+5. Conserve la structure originale de la page avec les sections sur les prérequis, la navigation, etc.
 
-2. **Regroupement logique** : Les informations sur le Deep Learning sont regroupées dans une section principale (section 1) avec trois sous-sections complémentaires qui explorent différentes facettes du sujet.
-
-3. **Progression naturelle** : La structure guide naturellement le lecteur depuis les concepts théoriques jusqu'à l'application pratique, en passant par l'organisation du cours et les prérequis.
-
-4. **Accessibilité visuelle** : Les espaces entre les sections et la hiérarchisation claire permettent une meilleure lisibilité et facilitent la recherche d'informations spécifiques.
-
-5. **Cohérence du contenu** : Chaque section principale a un objectif distinct et couvre un aspect spécifique de la formation, ce qui rend la page plus cohérente et facile à comprendre.
