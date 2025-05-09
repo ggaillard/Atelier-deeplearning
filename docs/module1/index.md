@@ -45,16 +45,12 @@ Mettez en pratique vos connaissances en modifiant et améliorant un réseau de n
 
 Cette étape finale du module vous permettra de consolider vos connaissances et d'évaluer votre compréhension.
 
-#### 🧠 Carte heuristique des fondamentaux du Deep Learning
+#### 🧠 Guide de référence synthétique des fondamentaux du Deep Learning
 
-Pour visualiser et comprendre les relations entre les concepts clés du Deep Learning, consultez notre carte interactive complète:
+Pour comprendre les concepts clés du Deep Learning.
 
-[Voir la carte des concepts du Deep Learning](ressources/synthese-visuelle.md){ .md-button .md-button--primary }
+[ Guide de référence synthétique](ressources/synthese-visuelle.md){ .md-button .md-button--primary }
 
-Cette carte visuelle vous permet de:
-- Explorer la hiérarchie des concepts (IA > Machine Learning > Deep Learning)
-- Comprendre les différentes architectures (CNN, RNN, Transformers)
-- Visualiser le processus d'apprentissage et les applications pratiques
 
 #### ✅ QCM d'auto-évaluation
 
