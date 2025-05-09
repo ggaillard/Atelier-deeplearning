@@ -47,7 +47,20 @@ Consolidez vos connaissances et évaluez votre compréhension de manière autono
 - ![Carte heuristique des fondamentaux du Deep Learning](ressources/synthese-visuelle.md)
 - ✅ [QCM sur les concepts fondamentaux](qcm-evaluation-module1.md)
 
+Voici une version améliorée de la section sur l'auto-évaluation et la synthèse:
 
+### [📝 Auto-évaluation et synthèse](qcm-evaluation-module1.md) (20 min)
+
+Consolidez vos connaissances et évaluez votre compréhension de manière autonome à travers ces ressources:
+
+- [🧠 Carte heuristique des fondamentaux du Deep Learning](ressources/synthese-visuelle.md)  
+  Visualisez les concepts clés et leurs relations pour une meilleure mémorisation
+
+- [✅ QCM d'auto-évaluation](qcm-evaluation-module1.md)  
+  Testez votre compréhension des concepts fondamentaux du Deep Learning
+
+- 📝 Synthèse personnelle  
+  Prenez quelques minutes pour résumer ce que vous avez appris et identifier les points à approfondir
 
 ## Livrables attendus
 
