@@ -66,7 +66,8 @@ nav:
       - Auto-évaluation: module1/qcm-evaluation-module1.md
       - Ressources: 
         - Glossaire: module1/ressources/glossaire-dl.md  
-        - Guide Colab: module1/ressources/guide-colab.md     
+        - Guide Colab: module1/ressources/guide-colab.md 
+        - Synthèse visuelle: module1/ressources/synthese-visuelle.md    
   - Module 2 - Architectures:
       - Vue d'ensemble: module2/index.md
       - 1 - Réseaux convolutifs (CNN): module2/reseaux-convolutifs.md
