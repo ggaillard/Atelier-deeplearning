@@ -44,9 +44,9 @@ Mettez en pratique vos connaissances en modifiant et améliorant un réseau de n
 
 Consolidez vos connaissances et évaluez votre compréhension de manière autonome.
 
-- ![Carte heuristique des fondamentaux du Deep Learning](../images/mind-map-deep-learning.svg)
-- ✅ QCM sur les concepts fondamentaux
-- 📋 Synthèse personnelle à rédiger
+- ![Carte heuristique des fondamentaux du Deep Learning](ressources/synthese-visuelle.md)
+- ✅ [QCM sur les concepts fondamentaux](qcm-evaluation-pratique.md)
+
 
 
 ## Livrables attendus
