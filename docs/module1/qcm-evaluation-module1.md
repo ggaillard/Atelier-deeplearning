@@ -187,7 +187,8 @@ Une fois le QCM complété, vérifiez vos réponses avec le corrigé ci-dessous 
 
 ## Pour approfondir
 Si vous avez obtenu moins de 12 points, nous vous recommandons de revoir les concepts sur lesquels vous avez fait des erreurs. Consultez les ressources suivantes :
-- Le notebook ["Hello World du Deep Learning"](../module1/ressources/hello-world-dl.md) (Phase 1)
-- La section ["Concepts fondamentaux"](../module1/concepts-fondamentaux.md) du cours (Phase 2)
-- La ["fiche d'observations du mini-projet d'amélioration"](../module1/ressources/Partie1-Phase3-fiche-observations.md) (Phase 3)
-- Le [glossaire des termes du Deep Learning](../module1/ressources/glossaire-dl.md)
+
+  - Le notebook ["Hello World du Deep Learning"](../module1/ressources/hello-world-dl.md) (Phase 1)
+  - La section ["Concepts fondamentaux"](../module1/concepts-fondamentaux.md) du cours (Phase 2)
+  - La ["fiche d'observations du mini-projet d'amélioration"](../module1/ressources/Partie1-Phase3-fiche-observations.md) (Phase 3)
+  - Le [glossaire des termes du Deep Learning](../module1/ressources/glossaire-dl.md)
