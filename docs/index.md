@@ -32,7 +32,6 @@ Pour suivre efficacement cette formation, vous devez :
 - Disposer d'un compte Google pour accéder à **Google Colab**
 - Avoir une curiosité pour l'intelligence artificielle
 
-
 ##  📌 Documentation de référence
 
 - **[Glossaire du Deep Learning](module1/ressources/glossaire-dl.md)** - Les termes essentiels expliqués simplement
