@@ -54,8 +54,8 @@ Consolidez vos connaissances et évaluez votre compréhension de manière autono
 À l'issue de ce module, vous devrez avoir produit :
 
 - 📋 Phase 1 : La [fiche d'observations](ressources/fiche-observations.md) complétée sur le "Hello World du Deep Learning"
-- 📋 Phase 2 : Fiche d'observations - Concepts fondamentaux du Deep Learning
-- 📋 Phase 3 : Fiche d'analyse - Mini-projet d'amélioration
+- 📋 Phase 2 : [fiche d'observations](ressources/Partie1-Phase2-fiche-observations.md) - Concepts fondamentaux du Deep Learning
+- 📋 Phase 3 : [fiche d'observations](ressources/Partie1-Phase3-fiche-observations.md) - Mini-projet d'amélioration
 
 ## Ressources complémentaires
 
