@@ -35,6 +35,7 @@ markdown_extensions:
   - codehilite
   - footnotes
   - attr_list
+  - md_in_html
   - pymdownx.arithmatex
   - pymdownx.superfences:
       custom_fences:
@@ -105,3 +106,5 @@ extra_javascript:
   - javascripts/progress.js
 extra_css:
   - stylesheets/progress.css
+  - stylesheets/extra.css
+ 
