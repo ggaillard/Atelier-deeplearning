@@ -1,133 +1,52 @@
-Je comprends maintenant que vous préférez utiliser une extension Markdown pour représenter la carte mentale plutôt qu'une image SVG. Mermaid est l'extension idéale pour ce cas, car elle est bien supportée par MkDocs Material et permet de créer des diagrammes directement en Markdown.
-
-Voici la section d'auto-évaluation avec une carte mentale au format Mermaid:
+Vous avez raison, la carte mentale générée semble être illisible avec le rendu actuel. Pour une solution plus efficace, je propose d'utiliser une approche différente pour la section d'auto-évaluation.
 
 ### [📝 Auto-évaluation et synthèse](qcm-evaluation-module1.md) (20 min)
 
 Cette étape finale du module vous permettra de consolider vos connaissances et d'évaluer votre compréhension.
 
-#### 🧠 Carte heuristique des fondamentaux du Deep Learning
+#### 🧠 Carte des concepts fondamentaux du Deep Learning
 
-```mermaid
-mindmap
-  root((Deep Learning))
-    ::icon(fa fa-brain)
-    
-    (C'est quoi?)
-      ::icon(fa fa-question)
-      [Réseaux de neurones multicouches]
-      ::icon(fa fa-network-wired)
-      [Apprend automatiquement les caractéristiques]
-      ::icon(fa fa-cogs)
-      [Idéal pour images, texte, son]
-      ::icon(fa fa-images)
-      [Plus puissant que ML classique]
-      ::icon(fa fa-rocket)
-    
-    (Architecture)
-      ::icon(fa fa-layer-group)
-      [Neurones artificiels interconnectés]
-      [Couche d'entrée (données brutes)]
-      [Couches cachées (traitement)]
-      [Couche de sortie (prédiction)]
-    
-    (Types de réseaux)
-      ::icon(fa fa-sitemap)
-      [CNN: pour les images]
-      ::icon(fa fa-eye)
-      [RNN/LSTM: pour les textes/séquences]
-      ::icon(fa fa-file-alt)
-      [Transformers: pour le langage avancé]
-      ::icon(fa fa-language)
-      [GAN: pour générer du contenu]
-      ::icon(fa fa-paint-brush)
-    
-    (Apprentissage)
-      ::icon(fa fa-graduation-cap)
-      [Forward propagation: prédiction]
-      [Calcul d'erreur: écart avec réalité]
-      [Backpropagation: ajustement des poids]
-      [Époque: passage complet des données]
-    
-    (Vs ML classique)
-      ::icon(fa fa-exchange-alt)
-      [ML: extraction manuelle de caractéristiques]
-      [DL: extraction automatique de caractéristiques]
-      [ML: plus simple mais moins puissant]
-      [DL: plus complexe mais plus performant]
-    
-    (Applications)
-      ::icon(fa fa-laptop-code)
-      [Reconnaissance d'images et objets]
-      [Traduction et génération de texte]
-      [Recommandation de contenu]
-      [Voitures autonomes]
-      [Applications médicales]
-    
-    (Défis actuels)
-      ::icon(fa fa-exclamation-triangle)
-      [Besoin de grandes quantités de données]
-      [Consommation élevée d'énergie]
-      [Difficile d'expliquer les décisions]
-      [Risques de biais dans les modèles]
-      [Coûts importants pour l'entraînement]
-    
-    (Conseils pratiques)
-      ::icon(fa fa-lightbulb)
-      [Commencer simple et itérer]
-      [Bien préparer ses données]
-      [Surveiller l'entraînement]
-      [Tester sur données variées]
-```
+Pour visualiser et comprendre les relations entre les concepts clés du Deep Learning, consultez notre carte interactive complète:
 
-!!! info "💡 Astuce"
-    Pour explorer plus en détail chaque concept, cliquez sur les différentes branches de la carte mentale interactive ci-dessus.
+[Voir la carte des concepts du Deep Learning](ressources/synthese-visuelle.md){ .md-button .md-button--primary }
+
+Cette carte visuelle vous permet de:
+- Explorer la hiérarchie des concepts (IA > Machine Learning > Deep Learning)
+- Comprendre les différentes architectures (CNN, RNN, Transformers)
+- Visualiser le processus d'apprentissage et les applications pratiques
 
 #### ✅ QCM d'auto-évaluation
 
-!!! success "Testez vos connaissances en Machine Learning"
+!!! success "Testez vos connaissances"
     Ce QCM couvre l'ensemble des concepts fondamentaux abordés dans ce module:
     
-    - 15 questions sur les fondamentaux du Deep Learning
-    - Évaluation de votre compréhension des différentes architectures
-    - Explication détaillée des réponses pour renforcer votre apprentissage
+    - 15 questions ciblées sur les concepts essentiels
+    - Feedback immédiat et explications détaillées
+    - Recommandations personnalisées selon vos résultats
     
     [Commencer le QCM](qcm-evaluation-module1.md){ .md-button .md-button--primary }
 
 #### 📝 Synthèse personnelle
 
-!!! tip "Intelligence Artificielle - Réflexion globale"
-    Avant de conclure ce module, prenez quelques minutes pour réfléchir à votre apprentissage:
+!!! tip "Réflexion structurée"
+    Pour ancrer durablement vos connaissances, prenez 10 minutes pour répondre à ces questions:
     
-    1. Identifiez les 3 concepts qui vous ont semblé les plus importants
-    2. Comparez les approches de Machine Learning classique et de Deep Learning
-    3. Réfléchissez aux applications potentielles dans votre domaine professionnel
+    1. **Concepts clés**: Quels sont les 3 concepts de ce module que vous jugez les plus importants?
+    2. **Comparaison**: En quoi le Deep Learning diffère-t-il fondamentalement du Machine Learning classique?
+    3. **Applications**: Comment pourriez-vous appliquer ces connaissances dans votre contexte professionnel?
     
-    Cette réflexion personnelle contribuera significativement à ancrer vos apprentissages.
+    Cette réflexion personnelle peut être rédigée dans votre carnet de bord ou partagée lors de la prochaine séance.
 
 ---
 
-Cette version utilise:
+Cette approche offre plusieurs avantages:
 
-1. **Mermaid Mindmap**: Une syntaxe Markdown qui sera rendue comme une carte mentale interactive directement dans la page
-2. **Icônes Font Awesome**: Pour enrichir visuellement le mindmap (si votre configuration MkDocs les supporte)
-3. **Admonitions natives**: De MkDocs Material pour les sections d'information, qui adopteront automatiquement les couleurs du thème
-4. **Boutons Markdown**: Pour les appels à l'action
+1. **Simplicité et clarté**: Au lieu d'essayer d'intégrer une carte complexe directement dans la page, nous dirigeons l'utilisateur vers une page dédiée optimisée pour ce contenu visuel
 
-Avantages de cette approche:
-- **Vraiment natif Markdown**: Tout est écrit en texte, pas d'images externes
-- **Interactivité**: La carte mentale Mermaid peut être interactive (expansion/réduction des nœuds)
-- **Accessibilité**: Le contenu reste accessible même si le rendu graphique échoue
-- **Maintenance simplifiée**: Facile à modifier directement dans le fichier Markdown
-- **SEO amélioré**: Le contenu est indexable par les moteurs de recherche
+2. **Expérience utilisateur améliorée**: La page dédiée peut être conçue spécifiquement pour offrir une expérience interactive optimale
 
-Note: Si votre installation de MkDocs Material n'a pas l'extension Mermaid activée, vous devrez l'ajouter dans votre fichier `mkdocs.yml`:
+3. **Modularité**: Cette structure permet de mettre à jour la carte conceptuelle indépendamment sans affecter le reste du contenu
 
-```yaml
-markdown_extensions:
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-```
+4. **Compatibilité garantie**: Évite les problèmes de rendu qui peuvent varier selon les navigateurs ou configurations
+
+Cette solution est à la fois élégante et pratique, tout en maintenant l'objectif pédagogique de la section d'auto-évaluation.

@@ -47,8 +47,14 @@ Cette étape finale du module vous permettra de consolider vos connaissances et 
 
 #### 🧠 Carte heuristique des fondamentaux du Deep Learning
 
-!!! info "📊 Visualisation complète"
-    Pour une exploration interactive et détaillée de tous les concepts du Deep Learning, [consultez la version interactive](ressources/synthese-visuelle.md) de la carte mentale.
+Pour visualiser et comprendre les relations entre les concepts clés du Deep Learning, consultez notre carte interactive complète:
+
+[Voir la carte des concepts du Deep Learning](ressources/synthese-visuelle.md){ .md-button .md-button--primary }
+
+Cette carte visuelle vous permet de:
+- Explorer la hiérarchie des concepts (IA > Machine Learning > Deep Learning)
+- Comprendre les différentes architectures (CNN, RNN, Transformers)
+- Visualiser le processus d'apprentissage et les applications pratiques
 
 #### ✅ QCM d'auto-évaluation
 
