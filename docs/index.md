@@ -20,6 +20,7 @@ Le **Deep Learning** est une branche du **Machine Learning** qui utilise des **r
 
 ## 📚 Organisation du parcours
 
+
 ![Les 4 modules de la formation](images/modules.svg)
 
 
@@ -31,13 +32,10 @@ Pour suivre efficacement cette formation, vous devez :
 - Disposer d'un compte Google pour accéder à **Google Colab**
 - Avoir une curiosité pour l'intelligence artificielle
 
-## 🧭 Navigation dans ce site
 
-Ce site contient toutes les ressources nécessaires pour votre parcours :
+##  📌 Documentation de référence
 
-- **[Carte de progression](carte-progression.md)** - Visualisez votre parcours d'apprentissage et les compétences développées
-- **[Présentation du projet fil rouge](presentation.md)** - Découvrez le chatbot pédagogique que vous allez développer
-- **[Guide d'utilisation des ressources](ressources/guide-etudiant.md)** - Apprenez à utiliser efficacement les ressources fournies
+- **[Glossaire du Deep Learning](module1/ressources/glossaire-dl.md)** - Les termes essentiels expliqués simplement
 - **[Compétences BTS SIO développées](ressources/competences-stage-sio.md)** - Consultez les compétences professionnelles visées
 
 ## 🚀 Commencer votre parcours
