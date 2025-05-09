@@ -40,27 +40,38 @@ Mettez en pratique vos connaissances en modifiant et améliorant un réseau de n
 - 📊 Analyse de l'impact des changements sur les performances
 - 📝 Documentation des résultats dans un rapport synthétique
 
-### [📝 Auto-évaluation et synthèse](qcm-evaluation-module1.md) (20 min)
-
-Consolidez vos connaissances et évaluez votre compréhension de manière autonome.
-
-- ![Carte heuristique des fondamentaux du Deep Learning](ressources/synthese-visuelle.md)
-- ✅ [QCM sur les concepts fondamentaux](qcm-evaluation-module1.md)
-
-Voici une version améliorée de la section sur l'auto-évaluation et la synthèse:
 
 ### [📝 Auto-évaluation et synthèse](qcm-evaluation-module1.md) (20 min)
 
-Consolidez vos connaissances et évaluez votre compréhension de manière autonome à travers ces ressources:
+Cette étape finale du module vous permettra de consolider vos connaissances et d'évaluer votre compréhension.
 
-- [🧠 Carte heuristique des fondamentaux du Deep Learning](ressources/synthese-visuelle.md)  
-  Visualisez les concepts clés et leurs relations pour une meilleure mémorisation
+#### 🧠 Carte heuristique des fondamentaux du Deep Learning
 
-- [✅ QCM d'auto-évaluation](qcm-evaluation-module1.md)  
-  Testez votre compréhension des concepts fondamentaux du Deep Learning
+!!! info "📊 Visualisation complète"
+    Pour une exploration interactive et détaillée de tous les concepts du Deep Learning, [consultez la version interactive](ressources/synthese-visuelle.md) de la carte mentale.
 
-- 📝 Synthèse personnelle  
-  Prenez quelques minutes pour résumer ce que vous avez appris et identifier les points à approfondir
+#### ✅ QCM d'auto-évaluation
+
+!!! success "Testez vos connaissances en Machine Learning"
+    Ce QCM couvre l'ensemble des concepts fondamentaux abordés dans ce module:
+    
+    - 15 questions sur les fondamentaux du Deep Learning
+    - Évaluation de votre compréhension des différentes architectures
+    - Explication détaillée des réponses pour renforcer votre apprentissage
+    
+    [Commencer le QCM](qcm-evaluation-module1.md){ .md-button .md-button--primary }
+
+#### 📝 Synthèse personnelle
+
+!!! tip "Intelligence Artificielle - Réflexion globale"
+    Avant de conclure ce module, prenez quelques minutes pour réfléchir à votre apprentissage:
+    
+    1. Identifiez les 3 concepts qui vous ont semblé les plus importants
+    2. Comparez les approches de Machine Learning classique et de Deep Learning
+    3. Réfléchissez aux applications potentielles dans votre domaine professionnel
+    
+    Cette réflexion personnelle contribuera significativement à ancrer vos apprentissages.
+
 
 ## Livrables attendus
 
