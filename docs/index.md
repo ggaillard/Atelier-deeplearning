@@ -12,7 +12,9 @@ Le **Deep Learning** est une branche du **Machine Learning** qui utilise des **r
 
 ![Intelligence Artificielle - Écosystème](images/ai-ecosystem.svg)
 
-Après avoir exploré le paysage de l'**Intelligence Artificielle** et situé le Deep Learning dans cet écosystème, examinons maintenant son impact sur les différentes méthodes d'apprentissage automatique. Contrairement à ce qu'on pourrait penser, le Deep Learning n'est pas un type d'apprentissage isolé, mais une **approche révolutionnaire** qui s'applique aux trois paradigmes fondamentaux : l'**apprentissage supervisé** (avec données étiquetées), **non supervisé** (sans étiquettes) et par **renforcement** (par essai-erreur et récompense). Comme l'illustre le schéma suivant, le Deep Learning agit comme un **amplificateur** qui transforme radicalement les capacités de chacune de ces méthodes, permettant de résoudre des problèmes jusqu'alors hors de portée des approches traditionnelles.
+- Après avoir exploré le paysage de l'**Intelligence Artificielle** et situé le Deep Learning dans cet écosystème, examinons maintenant son impact sur les différentes méthodes d'apprentissage automatique. Contrairement à ce qu'on pourrait penser, le Deep Learning n'est pas un type d'apprentissage isolé, mais une **approche révolutionnaire** qui s'applique aux trois paradigmes fondamentaux : l'**apprentissage supervisé**, **non supervisé** et par **renforcement**. 
+
+- Comme l'illustre le schéma suivant, le Deep Learning agit comme un **amplificateur** qui transforme radicalement les capacités de chacune de ces méthodes, permettant de résoudre des problèmes jusqu'alors hors de portée des approches traditionnelles.
 
 ![Types d'apprentissage et impact du Deep Learning](images/learning-types.svg)
 
@@ -20,11 +22,6 @@ Après avoir exploré le paysage de l'**Intelligence Artificielle** et situé le
 
 ![Les 4 modules de la formation](images/modules.svg)
 
-## 🔍 Différence fondamentale entre Machine Learning et Deep Learning
-
-Le **Machine Learning** traditionnel nécessite une **intervention humaine** pour l'extraction des caractéristiques importantes des données, tandis que le **Deep Learning automatise complètement ce processus** grâce à ses multiples couches de neurones.
-
-![Différence entre Machine Learning et Deep Learning](images/ml-vs-dl-comparison.svg)
 
 ## 🛠️ Prérequis techniques
 

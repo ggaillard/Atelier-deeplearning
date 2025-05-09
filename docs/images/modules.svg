@@ -1,4 +1,4 @@
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="390" xmlns="http://www.w3.org/2000/svg">
   <!-- Définitions des dégradés -->
   <defs>
     <!-- Module 1 - Bleu -->
@@ -39,87 +39,75 @@
     </filter>
   </defs>
 
-  <!-- Titre principal -->
-  <text x="400" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#424242">PARCOURS DE FORMATION DEEP LEARNING</text>
-  <text x="400" y="80" font-family="Arial, sans-serif" font-size="16" font-style="italic" text-anchor="middle" fill="#757575">Une progression pédagogique en 4 modules</text>
-
   <!-- Flèche de progression -->
-  <path d="M 100,140 H 700 Q 720,140 720,160 V 180 H 100 Q 80,180 80,160 V 140 Z" fill="url(#arrow-gradient)" filter="url(#shadow)"/>
-  <polygon points="700,140 730,160 700,180" fill="#7B1FA2"/>
+  <path d="M 100,40 H 700 Q 720,40 720,60 V 80 H 100 Q 80,80 80,60 V 40 Z" fill="url(#arrow-gradient)" filter="url(#shadow)"/>
+  <polygon points="700,40 730,60 700,80" fill="#7B1FA2"/>
   
   <!-- Module 1 -->
-  <rect x="80" y="200" width="160" height="300" rx="15" ry="15" fill="url(#module1-gradient)" stroke="#1E88E5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="160" y="230" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#1565C0">MODULE 1</text>
-  <text x="160" y="255" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1565C0">Fondamentaux du</text>
-  <text x="160" y="275" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1565C0">Deep Learning</text>
+  <rect x="80" y="100" width="160" height="240" rx="15" ry="15" fill="url(#module1-gradient)" stroke="#1E88E5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160" y="130" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#1565C0">MODULE 1</text>
+  <text x="160" y="155" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1565C0">Fondamentaux du</text>
+  <text x="160" y="175" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1565C0">Deep Learning</text>
   
-  <text x="160" y="310" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1976D2">• Introduction pratique</text>
-  <text x="160" y="335" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1976D2">• Concepts fondamentaux</text>
-  <text x="160" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1976D2">• Anatomie d'un réseau</text>
-  <text x="160" y="385" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1976D2">• Forward/Backpropagation</text>
-  <text x="160" y="410" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1976D2">• Fonctions d'activation</text>
-  <text x="160" y="435" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1976D2">• Projet MNIST simple</text>
+  <text x="160" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1976D2">• Introduction pratique</text>
+  <text x="160" y="235" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1976D2">• Concepts fondamentaux</text>
+  <text x="160" y="260" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1976D2">• Anatomie d'un réseau</text>
+  <text x="160" y="285" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1976D2">• Mini-projet MNIST</text>
   
-  <rect x="100" y="455" width="120" height="30" rx="15" ry="15" fill="#1E88E5" opacity="0.8"/>
-  <text x="160" y="475" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Hello World du DL</text>
+  <rect x="100" y="310" width="120" height="25" rx="12" ry="12" fill="#1E88E5" opacity="0.8"/>
+  <text x="160" y="327" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Hello World du DL</text>
   
   <!-- Module 2 -->
-  <rect x="250" y="200" width="160" height="300" rx="15" ry="15" fill="url(#module2-gradient)" stroke="#43A047" stroke-width="2" filter="url(#shadow)"/>
-  <text x="330" y="230" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2E7D32">MODULE 2</text>
-  <text x="330" y="255" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2E7D32">Architectures</text>
-  <text x="330" y="275" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2E7D32">spécialisées</text>
+  <rect x="250" y="100" width="160" height="240" rx="15" ry="15" fill="url(#module2-gradient)" stroke="#43A047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330" y="130" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2E7D32">MODULE 2</text>
+  <text x="330" y="155" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2E7D32">Architectures</text>
+  <text x="330" y="175" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2E7D32">spécialisées</text>
   
-  <text x="330" y="310" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#388E3C">• Réseaux convolutifs (CNN)</text>
-  <text x="330" y="335" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#388E3C">• Réseaux récurrents (RNN)</text>
-  <text x="330" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#388E3C">• Visualisation des filtres</text>
-  <text x="330" y="385" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#388E3C">• Feature maps</text>
-  <text x="330" y="410" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#388E3C">• Cellules LSTM</text>
-  <text x="330" y="435" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#388E3C">• Analyse de sequences</text>
+  <text x="330" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#388E3C">• Réseaux convolutifs (CNN)</text>
+  <text x="330" y="235" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#388E3C">• Réseaux récurrents (RNN)</text>
+  <text x="330" y="260" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#388E3C">• Visualisation des filtres</text>
+  <text x="330" y="285" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#388E3C">• Cellules LSTM</text>
   
-  <rect x="270" y="455" width="120" height="30" rx="15" ry="15" fill="#43A047" opacity="0.8"/>
-  <text x="330" y="475" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">CNN et RNN</text>
+  <rect x="270" y="310" width="120" height="25" rx="12" ry="12" fill="#43A047" opacity="0.8"/>
+  <text x="330" y="327" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">CNN et RNN</text>
   
   <!-- Module 3 -->
-  <rect x="420" y="200" width="160" height="300" rx="15" ry="15" fill="url(#module3-gradient)" stroke="#FB8C00" stroke-width="2" filter="url(#shadow)"/>
-  <text x="500" y="230" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#E65100">MODULE 3</text>
-  <text x="500" y="255" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#E65100">Développement</text>
-  <text x="500" y="275" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#E65100">d'applications</text>
+  <rect x="420" y="100" width="160" height="240" rx="15" ry="15" fill="url(#module3-gradient)" stroke="#FB8C00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="500" y="130" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#E65100">MODULE 3</text>
+  <text x="500" y="155" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#E65100">Développement</text>
+  <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#E65100">d'applications</text>
   
-  <text x="500" y="310" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Frameworks (TensorFlow)</text>
-  <text x="500" y="335" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• API et bonnes pratiques</text>
-  <text x="500" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Optimisation de modèles</text>
-  <text x="500" y="385" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Intégration applicative</text>
-  <text x="500" y="410" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Introduction API Mistral</text>
-  <text x="500" y="435" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Préparation du projet</text>
+  <text x="500" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Frameworks (TensorFlow)</text>
+  <text x="500" y="235" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Optimisation de modèles</text>
+  <text x="500" y="260" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Introduction API Mistral</text>
+  <text x="500" y="285" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Préparation du projet</text>
   
-  <rect x="440" y="455" width="120" height="30" rx="15" ry="15" fill="#FB8C00" opacity="0.8"/>
-  <text x="500" y="475" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Applications pratiques</text>
+  <rect x="440" y="310" width="120" height="25" rx="12" ry="12" fill="#FB8C00" opacity="0.8"/>
+  <text x="500" y="327" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Applications pratiques</text>
   
   <!-- Module 4 -->
-  <rect x="590" y="200" width="160" height="300" rx="15" ry="15" fill="url(#module4-gradient)" stroke="#8E24AA" stroke-width="2" filter="url(#shadow)"/>
-  <text x="670" y="230" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#6A1B9A">MODULE 4</text>
-  <text x="670" y="255" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#6A1B9A">Projet intégrateur</text>
-  <text x="670" y="275" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#6A1B9A">Chatbot pédagogique</text>
+  <rect x="590" y="100" width="160" height="240" rx="15" ry="15" fill="url(#module4-gradient)" stroke="#8E24AA" stroke-width="2" filter="url(#shadow)"/>
+  <text x="670" y="130" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#6A1B9A">MODULE 4</text>
+  <text x="670" y="155" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#6A1B9A">Projet intégrateur</text>
+  <text x="670" y="175" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#6A1B9A">Chatbot pédagogique</text>
   
-  <text x="670" y="310" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7B1FA2">• Développement complet</text>
-  <text x="670" y="335" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7B1FA2">• Intégration API Mistral</text>
-  <text x="670" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7B1FA2">• Structuration des données</text>
-  <text x="670" y="385" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7B1FA2">• Base de connaissances</text>
-  <text x="670" y="410" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7B1FA2">• Frontend conversationnel</text>
-  <text x="670" y="435" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7B1FA2">• Présentation finale</text>
+  <text x="670" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7B1FA2">• Développement complet</text>
+  <text x="670" y="235" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7B1FA2">• Intégration API Mistral</text>
+  <text x="670" y="260" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7B1FA2">• Base de connaissances</text>
+  <text x="670" y="285" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7B1FA2">• Présentation finale</text>
   
-  <rect x="610" y="455" width="120" height="30" rx="15" ry="15" fill="#8E24AA" opacity="0.8"/>
-  <text x="670" y="475" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Chatbot DL</text>
+  <rect x="610" y="310" width="120" height="25" rx="12" ry="12" fill="#8E24AA" opacity="0.8"/>
+  <text x="670" y="327" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Chatbot DL</text>
   
   <!-- Ligne du temps au bas -->
-  <line x1="80" y1="530" x2="720" y2="530" stroke="#BDBDBD" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="160" cy="530" r="6" fill="#1E88E5"/>
-  <circle cx="330" cy="530" r="6" fill="#43A047"/>
-  <circle cx="500" cy="530" r="6" fill="#FB8C00"/>
-  <circle cx="670" cy="530" r="6" fill="#8E24AA"/>
+  <line x1="80" y1="365" x2="720" y2="365" stroke="#BDBDBD" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="160" cy="365" r="6" fill="#1E88E5"/>
+  <circle cx="330" cy="365" r="6" fill="#43A047"/>
+  <circle cx="500" cy="365" r="6" fill="#FB8C00"/>
+  <circle cx="670" cy="365" r="6" fill="#8E24AA"/>
   
-  <text x="160" y="550" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#616161">4h</text>
-  <text x="330" y="550" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#616161">8h</text>
-  <text x="500" y="550" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#616161">12h</text>
-  <text x="670" y="550" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#616161">16h</text>
+  <text x="160" y="385" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#616161">4h</text>
+  <text x="330" y="385" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#616161">8h</text>
+  <text x="500" y="385" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#616161">12h</text>
+  <text x="670" y="385" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#616161">16h</text>
 </svg>
