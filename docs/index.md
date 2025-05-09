@@ -20,7 +20,6 @@ Le **Deep Learning** est une branche du **Machine Learning** qui utilise des **r
 
 ## 📚 Organisation du parcours
 
-
 ![Les 4 modules de la formation](images/modules.svg)
 
 
