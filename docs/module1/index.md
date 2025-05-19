@@ -49,7 +49,7 @@ Cette étape finale du module vous permettra de consolider vos connaissances et 
 
 Pour comprendre les concepts clés du Deep Learning.
 
-[ Guide de référence synthétique](ressources/synthese.md){ .md-button .md-button--primary }
+[ Guide de référence synthétique](ressources/synthese-module1.md){ .md-button .md-button--primary }
 
 
 #### ✅ QCM d'auto-évaluation

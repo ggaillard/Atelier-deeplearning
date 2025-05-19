@@ -14,9 +14,9 @@
 
 ## 📊 Programme (4h)
 
-Ce module explore les architectures spécialisées de réseaux de neurones à travers trois phases complémentaires.
+Ce module explore les architectures spécialisées de réseaux de neurones à travers trois phases complémentaires, en s'appuyant sur les fondamentaux acquis dans le Module 1.
 
-### [Phase 1 : Mini-projet CNN pour la vision par ordinateur](reseaux-convolutifs.md) (2h)
+### [🔍 Phase 1 : Mini-projet CNN pour la vision par ordinateur](reseaux-convolutifs.md) (2h)
 
 Plongez dans l'univers des réseaux convolutifs et apprenez à les utiliser pour la classification d'images.
 
@@ -25,7 +25,7 @@ Plongez dans l'univers des réseaux convolutifs et apprenez à les utiliser pour
 - Visualisation des filtres et feature maps
 - Intégration dans une application web simple
 
-### [Phase 2 : Mini-projet RNN pour le traitement du langage](reseaux-recurrents.md) (2h)
+### [🧩 Phase 2 : Mini-projet RNN pour le traitement du langage](reseaux-recurrents.md) (1h30)
 
 Découvrez comment les réseaux récurrents permettent de traiter des données séquentielles comme le texte.
 
@@ -33,6 +33,39 @@ Découvrez comment les réseaux récurrents permettent de traiter des données s
 - Cellules LSTM pour la mémoire à long terme
 - Implémentation d'un modèle d'analyse de sentiment
 - Expérimentation avec l'API Mistral AI pour le NLP
+
+### [📝 Phase 3 : Auto-évaluation et synthèse](qcm-evaluation-module2.md) (30 min)
+
+Cette phase finale vous permettra de consolider vos connaissances et d'évaluer votre compréhension des architectures spécialisées.
+
+#### 🧠 Guide de référence synthétique des architectures spécialisées
+
+Pour comprendre les concepts clés des CNN et RNN/LSTM.
+
+[Guide de référence synthétique](ressources/synthese.md){ .md-button .md-button--primary }
+
+#### ✅ QCM d'auto-évaluation
+
+!!! success "Testez vos connaissances sur les architectures spécialisées"
+    Ce QCM couvre l'ensemble des concepts fondamentaux abordés dans ce module:
+    
+    - Questions sur les réseaux convolutifs (CNN)
+    - Questions sur les réseaux récurrents (RNN/LSTM)
+    - Comparaison entre les différentes architectures
+    - Explication détaillée des réponses pour renforcer votre apprentissage
+    
+    [Commencer le QCM](qcm-evaluation-module2.md){ .md-button .md-button--primary }
+
+#### 📝 Synthèse personnelle
+
+!!! tip "Architectures spécialisées - Réflexion globale"
+    Avant de conclure ce module, prenez quelques minutes pour réfléchir à votre apprentissage:
+    
+    1. Quelles sont les différences fondamentales entre CNN et RNN?
+    2. Dans quels cas d'usage privilégier l'une ou l'autre architecture?
+    3. Comment ces architectures pourraient être appliquées dans votre contexte professionnel?
+    
+    Cette réflexion personnelle contribuera significativement à ancrer vos apprentissages.
 
 ## Prérequis
 
@@ -44,12 +77,20 @@ Découvrez comment les réseaux récurrents permettent de traiter des données s
 
 À l'issue de ce module, vous devrez produire :
 
-1. Un modèle CNN fonctionnel pour la classification d'images
-2. Un rapport d'analyse des features maps et filtres de convolution
-3. Un modèle RNN/LSTM pour l'analyse de sentiment textuel
-4. Un rapport d'amélioration documentant vos expérimentations sur le modèle sous-optimal
+1. 📋 [Fiche d'observations - Réseaux convolutifs (CNN)](ressources/Partie2-Phase1-fiche-observationsCNN.md) complétée
+2. 📋 [Fiche d'observations - Réseaux récurrents (RNN)](ressources/Partie2-Phase2-fiche-observationsRNN.md) complétée
+3. 📊 Modèle CNN fonctionnel pour la classification d'images
+4. 📝 Modèle RNN/LSTM pour l'analyse de sentiment textuel
+
+## Ressources complémentaires
+
+- 📕 [Glossaire du Deep Learning](../module1/ressources/glossaire-dl.md) - Les termes essentiels expliqués simplement
+- 📚 [Guide de visualisation des CNN](ressources/guide-visualisation-cnn.md) - Comprendre ce que "voit" un réseau convolutif
+- 🔗 [Documentation TensorFlow sur les CNN](https://www.tensorflow.org/tutorials/images/cnn) et [sur les RNN](https://www.tensorflow.org/text/tutorials/text_classification_rnn)
 
 ## Compétences BTS SIO développées
+
+Ce module vous permet d'approfondir plusieurs compétences du référentiel BTS SIO :
 
 | Compétence | Description | Activités associées |
 |------------|-------------|---------------------|
@@ -60,7 +101,7 @@ Découvrez comment les réseaux récurrents permettent de traiter des données s
 
 ## Prêt à explorer les architectures spécialisées ?
 
-Commencez par découvrir les réseaux convolutifs (CNN) et leur application à la vision par ordinateur.
+Ce module s'appuie sur les fondamentaux acquis dans le Module 1 pour vous faire découvrir des architectures plus avancées et spécialisées. Vous explorerez d'abord les réseaux convolutifs (CNN) pour le traitement d'images, puis les réseaux récurrents (RNN) pour les données séquentielles comme le texte.
 
 [Commencer la Phase 1: CNN](reseaux-convolutifs.md){ .md-button .md-button--primary }
 [Évaluer vos connaissances](qcm-evaluation-module2.md){ .md-button .md-button--secondary }

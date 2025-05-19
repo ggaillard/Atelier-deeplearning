@@ -68,14 +68,15 @@ nav:
       - Ressources: 
         - Glossaire: module1/ressources/glossaire-dl.md  
         - Guide Colab: module1/ressources/guide-colab.md 
-        - Synthèse: module1/ressources/synthese.md    
+        - Synthèse: module1/ressources/synthese-module1.md    
   - Module 2 - Architectures:
       - Vue d'ensemble: module2/index.md
       - 1 - Réseaux convolutifs (CNN): module2/reseaux-convolutifs.md
       - 2 - Réseaux récurrents (RNN): module2/reseaux-recurrents.md
       - Auto-évaluation: module2/qcm-evaluation-module2.md
       - Ressources: 
-        - Glossaire: module1/ressources/glossaire-dl.md  
+        - Glossaire: module1/ressources/glossaire-dl.md
+        - Synthèse: module2/ressources/synthese-module2.md  
   - Module 3 - Applications:
       - Vue d'ensemble: module3/index.md
       - 1 - Frameworks et bonnes pratiques: module3/frameworks.md
