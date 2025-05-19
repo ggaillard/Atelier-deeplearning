@@ -2,13 +2,14 @@
 
 ![RNN Architecture](https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1000&h=300)
 
-## 🎯Objectifs de la phase
+## 🎯 Objectifs de la phase
 
 Dans cette phase, vous allez :
 
 - Comprendre les principes des réseaux récurrents (RNN) et de leurs variantes (LSTM, GRU)
 - Implémenter un modèle LSTM pour l'analyse de sentiment
 - Visualiser et interpréter le fonctionnement interne d'un RNN
+- Analyser les performances du modèle sur des données textuelles
 
 ## 🧩 Partie 1: Principes des RNN (20 min)
 
@@ -41,7 +42,7 @@ Imaginons que vous surveillez des logs de sécurité :
    - Une sortie pour l'étape actuelle (ex: prédiction partielle)
    - Un nouvel état de mémoire pour l'étape suivante
 
-Avantages pour un développeur d'applications :
+**Avantages pour un développeur d'applications** :
 - Traitement de séquences de longueur variable
 - Capacité à "mémoriser" des informations importantes
 - Applications diverses : analyse de texte, traduction, génération de contenu
@@ -102,7 +103,7 @@ Voici des applications concrètes des RNN/LSTM dans votre domaine :
     - Les LSTM peuvent identifier des patterns d'attaque complexes s'étendant sur de longues périodes
     - Ils peuvent corréler des événements apparemment sans lien
 
-## Partie 2: Implémentation d'un LSTM pour l'analyse de sentiment (40 min)
+## 🔬 Partie 2: Implémentation d'un LSTM pour l'analyse de sentiment (40 min)
 
 ### Instructions
 
@@ -140,24 +141,44 @@ Pendant que vous travaillez sur ce notebook, réfléchissez aux questions suivan
 - **Comment pourriez-vous améliorer ce modèle pour des tâches plus complexes ?**
   Proposez des modifications architecturales ou des techniques d'amélioration des données.
 
-### Livrable attendu
+### 📋 Livrable attendu
 
 À la fin de cette activité, vous devrez produire une documentation synthétique (1-2 pages) répondant aux questions ci-dessus. Ce document servira de référence pour votre compréhension des RNN/LSTM et pourra être intégré dans la base de connaissances de votre chatbot pédagogique.
 
 Un document de référence complet sur ces concepts est disponible [ici](ressources/lstm-sentiment-analyse.md) pour vous aider à approfondir votre compréhension.
 
-## Conclusion et transition
+## 🔄 Partie 3: Application pratique et test avec Mistral AI (15 min)
+
+### Mise en pratique avec l'API Mistral
+
+Cette dernière partie vous permettra de comparer votre modèle LSTM avec les capacités d'un grand modèle de langage moderne.
+
+1. Utilisez l'API Mistral AI pour réaliser des analyses de sentiment sur vos propres phrases test
+2. Comparez les résultats obtenus avec ceux de votre modèle LSTM
+3. Identifiez les différences en termes de nuances comprises et de précision
+
+### Points de discussion
+
+- Quelles sont les différences fondamentales entre un modèle LSTM et un LLM comme Mistral ?
+- Dans quels cas le LSTM fonctionne-t-il mieux ? Dans quels cas Mistral est-il supérieur ?
+- Comment les deux approches pourraient-elles être combinées dans un système réel ?
+
+## 📋 Fiche d'observations à compléter
+
+Durant toute cette phase sur les RNN, n'oubliez pas de compléter votre [fiche d'observations](ressources/Partie2-Phase2-fiche-observationsRNN.md) qui sera votre livrable principal pour cette partie du module.
+
+## 📚 Conclusion et transition
 
 Cette section sur les réseaux récurrents vous a permis de comprendre une autre architecture fondamentale du Deep Learning, particulièrement adaptée aux données séquentielles comme le texte ou les séries temporelles. 
 
 Vous avez appris à:
 
- - Reconnaître les situations où les RNN/LSTM sont particulièrement adaptés
- - Comprendre les mécanismes de mémoire qui font la force de ces architectures
- - Implémenter un modèle LSTM pour l'analyse de sentiment de texte
- - Visualiser et interpréter les représentations internes du modèle
+- Reconnaître les situations où les RNN/LSTM sont particulièrement adaptés
+- Comprendre les mécanismes de mémoire qui font la force de ces architectures
+- Implémenter un modèle LSTM pour l'analyse de sentiment de texte
+- Visualiser et interpréter les représentations internes du modèle
 
 Ces connaissances constitueront une base essentielle pour le développement de votre projet de chatbot pédagogique dans les prochains modules.
 
-[Retour à la vue d'ensemble du Module 2](index.md){ .md-button }
-[Continuer vers le Module 3](../module3/index.md){ .md-button .md-button--primary }
+[Retour au Module 2](index.md){ .md-button }
+[Continuer vers l'auto-évaluation](qcm-evaluation-module2.md){ .md-button .md-button--primary }

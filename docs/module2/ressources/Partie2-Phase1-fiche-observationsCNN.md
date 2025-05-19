@@ -1,4 +1,4 @@
-# Fiche d'oberservation du Mini-Projet CNN - Reconnaissance de chiffres manuscrits
+# 📋 Fiche d'oberservation du Mini-Projet CNN - Reconnaissance de chiffres manuscrits
 
 ## Informations générales
 **Nom et prénom:** ______________________________
