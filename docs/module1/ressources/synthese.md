@@ -1,4 +1,4 @@
-# Synthèse visuelle - Module 1
+# Synthèse - Module 1
 
 # Fondamentaux du Deep Learning
 ## Guide de référence synthétique
