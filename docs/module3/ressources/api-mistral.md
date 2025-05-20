@@ -13,6 +13,7 @@ from fastapi.responses import HTMLResponse, JSONResponse
 import uvicorn
 from pydantic import BaseModel
 
+
 # Charger les variables d'environnement
 load_dotenv()
 
