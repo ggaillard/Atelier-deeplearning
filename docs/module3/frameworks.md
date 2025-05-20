@@ -1,10 +1,19 @@
-# 🧰 Phase 1 : Frameworks de Deep Learning (1h30)
+# 🔍 Phase 1: Frameworks de Deep Learning (1h30)
 
 ![Frameworks pour débutants](https://images.unsplash.com/photo-1545987796-200677ee1011?auto=format&fit=crop&q=80&w=1000&h=300)
 
+## 🎯 Objectif de la phase
+
+Dans cette phase, vous allez :
+
+- Comprendre l'utilité des frameworks de Deep Learning en contexte professionnel
+- Prendre en main TensorFlow/Keras pour développer rapidement des applications
+- Utiliser des modèles pré-entraînés pour accélérer le développement
+- Créer une application interactive de reconnaissance d'images
+
 ## 🔍 Introduction aux frameworks dans un contexte professionnel (15 min)
 
-** 🎯 Objectif**: Comprendre l'utilité des frameworks de Deep Learning pour un développeur en entreprise et identifier ceux qui sont réellement utilisés sur le terrain.
+**🎯 Objectif**: Comprendre l'utilité des frameworks de Deep Learning pour un développeur en entreprise et identifier ceux qui sont réellement utilisés sur le terrain.
 
 ### 💼 Les frameworks en entreprise
 
@@ -15,14 +24,13 @@ Avant de plonger dans le code, prenons un moment pour comprendre pourquoi les fr
 - **⚡ Performances**: Optimisations intégrées qui seraient complexes à développer soi-même
 - **🚢 Déploiement**: Outils intégrés pour mettre en production les modèles
 
-Dans le monde professionnel actuel, plusieurs frameworks de Deep Learning sont couramment utilisés:
-
-| Framework | Principaux cas d'usage |
-|-----------|------------------------|
-| TensorFlow/Keras | Applications web/mobile, systèmes en production |
-| PyTorch | Recherche, prototypage, startups |
-| Hugging Face | NLP, chatbots, traitement de texte |
-| Scikit-learn | Prétraitement, ML classique, pipeline de données |
+!!! info "Frameworks populaires en entreprise"
+    | Framework | Principaux cas d'usage |
+    |-----------|------------------------|
+    | TensorFlow/Keras | Applications web/mobile, systèmes en production |
+    | PyTorch | Recherche, prototypage, startups |
+    | Hugging Face | NLP, chatbots, traitement de texte |
+    | Scikit-learn | Prétraitement, ML classique, pipeline de données |
 
 > "Pour un stage, la capacité à utiliser efficacement des frameworks existants est recherchée davantage que l'expertise théorique approfondie en Deep Learning." 
 > 
@@ -45,11 +53,14 @@ Voici quelques exemples concrets développés par des entreprises locales employ
 - **Agence web**: Système de détection de contenu inapproprié dans les commentaires de sites e-commerce
 - **Cabinet médical**: Application de classification d'images pour le tri préliminaire de photos de lésions cutanées
 
-## Atelier pratique : Prise en main de TensorFlow/Keras (30 min)
+## 📋 Atelier pratique : Prise en main de TensorFlow/Keras (30 min)
 
 ### Objectif
 
 Développer une première application de reconnaissance d'images simple en utilisant TensorFlow/Keras et en suivant les bonnes pratiques de l'industrie.
+
+!!! tip "Conseil"
+    Si vous rencontrez des erreurs pendant les exercices, lisez attentivement les messages. TensorFlow fournit généralement des indications précises sur l'origine du problème.
 
 ### Instructions pas à pas
 
@@ -161,7 +172,10 @@ for i, (imagenet_id, label, score) in enumerate(decoded_predictions):
    - Observez les probabilités associées à chaque classe
    - Quelles autres races de chiens sont détectées?
 
-## Mini-projet : Application interactive de reconnaissance d'images (45 min)
+!!! warning "Point d'attention"
+    Notez comment le modèle peut confondre des races similaires. Cette confusion serait difficile à résoudre sans données d'entraînement spécifiques pour ces cas particuliers.
+
+## 💻 Mini-projet : Application interactive de reconnaissance d'images (45 min)
 
 ### Objectif
 
@@ -391,7 +405,7 @@ for img_path in ['cat.jpg', 'car.jpg', 'laptop.jpg']:
     print("\n")
 ```
 
-## Bonnes pratiques pour les projets professionnels (15 min)
+## 📋 Bonnes pratiques pour les projets professionnels (15 min)
 
 Pour conclure cette phase, passons en revue les bonnes pratiques essentielles pour développer des applications de Deep Learning en contexte professionnel:
 
@@ -423,16 +437,25 @@ Pour conclure cette phase, passons en revue les bonnes pratiques essentielles po
 - **Monitoring**: Surveillez les performances et erreurs
 - **Versioning**: Versionnez vos modèles et API
 
-## Conclusion et transition
+!!! success "Compétences développées"
+    À travers ce TP, vous avez développé plusieurs compétences clés du référentiel BTS SIO :
+    
+    - **B2.3** : Développement d'applications simples avec TensorFlow/Keras
+    - **B1.3** : Développement d'une interface interactive
+    - **B3.2** : Analyse des performances d'un modèle pré-entraîné
+
+## 📝 Conclusion et fiche d'observations
 
 Cette phase vous a permis de découvrir comment utiliser efficacement TensorFlow/Keras dans un contexte professionnel. Vous avez appris à:
 
- - Utiliser un modèle pré-entraîné pour la reconnaissance d'images
- - Prétraiter des images pour l'inférence
- - Créer une interface interactive pour tester votre modèle
- - Visualiser et comprendre les activations internes du réseau
+- Utiliser un modèle pré-entraîné pour la reconnaissance d'images
+- Prétraiter des images pour l'inférence
+- Créer une interface interactive pour tester votre modèle
+- Visualiser et comprendre les activations internes du réseau
+
+N'oubliez pas de compléter la [Fiche d'observations - Pratique des frameworks](ressources/fiche-observations-frameworks.md) pour documenter votre apprentissage.
 
 Ces compétences sont directement applicables dans des projets professionnels. Dans la prochaine partie, nous allons nous concentrer sur l'amélioration des performances de nos modèles pour les rendre plus adaptés à des environnements de production.
 
 [Retour au Module 3](index.md){ .md-button }
-[Continuer vers l'Intégration et optimisation](integration.md){ .md-button .md-button--primary }
+[Continuer vers la Phase 2: Amélioration des performances](integration.md){ .md-button .md-button--primary }

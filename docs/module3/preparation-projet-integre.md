@@ -1,16 +1,34 @@
-# 📋 Phase 3 : Préparation au projet final (60 min)
+# 📋 Phase 3: Préparation au projet final (60 min)
 
 ![Préparation au projet](https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000&h=300)
 
+## 🎯 Objectifs de la phase
+
+Dans cette phase, vous allez :
+
+- Comprendre en détail le cahier des charges du projet final (chatbot pédagogique)
+- Étudier des cas réels d'entreprises utilisant des chatbots similaires
+- Explorer l'API Mistral AI pour le traitement du langage naturel
+- Vous familiariser avec les frameworks web nécessaires au projet
+- Préparer les bases techniques et fonctionnelles pour votre projet de chatbot
+
 ## 📝 Présentation du cahier des charges du chatbot pédagogique (15 min)
 
- 🎯 **Objectif**: Comprendre les spécifications détaillées du projet final et les critères d'évaluation.
+**🎯 Objectif**: Comprendre les spécifications détaillées du projet final et les critères d'évaluation.
 
 ### 🔍 Vision du projet
 
 Le projet final consiste à développer un chatbot pédagogique capable d'expliquer les concepts du Deep Learning, de répondre aux questions techniques et d'accompagner les apprenants dans leur découverte de ce domaine.
 
-> 🎯 **Objectif** : Concevoir un chatbot interactif qui aide les étudiants de BTS SIO à comprendre les concepts du Deep Learning à travers des explications personnalisées, des exemples concrets et des exercices adaptés.
+> 🎯 **Objectif principal** : Concevoir un chatbot interactif qui aide les étudiants de BTS SIO à comprendre les concepts du Deep Learning à travers des explications personnalisées, des exemples concrets et des exercices adaptés.
+
+!!! info "Caractéristiques essentielles"
+    Le chatbot devra être capable de :
+    
+    - S'adapter au niveau de l'utilisateur (débutant, intermédiaire, avancé)
+    - Fournir des explications claires et progressives
+    - Proposer des exemples concrets et pertinents
+    - Répondre aux questions spécifiques sur le Deep Learning
 
 ### Architecture technique
 
@@ -89,6 +107,9 @@ Votre chatbot pédagogique sera évalué selon les critères suivants :
 | Base de connaissances | 15% | Structure, couverture des concepts, précision technique |
 | Documentation | 10% | Guide utilisateur, documentation technique, commentaires code |
 
+!!! warning "Point d'attention"
+    La qualité pédagogique est un critère essentiel. Veillez à ce que votre chatbot ne se contente pas de fournir des informations techniques, mais qu'il les explique de manière accessible et progressive.
+
 ### Livrables attendus
 
 1. **Code source complet** du chatbot pédagogique
@@ -97,7 +118,7 @@ Votre chatbot pédagogique sera évalué selon les critères suivants :
 4. **Guide utilisateur** pour la prise en main
 5. **Présentation** de 5 minutes du projet finalisé
 
-## Étude de cas d'entreprises utilisant des chatbots (10 min)
+## 🔍 Étude de cas d'entreprises utilisant des chatbots (10 min)
 
 Avant de commencer le développement, examinons quelques exemples concrets d'entreprises qui ont mis en place des chatbots similaires à celui que vous allez développer.
 
@@ -161,9 +182,10 @@ Chatbot de formation accessible 24/7, intégré à l'intranet, avec connaissance
 - La valeur d'un historique de conversation persistant
 - L'utilité des prompts techniques bien formulés
 
-Ces études de cas montrent que les chatbots pédagogiques peuvent apporter une valeur significative lorsqu'ils sont bien conçus et adaptés à leur contexte d'utilisation. Votre projet s'inspirera de ces bonnes pratiques tout en se focalisant sur l'enseignement du Deep Learning.
+!!! tip "Application à votre projet"
+    Ces études de cas montrent que les chatbots pédagogiques peuvent apporter une valeur significative lorsqu'ils sont bien conçus. Pour votre projet, concentrez-vous particulièrement sur la structure de la base de connaissances et sur la qualité des prompts envoyés à l'API Mistral AI.
 
-## Exploration guidée de l'API Mistral AI (30 min)
+## 🧪 Exploration guidée de l'API Mistral AI (20 min)
 
 Maintenant, explorons l'API Mistral AI que vous utiliserez pour développer votre chatbot pédagogique.
 
@@ -178,6 +200,9 @@ Pour optimiser le temps de développement lors de la séance du Module 4, veuill
 3. Une fois connecté, cliquez sur "API Keys" dans le menu
 4. Cliquez sur "Create API Key", donnez-lui un nom (ex: "Projet Chatbot BTS")
 5. **Important**: Copiez et sauvegardez la clé générée, elle ne sera plus affichée ensuite
+
+!!! warning "Sécurité de la clé API"
+    Ne partagez jamais votre clé API et ne la stockez pas directement dans votre code source. Utilisez des variables d'environnement ou un fichier .env non versionné.
 
 ### Tester avec l'API
 
@@ -316,6 +341,9 @@ def get_params_for_query(query):
         return {"temperature": 0.5, "max_tokens": 400}  # Paramètres par défaut
 ```
 
+!!! tip "Conseil pour le projet"
+    La qualité du prompt est cruciale pour obtenir des réponses pédagogiquement pertinentes. Prenez le temps d'expérimenter différentes formulations et structures pour trouver celle qui fonctionne le mieux.
+
 ### Gestion des erreurs et limites
 
 Il est important de gérer correctement les erreurs potentielles lors de l'utilisation de l'API :
@@ -347,39 +375,156 @@ def safe_api_call(messages, max_retries=3):
             time.sleep(2)
 ```
 
-## Préparation au développement
+## 📝 Introduction aux frameworks web pour le projet (15 min)
+
+### Qu'est-ce qu'un framework web ?
+
+!!! warning "Nouvelle compétence"
+    Les frameworks web comme Flask ou FastAPI ne sont pas supposés connus à ce stade. Cette section vous présente les bases essentielles pour le projet.
+
+Un framework web est une bibliothèque qui facilite le développement d'applications web en fournissant des structures et fonctionnalités standardisées. Pour notre projet de chatbot, nous avons besoin d'un framework léger qui permettra de :
+
+- Créer une API pour communiquer avec l'interface utilisateur
+- Gérer les requêtes HTTP
+- Intégrer facilement l'API Mistral
+- Servir du contenu statique (HTML, CSS, JavaScript)
+
+### Deux options principales : Flask vs FastAPI
+
+#### Flask : Simple et rapide à apprendre
+
+Flask est un micro-framework web minimaliste pour Python, parfait pour les débutants :
+
+```python
+# Exemple minimal d'application Flask
+from flask import Flask, request, jsonify, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/chat', methods=['POST'])
+def chat():
+    user_message = request.json.get('message', '')
+    # Traitement avec l'API Mistral (à implémenter)
+    response = "Ceci est une réponse temporaire"
+    return jsonify({"response": response})
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+**Avantages de Flask :**
+- Très simple à comprendre et à mettre en œuvre
+- Excellente documentation et large communauté
+- Flexible et extensible
+- Suffisant pour notre projet de chatbot
+
+#### FastAPI : Plus moderne, plus rapide
+
+FastAPI est un framework plus récent qui offre de meilleures performances et une documentation automatique :
+
+```python
+# Exemple minimal d'application FastAPI
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+from pydantic import BaseModel
+
+app = FastAPI()
+templates = Jinja2Templates(directory="templates")
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+class ChatMessage(BaseModel):
+    message: str
+
+@app.get("/", response_class=HTMLResponse)
+async def home(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
+
+@app.post("/chat")
+async def chat(chat_message: ChatMessage):
+    # Traitement avec l'API Mistral (à implémenter)
+    response = "Ceci est une réponse temporaire"
+    return {"response": response}
+```
+
+**Avantages de FastAPI :**
+- Plus performant (traitement asynchrone)
+- Documentation automatique (OpenAPI)
+- Validation de données intégrée
+- Développement plus moderne
+
+### Structure recommandée pour le projet
+
+Quelle que soit votre choix de framework, nous vous recommandons la structure de projet suivante :
+
+```
+chatbot-pedagogique/
+├── app.py                   # Point d'entrée de l'application
+├── config.py                # Configuration (clés API, paramètres)
+├── templates/               # Templates HTML
+│   └── index.html           # Interface web
+├── static/                  # Fichiers statiques (CSS, JS)
+│   ├── css/                 # Styles CSS
+│   ├── js/                  # Scripts JavaScript
+│   └── img/                 # Images
+├── services/                # Services métier
+│   ├── mistral_service.py   # Intégration API Mistral
+│   └── knowledge_service.py # Gestion base de connaissances
+└── knowledge_base/          # Base de connaissances
+    └── concepts.json        # Structure des concepts DL
+```
+
+### Ressources pour débuter rapidement
+
+Pour vous aider à prendre en main ces frameworks, voici quelques ressources :
+
+- **Flask**: 
+  - [Documentation officielle Flask](https://flask.palletsprojects.com/)
+  - [Tutoriel Flask pour débutants](https://flask.palletsprojects.com/en/2.3.x/tutorial/)
+  - Pour notre projet, le [Guide Flask pour API REST](https://flask.palletsprojects.com/en/2.3.x/tutorial/views/) est particulièrement pertinent
+
+- **FastAPI**:
+  - [Documentation officielle FastAPI](https://fastapi.tiangolo.com/)
+  - [Tutoriel FastAPI pour débutants](https://fastapi.tiangolo.com/tutorial/)
+  - La section sur les [WebSockets](https://fastapi.tiangolo.com/advanced/websockets/) pourrait être utile pour une version avancée du chatbot
+
+### Template de démarrage fourni
+
+Pour faciliter votre travail, un template de projet basé sur Flask sera fourni au début du Module 4. Ce template inclura :
+
+- Structure de base du projet
+- Interface HTML/CSS/JS simple pour le chatbot
+- Code d'intégration minimal pour l'API Mistral
+- Exemple de base de connaissances minimale
+
+Cela vous permettra de vous concentrer sur les aspects pédagogiques et IA du projet plutôt que sur la mise en place technique de l'infrastructure web.
+
+!!! tip "Conseil pour le projet"
+    Pour la majorité des étudiants, **Flask** est recommandé pour sa simplicité. Choisissez **FastAPI** uniquement si vous avez déjà une bonne expérience en développement web ou si vous souhaitez explorer un framework plus moderne.
+
+## 📝 Préparation au développement (5 min)
 
 Pour préparer efficacement votre projet de chatbot pédagogique, voici les premières étapes à suivre :
 
-1. **Structure de votre projet**
-   ```
-   chatbot-pedagogique/
-   ├── app.py                   # Application principale Flask/FastAPI
-   ├── config.py                # Configuration (clés API, paramètres)
-   ├── templates/               # Templates HTML
-   │   └── index.html           # Interface web
-   ├── static/                  # Fichiers statiques (CSS, JS)
-   ├── services/                # Services métier
-   │   ├── mistral_service.py   # Intégration API Mistral
-   │   └── knowledge_service.py # Gestion base de connaissances
-   └── knowledge_base/          # Base de connaissances
-       └── concepts.json        # Structure des concepts DL
-   ```
-
-2. **Technologies recommandées**
-   
-     - Backend: Python avec Flask ou FastAPI
-     - Frontend: HTML/CSS/JavaScript (ou framework simple comme Vue.js)
-     - API: Mistral AI
-     - Base de connaissances: JSON structuré ou base NoSQL
-
-3. **Planification**
+1. **Planification**
    
      - **Séance 4, Phase 1** (2h30): Développement du chatbot
      - **Séance 4, Phase 2** (1h): Finalisation et tests
      - **Séance 4, Phase 3** (30min): Présentation des projets
 
-## Conclusion
+!!! info "Ressources complémentaires"
+    Pour vous aider dans le développement de votre chatbot, consultez ces ressources:
+    
+    - [Documentation complète de l'API Mistral](../ressources/api-mistral.md)
+    - [Schémas JSON pour la base de connaissances](../ressources/json-schemas.md)
+    - [Templates de code pour le frontend et backend](../ressources/templates-code-chatbot.md)
+
+## 📝 Conclusion et document de conception
 
 Cette phase vous a permis de comprendre le cahier des charges détaillé de votre projet de chatbot pédagogique, d'explorer les possibilités de l'API Mistral AI, et de vous préparer au développement.
 
@@ -387,6 +532,15 @@ Lors de la prochaine séance, vous passerez à l'implémentation concrète de vo
 - Vous familiariser davantage avec l'API Mistral AI
 - Réfléchir à la structure de votre base de connaissances
 - Explorer des exemples de chatbots éducatifs existants
+
+N'oubliez pas de compléter le [Document de conception - Chatbot pédagogique](ressources/document-conception-chatbot.md) pour documenter vos choix d'architecture, la structure de votre base de connaissances et les fonctionnalités que vous souhaitez implémenter.
+
+!!! success "Compétences développées"
+    À travers cette phase de préparation, vous avez développé plusieurs compétences clés du référentiel BTS SIO :
+    
+    - **B1.3** : Analyse des besoins pour une application web interactive
+    - **B2.2** : Conception d'une architecture pour une application d'IA
+    - **B2.3** : Planification du développement d'une solution technique
 
 [Retour au Module 3](index.md){ .md-button }
 [Continuer vers le Module 4](../module4/index.md){ .md-button .md-button--primary }

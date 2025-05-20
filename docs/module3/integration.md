@@ -1,10 +1,19 @@
-# ⚙️ Phase 2 : Amélioration des performances et intégration (1h30)
+# ⚙️ Phase 2: Amélioration des performances et intégration (1h30)
 
 ![Amélioration des performances](https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000&h=300)
 
+## 🎯 Objectifs de la phase
+
+Dans cette phase, vous allez :
+
+- Comprendre les différentes techniques d'optimisation des modèles de Deep Learning
+- Appliquer ces techniques sur un modèle concret pour en améliorer les performances
+- Explorer un cas pratique d'application optimisée pour un environnement de production
+- Analyser l'impact des optimisations sur les performances et l'empreinte mémoire
+
 ## 🔍 Introduction aux techniques d'optimisation (30 min)
 
-** 🎯 Objectif**: Comprendre les différentes techniques d'optimisation des modèles de Deep Learning pour les environnements à ressources limitées et les applications en production.
+**🎯 Objectif**: Comprendre les différentes techniques d'optimisation des modèles de Deep Learning pour les environnements à ressources limitées et les applications en production.
 
 ### 🤔 Pourquoi optimiser les modèles ?
 
@@ -14,6 +23,9 @@ Dans un contexte d'entreprise, l'optimisation des modèles est essentielle pour 
 - **⏱️ Latence** : Améliorer le temps de réponse pour une meilleure expérience utilisateur
 - **🔋 Énergie** : Diminuer la consommation énergétique (crucial pour les appareils mobiles)
 - **🌐 Accessibilité** : Permettre l'exécution sur des appareils à ressources limitées
+
+!!! info "Enjeux économiques"
+    Selon une étude récente, l'optimisation des modèles peut réduire les coûts d'inférence de 40% à 70% dans des applications à fort trafic, ce qui représente des économies considérables pour une entreprise.
 
 ### Panorama des techniques d'optimisation
 
@@ -66,7 +78,7 @@ L'élagage consiste à supprimer les connexions (poids) les moins importantes du
 
 #### 3. Distillation de connaissances
 
-<img src=../images/knowledge-distillation-process.svg" alt="Schéma de distillation" width="800" height="400">
+![Schéma de distillation](../images/knowledge-distillation-process.svg)
 
 La distillation consiste à entraîner un modèle plus petit (élève) à imiter un modèle plus grand et plus performant (enseignant).
 
@@ -111,7 +123,10 @@ Utiliser des architectures spécialement conçues pour l'efficience comme Mobile
   - Performance légèrement inférieure aux grandes architectures
   - Peut nécessiter plus d'époques d'entraînement
 
-## TP : Intégration de modèles pré-entraînés dans des applications (45 min)
+!!! warning "Point d'attention"
+    Le choix de la technique d'optimisation dépend fortement du cas d'usage. Il est souvent recommandé de combiner plusieurs techniques pour obtenir les meilleurs résultats.
+
+## 📋 TP : Intégration de modèles pré-entraînés dans des applications (45 min)
 
 ### Mise en contexte : Stage en entreprise pour BTS SIO
 
@@ -126,6 +141,9 @@ Ce projet répond à plusieurs compétences du référentiel BTS SIO :
 
 ### Objectif du TP
 Explorer et comprendre une application qui intègre un modèle de deep learning optimisé pour la classification de vêtements.
+
+!!! tip "Conseil"
+    Prenez le temps d'analyser l'architecture de l'application et de comprendre comment les différentes techniques d'optimisation sont mises en œuvre.
 
 ### Téléchargement et exploration du projet
 
@@ -233,7 +251,15 @@ L'interface utilisateur est conçue pour être réactive et informative. Examine
    - Comment améliorer encore le temps de réponse de l'API ?
    - Quelles fonctionnalités supplémentaires pourraient enrichir cette application ?
 
-## Bonnes pratiques pour l'intégration de modèles dans des applications web (15 min)
+!!! success "Compétences développées"
+    À travers ce TP, vous développez plusieurs compétences clés du référentiel BTS SIO :
+    
+    - **B1.3** : Analyse d'une application web moderne
+    - **B2.2** : Compréhension d'une architecture en couches
+    - **B2.3** : Étude des techniques d'optimisation dans une application réelle
+    - **B3.1** : Exploration des mécanismes de tests et de déploiement
+
+## 📋 Bonnes pratiques pour l'intégration de modèles dans des applications web (15 min)
 
 À travers ce projet, nous avons exploré plusieurs approches pour optimiser et intégrer des modèles de Deep Learning. Résumons les bonnes pratiques essentielles à retenir:
 
@@ -271,13 +297,18 @@ L'interface utilisateur est conçue pour être réactive et informative. Examine
 - **Journalisation des erreurs**: Capturer les cas où le modèle échoue
 - **Mise à jour progressive**: Planifier des améliorations incrémentales
 
-## Conclusion et transition
+!!! tip "Conseil pour le projet final"
+    Pour votre chatbot pédagogique, pensez à appliquer ces principes d'optimisation afin de garantir une expérience utilisateur fluide, même sur des appareils mobiles ou à connexion limitée.
+
+## 📝 Conclusion et fiche d'analyse
 
 Dans cette phase, nous avons exploré des techniques d'optimisation essentielles pour rendre les modèles de Deep Learning utilisables dans des applications réelles. Nous avons vu comment réduire la taille des modèles, accélérer leur inférence et les intégrer dans des applications web.
 
 Nous avons également examiné un projet concret qui met en œuvre ces concepts dans un contexte professionnel de stage BTS SIO. En comprenant comment structurer une application qui intègre un modèle de deep learning optimisé, vous êtes maintenant mieux préparés pour développer votre propre chatbot pédagogique.
 
+N'oubliez pas de compléter la [Fiche d'analyse - Optimisation des modèles](ressources/fiche-analyse-optimisation.md) pour documenter votre apprentissage et vos observations sur les techniques d'optimisation.
+
 Dans la prochaine phase, nous allons nous concentrer sur la préparation spécifique du projet de chatbot, en explorant l'API Mistral AI et en définissant le cahier des charges complet.
 
 [Retour au Module 3](index.md){ .md-button }
-[Continuer vers la préparation du projet](preparation-projet.md){ .md-button .md-button--primary }
+[Continuer vers la Phase 3: Préparation au projet](preparation-projet.md){ .md-button .md-button--primary }
