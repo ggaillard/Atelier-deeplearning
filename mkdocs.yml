@@ -87,9 +87,8 @@ nav:
         - Base de connaissances: ressources/base-connaissances.md
         - TensorFlow pour débutants: module3/pratique-tensorflow-keras.md
         - API Mistral: ressources/api-mistral.md
-        - Fiche d'observations - Frameworks: module3/ressources/fiche-observations-frameworks.md
-        - Fiche d'analyse - Optimisation: module3/ressources/fiche-analyse-optimisation.md
-        - Fiche de conception - Chatbot: module3/ressources/document-conception-chatbot.md
+        - Synthèse: module3/ressources/synthese-module3.md
+        
   - Module 4 - Projet:
       - Vue d'ensemble: module4/index.md
       - Cahier des charges: module4/projet-chatbot.md
