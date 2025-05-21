@@ -25,6 +25,7 @@ La documentation technique est une partie essentielle du travail en informatique
 ### Présentation de l'application pré-développée
 
 Notre assistant de documentation est une application web simple qui permet de :
+
 - Rédiger ou importer une documentation technique
 - Améliorer automatiquement le style et la clarté
 - Générer des instructions étape par étape à partir de descriptions générales
@@ -280,7 +281,7 @@ Mettez également à jour le template HTML pour inclure cette nouvelle option :
 
 Dans cette deuxième phase, vous avez découvert comment intégrer une API d'IA dans une application d'aide à la documentation technique. Cet outil peut considérablement améliorer votre efficacité en entreprise en vous aidant à produire des documentations de qualité plus rapidement.
 
-Vous avez également appris à adapter l'outil pour des besoins spécifiques au domaine du SIO, notamment en créant un type d'amélioration dédié aux procédures techniques standard.
+Vous avez également appris à adapter l'outil pour des besoins spécifiques, notamment en créant un type d'amélioration dédié aux procédures techniques standard.
 
 Dans la prochaine phase, nous explorerons les bases d'un chatbot d'assistance informatique, qui sera le fondement de votre projet final.
 
