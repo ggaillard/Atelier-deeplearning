@@ -31,7 +31,7 @@ Notre système de tickets est une application Flask simple qui permet :
 - L'affichage d'une liste de tickets organisée par catégories
 - L'ajout de commentaires et la résolution des tickets
 
-![Capture d'écran du système de tickets](../images/ticket-system-screenshot.png)
+![Capture d'écran du système de tickets](../images/ticket-system-screenshot.svg)
 
 ### Démonstration du fonctionnement
 
