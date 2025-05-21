@@ -115,7 +115,7 @@ def new_ticket():
     
     return render_template('new_ticket.html')
 
-@app.route('/ticket/<ticket_id>')
+@app.route('/ticket/')
 def view_ticket(ticket_id):
     tickets = load_tickets()
     ticket = next((t for t in tickets if t['id'] == ticket_id), None)
@@ -127,65 +127,71 @@ def view_ticket(ticket_id):
 
 if __name__ == '__main__':
     app.run(debug=True)
+```
 
 Examinez également les templates HTML principaux :
+
+```html
 <!-- templates/index.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Système de Tickets d'Assistance</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <header>
-        <h1>Système de Tickets d'Assistance</h1>
-        <a href="{{ url_for('new_ticket') }}" class="button">Nouveau Ticket</a>
-    </header>
+
+
+
+    Système de Tickets d'Assistance
     
-    <main>
-        <div class="tickets-list">
-            <h2>Tickets en cours</h2>
+
+
+    
+        Système de Tickets d'Assistance
+        Nouveau Ticket
+    
+    
+    
+        
+            Tickets en cours
             
             {% if tickets %}
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Titre</th>
-                            <th>Catégorie</th>
-                            <th>Priorité</th>
-                            <th>Statut</th>
-                            <th>Date</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                
+                    
+                        
+                            ID
+                            Titre
+                            Catégorie
+                            Priorité
+                            Statut
+                            Date
+                            Actions
+                        
+                    
+                    
                         {% for ticket in tickets %}
-                            <tr>
-                                <td>{{ ticket.id }}</td>
-                                <td>{{ ticket.title }}</td>
-                                <td>{{ ticket.category }}</td>
-                                <td class="priority-{{ ticket.priority.lower() }}">{{ ticket.priority }}</td>
-                                <td>{{ ticket.status }}</td>
-                                <td>{{ ticket.created_at }}</td>
-                                <td>
-                                    <a href="{{ url_for('view_ticket', ticket_id=ticket.id) }}">Voir</a>
-                                </td>
-                            </tr>
+                            
+                                {{ ticket.id }}
+                                {{ ticket.title }}
+                                {{ ticket.category }}
+                                {{ ticket.priority }}
+                                {{ ticket.status }}
+                                {{ ticket.created_at }}
+                                
+                                    Voir
+                                
+                            
                         {% endfor %}
-                    </tbody>
-                </table>
+                    
+                
             {% else %}
-                <p>Aucun ticket pour le moment.</p>
+                Aucun ticket pour le moment.
             {% endif %}
-        </div>
-    </main>
-</body>
-</html>
+        
+    
 
-Implémentation de la classification (30 min)
-Maintenant, complétez la fonction classify_ticket pour intégrer l'API d'IA :
 
+```
+
+### Implémentation de la classification (30 min)
+
+Maintenant, complétez la fonction `classify_ticket` pour intégrer l'API d'IA :
+
+```python
 # Code à compléter dans app.py
 import requests
 
@@ -247,22 +253,25 @@ def determine_priority(description, category):
     }
     
     return category_priorities.get(category, "Moyenne")
+```
 
-Test et adaptation (30 min)
+### Test et adaptation (30 min)
+
 Testez l'application avec différentes demandes pour vérifier la classification :
 
-Exemples de tickets à tester :
+**Exemples de tickets à tester :**
 
-"Mon ordinateur ne démarre plus, écran noir après le logo Windows"
-"Je n'arrive pas à me connecter à la messagerie professionnelle"
-"Comment installer le logiciel de comptabilité sur mon poste ?"
-"Le site web de l'entreprise est inaccessible depuis l'extérieur"
-"J'ai besoin d'un nouveau câble HDMI pour mon moniteur"
+1. "Mon ordinateur ne démarre plus, écran noir après le logo Windows"
+2. "Je n'arrive pas à me connecter à la messagerie professionnelle"
+3. "Comment installer le logiciel de comptabilité sur mon poste ?"
+4. "Le site web de l'entreprise est inaccessible depuis l'extérieur"
+5. "J'ai besoin d'un nouveau câble HDMI pour mon moniteur"
 
+### Adaptation des catégories
 
-Adaptation des catégories :
 Modifiez le code pour adapter les catégories à votre contexte :
 
+```python
 # Personnalisation des catégories
 def classify_ticket(description):
     # Configuration de l'API (inchangée)
@@ -280,9 +289,14 @@ def classify_ticket(description):
         ]
     }
     
-    Ajustement des priorités :
+    # Reste du code inchangé
+```
+
+### Ajustement des priorités
+
 Personnalisez également la logique de détermination des priorités :
 
+```python
 def determine_priority(description, category):
     # Mots-clés personnalisés
     high_priority_keywords = ["urgent", "bloqué", "impossible", "critique", "production", "sécurité"]
@@ -305,11 +319,17 @@ def determine_priority(description, category):
     }
     
     return category_priorities.get(category, "Moyenne")
+```
 
-    📝 Conclusion et transition
+## 📝 Conclusion et transition
+
 Dans cette première phase, vous avez découvert comment intégrer une API d'IA dans un système de tickets pour automatiser la classification des demandes d'assistance. Cette compétence est directement applicable dans un contexte professionnel et vous permettra de gagner en efficacité dans la gestion des incidents.
+
 Vous avez également appris à personnaliser la logique de classification et de priorisation pour l'adapter aux besoins spécifiques d'une entreprise informatique.
+
 Dans la prochaine phase, nous explorerons une autre application pratique : un assistant pour la documentation technique, qui vous aidera à générer et améliorer vos documentations professionnelles.
+
 N'oubliez pas de compléter la première partie de votre fiche d'observations avec vos tests et adaptations.
-Retour au Module 3{ .md-button }
-Continuer vers la Phase 2: Assistant de documentation technique{ .md-button .md-button--primary }
+
+[Retour au Module 3](index.md){ .md-button }
+[Continuer vers la Phase 2: Assistant de documentation technique](assistant-documentation.md){ .md-button .md-button--primary }

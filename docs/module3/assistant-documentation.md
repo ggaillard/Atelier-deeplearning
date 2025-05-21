@@ -105,10 +105,11 @@ def save_doc():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
+```
 
 Examinez également le template principal :
 
+```html
 <!-- templates/index.html -->
 <!DOCTYPE html>
 <html>
@@ -154,10 +155,13 @@ Examinez également le template principal :
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
+```
 
-Implémentation de l'amélioration documentaire (20 min)
-Complétez la fonction enhance_documentation pour intégrer l'API d'IA :
+### Implémentation de l'amélioration documentaire (20 min)
 
+Complétez la fonction `enhance_documentation` pour intégrer l'API d'IA :
+
+```python
 # Code à compléter dans app.py
 import requests
 
@@ -209,59 +213,43 @@ def enhance_documentation(text, improvement_type):
     except Exception as e:
         print(f"Erreur lors de l'amélioration: {e}")
         return f"**Erreur lors de l'amélioration**\n\nTexte original:\n\n{text}"
+```
 
-Test et adaptation pour documentation  (20 min)
+### Test et adaptation pour documentation (20 min)
+
 Testez l'application avec différents types de documentation informatique :
 
-Documentation système :
+**Documentation système :**
+```
 Installation de l'antivirus sur les postes clients: 
 Télécharger l'installateur. Désactiver l'ancien antivirus. 
 Lancer setup.exe. Accepter la licence. Choisir installation complète. 
 Redémarrer. Vérifier que le service est actif.
+```
 
-Documentation réseau :
+**Documentation réseau :**
+```
 Configuration VLAN:
 Pour configurer les VLANs, on utilise la commande switchport.
 Les ports d'accès doivent être configurés avec mode access.
 Les ports trunk permettent de faire passer plusieurs VLANs.
 Il faut configurer les interfaces et définir le VLAN natif.
+```
 
-Documentation développement :
+**Documentation développement :**
+```
 API d'authentification:
 L'API d'auth expose /login, /register et /reset.
 Utiliser des requêtes POST avec Content-Type application/json.
 Les tokens JWT doivent être inclus dans l'en-tête Authorization.
 La validation se fait côté serveur avec middleware.
+```
 
+### Adaptez l'application pour des besoins spécifiques (20 min)
 
-Adaptez l'application pour des besoins spécifiques  en ajoutant un nouveau type d'amélioration :
+Ajoutez un nouveau type d'amélioration :
 
-Test et adaptation pour documentation  (20 min)
-Testez l'application avec différents types de documentation informatique :
-
-Documentation système :
-Installation de l'antivirus sur les postes clients: 
-Télécharger l'installateur. Désactiver l'ancien antivirus. 
-Lancer setup.exe. Accepter la licence. Choisir installation complète. 
-Redémarrer. Vérifier que le service est actif.
-
-Documentation réseau :
-Configuration VLAN:
-Pour configurer les VLANs, on utilise la commande switchport.
-Les ports d'accès doivent être configurés avec mode access.
-Les ports trunk permettent de faire passer plusieurs VLANs.
-Il faut configurer les interfaces et définir le VLAN natif.
-
-Documentation développement :
-API d'authentification:
-L'API d'auth expose /login, /register et /reset.
-Utiliser des requêtes POST avec Content-Type application/json.
-Les tokens JWT doivent être inclus dans l'en-tête Authorization.
-La validation se fait côté serveur avec middleware.
-
-
-Adaptez l'application pour des besoins spécifiques en ajoutant un nouveau type d'amélioration :
-
+```python
 # Ajout d'un type d'amélioration spécifique 
 def enhance_documentation(text, improvement_type):
     # Configuration de l'API (inchangée)
@@ -271,24 +259,32 @@ def enhance_documentation(text, improvement_type):
         'structure': "Restructure cette documentation technique en sections claires avec des titres, des listes à puces et des étapes numérotées :",
         'clarity': "Améliore la clarté de cette documentation technique en ajoutant des détails, en expliquant les termes techniques et en utilisant un langage plus précis :",
         'user_guide': "Convertis cette documentation technique en un guide utilisateur simple à comprendre pour des non-techniciens :",
-        'procedure': "Convertis cette documentation en procédure technique standard pour technicien , incluant: objectif, prérequis, étapes détaillées, vérification, dépannage courant et références:"
+        'procedure': "Convertis cette documentation en procédure technique standard pour technicien, incluant: objectif, prérequis, étapes détaillées, vérification, dépannage courant et références:"
     }
-        # Reste du code inchangé
+    # Reste du code inchangé
+```
 
-    Mettez également à jour le template HTML pour inclure cette nouvelle option : 
-    
-    <!-- Ajout dans le select des types d'amélioration -->
+Mettez également à jour le template HTML pour inclure cette nouvelle option : 
+
+```html
+<!-- Ajout dans le select des types d'amélioration -->
 <select id="enhancement-type">
     <option value="structure">Améliorer la structure</option>
     <option value="clarity">Améliorer la clarté</option>
     <option value="user_guide">Convertir en guide utilisateur</option>
-    <option value="procedure_sio">Procédure standard SIO</option>
+    <option value="procedure">Procédure standard SIO</option>
 </select>
+```
 
-📝 Conclusion et transition
+## 📝 Conclusion et transition
+
 Dans cette deuxième phase, vous avez découvert comment intégrer une API d'IA dans une application d'aide à la documentation technique. Cet outil peut considérablement améliorer votre efficacité en entreprise en vous aidant à produire des documentations de qualité plus rapidement.
+
 Vous avez également appris à adapter l'outil pour des besoins spécifiques au domaine du SIO, notamment en créant un type d'amélioration dédié aux procédures techniques standard.
+
 Dans la prochaine phase, nous explorerons les bases d'un chatbot d'assistance informatique, qui sera le fondement de votre projet final.
+
 N'oubliez pas de compléter la deuxième partie de votre fiche d'observations avec vos tests et adaptations de l'assistant de documentation.
-Retour au Module 3{ .md-button }
-Continuer vers la Phase 3: Préparation au chatbot d'assistance{ .md-button .m
+
+[Retour au Module 3](index.md){ .md-button }
+[Continuer vers la Phase 3: Préparation au chatbot d'assistance](preparation-chatbot.md){ .md-button .md-button--primary }

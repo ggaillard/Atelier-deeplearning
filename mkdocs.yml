@@ -79,14 +79,14 @@ nav:
         - Synthèse: module2/ressources/synthese-module2.md  
   - Module 3 - Applications:
       - Vue d'ensemble: module3/index.md
-      - 1 - Frameworks et bonnes pratiques: module3/frameworks.md
-      - 2 - Intégration et optimisation: module3/integration.md
-      - 3 - Préparation au projet: module3/preparation-projet.md
+      - 1 - Système de tickets intelligent: module3/systeme-tickets.md
+      - 2 - Assistant de documentation: module3/assistant-documentation.md
+      - 3 - Préparation au chatbot: module3/preparation-chatbot.md
       - Auto-évaluation: module3/qcm-evaluation-module3.md
       - Ressources: 
         - Base de connaissances: ressources/base-connaissances.md
-        - TensorFlow pour débutants: module3/pratique-tensorflow-keras.md
         - API Mistral: ressources/api-mistral.md
+        - Fiche d'observations: module3/ressources/fiche-observations.md
         - Synthèse: module3/ressources/synthese-module3.md
         
   - Module 4 - Projet:
