@@ -1,302 +1,93 @@
-# 📝 Auto-évaluation du Module 3:  Développement d'applications pratiques
+# 📝 QCM d'évaluation - Module 3 : Applications professionnelles
 
 ![Auto-évaluation](../images/banner-evaluation.svg)
 
-Ce QCM vous permettra d'évaluer votre compréhension des frameworks, de l'optimisation et de l'intégration des modèles de Deep Learning dans des applications concrètes.
+Ce QCM vous permettra d'évaluer votre compréhension des concepts et techniques vus dans ce module sur les applications professionnelles de l'IA.
 
 ## Instructions
-
 - Cochez la ou les réponses correctes pour chaque question
-- Certaines questions peuvent avoir plusieurs réponses correctes
-- À la fin du questionnaire, répondez aux questions à réponse courte et complétez l'exercice pratique
-- Calculez votre score grâce au corrigé fourni
-- Durée recommandée : 20 minutes
+- Durée recommandée : 15 minutes
 
-## Partie A: QCM : Frameworks et optimisation (15 points)
+## Questions
 
-Pour chaque question, cochez la ou les réponses correctes.
+### 1. Dans le système de tickets intelligent, quelle est la fonction principale de l'API d'IA ?
+- [ ] a) Gérer la base de données des tickets
+- [ ] b) Classifier automatiquement les demandes par catégorie
+- [ ] c) Créer l'interface utilisateur du système
+- [ ] d) Authentifier les utilisateurs du système
 
-### 1. Parmi ces frameworks de Deep Learning, lequel est le plus adapté pour le déploiement en production sur des appareils mobiles ?
-- [ ] a) PyTorch
-- [ ] b) TensorFlow/Keras
-- [ ] c) Scikit-learn
-- [ ] d) Theano
+### 2. Quelle information est essentielle pour déterminer la priorité d'un ticket dans le système étudié ? (plusieurs réponses possibles)
+- [ ] a) La présence de mots-clés d'urgence dans la description
+- [ ] b) La catégorie du problème identifié
+- [ ] c) L'heure de soumission du ticket
+- [ ] d) Le département de l'utilisateur
 
-### 2. Quels sont les avantages des modèles pré-entraînés ? (plusieurs réponses possibles)
-- [ ] a) Réduction du temps de développement
-- [ ] b) Besoin de moins de données d'entraînement
-- [ ] c) Poids plus petits que les modèles entraînés from scratch
-- [ ] d) Meilleures performances sur des datasets limités
+### 3. Dans l'application d'assistance à la documentation, que permet de faire le type d'amélioration "user_guide" ?
+- [ ] a) Ajouter des instructions techniques avancées
+- [ ] b) Convertir un texte technique en guide accessible aux non-techniciens
+- [ ] c) Traduire la documentation dans une autre langue
+- [ ] d) Ajouter des captures d'écran automatiquement
 
-### 3. La quantification d'un modèle consiste à :
-- [ ] a) Réduire le nombre de couches du modèle
-- [ ] b) Réduire la précision des poids (ex: float32 → int8)
-- [ ] c) Supprimer les poids proches de zéro
-- [ ] d) Combiner plusieurs modèles ensemble
+### 4. Pour intégrer une API d'IA dans une application Flask, quelle bibliothèque Python est généralement nécessaire ?
+- [ ] a) flask-api
+- [ ] b) tensorflow
+- [ ] c) requests
+- [ ] d) sklearn
 
-### 4. Quelle technique d'optimisation consiste à supprimer les connexions les moins importantes dans un réseau ?
-- [ ] a) Quantification
-- [ ] b) Élagage (pruning)
-- [ ] c) Distillation
-- [ ] d) Factorisation matricielle
+### 5. Quelle est la structure de base d'une requête API pour l'amélioration de documentation ?
+- [ ] a) Un texte d'entrée, un type d'amélioration et un format de sortie
+- [ ] b) Une URL d'entrée et un point de terminaison
+- [ ] c) Un fichier JSON et un mot de passe
+- [ ] d) Un document Word et une clé de chiffrement
 
-### 5. Quel format est généralement utilisé pour déployer des modèles sur des appareils mobiles ?
-- [ ] a) HDF5
-- [ ] b) SavedModel
-- [ ] c) TensorFlow Lite
-- [ ] d) ONNX
+### 6. Dans la base de connaissances du chatbot d'assistance, pourquoi est-il important de prévoir des solutions différentes selon le niveau de l'utilisateur ?
+- [ ] a) Pour respecter les règles de confidentialité
+- [ ] b) Pour adapter la complexité technique de la réponse au niveau de compétence
+- [ ] c) Pour réduire la taille de la base de connaissances
+- [ ] d) Pour améliorer les performances du système
 
-### 6. Dans une API de Deep Learning, quelle technique est recommandée pour améliorer les performances ?
-- [ ] a) Recharger le modèle à chaque requête
-- [ ] b) Convertir les images en CSV avant traitement
-- [ ] c) Mettre en cache le modèle en mémoire
-- [ ] d) Désactiver la gestion d'erreurs
+### 7. Quelle fonctionnalité permettrait d'améliorer considérablement l'efficacité du chatbot d'assistance informatique ?
+- [ ] a) Des animations et des émojis dans les réponses
+- [ ] b) Des questions de diagnostic adaptatives pour préciser le problème
+- [ ] c) Un historique illimité des conversations
+- [ ] d) Un système de traduction automatique
 
-### 7. Quelle architecture de modèle est spécifiquement conçue pour être légère et efficace ?
-- [ ] a) VGG16
-- [ ] b) MobileNetV2
-- [ ] c) ResNet152
-- [ ] d) InceptionV4
+### 8. Comment la base de connaissances du chatbot associe-t-elle les questions aux problèmes ?
+- [ ] a) Par reconnaissance faciale de l'utilisateur
+- [ ] b) Par mots-clés et analyse sémantique
+- [ ] c) Par génération aléatoire
+- [ ] d) Par scanning du système informatique de l'utilisateur
 
-### 8. La distillation de connaissances consiste à :
-- [ ] a) Extraire les poids d'un modèle pour les analyser
-- [ ] b) Entraîner un plus petit modèle (élève) à imiter un plus grand modèle (enseignant)
-- [ ] c) Décomposer un gros modèle en plusieurs petits
-- [ ] d) Fusionner plusieurs modèles spécialisés
+### 9. Dans un contexte professionnel SIO, quelle application d'IA parmi celles étudiées offre le plus de valeur immédiate ?
+- [ ] a) Un générateur de logos pour l'entreprise
+- [ ] b) Un système de classification automatique des demandes d'assistance
+- [ ] c) Un outil de création musicale
+- [ ] d) Un système de reconnaissance faciale
 
-### 9. Lors de l'intégration d'un modèle dans une application web, quelle affirmation est correcte ?
-- [ ] a) Le modèle doit toujours être exécuté côté client (JavaScript)
-- [ ] b) Les prédictions doivent être traitées de manière synchrone
-- [ ] c) Il est recommandé de prétraiter les images côté client avant envoi
-- [ ] d) L'API du modèle ne nécessite pas de documentation si elle est utilisée en interne
-
-### 10. Parmi ces paramètres, lequel peut être ajusté pour rendre les réponses d'un modèle de langage plus déterministes (moins créatives) ?
-- [ ] a) Augmenter la température
-- [ ] b) Diminuer la température
-- [ ] c) Augmenter le nombre maximum de tokens
-- [ ] d) Activer le mode streaming
-
-## Partie B: Questions à réponse courte (10 points)
-
-Répondez brièvement aux questions suivantes (2-3 phrases par question).
-
-### 11. Expliquez pourquoi l'optimisation des modèles de Deep Learning est importante dans un contexte professionnel.
-
-...................................................................
-
-...................................................................
-
-### 12. Décrivez deux différences principales entre TensorFlow et PyTorch.
-
-...................................................................
-
-...................................................................
-
-### 13. Quels sont les avantages et inconvénients de la quantification post-entraînement ?
-
-...................................................................
-
-...................................................................
-
-### 14. Comment l'API Mistral AI peut-elle être utilisée pour créer un chatbot pédagogique ?
-
-...................................................................
-
-...................................................................
-
-### 15. Quelles sont les deux bonnes pratiques essentielles pour sécuriser une API de reconnaissance d'images ?
-
-...................................................................
-
-...................................................................
-
-## Partie C: Exercice pratique : Optimisation d'un modèle (15 points)
-
-Complétez le code suivant pour optimiser un modèle MobileNetV2 avec la quantification TensorFlow Lite.
-
-```python
-import tensorflow as tf
-from tensorflow.keras.applications import MobileNetV2
-import numpy as np
-
-# Chargement du modèle pré-entraîné
-base_model = MobileNetV2(weights='imagenet', include_top=True)
-
-# 1. Convertir le modèle en TensorFlow Lite
-converter = tf.lite.TFLiteConverter.from_keras_model(base_model)
-tflite_model = ................................. # À compléter
-
-# 2. Appliquer la quantification post-entraînement
-converter = tf.lite.TFLiteConverter.from_keras_model(base_model)
-converter.optimizations = ........................... # À compléter
-quantized_model = converter.convert()
-
-# 3. Comparer les tailles des modèles
-original_size = .................. # À compléter : calculer la taille du modèle original
-tflite_size = len(tflite_model) / (1024 * 1024)  # Taille en Mo
-quantized_size = len(quantized_model) / (1024 * 1024)  # Taille en Mo
-
-print(f"Taille du modèle original: {original_size:.2f} Mo")
-print(f"Taille du modèle TFLite: {tflite_size:.2f} Mo")
-print(f"Taille du modèle quantifié: {quantized_size:.2f} Mo")
-print(f"Réduction de taille: {(1 - quantized_size/original_size) * 100:.2f}%")
-
-# 4. Fonction pour prétraiter une image pour l'inférence
-def preprocess_image(image_path):
-    img = tf.keras.preprocessing.image.load_img(image_path, target_size=(224, 224))
-    img_array = .................. # À compléter : convertir l'image en tableau
-    img_array = np.expand_dims(img_array, axis=0)
-    return tf.keras.applications.mobilenet_v2.preprocess_input(img_array)
-
-# 5. Création d'un interpréteur TFLite
-interpreter = tf.lite.Interpreter(model_content=quantized_model)
-....................... # À compléter : allouer les tenseurs
-
-input_details = interpreter.get_input_details()
-output_details = interpreter.get_output_details()
-
-# 6. Fonction d'inférence avec le modèle quantifié
-def predict_with_tflite(image_path):
-    # Prétraitement de l'image
-    input_data = preprocess_image(image_path)
-    
-    # Définir les données d'entrée
-    interpreter.set_tensor(input_details[0]['index'], input_data)
-    
-    # Exécuter l'inférence
-    ...................... # À compléter : invoquer l'interpréteur
-    
-    # Obtenir les résultats
-    output_data = interpreter.get_tensor(output_details[0]['index'])
-    
-    # Traiter les résultats
-    results = tf.keras.applications.mobilenet_v2.decode_predictions(output_data)
-    return results[0]
-```
-
-## Partie D: Exercice de réflexion : Cas pratique d'intégration (10 points)
-
-Vous êtes développeur dans une petite entreprise qui propose des solutions de reconnaissance d'objets pour le commerce de détail. On vous demande de créer une API qui permettra d'identifier les produits à partir de photos prises par les employés sur leurs smartphones.
-
-1. Quelle architecture de modèle choisiriez-vous et pourquoi ? (2 points)
-
-...................................................................
-
-...................................................................
-
-2. Quelles techniques d'optimisation mettriez-vous en place ? (2 points)
-
-...................................................................
-
-...................................................................
-
-3. Comment structureriez-vous votre API REST ? Décrivez les endpoints et leurs paramètres. (3 points)
-
-...................................................................
-
-...................................................................
-
-...................................................................
-
-4. Quelles mesures de sécurité implémenteriez-vous ? (3 points)
-
-...................................................................
-
-...................................................................
-
-...................................................................
+### 10. Pour adapter le chatbot aux besoins spécifiques d'une entreprise, quelle approche est la plus efficace ?
+- [ ] a) Récrire complètement le code de l'application
+- [ ] b) Personnaliser la base de connaissances avec les problèmes spécifiques de l'entreprise
+- [ ] c) Créer une nouvelle interface utilisateur
+- [ ] d) Changer de fournisseur d'API
 
 ## Corrigé
 
-### QCM
-1. b) TensorFlow/Keras
-2. a) b) d)
-3. b) Réduire la précision des poids (ex: float32 → int8)
-4. b) Élagage (pruning)
-5. c) TensorFlow Lite
-6. c) Mettre en cache le modèle en mémoire
-7. b) MobileNetV2
-8. b) Entraîner un plus petit modèle (élève) à imiter un plus grand modèle (enseignant)
-9. c) Il est recommandé de prétraiter les images côté client avant envoi
-10. b) Diminuer la température
+1. b) Classifier automatiquement les demandes par catégorie
+2. a, b) La présence de mots-clés d'urgence dans la description, La catégorie du problème identifié
+3. b) Convertir un texte technique en guide accessible aux non-techniciens
+4. c) requests
+5. a) Un texte d'entrée, un type d'amélioration et un format de sortie
+6. b) Pour adapter la complexité technique de la réponse au niveau de compétence
+7. b) Des questions de diagnostic adaptatives pour préciser le problème
+8. b) Par mots-clés et analyse sémantique
+9. b) Un système de classification automatique des demandes d'assistance
+10. b) Personnaliser la base de connaissances avec les problèmes spécifiques de l'entreprise
 
-### Questions à réponse courte (éléments attendus)
-11. L'optimisation permet de réduire les coûts d'infrastructure, diminuer la latence pour une meilleure expérience utilisateur, économiser l'énergie (crucial pour les appareils mobiles) et rendre les modèles accessibles sur des appareils à ressources limitées.
+## Interprétation de votre score
 
-12. TensorFlow utilise des graphes statiques (plus efficaces en production) tandis que PyTorch utilise des graphes dynamiques (plus flexibles pour la recherche). TensorFlow a un écosystème plus complet pour le déploiement (TFLite, TF Serving) alors que PyTorch est généralement considéré comme plus intuitif pour le développement.
-
-13. Avantages : Réduction significative de la taille du modèle (jusqu'à 4x), accélération de l'inférence, pas besoin de réentraînement. Inconvénients : Perte potentielle de précision, surtout pour les tâches complexes, incompatibilité avec certaines opérations avancées.
-
-14. L'API Mistral AI peut être utilisée pour créer un chatbot pédagogique en envoyant des requêtes avec un prompt système adapté à l'enseignement, en enrichissant les prompts avec une base de connaissances spécifique au domaine enseigné, et en maintenant un contexte conversationnel pour assurer la cohérence des échanges.
-
-15. Validation des entrées (vérification du format et de la taille des images), limitation du taux de requêtes (rate limiting), authentification par clé API, sanitization des chemins de fichiers, restriction des types MIME acceptés.
-
-### Exercice pratique (éléments de correction)
-```python
-# 1. Convertir le modèle en TensorFlow Lite
-tflite_model = converter.convert()
-
-# 2. Appliquer la quantification post-entraînement
-converter.optimizations = [tf.lite.Optimize.DEFAULT]
-
-# 3. Comparer les tailles des modèles
-original_size = sum(np.prod(w.shape) * w.dtype.size for w in base_model.weights) / (1024 * 1024)
-
-# 4. Fonction pour prétraiter une image pour l'inférence
-img_array = tf.keras.preprocessing.image.img_to_array(img)
-
-# 5. Création d'un interpréteur TFLite
-interpreter.allocate_tensors()
-
-# 6. Fonction d'inférence avec le modèle quantifié
-interpreter.invoke()
-```
-
-### Exercice de réflexion
-Les réponses peuvent varier, mais devraient inclure des points comme:
-
-1. Architecture: MobileNetV2 ou EfficientNet serait un bon choix car ils offrent un bon équilibre entre précision et performance, sont optimisés pour les appareils mobiles, et peuvent être facilement affinés pour des tâches spécifiques.
-
-2. Techniques d'optimisation: Quantification post-entraînement pour réduire la taille du modèle, transfer learning sur un petit dataset de produits spécifiques, et éventuellement pruning pour réduire davantage la taille.
-
-3. Structure API REST:
-   - POST /predict - Pour envoyer une image et recevoir des prédictions
-   - GET /categories - Pour récupérer la liste des catégories de produits
-   - POST /feedback - Pour recueillir les retours sur les prédictions incorrectes
-   Paramètres pour /predict: image (fichier ou base64), top_k (nombre de prédictions), confidence_threshold.
-
-4. Sécurité:
-   - Authentification par clé API
-   - Rate limiting pour prévenir les abus
-   - Validation des entrées (taille et format d'image)
-   - HTTPS pour le chiffrement des données
-   - Logging sécurisé pour l'audit
-
-## Barème et auto-évaluation
-
-# Calcul de votre score
-
-Partie A : 1 point par réponse correcte = 10 points max
-Partie B : 2 points par réponse correcte = 10 points max
-Partie C : 15 points pour l'exercice complété correctement
-Partie D : 10 points pour les réponses pertinentes
-
-# Total des points possibles : 45
-Interprétation
-
-35-45 points : Excellente maîtrise des concepts d'intégration et d'optimisation des modèles
-24-35 points : Bonne compréhension, certains aspects à approfondir
-16-23 points : Compréhension de base, nécessite une révision approfondie
-0-15 points : Révision complète recommandée avant de poursuivre
-
-## Questions pour approfondir
-
-Si vous avez obtenu un bon score, vous pouvez explorer ces questions pour aller plus loin :
-
-1. Comment implémenteriez-vous un système de mise à jour progressive des modèles en production ?
-2. Quelles stratégies pourriez-vous utiliser pour gérer les biais potentiels dans un modèle de vision par ordinateur ?
-3. Comment adapter l'architecture d'une API de Deep Learning pour gérer des millions de requêtes par jour ?
-4. Quelles techniques permettraient d'optimiser les prompts pour un modèle de langage au-delà des exemples vus dans ce module ?
+- **8-10 points** : Excellente compréhension des applications professionnelles de l'IA pour le SIO
+- **5-7 points** : Bonne compréhension, mais certains concepts à revoir
+- **0-4 points** : Des révisions sont nécessaires avant de passer au module suivant
 
 [Retour au Module 3](index.md){ .md-button }
 [Continuer vers le Module 4](../module4/index.md){ .md-button .md-button--primary }
