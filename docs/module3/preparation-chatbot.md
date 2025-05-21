@@ -24,7 +24,7 @@ Un chatbot d'assistance informatique peut considérablement améliorer le suppor
 
 Voici une démonstration d'un chatbot d'assistance spécialisé pour le domaine SIO :
 
-![Chatbot SIO](../images/chatbot-sio-screenshot.png)
+![Chatbot SIO](../images/chatbot-sio-screenshot.svg)
 
 **Exemples d'interactions :**
 
