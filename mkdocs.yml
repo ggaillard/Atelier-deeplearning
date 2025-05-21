@@ -81,7 +81,6 @@ nav:
       - Vue d'ensemble: module3/index.md
       - 1 - Système de tickets intelligent: module3/systeme-tickets.md
       - 2 - Assistant de documentation: module3/assistant-documentation.md
-      - 3 - Préparation au chatbot: module3/preparation-chatbot.md
       - Auto-évaluation: module3/qcm-evaluation-module3.md
       - Ressources: 
         - Base de connaissances: ressources/base-connaissances.md
@@ -91,14 +90,14 @@ nav:
         
   - Module 4 - Projet:
       - Vue d'ensemble: module4/index.md
-      - Cahier des charges: module4/projet-chatbot.md
+      - 0 - Préparation au chatbot: module4/partie0-preparation-chatbot.md
       - 1 - Développement: module4/partie1-developpement.md
       - 2 - Finalisation: module4/partie2-finalisation.md
       - 3 - Présentation: module4/partie3-presentation.md
       - Auto-évaluation: module4/qcm-evaluation-module4.md
       - Ressources: 
         - Base de connaissances: ressources/base-connaissances.md
-        - Structure JSON: ressources/json-schemas.md 
+        - Structure JSON: ressources/json-schemas.md
 
      
 extra:

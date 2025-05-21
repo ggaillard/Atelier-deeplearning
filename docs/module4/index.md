@@ -96,7 +96,16 @@ gantt
     Présentation des projets           :30min, 03:30, 04:00  
 ```
 
-## Trois phases de réalisation
+## Quatres phases de réalisation
+
+
+### [Phase 0 : Préparation au chatbot d'assistance](partie0-preparation-chatbot.md) (30min)
+Explorez les fondamentaux d'un chatbot d'assistance avant de commencer votre développement :
+
+Découverte d'un exemple de chatbot spécialisé pour le domaine SIO
+Compréhension de la structure d'une base de connaissances
+Exploration de l'architecture d'intégration avec l'API Mistral
+
 
 ### [Phase 1 : Développement du chatbot](partie1-developpement.md) (2h30)
 

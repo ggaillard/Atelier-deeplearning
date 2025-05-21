@@ -288,4 +288,4 @@ Dans la prochaine phase, nous explorerons les bases d'un chatbot d'assistance in
 N'oubliez pas de compléter la deuxième partie de votre fiche d'observations avec vos tests et adaptations de l'assistant de documentation.
 
 [Retour au Module 3](index.md){ .md-button }
-[Continuer vers la Phase 3: Préparation au chatbot d'assistance](preparation-chatbot.md){ .md-button .md-button--primary }
+[Passer au Module 4](../module4/index.md){ .md-button .md-button--primary }
