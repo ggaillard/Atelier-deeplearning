@@ -1,4 +1,4 @@
-# 📋 Phase 3: Préparation au chatbot d'assistance (30 min)
+# 📋 Phase 0: Préparation au chatbot d'assistance (30 min)
 
 ![Préparation au chatbot](https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000&h=300)
 
@@ -83,5 +83,5 @@ Pour le prochain module, réfléchissez au domaine informatique que vous souhait
 
 N'oubliez pas de compléter la dernière partie de votre fiche d'observations avec vos idées pour le chatbot à développer.
 
-[Retour au Module 3](index.md){ .md-button }
-[Passer au Module 4](../module4/index.md){ .md-button .md-button--primary }json
+[Retour au Module 4](index.md){ .md-button }
+[ au Module 4](../module/index.md){ .md-button .md-button--primary }json

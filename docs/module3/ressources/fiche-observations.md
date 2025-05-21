@@ -17,9 +17,12 @@
 
 ### Personnalisation effectuée
 **Catégories ajoutées/modifiées:**
+
 **Modifications de la logique de priorité:**
+
 ### Applications possibles en entreprise
 **Comment ce système pourrait être utilisé dans une organisation réelle:**
+
 ## Partie 2 : Assistant de documentation technique
 
 ### Tests effectués avec l'assistant
@@ -38,21 +41,6 @@
 ### Applications en contexte professionnel
 **Types de documentation qui bénéficieraient le plus de cet outil:**
 
-## Partie 3 : Préparation au chatbot d'assistance
-
-### Base de connaissances
-**Domaine choisi pour le chatbot:**
-
-**Catégories principales identifiées:**
-
-**Exemple de problème structuré:**
-
-### Fonctionnalités envisagées
-**Fonctionnalités spécifiques que vous souhaitez développer:**
-
-### Applications en entreprise
-**Comment ce chatbot pourrait être utilisé dans un contexte SIO:**
-
 ## Conclusion et réflexion
 
 **Compétences développées au cours de ce module:**
@@ -61,4 +49,6 @@
 
 **Limites identifiées:**
 
-**Idées d'amélioration pour le projet final:**
+**Idées d'amélioration pour les applications professionnelles:**
+
+**Perspectives pour le projet de chatbot du module 4:**
