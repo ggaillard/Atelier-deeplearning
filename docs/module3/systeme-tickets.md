@@ -18,6 +18,7 @@ Dans cette phase, vous allez :
 En tant que technicien SIO, vous serez souvent confronté à la gestion de demandes d'assistance. Un système de tickets permet d'organiser et de prioriser ces demandes, mais la classification manuelle prend du temps et manque parfois de cohérence.
 
 L'intégration d'une IA pour classifier automatiquement les demandes permet de :
+
 - Gagner du temps sur le traitement initial
 - Assurer une catégorisation cohérente
 - Diriger plus rapidement les demandes vers les bons interlocuteurs
@@ -26,6 +27,7 @@ L'intégration d'une IA pour classifier automatiquement les demandes permet de :
 ### Présentation du système pré-développé
 
 Notre système de tickets est une application Flask simple qui permet :
+
 - La soumission de nouvelles demandes
 - La classification automatique par IA
 - L'affichage d'une liste de tickets organisée par catégories
