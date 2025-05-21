@@ -77,9 +77,9 @@
   <text x="500" y="155" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#E65100">Développement</text>
   <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#E65100">d'applications</text>
   
-  <text x="500" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Frameworks (TensorFlow)</text>
+  <text x="500" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Intégration d'une API d'IA</text>
   <text x="500" y="235" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Optimisation de modèles</text>
-  <text x="500" y="260" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Introduction API Mistral</text>
+  <text x="500" y="260" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Optimisation du prompt</text>
   <text x="500" y="285" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Préparation du projet</text>
   
   <rect x="440" y="310" width="120" height="25" rx="12" ry="12" fill="#FB8C00" opacity="0.8"/>
