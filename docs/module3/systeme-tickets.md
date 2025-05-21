@@ -134,58 +134,65 @@ if __name__ == '__main__':
 Examinez également les templates HTML principaux :
 
 ```html
-<!-- templates/index.html -->
-
-
-
-    Système de Tickets d'Assistance
+    <!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de Tickets d'Assistance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Système de Tickets d'Assistance</h1>
+        <a href="{{ url_for('new_ticket') }}" class="btn btn-primary">Nouveau Ticket</a>
+    </header>
     
-
-
-    
-        Système de Tickets d'Assistance
-        Nouveau Ticket
-    
-    
-    
-        
-            Tickets en cours
+    <main>
+        <div class="container">
+            <h2>Tickets en cours</h2>
             
             {% if tickets %}
-                
-                    
-                        
-                            ID
-                            Titre
-                            Catégorie
-                            Priorité
-                            Statut
-                            Date
-                            Actions
-                        
-                    
-                    
+                <table class="tickets-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Titre</th>
+                            <th>Catégorie</th>
+                            <th>Priorité</th>
+                            <th>Statut</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                         {% for ticket in tickets %}
-                            
-                                {{ ticket.id }}
-                                {{ ticket.title }}
-                                {{ ticket.category }}
-                                {{ ticket.priority }}
-                                {{ ticket.status }}
-                                {{ ticket.created_at }}
-                                
-                                    Voir
-                                
-                            
+                            <tr>
+                                <td>{{ ticket.id }}</td>
+                                <td>{{ ticket.title }}</td>
+                                <td>{{ ticket.category }}</td>
+                                <td>{{ ticket.priority }}</td>
+                                <td>{{ ticket.status }}</td>
+                                <td>{{ ticket.created_at }}</td>
+                                <td>
+                                    <a href="{{ url_for('view_ticket', ticket_id=ticket.id) }}" class="btn btn-sm">Voir</a>
+                                </td>
+                            </tr>
                         {% endfor %}
-                    
-                
+                    </tbody>
+                </table>
             {% else %}
-                Aucun ticket pour le moment.
+                <p>Aucun ticket pour le moment.</p>
             {% endif %}
-        
-    
+        </div>
+    </main>
 
+    <footer>
+        <p>&copy; 2025 - Système de tickets intelligent</p>
+    </footer>
+</body>
+</html>
 
 ```
 
