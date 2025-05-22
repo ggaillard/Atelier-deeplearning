@@ -58,7 +58,7 @@ Ce module vous permet de développer plusieurs compétences du référentiel BTS
 
 - Connaissances de base en Python
 - Notions fondamentales sur les API web
-- Compte Google pour Colab (pour certains exemples)
+- Compte Google pour Colab 
 
 ## Prêt pour la partie pratique ?
 
