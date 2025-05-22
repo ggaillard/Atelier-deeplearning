@@ -56,6 +56,7 @@ Pour votre projet de chatbot, vous devrez créer une base de connaissances simil
 1. **Choisir un domaine** : Assistance informatique, Support d'applications, Réseau, Sécurité...
 2. **Identifier les problèmes fréquents** : Listez 5 à 10 problèmes communs dans ce domaine
 3. **Structurer chaque problème** :
+
    - Titre et mots-clés
    - Symptômes observables
    - Solutions adaptées au niveau de l'utilisateur
@@ -65,6 +66,7 @@ Pour votre projet de chatbot, vous devrez créer une base de connaissances simil
 ### Intégration avec l'API
 
 Le chatbot utilisera l'API pour :
+
 - Analyser la question de l'utilisateur et identifier le problème correspondant
 - Récupérer les informations pertinentes dans la base de connaissances
 - Formuler une réponse adaptée au niveau technique de l'utilisateur
@@ -75,6 +77,7 @@ Le chatbot utilisera l'API pour :
 Dans cette dernière phase, vous avez découvert comment un chatbot d'assistance informatique peut être structuré pour répondre efficacement aux problèmes techniques. Cette exploration vous prépare pour votre projet final où vous développerez votre propre chatbot spécialisé.
 
 Les compétences acquises dans ce module vous permettront de :
+
 - Intégrer des API d'IA dans des applications professionnelles concrètes
 - Adapter des solutions existantes à des besoins spécifiques
 - Structurer une base de connaissances technique efficace
