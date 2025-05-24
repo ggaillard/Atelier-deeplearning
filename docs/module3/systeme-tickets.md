@@ -47,6 +47,18 @@ Voici à quoi ressemble notre système de tickets :
 3. Lui attribue une priorité "Haute" (problème bloquant)
 4. L'affiche dans la liste des tickets avec ces informations
 
+## 📝 Documentation de vos observations
+
+N'oubliez pas de compléter votre [fiche d'observations](../ressources/Partie3-Phase1-fiche-observations-tickets.md) avec :
+
+- Les résultats de vos tests de classification
+- L'analyse de votre logique de priorité 
+- Les adaptations réalisées pour le contexte d'entreprise
+- Vos réflexions sur les applications professionnelles
+
+Cette documentation sera essentielle pour l'évaluation de votre travail
+
+
 ## 🧩 Structure de l'application (15 min)
 
 Notre système de tickets est une application web simple construite avec Flask. Voici sa structure :

@@ -167,8 +167,6 @@ Dans la prochaine section, nous approfondirons les [concepts fondamentaux](conce
 
 ## 📚 Ressources complémentaires
 
-- [Guide d'utilisation de Google Colab](ressources/guide-colab.md) - Pour vous aider à utiliser cet environnement
-- [Glossaire du Deep Learning](ressources/glossaire-dl.md) - Définitions des termes techniques rencontrés
 - [TensorFlow Playground](https://playground.tensorflow.org/) - Interface interactive pour expérimenter avec des réseaux de neurones simples
 
 [Retour au Module 1](index.md){ .md-button }

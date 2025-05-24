@@ -79,7 +79,7 @@ Pour comprendre les concepts clés du Deep Learning.
 
 À l'issue de ce module, vous devrez avoir produit :
 
- - 📋 Phase 1 : La [fiche d'observations](ressources/fiche-observations.md) complétée sur le "Hello World du Deep Learning"
+ - 📋 Phase 1 : La [fiche d'observations](ressources/Partie1-Phase1-fiche-observations.md) complétée sur le "Hello World du Deep Learning"
  - 📋 Phase 2 : [fiche d'observations](ressources/Partie1-Phase2-fiche-observations.md) - Concepts fondamentaux du Deep Learning
  - 📋 Phase 3 : [fiche d'observations](ressources/Partie1-Phase3-fiche-observations.md) - Mini-projet d'amélioration
 

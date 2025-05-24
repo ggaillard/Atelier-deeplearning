@@ -16,7 +16,7 @@
 
 Ce module explore les architectures spécialisées de réseaux de neurones à travers trois phases complémentaires, en s'appuyant sur les fondamentaux acquis dans le Module 1.
 
-### [🔍 Phase 1 : Mini-projet CNN pour la vision par ordinateur](reseaux-convolutifs.md) (2h)
+### [🔍 Phase 1 : Mini-projet CNN pour la vision par ordinateur](reseaux-convolutifs.md) (1h40)
 
 Plongez dans l'univers des réseaux convolutifs et apprenez à les utiliser pour la classification d'images.
 
@@ -25,7 +25,7 @@ Plongez dans l'univers des réseaux convolutifs et apprenez à les utiliser pour
 - Visualisation des filtres et feature maps
 - Intégration dans une application web simple
 
-### [🧩 Phase 2 : Mini-projet RNN pour le traitement du langage](reseaux-recurrents.md) (1h30)
+### [🧩 Phase 2 : Mini-projet RNN pour le traitement du langage](reseaux-recurrents.md) (1h40)
 
 Découvrez comment les réseaux récurrents permettent de traiter des données séquentielles comme le texte.
 
@@ -34,7 +34,7 @@ Découvrez comment les réseaux récurrents permettent de traiter des données s
 - Implémentation d'un modèle d'analyse de sentiment
 - Expérimentation avec l'API Mistral AI pour le NLP
 
-### [📝 Phase 3 : Auto-évaluation et synthèse](qcm-evaluation-module2.md) (30 min)
+### [📝 Phase 3 : Auto-évaluation et synthèse](qcm-evaluation-module2.md) (20 min)
 
 Cette phase finale vous permettra de consolider vos connaissances et d'évaluer votre compréhension des architectures spécialisées.
 
@@ -44,7 +44,7 @@ Pour comprendre les concepts clés des CNN et RNN/LSTM.
 
 [Guide de référence synthétique](ressources/synthese.md){ .md-button .md-button--primary }
 
-#### ✅ QCM d'auto-évaluation
+#### ✅ QCM d'auto-évaluation (20 min)
 
 !!! success "Testez vos connaissances sur les architectures spécialisées"
     Ce QCM couvre l'ensemble des concepts fondamentaux abordés dans ce module:

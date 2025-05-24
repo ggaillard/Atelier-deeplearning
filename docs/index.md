@@ -40,5 +40,4 @@ Pour suivre efficacement cette formation, vous devez :
 
 Prêt à vous lancer dans l'univers du Deep Learning ? Deux options s'offrent à vous :
 
-[🤖 Découvrir le projet chatbot](presentation.md){ .md-button }
 [🏁 Commencer le Module 1](module1/index.md){ .md-button .md-button--primary }
