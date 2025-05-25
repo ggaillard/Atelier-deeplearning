@@ -99,7 +99,7 @@ gantt
 ## Quatres phases de réalisation
 
 
-### [Phase 0 : Préparation au chatbot d'assistance](partie0-preparation-chatbot.md) (30min)
+### [Phase 0 : Préparation au chatbot d'assistance](partie0-preparation-projet.md) (30min)
 Explorez les fondamentaux d'un chatbot d'assistance avant de commencer votre développement :
 
 Découverte d'un exemple de chatbot spécialisé pour le domaine SIO
