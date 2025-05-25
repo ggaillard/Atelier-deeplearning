@@ -1,36 +1,23 @@
-# 📋 Fiche d'observations - Mini-projet d'amélioration d'un modèle
+# 📋 Fiche d'observations - Mini-projet d'amélioration
 
 ## Informations générales
-
 **Nom et prénom :** ____________________________
-
 **Date :** ____________________________
-
 
 ## Partie 1 : Modèle de base
 
-### Caractéristiques du modèle initial
-| Élément | Description |
-|---------|-------------|
-| Architecture (nombre de couches) | |
-| Nombre total de paramètres | |
-| Fonction d'activation | |
-| Optimiseur | |
+### Caractéristiques initiales
+| Élément | Valeur | Notes |
+|---------|--------|-------|
+| Architecture (nb couches) | | |
+| Nombre de paramètres | | |
+| Fonction d'activation | | |
+| Optimiseur | | |
+| Précision test initiale | | |
 
-### Performance du modèle de base
-| Métrique | Valeur |
-|----------|--------|
-| Précision sur l'ensemble de test | |
-| Temps d'entraînement | |
-
-### Analyse des courbes d'apprentissage
-**Observations sur les courbes de précision (accuracy) :**
-```
-_________________________________________________________________
-_________________________________________________________________
-```
-
-**Observations sur les courbes de perte (loss) :**
+### Performance de référence
+**Temps d'entraînement :** _______ minutes
+**Analyse des courbes d'apprentissage :**
 ```
 _________________________________________________________________
 _________________________________________________________________
@@ -39,110 +26,83 @@ _________________________________________________________________
 ## Partie 2 : Modifications effectuées
 
 ### Modification 1
-**Description de la modification :**
+**Type de modification :**
+⬜ Architecture ⬜ Hyperparamètres ⬜ Données ⬜ Autre
+
+**Description détaillée :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-**Raison du choix :**
+**Justification du choix :**
 ```
-_________________________________________________________________
 _________________________________________________________________
 ```
 
-**Impact sur l'architecture (nombre de couches, paramètres) :**
-```
-_________________________________________________________________
-```
+**Résultats obtenus :**
+| Métrique | Avant | Après | Évolution |
+|----------|-------|-------|-----------|
+| Précision test | | | |
+| Temps d'entraînement | | | |
+| Stabilité | | | |
 
 ### Modification 2
-**Description de la modification :**
+**Type de modification :**
+⬜ Architecture ⬜ Hyperparamètres ⬜ Données ⬜ Autre
+
+**Description détaillée :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-**Raison du choix :**
+**Résultats obtenus :**
+| Métrique | Avant | Après | Évolution |
+|----------|-------|-------|-----------|
+| Précision test | | | |
+| Temps d'entraînement | | | |
+| Stabilité | | | |
+
+## Partie 3 : Tests sur données dégradées
+
+### Performance comparée
+| Version modèle | Données normales | Données bruitées | Robustesse |
+|----------------|------------------|------------------|------------|
+| Modèle initial | | | |
+| Meilleure modification | | | |
+
+### Analyse des erreurs
+**Types d'erreurs fréquentes :**
+```
+_________________________________________________________________
+```
+
+**Impact du bruit sur les prédictions :**
+```
+_________________________________________________________________
+```
+
+## Partie 4 : Analyse et synthèse
+
+### Classement des modifications
+1. **Plus efficace :** _________________________________
+   **Raison :** ____________________________________________
+
+2. **Plus surprenante :** _______________________________
+   **Raison :** ____________________________________________
+
+3. **Moins utile :** ____________________________________
+   **Raison :** ____________________________________________
+
+### Compréhension acquise
+**Facteurs influençant les performances :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-**Impact sur l'architecture (nombre de couches, paramètres) :**
-```
-_________________________________________________________________
-```
-
-### Autre modification (si applicable)
-**Description de la modification :**
-```
-_________________________________________________________________
-_________________________________________________________________
-```
-
-**Raison du choix :**
-```
-_________________________________________________________________
-_________________________________________________________________
-```
-
-## Partie 3 : Résultats des modifications
-
-### Tableau comparatif
-
-| Version du modèle | Précision (test) | Temps d'entraînement | Commentaires |
-|-------------------|------------------|----------------------|--------------|
-| Modèle de base | | | |
-| Modèle après modification 1 | | | |
-| Modèle après modification 2 | | | |
-| Autre modification | | | |
-
-### Test sur données bruitées
-
-| Version du modèle | Précision sur données normales | Précision sur données bruitées | Différence |
-|-------------------|--------------------------------|--------------------------------|------------|
-| Modèle de base | | | |
-| Meilleur modèle modifié | | | |
-
-### Visualisation des prédictions
-
-**Types d'erreurs les plus fréquentes :**
-```
-_________________________________________________________________
-_________________________________________________________________
-```
-
-**Différence entre les données normales et bruitées :**
-```
-_________________________________________________________________
-_________________________________________________________________
-```
-
-## Partie 4 : Analyse et interprétation
-
-### Impact des modifications
-**Quelle modification a eu le plus grand impact positif ? Pourquoi ?**
-```
-_________________________________________________________________
-_________________________________________________________________
-```
-
-**Y a-t-il eu des modifications qui ont dégradé les performances ? Pourquoi ?**
-```
-_________________________________________________________________
-_________________________________________________________________
-```
-
-### Réflexion globale
-**Votre compréhension des facteurs qui influencent les performances d'un réseau de neurones :**
-```
-_________________________________________________________________
-_________________________________________________________________
-_________________________________________________________________
-```
-
-**Autres modifications que vous auriez aimé essayer :**
+**Stratégies d'amélioration identifiées :**
 ```
 _________________________________________________________________
 _________________________________________________________________
@@ -150,15 +110,23 @@ _________________________________________________________________
 
 ## Conclusion
 
-**Résumé des principales observations :**
+### Enseignements principaux
+1. _________________________________________________________________
+2. _________________________________________________________________
+3. _________________________________________________________________
+
+### Applications futures
 ```
-_________________________________________________________________
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-**Applications potentielles de ce que vous avez appris :**
+### Auto-évaluation
+**Maîtrise technique :** ⬜ Excellente ⬜ Bonne ⬜ Moyenne ⬜ À améliorer
+**Compréhension conceptuelle :** ⬜ Excellente ⬜ Bonne ⬜ Moyenne ⬜ À améliorer
+
+---
+**Temps consacré :** _______ minutes
+**Difficulté ressentie :** ⬜ Facile ⬜ Moyenne ⬜ Difficile
 ```
-_________________________________________________________________
-_________________________________________________________________
-```
+

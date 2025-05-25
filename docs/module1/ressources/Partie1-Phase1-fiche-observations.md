@@ -1,138 +1,134 @@
 # 📋 Fiche d'observations - Hello World du Deep Learning
 
-*Cette fiche d'observations vous accompagne étape par étape dans l'exploration du notebook. Pour chaque section, notez les références aux cellules correspondantes du notebook.*
-
 ## Informations générales
-
 **Nom et prénom :** ____________________________
-
 **Date :** ____________________________
 
-**Groupe :** ____________________________
 
-## Partie 1 : Configuration et vérification de l'environnement *(Cellule 2)*
+## Partie 1 : Configuration et environnement
 
-| Question | Observation |
-|----------|-------------|
-| Version de TensorFlow détectée | |
-| GPU disponible ? (Oui/Non) | |
-| Quelle est l'importance d'avoir un GPU pour le Deep Learning ? | |
+| Élément | Observation | Notes |
+|---------|-------------|-------|
+| Version TensorFlow | | |
+| GPU disponible | ⬜ Oui ⬜ Non | |
+| Temps de chargement | | |
 
-## Partie 2 : Chargement et préparation des données *(Cellule 3)*
-
-| Question | Observation |
-|----------|-------------|
-| Combien d'exemples d'entraînement sont disponibles ? | |
-| Combien d'exemples de test sont disponibles ? | |
-| Quelle est la dimension des images ? | |
-| Pourquoi normalise-t-on les valeurs des pixels entre 0 et 1 ? | |
-| D'après les exemples affichés, quelles difficultés pourrait rencontrer le modèle ? | |
-
-## Partie 3 : Architecture du modèle *(Cellule 4)*
-
-Dessinez le schéma simplifié de l'architecture du réseau de neurones utilisé :
-
+**Importance du GPU pour le Deep Learning :**
 ```
-[Schéma à compléter]
+_________________________________________________________________
+_________________________________________________________________
 ```
 
-| Question | Observation |
-|----------|-------------|
-| Combien de couches comporte le modèle ? | |
-| Combien de paramètres entraînables au total ? | |
-| Quel est le rôle des couches de convolution ? | |
-| Quel est le rôle des couches de pooling ? | |
-| Pourquoi utilise-t-on 'softmax' comme activation de la dernière couche ? | |
+## Partie 2 : Exploration des données MNIST
 
-## Partie 4 : Entraînement du modèle *(Cellule 5)*
+| Caractéristique | Valeur observée | Analyse |
+|-----------------|-----------------|---------|
+| Nombre d'exemples d'entraînement | | |
+| Nombre d'exemples de test | | |
+| Dimension des images | | |
+| Nombre de classes | | |
 
-| Question | Observation |
-|----------|-------------|
-| Combien d'époques ont été effectuées ? | |
-| Quelle est la précision finale sur les données d'entraînement ? | |
-| Quelle est la précision finale sur les données de validation ? | |
-| Quelle est la précision sur l'ensemble de test ? | |
-| Y a-t-il un signe de surapprentissage (overfitting) ? Pourquoi ? | |
+**Défis potentiels identifiés dans les exemples :**
+```
+_________________________________________________________________
+_________________________________________________________________
+```
 
-## Partie 5 : Visualisation des résultats *(Cellule 6)*
+## Partie 3 : Architecture du réseau
 
-Analysez les graphiques d'apprentissage :
+### Schéma de l'architecture
+*Dessinez ou décrivez l'architecture du modèle utilisé :*
+```
+[Espace pour schéma]
+```
 
-| Question | Observation |
-|----------|-------------|
-| La courbe de précision d'entraînement est-elle croissante ? | |
-| La courbe de perte d'entraînement est-elle décroissante ? | |
-| Y a-t-il un écart important entre les courbes d'entraînement et de validation ? | |
-| D'après vous, l'entraînement a-t-il été suffisant (nombre d'époques) ? | |
+| Couche | Type | Fonction | Paramètres |
+|--------|------|----------|------------|
+| 1 | | | |
+| 2 | | | |
+| 3 | | | |
+| 4 | | | |
 
-## Partie 6 : Prédictions sur des exemples de test *(Cellule 7)*
+**Nombre total de paramètres :** ________________
 
-Observez les 10 exemples de prédiction :
+## Partie 4 : Processus d'entraînement
 
-| Question | Observation |
-|----------|-------------|
-| Combien de prédictions sont correctes sur les 10 exemples ? | |
-| Pour les prédictions incorrectes, quelles pourraient être les raisons d'erreur ? | |
-| Certains chiffres semblent-ils plus difficiles à reconnaître que d'autres ? | |
+### Métriques d'entraînement
+| Métrique | Valeur finale | Évolution observée |
+|----------|---------------|-------------------|
+| Précision entraînement | | |
+| Précision validation | | |
+| Précision test | | |
+| Perte finale | | |
 
-## Partie 7 : Test avec votre propre dessin *(Cellule 8)*
+### Analyse des courbes d'apprentissage
+**Évolution de la précision :**
+```
+_________________________________________________________________
+```
 
-| Question | Observation |
-|----------|-------------|
-| Quels chiffres avez-vous dessinés ? | |
-| Combien ont été correctement prédits ? | |
-| Pour ceux mal prédits, quelle était la prédiction et pourquoi selon vous ? | |
-| Comment le prétraitement de l'image a-t-il transformé votre dessin ? | |
+**Évolution de la perte :**
+```
+_________________________________________________________________
+```
 
-## Partie 8 : Expérimentations *(Cellule 9)*
+**Signes de surapprentissage :** ⬜ Oui ⬜ Non
+**Justification :**
+```
+_________________________________________________________________
+```
 
-Documentez vos expérimentations en modifiant le modèle ou les paramètres :
+## Partie 5 : Tests et prédictions
 
-### Expérimentation 1
+### Analyse des prédictions
+| Test | Résultat | Confiance | Correct |
+|------|----------|-----------|---------|
+| Exemple 1 | | | ⬜ |
+| Exemple 2 | | | ⬜ |
+| Exemple 3 | | | ⬜ |
 
-**Modification effectuée :** _________________________
+**Types d'erreurs les plus fréquentes :**
+```
+_________________________________________________________________
+```
 
-| Paramètre | Valeur originale | Nouvelle valeur | 
-|-----------|------------------|----------------|
+## Partie 6 : Expérimentations personnelles
+
+### Modifications testées
+| Modification | Impact observé | Intérêt |
+|--------------|----------------|---------|
 | | | |
 | | | |
 
-**Résultats :**
-- Précision test : _______%
-- Observations : _______________________
-
-### Expérimentation 2
-
-**Modification effectuée :** _________________________
-
-| Paramètre | Valeur originale | Nouvelle valeur | 
-|-----------|------------------|----------------|
-| | | |
-| | | |
-
-**Résultats :**
-- Précision test : _______%
-- Observations : _______________________
+### Dessin personnel
+**Chiffres dessinés :** ________________
+**Taux de reconnaissance :** ________________
+**Observations :**
+```
+_________________________________________________________________
+```
 
 ## Conclusion
 
-| Question | Réponse |
-|----------|---------|
-| Quels sont les 3 principaux apprentissages de ce TP ? | 1.<br>2.<br>3. |
-| Quelles améliorations pourriez-vous suggérer pour ce modèle ? | |
-| Comment ce modèle se compare-t-il aux capacités humaines de reconnaissance de chiffres ? | |
-| Quelles autres applications de la vision par ordinateur vous intéressent ? | |
+### Apprentissages clés (3 points principaux)
+1. _________________________________________________________________
+2. _________________________________________________________________
+3. _________________________________________________________________
+
+### Questions soulevées
+```
+_________________________________________________________________
+_________________________________________________________________
+```
+
+### Liens avec le projet final
+**Comment ces connaissances seront utiles pour le chatbot pédagogique :**
+```
+_________________________________________________________________
+_________________________________________________________________
+```
 
 ---
-
-## Glossaire des termes clés rencontrés
-
-| Terme | Votre définition |
-|-------|------------------|
-| Convolution | |
-| Pooling | |
-| Epoch (époque) | |
-| Batch | |
-| Dropout | |
-| Softmax | |
-| Overfitting (surapprentissage) | |
+**Temps consacré :** _______ minutes
+**Difficulté ressentie :** ⬜ Facile ⬜ Moyenne ⬜ Difficile
+```

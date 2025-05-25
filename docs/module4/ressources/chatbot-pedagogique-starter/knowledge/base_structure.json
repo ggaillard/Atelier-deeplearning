@@ -1,0 +1,72 @@
+{
+  "concepts": [
+    {
+      "id": "neural_network",
+      "title": "Réseau de neurones",
+      "keywords": ["réseau", "neurones", "neural", "network"],
+      "definition": "Un réseau de neurones est un modèle informatique inspiré du fonctionnement du cerveau humain, composé de neurones artificiels interconnectés qui peuvent apprendre à partir de données.",
+      "examples": [
+        "Reconnaissance d'images : un réseau peut apprendre à identifier des chats dans des photos",
+        "Prédiction de prix : analyser l'historique pour prévoir l'évolution des cours"
+      ],
+      "level": "beginner"
+    },
+    {
+      "id": "cnn",
+      "title": "Réseau de neurones convolutif (CNN)",
+      "keywords": ["cnn", "convolutif", "convolutional", "image", "vision"],
+      "definition": "Les CNN sont spécialisés dans le traitement d'images. Ils utilisent des filtres qui parcourent l'image pour détecter des motifs comme les contours, les formes, puis les objets complets.",
+      "examples": [
+        "Reconnaissance faciale sur les photos",
+        "Détection de défauts sur une chaîne de production",
+        "Diagnostic médical à partir d'images de radiologie"
+      ],
+      "level": "intermediate"
+    },
+    {
+      "id": "rnn",
+      "title": "Réseau de neurones récurrent (RNN)",
+      "keywords": ["rnn", "récurrent", "recurrent", "texte", "séquence", "lstm"],
+      "definition": "Les RNN sont conçus pour traiter des séquences de données comme le texte ou les séries temporelles. Ils ont une 'mémoire' qui leur permet de se souvenir des informations précédentes.",
+      "examples": [
+        "Traduction automatique de textes",
+        "Analyse de sentiment des avis clients",
+        "Prédiction de valeurs boursières basée sur l'historique"
+      ],
+      "level": "intermediate"
+    },
+    {
+      "id": "deep_learning",
+      "title": "Deep Learning",
+      "keywords": ["deep", "learning", "apprentissage", "profond"],
+      "definition": "Le Deep Learning est une branche du machine learning qui utilise des réseaux de neurones avec plusieurs couches pour apprendre automatiquement des représentations complexes des données.",
+      "examples": [
+        "Assistant vocal comme Siri ou Alexa",
+        "Recommandations Netflix ou Spotify",
+        "Voitures autonomes"
+      ],
+      "level": "beginner"
+    },
+    {
+      "id": "training",
+      "title": "Entraînement d'un modèle",
+      "keywords": ["entraînement", "training", "apprentissage", "epochs", "batch"],
+      "definition": "L'entraînement consiste à ajuster les paramètres du réseau en lui montrant de nombreux exemples, pour qu'il apprenne à faire de bonnes prédictions sur de nouvelles données.",
+      "examples": [
+        "Montrer 10 000 photos de chats et chiens pour apprendre à les distinguer",
+        "Analyser des milliers d'avis clients pour apprendre à détecter le sentiment"
+      ],
+      "level": "beginner"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Combien de temps faut-il pour apprendre le Deep Learning ?",
+      "answer": "Cela dépend de votre background ! Avec des bases en programmation Python, vous pouvez créer vos premiers modèles en quelques semaines. La maîtrise complète demande plusieurs mois de pratique."
+    },
+    {
+      "question": "Faut-il être fort en mathématiques ?",
+      "answer": "Les bases de maths (algèbre, probabilités) aident, mais vous pouvez commencer sans être un expert. Les frameworks comme TensorFlow gèrent la complexité mathématique pour vous."
+    }
+  ]
+}

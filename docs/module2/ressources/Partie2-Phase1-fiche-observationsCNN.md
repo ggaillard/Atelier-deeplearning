@@ -1,135 +1,146 @@
-# 📋 Fiche d'oberservation du Mini-Projet CNN - Reconnaissance de chiffres manuscrits
+# 📋 Fiche d'observations - Réseaux convolutifs (CNN)
 
 ## Informations générales
-**Nom et prénom:** ______________________________
-**Date:** ______________________________________
+**Nom et prénom :** ____________________________
+**Date :** ____________________________
 
-## Partie 1 : Résultats de test de l'application
+## Partie 1 : Tests de l'application CNN
 
-### Tests pratiques avec l'interface
+### Tests pratiques
+| Type de test | Nombre effectué | Réussites | Échecs | Taux de réussite |
+|--------------|-----------------|-----------|--------|------------------|
+| Dessin souris | | | | |
+| Images importées | | | | |
 
-| Type de test | Nombre de tests | Prédictions correctes | Prédictions incorrectes | Taux de réussite |
-|--------------|-----------------|----------------------|-------------------------|------------------|
-| Dessin à la souris | | | | |
-| Image importée | | | | |
+### Observations qualitatives
+**Chiffres les mieux reconnus :** _____________________
+**Chiffres les plus difficiles :** ____________________
+**Niveau de confiance moyen :** ______________________
 
-### Observations sur les prédictions
-**Chiffres les mieux reconnus:** _______________________________
-**Chiffres les plus difficiles à reconnaître:** _________________
-**Niveau de confiance moyen observé:** _________________________
+## Partie 2 : Analyse de l'architecture
 
-## Partie 2 : Analyse de l'architecture CNN
+### Structure du modèle
+| Composant | Nombre | Paramètres | Fonction |
+|-----------|--------|------------|----------|
+| Couches Conv2D | | | |
+| Couches MaxPooling | | | |
+| Couches Dense | | | |
+| **Total paramètres** | | | |
 
-### Architecture du modèle utilisé
-**Nombre de couches de convolution:** _________________________
-**Nombre de couches de pooling:** ____________________________
-**Nombre de couches entièrement connectées:** ________________
-**Fonction d'activation utilisée:** __________________________
+### Fonctions d'activation
+**Couches intermédiaires :** ________________________
+**Couche de sortie :** ______________________________
+**Justification du choix :** 
+```
+_________________________________________________________________
+```
 
-### Analyse des visualisations
-**Quelles caractéristiques semblent être détectées par les premières couches de convolution?**
+## Partie 3 : Visualisation des caractéristiques
+
+### Feature maps - Première couche
+**Types de caractéristiques détectées :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-**Comment évoluent les feature maps dans les couches plus profondes?**
+### Feature maps - Couches profondes
+**Évolution des caractéristiques :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-**L'observation des feature maps vous aide-t-elle à comprendre les erreurs du modèle?**
+### Interprétation des erreurs
+**Les feature maps aident-elles à comprendre les erreurs ?**
+⬜ Oui ⬜ Non ⬜ Partiellement
+
+**Explication :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-## Partie 3 : Avantages et limitations
+## Partie 4 : Avantages et limitations
 
-### Points forts de l'application
-1. _______________________________________________________________
-2. _______________________________________________________________
-3. _______________________________________________________________
+### Points forts identifiés
+1. _________________________________________________________________
+2. _________________________________________________________________
+3. _________________________________________________________________
 
 ### Limitations observées
-1. _______________________________________________________________
-2. _______________________________________________________________
-3. _______________________________________________________________
+1. _________________________________________________________________
+2. _________________________________________________________________
+3. _________________________________________________________________
 
 ### Propositions d'amélioration
-1. _______________________________________________________________
-2. _______________________________________________________________
+1. _________________________________________________________________
+2. _________________________________________________________________
 
-## Partie 4 : Compréhension des concepts CNN
+## Partie 5 : Compréhension conceptuelle
 
-### Concept des convolutions
-**Expliquez brièvement comment fonctionnent les convolutions et leur avantage pour la reconnaissance d'images:**
+### Principe des convolutions
+**Fonctionnement et avantages :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-### Concept du pooling
-**Quel est le rôle des couches de pooling dans le réseau et pourquoi sont-elles importantes?**
+### Principe du pooling
+**Rôle et importance :**
 ```
-_________________________________________________________________
 _________________________________________________________________
 _________________________________________________________________
 ```
 
 ### Transfer learning
-**Comment pourrait-on utiliser le transfer learning pour améliorer cette application?**
+**Application possible à ce problème :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-## Partie 5 : Applications potentielles
+## Partie 6 : Applications professionnelles
 
-### Cas d'utilisation possibles
-**Citez deux applications pratiques où cette technologie pourrait être utilisée en entreprise:**
-1. _______________________________________________________________
-2. _______________________________________________________________
+### Cas d'usage identifiés
+1. **Contexte :** ____________________________________________
+   **Application :** __________________________________________
 
-### Extension à d'autres problèmes
-**Comment adapteriez-vous ce modèle pour reconnaître d'autres types d'objets que des chiffres?**
+2. **Contexte :** ____________________________________________
+   **Application :** __________________________________________
+
+### Extension à d'autres domaines
+**Adaptations nécessaires :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-## Partie 6 : Conclusion
+## Conclusion
 
-### Impact sur votre compréhension
-**Qu'avez-vous appris de ce mini-projet concernant les CNN que vous ne saviez pas avant?**
+### Impact sur la compréhension
+**Nouveaux apprentissages :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-### Pertinence pour le projet chatbot
-**Comment ces connaissances sur les CNN pourraient-elles être utiles pour le projet final de chatbot pédagogique?**
+### Pertinence pour le chatbot
+**Utilité pour le projet final :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
 ### Auto-évaluation
+| Critère | Excellent | Bon | Moyen | À améliorer |
+|---------|-----------|-----|-------|-------------|
+| Compréhension CNN | ⬜ | ⬜ | ⬜ | ⬜ |
+| Analyse technique | ⬜ | ⬜ | ⬜ | ⬜ |
+| Propositions d'amélioration | ⬜ | ⬜ | ⬜ | ⬜ |
 
-| Critère | Points possibles | Points obtenus | Commentaires |
-|---------|------------------|----------------|--------------|
-| Qualité des observations | 5 | | |
-| Compréhension des concepts | 8 | | |
-| Analyse critique | 5 | | |
-| Propositions d'amélioration | 4 | | |
-| Qualité rédactionnelle | 3 | | |
-| **TOTAL** | 25 | | |
-
-**Feedback global:**
-```
-_________________________________________________________________
-_________________________________________________________________
-_________________________________________________________________
+---
+**Temps consacré :** _______ minutes
+**Difficulté ressentie :** ⬜ Facile ⬜ Moyenne ⬜ Difficile
 ```

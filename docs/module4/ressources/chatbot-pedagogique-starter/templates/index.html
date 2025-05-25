@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Pédagogique - Deep Learning</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>🧠 Chatbot Deep Learning</h1>
+            <p>Votre assistant pour comprendre le Deep Learning</p>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot">
+                <div class="avatar">🤖</div>
+                <div class="content">
+                    <p>Bonjour ! Je suis votre assistant pour le Deep Learning. 
+                    Posez-moi vos questions sur les réseaux de neurones, CNN, RNN, etc.</p>
+                    <div class="suggestions">
+                        <button onclick="askQuestion('Qu\'est-ce qu\'un réseau de neurones ?')">
+                            Qu'est-ce qu'un réseau de neurones ?
+                        </button>
+                        <button onclick="askQuestion('Différence entre CNN et RNN ?')">
+                            Différence entre CNN et RNN ?
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <div class="input-group">
+                <input type="text" 
+                       id="user-input" 
+                       placeholder="Posez votre question sur le Deep Learning..."
+                       maxlength="200">
+                <button id="send-btn" onclick="sendMessage()">
+                    <span id="send-text">Envoyer</span>
+                    <span id="loading" style="display: none;">⏳</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

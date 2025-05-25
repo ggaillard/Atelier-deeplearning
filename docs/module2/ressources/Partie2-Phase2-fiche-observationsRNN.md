@@ -1,223 +1,149 @@
-# 📋 Fiche d'observations - Mini-Projet RNN pour le traitement du langage
+# 📋 Fiche d'observations - Réseaux récurrents (RNN/LSTM)
 
 ## Informations générales
-**Nom et prénom:** ______________________________
-**Date:** ______________________________________
+**Nom et prénom :** ____________________________
+**Date :** ____________________________
 
-## Partie 1 : Analyse des principes des RNN
+## Partie 1 : Principes des RNN/LSTM
 
 ### Concepts fondamentaux
-**Expliquez brièvement comment les réseaux récurrents diffèrent des réseaux de neurones classiques:**
-```
-_________________________________________________________________
-_________________________________________________________________
-_________________________________________________________________
-```
-
-**Quel est l'intérêt principal d'utiliser une architecture récurrente pour les données textuelles?**
+**Différence avec les réseaux classiques :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-### Mécanisme de mémoire dans les LSTM
+**Intérêt pour les données textuelles :**
+```
+_________________________________________________________________
+```
 
-| Élément | Fonction principale |
-|---------|---------------------|
-| Porte d'oubli (forget gate) | |
-| Porte d'entrée (input gate) | |
-| Porte de sortie (output gate) | |
-| Cellule de mémoire | |
+### Mécanisme LSTM
+| Composant | Fonction | Analogie |
+|-----------|----------|----------|
+| Porte d'oubli | | |
+| Porte d'entrée | | |
+| Porte de sortie | | |
+| Cellule mémoire | | |
 
-**Comment les LSTM résolvent-ils le problème du gradient qui s'évanouit?**
+## Partie 2 : Implémentation et résultats
+
+### Architecture du modèle
+| Couche | Taille/Paramètres | Fonction |
+|--------|-------------------|----------|
+| Embedding | | |
+| LSTM | | |
+| Dense | | |
+| **Total paramètres** | | |
+
+### Performance
+| Métrique | Entraînement | Validation | Test |
+|----------|--------------|------------|------|
+| Précision | | | |
+| Perte | | | |
+
+**Temps d'entraînement :** _______ minutes
+
+## Partie 3 : Analyse des embeddings
+
+### Visualisation des mots
+**Observations sur les clusters :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-## Partie 2 : Implémentation du modèle LSTM pour l'analyse de sentiment
-
-### Préparation des données textuelles
-
-**Décrivez les étapes de prétraitement du texte pour l'analyse de sentiment:**
-```
-_________________________________________________________________
-_________________________________________________________________
-_________________________________________________________________
-```
-
-**Quelles sont les différences entre le prétraitement d'images (CNN) et le prétraitement de texte (RNN)?**
+**Différences mots positifs/négatifs :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-### Architecture du modèle LSTM
+## Partie 4 : Compréhension contextuelle
 
-**Structure du modèle utilisé:**
-- **Couche d'embedding:** _______________________________
-- **Nombre d'unités LSTM:** _____________________________
-- **Couches supérieures (dense, dropout, etc.):** ______________________________
-- **Fonction d'activation de sortie:** _______________________________
-
-**Pourquoi la couche d'embedding est-elle importante pour le traitement du texte?**
-```
-_________________________________________________________________
-_________________________________________________________________
-```
-
-### Résultats de l'entraînement
-
-| Métrique | Valeur |
-|----------|--------|
-| Précision sur l'ensemble d'entraînement | |
-| Précision sur l'ensemble de validation | |
-| Précision sur l'ensemble de test | |
-| Temps d'entraînement | |
-
-**Évolution de la précision et de la perte durant l'entraînement:**
-```
-_________________________________________________________________
-_________________________________________________________________
-```
-
-## Partie 3 : Analyse des embeddings et de la compréhension contextuelle
-
-### Visualisation des embeddings de mots
-
-**Observations sur les clusters de mots dans l'espace vectoriel:**
-```
-_________________________________________________________________
-_________________________________________________________________
-```
-
-**Quelles différences observez-vous entre les embeddings de mots à connotation positive et négative?**
-```
-_________________________________________________________________
-_________________________________________________________________
-_________________________________________________________________
-```
-
-### Compréhension contextuelle
-
-**Donnez des exemples de phrases où le contexte est crucial pour déterminer le sentiment:**
-
-| Phrase | Sentiment | Explication de l'importance du contexte |
-|--------|-----------|----------------------------------------|
+### Exemples de contexte crucial
+| Phrase | Sentiment | Explication contexte |
+|--------|-----------|---------------------|
 | | | |
 | | | |
 | | | |
 
-**Comment le modèle LSTM capture-t-il ce contexte contrairement à une approche par mots-clés?**
+### Avantages des LSTM
+**Comparaison avec approche mots-clés :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-## Partie 4 : Comparaison avec d'autres approches
+## Partie 5 : Comparaisons et limitations
 
-### LSTM vs approches simples
+### LSTM vs autres approches
+| Aspect | LSTM | Mots-clés | Mistral AI |
+|--------|------|-----------|------------|
+| Contexte | | | |
+| Négations | | | |
+| Nuances | | | |
+| Rapidité | | | |
 
-| Aspect | LSTM | Approche par mots-clés / Bag-of-Words |
-|--------|------|---------------------------------------|
-| Capacité à comprendre le contexte | | |
-| Gestion des négations | | |
-| Détection des nuances | | |
-| Vitesse de traitement | | |
-| Besoin en données d'entraînement | | |
-
-### Limites observées
-
-**Quelles sont les principales limites du modèle LSTM pour l'analyse de sentiment?**
-```
-_________________________________________________________________
-_________________________________________________________________
-_________________________________________________________________
-```
-
-**Dans quels cas le modèle a-t-il le plus de difficultés?**
+### Limitations identifiées
+**Cas d'échec du LSTM :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-### Expérimentation avec l'API Mistral
-
-**Résultats des tests avec l'API Mistral pour l'analyse de sentiment:**
+**Améliorations possibles :**
 ```
-_________________________________________________________________
 _________________________________________________________________
 ```
 
-**Comment se compare la performance de Mistral par rapport à votre modèle LSTM?**
+## Partie 6 : Applications pratiques
+
+### Cas d'usage professionnels
+1. **Domaine :** ____________________________________________
+   **Application :** _________________________________________
+
+2. **Domaine :** ____________________________________________
+   **Application :** _________________________________________
+
+3. **Domaine :** ____________________________________________
+   **Application :** _________________________________________
+
+### Extensions envisagées
+**Architectures plus performantes :**
 ```
-_________________________________________________________________
-_________________________________________________________________
-```
-
-## Partie 5 : Applications potentielles
-
-### Cas d'usage en entreprise
-
-**Citez trois applications concrètes de l'analyse de sentiment par RNN/LSTM en contexte professionnel:**
-
-1. ________________________________________________________________
-2. ________________________________________________________________
-3. ________________________________________________________________
-
-### Extensions possibles
-
-**Comment pourriez-vous améliorer ce modèle LSTM pour des tâches plus complexes?**
-```
-_________________________________________________________________
 _________________________________________________________________
 ```
 
-**Quelles autres architectures pourraient être plus performantes pour l'analyse de texte aujourd'hui?**
-```
-_________________________________________________________________
-_________________________________________________________________
-```
-
-## Partie 6 : Conclusion
+## Conclusion
 
 ### Apprentissages clés
-
-**Qu'avez-vous appris sur les RNN/LSTM que vous ne saviez pas avant ce mini-projet?**
+**Spécificités des RNN/LSTM :**
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-### Réflexion comparative CNN vs RNN
-
-**En comparant les mini-projets CNN et RNN, quelles sont les principales différences d'approche?**
+### Comparaison CNN vs RNN
+**Différences d'approche :**
 ```
-_________________________________________________________________
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-**Quel type d'architecture vous semble le plus intuitif à comprendre et à utiliser? Pourquoi?**
+**Architecture préférée et pourquoi :**
 ```
-_________________________________________________________________
 _________________________________________________________________
 ```
 
 ### Auto-évaluation
+| Critère | Excellent | Bon | Moyen | À améliorer |
+|---------|-----------|-----|-------|-------------|
+| Compréhension RNN/LSTM | ⬜ | ⬜ | ⬜ | ⬜ |
+| Analyse embeddings | ⬜ | ⬜ | ⬜ | ⬜ |
+| Applications identifiées | ⬜ | ⬜ | ⬜ | ⬜ |
 
-| Critère | Points possibles | Points auto-attribués | Commentaires |
-|---------|------------------|----------------------|--------------|
-| Compréhension des principes RNN/LSTM | 5 | | |
-| Analyse des embeddings | 4 | | |
-| Évaluation de la compréhension contextuelle | 4 | | |
-| Comparaison avec d'autres approches | 3 | | |
-| Identification des applications et limitations | 4 | | |
-| **TOTAL** | 20 | | |
-
-**Réflexion globale:**
-```
-_________________________________________________________________
-_________________________________________________________________
-_________________________________________________________________
+---
+**Temps consacré :** _______ minutes
+**Difficulté ressentie :** ⬜ Facile ⬜ Moyenne ⬜ Difficile
 ```
