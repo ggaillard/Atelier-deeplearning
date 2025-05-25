@@ -16,7 +16,7 @@
 
 Ce module explore les architectures spécialisées de réseaux de neurones à travers trois phases complémentaires, en s'appuyant sur les fondamentaux acquis dans le Module 1.
 
-### [🔍 Phase 1 : Mini-projet CNN pour la vision par ordinateur](reseaux-convolutifs.md) (1h40)
+### [🔍 Phase 1 : Mini-projet CNN pour la vision par ordinateur](reseaux-convolutifs.md) (1h50)
 
 Plongez dans l'univers des réseaux convolutifs et apprenez à les utiliser pour la classification d'images.
 
@@ -25,7 +25,7 @@ Plongez dans l'univers des réseaux convolutifs et apprenez à les utiliser pour
 - Visualisation des filtres et feature maps
 - Intégration dans une application web simple
 
-### [🧩 Phase 2 : Mini-projet RNN pour le traitement du langage](reseaux-recurrents.md) (1h40)
+### [🧩 Phase 2 : Mini-projet RNN pour le traitement du langage](reseaux-recurrents.md) (1h50)
 
 Découvrez comment les réseaux récurrents permettent de traiter des données séquentielles comme le texte.
 
