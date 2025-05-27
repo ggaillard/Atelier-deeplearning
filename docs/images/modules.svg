@@ -74,13 +74,13 @@
   <!-- Module 3 -->
   <rect x="420" y="100" width="160" height="240" rx="15" ry="15" fill="url(#module3-gradient)" stroke="#FB8C00" stroke-width="2" filter="url(#shadow)"/>
   <text x="500" y="130" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#E65100">MODULE 3</text>
-  <text x="500" y="155" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#E65100">Développement</text>
-  <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#E65100">d'applications</text>
+  <text x="500" y="155" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#E65100">Applications</text>
+  <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#E65100">professionnelles</text>
   
-  <text x="500" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Intégration d'une API d'IA</text>
-  <text x="500" y="235" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Optimisation de modèles</text>
-  <text x="500" y="260" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Optimisation du prompt</text>
-  <text x="500" y="285" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Préparation du projet</text>
+  <text x="500" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Comprendre les APIs</text>
+  <text x="500" y="235" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Intégration d'APIs d'IA</text>
+  <text x="500" y="260" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Optimisation de modèles</text>
+  <text x="500" y="285" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F57C00">• Optimisation du prompt</text>
   
   <rect x="440" y="310" width="120" height="25" rx="12" ry="12" fill="#FB8C00" opacity="0.8"/>
   <text x="500" y="327" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Applications pratiques</text>
@@ -93,7 +93,7 @@
   
   <text x="670" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7B1FA2">• Développement complet</text>
   <text x="670" y="235" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7B1FA2">• Intégration API Mistral</text>
-  <text x="670" y="260" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7B1FA2">• Base de connaissances</text>
+  <text x="670" y="260" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7B1FA2">• Interface chatbot</text>
   <text x="670" y="285" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7B1FA2">• Présentation finale</text>
   
   <rect x="610" y="310" width="120" height="25" rx="12" ry="12" fill="#8E24AA" opacity="0.8"/>
