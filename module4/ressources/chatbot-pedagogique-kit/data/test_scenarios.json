@@ -1,0 +1,290 @@
+{
+  "version": "1.0",
+  "description": "Scénarios de test pour le chatbot pédagogique Deep Learning",
+  "test_scenarios": [
+    {
+      "id": "basic_greeting",
+      "name": "Test de salutation basique",
+      "category": "communication_basic",
+      "input": "Bonjour",
+      "expected_behavior": {
+        "contains": ["bonjour", "salut", "aide", "deep learning"],
+        "tone": "friendly",
+        "min_length": 50,
+        "max_length": 200
+      },
+      "test_criteria": {
+        "response_time_max": 5000,
+        "should_be_welcoming": true,
+        "should_mention_capabilities": true
+      }
+    },
+    {
+      "id": "concept_explanation_beginner",
+      "name": "Explication concept niveau débutant",
+      "category": "education_basic",
+      "input": "Qu'est-ce qu'un réseau de neurones ?",
+      "user_level": "beginner",
+      "expected_behavior": {
+        "contains": ["réseau", "neurones", "exemple", "simple"],
+        "tone": "educational",
+        "min_length": 100,
+        "max_length": 400,
+        "should_have_analogy": true,
+        "should_avoid_jargon": true
+      },
+      "test_criteria": {
+        "response_time_max": 8000,
+        "educational_quality": "high",
+        "level_appropriate": true
+      }
+    },
+    {
+      "id": "concept_explanation_advanced",
+      "name": "Explication concept niveau avancé",
+      "category": "education_advanced",
+      "input": "Explique-moi la rétropropagation avec les détails mathématiques",
+      "user_level": "advanced",
+      "expected_behavior": {
+        "contains": ["rétropropagation", "gradient", "dérivée", "formule"],
+        "tone": "technical",
+        "min_length": 200,
+        "max_length": 600,
+        "should_have_formulas": true,
+        "technical_depth": "high"
+      },
+      "test_criteria": {
+        "response_time_max": 10000,
+        "technical_accuracy": "high",
+        "mathematical_content": true
+      }
+    },
+    {
+      "id": "comparison_cnn_rnn",
+      "name": "Comparaison CNN vs RNN",
+      "category": "education_comparison",
+      "input": "Quelle est la différence entre CNN et RNN ?",
+      "user_level": "intermediate",
+      "expected_behavior": {
+        "contains": ["CNN", "RNN", "différence", "image", "séquence"],
+        "tone": "explanatory",
+        "min_length": 150,
+        "max_length": 500,
+        "should_compare_clearly": true,
+        "should_give_use_cases": true
+      },
+      "test_criteria": {
+        "response_time_max": 8000,
+        "comparison_quality": "high",
+        "use_cases_mentioned": true
+      }
+    },
+    {
+      "id": "example_request",
+      "name": "Demande d'exemple concret",
+      "category": "education_example",
+      "input": "Donne-moi un exemple concret d'utilisation de CNN",
+      "user_level": "intermediate",
+      "expected_behavior": {
+        "contains": ["exemple", "CNN", "image", "application"],
+        "tone": "practical",
+        "min_length": 100,
+        "max_length": 300,
+        "should_have_concrete_example": true,
+        "should_be_practical": true
+      },
+      "test_criteria": {
+        "response_time_max": 6000,
+        "example_quality": "high",
+        "practical_relevance": true
+      }
+    },
+    {
+      "id": "follow_up_question",
+      "name": "Question de suivi contextuelle",
+      "category": "conversation_context",
+      "conversation_history": [
+        {
+          "role": "user",
+          "content": "Qu'est-ce qu'un réseau de neurones ?"
+        },
+        {
+          "role": "assistant", 
+          "content": "Un réseau de neurones est un modèle informatique inspiré du cerveau humain..."
+        }
+      ],
+      "input": "Comment ça apprend exactement ?",
+      "user_level": "beginner",
+      "expected_behavior": {
+        "contains": ["apprentissage", "poids", "ajustement", "données"],
+        "tone": "educational",
+        "min_length": 120,
+        "max_length": 350,
+        "should_reference_context": true,
+        "should_build_on_previous": true
+      },
+      "test_criteria": {
+        "response_time_max": 7000,
+        "context_awareness": true,
+        "educational_progression": true
+      }
+    },
+    {
+      "id": "quiz_request",
+      "name": "Demande de quiz",
+      "category": "interactive_quiz",
+      "input": "Peux-tu me faire un quiz sur les CNN ?",
+      "user_level": "intermediate",
+      "expected_behavior": {
+        "contains": ["quiz", "CNN", "question"],
+        "tone": "interactive",
+        "should_offer_quiz": true,
+        "should_specify_difficulty": true
+      },
+      "test_criteria": {
+        "response_time_max": 5000,
+        "quiz_functionality": true,
+        "appropriate_difficulty": true
+      }
+    },
+    {
+      "id": "out_of_scope",
+      "name": "Question hors sujet",
+      "category": "error_handling",
+      "input": "Quelle est la recette de la pizza margherita ?",
+      "user_level": "beginner",
+      "expected_behavior": {
+        "contains": ["désolé", "deep learning", "aide", "informatique"],
+        "tone": "helpful",
+        "min_length": 50,
+        "max_length": 150,
+        "should_redirect_politely": true,
+        "should_offer_alternatives": true
+      },
+      "test_criteria": {
+        "response_time_max": 4000,
+        "polite_redirection": true,
+        "stays_on_topic": true
+      }
+    },
+    {
+      "id": "complex_technical_question",
+      "name": "Question technique complexe",
+      "category": "education_complex",
+      "input": "Comment optimiser l'architecture d'un réseau convolutif pour la détection d'objets en temps réel avec des contraintes de mémoire ?",
+      "user_level": "advanced",
+      "expected_behavior": {
+        "contains": ["optimisation", "mémoire", "temps réel", "architecture"],
+        "tone": "technical",
+        "min_length": 250,
+        "max_length": 700,
+        "should_address_constraints": true,
+        "should_give_specific_techniques": true
+      },
+      "test_criteria": {
+        "response_time_max": 12000,
+        "technical_depth": "high",
+        "practical_solutions": true
+      }
+    },
+    {
+      "id": "ambiguous_question",
+      "name": "Question ambiguë",
+      "category": "clarification",
+      "input": "Comment ça marche ?",
+      "user_level": "intermediate",
+      "expected_behavior": {
+        "contains": ["préciser", "quoi", "quel", "concept"],
+        "tone": "helpful",
+        "min_length": 80,
+        "max_length": 200,
+        "should_ask_clarification": true,
+        "should_offer_options": true
+      },
+      "test_criteria": {
+        "response_time_max": 5000,
+        "clarification_request": true,
+        "helpful_guidance": true
+      }
+    },
+    {
+      "id": "error_recovery",
+      "name": "Récupération d'erreur API",
+      "category": "error_handling",
+      "simulate_api_error": true,
+      "input": "Explique-moi les LSTM",
+      "user_level": "intermediate",
+      "expected_behavior": {
+        "fallback_response": true,
+        "contains": ["problème", "technique", "réessayer"],
+        "tone": "apologetic",
+        "min_length": 50,
+        "max_length": 150
+      },
+      "test_criteria": {
+        "response_time_max": 3000,
+        "graceful_degradation": true,
+        "user_guidance": true
+      }
+    },
+    {
+      "id": "level_adaptation",
+      "name": "Test d'adaptation au niveau",
+      "category": "personalization",
+      "input": "Qu'est-ce que la descente de gradient ?",
+      "test_levels": ["beginner", "intermediate", "advanced"],
+      "expected_behavior": {
+        "beginner": {
+          "contains": ["simple", "analogie", "exemple"],
+          "avoid": ["dérivée", "jacobien", "hessien"],
+          "tone": "simple"
+        },
+        "intermediate": {
+          "contains": ["algorithme", "optimisation", "pratique"],
+          "tone": "balanced"
+        },
+        "advanced": {
+          "contains": ["dérivée", "gradient", "mathématique"],
+          "tone": "technical"
+        }
+      },
+      "test_criteria": {
+        "response_time_max": 8000,
+        "level_appropriate": true,
+        "consistent_adaptation": true
+      }
+    }
+  ],
+  "test_configurations": {
+    "default_timeout": 10000,
+    "retry_attempts": 2,
+    "parallel_tests": false,
+    "environment": "test",
+    "mock_api_responses": true
+  },
+  "evaluation_criteria": {
+    "response_time": {
+      "excellent": "< 3s",
+      "good": "3-6s", 
+      "acceptable": "6-10s",
+      "poor": "> 10s"
+    },
+    "content_quality": {
+      "educational_value": 0.3,
+      "accuracy": 0.3,
+      "clarity": 0.2,
+      "engagement": 0.2
+    },
+    "technical_requirements": {
+      "api_integration": "must_work",
+      "error_handling": "graceful",
+      "level_adaptation": "accurate",
+      "context_awareness": "functional"
+    }
+  },
+  "success_thresholds": {
+    "minimum_passing_score": 70,
+    "recommended_score": 85,
+    "excellent_score": 95
+  }
+}

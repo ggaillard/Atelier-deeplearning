@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Learning Chatbot - Assistant Pédagogique</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header avec contrôles -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="brand">
+                    <div class="logo">🧠</div>
+                    <h1>Deep Learning Assistant</h1>
+                    <span class="subtitle">Votre guide pédagogique en IA</span>
+                </div>
+                
+                <div class="controls">
+                    <div class="theme-selector">
+                        <label for="theme-select">Thème :</label>
+                        <select id="theme-select">
+                            <option value="default">Défaut</option>
+                            <option value="dark">Sombre</option>
+                            <option value="education">Éducation</option>
+                            <option value="tech">Tech</option>
+                        </select>
+                    </div>
+                    
+                    <div class="level-selector">
+                        <label for="level-select">Niveau :</label>
+                        <select id="level-select">
+                            <option value="beginner">Débutant</option>
+                            <option value="intermediate">Intermédiaire</option>
+                            <option value="advanced">Avancé</option>
+                        </select>
+                    </div>
+                    
+                    <button id="clear-btn" class="control-btn" title="Effacer la conversation">
+                        🗑️
+                    </button>
+                    
+                    <button id="quiz-btn" class="control-btn" title="Lancer un quiz">
+                        📝
+                    </button>
+                    
+                    <button id="help-btn" class="control-btn" title="Aide">
+                        ❓
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Zone principale -->
+        <main class="main-content">
+            <!-- Zone de conversation -->
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Message d'accueil -->
+                    <div class="message assistant-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            <div class="message-text">
+                                <h3>Bienvenue dans votre assistant Deep Learning ! 👋</h3>
+                                <p>Je suis là pour vous aider à comprendre les concepts du Deep Learning de manière simple et interactive.</p>
+                                <div class="quick-actions">
+                                    <button class="quick-action" data-question="Qu'est-ce que le Deep Learning ?">
+                                        💡 Qu'est-ce que le Deep Learning ?
+                                    </button>
+                                    <button class="quick-action" data-question="Différence entre CNN et RNN">
+                                        🔄 CNN vs RNN
+                                    </button>
+                                    <button class="quick-action" data-question="Comment fonctionne un neurone ?">
+                                        🧠 Fonctionnement d'un neurone
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="message-time">
+                                <span id="welcome-time"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indicateur de frappe -->
+                <div class="typing-indicator" id="typing-indicator">
+                    <div class="message assistant-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            <div class="typing-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zone de saisie -->
+            <div class="input-container">
+                <form id="chat-form" class="chat-form">
+                    <div class="input-group">
+                        <textarea 
+                            id="user-input" 
+                            placeholder="Posez votre question sur le Deep Learning..."
+                            rows="1"
+                        ></textarea>
+                        <button type="submit" id="send-btn" class="send-btn">
+                            <span class="send-icon">📤</span>
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="input-footer">
+                    <div class="suggestions" id="suggestions">
+                        <!-- Suggestions dynamiques -->
+                    </div>
+                    
+                    <div class="status" id="status">
+                        Prêt à répondre à vos questions
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Sidebar pour les fonctionnalités avancées -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <h3>Fonctionnalités</h3>
+                
+                <!-- Historique des concepts -->
+                <div class="feature-section">
+                    <h4>📚 Concepts Explorés</h4>
+                    <div id="concepts-history" class="concepts-list">
+                        <!-- Concepts seront ajoutés dynamiquement -->
+                    </div>
+                </div>
+                
+                <!-- Progression -->
+                <div class="feature-section">
+                    <h4>📊 Progression</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span id="progress-text">0% complété</span>
+                </div>
+                
+                <!-- Actions rapides -->
+                <div class="feature-section">
+                    <h4>⚡ Actions Rapides</h4>
+                    <button class="sidebar-btn" id="export-btn">
+                        💾 Exporter la conversation
+                    </button>
+                    <button class="sidebar-btn" id="share-btn">
+                        🔗 Partager
+                    </button>
+                    <button class="sidebar-btn" id="feedback-btn">
+                        ⭐ Donner un avis
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Overlay pour le quiz -->
+        <div class="overlay" id="quiz-overlay">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h3>Quiz : <span id="quiz-topic">Concepts du Deep Learning</span></h3>
+                    <button class="close-btn" id="close-quiz">❌</button>
+                </div>
+                
+                <div class="quiz-content">
+                    <div class="question-container" id="question-container">
+                        <!-- Questions seront ajoutées dynamiquement -->
+                    </div>
+                    
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="quiz-progress-fill"></div>
+                        </div>
+                        <span id="quiz-progress-text">Question 1 sur 5</span>
+                    </div>
+                    
+                    <div class="quiz-navigation">
+                        <button id="prev-question" class="quiz-btn" disabled>Précédent</button>
+                        <button id="next-question" class="quiz-btn">Suivant</button>
+                        <button id="submit-quiz" class="quiz-btn primary" style="display: none;">Terminer</button>
+                    </div>
+                </div>
+                
+                <div class="quiz-results" id="quiz-results" style="display: none;">
+                    <h3>Résultats du Quiz</h3>
+                    <div class="score-display">
+                        <div class="score-circle">
+                            <span id="score-percentage">0%</span>
+                        </div>
+                        <p id="score-message">Excellent travail !</p>
+                    </div>
+                    
+                    <div class="detailed-results" id="detailed-results">
+                        <!-- Résultats détaillés -->
+                    </div>
+                    
+                    <div class="quiz-actions">
+                        <button id="retry-quiz" class="quiz-btn">Refaire le quiz</button>
+                        <button id="close-results" class="quiz-btn primary">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal d'aide -->
+        <div class="modal" id="help-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>💡 Comment utiliser l'assistant</h3>
+                    <button class="close-btn" id="close-help">❌</button>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="help-section">
+                        <h4>🤔 Poser des questions</h4>
+                        <p>Posez vos questions en langage naturel. Exemples :</p>
+                        <ul>
+                            <li>"Qu'est-ce qu'un réseau de neurones ?"</li>
+                            <li>"Comment fonctionne la rétropropagation ?"</li>
+                            <li>"Différence entre CNN et RNN ?"</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="help-section">
+                        <h4>📊 Niveaux de difficulté</h4>
+                        <p>Choisissez votre niveau pour des explications adaptées :</p>
+                        <ul>
+                            <li><strong>Débutant :</strong> Explications simples avec analogies</li>
+                            <li><strong>Intermédiaire :</strong> Détails techniques équilibrés</li>
+                            <li><strong>Avancé :</strong> Concepts approfondis et mathématiques</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="help-section">
+                        <h4>🎯 Fonctionnalités</h4>
+                        <ul>
+                            <li><strong>Quiz :</strong> Testez vos connaissances</li>
+                            <li><strong>Progression :</strong> Suivez votre apprentissage</li>
+                            <li><strong>Historique :</strong> Retrouvez les concepts vus</li>
+                            <li><strong>Thèmes :</strong> Personnalisez l'apparence</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast notifications -->
+        <div class="toast-container" id="toast-container">
+            <!-- Toasts seront ajoutés dynamiquement -->
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/quiz.js"></script>
+    
+    <script>
+        // Initialisation de l'heure de bienvenue
+        document.getElementById('welcome-time').textContent = new Date().toLocaleTimeString();
+        
+        // Auto-resize du textarea
+        const textarea = document.getElementById('user-input');
+        textarea.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+        });
+        
+        // Gestion des boutons actions rapides
+        document.querySelectorAll('.quick-action').forEach(button => {
+            button.addEventListener('click', function() {
+                const question = this.dataset.question;
+                document.getElementById('user-input').value = question;
+                document.getElementById('chat-form').dispatchEvent(new Event('submit'));
+            });
+        });
+    </script>
+</body>
+</html>

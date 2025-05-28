@@ -1,0 +1,147 @@
+{
+  "version": "1.0",
+  "description": "Base de connaissances pour le chatbot pédagogique Deep Learning - BTS SIO",
+  "last_updated": "2025-01-27",
+  "concepts": [
+    {
+      "id": "neural_network",
+      "title": "Réseau de neurones",
+      "description": "Modèle de calcul inspiré du fonctionnement des neurones biologiques, capable d'apprendre à partir de données.",
+      "keywords": ["neurone", "réseau", "apprentissage", "poids", "biais"],
+      "levels": {
+        "beginner": "Un réseau de neurones est comme un ensemble de filtres intelligents interconnectés qui apprennent progressivement à reconnaître des motifs dans les données. Imaginez un groupe de personnes qui se passent des informations et les transforment petit à petit pour arriver à une décision finale.",
+        "intermediate": "Un réseau de neurones est un système composé de neurones artificiels organisés en couches qui transforment des données d'entrée en sorties au travers de poids et de fonctions d'activation. Ces poids sont ajustés durant l'apprentissage pour minimiser l'erreur entre les prédictions et les valeurs réelles.",
+        "advanced": "Un réseau de neurones est un modèle paramétrique composé d'unités de calcul interconnectées qui effectuent des transformations non-linéaires sur les données d'entrée. Ces transformations sont définies par des matrices de poids et des biais, optimisés par descente de gradient et rétropropagation pour minimiser une fonction de coût définie sur l'ensemble d'apprentissage."
+      },
+      "examples": [
+        "Reconnaissance d'images: un réseau peut apprendre à identifier des chats dans des photos",
+        "Traduction automatique: des réseaux traduisent du texte d'une langue à une autre",
+        "Génération de musique: des réseaux peuvent composer des morceaux originaux en s'inspirant d'un style particulier"
+      ],
+      "analogies": [
+        "Un réseau de neurones est comme une chaîne de transformation dans une usine: chaque station (neurone) effectue une opération spécifique sur le produit qui passe, et ensemble, elles transforment la matière première (données d'entrée) en produit fini (prédiction).",
+        "C'est comme un orchestre où chaque musicien (neurone) joue sa partition, et ensemble ils créent une symphonie (prédiction). Le chef d'orchestre (algorithme d'apprentissage) guide les musiciens pour améliorer leur performance."
+      ],
+      "related_concepts": ["activation_function", "backpropagation", "deep_learning"],
+      "quiz": [
+        {
+          "question": "Quelle caractéristique fondamentale permet aux réseaux de neurones d'apprendre?",
+          "options": [
+            "Leur capacité à mémoriser tous les exemples d'entraînement",
+            "L'ajustement automatique des poids en fonction des erreurs",
+            "Leur architecture toujours fixe et déterminée à l'avance",
+            "La présence systématique de nombreuses couches"
+          ],
+          "correct_answer": 1,
+          "explanation": "Les réseaux de neurones apprennent en ajustant progressivement leurs poids en fonction des erreurs commises sur les données d'entraînement, ce qui leur permet de s'améliorer au fil du temps.",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "activation_function",
+      "title": "Fonction d'activation",
+      "description": "À COMPLÉTER - Fonction mathématique qui détermine la sortie d'un neurone artificiel.",
+      "keywords": ["activation", "fonction", "sigmoid", "relu", "tanh"],
+      "levels": {
+        "beginner": "À COMPLÉTER - Explication simple avec analogie",
+        "intermediate": "À COMPLÉTER - Explication équilibrée avec exemples",
+        "advanced": "À COMPLÉTER - Explication technique détaillée"
+      },
+      "examples": [
+        "À COMPLÉTER - Exemple concret d'utilisation",
+        "À COMPLÉTER - Autre exemple pratique"
+      ],
+      "analogies": [
+        "À COMPLÉTER - Analogie pour faciliter la compréhension"
+      ],
+      "related_concepts": ["neural_network", "backpropagation"],
+      "quiz": [
+        {
+          "question": "À COMPLÉTER - Question sur les fonctions d'activation",
+          "options": [
+            "À COMPLÉTER - Option A",
+            "À COMPLÉTER - Option B (correcte)",
+            "À COMPLÉTER - Option C",
+            "À COMPLÉTER - Option D"
+          ],
+          "correct_answer": 1,
+          "explanation": "À COMPLÉTER - Explication de la réponse",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "backpropagation",
+      "title": "Rétropropagation",
+      "description": "À COMPLÉTER - Algorithme d'apprentissage utilisé pour entraîner les réseaux de neurones.",
+      "keywords": ["rétropropagation", "gradient", "erreur", "apprentissage"],
+      "levels": {
+        "beginner": "À COMPLÉTER",
+        "intermediate": "À COMPLÉTER", 
+        "advanced": "À COMPLÉTER"
+      },
+      "examples": [
+        "À COMPLÉTER"
+      ],
+      "analogies": [
+        "À COMPLÉTER"
+      ],
+      "related_concepts": ["neural_network", "gradient_descent"],
+      "quiz": []
+    },
+    {
+      "id": "cnn",
+      "title": "Réseaux de neurones convolutifs (CNN)",
+      "description": "À COMPLÉTER - Architecture spécialisée dans le traitement d'images.",
+      "keywords": ["CNN", "convolution", "pooling", "image", "vision"],
+      "levels": {
+        "beginner": "À COMPLÉTER",
+        "intermediate": "À COMPLÉTER",
+        "advanced": "À COMPLÉTER"
+      },
+      "examples": [
+        "À COMPLÉTER"
+      ],
+      "analogies": [
+        "À COMPLÉTER"
+      ],
+      "related_concepts": ["neural_network", "computer_vision"],
+      "quiz": []
+    },
+    {
+      "id": "rnn",
+      "title": "Réseaux de neurones récurrents (RNN)",
+      "description": "À COMPLÉTER - Architecture pour traiter des données séquentielles.",
+      "keywords": ["RNN", "récurrent", "séquence", "mémoire", "temps"],
+      "levels": {
+        "beginner": "À COMPLÉTER",
+        "intermediate": "À COMPLÉTER",
+        "advanced": "À COMPLÉTER"
+      },
+      "examples": [
+        "À COMPLÉTER"
+      ],
+      "analogies": [
+        "À COMPLÉTER"
+      ],
+      "related_concepts": ["lstm", "neural_network", "nlp"],
+      "quiz": []
+    }
+  ],
+  "metadata": {
+    "total_concepts": 5,
+    "completion_status": {
+      "neural_network": "completed",
+      "activation_function": "template",
+      "backpropagation": "template", 
+      "cnn": "template",
+      "rnn": "template"
+    },
+    "instructions": {
+      "for_students": "Complétez les concepts marqués 'À COMPLÉTER' en vous basant sur vos cours et recherches. Respectez la structure JSON existante.",
+      "required_fields": ["description", "levels", "examples", "analogies", "quiz"],
+      "quiz_format": "Chaque question doit avoir 4 options, 1 réponse correcte (index 0-3), et une explication pédagogique"
+    }
+  }
+}
