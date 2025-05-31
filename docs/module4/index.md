@@ -1,189 +1,128 @@
-# 🧠 Module 4 : Projet intégrateur - Chatbot pédagogique
+# 🧠 Module 4 : Projet intégrateur - Chatbot pédagogique sécurisé
 
 ![Projet intégrateur](../images/banner-chatbot-pedagogique.svg)
 
-## 🎯 Objectifs du module
+## ✅ Objectifs du module
 
-Cette dernière séance vous permettra de :
+À l'issue de ce module, vous serez capable de :
 
-- Appliquer l'ensemble des connaissances acquises dans un projet concret et complet
-- Développer un chatbot pédagogique fonctionnel expliquant le Deep Learning
-- Intégrer l'API Mistral AI dans une solution complète
-- Présenter et défendre votre solution technique
+- Analyser et cartographier les risques sécuritaires spécifiques aux systèmes IA conversationnels
+- Auditer la robustesse d'un chatbot pédagogique face aux menaces de sécurité courantes
+- Appliquer les techniques de détection d'attaques par injection de prompts et sécurisation d'APIs
+- Interpréter les métriques de sécurité et optimiser l'équilibre protection/performance
+- Valider la conformité d'un système IA aux standards de cybersécurité
 
-## 🔍 Vision du projet
+## 📊 Programme (4h)
 
-Le projet consiste à développer un assistant virtuel conversationnel capable d'expliquer les concepts du Deep Learning, de répondre aux questions techniques et d'accompagner les apprenants dans leur découverte de ce domaine.
+Ce module vous permet d'appliquer une démarche cybersécurité complète sur un projet IA concret.
 
-> 🎯 **Objectif** : Concevoir un chatbot interactif qui aide les étudiants de BTS SIO à comprendre les concepts du Deep Learning à travers des explications personnalisées, des exemples concrets et des exercices adaptés.
+### [🔍 Phase 0 : Analyse des risques sécuritaires](analyse-risques-chatbot.md) (30 min)
 
-## Architecture technique
+Identifiez et analysez les vulnérabilités spécifiques aux chatbots IA.
 
-Le chatbot s'appuiera sur une architecture moderne composée de trois éléments principaux :
+- Cartographie des menaces sur 5 scénarios d'attaque fournis
+- Classification de 15 vulnérabilités par niveau de criticité
+- Audit de conformité RGPD avec checklist de 20 points de contrôle
+- Matrice risque/impact et arbitrages sécurité/performance
 
-```mermaid
-flowchart LR
-    A[Interface Web] <--> B[Backend Python]
-    B <--> C[API Mistral AI]
-    D[Base de connaissances] <--> B
-```
+### [💻 Phase 1 : Développement sécurisé du chatbot](developpement-securise.md) (2h30)
 
-### 1. Interface conversationnelle
-- Interface web simple et intuitive
-- Affichage des messages en format discussion
-- Indicateur de chargement pendant le traitement
-- Historique de conversation
+Sécurisez votre chatbot par une approche d'analyse et de validation experte.
 
-### 2. Backend Flask/FastAPI
- - Gestion des requêtes et des sessions
- - Enrichissement des prompts avec la base de connaissances
- - Communication avec l'API Mistral
- - Logique de traitement des réponses
+- Sécurisation API avec diagnostic d'erreurs et analyse de logs
+- Tests d'injection contrôlés sur 10 prompts malveillants fournis
+- Monitoring sécurisé et détection d'anomalies comportementales
 
-### 3. Intégration API Mistral AI
- - Configuration et paramètrage des requêtes
- - Gestion du contexte de conversation
- - Optimisation des prompts
- - Gestion des erreurs et limitations
+### [🔧 Phase 2 : Audit de sécurité et optimisation](audit-securite.md) (1h)
 
-### 4. Base de connaissances
- - Structure JSON organisée par concepts
- - Exercices et quiz par thématique
+Auditez et optimisez la posture sécuritaire de votre système.
 
-## Fonctionnalités clés
+- Tests de résistance sur 6 scénarios d'échec et validation de récupération
+- Analyse coût/bénéfice de mesures sécuritaires et optimisation des performances
+- Validation croisée avec grille de 15 critères et tests de montée en charge
 
-Le chatbot pédagogique offrira les fonctionnalités suivantes :
+### [🎤 Phase 3 : Présentation sécurisée et évaluation](presentation-securisee.md) (30 min)
 
-1. **Explication des concepts**
-    - Définition adaptée au niveau de l'utilisateur
-    - Exemples concrets pour illustrer chaque notion
-    - Analogies et comparaisons pour faciliter la compréhension
+Présentez votre analyse sécuritaire et les recommandations.
 
-2. **Réponse aux questions**
-    - Compréhension des questions techniques
-    - Réponses précises basées sur la base de connaissances
-    - Capacité à demander des clarifications si nécessaire
+- Interprétation de métriques de sécurité et KPIs de protection
+- Auto-évaluation de posture sécuritaire et vision industrielle
+- Transfert de compétences cybersécurité vers d'autres systèmes IA
 
-3. **Progression adaptative**
-    - Détection du niveau de l'utilisateur
-    - Suggestions de concepts à explorer ensuite
-    - Augmentation progressive de la complexité
+## 🛠️ Prérequis
 
-4. **Exercices interactifs**
-    - Génération de quiz sur les concepts vus
-    - Problèmes simples à résoudre
-    - Feedback sur les réponses
+- Avoir suivi les Modules 1, 2 et 3
+- Comprendre les concepts fondamentaux du Deep Learning et des architectures IA
+- Connaissances de base en cybersécurité (authentification, chiffrement, RGPD)
+- Capacité d'analyse critique et de réflexion sur les systèmes d'information
 
-## Approche pédagogique
+## 📋 Livrables attendus
 
-Cette séance est entièrement basée sur la réalisation d'un projet concret en équipe. Vous devrez mobiliser toutes les compétences développées lors des séances précédentes pour créer une application complète et fonctionnelle. L'accent est mis sur l'autonomie, la collaboration et la mise en pratique professionnelle.
+À l'issue de ce module, vous devrez produire :
 
-## Structure de la séance (4h)
+1. 🔍 **Rapport d'analyse des risques** : Cartographie des menaces et vulnérabilités
+2. ✅ **Audit de sécurité complet** : Validation des protections et tests de robustesse
+3. 📊 **Analyse des métriques** : Interprétation des KPIs et optimisations proposées
+4. 🎯 **Présentation sécuritaire** : Démonstration des analyses et recommandations (5 min)
 
-```mermaid
-gantt
-    title Planning de la séance
-    dateFormat  HH:mm
-    axisFormat %H:%M
+## 🎯 Compétences BTS SIO développées
+
+Ce module sécuritaire vous permet de développer plusieurs compétences du référentiel :
+
+| Compétence | Description | Activités associées |
+|------------|-------------|---------------------|
+| **B1.1** | Sécuriser l'infrastructure | Analyse des vulnérabilités IA et API |
+| **B1.2** | Sécuriser les données | Audit conformité RGPD et protection |
+| **B3.1** | Tester et déployer | Tests de résistance et validation |
+| **B3.2** | Surveiller et maintenir | Monitoring et détection d'anomalies |
+
+## 🔒 Environnement de travail fourni
+
+!!! tip "Kit d'analyse sécuritaire"
+    Un environnement complet est fourni pour votre analyse :
     
-    section Phase 1
-    Développement du chatbot           :2h30, 00:00, 02:30
+    - Chatbot pédagogique fonctionnel pré-configuré
+    - Scénarios d'attaque et cas d'usage sécuritaires
+    - Outils d'audit et grilles de validation
+    - Dashboards de monitoring et métriques de sécurité
+
+Votre mission : analyser, auditer et sécuriser ce système IA !
+
+## ✅ Auto-évaluation et préparation
+
+### 📝 QCM d'auto-évaluation cybersécurité
+
+!!! success "Vérifiez votre préparation sécuritaire"
+    Ce QCM évalue votre maîtrise des concepts cybersécurité appliqués à l'IA.
     
-    section Phase 2
-    Finalisation et tests              :1h, 02:30, 03:30
-    
-    section Phase 3
-    Présentation des projets           :30min, 03:30, 04:00  
-```
+    [🔒 Commencer le QCM Cybersécurité](qcm-evaluation-module4-securite.md){ .md-button .md-button--primary }
 
-## Quatres phases de réalisation
+### 🔍 Diagnostic personnel en cybersécurité
 
+Avant de commencer, évaluez votre niveau de confiance sur les compétences sécuritaires :
 
-### [Phase 0 : Préparation au chatbot d'assistance](partie0-preparation-projet.md) (30min)
-Explorez les fondamentaux d'un chatbot d'assistance avant de commencer votre développement :
+- **Analyse des risques IA** (menaces, vulnérabilités) : ⬜⬜⬜⬜⬜
+- **Audit de conformité** (RGPD, standards) : ⬜⬜⬜⬜⬜  
+- **Détection d'anomalies** (monitoring, alertes) : ⬜⬜⬜⬜⬜
+- **Interprétation de métriques** (KPIs, dashboards) : ⬜⬜⬜⬜⬜
 
-Découverte d'un exemple de chatbot spécialisé pour le domaine SIO
-Compréhension de la structure d'une base de connaissances
-Exploration de l'architecture d'intégration avec l'API Mistral
+## 💡 Conseils pour réussir
 
+!!! tip "Stratégie d'analyse recommandée"
+    1. **Adoptez une mentalité d'auditeur** : Identifiez d'abord les vulnérabilités potentielles
+    2. **Validez systématiquement** : Contrôlez l'efficacité de chaque mesure de protection
+    3. **Mesurez et interprétez** : Analysez les métriques pour optimiser la sécurité
+    4. **Réfléchissez à l'évolution** : Anticipez les menaces futures et adaptations nécessaires
 
-### [Phase 1 : Développement du chatbot](partie1-developpement.md) (2h30)
+## 🚀 Prêt pour l'expertise cybersécurité IA ?
 
-Implémentez les fonctionnalités principales de votre chatbot pédagogique :
+Ce module développe une **culture cybersécurité IA** essentielle pour sécuriser les systèmes conversationnels de demain !
 
-- Mise en place de l'interface conversationnelle
-- Intégration avancée avec l'API Mistral AI
-- Structuration et enrichissement de la base de connaissances
-- Développement des fonctionnalités d'aide à l'apprentissage
+[🔍 Commencer l'analyse des risques](analyse-risques-chatbot.md){ .md-button .md-button--primary }
+[🔒 Évaluer mes bases sécuritaires](qcm-evaluation-module4-securite.md){ .md-button }
 
-### [Phase 2 : Finalisation et tests](partie2-finalisation.md) (1h)
+---
 
-Peaufinez votre solution et assurez-vous de sa qualité :
-
-- Tests fonctionnels et scénarios d'utilisation
-- Optimisation des performances
-- Documentation technique et guide utilisateur
-- Préparation de la démonstration
-
-### [Phase 3 : Présentation des projets](partie3-presentation.md) (30min)
-
-Présentez votre solution à la classe :
-
-- Démonstration en direct du chatbot
-- Explication des choix techniques
-- Retour sur les défis rencontrés et les solutions adoptées
-- Questions-réponses
-
-## Défis techniques
-
-Les principaux défis à relever seront :
-
-1. **Prompt engineering efficace**
-   - Formuler des instructions claires pour l'API Mistral
-   - Maintenir la cohérence pédagogique dans les réponses
-   - Éviter les hallucinations du modèle
-
-2. **Intégration technique**
-   - Communication fluide entre frontend et backend
-   - Gestion asynchrone des requêtes API
-   - Optimisation des temps de réponse
-
-3. **Qualité pédagogique**
-   - Structure cohérente de la base de connaissances
-   - Adaptation au niveau de l'utilisateur
-   - Progression logique entre les concepts
-
-## Ressources nécessaires
-
-Pour cette séance, vous aurez besoin de :
-
-- Votre document de conception préparé lors de la séance 3
-- Compte et clé API Mistral AI
-- Environnement de développement (Google Colab ou local)
-- Templates fournis pour la documentation
-
-Ressources fournies :
-- Documentation complète de l'API Mistral
-- Structure JSON pour la base de connaissances
-- Templates de code pour l'interface et le backend
-- Exemples de prompts efficaces
-
-## Livrables attendus
-
-À l'issue de cette séance, vous devrez remettre :
-
-1. **Code source complet** du chatbot pédagogique
-2. **Base de connaissances structurée** sur le Deep Learning
-3. **Documentation technique** expliquant l'architecture et les choix d'implémentation
-4. **Guide utilisateur** pour la prise en main
-5. **Présentation** avec support à fournir
-
-Ces livrables constituent l'aboutissement de votre parcours et seront évalués selon les critères détaillés dans la [grille d'évaluation](../evaluation/criteres-evaluation-seance4.md).
-
-## Prêt à relever le défi ?
-
-C'est l'heure de mettre en pratique tout ce que vous avez appris pour créer un outil réellement utile. Bonne chance !
-
-[Commencer la Phase 1](partie1-developpement.md){ .md-button .md-button--primary }
-[Évaluer vos connaissances](qcm-evaluation-module4.md){ .md-button .md-button--secondary }
-
+**Durée totale :** 4 heures  
+**Difficulté :** ⭐⭐⭐⭐ (Analyse sécuritaire experte)  
+**Prérequis :** Modules 1, 2, 3 + bases cybersécurité
