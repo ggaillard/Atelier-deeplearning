@@ -193,9 +193,9 @@ Les risques identifiés dans cette phase guideront les tests de sécurité et va
 
 ## 📚 Ressources pour approfondir
 
-- [Guide ANSSI - Sécurité des systèmes d'IA](https://cyber.gouv.fr)
-- [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
-- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [Guide ANSSI - Sécurité des systèmes d'IA](https://cyber.gouv.fr) - Référentiel français officiel
+- [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) - Vulnérabilités courantes des LLM
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) - Framework de gestion des risques IA
 
 [Retour au Module 4](../index.md){ .md-button }
 [Continuer vers la Phase 1 : Développement sécurisé](phase1-developpement-securise.md){ .md-button .md-button--primary }
