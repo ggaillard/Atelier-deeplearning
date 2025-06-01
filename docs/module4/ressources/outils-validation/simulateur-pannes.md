@@ -245,4 +245,383 @@ def cpu_stress():
     while time.time() < end_time:
         pass  # Boucle vide = 100% CPU
 
-#
+# Lancer plusieurs threads pour saturer le CPU
+threads = []
+for i in range(4):  # 4 threads = saturation multi-core
+    t = threading.Thread(target=cpu_stress)
+    threads.append(t)
+    t.start()
+
+# Tester le chatbot pendant la surcharge
+try:
+    response = test_chatbot_query("Test sous charge")
+finally:
+    # Attendre la fin du stress test
+    for t in threads:
+        t.join()
+```
+
+#### Option B : Saturation mémoire
+```python
+import psutil
+
+def memory_stress():
+    """Allouer de la mémoire progressivement"""
+    memory_hog = []
+    total_ram = psutil.virtual_memory().total
+    target_usage = int(total_ram * 0.8)  # 80% de la RAM
+    
+    chunk_size = 1024 * 1024 * 100  # 100 MB par chunk
+    
+    try:
+        while psutil.virtual_memory().used < target_usage:
+            chunk = bytearray(chunk_size)
+            memory_hog.append(chunk)
+            time.sleep(0.1)
+    except MemoryError:
+        print("Limite mémoire atteinte")
+    
+    # Maintenir la charge pendant le test
+    time.sleep(30)
+    
+    # Libérer la mémoire
+    del memory_hog
+```
+
+### Éléments à observer sous charge
+
+| Aspect | Comportement normal | Sous charge | Dégradation |
+|--------|-------------------|-------------|-------------|
+| **Temps de réponse** | < 1s | ? | ? |
+| **Taux de succès** | 100% | ? | ? |
+| **Messages d'erreur** | Aucun | ? | ? |
+| **Stabilité système** | Stable | ? | ? |
+| **Récupération** | N/A | Automatique ? | Temps ? |
+
+### Questions de résilience
+
+1. **Dégradation gracieuse :** Le système ralentit-il progressivement ou s'arrête-t-il brutalement ?
+2. **Priorisation :** Y a-t-il une priorisation des requêtes (admin > utilisateur) ?
+3. **Protection :** Le système se protège-t-il contre l'épuisement total ?
+4. **Monitoring :** Les seuils d'alerte sont-ils appropriés ?
+
+## 🗄️ Scénario 5 : Base de données inaccessible
+
+### Contexte de simulation
+La base de données stockant les conversations et configurations devient inaccessible.
+
+### Méthodes de simulation
+
+#### Option A : Arrêt service base de données
+```bash
+# Si vous utilisez SQLite local
+mv chatbot.db chatbot.db.backup
+
+# Si vous utilisez PostgreSQL/MySQL
+sudo systemctl stop postgresql
+# ou
+sudo systemctl stop mysql
+```
+
+#### Option B : Permissions révoquées
+```python
+# Modifier temporairement les paramètres de connexion
+import sqlite3
+
+# Créer une base temporaire corrompue
+with open('temp_corrupted.db', 'w') as f:
+    f.write("CORRUPTED DATA")
+
+# Pointer vers cette base corrompue
+DATABASE_PATH = 'temp_corrupted.db'
+```
+
+#### Option C : Saturation des connexions
+```python
+import sqlite3
+import threading
+
+def exhaust_connections():
+    """Saturer les connexions disponibles"""
+    connections = []
+    try:
+        for i in range(1000):  # Ouvrir de nombreuses connexions
+            conn = sqlite3.connect('chatbot.db')
+            connections.append(conn)
+    except Exception as e:
+        print(f"Saturation atteinte: {e}")
+```
+
+### Grille d'évaluation de la continuité
+
+| Fonction | Sans BDD | Avec BDD | Mode dégradé |
+|----------|----------|----------|--------------|
+| **Conversations nouvelles** | ? | ✅ | ? |
+| **Historique conversations** | ? | ✅ | ? |
+| **Configuration utilisateur** | ? | ✅ | ? |
+| **Logging des incidents** | ? | ✅ | ? |
+| **Authentification** | ? | ✅ | ? |
+
+### Mode de fonctionnement attendu
+
+**Idéal - Mode dégradé fonctionnel :**
+- Conversations temporaires en mémoire
+- Pas d'historique mais service fonctionnel
+- Notification transparente à l'utilisateur
+- Sauvegarde différée quand BDD disponible
+
+**Acceptable - Arrêt propre :**
+- Détection rapide de l'indisponibilité
+- Message d'erreur clair à l'utilisateur
+- Tentatives de reconnexion automatiques
+- Restauration complète quand BDD revient
+
+**Inacceptable - Crash système :**
+- Erreurs non gérées
+- Exposition d'informations techniques
+- Perte de données en cours
+- Récupération manuelle nécessaire
+
+## 📊 Scénario 6 : Quota API épuisé
+
+### Contexte de simulation
+Le quota journalier/mensuel de l'API Mistral AI est épuisé, générant des erreurs 429.
+
+### Méthodes de simulation
+
+#### Option A : Simulation 429 avec serveur de test
+```python
+from flask import Flask, jsonify
+
+# Serveur de test simulant l'API Mistral
+app = Flask(__name__)
+
+@app.route('/v1/chat/completions', methods=['POST'])
+def simulate_quota_exceeded():
+    return jsonify({
+        "error": {
+            "message": "Rate limit exceeded. Try again later.",
+            "type": "rate_limit_error",
+            "code": "rate_limit_exceeded"
+        }
+    }), 429
+
+# Pointer temporairement vers ce serveur de test
+```
+
+#### Option B : Compteur artificiel
+```python
+# Ajouter un compteur global de requêtes
+request_count = 0
+daily_limit = 100  # Limite artificielle basse
+
+def make_api_call():
+    global request_count
+    request_count += 1
+    
+    if request_count > daily_limit:
+        raise Exception("429: Rate limit exceeded")
+    
+    # Appel normal à l'API
+```
+
+### Stratégies de gestion à évaluer
+
+| Stratégie | Description | Implémentée ? | Efficacité |
+|-----------|-------------|---------------|------------|
+| **Détection préventive** | Surveillance 80% du quota | ⬜ Oui ⬜ Non | /5 |
+| **Rationing intelligent** | Priorisation des requêtes | ⬜ Oui ⬜ Non | /5 |
+| **Communication transparente** | Information utilisateur claire | ⬜ Oui ⬜ Non | /5 |
+| **Queue différée** | Report des requêtes non urgentes | ⬜ Oui ⬜ Non | /5 |
+| **Fallback local** | Réponses basiques sans API | ⬜ Oui ⬜ Non | /5 |
+
+### Questions d'optimisation économique
+
+1. **Prévision :** Le système anticipe-t-il l'épuisement du quota ?
+2. **Priorisation :** Quelles requêtes sont traitées en priorité ?
+3. **Communication :** L'utilisateur comprend-il la situation ?
+4. **Récupération :** Quand le service reprend-il automatiquement ?
+
+### Simulation d'épuisement progressif
+
+```python
+# Simulation réaliste d'épuisement de quota
+class QuotaManager:
+    def __init__(self, daily_limit=1000):
+        self.daily_limit = daily_limit
+        self.used = 0
+        self.last_reset = datetime.now().date()
+    
+    def check_quota(self):
+        today = datetime.now().date()
+        if today > self.last_reset:
+            self.used = 0
+            self.last_reset = today
+        
+        if self.used >= self.daily_limit:
+            raise QuotaExceededError("Daily quota exhausted")
+        
+        if self.used > 0.8 * self.daily_limit:
+            # Alerte 80%
+            log_warning("Quota at 80%")
+        
+        return True
+    
+    def consume(self, tokens=1):
+        self.used += tokens
+```
+
+## 📋 Grille d'évaluation consolidée
+
+### Score global de résilience
+
+| Scénario | Détection | Gestion | Récupération | UX | Sécurité | Total |
+|----------|-----------|---------|--------------|----|---------:|-------|
+| **API maintenance** | ___/20 | ___/20 | ___/20 | ___/20 | ___/20 | ___/100 |
+| **Réseau coupé** | ___/20 | ___/20 | ___/20 | ___/20 | ___/20 | ___/100 |
+| **Clé compromise** | ___/20 | ___/20 | ___/20 | ___/20 | ___/20 | ___/100 |
+| **Surcharge serveur** | ___/20 | ___/20 | ___/20 | ___/20 | ___/20 | ___/100 |
+| **Base inaccessible** | ___/20 | ___/20 | ___/20 | ___/20 | ___/20 | ___/100 |
+| **Quota épuisé** | ___/20 | ___/20 | ___/20 | ___/20 | ___/20 | ___/100 |
+
+**Score global : ___/600 (___% de résilience)**
+
+### Interprétation des scores
+
+#### Niveaux de résilience
+- **90-100%** : 🟢 Excellent - Prêt pour production critique
+- **80-89%** : 🟡 Bon - Acceptable pour production standard  
+- **70-79%** : 🟠 Moyen - Améliorations nécessaires
+- **<70%** : 🔴 Insuffisant - Refonte de la gestion d'erreurs requise
+
+#### Critères de notation détaillés
+
+**Détection (20 points) :**
+- 18-20 : Détection automatique < 5 secondes
+- 15-17 : Détection automatique < 30 secondes
+- 10-14 : Détection manuelle ou tardive
+- 0-9 : Pas de détection ou très tardive
+
+**Gestion (20 points) :**
+- 18-20 : Mode dégradé fonctionnel maintenu
+- 15-17 : Arrêt propre avec message approprié
+- 10-14 : Gestion partielle avec quelques dysfonctionnements
+- 0-9 : Crash ou comportement imprévisible
+
+**Récupération (20 points) :**
+- 18-20 : Récupération automatique complète
+- 15-17 : Récupération automatique partielle
+- 10-14 : Récupération manuelle simple
+- 0-9 : Récupération complexe ou impossible
+
+**UX (20 points) :**
+- 18-20 : Messages clairs, utilisateur informé et guidé
+- 15-17 : Messages compréhensibles, impact minimal
+- 10-14 : Messages acceptables, impact modéré
+- 0-9 : Messages confus, impact majeur sur l'expérience
+
+**Sécurité (20 points) :**
+- 18-20 : Aucune information sensible exposée
+- 15-17 : Exposition mineure d'informations techniques
+- 10-14 : Exposition modérée mais non critique
+- 0-9 : Exposition significative d'informations sensibles
+
+## 🔧 Recommandations d'amélioration
+
+### Améliorations par niveau de priorité
+
+#### Priorité 1 - Corrections critiques (Score < 50)
+- **Sécurisation des messages d'erreur** : Éliminer toute exposition d'informations sensibles
+- **Gestion des exceptions** : Implémenter des try/catch appropriés
+- **Logging sécurisé** : Séparer logs techniques et logs utilisateur
+
+#### Priorité 2 - Optimisations importantes (Score 50-70)
+- **Mode dégradé** : Développer des fallbacks fonctionnels
+- **Monitoring proactif** : Alertes avant panne complète
+- **Documentation** : Procédures de réponse aux incidents
+
+#### Priorité 3 - Améliorations souhaitables (Score > 70)
+- **Récupération intelligente** : Retry avec backoff exponentiel
+- **Prédiction de pannes** : Machine learning pour anticiper
+- **Automatisation** : Scripts de récupération automatique
+
+### Template d'amélioration
+
+Pour chaque scénario avec score < 80 :
+
+**Problème identifié :**
+- Description précise du dysfonctionnement
+- Score actuel et score cible
+
+**Solution proposée :**
+- Modification technique nécessaire
+- Coût estimé (temps de développement)
+- Impact attendu sur le score
+
+**Plan d'implémentation :**
+- Étapes de mise en œuvre
+- Tests de validation
+- Métriques de succès
+
+## 🎯 Intégration dans l'audit global
+
+### Utilisation des résultats
+
+Ces tests de résilience s'intègrent dans votre audit de sécurité global :
+
+1. **Phase 2 - Exercice 1** : Scores de résilience aux pannes
+2. **Rapport d'audit** : Section "Robustesse opérationnelle" 
+3. **Recommandations** : Priorisation des améliorations
+4. **Budget** : Estimation des coûts de mise à niveau
+
+### Métriques à reporter
+
+| Métrique | Valeur | Interprétation |
+|----------|--------|----------------|
+| **Score global résilience** | ___% | Niveau de robustesse général |
+| **Scénario le plus critique** | _________ | Priorité d'amélioration #1 |
+| **Exposition sécuritaire** | ___/6 scénarios | Nombre de fuites d'informations |
+| **Récupération automatique** | ___/6 scénarios | Capacité de self-healing |
+
+### Documentation des tests
+
+Pour chaque test effectué, documentez :
+
+```
+Scénario : _________________
+Date/Heure : _______________
+Durée du test : ____________
+Méthode de simulation : ____
+Résultats observés : _______
+Score attribué : ___/100
+Actions correctives : ______
+Responsable : ______________
+```
+
+Cette documentation sera précieuse pour :
+- Traçabilité des tests de sécurité
+- Amélioration continue du système
+- Audit de conformité externe
+- Formation des équipes
+
+## 📚 Ressources complémentaires
+
+### Outils de simulation avancés
+
+- **Chaos Monkey** : Outil Netflix pour tests de résilience
+- **Gremlin** : Plateforme de chaos engineering
+- **Pumba** : Tests de résilience pour containers Docker
+
+### Méthodologies de référence
+
+- **FMEA** (Failure Mode and Effects Analysis) : Analyse systématique des modes de défaillance
+- **Chaos Engineering** : Discipline pour tester la résilience en production
+- **Game Days** : Simulations d'incident en équipe
+
+### Standards et certifications
+
+- **ISO 22301** : Continuité d'activité et gestion de crise
+- **NIST Cybersecurity Framework** : Fonction "Recover"
+- **ITIL v4** : Gestion des incidents et problèmes
+
+Ces simulations de pannes constituent un élément essentiel de votre stratégie de cybersécurité IA, permettant de valider que votre système reste sécurisé même en cas de dysfonctionnement.
