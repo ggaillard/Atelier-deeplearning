@@ -134,8 +134,3 @@ Ce module développe une **culture cybersécurité IA** essentielle pour sécuri
 [🔍 Commencer l'analyse des risques](phases/phase0-analyse-risques.md){ .md-button .md-button--primary }
 [🔒 Évaluer mes bases sécuritaires](qcm-evaluation-module4-securite.md){ .md-button }
 
----
-
-**Durée totale :** 4 heures  
-**Difficulté :** ⭐⭐⭐⭐ (Analyse sécuritaire experte)  
-**Prérequis :** Modules 1, 2, 3 + bases cybersécurité
