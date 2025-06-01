@@ -60,7 +60,7 @@ Présentez votre analyse sécuritaire et les recommandations.
 
 À l'issue de ce module, vous devrez produire :
 
-1. 🔍 **Rapport d'analyse des risques** : Cartographie des menaces et vulnérabilités
+1. 🔍 **Rapport d'analyse des risques** *(cf. [Phase 0](analyse-risques-chatbot.md))*: Cartographie des menaces et vulnérabilités
 2. ✅ **Audit de sécurité complet** : Validation des protections et tests de robustesse
 3. 📊 **Analyse des métriques** : Interprétation des KPIs et optimisations proposées
 4. 🎯 **Présentation sécuritaire** : Démonstration des analyses et recommandations (5 min)
@@ -81,10 +81,10 @@ Ce module sécuritaire vous permet de développer plusieurs compétences du réf
 !!! tip "Kit d'analyse sécuritaire"
     Un environnement complet est fourni pour votre analyse :
     
-    - Chatbot pédagogique fonctionnel pré-configuré
-    - Scénarios d'attaque et cas d'usage sécuritaires
-    - Outils d'audit et grilles de validation
-    - Dashboards de monitoring et métriques de sécurité
+   - [Chatbot pédagogique fonctionnel](../ressources/kit-analyse-securitaire/chatbot-demo-fonctionnel/)
+   - [Scénarios d'attaque et cas d'usage sécuritaires](../ressources/kit-analyse-securitaire/scenarios-attaques.json)
+   - [Outils d'audit et grilles de validation](../ressources/kit-analyse-securitaire/grille-audit-15-criteres.md)
+   - [Dashboards de monitoring et métriques de sécurité](../ressources/kit-analyse-securitaire/dashboard-metriques-demo.json)
 
 Votre mission : analyser, auditer et sécuriser ce système IA !
 
