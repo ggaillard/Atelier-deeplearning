@@ -1,0 +1,3605 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cours de Deep Learning pour le BTS SIO">
+      
+      
+        <meta name="author" content="G.GAILLARD">
+      
+      
+      
+        <link rel="prev" href="../phases/phase3-presentation-securisee/">
+      
+      
+        <link rel="next" href="../ressources/kit-analyse-securitaire/scenarios-attaques/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Auto-évaluation - Atelier Deep Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/progress.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#qcm-devaluation-module-4-cybersecurite-ia" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Atelier Deep Learning" class="md-header__button md-logo" aria-label="Atelier Deep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Atelier Deep Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Auto-évaluation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module1/" class="md-tabs__link">
+          
+  
+  
+  Module 1 - Fondamentaux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module2/" class="md-tabs__link">
+          
+  
+  
+  Module 2 - Architectures
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module3/" class="md-tabs__link">
+          
+  
+  
+  Module 3 - Applications
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Module 4 - Projet Sécurisé
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../evaluation/criteres-evaluation/" class="md-tabs__link">
+          
+  
+  
+  Évaluation et Suivi
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Atelier Deep Learning" class="md-nav__button md-logo" aria-label="Atelier Deep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Atelier Deep Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 1 - Fondamentaux
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module 1 - Fondamentaux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/introduction-pratique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 - Introduction pratique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/concepts-fondamentaux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 - Concepts fondamentaux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/mini-projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 - Mini-projet individuel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/qcm-evaluation-module1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/ressources/glossaire-dl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossaire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/ressources/guide-colab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide Colab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/ressources/synthese-module1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synthèse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 2 - Architectures
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Module 2 - Architectures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/reseaux-convolutifs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 - Réseaux convolutifs (CNN)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/reseaux-recurrents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 - Réseaux récurrents (RNN)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/qcm-evaluation-module2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/ressources/glossaire-dl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossaire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/ressources/synthese-module2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synthèse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 3 - Applications
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module 3 - Applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module3/systeme-tickets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 - Système de tickets intelligent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module3/assistant-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 - Assistant de documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module3/qcm-evaluation-module3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/base-connaissances/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Base de connaissances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/api-mistral.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Mistral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module3/ressources/fiche-observations.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fiche d'observations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module3/ressources/synthese-module3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synthèse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 4 - Projet Sécurisé
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module 4 - Projet Sécurisé
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Phases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Phases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phases/phase0-analyse-risques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0 - Analyse des risques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phases/phase1-developpement-securise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 - Développement sécurisé
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phases/phase2-audit-securite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 - Audit de sécurité
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phases/phase3-presentation-securisee/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 - Présentation sécurisée
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-a-analyse-des-risques-ia-5-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Partie A : Analyse des risques IA (5 questions)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Partie A : Analyse des risques IA (5 questions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-parmi-ces-menaces-lesquelles-sont-specifiques-aux-chatbots-ia-pedagogiques-plusieurs-reponses-possibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Parmi ces menaces, lesquelles sont spécifiques aux chatbots IA pédagogiques ? (plusieurs réponses possibles)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dans-la-methodologie-cvss-adaptee-ia-comment-evalue-t-on-la-complexite-dune-attaque-par-injection-de-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Dans la méthodologie CVSS adaptée IA, comment évalue-t-on la complexité d'une attaque par injection de prompts ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-quelle-base-legale-rgpd-est-la-plus-appropriee-pour-un-chatbot-pedagogique-en-etablissement-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Quelle base légale RGPD est la plus appropriée pour un chatbot pédagogique en établissement public ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-dans-une-matrice-risqueimpact-comment-classer-une-vulnerabilite-de-cle-api-stockee-en-dur" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Dans une matrice risque/impact, comment classer une vulnérabilité de "clé API stockée en dur" ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-quel-pourcentage-du-budget-projet-est-generalement-acceptable-pour-la-cybersecurite-dun-systeme-ia-en-phase-de-consolidation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Quel pourcentage du budget projet est généralement acceptable pour la cybersécurité d'un système IA en phase de consolidation ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-b-techniques-dattaque-et-protection-5-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛡️ Partie B : Techniques d'attaque et protection (5 questions)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ Partie B : Techniques d&#39;attaque et protection (5 questions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6-parmi-ces-techniques-lesquelles-sont-efficaces-contre-linjection-de-prompts-plusieurs-reponses-possibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Parmi ces techniques, lesquelles sont efficaces contre l'injection de prompts ? (plusieurs réponses possibles)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-quel-est-lordre-correct-dune-strategie-de-defense-en-profondeur-pour-un-chatbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Quel est l'ordre correct d'une stratégie de défense en profondeur pour un chatbot ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-dans-le-test-50-tentatives-dinjection-en-1-minute-quel-taux-de-detection-est-considere-comme-acceptable" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Dans le test "50 tentatives d'injection en 1 minute", quel taux de détection est considéré comme acceptable ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-quelle-est-la-principale-limite-des-techniques-de-filtrage-par-mots-cles" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Quelle est la principale limite des techniques de filtrage par mots-clés ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-pour-detecter-une-tentative-dempoisonnement-de-donnees-quel-indicateur-est-le-plus-fiable" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Pour détecter une tentative d'empoisonnement de données, quel indicateur est le plus fiable ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-c-metriques-et-monitoring-5-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Partie C : Métriques et monitoring (5 questions)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Partie C : Métriques et monitoring (5 questions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-un-taux-de-faux-positifs-de-15-dans-la-detection-dattaques-signifie-que" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Un taux de faux positifs de 15% dans la détection d'attaques signifie que :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-dans-lanalyse-de-performance-une-degradation-de-60-de-latence-sous-attaque-est" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Dans l'analyse de performance, une dégradation de +60% de latence sous attaque est :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-pour-un-chatbot-pedagogique-quel-kpi-de-securite-est-le-plus-critique-a-surveiller" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Pour un chatbot pédagogique, quel KPI de sécurité est le plus critique à surveiller ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-un-cout-api-passant-de-150mois-a-520mois-sous-attaque-indique" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Un coût API passant de 150€/mois à 520€/mois sous attaque indique :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-pour-surveiller-la-conformite-rgpd-dun-chatbot-quel-indicateur-est-le-plus-pertinent" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. Pour surveiller la conformité RGPD d'un chatbot, quel indicateur est le plus pertinent ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-d-vision-strategique-et-transfert-5-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Partie D : Vision stratégique et transfert (5 questions)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Partie D : Vision stratégique et transfert (5 questions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#16-pour-un-deploiement-a-10000-utilisateurs-quelle-approche-de-scaling-securise-est-la-plus-appropriee" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Pour un déploiement à 10,000 utilisateurs, quelle approche de scaling sécurisé est la plus appropriée ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-dans-lanalyse-coutbenefice-une-mesure-de-securite-avec-un-roi-de-92-signifie" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. Dans l'analyse coût/bénéfice, une mesure de sécurité avec un ROI de 92% signifie :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-parmi-ces-competences-developpees-lesquelles-sont-transferables-a-dautres-systemes-ia-plusieurs-reponses-possibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Parmi ces compétences développées, lesquelles sont transférables à d'autres systèmes IA ? (plusieurs réponses possibles)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-pour-maintenir-une-expertise-cybersecurite-ia-a-jour-quelle-approche-est-la-plus-efficace" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. Pour maintenir une expertise cybersécurité IA à jour, quelle approche est la plus efficace ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20-dans-un-contexte-professionnel-comment-valoriser-lexpertise-cybersecurite-ia-developpee" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. Dans un contexte professionnel, comment valoriser l'expertise cybersécurité IA développée ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto-évaluation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auto-évaluation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#corrige-avec-explications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Corrigé avec explications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Corrigé avec explications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partie-a-analyse-des-risques-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partie A : Analyse des risques IA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-b-techniques-dattaque-et-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partie B : Techniques d'attaque et protection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-c-metriques-et-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partie C : Métriques et monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-d-vision-strategique-et-transfert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partie D : Vision stratégique et transfert
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calcul-de-votre-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calcul de votre score
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interprétation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interprétation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#niveaux-de-maitrise-cybersecurite-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Niveaux de maîtrise cybersécurité IA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyse-par-domaine-de-competence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyse par domaine de compétence
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyse par domaine de compétence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analyse-des-risques-ia-questions-1-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Analyse des risques IA (Questions 1-5)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#techniques-dattaque-et-protection-questions-6-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛡️ Techniques d'attaque et protection (Questions 6-10)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metriques-et-monitoring-questions-11-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Métriques et monitoring (Questions 11-15)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vision-strategique-et-transfert-questions-16-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Vision stratégique et transfert (Questions 16-20)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plan-de-developpement-personnalise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plan de développement personnalisé
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plan de développement personnalisé">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-score-17-20-voie-dexpertise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Si score 17-20 : Voie d'expertise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-score-14-16-voie-de-consolidation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Si score 14-16 : Voie de consolidation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-score-11-13-voie-de-renforcement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Si score 11-13 : Voie de renforcement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-score-11-voie-de-reconstruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Si score &lt;11 : Voie de reconstruction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#certification-des-acquis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certification des acquis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Certification des acquis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attestation-de-competences-developpees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attestation de compétences développées
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#portfolio-de-competences-cybersecurite-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Portfolio de compétences cybersécurité IA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-vers-lexpertise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Évolution vers l'expertise
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Évolution vers l&#39;expertise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progression-naturelle-des-competences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progression naturelle des compétences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opportunites-de-carriere" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opportunités de carrière
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#felicitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Félicitations !
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources-pour-aller-plus-loin" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Ressources pour aller plus loin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Ressources pour aller plus loin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formations-specialisees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formations spécialisées
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#veille-technologique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Veille technologique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communautes-professionnelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communautés professionnelles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4_1" id="__nav_5_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kit d'analyse sécuritaire
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Kit d'analyse sécuritaire
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ressources/kit-analyse-securitaire/scenarios-attaques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scénarios d'attaques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ressources/kit-analyse-securitaire/outils-validation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Outils de validation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ressources/kit-analyse-securitaire/templates-audit.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Templates d'audit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4_2" id="__nav_5_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Livrables
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Livrables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../livrables/rapport-analyse-risques-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template rapport d'analyse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../livrables/audit-securite-complet-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template audit complet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ressources/synthese-module4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synthèse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Évaluation et Suivi
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Évaluation et Suivi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evaluation/criteres-evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Critères d'évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../suivi-progression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Suivi de progression
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Formulaire de feedback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-a-analyse-des-risques-ia-5-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Partie A : Analyse des risques IA (5 questions)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Partie A : Analyse des risques IA (5 questions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-parmi-ces-menaces-lesquelles-sont-specifiques-aux-chatbots-ia-pedagogiques-plusieurs-reponses-possibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Parmi ces menaces, lesquelles sont spécifiques aux chatbots IA pédagogiques ? (plusieurs réponses possibles)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dans-la-methodologie-cvss-adaptee-ia-comment-evalue-t-on-la-complexite-dune-attaque-par-injection-de-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Dans la méthodologie CVSS adaptée IA, comment évalue-t-on la complexité d'une attaque par injection de prompts ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-quelle-base-legale-rgpd-est-la-plus-appropriee-pour-un-chatbot-pedagogique-en-etablissement-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Quelle base légale RGPD est la plus appropriée pour un chatbot pédagogique en établissement public ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-dans-une-matrice-risqueimpact-comment-classer-une-vulnerabilite-de-cle-api-stockee-en-dur" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Dans une matrice risque/impact, comment classer une vulnérabilité de "clé API stockée en dur" ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-quel-pourcentage-du-budget-projet-est-generalement-acceptable-pour-la-cybersecurite-dun-systeme-ia-en-phase-de-consolidation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Quel pourcentage du budget projet est généralement acceptable pour la cybersécurité d'un système IA en phase de consolidation ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-b-techniques-dattaque-et-protection-5-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛡️ Partie B : Techniques d'attaque et protection (5 questions)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ Partie B : Techniques d&#39;attaque et protection (5 questions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6-parmi-ces-techniques-lesquelles-sont-efficaces-contre-linjection-de-prompts-plusieurs-reponses-possibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Parmi ces techniques, lesquelles sont efficaces contre l'injection de prompts ? (plusieurs réponses possibles)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-quel-est-lordre-correct-dune-strategie-de-defense-en-profondeur-pour-un-chatbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Quel est l'ordre correct d'une stratégie de défense en profondeur pour un chatbot ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-dans-le-test-50-tentatives-dinjection-en-1-minute-quel-taux-de-detection-est-considere-comme-acceptable" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Dans le test "50 tentatives d'injection en 1 minute", quel taux de détection est considéré comme acceptable ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-quelle-est-la-principale-limite-des-techniques-de-filtrage-par-mots-cles" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Quelle est la principale limite des techniques de filtrage par mots-clés ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-pour-detecter-une-tentative-dempoisonnement-de-donnees-quel-indicateur-est-le-plus-fiable" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Pour détecter une tentative d'empoisonnement de données, quel indicateur est le plus fiable ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-c-metriques-et-monitoring-5-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Partie C : Métriques et monitoring (5 questions)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Partie C : Métriques et monitoring (5 questions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-un-taux-de-faux-positifs-de-15-dans-la-detection-dattaques-signifie-que" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Un taux de faux positifs de 15% dans la détection d'attaques signifie que :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-dans-lanalyse-de-performance-une-degradation-de-60-de-latence-sous-attaque-est" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Dans l'analyse de performance, une dégradation de +60% de latence sous attaque est :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-pour-un-chatbot-pedagogique-quel-kpi-de-securite-est-le-plus-critique-a-surveiller" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Pour un chatbot pédagogique, quel KPI de sécurité est le plus critique à surveiller ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-un-cout-api-passant-de-150mois-a-520mois-sous-attaque-indique" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Un coût API passant de 150€/mois à 520€/mois sous attaque indique :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-pour-surveiller-la-conformite-rgpd-dun-chatbot-quel-indicateur-est-le-plus-pertinent" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. Pour surveiller la conformité RGPD d'un chatbot, quel indicateur est le plus pertinent ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-d-vision-strategique-et-transfert-5-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Partie D : Vision stratégique et transfert (5 questions)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Partie D : Vision stratégique et transfert (5 questions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#16-pour-un-deploiement-a-10000-utilisateurs-quelle-approche-de-scaling-securise-est-la-plus-appropriee" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Pour un déploiement à 10,000 utilisateurs, quelle approche de scaling sécurisé est la plus appropriée ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-dans-lanalyse-coutbenefice-une-mesure-de-securite-avec-un-roi-de-92-signifie" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. Dans l'analyse coût/bénéfice, une mesure de sécurité avec un ROI de 92% signifie :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-parmi-ces-competences-developpees-lesquelles-sont-transferables-a-dautres-systemes-ia-plusieurs-reponses-possibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Parmi ces compétences développées, lesquelles sont transférables à d'autres systèmes IA ? (plusieurs réponses possibles)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-pour-maintenir-une-expertise-cybersecurite-ia-a-jour-quelle-approche-est-la-plus-efficace" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. Pour maintenir une expertise cybersécurité IA à jour, quelle approche est la plus efficace ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20-dans-un-contexte-professionnel-comment-valoriser-lexpertise-cybersecurite-ia-developpee" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. Dans un contexte professionnel, comment valoriser l'expertise cybersécurité IA développée ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto-évaluation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auto-évaluation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#corrige-avec-explications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Corrigé avec explications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Corrigé avec explications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partie-a-analyse-des-risques-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partie A : Analyse des risques IA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-b-techniques-dattaque-et-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partie B : Techniques d'attaque et protection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-c-metriques-et-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partie C : Métriques et monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-d-vision-strategique-et-transfert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partie D : Vision stratégique et transfert
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calcul-de-votre-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calcul de votre score
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interprétation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interprétation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#niveaux-de-maitrise-cybersecurite-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Niveaux de maîtrise cybersécurité IA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyse-par-domaine-de-competence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyse par domaine de compétence
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyse par domaine de compétence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analyse-des-risques-ia-questions-1-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Analyse des risques IA (Questions 1-5)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#techniques-dattaque-et-protection-questions-6-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛡️ Techniques d'attaque et protection (Questions 6-10)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metriques-et-monitoring-questions-11-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Métriques et monitoring (Questions 11-15)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vision-strategique-et-transfert-questions-16-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Vision stratégique et transfert (Questions 16-20)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plan-de-developpement-personnalise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plan de développement personnalisé
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plan de développement personnalisé">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-score-17-20-voie-dexpertise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Si score 17-20 : Voie d'expertise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-score-14-16-voie-de-consolidation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Si score 14-16 : Voie de consolidation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-score-11-13-voie-de-renforcement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Si score 11-13 : Voie de renforcement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-score-11-voie-de-reconstruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Si score &lt;11 : Voie de reconstruction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#certification-des-acquis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certification des acquis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Certification des acquis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attestation-de-competences-developpees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attestation de compétences développées
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#portfolio-de-competences-cybersecurite-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Portfolio de compétences cybersécurité IA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-vers-lexpertise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Évolution vers l'expertise
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Évolution vers l&#39;expertise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progression-naturelle-des-competences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progression naturelle des compétences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opportunites-de-carriere" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opportunités de carrière
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#felicitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Félicitations !
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources-pour-aller-plus-loin" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Ressources pour aller plus loin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Ressources pour aller plus loin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formations-specialisees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formations spécialisées
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#veille-technologique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Veille technologique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communautes-professionnelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communautés professionnelles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="qcm-devaluation-module-4-cybersecurite-ia">📝 QCM d'évaluation - Module 4 : Cybersécurité IA</h1>
+<p>Ce QCM vous permettra d'évaluer votre maîtrise des concepts de cybersécurité appliqués aux systèmes IA conversationnels étudiés dans ce module.</p>
+<h2 id="instructions">✅ Instructions</h2>
+<ul>
+<li>Cochez la ou les réponses correctes pour chaque question</li>
+<li>Certaines questions peuvent avoir plusieurs réponses correctes</li>
+<li>Pour les questions à choix multiples, 0,5 point est attribué par réponse correcte (maximum 1 point par question)</li>
+<li>À la fin du questionnaire, calculez votre score grâce au corrigé fourni</li>
+<li>Durée recommandée : 15 minutes</li>
+</ul>
+<h2 id="partie-a-analyse-des-risques-ia-5-questions">🔍 Partie A : Analyse des risques IA (5 questions)</h2>
+<h3 id="1-parmi-ces-menaces-lesquelles-sont-specifiques-aux-chatbots-ia-pedagogiques-plusieurs-reponses-possibles">1. Parmi ces menaces, lesquelles sont spécifiques aux chatbots IA pédagogiques ? (plusieurs réponses possibles)</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Injection de prompts pour contourner les instructions système</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Attaques DDoS sur les serveurs web</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Extraction systématique de la base de connaissances propriétaire</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Empoisonnement des réponses par injection de fausses informations</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Failles SQL dans les bases de données</li>
+</ul>
+<h3 id="2-dans-la-methodologie-cvss-adaptee-ia-comment-evalue-t-on-la-complexite-dune-attaque-par-injection-de-prompts">2. Dans la méthodologie CVSS adaptée IA, comment évalue-t-on la complexité d'une attaque par injection de prompts ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Faible - car elle ne nécessite que des compétences linguistiques</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Élevée - car elle nécessite une compréhension approfondie du modèle IA</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Variable selon le niveau de protection implémenté</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Ne peut pas être évaluée avec CVSS standard</li>
+</ul>
+<h3 id="3-quelle-base-legale-rgpd-est-la-plus-appropriee-pour-un-chatbot-pedagogique-en-etablissement-public">3. Quelle base légale RGPD est la plus appropriée pour un chatbot pédagogique en établissement public ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Consentement de la personne concernée (art. 6.1.a)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Exécution d'un contrat (art. 6.1.b)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Mission d'intérêt public (art. 6.1.e)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Intérêt légitime (art. 6.1.f)</li>
+</ul>
+<h3 id="4-dans-une-matrice-risqueimpact-comment-classer-une-vulnerabilite-de-cle-api-stockee-en-dur">4. Dans une matrice risque/impact, comment classer une vulnérabilité de "clé API stockée en dur" ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Probabilité faible / Impact faible</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Probabilité élevée / Impact élevé</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Probabilité faible / Impact élevé</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Probabilité élevée / Impact faible</li>
+</ul>
+<h3 id="5-quel-pourcentage-du-budget-projet-est-generalement-acceptable-pour-la-cybersecurite-dun-systeme-ia-en-phase-de-consolidation">5. Quel pourcentage du budget projet est généralement acceptable pour la cybersécurité d'un système IA en phase de consolidation ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 5-10% (minimal)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 15-25% (standard)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 30-40% (renforcé)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> &gt;50% (critique)</li>
+</ul>
+<h2 id="partie-b-techniques-dattaque-et-protection-5-questions">🛡️ Partie B : Techniques d'attaque et protection (5 questions)</h2>
+<h3 id="6-parmi-ces-techniques-lesquelles-sont-efficaces-contre-linjection-de-prompts-plusieurs-reponses-possibles">6. Parmi ces techniques, lesquelles sont efficaces contre l'injection de prompts ? (plusieurs réponses possibles)</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Filtrage par mots-clés suspects (ignore, système, admin)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Limitation de longueur des entrées utilisateur</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Validation post-réponse pour détecter les fuites d'information</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Chiffrement des communications HTTPS</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Prompt système renforcé avec instructions de sécurité</li>
+</ul>
+<h3 id="7-quel-est-lordre-correct-dune-strategie-de-defense-en-profondeur-pour-un-chatbot">7. Quel est l'ordre correct d'une stratégie de défense en profondeur pour un chatbot ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 1) Validation entrée → 2) Prompt système → 3) Filtrage réponse → 4) Monitoring</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 1) Chiffrement → 2) Authentification → 3) Validation → 4) Logging</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 1) Monitoring → 2) Prévention → 3) Détection → 4) Réponse</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 1) Firewall → 2) Antivirus → 3) IDS → 4) Backup</li>
+</ul>
+<h3 id="8-dans-le-test-50-tentatives-dinjection-en-1-minute-quel-taux-de-detection-est-considere-comme-acceptable">8. Dans le test "50 tentatives d'injection en 1 minute", quel taux de détection est considéré comme acceptable ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> &gt;70% (suffisant pour la plupart des cas)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> &gt;85% (bon niveau de protection)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> &gt;95% (excellent niveau requis pour production)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 100% (seul niveau acceptable)</li>
+</ul>
+<h3 id="9-quelle-est-la-principale-limite-des-techniques-de-filtrage-par-mots-cles">9. Quelle est la principale limite des techniques de filtrage par mots-clés ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Impact trop important sur les performances</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Coût de mise en œuvre trop élevé</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Génération de faux positifs bloquant des requêtes légitimes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Inefficacité totale contre les attaques modernes</li>
+</ul>
+<h3 id="10-pour-detecter-une-tentative-dempoisonnement-de-donnees-quel-indicateur-est-le-plus-fiable">10. Pour détecter une tentative d'empoisonnement de données, quel indicateur est le plus fiable ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Volume anormalement élevé de requêtes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Incohérence dans les réponses du chatbot par rapport aux sources fiables</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Utilisation de mots-clés suspects</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Adresse IP suspecte</li>
+</ul>
+<h2 id="partie-c-metriques-et-monitoring-5-questions">📊 Partie C : Métriques et monitoring (5 questions)</h2>
+<h3 id="11-un-taux-de-faux-positifs-de-15-dans-la-detection-dattaques-signifie-que">11. Un taux de faux positifs de 15% dans la détection d'attaques signifie que :</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 15% des attaques ne sont pas détectées</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 15% des alertes sont injustifiées (requêtes légitimes bloquées)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 15% des utilisateurs sont impactés par des dysfonctionnements</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Le système est défaillant et doit être arrêté</li>
+</ul>
+<h3 id="12-dans-lanalyse-de-performance-une-degradation-de-60-de-latence-sous-attaque-est">12. Dans l'analyse de performance, une dégradation de +60% de latence sous attaque est :</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Excellente (impact négligeable)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Acceptable (impact maîtrisé)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Limite (optimisation nécessaire)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Problématique (refonte requise)</li>
+</ul>
+<h3 id="13-pour-un-chatbot-pedagogique-quel-kpi-de-securite-est-le-plus-critique-a-surveiller">13. Pour un chatbot pédagogique, quel KPI de sécurité est le plus critique à surveiller ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Nombre total de requêtes par jour</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Taux de détection des tentatives d'injection</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Temps de réponse moyen du système</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Nombre d'utilisateurs connectés simultanément</li>
+</ul>
+<h3 id="14-un-cout-api-passant-de-150mois-a-520mois-sous-attaque-indique">14. Un coût API passant de 150€/mois à 520€/mois sous attaque indique :</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Une faille de sécurité majeure nécessitant un arrêt immédiat</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Un besoin d'optimisation du filtrage en amont de l'API</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Un dimensionnement sous-évalué normal en production</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Une attaque DDoS réussie sur l'infrastructure</li>
+</ul>
+<h3 id="15-pour-surveiller-la-conformite-rgpd-dun-chatbot-quel-indicateur-est-le-plus-pertinent">15. Pour surveiller la conformité RGPD d'un chatbot, quel indicateur est le plus pertinent ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Pourcentage de données chiffrées</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Temps de réponse aux demandes d'exercice des droits</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Nombre de cookies utilisés par l'application</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Fréquence des sauvegardes de données</li>
+</ul>
+<h2 id="partie-d-vision-strategique-et-transfert-5-questions">🔧 Partie D : Vision stratégique et transfert (5 questions)</h2>
+<h3 id="16-pour-un-deploiement-a-10000-utilisateurs-quelle-approche-de-scaling-securise-est-la-plus-appropriee">16. Pour un déploiement à 10,000 utilisateurs, quelle approche de scaling sécurisé est la plus appropriée ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Déploiement immédiat avec monitoring renforcé</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Approche progressive par phases avec validation à chaque étape</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Attendre d'avoir corrigé toutes les vulnérabilités identifiées</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Externaliser la sécurité à un prestataire spécialisé</li>
+</ul>
+<h3 id="17-dans-lanalyse-coutbenefice-une-mesure-de-securite-avec-un-roi-de-92-signifie">17. Dans l'analyse coût/bénéfice, une mesure de sécurité avec un ROI de 92% signifie :</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Un investissement très rentable à prioriser</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Un coût acceptable pour une protection standard</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Une dépense excessive à éviter</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Un calcul erroné car le ROI sécurité ne peut pas être mesuré</li>
+</ul>
+<h3 id="18-parmi-ces-competences-developpees-lesquelles-sont-transferables-a-dautres-systemes-ia-plusieurs-reponses-possibles">18. Parmi ces compétences développées, lesquelles sont transférables à d'autres systèmes IA ? (plusieurs réponses possibles)</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Méthodologie d'audit structurée et reproductible</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Tests d'injection spécifiques aux chatbots textuels</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Analyse de risques spécifiques aux systèmes IA</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Configuration spécifique de l'API Mistral AI</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Framework de mesure de performance sécuritaire</li>
+</ul>
+<h3 id="19-pour-maintenir-une-expertise-cybersecurite-ia-a-jour-quelle-approche-est-la-plus-efficace">19. Pour maintenir une expertise cybersécurité IA à jour, quelle approche est la plus efficace ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Formation annuelle intensive de 40 heures</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Veille continue + expérimentation régulière sur projets réels</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Certification tous les 3 ans</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Lecture de documentation technique mensuelle</li>
+</ul>
+<h3 id="20-dans-un-contexte-professionnel-comment-valoriser-lexpertise-cybersecurite-ia-developpee">20. Dans un contexte professionnel, comment valoriser l'expertise cybersécurité IA développée ?</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Spécialisation exclusive sur les technologies d'IA</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Combinaison avec des compétences sécurité traditionnelles</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Focus sur les aspects réglementaires uniquement</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Orientation vers le développement IA plutôt que la sécurité</li>
+</ul>
+<h2 id="auto-evaluation">Auto-évaluation</h2>
+<p>Une fois le QCM complété, vérifiez vos réponses avec le corrigé ci-dessous et calculez votre score.</p>
+<h3 id="corrige-avec-explications">Corrigé avec explications</h3>
+<h4 id="partie-a-analyse-des-risques-ia">Partie A : Analyse des risques IA</h4>
+<ol>
+<li>
+<p><strong>a, c, d - Injection de prompts, Extraction base de connaissances, Empoisonnement des réponses</strong><br />
+<em>Les attaques DDoS et SQL sont généralistes. Les menaces spécifiques IA concernent la manipulation des modèles et l'exploitation de leurs particularités.</em></p>
+</li>
+<li>
+<p><strong>c - Variable selon le niveau de protection implémenté</strong><br />
+<em>La complexité d'une injection de prompts dépend fortement des mesures de protection en place : filtrage, validation, prompts système renforcés.</em></p>
+</li>
+<li>
+<p><strong>c - Mission d'intérêt public (art. 6.1.e)</strong><br />
+<em>Pour un établissement public d'enseignement, la mission éducative constitue une mission d'intérêt public, base légale la plus appropriée.</em></p>
+</li>
+<li>
+<p><strong>b - Probabilité élevée / Impact élevé</strong><br />
+<em>Clé API en dur : facilement découvrable (probabilité élevée) et permet compromission complète (impact élevé). Zone critique de la matrice.</em></p>
+</li>
+<li>
+<p><strong>c - 30-40% (renforcé)</strong><br />
+<em>En phase de consolidation d'un système IA sensible, un budget sécurité renforcé est justifié pour corriger les vulnérabilités initiales.</em></p>
+</li>
+</ol>
+<h4 id="partie-b-techniques-dattaque-et-protection">Partie B : Techniques d'attaque et protection</h4>
+<ol>
+<li>
+<p><strong>a, b, c, e - Filtrage mots-clés, Limitation longueur, Validation post-réponse, Prompt système renforcé</strong><br />
+<em>HTTPS protège la transmission mais pas contre l'injection. Les 4 autres techniques constituent une défense en profondeur efficace.</em></p>
+</li>
+<li>
+<p><strong>a - Validation entrée → Prompt système → Filtrage réponse → Monitoring</strong><br />
+<em>Ordre logique de traitement d'une requête : valider l'entrée, utiliser un prompt sécurisé, filtrer la sortie, monitorer l'ensemble.</em></p>
+</li>
+<li>
+<p><strong>c - &gt;95% (excellent niveau requis pour production)</strong><br />
+<em>Avec seulement 5% d'attaques non détectées sur 50 tentatives, le système montre une robustesse acceptable pour la production.</em></p>
+</li>
+<li>
+<p><strong>c - Génération de faux positifs bloquant des requêtes légitimes</strong><br />
+<em>Le filtrage par mots-clés peut bloquer des questions légitimes contenant des termes suspects, dégradant l'expérience utilisateur.</em></p>
+</li>
+<li>
+<p><strong>b - Incohérence dans les réponses du chatbot par rapport aux sources fiables</strong><br />
+<em>L'empoisonnement se manifeste par des réponses incorrectes. La validation croisée avec des sources fiables est le meilleur indicateur.</em></p>
+</li>
+</ol>
+<h4 id="partie-c-metriques-et-monitoring">Partie C : Métriques et monitoring</h4>
+<ol>
+<li>
+<p><strong>b - 15% des alertes sont injustifiées (requêtes légitimes bloquées)</strong><br />
+<em>Faux positif = alerte déclenchée à tort. 15% signifie que 15% des alertes concernent des requêtes légitimes.</em></p>
+</li>
+<li>
+<p><strong>c - Limite (optimisation nécessaire)</strong><br />
+<em>+60% de dégradation sous attaque est à la limite de l'acceptable. L'optimisation est nécessaire avant déploiement large.</em></p>
+</li>
+<li>
+<p><strong>b - Taux de détection des tentatives d'injection</strong><br />
+<em>Pour un chatbot pédagogique, la protection du contenu éducatif est critique. Le taux de détection est le KPI le plus important.</em></p>
+</li>
+<li>
+<p><strong>b - Un besoin d'optimisation du filtrage en amont de l'API</strong><br />
+<em>Coût ×3.5 indique que les attaques consomment des ressources API. Le filtrage pré-API permettrait d'économiser.</em></p>
+</li>
+<li>
+<p><strong>b - Temps de réponse aux demandes d'exercice des droits</strong><br />
+<em>La conformité RGPD se mesure par la capacité à respecter les droits des personnes, notamment le délai de 1 mois pour répondre aux demandes.</em></p>
+</li>
+</ol>
+<h4 id="partie-d-vision-strategique-et-transfert">Partie D : Vision stratégique et transfert</h4>
+<ol>
+<li>
+<p><strong>b - Approche progressive par phases avec validation à chaque étape</strong><br />
+<em>Le scaling sécurisé nécessite une approche progressive permettant d'identifier et corriger les problèmes avant le déploiement complet.</em></p>
+</li>
+<li>
+<p><strong>a - Un investissement très rentable à prioriser</strong><br />
+<em>ROI de 92% signifie que l'investissement génère 1,92€ de bénéfice pour 1€ investi. C'est un excellent retour sur investissement.</em></p>
+</li>
+<li>
+<p><strong>a, c, e - Méthodologie d'audit, Analyse de risques IA, Framework de mesure</strong><br />
+<em>Ces compétences sont généralisables. Les tests d'injection chatbot et la config Mistral sont spécifiques à ce contexte.</em></p>
+</li>
+<li>
+<p><strong>b - Veille continue + expérimentation régulière sur projets réels</strong><br />
+<em>La cybersécurité IA évolue rapidement. La veille continue et la pratique régulière sont essentielles pour maintenir l'expertise.</em></p>
+</li>
+<li>
+<p><strong>b - Combinaison avec des compétences sécurité traditionnelles</strong><br />
+<em>L'expertise IA complète les compétences sécurité traditionnelles, créant un profil hybride très recherché sur le marché.</em></p>
+</li>
+</ol>
+<h3 id="calcul-de-votre-score">Calcul de votre score</h3>
+<ul>
+<li>Questions à choix unique (2-5, 7-15, 16-17, 19-20) : 1 point par réponse correcte</li>
+<li>Questions à choix multiples (1, 6, 18) : 0,5 point par réponse correcte et -0,25 par réponse incorrecte (minimum 0, maximum 1 point par question)</li>
+</ul>
+<p><strong>Total des points possibles : 20</strong></p>
+<h3 id="interpretation">Interprétation</h3>
+<h4 id="niveaux-de-maitrise-cybersecurite-ia">Niveaux de maîtrise cybersécurité IA</h4>
+<ul>
+<li><strong>17-20 points (85-100%)</strong> : <strong>🏆 Expert cybersécurité IA</strong></li>
+<li>Maîtrise excellente des concepts et techniques</li>
+<li>Capable d'auditer des systèmes IA en autonomie</li>
+<li>Prêt pour des responsabilités sécuritaires avancées</li>
+<li>
+<p><em>Profils cibles : Consultant cybersécurité IA, Responsable sécurité produit IA</em></p>
+</li>
+<li>
+<p><strong>14-16 points (70-84%)</strong> : <strong>🥈 Praticien confirmé</strong></p>
+</li>
+<li>Bonne compréhension des enjeux sécuritaires IA</li>
+<li>Capable d'assister un audit avec supervision limitée</li>
+<li>Quelques approfondissements à consolider</li>
+<li>
+<p><em>Profils cibles : Auditeur sécurité junior, Spécialiste conformité IA</em></p>
+</li>
+<li>
+<p><strong>11-13 points (55-69%)</strong> : <strong>🥉 Bases solides acquises</strong></p>
+</li>
+<li>Compréhension correcte des fondamentaux</li>
+<li>Capable de participer à un audit sous supervision</li>
+<li>Formation complémentaire recommandée</li>
+<li>
+<p><em>Profils cibles : Assistant auditeur, Analyste sécurité débutant</em></p>
+</li>
+<li>
+<p><strong>0-10 points (&lt;55%)</strong> : <strong>📚 Révision approfondie nécessaire</strong></p>
+</li>
+<li>Concepts de base à revoir</li>
+<li>Pratique supplémentaire indispensable</li>
+<li>Formation complémentaire obligatoire avant responsabilités sécuritaires</li>
+</ul>
+<h3 id="analyse-par-domaine-de-competence">Analyse par domaine de compétence</h3>
+<h4 id="analyse-des-risques-ia-questions-1-5">🔍 Analyse des risques IA (Questions 1-5)</h4>
+<p><strong>Votre score :</strong> ___/5
+- <strong>4-5/5</strong> : Excellente capacité d'analyse de risques IA
+- <strong>3/5</strong> : Bonne compréhension, quelques nuances à maîtriser
+- <strong>2/5</strong> : Bases correctes, approfondissement nécessaire
+- <strong>0-1/5</strong> : Méthodologie d'analyse des risques à revoir</p>
+<h4 id="techniques-dattaque-et-protection-questions-6-10">🛡️ Techniques d'attaque et protection (Questions 6-10)</h4>
+<p><strong>Votre score :</strong> ___/5
+- <strong>4-5/5</strong> : Maîtrise opérationnelle des techniques de protection
+- <strong>3/5</strong> : Compréhension correcte, expérience pratique à développer
+- <strong>2/5</strong> : Connaissances théoriques, mise en pratique à renforcer
+- <strong>0-1/5</strong> : Techniques de protection à étudier en profondeur</p>
+<h4 id="metriques-et-monitoring-questions-11-15">📊 Métriques et monitoring (Questions 11-15)</h4>
+<p><strong>Votre score :</strong> ___/5
+- <strong>4-5/5</strong> : Capacité d'interprétation avancée des métriques sécurité
+- <strong>3/5</strong> : Bonne lecture des indicateurs, analyse à affiner
+- <strong>2/5</strong> : Compréhension basique, formation monitoring nécessaire
+- <strong>0-1/5</strong> : Concepts de métriques sécurité à acquérir</p>
+<h4 id="vision-strategique-et-transfert-questions-16-20">🔧 Vision stratégique et transfert (Questions 16-20)</h4>
+<p><strong>Votre score :</strong> ___/5
+- <strong>4-5/5</strong> : Vision stratégique mature, prêt pour responsabilités managériales
+- <strong>3/5</strong> : Bonne compréhension business, leadership à développer
+- <strong>2/5</strong> : Aspects stratégiques corrects, expérience à acquérir
+- <strong>0-1/5</strong> : Vision business de la cybersécurité à construire</p>
+<h3 id="plan-de-developpement-personnalise">Plan de développement personnalisé</h3>
+<h4 id="si-score-17-20-voie-dexpertise">Si score 17-20 : Voie d'expertise</h4>
+<p><strong>Objectifs immédiats :</strong>
+- Obtenir une certification cybersécurité (CISSP, CISA)
+- Participer à des audits réels en stage ou mission
+- Contribuer à la recherche en sécurité IA (publications, conferences)</p>
+<p><strong>Opportunités professionnelles :</strong>
+- Stage en cabinet de conseil cybersécurité (focus IA)
+- Poste junior chez un éditeur de solutions IA
+- Participation à des programmes bug bounty IA</p>
+<h4 id="si-score-14-16-voie-de-consolidation">Si score 14-16 : Voie de consolidation</h4>
+<p><strong>Objectifs immédiats :</strong>
+- Approfondir les domaines &lt;4/5 identifiés
+- Participer à des projets pratiques supplémentaires
+- Suivre des formations complémentaires ciblées</p>
+<p><strong>Actions recommandées :</strong>
+- MOOC ANSSI Cybersécurité (gratuit)
+- Participation à des CTF (Capture The Flag) sécurité
+- Lecture d'études de cas d'incidents sécurité IA</p>
+<h4 id="si-score-11-13-voie-de-renforcement">Si score 11-13 : Voie de renforcement</h4>
+<p><strong>Objectifs immédiats :</strong>
+- Réviser les concepts fondamentaux identifiés
+- Pratiquer sur des environnements d'entraînement
+- Rechercher un mentorat cybersécurité</p>
+<p><strong>Ressources recommandées :</strong>
+- Cours en ligne cybersécurité (Coursera, edX)
+- Participation à des communautés OWASP locales
+- Projets personnels d'audit sécurité</p>
+<h4 id="si-score-11-voie-de-reconstruction">Si score &lt;11 : Voie de reconstruction</h4>
+<p><strong>Objectifs immédiats :</strong>
+- Formation cybersécurité générale avant spécialisation IA
+- Bases techniques à renforcer (réseaux, systèmes)
+- Accompagnement pédagogique personnalisé</p>
+<p><strong>Plan d'action :</strong>
+- Formation cybersécurité de base (40h minimum)
+- Refaire le module 4 avec accompagnement renforcé
+- Stage découverte en équipe cybersécurité</p>
+<h3 id="certification-des-acquis">Certification des acquis</h3>
+<h4 id="attestation-de-competences-developpees">Attestation de compétences développées</h4>
+<p><strong>Candidat :</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__<br />
+<strong>Score obtenu :</strong> <strong><em>/20 (</em></strong>%)<br />
+<strong>Niveau certifié :</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>____</p>
+<p><strong>Compétences validées :</strong>
+- [ ] Analyse de risques spécifiques aux systèmes IA conversationnels
+- [ ] Audit de sécurité avec méthodologies professionnelles<br />
+- [ ] Tests de résistance et validation de robustesse
+- [ ] Interprétation de métriques et KPIs de sécurité
+- [ ] Vision stratégique et recommandations budgétaires</p>
+<p><strong>Recommandations pour la suite :</strong>
+- <strong>Formation complémentaire :</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_
+- <strong>Expérience pratique :</strong> </em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_
+- <strong>Certification visée :</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>____</p>
+<h4 id="portfolio-de-competences-cybersecurite-ia">Portfolio de compétences cybersécurité IA</h4>
+<p><strong>Livrables produits pendant le module :</strong>
+✅ Rapport d'analyse des risques (5 menaces analysées)<br />
+✅ Audit de sécurité complet (23 tests réalisés)<br />
+✅ Analyse de métriques (5 KPIs interprétés)<br />
+✅ Présentation sécuritaire (5 minutes, niveau professionnel)</p>
+<p><strong>Méthodologies maîtrisées :</strong>
+✅ CVSS adapté IA pour classification vulnérabilités<br />
+✅ Matrice risque/impact pour priorisation investissements<br />
+✅ Framework ROI sécurité pour justification économique<br />
+✅ Tests d'injection éthiques et contrôlés</p>
+<p><strong>Outils utilisés :</strong>
+✅ Grilles d'audit structurées (15 critères)<br />
+✅ Simulateurs de pannes et tests de résistance<br />
+✅ Calculateurs de coût/bénéfice sécurité<br />
+✅ Dashboards de métriques et KPIs</p>
+<h3 id="evolution-vers-lexpertise">Évolution vers l'expertise</h3>
+<h4 id="progression-naturelle-des-competences">Progression naturelle des compétences</h4>
+<p><strong>Mois 1-3 : Consolidation</strong>
+- Appliquer les méthodologies sur d'autres projets
+- Développer l'expertise sur les outils professionnels
+- Participer à des audits réels sous supervision</p>
+<p><strong>Mois 4-6 : Spécialisation</strong>
+- Choisir un domaine de spécialisation (audit, conformité, conseil)
+- Obtenir une première certification reconnue
+- Contribuer à des projets open source sécurité IA</p>
+<p><strong>Mois 7-12 : Expertise</strong>
+- Mener des audits en autonomie
+- Former d'autres professionnels
+- Publier des retours d'expérience</p>
+<h4 id="opportunites-de-carriere">Opportunités de carrière</h4>
+<p><strong>Secteurs porteurs :</strong>
+- <strong>Fintech</strong> : Sécurisation des chatbots bancaires et financiers
+- <strong>Santé</strong> : Conformité RGPD pour IA médicale
+- <strong>Éducation</strong> : Audit de plateformes pédagogiques IA
+- <strong>E-commerce</strong> : Sécurité des assistants virtuels clients</p>
+<p><strong>Évolution salariale attendue :</strong>
+- <strong>Junior (0-2 ans)</strong> : 35-45k€
+- <strong>Confirmé (2-5 ans)</strong> : 45-60k€<br />
+- <strong>Senior (5+ ans)</strong> : 60-80k€
+- <strong>Expert/Consultant</strong> : 80-120k€</p>
+<p><strong>Prochaines étapes recommandées :</strong>
+1. <strong>Identifier</strong> votre domaine de prédilection (audit, conformité, conseil)
+2. <strong>Planifier</strong> votre première certification cybersécurité
+3. <strong>Rechercher</strong> des opportunités de stage/mission dans ce domaine
+4. <strong>Développer</strong> un réseau professionnel cybersécurité IA</p>
+<hr />
+<h2 id="felicitations">🎉 Félicitations !</h2>
+<p>Vous avez terminé le <strong>Module 4 - Cybersécurité IA</strong> et développé une expertise recherchée sur le marché !</p>
+<p><strong>Votre expertise porte sur :</strong>
+🔒 Sécurisation complète d'un système IA conversationnel<br />
+📊 Audit méthodique avec outils professionnels<br />
+💰 Optimisation équilibre sécurité/performance/coût<br />
+🎯 Vision stratégique pour déploiement industriel</p>
+<p><strong>Cette compétence vous différencie</strong> dans un marché où la cybersécurité IA devient critique pour tous les secteurs utilisant l'intelligence artificielle.</p>
+<p>Bonne continuation dans votre parcours professionnel ! 🚀</p>
+<hr />
+<h2 id="ressources-pour-aller-plus-loin">📚 Ressources pour aller plus loin</h2>
+<h3 id="formations-specialisees">Formations spécialisées</h3>
+<ul>
+<li><strong><a href="https://sans.org">SANS FOR578 - Cyber Threat Intelligence</a></strong> - Analyse de menaces avancée</li>
+<li><strong><a href="https://isc2.org">CISSP Certification</a></strong> - Certification cybersécurité reconnue mondialement  </li>
+<li><strong><a href="https://isaca.org">CISA Certification</a></strong> - Spécialisation audit de sécurité</li>
+</ul>
+<h3 id="veille-technologique">Veille technologique</h3>
+<ul>
+<li><strong><a href="https://owasp.org/www-project-ai-security-and-privacy-guide/">OWASP AI Security</a></strong> - Guide sécurité IA mis à jour</li>
+<li><strong><a href="https://cyber.gouv.fr">ANSSI Publications IA</a></strong> - Recommandations officielles françaises</li>
+<li><strong><a href="https://nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management</a></strong> - Framework US de gestion des risques IA</li>
+</ul>
+<h3 id="communautes-professionnelles">Communautés professionnelles</h3>
+<ul>
+<li><strong><a href="https://clusif.fr">CLUSIF</a></strong> - Club de la Sécurité de l'Information Français</li>
+<li><strong><a href="https://owasp.org/france/">OWASP France</a></strong> - Chapitre français OWASP</li>
+<li><strong><a href="https://aisecurity.community">AI Security Community</a></strong> - Communauté internationale sécurité IA</li>
+</ul>
+<p><a class="md-button" href="../">Retour au Module 4</a>
+<a class="md-button md-button--primary" href="../ressources/synthese-module4/">Voir la synthèse globale</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 Atelier-deeplearning
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/votre-repo/chatbot-deeplearning" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../javascripts/progress.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3053 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cours de Deep Learning pour le BTS SIO">
+      
+      
+        <meta name="author" content="G.GAILLARD">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>📋 Structure harmonisée des fiches d'observations - Atelier Deep Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/progress.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#structure-harmonisee-des-fiches-dobservations" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="Atelier Deep Learning" class="md-header__button md-logo" aria-label="Atelier Deep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Atelier Deep Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📋 Structure harmonisée des fiches d'observations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  Module 1 - Fondamentaux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../module2/" class="md-tabs__link">
+          
+  
+  
+  Module 2 - Architectures
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../module3/" class="md-tabs__link">
+          
+  
+  
+  Module 3 - Applications
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../module4/" class="md-tabs__link">
+          
+  
+  
+  Module 4 - Projet Sécurisé
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../evaluation/criteres-evaluation/" class="md-tabs__link">
+          
+  
+  
+  Évaluation et Suivi
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Atelier Deep Learning" class="md-nav__button md-logo" aria-label="Atelier Deep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Atelier Deep Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 1 - Fondamentaux
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module 1 - Fondamentaux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction-pratique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 - Introduction pratique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts-fondamentaux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 - Concepts fondamentaux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 - Mini-projet individuel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qcm-evaluation-module1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossaire-dl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossaire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-colab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide Colab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../synthese-module1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synthèse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 2 - Architectures
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Module 2 - Architectures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module2/reseaux-convolutifs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 - Réseaux convolutifs (CNN)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module2/reseaux-recurrents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 - Réseaux récurrents (RNN)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module2/qcm-evaluation-module2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossaire-dl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossaire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module2/ressources/synthese-module2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synthèse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 3 - Applications
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module 3 - Applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/systeme-tickets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 - Système de tickets intelligent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/assistant-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 - Assistant de documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/qcm-evaluation-module3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ressources/base-connaissances/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Base de connaissances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ressources/api-mistral.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Mistral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/ressources/fiche-observations.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fiche d'observations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/ressources/synthese-module3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synthèse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 4 - Projet Sécurisé
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module 4 - Projet Sécurisé
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Phases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Phases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/phases/phase0-analyse-risques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0 - Analyse des risques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/phases/phase1-developpement-securise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 - Développement sécurisé
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/phases/phase2-audit-securite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 - Audit de sécurité
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/phases/phase3-presentation-securisee/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 - Présentation sécurisée
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/qcm-evaluation-module4-securite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4_1" id="__nav_5_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kit d'analyse sécuritaire
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Kit d'analyse sécuritaire
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/ressources/kit-analyse-securitaire/scenarios-attaques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scénarios d'attaques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/ressources/kit-analyse-securitaire/outils-validation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Outils de validation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/ressources/kit-analyse-securitaire/templates-audit.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Templates d'audit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4_2" id="__nav_5_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Livrables
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Livrables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/livrables/rapport-analyse-risques-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template rapport d'analyse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/livrables/audit-securite-complet-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template audit complet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module4/ressources/synthese-module4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synthèse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Évaluation et Suivi
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Évaluation et Suivi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evaluation/criteres-evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Critères d'évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../suivi-progression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Suivi de progression
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Formulaire de feedback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#principes-dharmonisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principes d'harmonisation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Principes d&#39;harmonisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-format-uniforme-pour-tous-les-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Format uniforme pour tous les modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-navigation-coherente" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Navigation cohérente
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#templates-harmonises-par-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Templates harmonisés par module
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-1-fondamentaux-du-deep-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module 1 : Fondamentaux du Deep Learning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 1 : Fondamentaux du Deep Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-hello-world-du-deep-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 1 : Hello World du Deep Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-concepts-fondamentaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 2 : Concepts fondamentaux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-mini-projet-individuel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 3 : Mini-projet individuel
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-2-architectures-specialisees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module 2 : Architectures spécialisées
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 2 : Architectures spécialisées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-cnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 1 : CNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-rnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 2 : RNN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-3-applications-professionnelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module 3 : Applications professionnelles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-4-projet-integrateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module 4 : Projet intégrateur
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigation-harmonisee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation harmonisée
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Navigation harmonisée">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boutons-standardises-pour-toutes-les-fiches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boutons standardisés pour toutes les fiches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      ```markdown
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources-complementaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Ressources complémentaires
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Navigation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="structure-harmonisee-des-fiches-dobservations">📋 Structure harmonisée des fiches d'observations</h1>
+<h2 id="principes-dharmonisation">Principes d'harmonisation</h2>
+<h3 id="1-format-uniforme-pour-tous-les-modules">1. Format uniforme pour tous les modules</h3>
+<ul>
+<li><strong>Titre standardisé</strong> : <code>📋 Fiche d'observations - [Nom du module/phase]</code></li>
+<li><strong>En-tête d'identification</strong> identique</li>
+<li><strong>Structure en parties numérotées</strong> cohérente</li>
+<li><strong>Tableaux formatés</strong> de manière uniforme</li>
+<li><strong>Conclusion standardisée</strong></li>
+</ul>
+<h3 id="2-navigation-coherente">2. Navigation cohérente</h3>
+<ul>
+<li>Boutons de navigation uniformes</li>
+<li>Liens vers ressources complémentaires</li>
+<li>Références croisées entre modules</li>
+</ul>
+<h2 id="templates-harmonises-par-module">Templates harmonisés par module</h2>
+<h2 id="module-1-fondamentaux-du-deep-learning">Module 1 : Fondamentaux du Deep Learning</h2>
+<h3 id="phase-1-hello-world-du-deep-learning">Phase 1 : Hello World du Deep Learning</h3>
+<div class="highlight"><pre><span></span><code><span class="gh"># 📋 Fiche d&#39;observations - Hello World du Deep Learning</span>
+
+<span class="gu">## Informations générales</span>
+<span class="gs">**Nom et prénom :**</span> ____________________________
+<span class="gs">**Date :**</span> ____________________________
+<span class="gs">**Groupe/Binôme :**</span> ____________________________
+
+<span class="gu">## Partie 1 : Configuration et environnement</span>
+
+| Élément | Observation | Notes |
+|---------|-------------|-------|
+| Version TensorFlow | | |
+| GPU disponible | ⬜ Oui ⬜ Non | |
+| Temps de chargement | | |
+
+<span class="gs">**Importance du GPU pour le Deep Learning :**</span>
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 2 : Exploration des données MNIST
+
+| Caractéristique | Valeur observée | Analyse |
+|-----------------|-----------------|---------|
+| Nombre d&#39;exemples d&#39;entraînement | | |
+| Nombre d&#39;exemples de test | | |
+| Dimension des images | | |
+| Nombre de classes | | |
+
+**Défis potentiels identifiés dans les exemples :**
+</code></pre></div>
+<hr />
+<hr />
+<p><div class="highlight"><pre><span></span><code>## Partie 3 : Architecture du réseau
+
+### Schéma de l&#39;architecture
+*Dessinez ou décrivez l&#39;architecture du modèle utilisé :*
+</code></pre></div>
+[Espace pour schéma]
+<div class="highlight"><pre><span></span><code>| Couche | Type | Fonction | Paramètres |
+|--------|------|----------|------------|
+| 1 | | | |
+| 2 | | | |
+| 3 | | | |
+| 4 | | | |
+
+**Nombre total de paramètres :** ________________
+
+## Partie 4 : Processus d&#39;entraînement
+
+### Métriques d&#39;entraînement
+| Métrique | Valeur finale | Évolution observée |
+|----------|---------------|-------------------|
+| Précision entraînement | | |
+| Précision validation | | |
+| Précision test | | |
+| Perte finale | | |
+
+### Analyse des courbes d&#39;apprentissage
+**Évolution de la précision :**
+</code></pre></div></p>
+<hr />
+<div class="highlight"><pre><span></span><code>**Évolution de la perte :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>**Signes de surapprentissage :** ⬜ Oui ⬜ Non
+**Justification :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 5 : Tests et prédictions
+
+### Analyse des prédictions
+| Test | Résultat | Confiance | Correct |
+|------|----------|-----------|---------|
+| Exemple 1 | | | ⬜ |
+| Exemple 2 | | | ⬜ |
+| Exemple 3 | | | ⬜ |
+
+**Types d&#39;erreurs les plus fréquentes :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 6 : Expérimentations personnelles
+
+### Modifications testées
+| Modification | Impact observé | Intérêt |
+|--------------|----------------|---------|
+| | | |
+| | | |
+
+### Dessin personnel
+**Chiffres dessinés :** ________________
+**Taux de reconnaissance :** ________________
+**Observations :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>## Conclusion
+
+### Apprentissages clés (3 points principaux)
+1. _________________________________________________________________
+2. _________________________________________________________________
+3. _________________________________________________________________
+
+### Questions soulevées
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>### Liens avec le projet final
+**Comment ces connaissances seront utiles pour le chatbot pédagogique :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>---
+**Temps consacré :** _______ minutes
+**Difficulté ressentie :** ⬜ Facile ⬜ Moyenne ⬜ Difficile
+</code></pre></div>
+<h3 id="phase-2-concepts-fondamentaux">Phase 2 : Concepts fondamentaux</h3>
+<div class="highlight"><pre><span></span><code><span class="gh"># 📋 Fiche d&#39;observations - Concepts fondamentaux du Deep Learning</span>
+
+<span class="gu">## Informations générales</span>
+<span class="gs">**Nom et prénom :**</span> ____________________________
+<span class="gs">**Date :**</span> ____________________________
+<span class="gs">**Groupe/Binôme :**</span> ____________________________
+
+<span class="gu">## Partie 1 : Comparaison ML classique vs Deep Learning</span>
+
+<span class="gu">### Tableau comparatif</span>
+| Aspect | Machine Learning (Random Forest) | Deep Learning (CNN) | Avantage |
+|--------|----------------------------------|---------------------|----------|
+| Préparation des données | | | |
+| Extraction de caractéristiques | | | |
+| Temps d&#39;entraînement | | | |
+| Précision sur données normales | | | |
+| Précision sur données bruitées | | | |
+| Facilité d&#39;implémentation | | | |
+| Interprétabilité | | | |
+
+<span class="gu">### Analyse comparative</span>
+<span class="gs">**Principal avantage du Deep Learning :**</span>
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>**Principal avantage du ML classique :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>**Quand choisir quelle approche :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 2 : Anatomie d&#39;un réseau de neurones
+
+### Exploration du neurone unique
+**Effet des poids sur la sortie :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>**Rôle du biais :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>**Impact de la fonction d&#39;activation :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>### Réseau multicouche
+**Propagation de l&#39;information :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>**Motifs d&#39;activation observés :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 3 : Processus d&#39;apprentissage
+
+### Mécanisme d&#39;entraînement
+**Étapes du processus d&#39;apprentissage :**
+1. _________________________________________________________________
+2. _________________________________________________________________
+3. _________________________________________________________________
+4. _________________________________________________________________
+
+**Évolution des poids pendant l&#39;entraînement :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>### Visualisation de l&#39;apprentissage
+**Observations sur l&#39;évolution de la frontière de décision :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 4 : Défi de généralisation
+
+### Tests sur données modifiées
+| Type de données | ML classique | Deep Learning | Meilleur |
+|-----------------|--------------|---------------|----------|
+| Données normales | | | |
+| Données bruitées | | | |
+| Données avec rotation | | | |
+
+### Analyse de la robustesse
+**Explication des différences observées :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>## Conclusion
+
+### Concepts maîtrisés
+**Neurone artificiel :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>**Réseau de neurones :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>**Apprentissage automatique :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>### Applications envisagées
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>---
+**Temps consacré :** _______ minutes
+**Difficulté ressentie :** ⬜ Facile ⬜ Moyenne ⬜ Difficile
+</code></pre></div>
+<h3 id="phase-3-mini-projet-individuel">Phase 3 : Mini-projet individuel</h3>
+<div class="highlight"><pre><span></span><code><span class="gh"># 📋 Fiche d&#39;observations - Mini-projet d&#39;amélioration</span>
+
+<span class="gu">## Informations générales</span>
+<span class="gs">**Nom et prénom :**</span> ____________________________
+<span class="gs">**Date :**</span> ____________________________
+<span class="gs">**Groupe/Binôme :**</span> ____________________________
+
+<span class="gu">## Partie 1 : Modèle de base</span>
+
+<span class="gu">### Caractéristiques initiales</span>
+| Élément | Valeur | Notes |
+|---------|--------|-------|
+| Architecture (nb couches) | | |
+| Nombre de paramètres | | |
+| Fonction d&#39;activation | | |
+| Optimiseur | | |
+| Précision test initiale | | |
+
+<span class="gu">### Performance de référence</span>
+<span class="gs">**Temps d&#39;entraînement :**</span> _______ minutes
+<span class="gs">**Analyse des courbes d&#39;apprentissage :**</span>
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 2 : Modifications effectuées
+
+### Modification 1
+**Type de modification :**
+⬜ Architecture ⬜ Hyperparamètres ⬜ Données ⬜ Autre
+
+**Description détaillée :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>**Justification du choix :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>**Résultats obtenus :**
+| Métrique | Avant | Après | Évolution |
+|----------|-------|-------|-----------|
+| Précision test | | | |
+| Temps d&#39;entraînement | | | |
+| Stabilité | | | |
+
+### Modification 2
+**Type de modification :**
+⬜ Architecture ⬜ Hyperparamètres ⬜ Données ⬜ Autre
+
+**Description détaillée :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>**Résultats obtenus :**
+| Métrique | Avant | Après | Évolution |
+|----------|-------|-------|-----------|
+| Précision test | | | |
+| Temps d&#39;entraînement | | | |
+| Stabilité | | | |
+
+## Partie 3 : Tests sur données dégradées
+
+### Performance comparée
+| Version modèle | Données normales | Données bruitées | Robustesse |
+|----------------|------------------|------------------|------------|
+| Modèle initial | | | |
+| Meilleure modification | | | |
+
+### Analyse des erreurs
+**Types d&#39;erreurs fréquentes :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>**Impact du bruit sur les prédictions :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 4 : Analyse et synthèse
+
+### Classement des modifications
+1. **Plus efficace :** _________________________________
+   **Raison :** ____________________________________________
+
+2. **Plus surprenante :** _______________________________
+   **Raison :** ____________________________________________
+
+3. **Moins utile :** ____________________________________
+   **Raison :** ____________________________________________
+
+### Compréhension acquise
+**Facteurs influençant les performances :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>**Stratégies d&#39;amélioration identifiées :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>## Conclusion
+
+### Enseignements principaux
+1. _________________________________________________________________
+2. _________________________________________________________________
+3. _________________________________________________________________
+
+### Applications futures
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>### Auto-évaluation
+**Maîtrise technique :** ⬜ Excellente ⬜ Bonne ⬜ Moyenne ⬜ À améliorer
+**Compréhension conceptuelle :** ⬜ Excellente ⬜ Bonne ⬜ Moyenne ⬜ À améliorer
+
+---
+**Temps consacré :** _______ minutes
+**Difficulté ressentie :** ⬜ Facile ⬜ Moyenne ⬜ Difficile
+</code></pre></div>
+<h2 id="module-2-architectures-specialisees">Module 2 : Architectures spécialisées</h2>
+<h3 id="phase-1-cnn">Phase 1 : CNN</h3>
+<div class="highlight"><pre><span></span><code><span class="gh"># 📋 Fiche d&#39;observations - Réseaux convolutifs (CNN)</span>
+
+<span class="gu">## Informations générales</span>
+<span class="gs">**Nom et prénom :**</span> ____________________________
+<span class="gs">**Date :**</span> ____________________________
+<span class="gs">**Groupe/Binôme :**</span> ____________________________
+
+<span class="gu">## Partie 1 : Tests de l&#39;application CNN</span>
+
+<span class="gu">### Tests pratiques</span>
+| Type de test | Nombre effectué | Réussites | Échecs | Taux de réussite |
+|--------------|-----------------|-----------|--------|------------------|
+| Dessin souris | | | | |
+| Images importées | | | | |
+
+<span class="gu">### Observations qualitatives</span>
+<span class="gs">**Chiffres les mieux reconnus :**</span> _____________________
+<span class="gs">**Chiffres les plus difficiles :**</span> ____________________
+<span class="gs">**Niveau de confiance moyen :**</span> ______________________
+
+<span class="gu">## Partie 2 : Analyse de l&#39;architecture</span>
+
+<span class="gu">### Structure du modèle</span>
+| Composant | Nombre | Paramètres | Fonction |
+|-----------|--------|------------|----------|
+| Couches Conv2D | | | |
+| Couches MaxPooling | | | |
+| Couches Dense | | | |
+| <span class="gs">**Total paramètres**</span> | | | |
+
+<span class="gu">### Fonctions d&#39;activation</span>
+<span class="gs">**Couches intermédiaires :**</span> ________________________
+<span class="gs">**Couche de sortie :**</span> ______________________________
+<span class="gs">**Justification du choix :**</span> 
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 3 : Visualisation des caractéristiques
+
+### Feature maps - Première couche
+**Types de caractéristiques détectées :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>### Feature maps - Couches profondes
+**Évolution des caractéristiques :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>### Interprétation des erreurs
+**Les feature maps aident-elles à comprendre les erreurs ?**
+⬜ Oui ⬜ Non ⬜ Partiellement
+
+**Explication :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 4 : Avantages et limitations
+
+### Points forts identifiés
+1. _________________________________________________________________
+2. _________________________________________________________________
+3. _________________________________________________________________
+
+### Limitations observées
+1. _________________________________________________________________
+2. _________________________________________________________________
+3. _________________________________________________________________
+
+### Propositions d&#39;amélioration
+1. _________________________________________________________________
+2. _________________________________________________________________
+
+## Partie 5 : Compréhension conceptuelle
+
+### Principe des convolutions
+**Fonctionnement et avantages :**
+</code></pre></div>
+<hr />
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>### Principe du pooling
+**Rôle et importance :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>### Transfer learning
+**Application possible à ce problème :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 6 : Applications professionnelles
+
+### Cas d&#39;usage identifiés
+1. **Contexte :** ____________________________________________
+   **Application :** __________________________________________
+
+2. **Contexte :** ____________________________________________
+   **Application :** __________________________________________
+
+### Extension à d&#39;autres domaines
+**Adaptations nécessaires :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>## Conclusion
+
+### Impact sur la compréhension
+**Nouveaux apprentissages :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>### Pertinence pour le chatbot
+**Utilité pour le projet final :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>### Auto-évaluation
+| Critère | Excellent | Bon | Moyen | À améliorer |
+|---------|-----------|-----|-------|-------------|
+| Compréhension CNN | ⬜ | ⬜ | ⬜ | ⬜ |
+| Analyse technique | ⬜ | ⬜ | ⬜ | ⬜ |
+| Propositions d&#39;amélioration | ⬜ | ⬜ | ⬜ | ⬜ |
+
+---
+**Temps consacré :** _______ minutes
+**Difficulté ressentie :** ⬜ Facile ⬜ Moyenne ⬜ Difficile
+</code></pre></div>
+<h3 id="phase-2-rnn">Phase 2 : RNN</h3>
+<div class="highlight"><pre><span></span><code><span class="gh"># 📋 Fiche d&#39;observations - Réseaux récurrents (RNN/LSTM)</span>
+
+<span class="gu">## Informations générales</span>
+<span class="gs">**Nom et prénom :**</span> ____________________________
+<span class="gs">**Date :**</span> ____________________________
+<span class="gs">**Groupe/Binôme :**</span> ____________________________
+
+<span class="gu">## Partie 1 : Principes des RNN/LSTM</span>
+
+<span class="gu">### Concepts fondamentaux</span>
+<span class="gs">**Différence avec les réseaux classiques :**</span>
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>**Intérêt pour les données textuelles :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>### Mécanisme LSTM
+| Composant | Fonction | Analogie |
+|-----------|----------|----------|
+| Porte d&#39;oubli | | |
+| Porte d&#39;entrée | | |
+| Porte de sortie | | |
+| Cellule mémoire | | |
+
+## Partie 2 : Implémentation et résultats
+
+### Architecture du modèle
+| Couche | Taille/Paramètres | Fonction |
+|--------|-------------------|----------|
+| Embedding | | |
+| LSTM | | |
+| Dense | | |
+| **Total paramètres** | | |
+
+### Performance
+| Métrique | Entraînement | Validation | Test |
+|----------|--------------|------------|------|
+| Précision | | | |
+| Perte | | | |
+
+**Temps d&#39;entraînement :** _______ minutes
+
+## Partie 3 : Analyse des embeddings
+
+### Visualisation des mots
+**Observations sur les clusters :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>**Différences mots positifs/négatifs :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 4 : Compréhension contextuelle
+
+### Exemples de contexte crucial
+| Phrase | Sentiment | Explication contexte |
+|--------|-----------|---------------------|
+| | | |
+| | | |
+| | | |
+
+### Avantages des LSTM
+**Comparaison avec approche mots-clés :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 5 : Comparaisons et limitations
+
+### LSTM vs autres approches
+| Aspect | LSTM | Mots-clés | Mistral AI |
+|--------|------|-----------|------------|
+| Contexte | | | |
+| Négations | | | |
+| Nuances | | | |
+| Rapidité | | | |
+
+### Limitations identifiées
+**Cas d&#39;échec du LSTM :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>**Améliorations possibles :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 6 : Applications pratiques
+
+### Cas d&#39;usage professionnels
+1. **Domaine :** ____________________________________________
+   **Application :** _________________________________________
+
+2. **Domaine :** ____________________________________________
+   **Application :** _________________________________________
+
+3. **Domaine :** ____________________________________________
+   **Application :** _________________________________________
+
+### Extensions envisagées
+**Architectures plus performantes :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>## Conclusion
+
+### Apprentissages clés
+**Spécificités des RNN/LSTM :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>### Comparaison CNN vs RNN
+**Différences d&#39;approche :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>**Architecture préférée et pourquoi :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>### Auto-évaluation
+| Critère | Excellent | Bon | Moyen | À améliorer |
+|---------|-----------|-----|-------|-------------|
+| Compréhension RNN/LSTM | ⬜ | ⬜ | ⬜ | ⬜ |
+| Analyse embeddings | ⬜ | ⬜ | ⬜ | ⬜ |
+| Applications identifiées | ⬜ | ⬜ | ⬜ | ⬜ |
+
+---
+**Temps consacré :** _______ minutes
+**Difficulté ressentie :** ⬜ Facile ⬜ Moyenne ⬜ Difficile
+</code></pre></div>
+<h2 id="module-3-applications-professionnelles">Module 3 : Applications professionnelles</h2>
+<div class="highlight"><pre><span></span><code><span class="gh"># 📋 Fiche d&#39;observations - Applications professionnelles</span>
+
+<span class="gu">## Informations générales</span>
+<span class="gs">**Nom et prénom :**</span> ____________________________
+<span class="gs">**Date :**</span> ____________________________
+<span class="gs">**Groupe/Binôme :**</span> ____________________________
+
+<span class="gu">## Partie 1 : Système de tickets intelligent</span>
+
+<span class="gu">### Tests de classification</span>
+| Description demande | Catégorie détectée | Priorité | Pertinence |
+|---------------------|-------------------|----------|------------|
+| | | | ⬜ ⬜ ⬜ |
+| | | | ⬜ ⬜ ⬜ |
+| | | | ⬜ ⬜ ⬜ |
+| | | | ⬜ ⬜ ⬜ |
+
+<span class="ge">*Pertinence : ⬜ Excellente ⬜ Bonne ⬜ Moyenne*</span>
+
+<span class="gu">### Personnalisation effectuée</span>
+<span class="gs">**Catégories ajoutées/modifiées :**</span>
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>**Logique de priorité adaptée :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>### Impact professionnel
+**Applications en entreprise :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 2 : Assistant documentation
+
+### Tests d&#39;amélioration
+| Documentation originale | Type amélioration | Résultat | Qualité |
+|------------------------|-------------------|----------|---------|
+| | | | ⬜ ⬜ ⬜ |
+| | | | ⬜ ⬜ ⬜ |
+| | | | ⬜ ⬜ ⬜ |
+
+*Qualité : ⬜ Excellente ⬜ Bonne ⬜ Moyenne*
+
+### Personnalisation SIO
+**Type &quot;procédure SIO&quot; développé :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>**Exemple de résultat obtenu :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>### Contexte professionnel
+**Types de documentation bénéficiant le plus :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 3 : Intégration technique
+
+### API et fonctionnement
+**Structure des requêtes API :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>**Gestion des erreurs observée :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>### Code et adaptation
+**Modifications apportées au code :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>**Difficultés rencontrées :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 4 : Analyse comparative
+
+### Efficacité des solutions
+| Application | Gain de temps | Qualité résultat | Facilité usage |
+|-------------|---------------|------------------|----------------|
+| Tickets | ⬜ ⬜ ⬜ | ⬜ ⬜ ⬜ | ⬜ ⬜ ⬜ |
+| Documentation | ⬜ ⬜ ⬜ | ⬜ ⬜ ⬜ | ⬜ ⬜ ⬜ |
+
+*Échelle : ⬜ Faible ⬜ Moyen ⬜ Élevé*
+
+### Limitations identifiées
+**Système de tickets :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>**Assistant documentation :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 5 : Perspectives professionnelles
+
+### Compétences développées
+| Compétence BTS SIO | Comment développée |
+|--------------------|-------------------|
+| B1.3 | |
+| B2.2 | |
+| B2.3 | |
+| B3.1 | |
+
+### Applications futures
+**En stage/entreprise :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>**Pour le projet chatbot :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>## Conclusion
+
+### Enseignements principaux
+1. _________________________________________________________________
+2. _________________________________________________________________
+3. _________________________________________________________________
+
+### Idées d&#39;amélioration
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>### Préparation projet final
+**Éléments à réutiliser :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>### Auto-évaluation
+| Critère | Excellent | Bon | Moyen | À améliorer |
+|---------|-----------|-----|-------|-------------|
+| Intégration API | ⬜ | ⬜ | ⬜ | ⬜ |
+| Personnalisation | ⬜ | ⬜ | ⬜ | ⬜ |
+| Vision professionnelle | ⬜ | ⬜ | ⬜ | ⬜ |
+
+---
+**Temps consacré :** _______ minutes
+**Difficulté ressentie :** ⬜ Facile ⬜ Moyenne ⬜ Difficile
+</code></pre></div>
+<h2 id="module-4-projet-integrateur">Module 4 : Projet intégrateur</h2>
+<p><div class="highlight"><pre><span></span><code><span class="gh"># 📋 Fiche d&#39;observations - Projet chatbot pédagogique</span>
+
+<span class="gu">## Informations générales</span>
+<span class="gs">**Nom et prénom :**</span> ____________________________
+<span class="gs">**Date :**</span> ____________________________
+<span class="gs">**Groupe/Binôme :**</span> ____________________________
+<span class="gs">**Répartition des rôles :**</span> ____________________________
+
+<span class="gu">## Partie 1 : Conception et planification</span>
+
+<span class="gu">### Architecture choisie</span>
+<span class="gs">**Schéma de l&#39;architecture :**</span>
+</code></pre></div>
+[Espace pour schéma]
+<div class="highlight"><pre><span></span><code>### Technologies utilisées
+| Composant | Technologie | Justification |
+|-----------|-------------|---------------|
+| Frontend | | |
+| Backend | | |
+| API | | |
+| Base connaissances | | |
+
+### Répartition du travail
+**Membre 1 :** _______________________________________________
+**Membre 2 :** _______________________________________________
+
+## Partie 2 : Développement
+
+### Fonctionnalités implémentées
+| Fonctionnalité | Statut | Temps consacré | Difficulté |
+|----------------|--------|----------------|------------|
+| Interface chat | ⬜ ⬜ ⬜ | | ⬜ ⬜ ⬜ |
+| Intégration API | ⬜ ⬜ ⬜ | | ⬜ ⬜ ⬜ |
+| Base connaissances | ⬜ ⬜ ⬜ | | ⬜ ⬜ ⬜ |
+| Fonctions pédago | ⬜ ⬜ ⬜ | | ⬜ ⬜ ⬜ |
+
+*Statut : ⬜ Non fait ⬜ Partiel ⬜ Complet*
+*Difficulté : ⬜ Facile ⬜ Moyen ⬜ Difficile*
+
+### Défis techniques rencontrés
+1. **Problème :** _____________________________________________
+   **Solution :** _____________________________________________
+
+2. **Problème :** _____________________________________________
+   **Solution :** _____________________________________________
+
+### Base de connaissances
+**Nombre de concepts couverts :** __________________________
+**Structure adoptée :**
+</code></pre></div></p>
+<hr />
+<div class="highlight"><pre><span></span><code>## Partie 3 : Tests et validation
+
+### Tests fonctionnels
+| Scénario de test | Résultat | Qualité réponse |
+|------------------|----------|-----------------|
+| Question simple | ⬜ ⬜ | ⬜ ⬜ ⬜ |
+| Question complexe | ⬜ ⬜ | ⬜ ⬜ ⬜ |
+| Contexte conversation | ⬜ ⬜ | ⬜ ⬜ ⬜ |
+| Erreur/incompréhension | ⬜ ⬜ | ⬜ ⬜ ⬜ |
+
+*Résultat : ⬜ OK ⬜ KO*
+*Qualité : ⬜ Excellente ⬜ Bonne ⬜ Moyenne*
+
+### Performance technique
+**Temps de réponse moyen :** ____________________________
+**Stabilité :** ⬜ Excellent ⬜ Bon ⬜ Problématique
+**Gestion des erreurs :** ⬜ Excellent ⬜ Bon ⬜ Problématique
+
+## Partie 4 : Qualité pédagogique
+
+### Adaptation au niveau
+**Le chatbot adapte-t-il ses réponses ?** ⬜ Oui ⬜ Non ⬜ Partiellement
+
+**Exemples d&#39;adaptation observés :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>### Pertinence des explications
+**Clarté des explications :** ⬜ ⬜ ⬜ ⬜
+**Pertinence des exemples :** ⬜ ⬜ ⬜ ⬜
+**Utilité des analogies :** ⬜ ⬜ ⬜ ⬜
+
+*Échelle : ⬜ Excellente ⬜ Bonne ⬜ Moyenne ⬜ Faible*
+
+## Partie 5 : Évaluation globale
+
+### Points forts du projet
+1. _________________________________________________________________
+2. _________________________________________________________________
+3. _________________________________________________________________
+
+### Limitations identifiées
+1. _________________________________________________________________
+2. _________________________________________________________________
+3. _________________________________________________________________
+
+### Améliorations futures
+1. _________________________________________________________________
+2. _________________________________________________________________
+
+## Partie 6 : Bilan personnel
+
+### Compétences développées
+**Techniques :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>**Travail en équipe :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>**Gestion de projet :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>### Difficultés surmontées
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>### Satisfaction du résultat
+**Note personnelle :** _____ / 10
+**Justification :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>## Conclusion
+
+### Objectifs atteints
+⬜ Complètement ⬜ Largement ⬜ Partiellement ⬜ Insuffisamment
+
+### Apprentissages du parcours complet
+**Module le plus formateur :** ____________________________
+**Concept le mieux maîtrisé :** ___________________________
+**Application professionnelle envisagée :**
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code>### Auto-évaluation finale
+| Critère | Excellent | Bon | Moyen | À améliorer |
+|---------|-----------|-----|-------|-------------|
+| Maîtrise technique | ⬜ | ⬜ | ⬜ | ⬜ |
+| Qualité du livrable | ⬜ | ⬜ | ⬜ | ⬜ |
+| Travail d&#39;équipe | ⬜ | ⬜ | ⬜ | ⬜ |
+| Vision professionnelle | ⬜ | ⬜ | ⬜ | ⬜ |
+
+---
+**Temps total consacré :** _______ heures
+**Projet recommandé à d&#39;autres étudiants :** ⬜ Oui ⬜ Non
+**Commentaire final :**
+</code></pre></div>
+<hr />
+<hr />
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<h2 id="navigation-harmonisee">Navigation harmonisée</h2>
+<h3 id="boutons-standardises-pour-toutes-les-fiches">Boutons standardisés pour toutes les fiches</h3>
+<h2 id="markdown">```markdown</h2>
+<h2 id="ressources-complementaires">📚 Ressources complémentaires</h2>
+<ul>
+<li><a href="../glossaire-dl/">Glossaire du Deep Learning</a></li>
+<li><a href="../guide-colab/">Guide d'utilisation Colab</a></li>
+<li><a href="ressources/synthese-module[X].md">Synthèse du module</a></li>
+</ul>
+<h2 id="navigation">🔗 Navigation</h2>
+<p><a class="md-button" href="../module[X]/index.md">⬅️ Retour au Module [X]</a>
+[➡️ Continuer vers Module [X+1]](../module</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 Atelier-deeplearning
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/votre-repo/chatbot-deeplearning" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../../javascripts/progress.js"></script>
+      
+    
+  </body>
+</html>

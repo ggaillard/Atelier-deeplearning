@@ -1,0 +1,2941 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cours de Deep Learning pour le BTS SIO">
+      
+      
+        <meta name="author" content="G.GAILLARD">
+      
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../phase1-developpement-securise/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>0 - Analyse des risques - Atelier Deep Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/progress.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#phase-0-analyse-des-risques-securitaires-30-min" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="Atelier Deep Learning" class="md-header__button md-logo" aria-label="Atelier Deep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Atelier Deep Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              0 - Analyse des risques
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../module1/" class="md-tabs__link">
+          
+  
+  
+  Module 1 - Fondamentaux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../module2/" class="md-tabs__link">
+          
+  
+  
+  Module 2 - Architectures
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../module3/" class="md-tabs__link">
+          
+  
+  
+  Module 3 - Applications
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  Module 4 - Projet Sécurisé
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../evaluation/criteres-evaluation/" class="md-tabs__link">
+          
+  
+  
+  Évaluation et Suivi
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Atelier Deep Learning" class="md-nav__button md-logo" aria-label="Atelier Deep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Atelier Deep Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 1 - Fondamentaux
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module 1 - Fondamentaux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module1/introduction-pratique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 - Introduction pratique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module1/concepts-fondamentaux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 - Concepts fondamentaux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module1/mini-projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 - Mini-projet individuel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module1/qcm-evaluation-module1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module1/ressources/glossaire-dl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossaire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module1/ressources/guide-colab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide Colab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module1/ressources/synthese-module1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synthèse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 2 - Architectures
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Module 2 - Architectures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module2/reseaux-convolutifs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 - Réseaux convolutifs (CNN)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module2/reseaux-recurrents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 - Réseaux récurrents (RNN)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module2/qcm-evaluation-module2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module1/ressources/glossaire-dl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossaire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module2/ressources/synthese-module2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synthèse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 3 - Applications
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module 3 - Applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/systeme-tickets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 - Système de tickets intelligent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/assistant-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 - Assistant de documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/qcm-evaluation-module3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ressources/base-connaissances/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Base de connaissances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ressources/api-mistral.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Mistral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/ressources/fiche-observations.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fiche d'observations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../module3/ressources/synthese-module3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synthèse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 4 - Projet Sécurisé
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module 4 - Projet Sécurisé
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Phases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Phases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    0 - Analyse des risques
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    0 - Analyse des risques
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs-de-la-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Objectifs de la phase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#approche-methodologique" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Approche méthodologique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fiche-dobservations-a-completer" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Fiche d'observations à compléter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-1-cartographie-des-menaces-10-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Exercice 1 : Cartographie des menaces (10 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Exercice 1 : Cartographie des menaces (10 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contexte-danalyse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexte d'analyse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions-danalyse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions d'analyse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenarios-a-analyser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scénarios à analyser
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions-danalyse-a-documenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions d'analyse à documenter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-classification-des-vulnerabilites-10-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Exercice 2 : Classification des vulnérabilités (10 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Exercice 2 : Classification des vulnérabilités (10 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methodologie-de-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Méthodologie de classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions-de-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions de classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vulnerabilites-a-classer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vulnérabilités à classer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions-danalyse-pour-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions d'analyse pour classification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-3-audit-de-conformite-rgpd-10-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Exercice 3 : Audit de conformité RGPD (10 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Exercice 3 : Audit de conformité RGPD (10 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contexte-reglementaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexte réglementaire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions-daudit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions d'audit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checklist-de-conformite-a-valider" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checklist de conformité à valider
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions-daudit-rgpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions d'audit RGPD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#livrable-matrice-risqueimpact-et-synthese" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Livrable : Matrice risque/impact et synthèse
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Livrable : Matrice risque/impact et synthèse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matrice-risqueimpact-a-completer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrice risque/impact à compléter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions-de-synthese-strategique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions de synthèse stratégique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion-de-la-phase-danalyse" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Conclusion de la phase d'analyse
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Conclusion de la phase d&#39;analyse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#livrables-attendus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Livrables attendus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-vers-la-phase-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transition vers la Phase 1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources-pour-approfondir" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Ressources pour approfondir
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase1-developpement-securise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 - Développement sécurisé
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase2-audit-securite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 - Audit de sécurité
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase3-presentation-securisee/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 - Présentation sécurisée
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qcm-evaluation-module4-securite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4_1" id="__nav_5_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kit d'analyse sécuritaire
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Kit d'analyse sécuritaire
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/kit-analyse-securitaire/scenarios-attaques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scénarios d'attaques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/kit-analyse-securitaire/outils-validation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Outils de validation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/kit-analyse-securitaire/templates-audit.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Templates d'audit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4_2" id="__nav_5_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Livrables
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Livrables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../livrables/rapport-analyse-risques-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template rapport d'analyse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../livrables/audit-securite-complet-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template audit complet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/synthese-module4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synthèse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Évaluation et Suivi
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Évaluation et Suivi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evaluation/criteres-evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Critères d'évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../suivi-progression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Suivi de progression
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Formulaire de feedback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs-de-la-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Objectifs de la phase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#approche-methodologique" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Approche méthodologique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fiche-dobservations-a-completer" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Fiche d'observations à compléter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-1-cartographie-des-menaces-10-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Exercice 1 : Cartographie des menaces (10 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Exercice 1 : Cartographie des menaces (10 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contexte-danalyse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexte d'analyse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions-danalyse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions d'analyse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenarios-a-analyser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scénarios à analyser
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions-danalyse-a-documenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions d'analyse à documenter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-classification-des-vulnerabilites-10-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Exercice 2 : Classification des vulnérabilités (10 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Exercice 2 : Classification des vulnérabilités (10 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methodologie-de-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Méthodologie de classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions-de-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions de classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vulnerabilites-a-classer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vulnérabilités à classer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions-danalyse-pour-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions d'analyse pour classification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-3-audit-de-conformite-rgpd-10-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Exercice 3 : Audit de conformité RGPD (10 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Exercice 3 : Audit de conformité RGPD (10 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contexte-reglementaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexte réglementaire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions-daudit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions d'audit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checklist-de-conformite-a-valider" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checklist de conformité à valider
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions-daudit-rgpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions d'audit RGPD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#livrable-matrice-risqueimpact-et-synthese" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Livrable : Matrice risque/impact et synthèse
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Livrable : Matrice risque/impact et synthèse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matrice-risqueimpact-a-completer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrice risque/impact à compléter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions-de-synthese-strategique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions de synthèse stratégique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion-de-la-phase-danalyse" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Conclusion de la phase d'analyse
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Conclusion de la phase d&#39;analyse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#livrables-attendus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Livrables attendus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-vers-la-phase-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transition vers la Phase 1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources-pour-approfondir" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Ressources pour approfondir
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="phase-0-analyse-des-risques-securitaires-30-min">🔍 Phase 0 : Analyse des risques sécuritaires (30 min)</h1>
+<p><img alt="Analyse des risques" src="../images/banner-analyse-risques-chatbot.svg" /></p>
+<h2 id="objectifs-de-la-phase">🎯 Objectifs de la phase</h2>
+<p>Dans cette phase d'analyse, vous allez :</p>
+<ul>
+<li>Cartographier les menaces spécifiques aux chatbots IA pédagogiques</li>
+<li>Classer les vulnérabilités selon leur criticité et leur impact</li>
+<li>Auditer la conformité RGPD d'un système conversationnel</li>
+<li>Établir une matrice risque/impact pour prioriser les actions sécuritaires</li>
+</ul>
+<h2 id="approche-methodologique">🧠 Approche méthodologique</h2>
+<p>Cette phase développe votre <strong>expertise d'analyste cybersécurité IA</strong> sans nécessiter de programmation. Vous analyserez, classerez et prioriserez les risques selon les standards professionnels de sécurité.</p>
+<h2 id="fiche-dobservations-a-completer">📋 Fiche d'observations à compléter</h2>
+<blockquote>
+<p><strong>IMPORTANT</strong> : Tout au long de cette phase, vous devrez compléter votre <strong>Rapport d'analyse des risques</strong> qui sera votre livrable principal.</p>
+<p>📥 <strong>Téléchargez et consultez le 📋 <a href="../../livrables/rapport-analyse-risques-template/">template de rapport d'analyse</a> dès maintenant</strong> pour structurer votre analyse.</p>
+</blockquote>
+<h2 id="exercice-1-cartographie-des-menaces-10-min">🔍 Exercice 1 : Cartographie des menaces (10 min)</h2>
+<h3 id="contexte-danalyse">Contexte d'analyse</h3>
+<p>Vous devez analyser la sécurité d'un chatbot pédagogique qui :
+- Utilise l'API Mistral AI pour générer des réponses
+- Stocke une base de connaissances sur le Deep Learning
+- Interagit avec des étudiants via une interface web
+- Traite des données d'apprentissage et d'interaction</p>
+<h3 id="instructions-danalyse">Instructions d'analyse</h3>
+<ol>
+<li><strong>Ouvrez et étudiez</strong> les <a href="../../ressources/kit-analyse-securitaire/scenarios-attaques/">5 scénarios d'attaque fournis</a></li>
+<li><strong>Analysez chaque scénario</strong> selon ces critères :</li>
+<li>Vecteur d'attaque utilisé</li>
+<li>Assets ciblés (données, système, utilisateurs)</li>
+<li>Impact potentiel (confidentialité, intégrité, disponibilité)</li>
+<li>Facilité d'exploitation (niveau technique requis)</li>
+</ol>
+<h3 id="scenarios-a-analyser">Scénarios à analyser</h3>
+<table>
+<thead>
+<tr>
+<th>Scénario</th>
+<th>Type d'attaque</th>
+<th>À analyser</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scénario 1</strong></td>
+<td>Injection de prompts</td>
+<td>Tentative de contournement des instructions système</td>
+</tr>
+<tr>
+<td><strong>Scénario 2</strong></td>
+<td>Fuite de données</td>
+<td>Exposition de la base de connaissances interne</td>
+</tr>
+<tr>
+<td><strong>Scénario 3</strong></td>
+<td>Compromission API</td>
+<td>Utilisation frauduleuse de la clé Mistral AI</td>
+</tr>
+<tr>
+<td><strong>Scénario 4</strong></td>
+<td>Empoisonnement de données</td>
+<td>Corruption des réponses pédagogiques</td>
+</tr>
+<tr>
+<td><strong>Scénario 5</strong></td>
+<td>Déni de service</td>
+<td>Surcharge du système par requêtes malveillantes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="questions-danalyse-a-documenter">Questions d'analyse à documenter</h3>
+<p>Pour chaque scénario, répondez dans votre rapport :</p>
+<ol>
+<li><strong>Vecteur d'attaque</strong> : Comment l'attaque est-elle menée techniquement ?</li>
+<li><strong>Assets impactés</strong> : Quels éléments du système sont ciblés ?</li>
+<li><strong>Impact métier</strong> : Quelles conséquences pour l'établissement et les étudiants ?</li>
+<li><strong>Probabilité</strong> : Cette attaque est-elle probable dans votre contexte ?</li>
+<li><strong>Détection</strong> : Comment identifier cette attaque en cours ?</li>
+</ol>
+<h2 id="exercice-2-classification-des-vulnerabilites-10-min">✅ Exercice 2 : Classification des vulnérabilités (10 min)</h2>
+<h3 id="methodologie-de-classification">Méthodologie de classification</h3>
+<p>Utilisez la <a href="../../ressources/guides-securitaires/guide-cartographie-menaces/">grille de classification CVSS adaptée IA</a> pour évaluer 15 vulnérabilités identifiées.</p>
+<h3 id="instructions-de-classification">Instructions de classification</h3>
+<ol>
+<li><strong>Consultez la liste</strong> des <a href="../../ressources/outils-validation/liste-15-vulnerabilites/">15 vulnérabilités courantes</a></li>
+<li><strong>Classez chaque vulnérabilité</strong> selon :</li>
+<li><strong>Criticité</strong> : Critique / Élevée / Moyenne / Faible</li>
+<li><strong>Facilité d'exploitation</strong> : Facile / Moyenne / Difficile</li>
+<li><strong>Impact</strong> : Élevé / Moyen / Faible</li>
+</ol>
+<h3 id="vulnerabilites-a-classer">Vulnérabilités à classer</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Vulnérabilité</th>
+<th>Votre classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V01</td>
+<td>Clé API Mistral stockée en dur dans le code</td>
+<td></td>
+</tr>
+<tr>
+<td>V02</td>
+<td>Absence de validation des entrées utilisateur</td>
+<td></td>
+</tr>
+<tr>
+<td>V03</td>
+<td>Logs contenant des données personnelles</td>
+<td></td>
+</tr>
+<tr>
+<td>V04</td>
+<td>Interface admin sans authentification forte</td>
+<td></td>
+</tr>
+<tr>
+<td>V05</td>
+<td>Base de connaissances modifiable sans contrôle</td>
+<td></td>
+</tr>
+<tr>
+<td>V06</td>
+<td>Absence de rate limiting sur les requêtes</td>
+<td></td>
+</tr>
+<tr>
+<td>V07</td>
+<td>Messages d'erreur exposant des informations système</td>
+<td></td>
+</tr>
+<tr>
+<td>V08</td>
+<td>Sauvegarde des conversations sans chiffrement</td>
+<td></td>
+</tr>
+<tr>
+<td>V09</td>
+<td>Absence de monitoring des tentatives d'injection</td>
+<td></td>
+</tr>
+<tr>
+<td>V10</td>
+<td>Configuration serveur avec privilèges excessifs</td>
+<td></td>
+</tr>
+<tr>
+<td>V11</td>
+<td>Absence de validation de l'intégrité des réponses</td>
+<td></td>
+</tr>
+<tr>
+<td>V12</td>
+<td>Cookies de session sans flags de sécurité</td>
+<td></td>
+</tr>
+<tr>
+<td>V13</td>
+<td>Communication HTTP non chiffrée</td>
+<td></td>
+</tr>
+<tr>
+<td>V14</td>
+<td>Absence de procédure de révocation d'accès</td>
+<td></td>
+</tr>
+<tr>
+<td>V15</td>
+<td>Stockage de métadonnées sans anonymisation</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="questions-danalyse-pour-classification">Questions d'analyse pour classification</h3>
+<ol>
+<li><strong>Quel est votre top 5 des vulnérabilités les plus critiques ?</strong></li>
+<li><strong>Quelles vulnérabilités sont spécifiques aux systèmes IA ?</strong></li>
+<li><strong>Lesquelles peuvent être exploitées sans compétences techniques ?</strong></li>
+<li><strong>Quels sont les liens entre ces vulnérabilités (chaîne d'exploitation) ?</strong></li>
+</ol>
+<h2 id="exercice-3-audit-de-conformite-rgpd-10-min">📋 Exercice 3 : Audit de conformité RGPD (10 min)</h2>
+<h3 id="contexte-reglementaire">Contexte réglementaire</h3>
+<p>Le chatbot pédagogique traite des données personnelles d'étudiants. Vous devez auditer sa conformité RGPD selon une approche systématique.</p>
+<h3 id="instructions-daudit">Instructions d'audit</h3>
+<p>Utilisez la <a href="../../ressources/outils-validation/checklist-rgpd-20-points/">checklist RGPD 20 points</a> pour auditer le système.</p>
+<h3 id="checklist-de-conformite-a-valider">Checklist de conformité à valider</h3>
+<table>
+<thead>
+<tr>
+<th>Point de contrôle</th>
+<th>Conforme</th>
+<th>Non-conforme</th>
+<th>N/A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Base légale</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1. Base légale identifiée pour le traitement</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. Information des utilisateurs sur la finalité</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. Consentement explicite si nécessaire</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Droits des personnes</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4. Droit d'accès aux données implémenté</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5. Droit de rectification possible</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6. Droit à l'effacement (droit à l'oubli)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7. Droit à la portabilité des données</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Sécurité technique</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8. Chiffrement des données en transit</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9. Chiffrement des données au repos</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10. Contrôle d'accès avec authentification forte</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11. Journalisation des accès aux données</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Gouvernance</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12. Politique de rétention des données définie</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>13. Procédure de notification de violation</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>14. Analyse d'impact (AIPD) réalisée si nécessaire</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15. DPO consulté ou désigné</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Tiers et transferts</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16. Contrat avec Mistral AI conforme RGPD</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>17. Transferts hors UE sécurisés (adequacy decision)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>18. Sous-traitants RGPD-compliant</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Documentation</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>19. Registre des traitements tenu à jour</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>20. Politique de confidentialité accessible</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="questions-daudit-rgpd">Questions d'audit RGPD</h3>
+<ol>
+<li><strong>Quel est votre score de conformité global ?</strong> (X/20)</li>
+<li><strong>Quels sont les 3 points de non-conformité les plus critiques ?</strong></li>
+<li><strong>Quelles données personnelles sont traitées par le chatbot ?</strong></li>
+<li><strong>Comment garantir la minimisation des données collectées ?</strong></li>
+<li><strong>Quelles mesures techniques renforcent la privacy by design ?</strong></li>
+</ol>
+<h2 id="livrable-matrice-risqueimpact-et-synthese">📊 Livrable : Matrice risque/impact et synthèse</h2>
+<h3 id="matrice-risqueimpact-a-completer">Matrice risque/impact à compléter</h3>
+<p>Positionnez chaque menace analysée selon :
+- <strong>Axe horizontal</strong> : Probabilité (Faible / Moyenne / Élevée)
+- <strong>Axe vertical</strong> : Impact (Faible / Moyen / Élevé)</p>
+<div class="highlight"><pre><span></span><code>        Impact
+    Élevé  |  ?  |  ?  |  ?  |
+    Moyen  |  ?  |  ?  |  ?  |
+    Faible |  ?  |  ?  |  ?  |
+           +-----+-----+-----+
+           Faible Moyen Élevé
+                Probabilité
+</code></pre></div>
+<h3 id="questions-de-synthese-strategique">Questions de synthèse stratégique</h3>
+<ol>
+<li><strong>Quelles menaces nécessitent une action immédiate ?</strong> (quadrant élevé/élevé)</li>
+<li><strong>Quels risques surveiller régulièrement ?</strong> (quadrant moyen)</li>
+<li><strong>Comment prioriser vos investissements sécuritaires ?</strong></li>
+<li><strong>Quel budget sécurité recommandez-vous ?</strong> (% du budget projet)</li>
+<li><strong>Quelles compétences sécuritaires développer dans l'équipe ?</strong></li>
+</ol>
+<h2 id="conclusion-de-la-phase-danalyse">🎯 Conclusion de la phase d'analyse</h2>
+<h3 id="livrables-attendus">Livrables attendus</h3>
+<p>À l'issue de cette phase, vous devez avoir complété :</p>
+<ol>
+<li>✅ <strong>Cartographie des 5 menaces principales</strong> avec analyse détaillée</li>
+<li>✅ <strong>Classification des 15 vulnérabilités</strong> par criticité</li>
+<li>✅ <strong>Audit RGPD</strong> avec score de conformité</li>
+<li>✅ <strong>Matrice risque/impact</strong> avec recommandations stratégiques</li>
+</ol>
+<h3 id="transition-vers-la-phase-1">Transition vers la Phase 1</h3>
+<p>Les risques identifiés dans cette phase guideront les tests de sécurité et validations de la Phase 1. Votre analyse servira de référentiel pour prioriser les mesures de protection à implémenter.</p>
+<h2 id="ressources-pour-approfondir">📚 Ressources pour approfondir</h2>
+<ul>
+<li><a href="https://cyber.gouv.fr">Guide ANSSI - Sécurité des systèmes d'IA</a> - Référentiel français officiel</li>
+<li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/">OWASP Top 10 for LLM Applications</a> - Vulnérabilités courantes des LLM</li>
+<li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework</a> - Framework de gestion des risques IA</li>
+</ul>
+<p><a class="md-button" href="../../">Retour au Module 4</a>
+<a class="md-button md-button--primary" href="../phase1-developpement-securise/">Continuer vers la Phase 1 : Développement sécurisé</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 Atelier-deeplearning
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/votre-repo/chatbot-deeplearning" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../../javascripts/progress.js"></script>
+      
+    
+  </body>
+</html>

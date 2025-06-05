@@ -1,0 +1,3143 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cours de Deep Learning pour le BTS SIO">
+      
+      
+        <meta name="author" content="G.GAILLARD">
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../assistant-documentation/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>1 - Système de tickets intelligent - Atelier Deep Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/progress.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#phase-1-systeme-de-tickets-intelligent-2h" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Atelier Deep Learning" class="md-header__button md-logo" aria-label="Atelier Deep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Atelier Deep Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1 - Système de tickets intelligent
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module1/" class="md-tabs__link">
+          
+  
+  
+  Module 1 - Fondamentaux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module2/" class="md-tabs__link">
+          
+  
+  
+  Module 2 - Architectures
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Module 3 - Applications
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module4/" class="md-tabs__link">
+          
+  
+  
+  Module 4 - Projet Sécurisé
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../evaluation/criteres-evaluation/" class="md-tabs__link">
+          
+  
+  
+  Évaluation et Suivi
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Atelier Deep Learning" class="md-nav__button md-logo" aria-label="Atelier Deep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Atelier Deep Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 1 - Fondamentaux
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module 1 - Fondamentaux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/introduction-pratique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 - Introduction pratique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/concepts-fondamentaux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 - Concepts fondamentaux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/mini-projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 - Mini-projet individuel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/qcm-evaluation-module1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/ressources/glossaire-dl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossaire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/ressources/guide-colab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide Colab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/ressources/synthese-module1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synthèse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 2 - Architectures
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Module 2 - Architectures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/reseaux-convolutifs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 - Réseaux convolutifs (CNN)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/reseaux-recurrents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 - Réseaux récurrents (RNN)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/qcm-evaluation-module2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/ressources/glossaire-dl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossaire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/ressources/synthese-module2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synthèse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 3 - Applications
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module 3 - Applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    1 - Système de tickets intelligent
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 - Système de tickets intelligent
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs-de-la-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Objectifs de la phase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-au-systeme-de-tickets-20-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Introduction au système de tickets (20 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Introduction au système de tickets (20 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quest-ce-quun-systeme-de-tickets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qu'est-ce qu'un système de tickets ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comment-lia-ameliore-le-processus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comment l'IA améliore le processus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demonstration-du-systeme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Démonstration du système
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-de-vos-observations" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Documentation de vos observations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-de-lapplication-15-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Structure de l'application (15 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Structure de l&#39;application (15 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnement-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctionnement général
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploration-du-code-existant-25-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Exploration du code existant (25 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Exploration du code existant (25 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#points-cles-a-comprendre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Points clés à comprendre
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developpement-progressif-de-la-classification-1h" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Développement progressif de la classification (1h)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Développement progressif de la classification (1h)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-1-classification-par-mots-cles-20-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 1 : Classification par mots-clés (20 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 1 : Classification par mots-clés (20 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-de-la-classification-par-mots-cles" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Test de la classification par mots-clés
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-2-ajout-dune-logique-de-priorite-20-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 2 : Ajout d'une logique de priorité (20 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 2 : Ajout d&#39;une logique de priorité (20 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essayez-avec-des-exemples" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Essayez avec des exemples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3-preparation-pour-lintegration-api-20-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 3 : Préparation pour l'intégration API (20 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 3 : Préparation pour l&#39;intégration API (20 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-pour-lapi-reelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Structure pour l'API réelle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personnalisation-du-systeme-30-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Personnalisation du système (30 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Personnalisation du système (30 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adaptation-des-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adaptation des catégories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modification-de-la-logique-de-priorite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modification de la logique de priorité
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-dans-lapplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intégration dans l'application
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion-et-reflexion-15-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Conclusion et réflexion (15 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Conclusion et réflexion (15 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#points-cles-a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Points clés à retenir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications-professionnelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Applications professionnelles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercices-supplementaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Exercices supplémentaires
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assistant-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 - Assistant de documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qcm-evaluation-module3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/base-connaissances/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Base de connaissances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/api-mistral.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Mistral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ressources/fiche-observations.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fiche d'observations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ressources/synthese-module3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synthèse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 4 - Projet Sécurisé
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module 4 - Projet Sécurisé
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue d'ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Phases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Phases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/phases/phase0-analyse-risques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0 - Analyse des risques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/phases/phase1-developpement-securise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 - Développement sécurisé
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/phases/phase2-audit-securite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 - Audit de sécurité
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/phases/phase3-presentation-securisee/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 - Présentation sécurisée
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/qcm-evaluation-module4-securite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auto-évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ressources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4_1" id="__nav_5_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kit d'analyse sécuritaire
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Kit d'analyse sécuritaire
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/ressources/kit-analyse-securitaire/scenarios-attaques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scénarios d'attaques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/ressources/kit-analyse-securitaire/outils-validation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Outils de validation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/ressources/kit-analyse-securitaire/templates-audit.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Templates d'audit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4_2" id="__nav_5_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Livrables
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Livrables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/livrables/rapport-analyse-risques-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template rapport d'analyse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/livrables/audit-securite-complet-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template audit complet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/ressources/synthese-module4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synthèse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Évaluation et Suivi
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Évaluation et Suivi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evaluation/criteres-evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Critères d'évaluation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../suivi-progression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Suivi de progression
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Formulaire de feedback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs-de-la-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Objectifs de la phase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-au-systeme-de-tickets-20-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Introduction au système de tickets (20 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Introduction au système de tickets (20 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quest-ce-quun-systeme-de-tickets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qu'est-ce qu'un système de tickets ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comment-lia-ameliore-le-processus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comment l'IA améliore le processus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demonstration-du-systeme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Démonstration du système
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-de-vos-observations" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Documentation de vos observations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-de-lapplication-15-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Structure de l'application (15 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Structure de l&#39;application (15 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnement-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctionnement général
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploration-du-code-existant-25-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Exploration du code existant (25 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Exploration du code existant (25 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#points-cles-a-comprendre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Points clés à comprendre
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developpement-progressif-de-la-classification-1h" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Développement progressif de la classification (1h)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Développement progressif de la classification (1h)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-1-classification-par-mots-cles-20-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 1 : Classification par mots-clés (20 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 1 : Classification par mots-clés (20 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-de-la-classification-par-mots-cles" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Test de la classification par mots-clés
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-2-ajout-dune-logique-de-priorite-20-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 2 : Ajout d'une logique de priorité (20 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 2 : Ajout d&#39;une logique de priorité (20 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essayez-avec-des-exemples" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Essayez avec des exemples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3-preparation-pour-lintegration-api-20-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 3 : Préparation pour l'intégration API (20 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 3 : Préparation pour l&#39;intégration API (20 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-pour-lapi-reelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Structure pour l'API réelle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personnalisation-du-systeme-30-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Personnalisation du système (30 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Personnalisation du système (30 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adaptation-des-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adaptation des catégories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modification-de-la-logique-de-priorite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modification de la logique de priorité
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-dans-lapplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intégration dans l'application
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion-et-reflexion-15-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Conclusion et réflexion (15 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Conclusion et réflexion (15 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#points-cles-a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Points clés à retenir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications-professionnelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Applications professionnelles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercices-supplementaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Exercices supplémentaires
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="phase-1-systeme-de-tickets-intelligent-2h">🔍 Phase 1: Système de tickets intelligent (2h)</h1>
+<p><img alt="Système de tickets" src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&amp;fit=crop&amp;q=80&amp;w=1000&amp;h=300" /></p>
+<h2 id="objectifs-de-la-phase">🎯 Objectifs de la phase</h2>
+<p>Dans cette phase, vous allez :</p>
+<ul>
+<li>Explorer un système de tickets d'assistance pré-développé</li>
+<li>Comprendre comment une API d'IA peut classifier automatiquement les demandes</li>
+<li>Développer progressivement une fonction de classification simple puis avancée</li>
+<li>Adapter l'outil pour un contexte professionnel spécifique</li>
+</ul>
+<h2 id="introduction-au-systeme-de-tickets-20-min">🔍 Introduction au système de tickets (20 min)</h2>
+<h3 id="quest-ce-quun-systeme-de-tickets">Qu'est-ce qu'un système de tickets ?</h3>
+<p>Un système de tickets est un outil essentiel pour la gestion du support informatique en entreprise. Il permet de :</p>
+<ul>
+<li><strong>Centraliser</strong> toutes les demandes d'assistance au même endroit</li>
+<li><strong>Organiser</strong> les demandes par catégorie et priorité</li>
+<li><strong>Suivre</strong> l'évolution de chaque problème jusqu'à sa résolution</li>
+<li><strong>Analyser</strong> les types de problèmes récurrents pour amélioration continue</li>
+</ul>
+<h3 id="comment-lia-ameliore-le-processus">Comment l'IA améliore le processus</h3>
+<p>Traditionnellement, la classification des tickets était manuelle, ce qui posait plusieurs problèmes :
+- Perte de temps pour le technicien qui doit analyser et catégoriser
+- Risque d'erreurs ou d'incohérences dans la classification
+- Retard dans la prise en charge des problèmes critiques</p>
+<p><strong>L'IA apporte ces améliorations :</strong>
+- Classification automatique dès la soumission du ticket
+- Estimation de la priorité basée sur le contenu
+- Cohérence dans l'organisation des demandes
+- Orientation plus rapide vers le bon technicien</p>
+<h3 id="demonstration-du-systeme">Démonstration du système</h3>
+<p>Voici à quoi ressemble notre système de tickets :</p>
+<p><img alt="Capture d'écran du système de tickets" src="../../images/ticket-system-screenshot.svg" /></p>
+<p><strong>Exemple :</strong> Quand un utilisateur soumet le ticket "Mon ordinateur ne s'allume plus depuis ce matin", le système :
+1. Analyse le texte de la demande
+2. Le catégorise comme "Matériel"
+3. Lui attribue une priorité "Haute" (problème bloquant)
+4. L'affiche dans la liste des tickets avec ces informations</p>
+<h2 id="documentation-de-vos-observations">📝 Documentation de vos observations</h2>
+<p>N'oubliez pas de compléter votre <a href="../ressources/Partie3-Phase1-fiche-observations-tickets.md">fiche d'observations</a> avec :</p>
+<ul>
+<li>Les résultats de vos tests de classification</li>
+<li>L'analyse de votre logique de priorité </li>
+<li>Les adaptations réalisées pour le contexte d'entreprise</li>
+<li>Vos réflexions sur les applications professionnelles</li>
+</ul>
+<p>Cette documentation sera essentielle pour l'évaluation de votre travail</p>
+<h2 id="structure-de-lapplication-15-min">🧩 Structure de l'application (15 min)</h2>
+<p>Notre système de tickets est une application web simple construite avec Flask. Voici sa structure :</p>
+<div class="highlight"><pre><span></span><code>systeme-tickets/
+│
+├── app.py                  # Application principale
+├── templates/              # Fichiers HTML pour l&#39;interface
+│   ├── index.html          # Page d&#39;accueil avec liste des tickets
+│   ├── new_ticket.html     # Formulaire de création de ticket
+│   └── ticket_detail.html  # Page de détail d&#39;un ticket
+│
+├── static/                 # Fichiers CSS et JavaScript
+│   └── style.css
+│
+└── tickets.json            # Base de données des tickets (fichier simple)
+</code></pre></div>
+<h3 id="fonctionnement-general">Fonctionnement général</h3>
+<p>L'application utilise une architecture simple :</p>
+<ol>
+<li><strong>Frontend</strong> : HTML/CSS pour l'interface utilisateur</li>
+<li><strong>Backend</strong> : Python/Flask pour la logique métier</li>
+<li><strong>Stockage</strong> : Fichier JSON pour les données (pour simplifier)</li>
+</ol>
+<p>Le flux de travail principal est :
+- L'utilisateur remplit un formulaire de demande
+- L'application analyse et classifie la demande
+- Le ticket est enregistré et affiché dans la liste</p>
+<h2 id="exploration-du-code-existant-25-min">📋 Exploration du code existant (25 min)</h2>
+<p>Examinons le code principal de l'application :</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># app.py - Application principale</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">url_for</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="c1"># Charger les tickets existants</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">load_tickets</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;tickets.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">FileNotFoundError</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">JSONDecodeError</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+<span class="c1"># Sauvegarder les tickets</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">save_tickets</span><span class="p">(</span><span class="n">tickets</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;tickets.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">tickets</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># Fonction de classification à compléter</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">classify_ticket</span><span class="p">(</span><span class="n">description</span><span class="p">):</span>
+    <span class="c1"># Cette fonction doit être complétée pour intégrer l&#39;API d&#39;IA</span>
+    <span class="c1"># En attendant, elle retourne une catégorie par défaut</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Non classé&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="s2">&quot;Moyenne&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;confidence&quot;</span><span class="p">:</span> <span class="mf">0.0</span>
+    <span class="p">}</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">():</span>
+    <span class="n">tickets</span> <span class="o">=</span> <span class="n">load_tickets</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">,</span> <span class="n">tickets</span><span class="o">=</span><span class="n">tickets</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/new&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">new_ticket</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+        <span class="n">description</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
+
+        <span class="c1"># Classifier le ticket</span>
+        <span class="n">classification</span> <span class="o">=</span> <span class="n">classify_ticket</span><span class="p">(</span><span class="n">description</span><span class="p">)</span>
+
+        <span class="c1"># Créer le nouveau ticket</span>
+        <span class="n">ticket</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">%H%M%S&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span>
+            <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="n">description</span><span class="p">,</span>
+            <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="n">classification</span><span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;priority&#39;</span><span class="p">:</span> <span class="n">classification</span><span class="p">[</span><span class="s1">&#39;priority&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;Ouvert&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;created_at&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;comments&#39;</span><span class="p">:</span> <span class="p">[]</span>
+        <span class="p">}</span>
+
+        <span class="c1"># Sauvegarder</span>
+        <span class="n">tickets</span> <span class="o">=</span> <span class="n">load_tickets</span><span class="p">()</span>
+        <span class="n">tickets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ticket</span><span class="p">)</span>
+        <span class="n">save_tickets</span><span class="p">(</span><span class="n">tickets</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;new_ticket.html&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="points-cles-a-comprendre">Points clés à comprendre</h3>
+<ol>
+<li>
+<p><strong>Fonction <code>classify_ticket</code></strong> : C'est la fonction que nous allons développer pour classifier automatiquement les tickets.</p>
+</li>
+<li>
+<p><strong>Création de ticket</strong> : La route <code>/new</code> récupère les informations du formulaire, utilise la fonction de classification, puis crée et sauvegarde le ticket.</p>
+</li>
+<li>
+<p><strong>Stockage simple</strong> : L'application utilise un fichier JSON pour stocker les tickets, ce qui est suffisant pour notre exemple.</p>
+</li>
+</ol>
+<blockquote>
+<p>💡 <strong>Observation</strong> : Remarquez que la fonction <code>classify_ticket</code> est actuellement vide et retourne simplement une catégorie par défaut. C'est cette fonction que nous allons enrichir progressivement.</p>
+</blockquote>
+<h2 id="developpement-progressif-de-la-classification-1h">🚀 Développement progressif de la classification (1h)</h2>
+<p>Nous allons développer la fonction de classification en trois étapes :</p>
+<ol>
+<li>Classification basique par mots-clés</li>
+<li>Ajout d'une logique de priorité</li>
+<li>Intégration d'une API d'IA</li>
+</ol>
+<h3 id="etape-1-classification-par-mots-cles-20-min">Étape 1 : Classification par mots-clés (20 min)</h3>
+<p>Commençons par une approche simple : classifier les tickets en fonction de mots-clés présents dans la description.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">classify_ticket</span><span class="p">(</span><span class="n">description</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Classifie un ticket en fonction des mots-clés présents dans sa description.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        description (str): La description du ticket</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: Dictionnaire contenant la catégorie, la priorité et le niveau de confiance</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Définir les mots-clés pour chaque catégorie</span>
+    <span class="n">categories</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;Matériel&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ordinateur&quot;</span><span class="p">,</span> <span class="s2">&quot;écran&quot;</span><span class="p">,</span> <span class="s2">&quot;souris&quot;</span><span class="p">,</span> <span class="s2">&quot;clavier&quot;</span><span class="p">,</span> <span class="s2">&quot;imprimante&quot;</span><span class="p">,</span> <span class="s2">&quot;scanner&quot;</span><span class="p">,</span> <span class="s2">&quot;PC&quot;</span><span class="p">,</span> <span class="s2">&quot;batterie&quot;</span><span class="p">,</span> <span class="s2">&quot;câble&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;Logiciel&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;programme&quot;</span><span class="p">,</span> <span class="s2">&quot;logiciel&quot;</span><span class="p">,</span> <span class="s2">&quot;application&quot;</span><span class="p">,</span> <span class="s2">&quot;windows&quot;</span><span class="p">,</span> <span class="s2">&quot;office&quot;</span><span class="p">,</span> <span class="s2">&quot;excel&quot;</span><span class="p">,</span> <span class="s2">&quot;word&quot;</span><span class="p">,</span> <span class="s2">&quot;installer&quot;</span><span class="p">,</span> <span class="s2">&quot;désinstaller&quot;</span><span class="p">,</span> <span class="s2">&quot;bug&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;Réseau&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;wifi&quot;</span><span class="p">,</span> <span class="s2">&quot;internet&quot;</span><span class="p">,</span> <span class="s2">&quot;connexion&quot;</span><span class="p">,</span> <span class="s2">&quot;réseau&quot;</span><span class="p">,</span> <span class="s2">&quot;ethernet&quot;</span><span class="p">,</span> <span class="s2">&quot;IP&quot;</span><span class="p">,</span> <span class="s2">&quot;DNS&quot;</span><span class="p">,</span> <span class="s2">&quot;serveur&quot;</span><span class="p">,</span> <span class="s2">&quot;intranet&quot;</span><span class="p">,</span> <span class="s2">&quot;débit&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;Accès / Compte&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mot de passe&quot;</span><span class="p">,</span> <span class="s2">&quot;identifiant&quot;</span><span class="p">,</span> <span class="s2">&quot;compte&quot;</span><span class="p">,</span> <span class="s2">&quot;login&quot;</span><span class="p">,</span> <span class="s2">&quot;accès&quot;</span><span class="p">,</span> <span class="s2">&quot;droits&quot;</span><span class="p">,</span> <span class="s2">&quot;permission&quot;</span><span class="p">,</span> <span class="s2">&quot;utilisateur&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;Autre&quot;</span><span class="p">:</span> <span class="p">[]</span>  <span class="c1"># Catégorie par défaut</span>
+    <span class="p">}</span>
+
+    <span class="c1"># Conversion en minuscules pour faciliter la recherche</span>
+    <span class="n">description_lower</span> <span class="o">=</span> <span class="n">description</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+    <span class="c1"># Recherche des mots-clés dans chaque catégorie</span>
+    <span class="n">matched_categories</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">for</span> <span class="n">category</span><span class="p">,</span> <span class="n">keywords</span> <span class="ow">in</span> <span class="n">categories</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">matches</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="n">keywords</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">keyword</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">description_lower</span><span class="p">:</span>
+                <span class="n">matches</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="n">matches</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">matched_categories</span><span class="p">[</span><span class="n">category</span><span class="p">]</span> <span class="o">=</span> <span class="n">matches</span>
+
+    <span class="c1"># Si aucune correspondance, retourner &quot;Autre&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">matched_categories</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Autre&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="s2">&quot;Moyenne&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;confidence&quot;</span><span class="p">:</span> <span class="mf">0.5</span>
+        <span class="p">}</span>
+
+    <span class="c1"># Trouver la catégorie avec le plus de correspondances</span>
+    <span class="n">best_category</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">matched_categories</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">matched_categories</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+
+    <span class="c1"># Calculer un niveau de confiance basique (entre 0.6 et 0.9)</span>
+    <span class="n">total_keywords</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">keywords</span><span class="p">)</span> <span class="k">for</span> <span class="n">keywords</span> <span class="ow">in</span> <span class="n">categories</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="n">confidence</span> <span class="o">=</span> <span class="mf">0.6</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.3</span> <span class="o">*</span> <span class="n">matched_categories</span><span class="p">[</span><span class="n">best_category</span><span class="p">]</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">[</span><span class="n">best_category</span><span class="p">]))</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">[</span><span class="n">best_category</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mf">0.6</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="n">best_category</span><span class="p">,</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="s2">&quot;Moyenne&quot;</span><span class="p">,</span>  <span class="c1"># Priorité par défaut, à améliorer</span>
+        <span class="s2">&quot;confidence&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">confidence</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">}</span>
+</code></pre></div>
+<h4 id="test-de-la-classification-par-mots-cles">🧪 Test de la classification par mots-clés</h4>
+<p>Créons une fonction de test pour vérifier notre classification :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_classification</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Teste la fonction de classification avec différents exemples.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">test_cases</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;Mon ordinateur ne démarre plus après la mise à jour Windows&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Je n&#39;arrive pas à me connecter au réseau wifi de l&#39;entreprise&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;J&#39;ai besoin d&#39;installer Excel sur mon poste de travail&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;J&#39;ai oublié mon mot de passe pour accéder à l&#39;intranet&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;La souris de mon PC ne fonctionne plus correctement&quot;</span>
+    <span class="p">]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Tests de classification ===&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">case</span> <span class="ow">in</span> <span class="n">test_cases</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">classify_ticket</span><span class="p">(</span><span class="n">case</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Description: &#39;</span><span class="si">{</span><span class="n">case</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Catégorie: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Priorité: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;priority&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Confiance: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;confidence&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+
+<span class="c1"># Exécutez cette fonction pour tester</span>
+<span class="n">test_classification</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="etape-2-ajout-dune-logique-de-priorite-20-min">Étape 2 : Ajout d'une logique de priorité (20 min)</h3>
+<p>Maintenant, améliorons notre fonction pour déterminer la priorité du ticket en fonction du contenu et de la catégorie.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">determine_priority</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">category</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Détermine la priorité d&#39;un ticket en fonction de sa description et de sa catégorie.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        description (str): La description du ticket</span>
+<span class="sd">        category (str): La catégorie du ticket</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: La priorité du ticket (&quot;Haute&quot;, &quot;Moyenne&quot; ou &quot;Basse&quot;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Conversion en minuscules</span>
+    <span class="n">description_lower</span> <span class="o">=</span> <span class="n">description</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+    <span class="c1"># Mots-clés indiquant une priorité haute</span>
+    <span class="n">high_priority_keywords</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;urgent&quot;</span><span class="p">,</span> <span class="s2">&quot;critique&quot;</span><span class="p">,</span> <span class="s2">&quot;bloqué&quot;</span><span class="p">,</span> <span class="s2">&quot;impossible&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;ne fonctionne pas&quot;</span><span class="p">,</span> <span class="s2">&quot;erreur&quot;</span><span class="p">,</span> <span class="s2">&quot;panne&quot;</span><span class="p">,</span> <span class="s2">&quot;problème&quot;</span>
+    <span class="p">]</span>
+
+    <span class="c1"># Mots-clés indiquant une priorité basse</span>
+    <span class="n">low_priority_keywords</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;comment&quot;</span><span class="p">,</span> <span class="s2">&quot;question&quot;</span><span class="p">,</span> <span class="s2">&quot;demande&quot;</span><span class="p">,</span> <span class="s2">&quot;information&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;possible&quot;</span><span class="p">,</span> <span class="s2">&quot;amélioration&quot;</span><span class="p">,</span> <span class="s2">&quot;suggestion&quot;</span>
+    <span class="p">]</span>
+
+    <span class="c1"># Vérifier les mots-clés de haute priorité</span>
+    <span class="k">for</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="n">high_priority_keywords</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="n">description_lower</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;Haute&quot;</span>
+
+    <span class="c1"># Vérifier les mots-clés de basse priorité</span>
+    <span class="k">for</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="n">low_priority_keywords</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="n">description_lower</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;Basse&quot;</span>
+
+    <span class="c1"># Priorité par défaut basée sur la catégorie</span>
+    <span class="n">category_priorities</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;Matériel&quot;</span><span class="p">:</span> <span class="s2">&quot;Moyenne&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Logiciel&quot;</span><span class="p">:</span> <span class="s2">&quot;Basse&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Réseau&quot;</span><span class="p">:</span> <span class="s2">&quot;Haute&quot;</span><span class="p">,</span>  <span class="c1"># Problèmes réseau souvent plus critiques</span>
+        <span class="s2">&quot;Accès / Compte&quot;</span><span class="p">:</span> <span class="s2">&quot;Moyenne&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Autre&quot;</span><span class="p">:</span> <span class="s2">&quot;Basse&quot;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">category_priorities</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="s2">&quot;Moyenne&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Maintenant, intégrons cette fonction dans notre fonction de classification :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">classify_ticket</span><span class="p">(</span><span class="n">description</span><span class="p">):</span>
+    <span class="c1"># ... (code précédent pour la classification)</span>
+
+    <span class="c1"># Trouver la catégorie avec le plus de correspondances</span>
+    <span class="n">best_category</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">matched_categories</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">matched_categories</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+
+    <span class="c1"># Calculer un niveau de confiance basique</span>
+    <span class="n">confidence</span> <span class="o">=</span> <span class="mf">0.6</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.3</span> <span class="o">*</span> <span class="n">matched_categories</span><span class="p">[</span><span class="n">best_category</span><span class="p">]</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">[</span><span class="n">best_category</span><span class="p">]))</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">[</span><span class="n">best_category</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mf">0.6</span>
+
+    <span class="c1"># Déterminer la priorité</span>
+    <span class="n">priority</span> <span class="o">=</span> <span class="n">determine_priority</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">best_category</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="n">best_category</span><span class="p">,</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="n">priority</span><span class="p">,</span>
+        <span class="s2">&quot;confidence&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">confidence</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">}</span>
+</code></pre></div>
+<h4 id="essayez-avec-des-exemples">🔍 Essayez avec des exemples</h4>
+<p>Testez à nouveau votre fonction avec différents exemples pour voir comment la priorité est déterminée. Ajoutez des cas comme :</p>
+<ul>
+<li>"URGENT: Le serveur principal est en panne"</li>
+<li>"Question : Comment installer Microsoft Teams ?"</li>
+<li>"Le réseau est très lent depuis ce matin"</li>
+</ul>
+<h3 id="etape-3-preparation-pour-lintegration-api-20-min">Étape 3 : Préparation pour l'intégration API (20 min)</h3>
+<p>Maintenant, préparons notre code pour l'intégration d'une API d'IA. Dans un environnement réel, nous utiliserions une API comme celle de Mistral AI ou OpenAI, mais pour cet exercice, nous allons simuler une API avec une structure similaire.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
+
+<span class="c1"># Charger les variables d&#39;environnement (pour la clé API)</span>
+<span class="n">load_dotenv</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">classify_ticket_with_api</span><span class="p">(</span><span class="n">description</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Classifie un ticket en utilisant une API d&#39;IA (simulation pour cet exercice).</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        description (str): La description du ticket</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: Dictionnaire contenant la catégorie, la priorité et le niveau de confiance</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># En situation réelle, on utiliserait une clé API stockée dans les variables d&#39;environnement</span>
+    <span class="c1"># api_key = os.getenv(&quot;API_KEY&quot;)</span>
+
+    <span class="c1"># Simulation d&#39;une requête API</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Dans un cas réel, on ferait une requête comme celle-ci:</span>
+        <span class="c1"># response = requests.post(</span>
+        <span class="c1">#     &quot;https://api.exemple.com/classify&quot;,</span>
+        <span class="c1">#     headers={&quot;Authorization&quot;: f&quot;Bearer {api_key}&quot;},</span>
+        <span class="c1">#     json={&quot;text&quot;: description}</span>
+        <span class="c1"># )</span>
+        <span class="c1"># result = response.json()</span>
+
+        <span class="c1"># Pour l&#39;exercice, nous utilisons notre fonction locale</span>
+        <span class="c1"># mais avec la structure qu&#39;aurait une réponse d&#39;API</span>
+        <span class="n">classification</span> <span class="o">=</span> <span class="n">classify_ticket</span><span class="p">(</span><span class="n">description</span><span class="p">)</span>
+
+        <span class="c1"># Simuler une réponse API</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="n">classification</span><span class="p">[</span><span class="s2">&quot;category&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;confidence&quot;</span><span class="p">:</span> <span class="n">classification</span><span class="p">[</span><span class="s2">&quot;confidence&quot;</span><span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1"># Déterminer la priorité</span>
+        <span class="n">priority</span> <span class="o">=</span> <span class="n">determine_priority</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;result&quot;</span><span class="p">][</span><span class="s2">&quot;category&quot;</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;result&quot;</span><span class="p">][</span><span class="s2">&quot;category&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="n">priority</span><span class="p">,</span>
+            <span class="s2">&quot;confidence&quot;</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;result&quot;</span><span class="p">][</span><span class="s2">&quot;confidence&quot;</span><span class="p">]</span>
+        <span class="p">}</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Erreur lors de la communication avec l&#39;API: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="c1"># En cas d&#39;erreur, utiliser notre classification locale comme fallback</span>
+        <span class="k">return</span> <span class="n">classify_ticket</span><span class="p">(</span><span class="n">description</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="structure-pour-lapi-reelle">🛠️ Structure pour l'API réelle</h4>
+<p>Dans un contexte réel, voici comment vous pourriez structurer l'appel à une API d'IA :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">classify_with_real_api</span><span class="p">(</span><span class="n">description</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Exemple d&#39;intégration avec une API d&#39;IA réelle.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">api_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;API_KEY&quot;</span><span class="p">)</span>  <span class="c1"># Récupérer la clé depuis les variables d&#39;environnement</span>
+    <span class="n">api_url</span> <span class="o">=</span> <span class="s2">&quot;https://api.mistral.ai/v1/classify&quot;</span>  <span class="c1"># URL fictive</span>
+
+    <span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Matériel&quot;</span><span class="p">,</span> <span class="s2">&quot;Logiciel&quot;</span><span class="p">,</span> <span class="s2">&quot;Réseau&quot;</span><span class="p">,</span> <span class="s2">&quot;Accès / Compte&quot;</span><span class="p">,</span> <span class="s2">&quot;Autre&quot;</span><span class="p">]</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Préparation des données</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="n">description</span><span class="p">,</span>
+            <span class="s2">&quot;categories&quot;</span><span class="p">:</span> <span class="n">categories</span>
+        <span class="p">}</span>
+
+        <span class="c1"># En-têtes de la requête</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span>
+        <span class="p">}</span>
+
+        <span class="c1"># Envoi de la requête à l&#39;API</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">api_url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>  <span class="c1"># Lève une exception si la requête échoue</span>
+
+        <span class="c1"># Traitement de la réponse</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+        <span class="c1"># Structure typique d&#39;une réponse d&#39;API</span>
+        <span class="c1"># {</span>
+        <span class="c1">#   &quot;category&quot;: &quot;Réseau&quot;,</span>
+        <span class="c1">#   &quot;confidence&quot;: 0.85,</span>
+        <span class="c1">#   &quot;alternatives&quot;: [{&quot;category&quot;: &quot;Matériel&quot;, &quot;confidence&quot;: 0.12}, ...]</span>
+        <span class="c1"># }</span>
+
+        <span class="c1"># Déterminer la priorité</span>
+        <span class="n">priority</span> <span class="o">=</span> <span class="n">determine_priority</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;category&quot;</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;category&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="n">priority</span><span class="p">,</span>
+            <span class="s2">&quot;confidence&quot;</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;confidence&quot;</span><span class="p">]</span>
+        <span class="p">}</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Erreur API: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="c1"># Fallback vers notre classification locale</span>
+        <span class="k">return</span> <span class="n">classify_ticket</span><span class="p">(</span><span class="n">description</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>💡 <strong>Note</strong> : Dans le contexte du cours, l'instructeur vous fournira la vraie API à utiliser, avec sa documentation et sa clé d'accès.</p>
+</blockquote>
+<h2 id="personnalisation-du-systeme-30-min">🔧 Personnalisation du système (30 min)</h2>
+<p>Maintenant que nous avons une fonction de classification fonctionnelle, personnalisons notre système pour un contexte d'entreprise spécifique.</p>
+<h3 id="adaptation-des-categories">Adaptation des catégories</h3>
+<p>Imaginons que nous développons ce système pour une entreprise de services informatiques avec des équipes spécialisées. Adaptons les catégories en conséquence :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">classify_ticket_for_enterprise</span><span class="p">(</span><span class="n">description</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Classifie un ticket avec des catégories adaptées à notre entreprise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Catégories personnalisées</span>
+    <span class="n">categories</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;Poste de travail&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ordinateur&quot;</span><span class="p">,</span> <span class="s2">&quot;PC&quot;</span><span class="p">,</span> <span class="s2">&quot;écran&quot;</span><span class="p">,</span> <span class="s2">&quot;souris&quot;</span><span class="p">,</span> <span class="s2">&quot;clavier&quot;</span><span class="p">,</span> <span class="s2">&quot;batterie&quot;</span><span class="p">,</span> <span class="s2">&quot;câble&quot;</span><span class="p">,</span> <span class="s2">&quot;Windows&quot;</span><span class="p">,</span> <span class="s2">&quot;Office&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;Applications métier&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ERP&quot;</span><span class="p">,</span> <span class="s2">&quot;CRM&quot;</span><span class="p">,</span> <span class="s2">&quot;logiciel&quot;</span><span class="p">,</span> <span class="s2">&quot;application&quot;</span><span class="p">,</span> <span class="s2">&quot;métier&quot;</span><span class="p">,</span> <span class="s2">&quot;sage&quot;</span><span class="p">,</span> <span class="s2">&quot;SAP&quot;</span><span class="p">,</span> <span class="s2">&quot;base de données&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;Infrastructure réseau&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;serveur&quot;</span><span class="p">,</span> <span class="s2">&quot;réseau&quot;</span><span class="p">,</span> <span class="s2">&quot;wifi&quot;</span><span class="p">,</span> <span class="s2">&quot;ethernet&quot;</span><span class="p">,</span> <span class="s2">&quot;connexion&quot;</span><span class="p">,</span> <span class="s2">&quot;internet&quot;</span><span class="p">,</span> <span class="s2">&quot;lenteur&quot;</span><span class="p">,</span> <span class="s2">&quot;VPN&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;Sécurité&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;virus&quot;</span><span class="p">,</span> <span class="s2">&quot;malware&quot;</span><span class="p">,</span> <span class="s2">&quot;phishing&quot;</span><span class="p">,</span> <span class="s2">&quot;mot de passe&quot;</span><span class="p">,</span> <span class="s2">&quot;accès&quot;</span><span class="p">,</span> <span class="s2">&quot;autorisation&quot;</span><span class="p">,</span> <span class="s2">&quot;droits&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;Demande d&#39;équipement&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;nouveau&quot;</span><span class="p">,</span> <span class="s2">&quot;commande&quot;</span><span class="p">,</span> <span class="s2">&quot;besoin&quot;</span><span class="p">,</span> <span class="s2">&quot;demande&quot;</span><span class="p">,</span> <span class="s2">&quot;équipement&quot;</span><span class="p">,</span> <span class="s2">&quot;achat&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;Support utilisateur&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;formation&quot;</span><span class="p">,</span> <span class="s2">&quot;aide&quot;</span><span class="p">,</span> <span class="s2">&quot;question&quot;</span><span class="p">,</span> <span class="s2">&quot;comment&quot;</span><span class="p">,</span> <span class="s2">&quot;tutoriel&quot;</span><span class="p">,</span> <span class="s2">&quot;guide&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+
+    <span class="c1"># Utiliser la même logique que précédemment, mais avec nos nouvelles catégories</span>
+    <span class="c1"># ...</span>
+</code></pre></div>
+<h3 id="modification-de-la-logique-de-priorite">Modification de la logique de priorité</h3>
+<p>Adaptons également la logique de priorité pour ce contexte d'entreprise :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">determine_enterprise_priority</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">category</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Logique de priorité adaptée à notre entreprise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Mots-clés de priorité haute</span>
+    <span class="n">high_priority</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;urgent&quot;</span><span class="p">,</span> <span class="s2">&quot;critique&quot;</span><span class="p">,</span> <span class="s2">&quot;bloqué&quot;</span><span class="p">,</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span> <span class="s2">&quot;client&quot;</span><span class="p">,</span> <span class="s2">&quot;direction&quot;</span><span class="p">,</span> <span class="s2">&quot;impossible&quot;</span><span class="p">,</span> <span class="s2">&quot;sécurité&quot;</span><span class="p">]</span>
+
+    <span class="c1"># Priorités par défaut selon la catégorie</span>
+    <span class="n">category_priorities</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;Poste de travail&quot;</span><span class="p">:</span> <span class="s2">&quot;Moyenne&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Applications métier&quot;</span><span class="p">:</span> <span class="s2">&quot;Haute&quot;</span><span class="p">,</span>  <span class="c1"># Critique pour le business</span>
+        <span class="s2">&quot;Infrastructure réseau&quot;</span><span class="p">:</span> <span class="s2">&quot;Haute&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Sécurité&quot;</span><span class="p">:</span> <span class="s2">&quot;Haute&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Demande d&#39;équipement&quot;</span><span class="p">:</span> <span class="s2">&quot;Basse&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Support utilisateur&quot;</span><span class="p">:</span> <span class="s2">&quot;Moyenne&quot;</span>
+    <span class="p">}</span>
+
+    <span class="c1"># Vérifier les mots-clés de haute priorité</span>
+    <span class="k">for</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="n">high_priority</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">keyword</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">description</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+            <span class="k">return</span> <span class="s2">&quot;Haute&quot;</span>
+
+    <span class="c1"># Logique supplémentaire : détection du niveau hiérarchique</span>
+    <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">term</span> <span class="ow">in</span> <span class="n">description</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;directeur&quot;</span><span class="p">,</span> <span class="s2">&quot;manager&quot;</span><span class="p">,</span> <span class="s2">&quot;chef&quot;</span><span class="p">,</span> <span class="s2">&quot;responsable&quot;</span><span class="p">]):</span>
+        <span class="c1"># Augmenter la priorité d&#39;un niveau</span>
+        <span class="k">if</span> <span class="n">category_priorities</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="s2">&quot;Moyenne&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Moyenne&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;Haute&quot;</span>
+
+    <span class="k">return</span> <span class="n">category_priorities</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="s2">&quot;Moyenne&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="integration-dans-lapplication">Intégration dans l'application</h3>
+<p>Pour intégrer ces modifications dans l'application principale :</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/new&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">new_ticket</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+        <span class="n">description</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
+
+        <span class="c1"># Utiliser notre fonction personnalisée</span>
+        <span class="n">classification</span> <span class="o">=</span> <span class="n">classify_ticket_for_enterprise</span><span class="p">(</span><span class="n">description</span><span class="p">)</span>
+
+        <span class="c1"># Créer le ticket avec la classification personnalisée</span>
+        <span class="n">ticket</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">%H%M%S&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span>
+            <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="n">description</span><span class="p">,</span>
+            <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="n">classification</span><span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;priority&#39;</span><span class="p">:</span> <span class="n">classification</span><span class="p">[</span><span class="s1">&#39;priority&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;Ouvert&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;created_at&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;comments&#39;</span><span class="p">:</span> <span class="p">[]</span>
+        <span class="p">}</span>
+
+        <span class="c1"># Ajouter une logique d&#39;assignation basée sur la catégorie</span>
+        <span class="n">ticket</span><span class="p">[</span><span class="s1">&#39;assigned_to&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">assign_to_team</span><span class="p">(</span><span class="n">classification</span><span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">])</span>
+
+        <span class="c1"># Sauvegarder</span>
+        <span class="n">tickets</span> <span class="o">=</span> <span class="n">load_tickets</span><span class="p">()</span>
+        <span class="n">tickets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ticket</span><span class="p">)</span>
+        <span class="n">save_tickets</span><span class="p">(</span><span class="n">tickets</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;new_ticket.html&#39;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">assign_to_team</span><span class="p">(</span><span class="n">category</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Assigne le ticket à l&#39;équipe appropriée selon la catégorie.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">team_mapping</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;Poste de travail&quot;</span><span class="p">:</span> <span class="s2">&quot;Équipe Support Niveau 1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Applications métier&quot;</span><span class="p">:</span> <span class="s2">&quot;Équipe Applications&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Infrastructure réseau&quot;</span><span class="p">:</span> <span class="s2">&quot;Équipe Infrastructure&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Sécurité&quot;</span><span class="p">:</span> <span class="s2">&quot;Équipe Sécurité&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Demande d&#39;équipement&quot;</span><span class="p">:</span> <span class="s2">&quot;Équipe Logistique&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Support utilisateur&quot;</span><span class="p">:</span> <span class="s2">&quot;Équipe Support Niveau 1&quot;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">team_mapping</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="s2">&quot;Non assigné&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="conclusion-et-reflexion-15-min">📝 Conclusion et réflexion (15 min)</h2>
+<p>Dans cette phase, vous avez exploré et développé progressivement un système de tickets intelligent avec classification automatique des demandes. Vous avez appris à :</p>
+<ul>
+<li>Créer une fonction de classification basée sur des mots-clés</li>
+<li>Développer une logique de priorité adaptative</li>
+<li>Préparer l'intégration d'une API d'IA</li>
+<li>Personnaliser le système pour un contexte d'entreprise spécifique</li>
+</ul>
+<h3 id="points-cles-a-retenir">🧩 Points clés à retenir</h3>
+<ul>
+<li>La classification automatique permet un gain de temps considérable dans le traitement des demandes</li>
+<li>Une approche progressive (mots-clés → API) permet de construire et de comprendre la solution étape par étape</li>
+<li>L'adaptation au contexte spécifique d'une entreprise est essentielle pour que le système soit vraiment utile</li>
+</ul>
+<h3 id="applications-professionnelles">🚀 Applications professionnelles</h3>
+<p>Ces compétences peuvent être appliquées dans divers contextes professionnels :
+- Services d'assistance informatique (helpdesk)
+- Gestion des demandes clients
+- Automatisation du traitement des emails
+- Systèmes de support pour les applications métier</p>
+<h3 id="exercices-supplementaires">✅ Exercices supplémentaires</h3>
+<p>Si vous souhaitez approfondir :
+1. Ajoutez une fonction pour suggérer des solutions automatiques pour certains types de problèmes
+2. Implémentez un système de notification par email selon la priorité du ticket
+3. Créez une visualisation (graphique) des tickets par catégorie et priorité</p>
+<p>N'oubliez pas de compléter la première partie de votre fiche d'observations avec vos tests et adaptations.</p>
+<p><a class="md-button" href="../">Retour au Module 3</a>
+<a class="md-button md-button--primary" href="../assistant-documentation/">Continuer vers la Phase 2: Assistant de documentation technique</a>
+```</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 Atelier-deeplearning
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/votre-repo/chatbot-deeplearning" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../javascripts/progress.js"></script>
+      
+    
+  </body>
+</html>
