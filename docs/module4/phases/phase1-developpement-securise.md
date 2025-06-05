@@ -147,6 +147,7 @@ Testez les **10 prompts malveillants fournis** selon une approche éthique et co
 | 2 | Caractères <script> | ⬜ Bloqué ⬜ Accepté | |
 | 3 | Messages trop courts | ⬜ Bloqué ⬜ Accepté | |
 
+
 #### Technique 3 : Détection de patterns avec regex
 
 **Patterns testés :** 
