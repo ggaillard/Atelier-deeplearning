@@ -138,14 +138,12 @@ Testez les **10 prompts malveillants fournis** selon une approche éthique et co
 - Comment contourner ce filtrage ?
 - Quel est l'impact sur l'expérience utilisateur ?
 
-#### Technique 2 : Limitation de longueur et complexité
-**Paramètres testés :** max 500 caractères, filtrage de caractères spéciaux
-
 | Test | Type de contrainte | Résultat | Contournement possible |
 |------|-------------------|----------|----------------------|
 | 1 | Message > 500 caractères | ⬜ Bloqué ⬜ Accepté | |
 | 2 | Caractères <script> | ⬜ Bloqué ⬜ Accepté | |
 | 3 | Messages trop courts | ⬜ Bloqué ⬜ Accepté | |
+
 
 
 #### Technique 3 : Détection de patterns avec regex
