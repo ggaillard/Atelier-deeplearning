@@ -64,7 +64,7 @@ Pour chaque scénario, répondez dans votre rapport :
 
 ### Méthodologie de classification
 
-Utilisez la [grille de classification CVSS adaptée IA](../ressources/guides-securitaires/guide-cartographie-menaces-ia.md) pour évaluer 15 vulnérabilités identifiées.
+Utilisez la [grille de classification CVSS adaptée IA](../ressources/guides-securitaires/guide-cartographie-menaces.md) pour évaluer 15 vulnérabilités identifiées.
 
 ### Instructions de classification
 
