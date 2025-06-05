@@ -109,7 +109,7 @@ Le chatbot pédagogique traite des données personnelles d'étudiants. Vous deve
 
 ### Instructions d'audit
 
-Utilisez la [checklist RGPD 20 points](../ressources/outils-validation/checklist-20-points-rgpd.md) pour auditer le système.
+Utilisez la [checklist RGPD 20 points](../ressources/outils-validation/checklist-rgpd-20-points.md) pour auditer le système.
 
 ### Checklist de conformité à valider
 
