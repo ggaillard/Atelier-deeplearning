@@ -148,6 +148,7 @@ Testez les **10 prompts malveillants fournis** selon une approche éthique et co
 | 3 | Messages trop courts | ⬜ Bloqué ⬜ Accepté | |
 
 #### Technique 3 : Détection de patterns avec regex
+
 **Patterns testés :** 
 - `ignore.*instruction`
 - `système.*directive`
