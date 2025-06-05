@@ -88,16 +88,28 @@ nav:
         - Fiche d'observations: module3/ressources/fiche-observations.md
         - Synthèse: module3/ressources/synthese-module3.md
         
-  - Module 4 - Projet:
+  - Module 4 - Projet Sécurisé:
       - Vue d'ensemble: module4/index.md
-      - 0 - Préparation au chatbot: module4/partie0-preparation-projet.md
-      - 1 - Développement: module4/partie1-developpement.md
-      - 2 - Finalisation: module4/partie2-finalisation.md
-      - 3 - Présentation: module4/partie3-presentation.md
-      - Auto-évaluation: module4/qcm-evaluation-module4.md
+      - Phases:
+        - 0 - Analyse des risques: module4/phases/phase0-analyse-risques.md
+        - 1 - Développement sécurisé: module4/phases/phase1-developpement-securise.md
+        - 2 - Audit de sécurité: module4/phases/phase2-audit-securite.md
+        - 3 - Présentation sécurisée: module4/phases/phase3-presentation-securisee.md
+      - Auto-évaluation: module4/qcm-evaluation-module4-securite.md
       - Ressources: 
-        - Base de connaissances: ressources/base-connaissances.md
-        - Structure JSON: ressources/json-schemas.md
+        - Kit d'analyse sécuritaire:
+          - Scénarios d'attaques: module4/ressources/kit-analyse-securitaire/scenarios-attaques.md
+          - Outils de validation: module4/ressources/kit-analyse-securitaire/outils-validation.md
+          - Templates d'audit: module4/ressources/kit-analyse-securitaire/templates-audit.md
+        - Livrables:
+          - Template rapport d'analyse: module4/livrables/rapport-analyse-risques-template.md
+          - Template audit complet: module4/livrables/audit-securite-complet-template.md
+        - Synthèse: module4/ressources/synthese-module4.md
+        
+  - Évaluation et Suivi:
+      - Critères d'évaluation: evaluation/criteres-evaluation.md
+      - Suivi de progression: suivi-progression.md
+      - Formulaire de feedback: feedback.md
      
 extra:
   social:
